@@ -1,6 +1,12 @@
 * {
 	box-sizing: border-box;
 }
+body {
+	max-width: 1000px;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
 #logo {
 	width: 100% !important;
 	border-bottom: 1px solid rgba(0,162,232,.8);
