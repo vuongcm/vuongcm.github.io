@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>QUIZ</title>
+  <style type="text/css">
+  	* {
+  		box-sizing: border-box;
+  	}
+  	body {
+  		width: 98vw;
+  		height: 98vh;
+  		display: flex;
+  		flex-direction: column;
+  		justify-content: center;
+  		align-items: center;
+  		background: url('bg.jpg') top center/cover;
+  		font-size: 16px;
+  		font-family: Helvetica, Arial, sans-serif;
+  		color: #333;
+  	}
+  	#wrap {
+		width: 60%;
+		margin-left: 200px;
+		display: none;
+		
+  	}
+  	#start {
+  		width: 20%;
+  		height: 40px;
+  		background-color: #5cb85c;
+  		font-size: 20px;
+  		font-weight: 600;
+		border: none; 
+		cursor: pointer; 
+		border-radius: 8px;
+  		color: #ffff;
+  	}
+  	#question {
+  		padding: 10px;
+  		width: 80%;
+  		background-color: rgba(66,157,54, .5);
+  		font-size: 20px;
+  		height: 80px;
+  		color: #ffff;
+  	}
+  	#answer-1, #answer-2, #answer-3 {
+  		width: 80%;
+		height: 40px;
+		margin-top: 10px;
+		font-size: 20px;
+  		font-weight: 600;
+		border: none; 
+		cursor: pointer; 
+		border-radius: 8px;
+		background-color: rgba(66,157,54, .5);
+		color: #ffff;
+  	}
+
+  	h1 {
+  		display: none;
+  		color: #ffff;
+  	}
+  	button:hover {
+		transform: scale(1.01);
+		transition: all 1s ease 0.3s;
+	}
+  </style>
+ </head>
+<body>
+<h1></h1>
+<button id='start'>BẮT ĐẦU</button>
+<div id='wrap'>
+	<div id='question'></div>
+	<button id='answer-1'"></button>
+	<button id='answer-2'"></button>
+	<button id='answer-3'"></button>
+</div>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+	let question1 = {
+		question: 'HLV Jose Mourinho sinh năm bao nhiêu?',
+		answer1: '1962',
+		answer2: '1963',
+		answer3: '1964'
+	};
+	let question2 = {
+		question: 'Quê hương của HLV Jose Mourinho ở đâu tại Bồ Đào Nha?',
+		answer1: 'Porto',
+		answer2: 'Lisbon',
+		answer3: 'Setubal'
+	};
+	let question3 = {
+		question: 'Đội bóng đầu tiên Mourinho dẫn dắt năm 2000 là đội bóng nào?',
+		answer1: 'Benfica',
+		answer2: 'Porto',
+		answer3: 'Sporting Lisbon'
+	};
+	let question4 = {
+		question: 'Jose Mourinho giành chức vô địch Champions League lần đầu tiên cùng CLB nào?',
+		answer1: 'Inter Milan',
+		answer2: 'Porto',
+		answer3: 'Chelsea'
+	};
+	let question5 = {
+		question: 'Thành tích tốt nhất của Mourinho khi dẫn dắt Real Madrid thi đấu ở Champions League?',
+		answer1: 'Vào tứ kết',
+		answer2: 'Vào bán kết',
+		answer3: 'Vào chung kết'
+	};
+	let quiz = [question1, question2, question3, question4, question5];
+	let i=0, j=0;
+	function next() {
+		if (i<5) {
+			$('#question').html(quiz[i]['question']);
+			$('#answer-1').html(quiz[i]['answer1']);
+			$('#answer-2').html(quiz[i]['answer2']);
+			$('#answer-3').html(quiz[i]['answer3']);
+			i++;
+		} else if (j == 5) {
+			window.location.href = "file:///E:/study/lap%20trinh/Github/vuongcm.github.io/Jquery/chuc-mung.html";
+		} else if (j < 5) {
+			$('h1').html(`Bạn trả lời đúng ${j}/5 câu`);
+			$('h1').css('display', 'block');
+			$('#start').html('Chơi lại');
+			$('#start').css('display', 'block');
+			$('#wrap').css('display', 'none');
+			i=0, j=0;
+		}
+	}
+	$(document).ready(function() {
+		$('#answer-1').on('click', function() {
+			let trueAnswer = ((i-1) == 2) ? j++ : j=j;
+		});
+		$('#answer-2').on('click', function() {
+			let trueAnswer = ((i-1) == 0 || (i-1) == 3 || (i-1) == 4) ? j++ : j=j;
+		});
+		$('#answer-3').on('click', function() {
+			let trueAnswer = ((i-1) == 1) ? j++ : j=j;
+		});
+		/*$('#question, #answer-1, #answer-2, #answer-3').on('click', function() {
+			setTimeout(function() {
+				$('#this').css('background-color', 'rgba(57,236,26, .6)');
+				},100);
+			setTimeout(function() {
+				$(this).css('background-color', 'rgba(242,236,106, .6)');
+				},200);
+			setTimeout(function() {
+				$(this).css('background-color', 'rgba(57,236,26, .6)');
+				},400);
+			setTimeout(next,8000);
+		});*/ //                                    không dùng được $(this) trong setTimeout
+		$('#answer-1').on('click', function() {
+			setTimeout(function() {
+				$('#answer-1').css('background-color', 'rgba(57,236,26, .6)');
+				},100);
+			setTimeout(function() {
+				$('#answer-1').css('background-color', 'rgba(242,236,106, .6)');
+				},200);
+			setTimeout(function() {
+				$('#answer-1').css('background-color', 'rgba(57,236,26, .6)');
+				},400);
+			setTimeout(function() {
+				$('#answer-1').css('background-color', 'rgba(66,157,54, .5)');
+				},1000);
+			setTimeout(next,1000);
+		});
+		$('#answer-2').on('click', function() {
+			setTimeout(function() {
+				$('#answer-2').css('background-color', 'rgba(57,236,26, .6)');
+				},100);
+			setTimeout(function() {
+				$('#answer-2').css('background-color', 'rgba(242,236,106, .6)');
+				},200);
+			setTimeout(function() {
+				$('#answer-2').css('background-color', 'rgba(57,236,26, .6)');
+				},400);
+			setTimeout(function() {
+				$('#answer-2').css('background-color', 'rgba(66,157,54, .5)');
+				},1000);
+			setTimeout(next,1000);
+		});
+		$('#answer-3').on('click', function() {
+			setTimeout(function() {
+				$('#answer-3').css('background-color', 'rgba(57,236,26, .6)');
+				},100);
+			setTimeout(function() {
+				$('#answer-3').css('background-color', 'rgba(242,236,106, .6)');
+				},200);
+			setTimeout(function() {
+				$('#answer-3').css('background-color', 'rgba(57,236,26, .6)');
+				},400);
+			setTimeout(function() {
+				$('#answer-3').css('background-color', 'rgba(66,157,54, .5)');
+				},1000);
+			setTimeout(next,1000);
+		});
+		$('#start').on('click', function() {
+			setTimeout(function() {
+				$('#start').css('background-color', 'rgba(57,236,26, .6)');
+				},100);
+			setTimeout(function() {
+				$('#start').css('background-color', 'rgba(242,236,106, .6)');
+				},200);
+			setTimeout(function() {
+				$('#start').css('background-color', 'rgba(57,236,26, .6)');
+				},400);
+			setTimeout(function() {
+				$('#start').css('background-color', '#5cb85c');
+				},1000);
+			setTimeout(function() {
+				$('h1').css('display', 'none');
+				$('#start').css('display', 'none');
+				$('#wrap').css('display', 'block');
+				next();
+			},1000);
+			
+			
+    	});
+	});
+</script>
+</body>
+</html>
