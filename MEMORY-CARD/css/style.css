@@ -4,14 +4,15 @@
 	margin: 0;
 }
 body{
-    background: url('../img/bg.jpg') top center/cover;;
+    background: url('../img/bg.jpg') no-repeat top left;
     color: #333;
     font-family:  Helvetica, Arial, sans-serif;
     font-size: 16px;
-    overflow-y: scroll;
+    overflow-y: hidden;
+	background-size: 100% 100vh;
     width: 100%;
-
 }
+
 img {
 	width: 100%;
 
@@ -161,7 +162,7 @@ img {
     height: 50px;
 }
 .fomrgroup button {
-    width: 30%; 
+	padding: 5px;
     height: 40px;
     margin: 15px auto;
     font-size: 20px;
