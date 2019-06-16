@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>DOM EVENT</title>
+  <style type="text/css">
+  	button {
+  		font-size: 20px;
+  		width: 60px;
+  		height: 60px;
+  	}
+  	h2 {
+  		font-size: 35px;
+  		width: 250px;
+  		height: 150px;
+  		border: 1px solid black;
+  		margin: 35px auto 5px;
+  		display: flex;
+  		justify-content: flex-end;
+  		align-items: center;
+  	}
+  	#hidden {
+  		display: none;
+  	}
+  	body {
+  		text-align: center;
+  	}
+  	
+  </style>
+</head>
+<body>
+	<h2 id='result'></h2>
+	<button onclick="percent()">%</button>
+	<button onclick="sqr()">Căn</button>
+	<button onclick="square()">BP</button>
+	<button onclick="reset()">C</button><br>
+	<button onclick="press(this)">7</button>
+	<button onclick="press(this)">8</button>
+	<button onclick="press(this)">9</button>
+	<button onclick="division()">/</button><br>
+	<button onclick="press(this)">4</button>
+	<button onclick="press(this)">5</button>
+	<button onclick="press(this)">6</button>
+	<button onclick="multiply()">x</button><br>
+	<button onclick="press(this)">1</button>
+	<button onclick="press(this)">2</button>
+	<button onclick="press(this)">3</button>
+	<button onclick="plus()">+</button><br>
+	<button onclick="press(this)">-</button>
+	<button onclick="press(this)">0</button>
+	<button onclick="press(this)">.</button>
+	<button onclick="minus()">-</button><br>
+	<button onclick="equal()">=</button>
+	<h2 id='hidden'></h2>
+<script type="text/javascript">
+	let a,b,c,n,x,y;
+	function press(button) {
+		document.getElementById('result').innerText += button.innerText;
+		if (document.getElementById('result').innerHTML.indexOf('<br>')>=0) {
+			a = document.getElementById('result').innerHTML.indexOf('<br>');
+			x = document.getElementById('result').innerHTML.slice(0,a);
+			y = document.getElementById('result').innerHTML.slice(a+9);
+		} else {
+			x=document.getElementById('result').innerText;
+			y=0;
+		}
+	}
+	function plus() {
+		document.getElementById('result').innerHTML += '<br>+<br>';
+	}
+	function minus() {
+		document.getElementById('result').innerHTML += `<br>-<br>`;
+	}
+	function multiply() {
+		document.getElementById('result').innerHTML += '<br>x<br>';
+	}
+	function division() {
+		document.getElementById('result').innerHTML += '<br>/<br>';
+	}
+
+	function equal() {
+		if (document.getElementById('result').innerHTML.indexOf('+') >= 0) {
+			document.getElementById('result').innerHTML = Number(x) + Number(y);
+		} else if (document.getElementById('result').innerHTML.indexOf('-') >= 0) {
+			document.getElementById('result').innerHTML = Number(x)-Number(y);
+		} else if (document.getElementById('result').innerHTML.indexOf('x') >= 0) {
+			document.getElementById('result').innerHTML = Number(x)*Number(y);
+		} else if (document.getElementById('result').innerHTML.indexOf('/') >= 0) {
+			c = Number(x)/Number(y);
+			n = parseFloat(c); c = Math.round(n * 1000)/1000;
+			document.getElementById('result').innerHTML = c;
+		}
+	}
+	function reset() {
+		document.getElementById('result').innerHTML = '';
+	}
+	function percent() {
+		equal();
+		c = Number(document.getElementById('result').innerHTML)*100;
+		n = parseFloat(c); c = Math.round(n * 1000)/1000;
+		document.getElementById('result').innerHTML = c + '%';
+	}
+	function sqr() {
+		equal();
+		c = Math.sqrt(Number(document.getElementById('result').innerHTML));
+		n = parseFloat(c); c = Math.round(n * 1000)/1000;
+		document.getElementById('result').innerHTML = c;
+	}
+	function square() {
+		equal();
+		c = Math.pow(Number(document.getElementById('result').innerHTML), 2);
+		n = parseFloat(c); c = Math.round(n * 1000)/1000;
+		document.getElementById('result').innerHTML = c;
+	}
+
+
+</script>
+</body>
+</html>

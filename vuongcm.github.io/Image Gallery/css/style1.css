@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body, .wrap, .banner, .main-menu, .content {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+}
+
+.main-menu {
+	background-color: rgba(51,51,51,1);
+	height: 60px;
+	display: -webkit-flex; /* Safari */
+	display: flex;
+}
+
+a {
+	text-decoration: none;
+	color: rgba(255,200,200,1);
+	font-size: 2rem;
+	font-family: Arial;
+	/*background-color: blue;*/
+
+}
+.tab {
+	width: 20%;
+	height: 100%;
+	display: -webkit-flex; /* Safari */
+	display: flex;
+	-webkit-align-items: center; /* Safari */
+	align-items: center;
+	-webkit-justify-content: center; /* Safari */
+	justify-content: center;
+}
+
+.album {
+	color: rgba(255,201,14,1);
+}
+
+.tab:hover {
+	background-color: rgba(151,17,17,.8);
+	transition: background-color .3s ease-in-out;
+	border-radius: 10px;
+}
+
+a:hover {
+	color: rgba(255,255,255,1);
+}
+
+img {
+	width: 100%;
+}
+
+.image {
+	margin: .4rem 1%;
+	width: 48%;
+	border: 1px solid rgba(255,255,255,1);
+}
+
+.left {
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+.image img:hover {
+	filter: grayscale(60%);
+}
+
+.image:hover {
+	border: 1px solid rgba(255,255,25,1);
+}
