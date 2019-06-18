@@ -35,7 +35,7 @@ header{
 }
 article {
     width: 100%;
-    height: 1000px;
+    height: 2000px;
     background-color: grey;
 }
 /* END DEMO */
@@ -419,6 +419,7 @@ article {
 }
 @media (min-width:768px) {
   .navigation-clean {
+    width: 100%;
     display: none;
     height: 100%;
     position: fixed;

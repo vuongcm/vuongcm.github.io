@@ -1,0 +1,143 @@
+/* style back to top */
+#back-to-top {
+    font-family: FontAwesome;
+    cursor: pointer;
+    position: fixed;
+    bottom: 11%;
+    right: 5%;
+    color: rgba(249,241,19,1);
+    font-size: 36px;
+    opacity: .5;
+    display: none;
+}
+#back-to-top:hover {
+    opacity: 1;
+}
+/* end */
+#myFooter {
+    color: #F8F5E2;
+    padding-top: 30px;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #1F3C45;
+}
+#myFooter>.container {
+    width: 70%;
+}
+#myFooter .footer-copyright {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    border-top: 1px solid #F4CD00;
+}
+#myFooter .row {
+    margin-bottom: 60px;
+}
+#myFooter .logo-footer {
+    width: 83%;
+}
+#myFooter .footer-copyright p {
+    margin: 10px;
+    color: #F8F5E1;
+    font-size: calc(var(--fontSize) * 1.35);
+}
+#myFooter .footer-copyright span {
+    color: #EDD711;
+    cursor: pointer;
+}
+#myFooter ul {
+    padding-left: 0;
+    line-height: 1.7;
+}
+#myFooter h2 {
+    font-size: calc(var(--fontSize) * 2);
+    font-weight: 600;
+    margin-top: 30px;
+}
+#myFooter ul li span {
+    font-family: FontAwesome;
+    font-size: calc(var(--fontSize) * 2);
+    display: inline-block;
+    width: 7%;
+}
+#myFooter h3 {
+    width: 100%;
+    margin-top: .8rem;
+    font-size: calc(var(--fontSize) * 1.8);
+    display: inline-block;
+    font-weight: 100;
+    line-height: 1.4rem;
+}
+
+#myFooter .social-networks {
+    margin-top: 30px;
+    text-align: center;
+    padding-bottom: 16px;
+}
+#myFooter .social-networks>div {
+    display: flex;
+    justify-content: space-between;
+}
+#myFooter .social-networks a {
+    font-size: calc(var(--fontSize) * 4.2);
+    color: inherit;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+#myFooter .facebook:hover {
+    color: #047DB6;
+}
+
+#myFooter .youtube:hover {
+    color: #F90000;
+}
+
+#myFooter .instagram:hover {
+    color: #b46ce6;
+}
+@media only screen and (max-width: 992px) {
+  #myFooter .footer-copyright p {
+    font-size: 8.7px;
+  }
+  #myFooter h2, #myFooter ul li span {
+    font-size: 12.8px;
+  }
+  #myFooter h3 {
+    font-size: 11.5px;
+  }
+  #myFooter .social-networks a {
+    font-size: 27px;
+  }
+}
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+    #myFooter .footer-copyright p {
+        font-size: 12.18px;
+    }
+    #myFooter h2, #myFooter ul li span {
+        font-size: 17.92px;
+    }
+    #myFooter h3 {
+        font-size: 16px;
+    }
+    #myFooter .social-networks a {
+        font-size: 38px;
+    }
+    #myFooter .social-networks>div {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (max-width: 500px) {
+    #myFooter .social-networks>div {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 425px) {
+    #myFooter .social-networks>div {
+        width: 100%;
+    }
+}

@@ -89,7 +89,7 @@ let header = `<nav id="nav-1">
                 
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">TRANG CHỦ</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="google.com.vn">TRANG CHỦ</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="#">GIỚI THIỆU</a></li>
                         <li class="dropdown nav-item">
                             <a class="nav-link" aria-expanded="false" href="#">BÀI HỌC</a>
@@ -124,7 +124,41 @@ let header = `<nav id="nav-1">
             </div>
         </div>
         </nav>`;
-let footer = ``;
+let foot = `<span id="back-to-top"></span>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="logo-footer"><img src="img/logo-foot.png" class="img-responsive"></div>
+                </div>
+                <div class="col-md-5">
+                    <h2>LIÊN HỆ</h2>
+                    <ul>
+                        <li>
+                            <h3><span> </span> (+84) 963 566 129</h3>
+                        </li>
+                        <li>
+                            <h3><span> </span> thaonguyen.gds@gmail.com</h3>
+                        </li>
+                        <li>
+                            <h3><span> </span> Số 689, Phạm Văn Đồng, Bắc Từ Liêm, Hà Nội</h3>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <div class="social-networks">
+                        <h2>FOLLOW</h2>
+                        <div>
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>Designed & Developed by <span>@vuongcm</span></p>
+        </div>`;
 $(document).ready(function() {
 	$('.ca-menu>li').height($('.ca-menu>li').width());
 	$('.sub-menu').width($('.ca-menu').width() * 0.9);
@@ -132,9 +166,11 @@ $(document).ready(function() {
 	if ($('body').width() > 767) {
 		$('#navcol-1>.nav>.nav-item:nth-child(3)>a, #navcol-1>.nav>.nav-item:nth-child(4)>a').removeClass('dropdown-toggle').removeAttr('data-toggle');
 		$('.navbar-nav > li a, .nav-item').height($('body').width() * 0.105 * 448 /1357);
+        
 		$(window).bind('scroll', function(){
 			nav1Height = $('#nav-1').height() + 100;
 	        if($(this).scrollTop() > nav1Height){
+                $('.navigation-clean').height($('#test').height() + 2);
 	        	$('#nav-2').css({
 	        		'display':'block',
 	        		'-webkit-animation':'moveFromTop 800ms ease',
@@ -144,13 +180,23 @@ $(document).ready(function() {
 	        } else{
 	            $('#nav-2').css('display','none');
 	        }
-    	});
+        });
 	} else {
 		$('.nav-item, #nav-2, .navbar-nav > li a').removeAttr('style');
 		$('#navcol-1>.nav>.nav-item:nth-child(3)>a, #navcol-1>.nav>.nav-item:nth-child(4)>a').addClass('dropdown-toggle').attr('data-toggle', 'dropdown');
 		$(window).unbind('scroll');
 	}
-	
+	$(window).scroll(function(){ 
+        if ($(this).scrollTop() > 500) {
+            $('#back-to-top').fadeIn();
+        } else { 
+            $('#back-to-top').fadeOut();
+        } 
+    }); 
+    $('#back-to-top').on('click', function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 1000);
+        return false; 
+    }); 
 	$(window).bind('resize', function(){
 		$('.ca-menu>li').height($('.ca-menu>li').width());
 		$('.sub-menu').width($('.ca-menu').width() * 0.9);
@@ -158,9 +204,11 @@ $(document).ready(function() {
 		if ($('body').width() > 767) {
 			$('#navcol-1>.nav>.nav-item:nth-child(3)>a, #navcol-1>.nav>.nav-item:nth-child(4)>a').removeClass('dropdown-toggle').removeAttr('data-toggle');
 			$('.navbar-nav > li a, .nav-item').height($('body').width() * 0.105 * 448 /1357);
+            
 			$(window).bind('scroll', function(){
 				nav1Height = $('#nav-1').height() + 100;
 		        if($(this).scrollTop() > nav1Height){
+                    $('.navigation-clean').height($('#test').height() + 2);
 		        	$('#nav-2').css({
 		        		'display':'block',
 		        		'-webkit-animation':'moveFromTop 800ms ease',
@@ -178,4 +226,3 @@ $(document).ready(function() {
 		}
 	});
 });
-
