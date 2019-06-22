@@ -1,0 +1,195 @@
+
+/* STYLE  cho article 1 */
+.carousel-indicators {
+    bottom: 1%;
+    z-index: 1;
+}
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+#slide-1 .carousel-caption {
+    right: 12%;
+    top: 40%;
+    bottom: auto;
+    left: auto;
+    text-align: left;
+}
+#slide-1 .carousel-caption h1 {
+    font-weight: 400;
+    font-size: calc(var(--fontSize) * 4);
+    line-height: 1.5;
+    color: #FFFFFF;
+}
+#slide-1 .btn {
+    font-size: calc(var(--fontSize) * 2);
+    color: #FFFFFF;
+    background-color: #FC840E;
+    border-color: transparent;
+    padding: .75rem 1.25rem;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+}
+#slide-1 .btn-light:hover {
+    background-color: #f59a40;
+}
+@media only screen and (max-width: 767px) {
+    .carousel-indicators {
+        display: none;
+    }
+}
+/* STYLE search box */
+.search-container {
+    width: 70%;
+    margin: 0 auto;
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    -o-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
+}
+.search-container form {
+    width: 100%;
+    background-color: #020F40;
+    padding: .4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.search-container input[type=search], .search-container select {
+    width: 30%;
+    padding: 3px 8px;
+    font-size: 15px;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+.search-container button {
+    width: 15%;
+    font-size: 20px;
+    color: #FFFFFF;
+    background-color: #FC840E;
+    border-color: transparent;
+    padding: 0;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+ 
+.search-container button:hover {
+    background-color: #f59a40;
+}
+@media screen and (max-width: 767px) {
+    .search-container {
+        width: 90%;
+        -webkit-transform: translateY(-10%);
+        -moz-transform: translateY(-10%);
+        -o-transform: translateY(-10%);
+        -ms-transform: translateY(-10%);
+        transform: translateY(-10%);
+    }
+}
+@media screen and (max-width: 600px) {
+    .search-container form {
+        display: block;
+        padding: .2rem;
+    }
+    .search-container input[type=search], .search-container select {
+        display: block;
+        text-align: left;
+        width: 90%;
+        margin: 5px auto;
+    }
+    .search-container button {
+        font-size: 15px;
+        padding: 5px;
+        margin: 4px auto;
+        display: block;
+        width: 25%;
+    }
+}
+
+/* STYLE  cho article 2 */
+.article-list p {
+    color: #424648;
+}
+.article-list h2 {
+    margin-bottom: 20px;
+    padding-top: 40px;
+}
+.article-list h2:after {
+  display: block;
+  content: "";
+  background-color: #333;
+  height: 2px;
+  width: 20%;
+  margin: .3rem auto;
+}
+@media (max-width:767px) {
+    .article-list .container {
+        max-width: 90%;
+    }
+    .article-list h2 {
+        margin-bottom: 12px;
+        padding-top: 25px;
+        font-size: 24px;
+    }
+}
+.article-list .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.article-list .articles {
+    padding-bottom: 30px;
+}
+
+.article-list .item {
+    padding-top: 20px;
+    min-height: 425px;
+    text-align: center;
+}
+
+.article-list .item .name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+    color: #333;
+}
+.article-list .item a:hover .name {
+    color: #494b6b;
+}
+.article-list .item a:hover img {
+    opacity: .9;
+}
+.article-list .item .description {
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+@media (min-width:768px) {
+    .article-list .container {
+        width: 70%;
+    }
+}

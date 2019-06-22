@@ -33,11 +33,20 @@ header{
     width: 100%;
     font-family: Verdana, Arial, Helvetica, sans-serif;
 }
-article {
-    width: 100%;
-    height: 2000px;
-    background-color: grey;
+button, .btn {
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
 }
+article {
+    margin-top: 1rem;
+}
+article h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
 /* END DEMO */
 
 /* style menu 1 */
@@ -397,7 +406,8 @@ article {
         padding-left: 2rem;
         -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
         -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25); 
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+        z-index: 2;
 
     }
     #navcol-1>.nav>.nav-item, #navcol-1>.nav>.nav-item .dropdown-item {
@@ -421,10 +431,9 @@ article {
   .navigation-clean {
     width: 100%;
     display: none;
-    height: 100%;
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 2;
   }
   #test {
     background-color: #fff;

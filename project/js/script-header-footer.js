@@ -166,11 +166,9 @@ $(document).ready(function() {
 	if ($('body').width() > 767) {
 		$('#navcol-1>.nav>.nav-item:nth-child(3)>a, #navcol-1>.nav>.nav-item:nth-child(4)>a').removeClass('dropdown-toggle').removeAttr('data-toggle');
 		$('.navbar-nav > li a, .nav-item').height($('body').width() * 0.105 * 448 /1357);
-        
 		$(window).bind('scroll', function(){
 			nav1Height = $('#nav-1').height() + 100;
 	        if($(this).scrollTop() > nav1Height){
-                $('.navigation-clean').height($('#test').height() + 2);
 	        	$('#nav-2').css({
 	        		'display':'block',
 	        		'-webkit-animation':'moveFromTop 800ms ease',
@@ -204,11 +202,9 @@ $(document).ready(function() {
 		if ($('body').width() > 767) {
 			$('#navcol-1>.nav>.nav-item:nth-child(3)>a, #navcol-1>.nav>.nav-item:nth-child(4)>a').removeClass('dropdown-toggle').removeAttr('data-toggle');
 			$('.navbar-nav > li a, .nav-item').height($('body').width() * 0.105 * 448 /1357);
-            
 			$(window).bind('scroll', function(){
 				nav1Height = $('#nav-1').height() + 100;
 		        if($(this).scrollTop() > nav1Height){
-                    $('.navigation-clean').height($('#test').height() + 2);
 		        	$('#nav-2').css({
 		        		'display':'block',
 		        		'-webkit-animation':'moveFromTop 800ms ease',
