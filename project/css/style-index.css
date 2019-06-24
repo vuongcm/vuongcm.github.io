@@ -11,7 +11,7 @@
 }
 #slide-1 .carousel-caption {
     right: 12%;
-    top: 40%;
+    top: 25%;
     bottom: auto;
     left: auto;
     text-align: left;
@@ -129,7 +129,7 @@
     }
 }
 
-/* STYLE  cho article 2 */
+/* STYLE  cho article 2, 3, 4 */
 .article-list p {
     color: #424648;
 }
@@ -166,7 +166,6 @@
 
 .article-list .item {
     padding-top: 20px;
-    min-height: 425px;
     text-align: center;
 }
 
@@ -192,4 +191,72 @@
     .article-list .container {
         width: 70%;
     }
+}
+
+/* STYLE riêng cho article 3 */
+.article-list .banner {
+    width: 100%;
+    position: relative;
+}
+.article-list .banner .icon {
+    width: 5%;
+    position: absolute;
+}
+.article-list .banner .icon:nth-child(2) {
+    width: 12%;
+    left: 44%;
+    /*top: xx; -- javascript*/
+}
+.article-list .banner .icon:nth-child(3) {
+    left: 39%;
+    top: 19%;
+}
+.article-list .banner .icon:nth-child(4) {
+    left: 37%;
+    top: 43%;
+}
+.article-list .banner .icon:nth-child(5) {
+    left: 39%;
+    bottom: 19%;
+}
+.article-list .banner .icon:nth-child(6) {
+    right: 39%;
+    top: 19%;
+}
+.article-list .banner .icon:nth-child(7) {
+    right: 37%;
+    top: 43%;
+}
+.article-list .banner .icon:nth-child(8) {
+    right: 39%;
+    bottom: 19%;
+}
+#article-3.article-list h2:after {
+    width: 40%;
+}
+#article-3.article-list .item {
+    padding-bottom: 20px;
+}
+.read-more {
+    text-align: center;
+    width: 100%;
+    margin-top: -10px;
+    padding-bottom: 20px;
+}
+.article-list .btn {
+    font-size: calc(var(--fontSize) * 2);
+    color: #FFFFFF;
+    background-color: #FC840E;
+    border-color: transparent;
+    padding: .75rem 1.25rem;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+}
+.article-list .btn-light:hover {
+    background-color: #f59a40;
 }
