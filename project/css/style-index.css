@@ -1,10 +1,10 @@
 
 /* STYLE  cho article 1 */
-.carousel-indicators {
+#mycarousel .carousel-indicators {
     bottom: 1%;
     z-index: 1;
 }
-.carousel-indicators li {
+#mycarousel .carousel-indicators li {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -133,11 +133,11 @@
 .article-list p {
     color: #424648;
 }
-.article-list h2 {
+.article-list .intro h2 {
     margin-bottom: 20px;
     padding-top: 40px;
 }
-.article-list h2:after {
+.article-list .intro h2:after {
   display: block;
   content: "";
   background-color: #333;
@@ -149,7 +149,7 @@
     .article-list .container {
         max-width: 90%;
     }
-    .article-list h2 {
+    .article-list .intro h2 {
         margin-bottom: 12px;
         padding-top: 25px;
         font-size: 24px;
@@ -194,7 +194,7 @@
 }
 
 /* STYLE riêng cho article 3 */
-.article-list .banner {
+.article-list .banner { /* banner */
     width: 100%;
     position: relative;
 }
@@ -231,7 +231,83 @@
     right: 39%;
     bottom: 19%;
 }
-#article-3.article-list h2:after {
+.article-list .banner a {
+    position: absolute;
+}
+.article-list .banner a:nth-child(9) {
+    color: #60079e;
+    right: 65%;
+    top: 22%;
+}
+.article-list .banner a:nth-child(10) {
+    color: #06780b;
+    right: 65%;
+    top: 46%;
+}
+.article-list .banner a:nth-child(11) {
+    color: #ef7d0d;
+    right: 65%;
+    bottom: 19%;
+}
+.article-list .banner a:nth-child(12) {
+    color: #ed318c;
+    left: 65%;
+    top: 22%;
+}
+.article-list .banner a:nth-child(13) {
+    color: #895233;
+    left: 65%;
+    top: 46%;
+}
+.article-list .banner a:nth-child(14) {
+    color: #f70000;
+    left: 65%;
+    bottom: 19%;
+}
+.article-list .banner h2 {
+    font-size: calc(var(--fontSize) * 3);
+}
+.article-list .banner a:hover h2 {
+    opacity: .8;
+}
+@media only screen and (max-width: 575px) {
+    .article-list .banner a {
+        display: none;
+    }
+    .article-list .banner .icon {
+        width: 8%;
+    }
+    .article-list .banner .icon:nth-child(2) {
+        width: 20%;
+        left: 40%;
+    }
+    .article-list .banner .icon:nth-child(3) {
+        left: 22%;
+        top: 5%;
+    }
+    .article-list .banner .icon:nth-child(4) {
+        left: 19%;
+        top: 35%;
+    }
+    .article-list .banner .icon:nth-child(5) {
+        left: 22%;
+        bottom: 10%;
+    }
+    .article-list .banner .icon:nth-child(6) {
+        right: 22%;
+        top: 5%;
+    }
+    .article-list .banner .icon:nth-child(7) {
+        right: 19%;
+        top: 35%;
+    }
+    .article-list .banner .icon:nth-child(8) {
+        right: 22%;
+        bottom: 10%;
+    }
+    
+} /* end banner */
+#article-3.article-list .intro h2:after {
     width: 40%;
 }
 #article-3.article-list .item {
@@ -259,4 +335,194 @@
 }
 .article-list .btn-light:hover {
     background-color: #f59a40;
+}
+/* STYLE riêng cho articles 4 và 5 */
+#article-4.article-list .banner .icon, #article-5.article-list .banner .icon {
+    width: 36%;
+    top: 3%;
+    right: 12%;
+    left: auto;
+}
+#article-4.article-list .banner>h2, #article-5.article-list .banner>h2 {
+    position: absolute;
+    top: 20%;
+    left: 12%;
+    font-size: calc(var(--fontSize) * 4);
+    text-align: center;
+    line-height: 1.5;
+    color: #f8f5e2;
+    font-family: Charm, 'Dancing Script', cursive;
+}
+#article-4.article-list .banner a {
+    bottom: 20%;
+    left: 20%;
+    text-align: center;
+}
+#article-4.article-list .banner a>h2 {
+    color: #E77200;
+}
+
+#article-4.article-list .banner a>span {
+    font-size: calc(var(--fontSize) * 8);
+    color: #E77200;
+}
+#article-4.article-list .banner a:hover span {
+    opacity:  .8;
+}
+@media only screen and (max-width: 665px) {
+    #article-4.article-list .banner .icon {
+        right: 5%;
+    }
+    #article-4.article-list .banner>h2 {
+        left: 5%;
+        top: 15%;
+        font-size: 20.52px;
+    }
+    #article-4.article-list .banner a {
+        left: 13%;
+        bottom: 15%;
+    }
+}
+@media only screen and (max-width: 415px) {
+    #article-4.article-list .banner>h2 {
+        display: none;
+    }
+    #article-4.article-list .banner .icon {
+        right: 35%;
+    }
+}
+#article-4.article-list .intro h2:after {
+    width: 20%;
+}
+#article-4.article-list .item {
+    padding-bottom: 20px;
+}
+.interactive {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10%;
+    padding-left: 10%;
+    color: #424648;
+    margin-top: 1rem;
+    font-style: italic;
+}
+.interactive .date {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+   
+}
+.interactive .view {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.interactive .view p:nth-child(1) {
+    margin: 0;
+}
+.interactive .view span, .banner span {
+    font-family: FontAwesome;
+}
+/* STYLE riêng cho articles 5 */
+#article-5.article-list .banner a {
+    bottom: 30%;
+    left: 18%;
+}
+@media only screen and (max-width: 665px) {
+    #article-5.article-list .banner .icon {
+        right: 10%;
+    }
+    #article-5.article-list .banner>h2 {
+        left: 10%;
+        top: 15%;
+        font-size: 20.52px;
+    }
+    #article-5.article-list .banner a {
+        left: 15%;
+        bottom: 30%;
+    }
+}
+@media only screen and (max-width: 415px) {
+    #article-5.article-list .banner>h2 {
+        display: none;
+    }
+    #article-5.article-list .banner .icon {
+        right: 35%;
+    }
+}
+#article-5.article-list .intro h2:after {
+    width: 40%;
+}
+#article-5 .container {
+  max-width: 70%;
+}
+@media screen and (max-width: 767px) {
+  #article-5 .container {
+    max-width: 90%;
+  }
+}
+#myCarousel-product {
+  position: relative;
+  margin-top: 2.5rem;
+}
+#myCarousel-product .carousel-item .row>div {
+  margin-bottom: 3rem;
+}
+#myCarousel-product .thumbnail {
+  margin-bottom: 0;
+}
+#myCarousel-product .thumbnail .caption {
+  margin-top: 1rem;
+  padding: 0;
+  color: #333;
+}
+#myCarousel-product .thumbnail .caption p {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+}
+#myCarousel-product .thumbnail .caption:hover h3 {
+  color: #494b6b;
+}
+#myCarousel-product .thumbnail img:hover {
+  opacity: .8;
+}
+#myCarousel-product .thumbnail .caption h3 {
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+#myCarousel-product .thumbnail .caption .lineThrough {
+  text-decoration: line-through;
+  color: #424648;
+}
+#myCarousel-product .thumbnail .caption .textColor {
+  color: #fc840e;
+}
+#myCarousel-product .carousel-control.left, .carousel-control.right {
+  background-image:none !important;
+}
+#myCarousel-product .carousel-control {
+  font-family: FontAwesome;
+  font-size: 25px;
+  position: absolute;
+  top: 45%;
+  color: #f9f113;
+  opacity: .5;
+}
+#myCarousel-product .carousel-control:hover {
+  opacity: 1;
+}
+#myCarousel-product .carousel-control.right {
+  right: 0;
+}
+#myCarousel-product .carousel-control.left {
+  left: 0;
+}
+@media screen and (max-width: 575px) {
+  #article-5 div.col-lg-2.col-md-3 {
+    max-width: 50%;
+  }
 }

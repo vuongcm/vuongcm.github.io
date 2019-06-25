@@ -146,7 +146,7 @@ let foot = `<span id="back-to-top"></span>
                 </div>
                 <div class="col-md-3">
                     <div class="social-networks">
-                        <h2>FOLLOW</h2>
+                        <h2>KẾT NỐI</h2>
                         <div>
                             <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
                             <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
