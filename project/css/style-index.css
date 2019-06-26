@@ -101,7 +101,7 @@
 }
 @media screen and (max-width: 767px) {
     .search-container {
-        width: 90%;
+        width: 96%;
         -webkit-transform: translateY(-10%);
         -moz-transform: translateY(-10%);
         -o-transform: translateY(-10%);
@@ -147,7 +147,7 @@
 }
 @media (max-width:767px) {
     .article-list .container {
-        max-width: 90%;
+        max-width: 96%;
     }
     .article-list .intro h2 {
         margin-bottom: 12px;
@@ -460,7 +460,7 @@
 }
 @media screen and (max-width: 767px) {
   #article-5 .container {
-    max-width: 90%;
+    max-width: 96%;
   }
 }
 #myCarousel-product {

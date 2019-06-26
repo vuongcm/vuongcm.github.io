@@ -10,7 +10,7 @@ let header = `<nav id="nav-1">
                 </div>
                 <ul class="ca-menu clr">
                     <li>
-                        <a href="https://fontawesome.com/cheatsheet#use">
+                        <a href="index.html">
                             <span class="ca-icon"></span>
                             <div class="ca-content">
                                 <h2 class="ca-main">TRANG CHỦ</h2>
@@ -18,7 +18,7 @@ let header = `<nav id="nav-1">
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="about.html">
                             <span class="ca-icon"></span>
                             <div class="ca-content">
                                 <h2 class="ca-main">GIỚI THIỆU</h2>
@@ -89,8 +89,8 @@ let header = `<nav id="nav-1">
                 
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="google.com.vn">TRANG CHỦ</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">GIỚI THIỆU</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">TRANG CHỦ</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="about.html">GIỚI THIỆU</a></li>
                         <li class="dropdown nav-item">
                             <a class="nav-link" aria-expanded="false" href="#">BÀI HỌC</a>
                             <div class="dropdown-menu" role="menu">
@@ -123,7 +123,8 @@ let header = `<nav id="nav-1">
                 </button>
             </div>
         </div>
-        </nav>`;
+        </nav>
+        <div id="fixed-nav2"></div>`;
 let foot = `<span id="back-to-top"></span>
         <div class="container">
             <div class="row">
@@ -181,6 +182,7 @@ $(document).ready(function() {
         });
 	} else {
 		$('.nav-item, #nav-2, .navbar-nav > li a').removeAttr('style');
+        $('#fixed-nav2').height($('#nav-2').outerHeight());
 		$('#navcol-1>.nav>.nav-item:nth-child(3)>a, #navcol-1>.nav>.nav-item:nth-child(4)>a').addClass('dropdown-toggle').attr('data-toggle', 'dropdown');
 		$(window).unbind('scroll');
 	}
@@ -217,6 +219,7 @@ $(document).ready(function() {
 	    	});
 		} else {
 			$('.nav-item, #nav-2, .navbar-nav > li a').removeAttr('style');
+            $('#fixed-nav2').height($('#nav-2').outerHeight());
 			$('#navcol-1>.nav>.nav-item:nth-child(3)>a, #navcol-1>.nav>.nav-item:nth-child(4)>a').addClass('dropdown-toggle').attr('data-toggle', 'dropdown');
 			$(window).unbind('scroll');
 		}
