@@ -8,8 +8,8 @@
     <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style-header.css">
-    <link rel="stylesheet" href="css/style-footer.css">
-    <link rel="stylesheet" href="css/style-about.css">
+    <link rel="stylesheet" type="text/css" href="css/style-footer.css">
+    <link rel="stylesheet" type="text/css" href="css/style-about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -64,7 +64,7 @@
         <p>Mong rằng chia sẻ trên đây của Mẹ Kiwi đã giúp các bố mẹ hiểu hơn phần nào về GDS và tự tin để bước cùng con khám phá mọi điều trong cuộc sống.</p>
     </div>
 </article>
-<article class="about">
+<article class="about" id="about-2">
     <div class="banner">
         <img src="img/banner-bot-min.png" alt="img" class="img-responsive">
         <div>
@@ -75,7 +75,7 @@
             <h2>ĐÔI NÉT VỀ "KIWI'S MOM"</h2>
         </div>
     </div>
-    <div class="content">
+    <div class="content" id="content-about-2">
         <h5>What is Lorem Ipsum?</h5>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         <h5>Why do we use it?</h5>
@@ -92,14 +92,26 @@
 <script>
     $('header').html(header);
     $('#myFooter').html(foot);
-    if ($('.banner').closest('.about').children('.content').css('display') == 'none') {
-        $('.banner .minus').css('display', 'block');
-        $(".banner .plus").css('display', 'none');
-    } else {
-        $('.banner .minus').css('display', 'none');
-        $(".banner .plus").css('display', 'block');
-    }
+    let i, a, b;
     $('.about').css('--height',`${$('.about img').height()}px`);
+    for (i=0; i < $('.about').length; i++) {
+        b = '#about-' + (i+1);
+        a = $('.about').eq(i);
+        if ($(location).attr('hash') != b) {
+            a.toggleClass('lego');
+            a.children('.content').toggle();
+        }
+    }
+    for (i=0; i < $('.togg').length; i++) {
+        a = $('.togg').eq(i);
+        if (a.closest('.about').children('.content').css('display') == 'none') {
+            a.children(".minus").css('display', 'block');
+            a.children(".plus").css('display', 'none');
+        } else {
+            a.children(".minus").css('display', 'none');
+            a.children(".plus").css('display', 'block');
+        }
+    }
     $('.togg').bind('click', function(){
         $(this).closest('.about').children('.content').slideToggle(600,'linear');
         $(this).closest('.about').toggleClass('lego');
