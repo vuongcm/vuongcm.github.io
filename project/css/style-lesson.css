@@ -50,7 +50,7 @@
 .content .text {
   width: 80%;
   float: right;
-  height: 800px;
+  /*height: 800px;*/ /* xóa */
 }
 .content .text h5 {
   text-align: center;
@@ -61,6 +61,14 @@
 }
 .content .text p>a {
   color: #FC840E;
+}
+.content .text p:after {
+  display: block;
+  content: "";
+  background-color: #b3a7a7;
+  height: 1px;
+  width: 40%;
+  margin: 1rem auto 1.5rem;
 }
 .content .text p>a:hover {
   opacity: .8;

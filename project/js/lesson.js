@@ -34,33 +34,49 @@ $(document).ready(function() {
     });
 
     // load dữ liệu từ JSON
-    /*$.ajax({
-        dataType: 'json',
-        url: 'data/lesson/demo/language-page-2.json',
-        success: function(response) {
-            let data = JSON.parse(response);
-            for (i=0; i < data['listLesson'].length; i++) {
-                $('#lesson-1 .text').append(data['listLesson'][i]);
-            }
-            for (i=0; i < data['hotLesson'].length; i++) {
-                $('#lesson-1 aside').append(data['hotLesson'][i])
-            }
-            
-        },
-        error: function() {
-            alert('lỗi load dữ liệu');
+    let dataList = {
+        jsonLanguage: ['language-page-1','language-page-2'],
+        jsonLogic: ['logic-page-1','logic-page-2'],
+        jsonMotor: ['motor-page-1','motor-page-2'],
+        jsonMusic: ['music-page-1','music-page-2'],
+        jsonSkill: ['skill-page-1','skill-page-2'],
+        jsonScience: ['science-page-1','science-page-2']
+    };
+    let jsonListName = ['jsonLanguage','jsonLogic','jsonMotor','jsonMusic','jsonSkill','jsonScience'];
+        loadJson = function(x, y) {
+            $.ajax({
+                dataType: 'json',
+                url: `data/demo/${y}.json`,
+                success: function(response) {
+                    // let data = JSON.parse(response);
+                    $(`#lesson-${x} .text`).html('');
+                    $(`#lesson-${x} aside`).html('<h5>NHIỀU LƯỢT XEM NHẤT</h5>');
+                    for (i=0; i < response.user.length; i++) {
+                        $(`#lesson-${x} .text`).append(`<div><a href="${response.user[i].a}"><h5>${response.user[i].h5}</h5></a><p>${response.user[i].p}<a href="${response.user[i].a}">xem thêm.</a></p>`);
+                    }
+                    for (i=0; i < response.hot.length; i++) {
+                        $(`#lesson-${x} aside`).append(`<div class="hot-pic"><a href="${response.hot[i].a}"><h6>${response.hot[i].h6}</h6></a><div class="view"><p><span></span> ${response.hot[i].seen}</p><p><span></span> ${response.hot[i].cmt}</p></div></div>`);
+                    }
+                    $(`#lesson-${x} aside`).append(`<div>...</div>`);
+                },
+                error: function() {
+                    alert('lỗi load dữ liệu');
+                }
+            });
         }
-    });*/
-});
-$(document).ready(function () {
-        var data;
-        $.ajax({
-            dataType: "json",
-            url: 'data/lesson/demo/language-page-2.json',
-            data: data,
-            success: function (data) {
-                // begin accessing JSON data here
-                console.log(data.listLesson[0]);
-            }
+    let clickPageNumber = function(x) {
+        $(`#lesson-${x} .number`).removeClass('active');
+        this.addClass('active');
+    }
+    loadJson(1,dataList.jsonLanguage[0]);
+    loadJson(2,dataList.jsonLogic[0]);
+    loadJson(3,dataList.jsonMotor[0]);
+    loadJson(4,dataList.jsonMusic[0]);
+    loadJson(5,dataList.jsonSkill[0]);
+    loadJson(6,dataList.jsonScience[0]);
+    for (key in $('.number')) {
+        $('.number').eq(key).on('click', function(){
+            
         });
-    });
+    }
+});
