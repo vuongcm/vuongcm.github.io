@@ -42,19 +42,19 @@ let header = `<nav id="nav-1">
                         </ul>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="videos.html">
                             <span class="ca-icon"></span>
                             <div class="ca-content">
                                 <h2 class="ca-main">VIDEOS</h2>
                             </div>
                         </a>
                         <ul class="sub-menu sub-menu-2">
-                            <li><a href="#">NGÔN NGỮ <br>&<br> NHẬN THỨC</a></li>
-                            <li><a href="#">LOGIC <br>&<br> TOÁN HỌC</a></li>
-                            <li><a href="#">VẬN ĐỘNG</a></li>
-                            <li><a href="#">ÂM NHẠC <br>&<br> NGHỆ THUẬT</a></li>
-                            <li><a href="#">KỸ NĂNG<br> SỐNG</a></li>
-                            <li><a href="#">KHOA HỌC</a></li>
+                            <li><a href="videos.html#videos-1">NGÔN NGỮ <br>&<br> NHẬN THỨC</a></li>
+                            <li><a href="videos.html#videos-2">LOGIC <br>&<br> TOÁN HỌC</a></li>
+                            <li><a href="videos.html#videos-3">VẬN ĐỘNG</a></li>
+                            <li><a href="videos.html#videos-4">ÂM NHẠC <br>&<br> NGHỆ THUẬT</a></li>
+                            <li><a href="videos.html#videos-5">KỸ NĂNG<br> SỐNG</a></li>
+                            <li><a href="videos.html#videos-6">KHOA HỌC</a></li>
                         </ul>
                     </li>
                     <li>
@@ -103,14 +103,14 @@ let header = `<nav id="nav-1">
                             </div>
                         </li>
                         <li class="dropdown nav-item">
-                            <a class="nav-link" aria-expanded="false" href="#">VIDEOS</a>
+                            <a class="nav-link" aria-expanded="false" href="videos.html">VIDEOS</a>
                             <div class="dropdown-menu" role="menu">
-                                <a class="dropdown-item" role="presentation" href="https://thachpham.com/web-development/html-css/huong-dan-css3-flexbox-toan-tap.html">NGÔN NGỮ & NHẬN THỨC</a>
-                                <a class="dropdown-item" role="presentation" href="#">LOGIC & TOÁN HỌC</a>
-                                <a class="dropdown-item" role="presentation" href="#">VẬN ĐỘNG</a>
-                                <a class="dropdown-item" role="presentation" href="https://thachpham.com/web-development/html-css/huong-dan-css3-flexbox-toan-tap.html">ÂM NHẠC & NGHỆ THUẬT</a>
-                                <a class="dropdown-item" role="presentation" href="#">KỸ NĂNG SỐNG</a>
-                                <a class="dropdown-item" role="presentation" href="#">KHOA HỌC</a>
+                                <a class="dropdown-item" role="presentation" href="videos.html#videos-1">NGÔN NGỮ & NHẬN THỨC</a>
+                                <a class="dropdown-item" role="presentation" href="videos.html#videos-2">LOGIC & TOÁN HỌC</a>
+                                <a class="dropdown-item" role="presentation" href="videos.html#videos-3">VẬN ĐỘNG</a>
+                                <a class="dropdown-item" role="presentation" href="videos.html#videos-4">ÂM NHẠC & NGHỆ THUẬT</a>
+                                <a class="dropdown-item" role="presentation" href="videos.html#videos-5">KỸ NĂNG SỐNG</a>
+                                <a class="dropdown-item" role="presentation" href="videos.html#videos-6">KHOA HỌC</a>
                             </div>
                         </li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="#">CỬA HÀNG</a></li>

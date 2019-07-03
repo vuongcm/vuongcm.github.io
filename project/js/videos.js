@@ -2,16 +2,13 @@ $(document).ready(function() {
     let i, a, b, c,z, j=0;
     $('.about').css('--height',`${$('.about img').height()}px`);
     for (i=0; i < $('.about').length; i++) {
-        b = '#lesson-' + (i+1);
+        b = '#videos-' + (i+1);
         a = $('.about').eq(i);
 
         if ($(location).attr('hash') != b) {
             a.toggleClass('lego');
             a.children('.content').toggle();
-        } /*else {
-            c = $('.about h2').eq(i).text().slice(0,1) + $('.about h2').eq(i).text().slice(1).toLowerCase();
-            $('.link a:last-child').text(c);
-        }*/
+        }
     }
     for (i=0; i < $('.togg').length; i++) {
         a = $('.togg').eq(i);
@@ -46,27 +43,44 @@ $(document).ready(function() {
     let loadJson = function(x, y) {
             $.ajax({
                 dataType: 'json',
-                url: `data/demo/lesson/${y}.json`})
+                url: `data/demo/videos/${y}.json`})
                 .done(function(response) {
                     //let response = JSON.parse(data);
-                    $(`#lesson-${x} .text`).html('');
-                    $(`#lesson-${x} aside`).html('<h5>NHIỀU LƯỢT XEM NHẤT</h5>');
-                    for (i=0; i < response.user.length; i++) {
-                        $(`#lesson-${x} .text`).append(`<div><a href="${response.user[i].a}"><h5>${response.user[i].h5}</h5></a><p>${response.user[i].p}<a href="${response.user[i].a}">xem thêm.</a></p>`);
+                    $(`#videos-${x} .media .articles`).html('');
+                    $(`#videos-${x} aside`).html('<h5>NHIỀU LƯỢT XEM NHẤT</h5>');
+                    for (i=0; i < response.link.length; i++) {
+                        $(`#videos-${x} .media .articles`).append(`
+                            <div class="col-sm-6 col-md-4 item">
+                                <iframe width="100%" src="${response.link[i].src}" frameborder="0" allowfullscreen></iframe>
+                                <a target="_blank" href="${response.link[i].src}"><h3 class="name">${response.link[i].h3}</h3></a>
+                                <div class="interactive">
+                                    <div class="date">${response.link[i].date}</div>
+                                    <div class="view">
+                                        <p><span></span> ${response.link[i].seen}</p>
+                                        <p><span></span> ${response.link[i].cmt}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            `);
                     }
                     for (i=0; i < response.hot.length; i++) {
-                        $(`#lesson-${x} aside`).append(`<div class="hot-pic"><a href="${response.hot[i].a}"><h6>${response.hot[i].h6}</h6></a><div class="view"><p><span></span> ${response.hot[i].seen}</p><p><span></span> ${response.hot[i].cmt}</p></div></div>`);
+                        $(`#videos-${x} aside`).append(`
+                            <div class="hot-pic">
+                                <a target="_blank" href="${response.hot[i].src}"><h6>${response.hot[i].h6}</h6></a>
+                                <div class="view">
+                                    <p><span></span> ${response.hot[i].seen}</p>
+                                    <p><span></span> ${response.hot[i].cmt}</p>
+                                </div>
+                            </div>
+                            `);
                     }
-                    $(`#lesson-${x} aside`).append(`<div>...</div>`);
+                    $(`#videos-${x} aside`).append(`<div>...</div>`);
                 })
                 .fail(function() {
                     alert('lỗi load dữ liệu');
                 });
         }
-    function clickPageNumber(x) {
-        $('.number').eq(x).closest('ul').children('.number').removeClass('active');
-        $('.number').eq(x).addClass('active');
-    };
+
     loadJson(1,dataList.jsonLanguage[0]);
     loadJson(2,dataList.jsonLogic[0]);
     loadJson(3,dataList.jsonMotor[0]);
@@ -81,46 +95,46 @@ $(document).ready(function() {
         });
     }
 
-    /*for (j=0; j < $('#lesson-1 .number a').length; j++) {
-        $($('#lesson-1 .number a')[j]).on('click', function() {
+    /*for (j=0; j < $('#videos-1 .number a').length; j++) {
+        $($('#videos-1 .number a')[j]).on('click', function() {
             loadJson(1, dataList.jsonLanguage[j]);
         });
     }*/
-    $($('#lesson-1 .number a')[0]).on('click', function() {
+    $($('#videos-1 .number a')[0]).on('click', function() {
         loadJson(1, dataList[jsonListName[0]][0]);
     });
-    $($('#lesson-1 .number a')[1]).on('click', function() {
+    $($('#videos-1 .number a')[1]).on('click', function() {
         loadJson(1, dataList[jsonListName[0]][1]);
     });
-    $($('#lesson-2 .number a')[0]).on('click', function() {
+    $($('#videos-2 .number a')[0]).on('click', function() {
         loadJson(2, dataList[jsonListName[1]][0]);
     });
-    $($('#lesson-2 .number a')[1]).on('click', function() {
+    $($('#videos-2 .number a')[1]).on('click', function() {
         loadJson(2, dataList[jsonListName[1]][1]);
     });
-    $($('#lesson-3 .number a')[0]).on('click', function() {
+    $($('#videos-3 .number a')[0]).on('click', function() {
         loadJson(3, dataList[jsonListName[2]][0]);
     });
-    $($('#lesson-3 .number a')[1]).on('click', function() {
+    $($('#videos-3 .number a')[1]).on('click', function() {
         loadJson(3, dataList[jsonListName[2]][1]);
     });
-    $($('#lesson-4 .number a')[0]).on('click', function() {
+    $($('#videos-4 .number a')[0]).on('click', function() {
         loadJson(4, dataList[jsonListName[3]][1]);
     });
-    $($('#lesson-4 .number a')[1]).on('click', function() {
+    $($('#videos-4 .number a')[1]).on('click', function() {
         loadJson(4, dataList[jsonListName[3]][1]);
     });
-    $($('#lesson-5 .number a')[0]).on('click', function() {
+    $($('#videos-5 .number a')[0]).on('click', function() {
         loadJson(5, dataList[jsonListName[4]][0]);
     });
-    $($('#lesson-5 .number a')[1]).on('click', function() {
+    $($('#videos-5 .number a')[1]).on('click', function() {
         loadJson(5, dataList[jsonListName[4]][1]);
     });
-    $($('#lesson-6 .number a')[0]).on('click', function() {
+    $($('#videos-6 .number a')[0]).on('click', function() {
         loadJson(6, dataList[jsonListName[5]][0]);
     });
-    $($('#lesson-6 .number a')[1]).on('click', function() {
-        loadJson(6, dataList.jsonScience[1]);
+    $($('#videos-6 .number a')[1]).on('click', function() {
+        loadJson(6, dataList[jsonListName[5]][1]);
     });
     for (j=0; j<6; j++) {
         $($('.content ul li:first-child a')[j]).on('click', function() {
@@ -132,40 +146,40 @@ $(document).ready(function() {
             $(this).parent('.page-item').prev().addClass("active");
         });
     }
-    $('#lesson-1 ul li:first-child a').on('click', function() {
+    $('#videos-1 ul li:first-child a').on('click', function() {
         loadJson(1, dataList[jsonListName[0]][0]);
     });
-    $('#lesson-1 ul li:last-child a').on('click', function() {
+    $('#videos-1 ul li:last-child a').on('click', function() {
         loadJson(1, dataList[jsonListName[0]][1]);
     });
-    $('#lesson-2 ul li:first-child a').on('click', function() {
+    $('#videos-2 ul li:first-child a').on('click', function() {
         loadJson(2, dataList[jsonListName[1]][0]);
     });
-    $('#lesson-2 ul li:last-child a').on('click', function() {
+    $('#videos-2 ul li:last-child a').on('click', function() {
         loadJson(2, dataList[jsonListName[1]][1]);
     });
-    $('#lesson-3 ul li:first-child a').on('click', function() {
+    $('#videos-3 ul li:first-child a').on('click', function() {
         loadJson(3, dataList[jsonListName[2]][0]);
     });
-    $('#lesson-3 ul li:last-child a').on('click', function() {
+    $('#videos-3 ul li:last-child a').on('click', function() {
         loadJson(3, dataList[jsonListName[2]][1]);
     });
-    $('#lesson-4 ul li:first-child a').on('click', function() {
+    $('#videos-4 ul li:first-child a').on('click', function() {
         loadJson(4, dataList[jsonListName[3]][1]);
     });
-    $('#lesson-4 ul li:last-child a').on('click', function() {
+    $('#videos-4 ul li:last-child a').on('click', function() {
         loadJson(4, dataList[jsonListName[3]][1]);
     });
-    $('#lesson-5 ul li:first-child a').on('click', function() {
+    $('#videos-5 ul li:first-child a').on('click', function() {
         loadJson(5, dataList[jsonListName[4]][0]);
     });
-    $('#lesson-5 ul li:last-child a').on('click', function() {
+    $('#videos-5 ul li:last-child a').on('click', function() {
         loadJson(5, dataList[jsonListName[4]][1]);
     });
-    $('#lesson-6 ul li:first-child a').on('click', function() {
+    $('#videos-6 ul li:first-child a').on('click', function() {
         loadJson(6, dataList[jsonListName[5]][0]);
     });
-    $('#lesson-6 ul li:last-child a').on('click', function() {
+    $('#videos-6 ul li:last-child a').on('click', function() {
         loadJson(6, dataList.jsonScience[1]);
     });
 });

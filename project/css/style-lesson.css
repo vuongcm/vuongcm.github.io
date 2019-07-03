@@ -136,6 +136,7 @@
 .content nav {
   float: left;
   width: 100%;
+  margin-top: .6rem;
 }
 .content nav ul {
   margin: 0;
