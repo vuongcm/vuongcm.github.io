@@ -18,12 +18,12 @@ $(document).ready(function() {
 
     // load dữ liệu từ JSON
     let dataListProduct = ['product-page-1','product-page-2'];
-    let loadJson = function(y) {
+    let loadJsonProduct = function(y) {
             $.ajax({
-                //dataType: 'json',
+                dataType: 'json',
                 url: `data/demo/shop/${y}.json`})
-                .done(function(data) {
-                    let response = JSON.parse(data);
+                .done(function(response) {
+                    // let response = JSON.parse(data);
                     $(`.product .row`).html('');
                     $(`#shop aside`).html('<h5>SẢN PHẨM BÁN CHẠY</h5>');
                     for (i=0; i < response.product.length; i++) {
@@ -69,7 +69,7 @@ $(document).ready(function() {
                 });
         };
 
-    loadJson(dataListProduct[0]);
+    loadJsonProduct(dataListProduct[0]);
 
     for (i=0; i < $('.number a').length; i++) {
         $($('.number a')[i]).on('click', function() {
@@ -84,10 +84,10 @@ $(document).ready(function() {
         });
     }*/
     $($('.number a')[0]).on('click', function() {
-        loadJson(dataListProduct[0]);
+        loadJsonProduct(dataListProduct[0]);
     });
     $($('.number a')[1]).on('click', function() {
-        loadJson(dataListProduct[1]);
+        loadJsonProduct(dataListProduct[1]);
     });
     $('.content ul li:first-child a').on('click', function() {
         $(this).closest('ul').children('.number').removeClass("active");
@@ -99,10 +99,10 @@ $(document).ready(function() {
     });
     
     $('#shop ul li:first-child a').on('click', function() {
-        loadJson(dataListProduct[0]);
+        loadJsonProduct(dataListProduct[0]);
     });
     $('#shop ul li:last-child a').on('click', function() {
-        loadJson(dataListProduct[1]);
+        loadJsonProduct(dataListProduct[1]);
     });
     
 });

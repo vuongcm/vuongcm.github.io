@@ -42,10 +42,10 @@ $(document).ready(function() {
     let jsonListName = ['jsonLanguage','jsonLogic','jsonMotor','jsonMusic','jsonSkill','jsonScience'];
     let loadJson = function(x, y) {
             $.ajax({
-                // dataType: 'json',
+                dataType: 'json',
                 url: `data/demo/videos/${y}.json`})
-                .done(function(data) {
-                    let response = JSON.parse(data);
+                .done(function(response) {
+                    // let response = JSON.parse(data);
                     $(`#videos-${x} .media .articles`).html('');
                     $(`#videos-${x} aside`).html('<h5>NHIỀU LƯỢT XEM NHẤT</h5>');
                     for (i=0; i < response.link.length; i++) {
