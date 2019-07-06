@@ -26,7 +26,7 @@ let header = `<nav id="nav-1">
                         </a>
                     </li>
                     <li>
-                        <a href="lesson.html">
+                        <a href="#">
                             <span class="ca-icon" id="heart"></span>
                             <div class="ca-content">
                                 <h2 class="ca-main">BÀI HỌC</h2>
@@ -42,7 +42,7 @@ let header = `<nav id="nav-1">
                         </ul>
                     </li>
                     <li>
-                        <a href="videos.html">
+                        <a href="#">
                             <span class="ca-icon"></span>
                             <div class="ca-content">
                                 <h2 class="ca-main">VIDEOS</h2>
@@ -58,7 +58,7 @@ let header = `<nav id="nav-1">
                         </ul>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="shop.html">
                             <span class="ca-icon"></span>
                             <div class="ca-content">
                                 <h2 class="ca-main">CỬA HÀNG</h2>
@@ -92,7 +92,7 @@ let header = `<nav id="nav-1">
                         <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">TRANG CHỦ</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="about.html">GIỚI THIỆU</a></li>
                         <li class="dropdown nav-item">
-                            <a class="nav-link" aria-expanded="false" href="lesson.html">BÀI HỌC</a>
+                            <a class="nav-link" aria-expanded="false">BÀI HỌC</a>
                             <div class="dropdown-menu" role="menu">
                                 <a class="dropdown-item" role="presentation" href="lesson.html#lesson-1">NGÔN NGỮ & NHẬN THỨC</a>
                                 <a class="dropdown-item" role="presentation" href="lesson.html#lesson-2">LOGIC & TOÁN HỌC</a>
@@ -103,7 +103,7 @@ let header = `<nav id="nav-1">
                             </div>
                         </li>
                         <li class="dropdown nav-item">
-                            <a class="nav-link" aria-expanded="false" href="videos.html">VIDEOS</a>
+                            <a class="nav-link" aria-expanded="false">VIDEOS</a>
                             <div class="dropdown-menu" role="menu">
                                 <a class="dropdown-item" role="presentation" href="videos.html#videos-1">NGÔN NGỮ & NHẬN THỨC</a>
                                 <a class="dropdown-item" role="presentation" href="videos.html#videos-2">LOGIC & TOÁN HỌC</a>
@@ -113,7 +113,7 @@ let header = `<nav id="nav-1">
                                 <a class="dropdown-item" role="presentation" href="videos.html#videos-6">KHOA HỌC</a>
                             </div>
                         </li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">CỬA HÀNG</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="shop.html">CỬA HÀNG</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="#">CHIA SẺ</a></li>
                     </ul>
                 </div>

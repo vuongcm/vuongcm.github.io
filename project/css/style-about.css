@@ -80,7 +80,7 @@
 	font-size: calc(var(--fontSize) * 1.5);
 	margin: .5rem 0;
 }
-.content img {
+.content>img {
 	width: 60%;
 	margin: 1rem auto;
 	display: block;

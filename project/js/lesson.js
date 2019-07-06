@@ -45,10 +45,10 @@ $(document).ready(function() {
     let jsonListName = ['jsonLanguage','jsonLogic','jsonMotor','jsonMusic','jsonSkill','jsonScience'];
     let loadJson = function(x, y) {
             $.ajax({
-                dataType: 'json',
+                // dataType: 'json',
                 url: `data/demo/lesson/${y}.json`})
-                .done(function(response) {
-                    //let response = JSON.parse(data);
+                .done(function(data) {
+                    let response = JSON.parse(data);
                     $(`#lesson-${x} .text`).html('');
                     $(`#lesson-${x} aside`).html('<h5>NHIỀU LƯỢT XEM NHẤT</h5>');
                     for (i=0; i < response.user.length; i++) {

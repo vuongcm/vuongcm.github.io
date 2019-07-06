@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Kiwi's mom</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style-header.css">
+    <link rel="stylesheet" type="text/css" href="css/style-footer.css">
+    <link rel="stylesheet" type="text/css" href="css/style-about.css">
+    <link rel="stylesheet" type="text/css" href="css/style-lesson.css">
+    <link rel="stylesheet" type="text/css" href="css/style-shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header></header>
+<div class="link">
+    <a href="index.html">Trang chủ </a>
+    <span></span>
+    <a href="shop.html"> Cửa hàng</a>
+    <span></span>
+    <a href="#"> Sản phẩm</a>
+</div>
+<article id="shop" class="about">
+    <div class="banner">
+        <img src="img/banner-top-min.png" alt="img" class="img-responsive">
+        <div>
+            <button class="navbar-toggler togg">
+                <span class="plus"></span>
+                <span class="minus"></span>
+            </button>
+            <h2>CỬA HÀNG</h2>
+            <a href="#" class="cart-icon">
+                <span></span>
+                <p class="cart-no">22</p>
+            </a>
+        </div>
+    </div>
+    <div class="content clr">
+        <div class="search-container-mini">
+            <form action="">
+                <input type="search" placeholder="Tìm kiếm.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <form action="">
+                <select name="filter-price">
+                    <option value="tang">Giá tăng dần</option>
+                    <option value="giảm">Giá giảm dần</option>
+                </select><br>
+                <input id="radio-book" type="radio" name="group" value="book"><label for="radio-book"> Sách</label><br>
+                <input id="radio-toy" type="radio" name="group" value="toy"><label for="radio-toy"> Đồ chơi thông minh</label><br>
+                <input id="radio-heathy" type="radio" name="group" value="heathy"><label for="radio-heathy"> Sức khỏe</label>
+                <button type="submit" class="btn btn-light"><span></span></button>
+            </form>
+        </div>
+        <div class="product container">
+            <div class="row">
+                <!--<div class="col-lg-3 col-sm-4 col-xs-6">
+                    <a href="#">
+                        <div class="thumbnail">
+                            <div>
+                                <img src="img/ghe.png" alt="Ảnh sản phẩm">
+                                <button>THÊM VÀO GIỎ</button>
+                            </div>
+                            <div class="caption">
+                                <h3>Ghế ô tô Zaracos Aroma<br/>7196 Green (từ 0 đến 6 tuổi)</h3>
+                                <p><span class="lineThrough">2.185.000đ</span><span class="textColor">1.850.000đ</span></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>-->
+                
+    
+            </div>
+        </div>
+        <aside>
+            <h5>SẢN PHẨM BÁN CHẠY</h5>
+            <!--<div class="hot-product">
+                <a href="#">
+                    <div class="thumbnail">
+                        <div>
+                            <img src="img/ghe.png" alt="Ảnh sản phẩm">
+                            <button>THÊM VÀO GIỎ</button>
+                        </div>
+                        <div class="caption">
+                            <h3>Ghế ô tô Zaracos Aroma<br/>7196 Green (từ 0 đến 6 tuổi)</h3>
+                            <p><span class="lineThrough">2.185.000đ</span><span class="textColor">1.850.000đ</span></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div>...</div>-->
+            
+        </aside>
+        <nav aria-label="Something..">
+            <ul class="pagination justify-content-end">
+                <li class="page-item">
+                    <a class="page-link"><span></span></a>
+                </li>
+                <li class="page-item active number">
+                    <a class="page-link">1</a>
+                </li>
+                <li class="page-item number">
+                    <a class="page-link">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link"><span></span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</article>
+
+<footer id="myFooter"></footer>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/script-header-footer.js"></script>
+<script>
+    $('header').html(header);
+    $('#myFooter').html(foot);
+</script>
+<script type="text/javascript" src="js/shop.js"></script>
+</body>
+</html>

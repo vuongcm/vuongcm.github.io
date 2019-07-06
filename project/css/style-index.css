@@ -497,6 +497,7 @@
 #myCarousel-product .thumbnail .caption .lineThrough {
   text-decoration: line-through;
   color: #424648;
+  margin-right: 2px;
 }
 #myCarousel-product .thumbnail .caption .textColor {
   color: #fc840e;
@@ -524,5 +525,10 @@
 @media screen and (max-width: 575px) {
   #article-5 div.col-lg-2.col-md-3 {
     max-width: 50%;
+  }
+}
+@media screen and (max-width: 319px) {
+  #article-5 div.col-lg-2.col-md-3 {
+    max-width: 90%;
   }
 }
