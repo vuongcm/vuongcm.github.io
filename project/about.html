@@ -92,9 +92,9 @@
 <script>
     $('header').html(header);
     $('#myFooter').html(foot);
-    let i, a, b;
+    let a, b;
     $('.about').css('--height',`${$('.about img').height()}px`);
-    for (i=0; i < $('.about').length; i++) {
+    for (let i=0; i < $('.about').length; i++) {
         b = '#about-' + (i+1);
         a = $('.about').eq(i);
         if ($(location).attr('hash') != b) {
@@ -102,7 +102,7 @@
             a.children('.content').toggle();
         }
     }
-    for (i=0; i < $('.togg').length; i++) {
+    for (let i=0; i < $('.togg').length; i++) {
         a = $('.togg').eq(i);
         if (a.closest('.about').children('.content').css('display') == 'none') {
             a.children(".minus").css('display', 'block');

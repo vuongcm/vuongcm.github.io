@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    let i, a, b, c,z, j=0;
+    let a, b, c,z;
 
     $('#shop').css('min-height','25vh');
     if ($('.togg').closest('.about').children('.content').css('display') == 'none') {
@@ -18,7 +18,7 @@ $(document).ready(function() {
 
     // load dữ liệu từ JSON
     let dataListProduct = ['product-page-1','product-page-2'];
-    let loadJsonProduct = function(y) {
+    let loadJson = function(y) {
             $.ajax({
                 dataType: 'json',
                 url: `data/demo/shop/${y}.json`})
@@ -26,7 +26,7 @@ $(document).ready(function() {
                     // let response = JSON.parse(data);
                     $(`.product .row`).html('');
                     $(`#shop aside`).html('<h5>SẢN PHẨM BÁN CHẠY</h5>');
-                    for (i=0; i < response.product.length; i++) {
+                    for (let i=0; i < response.product.length; i++) {
                         $(`.product .row`).append(`
                             <div class="col-lg-3 col-sm-4 col-xs-6">
                                 <a href="${response.product[i].href}">
@@ -44,7 +44,7 @@ $(document).ready(function() {
                             </div>
                         `);
                     }
-                    for (i=0; i < response.hot.length; i++) {
+                    for (let i=0; i < response.hot.length; i++) {
                         $(`#shop aside`).append(`
                             <div class="hot-product">
                                 <a href="${response.hot[i].href}">
@@ -69,26 +69,21 @@ $(document).ready(function() {
                 });
         };
 
-    loadJsonProduct(dataListProduct[0]);
+    loadJson(dataListProduct[0]);
 
-    for (i=0; i < $('.number a').length; i++) {
+    for (let i=0; i < $('.number a').length; i++) {
         $($('.number a')[i]).on('click', function() {
             $(this).closest('ul').children('.number').removeClass("active");
             $(this).parent('.number').addClass("active");
         });
     }
 
-    /*for (j=0; j < $('#videos-1 .number a').length; j++) {
-        $($('#videos-1 .number a')[j]).on('click', function() {
-            loadJson(1, dataList.jsonLanguage[j]);
+    for (let j=0; j < $('#shop .number a').length; j++) {
+        $($('#shop .number a')[j]).on('click', function() {
+            loadJson(dataListProduct[j]);
         });
-    }*/
-    $($('.number a')[0]).on('click', function() {
-        loadJsonProduct(dataListProduct[0]);
-    });
-    $($('.number a')[1]).on('click', function() {
-        loadJsonProduct(dataListProduct[1]);
-    });
+    }
+
     $('.content ul li:first-child a').on('click', function() {
         $(this).closest('ul').children('.number').removeClass("active");
         $(this).parent('.page-item').next().addClass("active");
@@ -99,10 +94,12 @@ $(document).ready(function() {
     });
     
     $('#shop ul li:first-child a').on('click', function() {
-        loadJsonProduct(dataListProduct[0]);
+        loadJson(dataListProduct[0]);
     });
+
+    let amountPage = $(`#shop .number`).length - 1;
     $('#shop ul li:last-child a').on('click', function() {
-        loadJsonProduct(dataListProduct[1]);
+        loadJson(dataListProduct[amountPage]);
     });
     
 });

@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    let i, a, b, c,z, j=0;
+    let a, b, c, z;
     $('.about').css('--height',`${$('.about img').height()}px`);
-    for (i=0; i < $('.about').length; i++) {
+    for (let i=0; i < $('.about').length; i++) {
         b = '#videos-' + (i+1);
         a = $('.about').eq(i);
 
@@ -10,7 +10,7 @@ $(document).ready(function() {
             a.children('.content').toggle();
         }
     }
-    for (i=0; i < $('.togg').length; i++) {
+    for (let i=0; i < $('.togg').length; i++) {
         a = $('.togg').eq(i);
         if (a.closest('.about').children('.content').css('display') == 'none') {
             a.children(".minus").css('display', 'block');
@@ -48,7 +48,7 @@ $(document).ready(function() {
                     // let response = JSON.parse(data);
                     $(`#videos-${x} .media .articles`).html('');
                     $(`#videos-${x} aside`).html('<h5>NHIỀU LƯỢT XEM NHẤT</h5>');
-                    for (i=0; i < response.link.length; i++) {
+                    for (let i=0; i < response.link.length; i++) {
                         $(`#videos-${x} .media .articles`).append(`
                             <div class="col-sm-6 col-md-4 item">
                                 <iframe width="100%" src="${response.link[i].src}" frameborder="0" allowfullscreen></iframe>
@@ -63,7 +63,7 @@ $(document).ready(function() {
                             </div>
                             `);
                     }
-                    for (i=0; i < response.hot.length; i++) {
+                    for (let i=0; i < response.hot.length; i++) {
                         $(`#videos-${x} aside`).append(`
                             <div class="hot-pic">
                                 <a target="_blank" href="${response.hot[i].src}"><h6>${response.hot[i].h6}</h6></a>
@@ -88,55 +88,51 @@ $(document).ready(function() {
     loadJson(5,dataList.jsonSkill[0]);
     loadJson(6,dataList.jsonScience[0]);
 
-    for (i=0; i < $('.number a').length; i++) {
+    for (let i=0; i < $('.number a').length; i++) {
         $($('.number a')[i]).on('click', function() {
             $(this).closest('ul').children('.number').removeClass("active");
             $(this).parent('.number').addClass("active");
         });
     }
 
-    /*for (j=0; j < $('#videos-1 .number a').length; j++) {
+    for (let j=0; j < $('#videos-1 .number a').length; j++) {
         $($('#videos-1 .number a')[j]).on('click', function() {
-            loadJson(1, dataList.jsonLanguage[j]);
+            loadJson(1, dataList[jsonListName[0]][j]);
         });
-    }*/
-    $($('#videos-1 .number a')[0]).on('click', function() {
-        loadJson(1, dataList[jsonListName[0]][0]);
-    });
-    $($('#videos-1 .number a')[1]).on('click', function() {
-        loadJson(1, dataList[jsonListName[0]][1]);
-    });
-    $($('#videos-2 .number a')[0]).on('click', function() {
-        loadJson(2, dataList[jsonListName[1]][0]);
-    });
-    $($('#videos-2 .number a')[1]).on('click', function() {
-        loadJson(2, dataList[jsonListName[1]][1]);
-    });
-    $($('#videos-3 .number a')[0]).on('click', function() {
-        loadJson(3, dataList[jsonListName[2]][0]);
-    });
-    $($('#videos-3 .number a')[1]).on('click', function() {
-        loadJson(3, dataList[jsonListName[2]][1]);
-    });
-    $($('#videos-4 .number a')[0]).on('click', function() {
-        loadJson(4, dataList[jsonListName[3]][1]);
-    });
-    $($('#videos-4 .number a')[1]).on('click', function() {
-        loadJson(4, dataList[jsonListName[3]][1]);
-    });
-    $($('#videos-5 .number a')[0]).on('click', function() {
-        loadJson(5, dataList[jsonListName[4]][0]);
-    });
-    $($('#videos-5 .number a')[1]).on('click', function() {
-        loadJson(5, dataList[jsonListName[4]][1]);
-    });
-    $($('#videos-6 .number a')[0]).on('click', function() {
-        loadJson(6, dataList[jsonListName[5]][0]);
-    });
-    $($('#videos-6 .number a')[1]).on('click', function() {
-        loadJson(6, dataList[jsonListName[5]][1]);
-    });
-    for (j=0; j<6; j++) {
+    }
+
+    for (let j=0; j < $('#videos-2 .number a').length; j++) {
+        $($('#videos-2 .number a')[j]).on('click', function() {
+            loadJson(2, dataList[jsonListName[1]][j]);
+        });
+    }
+
+    for (let j=0; j < $('#videos-3 .number a').length; j++) {
+        $($('#videos-3 .number a')[j]).on('click', function() {
+            loadJson(3, dataList[jsonListName[2]][j]);
+        });
+    }
+
+    for (let j=0; j < $('#videos-4 .number a').length; j++) {
+        $($('#videos-4 .number a')[j]).on('click', function() {
+            loadJson(4, dataList[jsonListName[3]][j]);
+        });
+    }
+
+    for (let j=0; j < $('#videos-5 .number a').length; j++) {
+        $($('#videos-5 .number a')[j]).on('click', function() {
+            loadJson(5, dataList[jsonListName[4]][j]);
+        });
+    }
+
+    for (let j=0; j < $('#videos-6 .number a').length; j++) {
+        $($('#videos-6 .number a')[j]).on('click', function() {
+            loadJson(6, dataList[jsonListName[5]][j]);
+        });
+    }
+
+
+    for (let j=0; j<6; j++) {
         $($('.content ul li:first-child a')[j]).on('click', function() {
             $(this).closest('ul').children('.number').removeClass("active");
             $(this).parent('.page-item').next().addClass("active");
@@ -146,40 +142,18 @@ $(document).ready(function() {
             $(this).parent('.page-item').prev().addClass("active");
         });
     }
-    $('#videos-1 ul li:first-child a').on('click', function() {
-        loadJson(1, dataList[jsonListName[0]][0]);
-    });
-    $('#videos-1 ul li:last-child a').on('click', function() {
-        loadJson(1, dataList[jsonListName[0]][1]);
-    });
-    $('#videos-2 ul li:first-child a').on('click', function() {
-        loadJson(2, dataList[jsonListName[1]][0]);
-    });
-    $('#videos-2 ul li:last-child a').on('click', function() {
-        loadJson(2, dataList[jsonListName[1]][1]);
-    });
-    $('#videos-3 ul li:first-child a').on('click', function() {
-        loadJson(3, dataList[jsonListName[2]][0]);
-    });
-    $('#videos-3 ul li:last-child a').on('click', function() {
-        loadJson(3, dataList[jsonListName[2]][1]);
-    });
-    $('#videos-4 ul li:first-child a').on('click', function() {
-        loadJson(4, dataList[jsonListName[3]][1]);
-    });
-    $('#videos-4 ul li:last-child a').on('click', function() {
-        loadJson(4, dataList[jsonListName[3]][1]);
-    });
-    $('#videos-5 ul li:first-child a').on('click', function() {
-        loadJson(5, dataList[jsonListName[4]][0]);
-    });
-    $('#videos-5 ul li:last-child a').on('click', function() {
-        loadJson(5, dataList[jsonListName[4]][1]);
-    });
-    $('#videos-6 ul li:first-child a').on('click', function() {
-        loadJson(6, dataList[jsonListName[5]][0]);
-    });
-    $('#videos-6 ul li:last-child a').on('click', function() {
-        loadJson(6, dataList.jsonScience[1]);
-    });
+
+    for (let j=0; j < 6; j++) {
+        $(`#videos-${j+1} ul li:first-child a`).on('click', function() {
+            loadJson((j+1), dataList[jsonListName[j]][0]);
+        });
+    }
+
+    let amountPage;
+    for (let j=0; j < 6; j++) {
+        amountPage = $(`#videos-${j+1} .number`).length - 1;
+        $(`#videos-${j+1} ul li:last-child a`).on('click', function() {
+            loadJson((j+1), dataList[jsonListName[j]][amountPage]);
+        });
+    }
 });
