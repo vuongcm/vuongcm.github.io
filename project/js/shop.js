@@ -29,7 +29,7 @@ $(document).ready(function() {
                     for (let i=0; i < response.product.length; i++) {
                         $(`.product .row`).append(`
                             <div class="col-lg-3 col-sm-4 col-xs-6">
-                                <a href="${response.product[i].href}">
+                                <a href="product.html#${response.product[i].id}">
                                     <div class="thumbnail">
                                         <div>
                                             <img src="${response.product[i].src}" alt="Ảnh sản phẩm">
@@ -47,7 +47,7 @@ $(document).ready(function() {
                     for (let i=0; i < response.hot.length; i++) {
                         $(`#shop aside`).append(`
                             <div class="hot-product">
-                                <a href="${response.hot[i].href}">
+                                <a href="product.html#${response.hot[i].id}">
                                     <div class="thumbnail">
                                         <div>
                                             <img src="${response.hot[i].src}" alt="Ảnh sản phẩm">

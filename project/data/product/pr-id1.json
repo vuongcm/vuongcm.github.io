@@ -1,0 +1,51 @@
+{ "product": {
+  "imgSrc": [
+    "img/pr-id2001.jpg",
+    "img/pr-id2002.jpg",
+    "img/pr-id2003.jpg"
+  ],
+  "name": "Sách Thiên Cơ - Bìa mềm - Túng Mã Càn Khôn",
+  "brand": "Nhà Xuất Bản Văn Học",
+  "msp": "ZCUHG",
+  "reviewNumber": "200",
+  "description": "Sách Thiên Cơ - Bìa mềm trang trí bắt mắt. Sản phẩm có bán tại Kiwi’s mom với giá và số lượng tốt trên thị trường",
+  "price": ["83.000đ","87.500đ"],
+  "discount": "5%",
+  "buyNumber": "3.162",
+  "info": "<p>Một cuốn sách cổ ngàn năm, tiết lộ về một chức nghiệp thần bí rất đỗi cổ xưa, được các đời hoàng đế vô cùng trọng vọng, song đã tuyệt tích trong dân gian - Thiên Cơ đại phu.</p><p>Trong cuộc cách mạng Văn hóa thảm khốc, nhân vật chính của cuốn sách, Kỳ Thiên Hạ, đã vô tình tìm thấy cuốn sách này. Nhờ vốn cổ văn có được từ người cha trí thức đã bị tù đày, Kỳ Thiên Hạ bắt tay vào khám phá cổ thư, dấn thân vào những chuyến thám hiểm đầy bất trắc, tiếp nối hành trình của các thế hệ Thiên Cơ đại phu, tìm kiếm bí mật về hào thứ tư đã biến mất từ thiên cổ...</p><p>Tác giả: Túng Mã Càn Khôn</p><p>Ngày xuất bản: 03-2015</p><p>Kích thước: 13.5 x 20.5 cm</p><p>Số trang: 532</p><p>Loại bìa: bìa mềm</p><p>Nhà xuất bản: Nhà xuất bản văn học</p>"
+},
+  "same": [
+    {
+      "id": "0",
+      "href": "#",
+      "src": "img/ghe.png",
+      "h3": "Ghế ô tô Zaracos Aroma 7196 Green (từ 0 đến 6 tuổi)",
+      "price": "2.185.000đ",
+      "sale": "1.850.000đ"
+    },
+  {
+      "id": "0",
+      "href": "#",
+      "src": "img/ghe.png",
+      "h3": "Ghế ô tô Zaracos Aroma 7196 Green (từ 0 đến 6 tuổi)",
+      "price": "2.185.000đ",
+      "sale": "1.850.000đ"
+    },
+  {
+      "id": "1",
+      "href": "#",
+      "src": "img/sach.png",
+      "h3": "Sách Thiên Cơ - Bìa mềm - Túng Mã Càn Khôn",
+      "price": "87.500đ",
+      "sale": "83.000đ"
+    },
+  {
+      "id": "1",
+      "href": "#",
+      "src": "img/sach.png",
+      "h3": "Sách Thiên Cơ - Bìa mềm - Túng Mã Càn Khôn",
+      "price": "87.500đ",
+      "sale": "83.000đ"
+    }
+  ]
+}
