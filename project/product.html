@@ -260,7 +260,7 @@
                             <label class="half" for="starhalf" title="Không đáng xem - 0.5 sao"></label>
                         </div>
                     </div>
-                    <h4>Bạn cần <a class="color" href="#">đăng nhập</a> để bình luận về sản phẩm này</h4>
+                    <h4>Bạn cần <a class="color" data-toggle="modal" data-target="#myModal">đăng nhập</a> để bình luận về sản phẩm này</h4>
                 </form>
                 <div class="comment-list">
                     <h4>CÓ 2 BÌNH LUẬN</h4>
@@ -298,7 +298,7 @@
 
     </div>
 </article>
-
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog"></div>
 <footer id="myFooter"></footer>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -306,6 +306,7 @@
 <script>
     $('header').html(header);
     $('#myFooter').html(foot);
+    $('#myModal').html(loginModal);
 </script>
 <script type="text/javascript" src="js/product.js"></script>
 </body>

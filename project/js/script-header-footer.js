@@ -1,7 +1,7 @@
 let nav1Height;
 let header = `<nav id="nav-1">
             <div class="loginBar">
-                <button type="button" class="btn btn-light">Đăng nhập</button>
+                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal">Đăng nhập</button>
                 <a href="#" id="signUp" class="btn btn-light">Đăng ký</a>
             </div>
             <div class="content-menu">
@@ -79,7 +79,7 @@ let header = `<nav id="nav-1">
         <nav class="navbar navbar-light navbar-expand-md navigation-clean" id="nav-2">
             <div id="test">
             <div class="loginBar">
-                <button type="button" class="btn btn-light">Đăng nhập</button>
+                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal">Đăng nhập</button>
                 <a href="#" id="signUp" class="btn btn-light">Đăng ký</a>
             </div>
             <div class="content-menu">
@@ -160,6 +160,47 @@ let foot = `<span id="back-to-top"></span>
         <div class="footer-copyright">
             <p>Designed & Developed by <span>@vuongcm</span></p>
         </div>`;
+let loginModal = `<div id="login-overlay" class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Thành viên đăng nhập</h4>
+             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Đóng</span></button>
+              
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                  <div class="col-xs-12">
+                      <div class="well">
+                          <form id="loginForm" method="POST" action="" novalidate="novalidate">
+                              <div class="form-group">
+                                  <label for="username" class="control-label">Tài khoản</label>
+                                  <input type="text" class="form-control" id="username" name="username" required title="Xin vui lòng nhập tên tài khoản">
+                                  <span class="help-block"></span>
+                              </div>
+                              <div class="form-group">
+                                  <label for="password" class="control-label">Mật khẩu</label>
+                                  <input type="password" class="form-control" id="password" name="password" required title="Xin vui lòng nhập mật khẩu">
+                                  <span class="help-block"></span>
+                              </div>
+                              <div id="loginErrorMsg" class="alert alert-error hide">Sai tên tài khoản hay mật khẩu</div>
+                              <div class="checkbox">
+                                  <label>
+                                      <input type="checkbox" name="remember" id="remember"> Nhớ thông tin
+                                  </label>
+                                  <p class="help-block">(Nếu sử dụng máy tính cá nhân)</p>
+                              </div>
+                              <button type="submit" class="btn btn-success btn-block">Đăng nhập</button>
+                              <a href="#">Quên mật khẩu?</a>
+                          </form>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+      </div>
+  </div>`;
 $(document).ready(function() {
 	$('.ca-menu>li').height($('.ca-menu>li').width());
 	$('.sub-menu').width($('.ca-menu').width() * 0.9);

@@ -613,9 +613,12 @@
   font-size: calc(var(--fontSize) * 1.5);
   margin-left: 14%;
 }
+.comment-container form h4 a {
+  color: #fc840e !important;
+  cursor: pointer;
+}
 .comment-container form h4 a:hover {
   opacity: .8;
-  color: #fc840e;
 }
 #ratingCmt {
   border:none;
