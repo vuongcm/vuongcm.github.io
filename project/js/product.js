@@ -192,6 +192,7 @@
                 $('[data-toggle="magnify"]').each(function () {            
 					$(this).magnify()        
 				});
+				$('.icon-tuti').append(`<img src="img/icon-tuti.png">`);
             })
             .fail(function() {
                 alert('lỗi load dữ liệu');
@@ -210,7 +211,7 @@ $(document).ready(function() {
 		$('.comment-container #inputCmt').outerHeight($('.comment-container .avatar').height());
 		$('.comment-container .comment .avatar').height($('.comment-container .comment .avatar').width());
     });
-	$('.icon-tuti').append(`<img src="img/icon-tuti.png">`);
+	
 
 	for (let i=1; i <= 4; i++) {
 		$(`.info-tab>a:nth-child(${i})`).on('click', function(){
@@ -244,4 +245,5 @@ $(document).ready(function() {
 
     let idProduct = $(location).attr('hash').slice(1);
     loadJson(idProduct);
+
 });
