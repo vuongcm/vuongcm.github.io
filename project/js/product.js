@@ -1,49 +1,89 @@
-
-$(document).ready(function() {
-	let heightDetails = $('.content .preview').height() - $('.content .product-title').height();
-	$('.content .details').css('min-height',heightDetails + 'px');
-	$('.comment-container form .avatar').height($('.comment-container form .avatar').width());
-	$('.comment-container .comment .avatar').height($('.comment-container .comment .avatar').width());
-	$('.comment-container #inputCmt').outerHeight($('.comment-container form .avatar').height());
-	$(window).bind('resize', function(){
-        heightDetails = $('.content .preview').height() - $('.content .product-title').height();
-		$('.content .details').css('min-height',heightDetails + 'px');
-		$('.comment-container .avatar').height($('.comment-container .avatar').width());
-		$('.comment-container #inputCmt').outerHeight($('.comment-container .avatar').height());
-		$('.comment-container .comment .avatar').height($('.comment-container .comment .avatar').width());
-    });
-	$('.icon-tuti').append(`<img src="img/icon-tuti.png">`);
-
-	for (let i=1; i <= 4; i++) {
-		$(`.info-tab>a:nth-child(${i})`).on('click', function(){
-			$('.info-tab>a').removeClass('color');
-			$(`.info-tab>a:nth-child(${i}`).addClass('color');
-			for (let j=1; j <= 4; j++) {
-				if (j == i) {
-					$(`.info-content>div:nth-child(${j})`).css('display','block');
-				} else {
-					$(`.info-content>div:nth-child(${j})`).css('display','none');
+ // ========Khởi tạo hiệu ứng zoom ảnh ===========
+		let Magnify = function (element, options) {        
+		this.init('magnify', element, options)    
+		}
+		    
+		Magnify.prototype = {
+			constructor: Magnify, 
+			init: function (type, element, options) {            
+				let event = 'mousemove', eventOut = 'mouseleave';
+				             
+				this.type = type            
+				this.$element = $(element)            
+				this.options = this.getOptions(options)            
+				this.nativeWidth = 0            
+				this.nativeHeight = 0
+				             
+				this.$element.wrap('<div class="magnify" \>');            
+				this.$element.parent('.magnify').append('<div class="magnify-large" \>');            
+				this.$element.siblings(".magnify-large").css("background","url('" + this.$element.attr("src") + "') no-repeat");
+				 
+				             
+				this.$element.parent('.magnify').on(event + '.' + this.type, $.proxy(this.check, this));            
+				this.$element.parent('.magnify').on(eventOut + '.' + this.type, $.proxy(this.check, this));        
+			},
+			getOptions: function (options) {            
+				options = $.extend({}, $.fn[this.type].defaults, options, this.$element.data());
+				if (options.delay && typeof options.delay == 'number') {                
+					options.delay = {                    
+					show: options.delay,
+					hide: options.delay                
+					}            
 				}
-			}
-		});
-	}
-// Hiệu ứng + - slide
-	$('#detail-product').css('min-height','25vh');
-	if ($('.togg').closest('.about').children('.content').css('display') == 'none') {
-        $('.togg').children(".minus").css('display', 'block');
-        $('.togg').children(".plus").css('display', 'none');
-    } else {
-        $('.togg').children(".minus").css('display', 'none');
-        $('.togg').children(".plus").css('display', 'block');
-    }
-    
-    $('.togg').bind('click', function(){
-        $(this).closest('.about').children('.content').slideToggle(600,'linear');
-        $(this).children(".minus").toggle();
-        $(this).children(".plus").toggle();
-    });
-
-// Load data
+				return options;       
+			},
+			check: function (e) {           
+				let container = $(e.currentTarget);            
+				let self = container.children('img');            
+				let mag = container.children(".magnify-large");               
+				if(!this.nativeWidth && !this.nativeHeight) {                
+					let image = new Image();                
+					image.src = self.attr("src");
+			                 
+					this.nativeWidth = image.width;                
+					this.nativeHeight = image.height;
+			             
+				} else {
+			                 
+					let magnifyOffset = container.offset();                
+					let mx = e.pageX - magnifyOffset.left;                
+					let my = e.pageY - magnifyOffset.top;
+			                 
+					if (mx < container.width() && my < container.height() && mx > 0 && my > 0) {                   
+			 			mag.fadeIn(100);                
+					} else {                    
+						mag.fadeOut(100);                
+					}
+			                 
+					if(mag.is(":visible")) {                    
+						let rx = Math.round(mx/container.width()*this.nativeWidth - mag.width()/2)*-1;                    
+						let ry = Math.round(my/container.height()*this.nativeHeight - mag.height()/2)*-1;                    
+						let bgp = rx + "px " + ry + "px";
+			                     
+						let px = mx - mag.width()/2;                    
+						let py = my - mag.height()/2;
+			                     
+						mag.css({left: px, top: py, backgroundPosition: bgp});                
+					}           
+				}
+			         
+			}    
+		}
+		    
+		$.fn.magnify = function ( option ) {        
+			return this.each(function () {            
+				let $this = $(this), data = $this.data('magnify'), options = typeof option == 'object' && option            
+				if (!data) $this.data('tooltip', (data = new Magnify(this, options)))            
+				if (typeof option == 'string') data[option]()        
+			});   
+		}
+		$.fn.magnify.Constructor = Magnify
+		     
+		$.fn.magnify.defaults = {        
+		delay: 0    
+		}
+// end phần khởi tạo zoom ảnh
+// Khởi tạo hàm Load data
 	let loadJson = function(y) {
         $.ajax({
             dataType: 'json',
@@ -149,106 +189,59 @@ $(document).ready(function() {
                         `);
                 }
                 $(`#detail-product aside`).append(`<div>...</div>`);
+                $('[data-toggle="magnify"]').each(function () {            
+					$(this).magnify()        
+				});
             })
             .fail(function() {
                 alert('lỗi load dữ liệu');
             });
     }
-    // let idProduct = $(location).attr('hash').slice(1);
-    // loadJson(idProduct);
+$(document).ready(function() {
+	let heightDetails = $('.content .preview').height() - $('.content .product-title').height();
+	$('.content .details').css('min-height',heightDetails + 'px');
+	$('.comment-container form .avatar').height($('.comment-container form .avatar').width());
+	$('.comment-container .comment .avatar').height($('.comment-container .comment .avatar').width());
+	$('.comment-container #inputCmt').outerHeight($('.comment-container form .avatar').height());
+	$(window).bind('resize', function(){
+        heightDetails = $('.content .preview').height() - $('.content .product-title').height();
+		$('.content .details').css('min-height',heightDetails + 'px');
+		$('.comment-container .avatar').height($('.comment-container .avatar').width());
+		$('.comment-container #inputCmt').outerHeight($('.comment-container .avatar').height());
+		$('.comment-container .comment .avatar').height($('.comment-container .comment .avatar').width());
+    });
+	$('.icon-tuti').append(`<img src="img/icon-tuti.png">`);
 
- // ========hiệu ứng zoom ảnh ===========
-		let Magnify = function (element, options) {        
-		this.init('magnify', element, options)    
-		}
-		    
-		Magnify.prototype = {
-			constructor: Magnify, 
-			init: function (type, element, options) {            
-				let event = 'mousemove', eventOut = 'mouseleave';
-				             
-				this.type = type            
-				this.$element = $(element)            
-				this.options = this.getOptions(options)            
-				this.nativeWidth = 0            
-				this.nativeHeight = 0
-				             
-				this.$element.wrap('<div class="magnify" \>');            
-				this.$element.parent('.magnify').append('<div class="magnify-large" \>');            
-				this.$element.siblings(".magnify-large").css("background","url('" + this.$element.attr("src") + "') no-repeat");
-				 
-				             
-				this.$element.parent('.magnify').on(event + '.' + this.type, $.proxy(this.check, this));            
-				this.$element.parent('.magnify').on(eventOut + '.' + this.type, $.proxy(this.check, this));        
-			},
-			getOptions: function (options) {            
-				options = $.extend({}, $.fn[this.type].defaults, options, this.$element.data());
-				if (options.delay && typeof options.delay == 'number') {                
-					options.delay = {                    
-					show: options.delay,
-					hide: options.delay                
-					}            
-				}
-				return options;       
-			},
-			check: function (e) {           
-				let container = $(e.currentTarget);            
-				let self = container.children('img');            
-				let mag = container.children(".magnify-large");               
-				if(!this.nativeWidth && !this.nativeHeight) {                
-					let image = new Image();                
-					image.src = self.attr("src");
-			                 
-					this.nativeWidth = image.width;                
-					this.nativeHeight = image.height;
-			             
+	for (let i=1; i <= 4; i++) {
+		$(`.info-tab>a:nth-child(${i})`).on('click', function(){
+			$('.info-tab>a').removeClass('color');
+			$(`.info-tab>a:nth-child(${i}`).addClass('color');
+			for (let j=1; j <= 4; j++) {
+				if (j == i) {
+					$(`.info-content>div:nth-child(${j})`).css('display','block');
 				} else {
-			                 
-					let magnifyOffset = container.offset();                
-					let mx = e.pageX - magnifyOffset.left;                
-					let my = e.pageY - magnifyOffset.top;
-			                 
-					if (mx < container.width() && my < container.height() && mx > 0 && my > 0) {                   
-			 			mag.fadeIn(100);                
-					} else {                    
-						mag.fadeOut(100);                
-					}
-			                 
-					if(mag.is(":visible")) {                    
-						let rx = Math.round(mx/container.width()*this.nativeWidth - mag.width()/2)*-1;                    
-						let ry = Math.round(my/container.height()*this.nativeHeight - mag.height()/2)*-1;                    
-						let bgp = rx + "px " + ry + "px";
-			                     
-						let px = mx - mag.width()/2;                    
-						let py = my - mag.height()/2;
-			                     
-						mag.css({left: px, top: py, backgroundPosition: bgp});                
-					}           
+					$(`.info-content>div:nth-child(${j})`).css('display','none');
 				}
-			         
-			}    
-		}
-		    
-		$.fn.magnify = function ( option ) {        
-			return this.each(function () {            
-				let $this = $(this), data = $this.data('magnify'), options = typeof option == 'object' && option            
-				if (!data) $this.data('tooltip', (data = new Magnify(this, options)))            
-				if (typeof option == 'string') data[option]()        
-			});   
-		}
-		$.fn.magnify.Constructor = Magnify
-		     
-		$.fn.magnify.defaults = {        
-		delay: 0    
-		}
-		    
-		 
-		$(window).on('load', function () {        
-			$('[data-toggle="magnify"]').each(function () {            
-				let $mag = $(this);            
-				$mag.magnify()        
-			});
+			}
 		});
-		 
-	// ======= end hiệu ứng zoom ảnh ========
+	}
+// Hiệu ứng + - slide
+	$('#detail-product').css('min-height','25vh');
+	if ($('.togg').closest('.about').children('.content').css('display') == 'none') {
+        $('.togg').children(".minus").css('display', 'block');
+        $('.togg').children(".plus").css('display', 'none');
+    } else {
+        $('.togg').children(".minus").css('display', 'none');
+        $('.togg').children(".plus").css('display', 'block');
+    }
+    
+    $('.togg').bind('click', function(){
+        $(this).closest('.about').children('.content').slideToggle(600,'linear');
+        $(this).children(".minus").toggle();
+        $(this).children(".plus").toggle();
+    });
+
+
+    let idProduct = $(location).attr('hash').slice(1);
+    loadJson(idProduct);
 });
