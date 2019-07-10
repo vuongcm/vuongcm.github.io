@@ -33,12 +33,12 @@ let header = `<nav id="nav-1">
                             </div>
                         </a>
                         <ul class="sub-menu sub-menu-1">
-                            <li><a href="lesson.html#lesson-1">NGÔN NGỮ <br>&<br> NHẬN THỨC</a></li>
-                            <li><a href="lesson.html#lesson-2">LOGIC <br>&<br> TOÁN HỌC</a></li>
-                            <li><a href="lesson.html#lesson-3">VẬN ĐỘNG</a></li>
-                            <li><a href="lesson.html#lesson-4">ÂM NHẠC <br>&<br> NGHỆ THUẬT</a></li>
-                            <li><a href="lesson.html#lesson-5">KỸ NĂNG<br> SỐNG</a></li>
-                            <li><a href="lesson.html#lesson-6">KHOA HỌC</a></li>
+                            <li><a href="lesson.html#banner-lesson-1">NGÔN NGỮ <br>&<br> NHẬN THỨC</a></li>
+                            <li><a href="lesson.html#banner-lesson-2">LOGIC <br>&<br> TOÁN HỌC</a></li>
+                            <li><a href="lesson.html#banner-lesson-3">VẬN ĐỘNG</a></li>
+                            <li><a href="lesson.html#banner-lesson-4">ÂM NHẠC <br>&<br> NGHỆ THUẬT</a></li>
+                            <li><a href="lesson.html#banner-lesson-5">KỸ NĂNG<br> SỐNG</a></li>
+                            <li><a href="lesson.html#banner-lesson-6">KHOA HỌC</a></li>
                         </ul>
                     </li>
                     <li>
@@ -94,12 +94,12 @@ let header = `<nav id="nav-1">
                         <li class="dropdown nav-item">
                             <a class="nav-link" aria-expanded="false">BÀI HỌC</a>
                             <div class="dropdown-menu" role="menu">
-                                <a class="dropdown-item" role="presentation" href="lesson.html#lesson-1">NGÔN NGỮ & NHẬN THỨC</a>
-                                <a class="dropdown-item" role="presentation" href="lesson.html#lesson-2">LOGIC & TOÁN HỌC</a>
-                                <a class="dropdown-item" role="presentation" href="lesson.html#lesson-3">VẬN ĐỘNG</a>
-                                <a class="dropdown-item" role="presentation" href="lesson.html#lesson-4">ÂM NHẠC & NGHỆ THUẬT</a>
-                                <a class="dropdown-item" role="presentation" href="lesson.html#lesson-5">KỸ NĂNG SỐNG</a>
-                                <a class="dropdown-item" role="presentation" href="lesson.html#lesson-6">KHOA HỌC</a>
+                                <a class="dropdown-item" role="presentation" href="lesson.html#banner-lesson-1">NGÔN NGỮ & NHẬN THỨC</a>
+                                <a class="dropdown-item" role="presentation" href="lesson.html#banner-lesson-2">LOGIC & TOÁN HỌC</a>
+                                <a class="dropdown-item" role="presentation" href="lesson.html#banner-lesson-3">VẬN ĐỘNG</a>
+                                <a class="dropdown-item" role="presentation" href="lesson.html#banner-lesson-4">ÂM NHẠC & NGHỆ THUẬT</a>
+                                <a class="dropdown-item" role="presentation" href="lesson.html#banner-lesson-5">KỸ NĂNG SỐNG</a>
+                                <a class="dropdown-item" role="presentation" href="lesson.html#banner-lesson-6">KHOA HỌC</a>
                             </div>
                         </li>
                         <li class="dropdown nav-item">
@@ -224,4 +224,5 @@ $(document).ready(function() {
 			$(window).unbind('scroll');
 		}
 	});
+
 });

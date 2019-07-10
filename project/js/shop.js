@@ -101,5 +101,5 @@ $(document).ready(function() {
     $('#shop ul li:last-child a').on('click', function() {
         loadJson(dataListProduct[amountPage]);
     });
-    
+
 });

@@ -9,6 +9,13 @@ $(document).ready(function() {
             a.toggleClass('lego');
             a.children('.content').toggle();
         }
+        if ($(location).attr('hash') == '#videos-3') {
+            $("html, body").animate({ scrollTop: 300 }, 0);
+        } else if ($(location).attr('hash') == '#videos-2') {
+            $("html, body").animate({ scrollTop: 200 }, 0);
+        } else if ($(location).attr('hash') == '#videos-4') {
+            $("html, body").animate({ scrollTop: 400 }, 0);
+        }
     }
     for (let i=0; i < $('.togg').length; i++) {
         a = $('.togg').eq(i);
@@ -155,5 +162,13 @@ $(document).ready(function() {
         $(`#videos-${j+1} ul li:last-child a`).on('click', function() {
             loadJson((j+1), dataList[jsonListName[j]][amountPage]);
         });
+    }
+            // =====
+    for (let i=0; i < 6; i++){
+        if (window.location.href.indexOf('videos.html') != -1) {
+            $('.sub-menu-2 a').eq(i).attr('target', '_blank');
+            $('#navcol-1 .dropdown-menu a').eq(i+6).attr('target', '_blank');
+        }
+
     }
 });

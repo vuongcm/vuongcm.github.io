@@ -2,7 +2,7 @@ $(document).ready(function() {
     let a, b, c,z;
     $('.about').css('--height',`${$('.about img').height()}px`);
     for (let i=0; i < $('.about').length; i++) {
-        b = '#lesson-' + (i+1);
+        b = '#banner-lesson-' + (i+1);
         a = $('.about').eq(i);
 
         if ($(location).attr('hash') != b) {
@@ -12,6 +12,13 @@ $(document).ready(function() {
             c = $('.about h2').eq(i).text().slice(0,1) + $('.about h2').eq(i).text().slice(1).toLowerCase();
             $('.link a:last-child').text(c);
         }*/
+        if ($(location).attr('hash') == '#banner-lesson-3') {
+            $("html, body").animate({ scrollTop: 300 }, 0);
+        } else if ($(location).attr('hash') == '#banner-lesson-2') {
+            $("html, body").animate({ scrollTop: 200 }, 0);
+        } else if ($(location).attr('hash') == '#banner-lesson-4') {
+            $("html, body").animate({ scrollTop: 400 }, 0);
+        }
     }
     for (let i=0; i < $('.togg').length; i++) {
         a = $('.togg').eq(i);
@@ -139,4 +146,14 @@ $(document).ready(function() {
             loadJson((j+1), dataList[jsonListName[j]][amountPage]);
         });
     }
+
+    // =====
+    for (let i=0; i < 6; i++){
+        if (window.location.href.indexOf('lesson.html') != -1) {
+            $('.sub-menu-1 a').eq(i).attr('target', '_blank');
+            $('#navcol-1 .dropdown-menu a').eq(i).attr('target', '_blank');
+        }
+
+    }
+
 });

@@ -173,7 +173,7 @@
                 for (let i=0; i < response.same.length; i++) {
                 	$(`#detail-product aside`).append(`
                             <div class="hot-product">
-                                <a href="product.html#${response.same[i].id}">
+                                <a href="product.html#${response.same[i].id}" target="_blank">
                                     <div class="thumbnail">
                                         <div>
                                             <img src="${response.same[i].src}" alt="Ảnh sản phẩm">
