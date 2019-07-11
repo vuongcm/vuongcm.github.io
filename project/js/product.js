@@ -193,6 +193,11 @@
 					$(this).magnify()        
 				});
 				$('.icon-tuti').append(`<img src="img/icon-tuti.png">`);
+				// thêm vào giỏ
+				$('.thumbnail button').click(function(event){
+                    event.preventDefault();
+                    $('.cart-no').text(Number($('.cart-no').text())+1);
+                });
             })
             .fail(function() {
                 alert('lỗi load dữ liệu');

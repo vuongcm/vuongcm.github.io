@@ -63,6 +63,11 @@ $(document).ready(function() {
                         `);
                     }
                     $(`#shop aside`).append(`<div>...</div>`);
+                    // thêm vào giỏ
+                    $('.thumbnail button').click(function(event){
+                        event.preventDefault();
+                        $('.cart-no').text(Number($('.cart-no').text())+1);
+                    });
                 })
                 .fail(function() {
                     alert('lỗi load dữ liệu');
