@@ -2,7 +2,7 @@ let nav1Height;
 let header = `<nav id="nav-1">
             <div class="loginBar">
                 <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal">Đăng nhập</button>
-                <a href="#" id="signUp" class="btn btn-light">Đăng ký</a>
+                <a href="validate.html" id="signUp" class="btn btn-light">Đăng ký</a>
             </div>
             <div class="content-menu">
                 <div class="logo-menu">
@@ -80,7 +80,7 @@ let header = `<nav id="nav-1">
             <div id="test">
             <div class="loginBar">
                 <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal">Đăng nhập</button>
-                <a href="#" id="signUp" class="btn btn-light">Đăng ký</a>
+                <a href="validate.html" id="signUp" class="btn btn-light">Đăng ký</a>
             </div>
             <div class="content-menu">
                 <div class="logo-menu" class="navbar-brand">
