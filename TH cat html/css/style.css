@@ -11,9 +11,7 @@ button, a {
 button:hover, a:hover {
   opacity: .8;
 }
-.img-responsive {
-  width: 100%;
-}
+
 header {
   background-color: #313A5A;
   margin: 0;
@@ -538,6 +536,9 @@ footer {
 
 }
 @media (max-width: 992px) {
+  .img-responsive {
+  width: 100%;
+}
   .navbar-nav {
     margin-left: 5px;
   }
