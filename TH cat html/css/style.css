@@ -513,6 +513,11 @@ footer {
   body {
     max-width: 100%;
   }
+  .carousel-indicators {
+  
+  bottom: 10px;
+
+}
   .navbar-nav {
     margin-left: 10%;
   }
@@ -550,7 +555,7 @@ footer {
     text-align: center;
 }
 footer {
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 }
 @media (max-width: 767px) {
@@ -683,5 +688,12 @@ footer {
     font-weight: 500;
     font-size: 16px;
     margin-bottom: 1rem;
+}
+.img-responsive {
+  width: 100%;
+}
+#copyright nav {
+    width: 98%;
+
 }
 }
