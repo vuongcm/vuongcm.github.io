@@ -5,6 +5,15 @@ body {
   background-color: #F8F9FC;
   overflow-x: hidden;
 }
+button, a {
+  cursor: pointer !important;
+}
+button:hover, a:hover {
+  opacity: .8;
+}
+.img-responsive {
+  width: 100%;
+}
 header {
   background-color: #313A5A;
   margin: 0;
@@ -20,14 +29,12 @@ header {
   box-shadow: none;
   border: none;
   margin: 0 auto;
-
 }
 .navbar>.container {
   display: flex;
   justify-content: space-between;
 }
 .navigation-clean-button .navbar-collapse {
-  display: flex;
   justify-content: space-between;
 }
 @media (min-width:768px) {
@@ -159,7 +166,7 @@ header {
 }
 #contentHeader .text h1 {
   color: #FFFFFF;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 48px;
   width: 80%;
   margin-bottom: 3rem;
@@ -437,7 +444,7 @@ header {
 }
 .carousel-indicators {
   position: absolute;
-  bottom: 10px;
+  bottom: 65px;
   left: 50%;
   margin: 0;
   padding: 5px;
@@ -566,7 +573,7 @@ h1 {
     margin-bottom: 1.5rem;
 }
 #benefit {
-    transform: translateY(-8%);
+    transform: translateY(0);
 }
 #benefit .row {
     flex-wrap: wrap;
@@ -595,14 +602,85 @@ h1 {
 
 footer {
   padding: 1rem 0;
-}
-#carousel-inner .carousel-item .colum {
-  display: none;
-}
-#carousel-inner .carousel-item .colum.action {
-  display: block;
+  margin: 2rem 0 0;
 }
 #slider1, #slider2, #slider3 {
   transform: translateX(0);
+  transform: translateY(0);
+}
+
+
+.carousel-item .row {
+  margin-top: 2rem;
+}
+.carousel-item .colum{
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+  border-radius: 6px;
+  background-color: #FFFF;
+}
+.carousel-inner .thumbnail {
+  padding-top: 1rem;
+}
+.caption p {
+  font-size: 13px;
+  margin-top: 1rem;
+}
+.caption p span {
+  font-size: 13px;
+
+}
+.caption h6 {
+  font-size: 14px;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+.carousel-indicators {
+  display: none;
+}
+#testimonials {
+  margin: 0;
+  padding: 1rem 0;
+  position: inherit;
+  background-color: #2c6d67;
+}
+#fixImg {
+  display: none;
+}
+#fixImg img {
+  max-width: 43%;
+}
+#testimonials>h1 {
+  position: inherit;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  padding-left: 1rem;
+}
+#testimonials>h1 br {
+  display: none;
+}
+#fixImg2 {
+  display: none;
+}
+#parner a {
+    width: 20%;
+
+}
+  #pricing #date {
+    width: 100%;
+}
+.navigation-clean-button .navbar-collapse {
+    position: absolute;
+    background: #404a6d;
+}
+#contentHeader .text button {
+    padding: 1rem 1rem;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 1rem;
 }
 }
