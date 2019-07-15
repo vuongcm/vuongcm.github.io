@@ -1,0 +1,309 @@
+.about {
+	min-height: 25vh;
+}
+#cartAndPay {
+	display: flex;
+	justify-content: space-between;
+}
+#cartAndPay h3 {
+	padding: .45rem .8rem;
+	background-color: #e77200;
+	font-size: 18px;
+	color: #f8f5e2;
+	font-family: "Times New Roman", Times, serif;
+}
+#cartAndPay h3 span {
+	display: inline-block;
+	border: 2.5px solid #f8f5e2;;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+	padding: .1rem;
+	text-align: center;
+	margin-right: 5px;
+}
+/* ===== giỏ hàng =====*/
+#box-cart {
+	width: 41%;
+	margin-bottom: 1rem;
+}
+
+#box-cart td img {
+	max-width: 40%;
+}
+#box-cart .table td, #box-cart .table th {
+    padding: .5rem 0;
+    vertical-align: middle;
+}
+
+.table h4 {
+	font-size: 13px;
+	width: 90%;
+	margin: 5px auto;
+}
+#box-cart .form-control {
+	margin: 0 auto;
+    width: 80%;
+    padding: .2rem .2rem;
+}
+#box-cart tfoot tr {
+	border-bottom: 1px solid #dee2e6;
+}
+#result {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+
+}
+#box-cart #result #promotionCode {
+	width: 45%;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid rgba(252,152,14,.5);
+	padding: 0;
+	margin: 0;
+	-webkit-border-radius: 999px;
+	-moz-border-radius: 999px;
+	border-radius: 999px;
+}
+#box-cart #result #promotionCode input {
+	width: 68%;
+	font-size: 12px;
+	padding: .2rem .4rem;
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+#box-cart #result #promotionCode button {
+	padding: .2rem 0;
+	font-size: 12px;
+	width: 32%;
+	border: none;
+	background-color: #e77200;
+	cursor: pointer;
+	outline: none;
+	color: #f8f5e2;
+	border: 1px solid rgba(252,152,14,.5);
+	border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+    -webkit-border-top-right-radius: 999px;
+    -webkit-border-bottom-right-radius: 999px;
+    -moz-border-top-right-radius: 999px;
+    -moz-border-bottom-right-radius: 999px;
+}
+
+#box-cart #result #promotionCode button:hover {
+	background-color: #f59a40;
+}
+#box-cart #result>div:last-child {
+	width: 55%;
+}
+#box-cart #result>div:last-child p {
+	margin-top: 0;
+	text-align: right;
+	font-weight: bold;
+}
+#box-cart #result>div:last-child p span {
+	color: #e77200;
+	font-weight: 100;
+}
+@media screen and (max-width: 600px) { 
+	table#cart tbody td .form-control { 
+		width:20%; 
+		display: inline !important;
+	} 
+	 
+	.actions .btn { 
+		width:36%; 
+		margin:1.5em 0;
+	} 
+	 
+	table#cart thead {
+		display: none;
+	} 
+	 
+	table#cart tbody td {
+		display: block;
+		padding: .6rem;
+		min-width:320px;
+	} 
+	 
+	table#cart tbody tr td:first-child {
+		background: #333;
+		color: #fff;
+	} 
+	 
+	table#cart tbody td:before { 
+		content: attr(data-th);
+		font-weight: bold; 
+		display: inline-block;
+		width: 8rem;
+	} 
+	 
+	table#cart tfoot td {
+		display:block;
+	} 
+	table#cart tfoot td .btn {
+		display:block;
+	}
+	table#cart tfoot .delete {
+		display: none;
+	}
+	table#cart tbody td.actions:before {
+    	display: none;
+}
+
+}
+/* ===== thông tin thanh toán =====*/
+#box-pay {
+	width: 55%;
+	padding: 0;
+}
+#box-pay #infoCustomer {
+	width: 45%;
+	display: inline-block;
+	margin-right: 10%;
+}
+#box-pay #infoShip {
+	width: 45%;
+	display: inline-block;
+	float: right;
+}
+#box-pay h4 {
+	font-size: 16px;
+	font-weight: 600;
+	padding: 1rem 0 .3rem;
+	margin: 0;
+}
+#box-pay p {
+	font-size: 13px;
+	padding: 0;
+	margin: 1rem 0 .3rem;
+}
+#box-pay #infoShip>p {
+	margin: 0 0 1rem;
+}
+#box-pay input, textarea, select {
+	border: 1px solid #dee2e6;
+	outline: none;
+	margin-right: 5px;
+}
+#box-pay label {
+	display: flex;
+	align-items: center;
+}
+#box-pay input[type="text"], #box-pay input[type="tel"], #box-pay input[type="email"],textarea, select { 
+  width: 100%;
+  padding: .25rem .5rem;
+}
+#box-pay .btn {
+	width: 100%;
+    font-size: calc(var(--fontSize) * 2);
+    color: #FFFFFF;
+    background-color: #FC840E;
+    border-color: transparent;
+    padding: .75rem 0;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    margin: 1rem 0;
+}
+#box-pay .btn-light:hover {
+    background-color: #f59a40;
+}
+@media only screen and (max-width: 1024px) {
+    #cartAndPay {
+    	display: block;
+    }
+    #box-cart, #box-pay {
+        width: 100%;
+    }
+    #box-pay .btn {
+    	font-size: 13px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    #box-pay #infoCustomer {
+		width: 100%;
+		margin-right: 0;
+	}
+	#box-pay #infoShip {
+		width: 100%;
+		display: block;
+		float: none;
+	}
+	#box-pay .btn{
+		width: 60%;
+		margin: .5rem auto;
+		display: block;
+	}
+}
+/* =========== popUp ================*/
+#confirmModal {
+    background-color: rgba(108,117,125,.4);
+}
+#confirmModal .modal-dialog {
+    max-width: 400px;
+}
+#confirmModal .modal-content {
+    -webkit-box-shadow: 0 3px 4px rgba(0,0,0,.5);
+    box-shadow: 0 3px 4px rgba(0,0,0,.5);
+    background-color: #ffffff;
+}
+@media (min-width: 768px) {
+    #confirmModal .modal-content {
+        -webkit-box-shadow: 0 5px 7px rgba(0,0,0,.5);
+        box-shadow: 0 5px 7px rgba(0,0,0,.5);
+    }
+}
+#confirmModal .modal-header {
+    display: flex;
+    align-items: center;
+}
+#confirmModal .close {
+    opacity: .2;
+    float: none;
+}
+
+#confirmModal .modal-title {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+}
+#confirmModal p {
+    margin: 0;
+    font-size: 15px;
+}
+#confirmModal .btn {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    background-color: #218838;
+    border-color: #1e7e34;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+}
+
+#confirmModal .btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+#confirmModal .btn:hover {
+	opacity: .8;
+}

@@ -118,7 +118,7 @@
   color: #424648;
   display: inline;
   margin: 0 8px 0 0;
-  font-size: 12.5px;
+  font-size: calc(var(--fontSize) * 1.25);
 }
 .content .view p>span, .content nav ul span {
   font-family: FontAwesome;
@@ -179,5 +179,8 @@
   }
   .content aside>div:last-child{
     font-size: 13px;
+  }
+  .content .view p {
+    font-size: 9px;
   }
 }

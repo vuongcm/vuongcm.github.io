@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Kiwi's mom</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style-header.css">
+    <link rel="stylesheet" type="text/css" href="css/style-footer.css">
+    <link rel="stylesheet" type="text/css" href="css/style-about.css">
+    <link rel="stylesheet" type="text/css" href="css/style-cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header></header>
+<div class="link">
+    <a href="index.html">Trang chủ </a>
+    <span></span>
+    <a href="shop.html"> Cửa hàng</a>
+    <span></span>
+    <a href="#"> Giỏ hàng</a>
+</div>
+<article class="about">
+    <div class="banner">
+        <img src="img/banner-top-min.png" alt="img" class="img-responsive">
+        <div>
+            <button class="navbar-toggler togg">
+                <span class="plus"></span>
+                <span class="minus"></span>
+            </button>
+            <h2>GIỎ HÀNG</h2>
+        </div>
+    </div>
+    <div id="cartAndPay" class="content">
+        <div id="box-cart">
+            <h3><span>1</span> Giỏ hàng</h3>
+            <table class="table table-condensed" id="cart"> 
+                <thead> 
+                    <tr> 
+                        <th class="text-center" style="width: 30%">SẢN PHẨM</th> 
+                        <th style="width: 14%">SỐ LƯỢNG</th> 
+                        <th class="text-center" style="width: 22%">ĐƠN GIÁ</th> 
+                        <th class="text-center" style="width: 24%">THÀNH TIỀN</th> 
+                        <th class="text-center" style="width: 10%">XÓA</th> 
+                    </tr> 
+                </thead> 
+                <tbody>
+                    <tr class="product"> 
+                        <td class="text-center" data-th="SẢN PHẨM"> 
+                            <div class="hidden-xs">
+                                <img class="img-responsive" alt="Sản phẩm" src="img/pr-id1001.png">
+                                <h4 class="nomargin">Ghế ô tô Zaracos Aroma 7196 - Green</h4> 
+                            </div> 
+                        </td> 
+                        <td class="text-center" data-th="SỐ LƯỢNG">
+                            <input class="form-control text-center" type="number" value="1" min="0">
+                        </td> 
+                        <td class="text-center price" data-th="ĐƠN GIÁ">1.850.000đ</td> 
+                        
+                        <td class="text-center subTotal" data-th="THÀNH TIỀN">1.850.000đ</td> 
+                        <td class="actions text-center">
+                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
+                        </td> 
+                    </tr> 
+                    <tr class="product"> 
+                        <td class="text-center" data-th="SẢN PHẨM"> 
+                            <div class="hidden-xs">
+                                <img class="img-responsive" alt="Sản phẩm" src="img/pr-id2001.jpg">
+                                <h4 class="nomargin">Sách Thiên cơ - Bìa mềm</h4> 
+                            </div> 
+                        </td> 
+                        <td class="text-center" data-th="SỐ LƯỢNG">
+                            <input class="form-control text-center" type="number" value="1" min="0">
+                        </td> 
+                        <td class="text-center price" data-th="ĐƠN GIÁ">83.000đ</td> 
+                        
+                        <td class="text-center subTotal" data-th="THÀNH TIỀN">83.000đ</td> 
+                        <td class="actions text-center" >
+                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
+                        </td> 
+                    </tr>
+                </tbody>
+                <tfoot> 
+                    <tr>
+                        <td class="text-center"><h4>Phí ship tạm tính</h4></td>
+                        <td class="delete"></td>
+                        <td class="delete"></td>
+                        <td class="text-center ship">0</td>
+                        <td class="delete"></td>
+                    </tr> 
+    
+                </tfoot> 
+            </table>
+            <div id="result">
+                <div id="promotionCode">
+                    <input type="text" placeholder="Nhập mã giảm giá" name="promotionCode">
+                    <button>Áp dụng</button>
+                </div>
+                <div>
+                    <p>Tổng cộng: <span>1.933.000đ</span></p>
+                    <p>Khuyến mại/giảm giá: <span>0</span></p>
+                    <p>Thanh toán: <span>1.933.000đ</span></p>
+                </div>
+            </div>
+        </div>
+        <form id="box-pay" action="" class="clr">
+            <h3><span>2</span> Thông tin đặt hàng</h3>
+            <div id="infoCustomer">
+                <h4>Thông tin khách hàng</h4>
+                <div>
+                    <p>Họ tên *</p>
+                    <input type="text" name="nameOder" required>
+                </div>
+                <div>
+                    <p>Địa chỉ email *</p>
+                    <input type="email" name="email" required>
+                </div>
+                <div>
+                    <p>Số điện thoại *</p>
+                    <input type="tel" name="phoneOder" required>
+                </div>
+                <div>
+                    <p>Địa chỉ *</p>
+                    <input type="text" name="addressOder" required>
+                </div>
+                <div>
+                    <p>Tỉnh (thành phố) *</p>
+                    <select name="proviceOder" required>
+                        <option value="">Chọn mục..</option>
+                        <option value="Hà Nội">Hà Nội</option>
+                        <option value="Hải Phòng">Hải Phòng</option>
+                        <option value="Đà Nẵng">Đà Nẵng</option>
+                        <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                        <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                        <option value="Phú Thọ">Phú Thọ</option>
+                        <option value="">...</option>
+                    </select>
+                </div>
+                <h4>Hình thức thanh toán</h4>
+                <div>
+                    <label for="cod"><input id="cod" type="radio" name="payments" required value="cod"> COD thanh toán khi nhận hàng</label>
+                    <label for="transfer"><input id="transfer" type="radio" name="payments" required value="transfer"> Chuyển khoản ngân hàng</label>
+                </div>
+            </div>
+            <div id="infoShip">
+                <h4>Hình thức vận chuyển</h4>
+                <p>Giao hàng tận nhà</p>
+                <h4>Thông tin giao hàng</h4>
+                <div>
+                    <label for="checkBox"><input id="checkBox" type="checkbox" name="checkBox"> Giao hàng tới cùng địa chỉ</label>
+                </div>
+                <div>
+                    <p>Họ tên *</p>
+                    <input type="text" name="nameReceiver" required>
+                </div>
+                <div>
+                    <p>Số điện thoại *</p>
+                    <input type="tel" name="phoneReceiver" required>
+                </div>
+                <div>
+                    <p>Địa chỉ *</p>
+                    <input type="text" name="addressReceiver" required>
+                </div>
+                <div>
+                    <p>Tỉnh (thành phố) *</p>
+                    <select name="proviceReceiver" required>
+                        <option value="">Chọn mục..</option>
+                        <option value="Hà Nội">Hà Nội</option>
+                        <option value="Hải Phòng">Hải Phòng</option>
+                        <option value="Đà Nẵng">Đà Nẵng</option>
+                        <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                        <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                        <option value="Phú Thọ">Phú Thọ</option>
+                        <option value="">...</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Ghi chú</p>
+                    <textarea></textarea>
+                </div>
+                <button id="submitButton" type="submit" class="btn btn-light" data-toggle="modal" data-target="#confirmModal">HOÀN TẤT ĐẶT HÀNG</button>
+            </div>
+        </form>
+        
+    </div>
+</article>
+<div id="confirmModal"  class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">XÁC NHẬN ĐẶT HÀNG</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        
+      </div>
+      <div class="modal-body">
+        <p>Bạn chắc chắn muốn đặt đơn hàng này</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="ok" >OK</button>
+        <button class="btn btn-default" data-dismiss="modal" id="cancel">cancel</button>
+        
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog"></div>
+<footer id="myFooter"></footer>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/script-header-footer.js"></script>
+<script>
+    $('header').html(header);
+    $('#myFooter').html(foot);
+    $('#myModal').html(loginModal);
+</script>
+<script type="text/javascript" src="js/cart.js"></script>
+</body>
+</html>
