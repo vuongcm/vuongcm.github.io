@@ -66,7 +66,7 @@ let header = `<nav id="nav-1">
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="share.html">
                             <span class="ca-icon"></span>
                             <div class="ca-content">
                                 <h2 class="ca-main">CHIA SẺ</h2>
@@ -114,7 +114,7 @@ let header = `<nav id="nav-1">
                             </div>
                         </li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="shop.html">CỬA HÀNG</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">CHIA SẺ</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="share.html">CHIA SẺ</a></li>
                     </ul>
                 </div>
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
