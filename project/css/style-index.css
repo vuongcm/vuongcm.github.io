@@ -171,7 +171,7 @@
 
 .article-list .item .name {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 20px;
     color: #333;
 }
@@ -182,7 +182,7 @@
     opacity: .9;
 }
 .article-list .item .description {
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 15px;
     margin-bottom: 0;
 }
@@ -192,7 +192,14 @@
         width: 70%;
     }
 }
-
+@media (max-width:767px) {
+    .article-list .item .name {
+        font-size: 16px;
+    }
+    .article-list .item .description {
+        font-size: 14px;
+    }
+}
 /* STYLE riêng cho article 3 */
 .article-list .banner { /* banner */
     width: 100%;

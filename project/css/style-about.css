@@ -77,7 +77,7 @@
 	margin: .5rem 0;
 }
 .content p {
-	font-size: calc(var(--fontSize) * 1.5);
+	font-size: calc(var(--fontSize) * 1.6);
 	margin: .5rem 0;
 }
 .content>img {
@@ -94,7 +94,7 @@
 		margin: .25rem 0;
 	}
 	.content p {
-		font-size: 12.9px;
+		font-size: 14px;
 		margin: .25rem 0;
 	}
 	.content {

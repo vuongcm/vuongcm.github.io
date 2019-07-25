@@ -201,9 +201,6 @@ article h2 {
     color: #000;
     font-size: calc(var(--fontSize) * 4.5);
     text-shadow: 0px 0px 1px #000;
-    -webkit-animation: moveFromBottom 300ms ease;
-    -moz-animation: moveFromBottom 300ms ease;
-    -ms-animation: moveFromBottom 300ms ease;
 }
 .ca-menu li:hover .ca-main{
     color: #000;

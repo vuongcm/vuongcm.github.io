@@ -11,10 +11,11 @@
   margin-bottom: 1rem;
 }
 #share .content .topicList .topic {
-	margin-top: .8rem;
+	margin-top: 1.2rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+  background-color: #f7fcff;
 }
 #share .content .topicList .topic>div:last-child p, .hot-pic p {
   font-size: calc(var(--fontSize) * 1.3);

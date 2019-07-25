@@ -44,10 +44,11 @@
 	margin-left: 8%;
 }
 #share .content .topicList .topic {
-	margin-top: .8rem;
+	margin-top: 1.2rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+  background-color: #f7fcff;
 }
 #share .content .topicList .topic .avatar {
 	width: 6%;

@@ -98,9 +98,11 @@
     for (let i=0; i < $('.about').length; i++) {
         b = '#about-' + (i+1);
         a = $('.about').eq(i);
-        if ($(location).attr('hash') != b) {
+        if ($(location).attr('hash') != b && $(location).attr('hash') != '') {
             a.toggleClass('lego');
             a.children('.content').toggle();
+        } else if ($(location).attr('hash') == '') {
+            $('.content').toggle();
         }
     }
     for (let i=0; i < $('.togg').length; i++) {

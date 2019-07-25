@@ -59,7 +59,7 @@ $(document).ready(function() {
                         $(`#videos-${x} .media .articles`).append(`
                             <div class="col-sm-6 col-md-4 item">
                                 <iframe width="100%" src="${response.link[i].src}" frameborder="0" allowfullscreen></iframe>
-                                <a target="_blank" href="${response.link[i].src}"><h3 class="name">${response.link[i].h3}</h3></a>
+                                <a target="_blank" href="${response.link[i].blank}"><h3 class="name">${response.link[i].h3}</h3></a>
                                 <div class="interactive">
                                     <div class="date">${response.link[i].date}</div>
                                     <div class="view">
