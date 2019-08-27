@@ -1,0 +1,34 @@
+.ic-truck {
+  width: 31px;
+  height: 21px;
+  background-image: url("../images/ic-truck.png"); }
+
+.ic-arm {
+  width: 22px;
+  height: 24px;
+  background-image: url("../images/ic-arm.png"); }
+
+.ic-house {
+  width: 26px;
+  height: 19px;
+  background-image: url("../images/ic-house.png"); }
+
+.ic-mail {
+  width: 20px;
+  height: 13px;
+  background-image: url("../images/ic-mail.png"); }
+
+.ic-marker {
+  width: 13px;
+  height: 18px;
+  background-image: url("../images/ic-marker.png"); }
+
+.ic-one {
+  width: 23px;
+  height: 19px;
+  background-image: url("../images/ic-one.png"); }
+
+.ic-phone {
+  width: 20px;
+  height: 19px;
+  background-image: url("../images/ic-phone.png"); }

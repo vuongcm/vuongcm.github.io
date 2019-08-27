@@ -1,0 +1,129 @@
+body{
+	font-size: 14px;
+	font-family: $f1;
+	line-height: 1.5;
+	color: $color_text;
+}
+.md-title{
+	font-size: 36px;
+	font-weight: bold;
+	color: $c1;
+	margin-bottom: 29px;
+	&.v2{margin-bottom: 20px;}
+}
+.def-more{
+	@include middle;
+	border: solid 1px $c1;
+	border-radius: 50px;
+	height: 50px;
+	background: #fff;
+	text-transform: uppercase;
+	color: $c1;
+	font-size: 18px;
+	font-weight: 500;
+	font-family: $f2;
+	line-height: 52px;
+	letter-spacing: 0.025em;
+	padding-left: 12px;
+	padding-right: 21px;
+	i{
+		@include middle;
+		width: 28px;
+		height: 28px;
+		border-radius: 50%;
+		background: $c1;
+		position: relative;
+		margin-top: -3px;
+		margin-right: 22px;
+		transition: inherit;
+		&:after{
+			content: '';
+			@include absolute(-4px);
+			border-radius: 50%;
+			border: dashed 1px $c1;
+			transition: inherit;
+		}
+	}
+	&:hover{
+		background: $c1;
+		color: #fff;
+		i{
+			background: #fff;
+			&:after{
+				border-color: #fff;
+			}
+		}
+	}
+}
+
+.scrollbar{
+	overflow: auto;
+	.mCSB_scrollTools{
+		.mCSB_dragger .mCSB_dragger_bar{
+			width: 6px;
+			background: $c2;
+		}
+		.mCSB_draggerRail{
+			width: 6px;
+			background: #969990;
+		}
+	}
+}
+
+@media all and (min-width: 1760px){
+	.container{
+		max-width: 1760px;
+	}
+	.col-mar-18{@include col-mar(18px);}
+	.col-mar-25{@include col-mar(25px);}
+	.col-mar-35{@include col-mar(35px);}
+	.col-xxl-1{flex: 0 0 8.333333%;max-width: 8.333333%;}
+	.col-xxl-2{flex: 0 0 16.666667%;max-width: 16.666667%;}
+	.col-xxl-3{flex: 0 0 25%;max-width: 25%;}
+	.col-xxl-4{flex: 0 0 33.333333%;max-width: 33.333333%;}
+	.col-xxl-5{flex: 0 0 41.666667%;max-width: 41.666667%;}
+	.col-xxl-6{flex: 0 0 50%;max-width: 50%;}
+	.col-xxl-7{flex: 0 0 58.333333%;max-width: 58.333333%;}
+	.col-xxl-8{flex: 0 0 66.666667%;max-width: 66.666667%;}
+	.col-xxl-9{flex: 0 0 75%;max-width: 75%;}
+	.col-xxl-10{flex: 0 0 83.333333%;max-width: 83.333333%;}
+	.col-xxl-11{flex: 0 0 91.666667%;max-width: 91.666667%;}
+}
+
+@media all and (min-width: 1540px){
+	.container{
+		&.v2{
+			max-width: 1530px;
+		}
+	}
+}
+
+@media all and (min-width: 1200px){
+	.col-mar-35{@include col-mar(20px);}
+}
+
+@media all and (max-width: 991px){
+	.md-title{
+		font-size: 28px;
+	}
+}
+
+@media all and (max-width: 767px){
+	.def-more{
+		height: 40px;
+		font-size: 15px;
+		line-height: 42px;
+		padding-left: 10px;
+		padding-right: 19px;
+		i{
+			width: 22px;
+			height: 22px;
+			margin-top: -3px;
+			margin-right: 14px;
+		}
+	}
+	.md-title{
+		font-size: 22px;
+		margin-bottom: 20px;
+	}
+}

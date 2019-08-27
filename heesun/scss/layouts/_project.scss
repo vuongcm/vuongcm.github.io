@@ -1,0 +1,155 @@
+.p-nav{
+	display: block;
+	text-align: center;
+	margin: 60px 0;
+	li{
+		display: inline-block;
+		a{
+			display: inline-block;
+			padding: 10px;
+			text-transform: uppercase;
+			border: 1px solid $c1;
+			font-size: 18px;
+			font-weight: 500;
+			border-radius: 30px;
+			min-width: 210px;
+			margin: 0 8px;
+		}
+		&:hover,&.active{
+			a{
+				background-color: $c1;
+				color: #fff;
+			}
+		}
+	}
+	@media (max-width: 1759px){
+		margin: 40px 0;
+		li a{
+			min-width: 180px;
+			font-size: 16px;
+		}
+	}
+
+}
+.pr-item{
+	&:nth-child(2n){
+		margin-top: 70px;
+	}
+	&:last-child{
+		margin-bottom: 20px;
+	}
+	&.reverse{
+		.item-prj{
+			.img{
+				text-align: right;
+			}
+			.ct{
+				right: inherit;
+				left: 0;
+			}
+		}
+	}
+}
+.item-prj{
+	position: relative;
+	margin-bottom: 20px;
+	.img{
+		display: block;
+		
+		img{
+			min-height: 320px;
+		}
+	}
+	.ct{
+		position: absolute;
+		height: calc(100% - 80px);
+		top: 40px;
+		max-width: 300px;
+		right: 0;
+		box-shadow: 0 2px 9px 0 rgba(#000,0.25);
+		background-color: #fff;
+		border-bottom: 5px solid $c1;
+		padding: 30px 25px;
+		.head{
+			color: $c1;
+			font-weight: bold;
+			font-size: 20px;
+			position: relative;
+			margin-bottom: 10px;
+			span{
+				height: 1px;
+				width: 30px;
+				display: inline-block;
+				background-color: $c2;
+				margin: 0 12px 8px -5px;
+			}
+			a{
+				@include set-lineMax(3,30px);
+			}
+			&:hover{
+				a{
+					color: $c2;
+				}
+			}
+		}
+		.desc{
+			font-size: 16px;
+			@include set-lineMax(3,24px);
+		}
+	}
+	@media (max-width: 1759px){
+		.img{
+			img{
+				min-height: auto;
+				height: 280px;
+				width: 70%;
+			}
+		}
+		.ct{
+			height: calc(100% - 70px);
+			top: 35px;
+			max-width: 250px;
+			padding: 25px 20px;
+			.head{
+				font-size: 18px;
+				a{
+					@include set-lineMax(3,26px);
+				}
+				span{
+					margin-bottom: 5px;
+				}
+			}
+			.desc{
+				font-size: 14px;
+				@include set-lineMax(3,22px);
+			}
+		}
+	}
+}
+@media (max-width: 767px){
+	.item-prj .img img{
+		width: 100%;
+	}
+	.p-nav {
+		margin: 25px 0;
+		li a{
+			font-size: 14px;
+			min-width: 49%;
+			margin: 0;
+			padding: 10px 20px;
+			margin-bottom: 10px;
+		}
+	}
+	.pr-item{
+		&:nth-child(2n){
+			margin-top: 0;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	
+	.item-prj .ct{
+		max-width: 280px;
+	}
+}
