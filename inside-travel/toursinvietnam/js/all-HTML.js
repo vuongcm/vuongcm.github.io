@@ -34,7 +34,7 @@ let header = `<div class="head-intro">
                   <a href="https://www.toursinvietnam.com" title="Vietnam Tours"><img class="logo" src="https://www.toursinvietnam.com/images/inside-vietnam-travel-logo.png" alt="Vietnam Tours" /></a>
                   <!--<img src="https://www.toursinvietnam.com/images/sign_logo.svg" class="new-year" alt="Vietnam Tours" />-->
                </div>
-               <h5><a href="#">TOP 10</a></h5>
+               <h5><a href="#">TOP 10 TOURS</a></h5>
                <div id=head-right>
                   <div id="bot-head-right">
                      <div id="right-menu">

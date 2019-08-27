@@ -211,6 +211,7 @@ if ($("#owl-demo34").length > 0) {
         });
     } else {
         $("#owl-demo34").addClass('carousel-mobile');
+        $('body').attr('style',`--bodyWidth:${$('body').width()}px`);
      }
 }
 if ($("#owl-demo35").length > 0) {
@@ -301,6 +302,11 @@ if ($('body').width() < 768) {
     });
 } else {
     $('#search-bestcruise #find-tour-title').off('click');
+}
+if ($('body').width() < 670) {
+    $('.container-destination').one('touchstart',function(){
+        $('.container-destination .row').css('transform','none');
+    });
 }
 if ($('body').width() < 580) {
     $('.slider #title-slider-1').css({
