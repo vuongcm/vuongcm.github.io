@@ -34,7 +34,8 @@ let header = `<div class="head-intro">
                   <a href="https://www.toursinvietnam.com" title="Vietnam Tours"><img class="logo" src="https://www.toursinvietnam.com/images/inside-vietnam-travel-logo.png" alt="Vietnam Tours" /></a>
                   <!--<img src="https://www.toursinvietnam.com/images/sign_logo.svg" class="new-year" alt="Vietnam Tours" />-->
                </div>
-               <h5><a href="#">TOP 10 TOURS</a></h5>
+               <h5>
+                  <a href="#"><img alt="Vietnam Flag" src="https://www.toursinvietnam.com/images/group/Top-10-Vietnam-Tours.svg">TOP 10 TOURS</a></h5>
                <div id=head-right>
                   <div id="bot-head-right">
                      <div id="right-menu">
@@ -212,7 +213,7 @@ let searchBestcruise = `<div class="grid-1">
                <div id="container-search">
                   <div id="left-txt">
                      <div id="find-tour-title">
-                        <h2>Find The Best Tours</h2>
+                        <h2><i class="fa fa-search"></i>Find The Best Tours</h2>
                         <div id="icon-down">
                             <a class="view-us">
                                 <span class="icon-us"><i class="fa fa-angle-down fa-3x"></i></span>
