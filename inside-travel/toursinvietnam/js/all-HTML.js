@@ -71,7 +71,7 @@ let header = `<div class="head-intro">
                                     </a>
                                  </li>
                                  <li>
-                                    <a href="https://www.toursinvietnam.com/tours/vietnam-family-tours/" target="_self" title="Vietnam Family Tours">
+                                    <a href="vietnam-family-tours.html" target="_self" title="Vietnam Family Tours">
                                     <span>Vietnam Family Tours</span>
                                     <img src="images/m3.jpg" alt="Vietnam Family Tours" />
                                     </a>
