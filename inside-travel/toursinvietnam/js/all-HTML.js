@@ -141,7 +141,7 @@ let header = `<div class="head-intro">
                                           </a>
                                           <ul>
                                              <li class="has-arrow hide"><a href="#"><span></span>Da Nang</a></li>
-                                             <li class="has-arrow"><a href="#"><span></span>Da Lat</a></li>
+                                             <li class="has-arrow"><a href="#"><span></span>Da Lat <font>(20 tours)</font></a></li>
                                              <li class="has-arrow"><a href="#"><span></span>Hoi An</a></li>
                                              <li class="has-arrow"><a href="#"><span></span>Hue</a></li>
                                              <li class="has-arrow"><a href="#"><span></span>Nha Trang</a></li>

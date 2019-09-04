@@ -171,7 +171,7 @@ if($("#owl-demo19").length>0){
 if ($(".scroll-tours .owl-carousel").length > 0) {
     if ($('body').width() > 479) {
         $(".scroll-tours .owl-carousel").owlCarousel({
-            autoPlay:5000,
+            //autoPlay:5000,
             items: 3,
             itemsDesktop: [1199, 3],
             itemsDesktopSmall: [979, 2],
@@ -204,12 +204,13 @@ window.onload = function() {
             }
         }
         $(`.scroll-tours #owl-demo${j} .alink`).height(heightMax);
+        heightMax=0;
     }
 };
 if ($("#owl-demo34").length > 0) {
     if ($('body').width() > 479) {
         $("#owl-demo34").owlCarousel({
-            autoPlay:5000,
+            //autoPlay:5000,
             items: 3,
             itemsDesktop: [1199, 3],
             itemsDesktopSmall: [979, 2],
@@ -996,9 +997,13 @@ function ajax_search_tour_day(group_id,duration,div) {
     $('.main-group').fadeIn(1000).html('<div style="margin:10px auto;width: 31px;"><img width="70" src="/images/load_vtc.gif" /><div>');
     $('#about-me #filter-tours button').removeClass('active');
     $(div).addClass('active');
+    var desti = 0;
+    if($("#desti_search").val()!=undefined){
+        desti = $("#desti_search").val();    
+    }
     $.ajax({
         type: "GET",
-        url: SITE_URL + "/ajax-process.php?mod=ajax_search_tour_day&group_id="+group_id+"&duration=" + duration,
+        url: SITE_URL + "/ajax-process.php?mod=ajax_search_tour_day&group_id="+group_id+"&duration=" + duration+"&desti=" + desti,
         success: function(xml) {
             //$('.main-group').addClass('grid-1');
             $('.main-group').html(xml);
