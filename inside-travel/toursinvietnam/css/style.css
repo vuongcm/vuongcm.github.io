@@ -8421,7 +8421,8 @@ body {
 	}
 	.kid-box-2>div {
 		width: 100%;
-		padding: 0 15px;
+		padding-left: 0;
+		padding-right: 0;
 	}
 	.kid-box-2>div>.kid-stay:first-child {
 		margin-top: 0;
@@ -8430,13 +8431,13 @@ body {
 		width: 100%;
 		margin-left: 0;
 		margin-right: 0;
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 0;
+		padding-right: 0;
 	}
 	.box-festival {
 		width: 100%;
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 /* ======= end new =======*/
