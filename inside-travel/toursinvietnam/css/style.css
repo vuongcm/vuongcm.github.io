@@ -8030,6 +8030,7 @@ body {
 }
 .grid-3 img {
 	width: 100%;
+	height: auto;
 }
 .title-line-3 {
 	width: 100%;
