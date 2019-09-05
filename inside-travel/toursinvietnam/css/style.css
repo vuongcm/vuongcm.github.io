@@ -8433,6 +8433,9 @@ body {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+	.wrap-food .box-food>img {
+		object-fit: cover;
+	}
 	.box-festival {
 		width: 100%;
 		padding-left: 15px;
