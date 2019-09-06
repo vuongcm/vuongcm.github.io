@@ -302,26 +302,10 @@ if ($('body').width() < 768) {
     $('#search-bestcruise #find-tour-title').on('click', function(){
         $('#search-bestcruise .container-search-home').toggleClass('open-1');
         if ($('#search-bestcruise .container-search-home').css('display') == "none") {
-            $('#search-bestcruise #icon-down a.view-us span').css('transform', 'rotateX(0deg)');
+            $('#search-bestcruise #icon-down .view-us span').css('transform', 'rotateX(0deg)');
             $('#search-bestcruise').css('padding', '0');
         } else {
-            $('#search-bestcruise #icon-down a.view-us span').css({
-                'transform': 'rotateX(180deg)',
-                '-webkit-transform': 'rotateX(180deg)',
-                '-ms-transform': 'rotateX(180deg)',
-                '-moz-transform': 'rotateX(180deg)'
-            });
-            $('#search-bestcruise').css('padding', '0 0 10px');
-        }
-        
-    });
-    $('#search-bestcruise #find-tour-title-2').on('click', function(){
-        $('#search-bestcruise .container-search-home').toggleClass('open-1');
-        if ($('#search-bestcruise .container-search-home').css('display') == "none") {
-            $('#search-bestcruise #icon-down a.view-us span').css('transform', 'rotateX(0deg)');
-            $('#search-bestcruise').css('padding', '0');
-        } else {
-            $('#search-bestcruise #icon-down a.view-us span').css({
+            $('#search-bestcruise #icon-down .view-us span').css({
                 'transform': 'rotateX(180deg)',
                 '-webkit-transform': 'rotateX(180deg)',
                 '-ms-transform': 'rotateX(180deg)',
