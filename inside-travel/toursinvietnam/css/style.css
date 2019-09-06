@@ -7000,37 +7000,43 @@ span.icon-tailor .fa-2x {
 	display: flex;
 	justify-content: center;
 }
-
-#search-bestcruise #find-tour-title #icon-down {
+#search-bestcruise #find-tour-title-2 {
+	display: none;
+}
+#search-bestcruise #find-tour-title-2 #icon-down {
 	float: none;
     display: none;
     padding: 0;
     background-color: transparent;
     width: auto;
 }
-#search-bestcruise #find-tour-title h2>i {
-	display: none;
-}
 @media (max-width: 767px) {
+	#search-bestcruise #find-tour-title-2 {
+		display: flex;
+		justify-content: center;
+	}
+	#search-bestcruise #find-tour-title {
+		display: none;
+	}
 	#container-search #left-txt {
 		padding: 0;
 		margin: 0;
 	}
-	#search-bestcruise #find-tour-title {
+	#search-bestcruise #find-tour-title-2 {
 		padding: .6rem 0;
 	}
-	#search-bestcruise #find-tour-title h2 {
+	#search-bestcruise #find-tour-title-2 h2 {
 		float: none;
 		display: inline;
 		width: auto;
 		margin-right: 5px;
 	}
-	#search-bestcruise #find-tour-title h2>i {
+	#search-bestcruise #find-tour-title-2 h2>i {
 		display: inline;
 		margin-right: 10px;
 		color: #979e1a;
 	}
-    #search-bestcruise #find-tour-title #icon-down {
+    #search-bestcruise #find-tour-title-2 #icon-down {
         display: inline;
     }
     #search-bestcruise .container-search-home {
