@@ -298,23 +298,26 @@ if ($('body').width() < 992) {
     $('ul.sub-menu').prev('a').off('click');
 }
 
-$('#search-bestcruise #find-tour-title-2').on('click', function(){
-    $('#search-bestcruise .container-search-home').toggleClass('open-1');
-    if ($('#search-bestcruise .container-search-home').css('display') == "none") {
-        $('#search-bestcruise #icon-down .view-us span').css('transform', 'rotateX(0deg)');
-        $('#search-bestcruise').css('padding', '0');
-    } else {
-        $('#search-bestcruise #icon-down .view-us span').css({
-            'transform': 'rotateX(180deg)',
-            '-webkit-transform': 'rotateX(180deg)',
-            '-ms-transform': 'rotateX(180deg)',
-            '-moz-transform': 'rotateX(180deg)'
-        });
-        $('#search-bestcruise').css('padding', '0 0 10px');
-    }
-    
-});
-
+if ($('body').width() < 768) {
+    $('#search-bestcruise #find-tour-title').on('click', function(){
+        $('#search-bestcruise .container-search-home').toggleClass('open-1');
+        if ($('#search-bestcruise .container-search-home').css('display') == "none") {
+            $('#search-bestcruise #icon-down .view-us span').css('transform', 'rotateX(0deg)');
+            $('#search-bestcruise').css('padding', '0');
+        } else {
+            $('#search-bestcruise #icon-down .view-us span').css({
+                'transform': 'rotateX(180deg)',
+                '-webkit-transform': 'rotateX(180deg)',
+                '-ms-transform': 'rotateX(180deg)',
+                '-moz-transform': 'rotateX(180deg)'
+            });
+            $('#search-bestcruise').css('padding', '0 0 10px');
+        }
+        
+    });
+} else {
+    $('#search-bestcruise #find-tour-title').off('click');
+}
 if ($('body').width() < 670) {
     $('.container-destination').one('touchstart',function(){
         $('.container-destination .row').css('transform','none');
