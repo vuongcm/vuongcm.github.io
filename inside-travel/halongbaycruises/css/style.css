@@ -4622,6 +4622,7 @@ footer .currency-lang-bottom {margin-top: 65px;width: 100%;float: left;}
 /* == vinh ha lan ===*/
 .sales.home_page.intro-coutry .content-intro-coutry > h1 {
 	width: 100%;
+	max-width: 200px;
 }
 .sales.home_page.intro-coutry .content-intro-coutry>h2.style-h1, .experience-content-country #title-line h2.style-h1, .sales.home_page h2.style-h1 {
 	color: #168888;
