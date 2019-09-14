@@ -1348,13 +1348,23 @@ $(document).ready(function(){ //vuongcm fix
         setTimeout(function(){
             $('#booking-popup').css('display','block');
             $("#booking-popup form").css('display','none');
-            $('.check-rates .check-rates-form>form').css({
-                'z-index':'11',
-                'position':'fixed',
-                'top':'47%',
-                'width':`${$('.container').outerWidth() - 30}px`,
-                'min-width':'720px'
-            });
+            if ($('body').width() >= 768) {
+                $('.check-rates .check-rates-form>form').css({
+                    'z-index':'11',
+                    'position':'fixed',
+                    'top':'47%',
+                    'width':`${$('.container').outerWidth() - 30}px`,
+                    'min-width':'720px'
+                });
+            } else {
+                $('.check-rates .check-rates-form>form').css({
+                    'z-index':'11',
+                    'position':'fixed',
+                    'top':'47%',
+                    'width':`${$('.check-rates .check-rates-form>form').closest('.check-rates-form').width()}px`
+                });
+            }
+            
             $('.detail-supplier-cruise .font-caret-up').css('margin-top',$('.check-rates .check-rates-form>form').height()+'px');
         }, 2000);
         
@@ -1526,6 +1536,7 @@ if($("#phone_contact").length>0){$("#phone_contact").intlTelInput({preferredCoun
 var key=event.keyCode||event.charCode;if(key==8){if(input.value.length<3||input.value=='+1'){input.value='++';}}else if(key==46){if(input.value.length<2||input.value=='+1'){input.value='+';}}};}
 if($("#owl-demo6").length>0){$("#owl-demo6").owlCarousel({autoPlay:5000,items:4,itemsDesktop:[1199,3],itemsDesktopSmall:[979,2],itemsMobile:[479,1]});var owl6=$("#owl-demo6");$(".next6").click(function(){owl6.trigger('owl.next');});$(".prev6").click(function(){owl6.trigger('owl.prev');});}
 if($("#owl-demo8").length>0){$("#owl-demo8").owlCarousel({items:5,itemsDesktop:[1199,4],itemsDesktopSmall:[979,3]});var owl8=$("#owl-demo8");$(".next8").click(function(){owl8.trigger('owl.next');});$(".prev8").click(function(){owl8.trigger('owl.prev');});}
+if($("#owl-demo11").length>0){$("#owl-demo11").owlCarousel({items:2,itemsDesktop:[1199,2],itemsDesktopSmall:[979,2],itemsTablet:[768,1],loop:true});var owl11=$("#owl-demo11");$(".next11").click(function(){owl11.trigger('owl.next');});$(".prev11").click(function(){owl11.trigger('owl.prev');});}
 if($("#owl-demo12").length>0){$("#owl-demo12").owlCarousel({items:2,itemsDesktop:[1199,2],itemsDesktopSmall:[979,2],itemsTablet:[768,1],loop:true});var owl12=$("#owl-demo12");$(".next12").click(function(){owl12.trigger('owl.next');});$(".prev12").click(function(){owl12.trigger('owl.prev');});}
 if($("#owl-demo19").length>0){$("#owl-demo19").owlCarousel({items:3,itemsDesktop:[1199,3],itemsDesktopSmall:[979,3],itemsTablet:[768,1],loop:true});var owl19=$("#owl-demo19");$(".next19").click(function(){owl19.trigger('owl.next');});$(".prev19").click(function(){owl19.trigger('owl.prev');});}
 
@@ -1533,7 +1544,7 @@ if($("#owl-demo19").length>0){$("#owl-demo19").owlCarousel({items:3,itemsDesktop
 if ($(".scroll-cruises .owl-carousel").length > 0) {
     if ($('body').width() > 479) {
         $(".scroll-cruises .owl-carousel").owlCarousel({
-            autoPlay:5000,
+            //autoPlay:5000,
             items: 3,
             itemsDesktop: [1199, 3],
             itemsDesktopSmall: [979, 2],
