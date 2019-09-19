@@ -11,7 +11,7 @@ $(document).ready(function(){
         }
     });
     // chạy cookie language
-    let languageCookie = getCookie('lang');
+    let languageCookie = getCookie('lang').toLowerCase();
     if(languageCookie == 'vn') {
         swapLanguage('langVN');
     } else if (languageCookie == 'ko') {
