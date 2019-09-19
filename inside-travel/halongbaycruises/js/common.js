@@ -10,6 +10,84 @@ $(document).ready(function(){
             $(this).html('View less &#8630;');
         }
     });
+    // chạy cookie language
+    let languageCookie = getCookie('lang');
+    if(languageCookie == 'vn') {
+        swapLanguage('langVN');
+    } else if (languageCookie == 'ko') {
+        swapLanguage('langKO');
+    } else if (languageCookie == 'ja') {
+        swapLanguage('langJA');
+    } else if (languageCookie == 'ch') {
+        swapLanguage('langCH');
+    } else if (languageCookie == 'fr') {
+        swapLanguage('langFR');
+    } else if (languageCookie == 'sp') {
+        swapLanguage('langSP');
+    } else if (languageCookie == 'ge') {
+        swapLanguage('langGE');
+    } else if (languageCookie == 'it') {
+        swapLanguage('langIT');
+    } else if (languageCookie == 'ru') {
+        swapLanguage('langRU');
+    } else if (languageCookie == 'po') {
+        swapLanguage('langPO');
+    }
+    $('.language .sub-menu-3>li>a').on('click',function(){
+        let elementTargetId = $(this).attr('id');
+        swapLanguage(elementTargetId);
+        setCookie('lang',$('.language>a>span').html(),1);
+    });
+
+    // slick slide
+    for (let c=1; c<=10; c++) {
+        $(`.image-galery-${c}, .wrap-galery .total_photo`).on('click',function(){
+            $('.wrap-slick').css('display','block');
+
+            //let $left = $(".left-slick");
+            //$(`.wrap-slick .gallery`).attr('class',`gallery play-${c}1`);
+            //$(`.wrap-slick .gallery2`).attr('class',`gallery2 play-${c}2`);
+            let $gl = $(`.gallery`);
+            let $gl2 = $(`.gallery2`);
+            $gl.slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: true,
+                initialSlide: c-1,
+                useTransform: false,
+                prevArrow: ".arrow-left",
+                nextArrow: ".arrow-right",
+                asNavFor: '.gallery2'
+            });
+
+            $gl2.slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                asNavFor: '.gallery',
+                dots: false,
+                initialSlide: c-1,
+                arrows: false,
+                centerMode: true,
+                focusOnSelect: true
+            });
+            //$(`.gallery`).slick("slickGoTo", 6);
+
+            $(".gallery .item").on("click", function() {
+              const index = $(this).attr("data-slick-index");
+              $gl2.slick("slickGoTo", index);
+            });
+        });
+    }
+
+    $('.wrap-slick').click(function (e) {
+        if (!$(".wrap-slick .left-slick,.wrap-slick .right-slick").is(e.target) && $(".wrap-slick .left-slick,.wrap-slick .right-slick").has(e.target).length === 0) {
+            $('.wrap-slick').css('display','none');
+        }
+    });
+
+    
+
+
     //end-vuongcm
     if($("#off-toastr").length){
         
@@ -1539,7 +1617,7 @@ if($("#owl-demo8").length>0){$("#owl-demo8").owlCarousel({items:5,itemsDesktop:[
 if($("#owl-demo11").length>0){$("#owl-demo11").owlCarousel({items:2,itemsDesktop:[1199,2],itemsDesktopSmall:[979,2],itemsTablet:[768,1],loop:true});var owl11=$("#owl-demo11");$(".next11").click(function(){owl11.trigger('owl.next');});$(".prev11").click(function(){owl11.trigger('owl.prev');});}
 if($("#owl-demo12").length>0){$("#owl-demo12").owlCarousel({items:2,itemsDesktop:[1199,2],itemsDesktopSmall:[979,2],itemsTablet:[768,1],loop:true});var owl12=$("#owl-demo12");$(".next12").click(function(){owl12.trigger('owl.next');});$(".prev12").click(function(){owl12.trigger('owl.prev');});}
 if($("#owl-demo19").length>0){$("#owl-demo19").owlCarousel({items:3,itemsDesktop:[1199,3],itemsDesktopSmall:[979,3],itemsTablet:[768,1],loop:true});var owl19=$("#owl-demo19");$(".next19").click(function(){owl19.trigger('owl.next');});$(".prev19").click(function(){owl19.trigger('owl.prev');});}
-
+if($("#owl-demo1").length>0){$("#owl-demo1").owlCarousel({autoPlay:5000,items:1,itemsDesktop:[1199,1],itemsDesktopSmall:[979,1]});var owl1=$("#owl-demo1");$(".next1").click(function(){owl1.trigger('owl.next');});$(".prev1").click(function(){owl1.trigger('owl.prev');});}
 /*==============vuongcm==================*/
 if ($(".scroll-cruises .owl-carousel").length > 0) {
     if ($('body').width() > 479) {
@@ -1969,19 +2047,20 @@ function quickcontq_popup_g(){
     //check_letter=document.getElementById('g_dang_ky').checked;
     //country=document.getElementById('g_country').value;
     if(ques==""||ques=="Type your request here..."){
-        $("#g_message").html("<font style='color:red; font-size:14px;'>&nbsp;&nbsp;&nbsp;Vui lòng nhập <b>Yêu cầu</b>!</font>");
+        $('#g_question').css("border", "1px solid red");
         return;
+    }else {
+        $('#g_question').css("border", "1px solid #dceaea");
     }
     if(name==""||name=="Name"){
         $('#g_name').css("border", "1px solid red");
-        //$("#g_message").html("<font style='color:red; font-size:14px;'>&nbsp;&nbsp;&nbsp;Vui lòng nhập <b>Tên</b>!</font>");
+        //$("#g_message").html("<font style='color:red; font-size:14px;'>&nbsp;&nbsp;&nbsp;Vui lÃ²ng nháº­p <b>TÃªn</b>!</font>");
         return;
     }else {
         $('#g_name').css("border", "1px solid #dceaea");
     }
     if(phone==""||phone=="Phone"){
         $('#g_phone').css("border", "1px solid red");
-        //$("#g_message").html("<font style='color:red; font-size:14px;'>&nbsp;&nbsp;&nbsp;Vui lòng nhập <b>Số Điện Thoại</b>!</font>");
         return;
     }else {
         $('#g_phone').css("border", "1px solid #dceaea");
@@ -1994,7 +2073,52 @@ function quickcontq_popup_g(){
     check_letter = 1
     /*mail=check_email2('g_mail');
     if(mail==false){
-        $("#message").html("<font style='color:red; font-size:14px;'>&nbsp;&nbsp;&nbsp;Vui lòng nhập <b>email</b>!</font>");
         return;
     }*/
-$("#g_process").html("<div style='width: 40px;height: 40px;margin: auto; border-right: 3px solid #59c45a;border-bottom: 3px solid transparent;border-radius: 100%;-webkit-animation: spin .9s linear infinite;-moz-animation: spin .9s linear infinite;-o-animation: spin .9s linear infinite;animation: spin .9s linear infinite;'></div><div style='width:100%;float: left;text-align: center;'><p>Vui lòng đợi trong giây lát...</p></div>");$.ajax({type:"GET",url:SITE_URL+"/ajax-process.php?mod=g_popup&fullname="+name+"&phone="+phone+"&email="+email+"&ques="+ques+"&check_letter="+check_letter,success:function(xml){var arr_html=xml.split('|');if(arr_html[1]=="ok"){window.location = SITE_URL+'/success.html';/*$(".g_signin").html(arr_html[0]);*/}else{$("#message").html(arr_html[0]);}},error:function(){}});}
+$("#g_process").html("<div style='width: 40px;height: 40px;margin: auto; border-right: 3px solid #59c45a;border-bottom: 3px solid transparent;border-radius: 100%;-webkit-animation: spin .9s linear infinite;-moz-animation: spin .9s linear infinite;-o-animation: spin .9s linear infinite;animation: spin .9s linear infinite;'></div><div style='width:100%;float: left;text-align: center;'><p>Please wait a few moments...</p></div>");$.ajax({type:"GET",url:SITE_URL+"/ajax-process.php?mod=g_popup&fullname="+name+"&phone="+phone+"&email="+email+"&ques="+ques+"&check_letter="+check_letter,success:function(xml){var arr_html=xml.split('|');if(arr_html[1]=="ok"){window.location = SITE_URL+'/success.html';/*$(".g_signin").html(arr_html[0]);*/}else{$("#message").html(arr_html[0]);}},error:function(){}});}
+
+// Khai báo function cookie
+let setCookie = function(cname, cvalue, exdays) {
+    let d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
+let getCookie = function(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length,c.length);
+        }
+    }
+    return "";
+}
+//đổi chỗ
+let swapLanguage = function(id) {
+    let html_1 = $(`#${id}`).html();
+    let atributeHref_1 = $(`#${id}`).attr('href');
+    let atributeTitle_1 = $(`#${id}`).attr('title');
+    let atributeOnclick_1 = $(`#${id}`).attr('onclick');
+    let atributeId_1 = $(`#${id}`).attr('id');
+    let html_2 = $('.language>a').html();
+    let atributeHref_2 = $('.language>a').attr('href');
+    let atributeTitle_2 = $('.language>a').attr('title');
+    let atributeOnclick_2 = $('.language>a').attr('onclick');
+    let atributeId_2 = $('.language>a').attr('id');
+    $(`#${id}`).html(html_2);
+    $(`#${id}`).attr('href',atributeHref_2);
+    $(`#${id}`).attr('title',atributeTitle_2);
+    $(`#${id}`).attr('onclick',atributeOnclick_2);
+    $(`#${id}`).attr('id',atributeId_2);
+    $('.language>a').html(html_1);
+    $('.language>a').attr('href',atributeHref_1);
+    $('.language>a').attr('title',atributeTitle_1);
+    $('.language>a').attr('onclick',atributeOnclick_1);
+    $('.language>a').attr('id',atributeId_1);
+}

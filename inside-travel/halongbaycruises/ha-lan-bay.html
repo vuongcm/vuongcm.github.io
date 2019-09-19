@@ -233,85 +233,95 @@
             #offer-tour-new .title-offer a {text-align: left;}
          </style>
          <!--Banner-->
-         <section class="banner supplier-gp">
-            <!--Background-->
-            <div class="bg-scroll bg-3"></div>
-            <!--End Background-->
-            <div class="container">
-               <div class="logo-banner text-center" style="display: none;">
-                  <a href="https://www.halongbaycruises.com/" title="Halong Bay Cruises">
-                  <img src="images/logo-mobile.svg" alt="Halong Bay Cruises">
+         <section class="banner">
+            
+            <div id="owl-demo1" class="owl-carousel">
+               <div class="item"><a href="https://www.duthuyenvinhhalong.vn/combo-tour-du-lich/" title="combo du thuyền hạ long"><img src="https://www.duthuyenvinhhalong.vn/images/slide/slide-dau.jpg" alt="combo Du Thuyen Ha Long"/></a></div>
+               <div class="item"><a href="https://www.duthuyenvinhhalong.vn/tin-moi/top-5-du-thuyen-tot-nhat-vinh-ha-long-nam-2019.html" title="du thuyền hạ long tốt nhất"><img src="https://www.duthuyenvinhhalong.vn/images/slide/slide-happy4.jpg" alt="Du Thuyen Ha Long"/></a></div>
+               <div class="item"><a href="https://www.duthuyenvinhhalong.vn/du-thuyen/moi-nhat/" title="du thuyền Hạ Long mới nhất"><img src="https://www.duthuyenvinhhalong.vn/images/slide/slide-happy1.jpg" alt="Du Thuyen Ha Long"/></a></div>
+               <!--<div class="item"><a href="https://www.duthuyenvinhhalong.vn/du-thuyen/gia-tot/" title="du thuyền Hạ Long giá tốt"><img src="https://www.duthuyenvinhhalong.vn/images/slide/slide-happy2.jpg" alt="Du Thuyen Ha Long"/></a></div>-->
+               <div class="item"><a href="https://www.duthuyenvinhhalong.vn/du-thuyen/du-thuyen-president.html" title="Du thuyền President"><img src="https://www.duthuyenvinhhalong.vn/images/slide/slide-happy3.jpg" alt="Du Thuyen Ha Long"/></a></div>
+               <div class="item"><a href="https://www.duthuyenvinhhalong.vn/du-thuyen/du-thuyen-era.html" title="Du thuyền Era"><img src="https://www.duthuyenvinhhalong.vn/images/slide/slide-happy5.jpg" alt="Du Thuyen Ha Long"/></a></div>
+               <div class="item"><a href="https://www.duthuyenvinhhalong.vn" title="Du Thuyền Vịnh Hạ Long"><img src="https://www.happytravel.vn/images/slide/happy-travel-team.jpg" alt="Tour Du Lịch Giá Tốt"/></a></div>
+            </div>
+            <div class="customNavigation">
+               <a class="btn1 prev1"><i class="back fa fa-angle-left"></i></a>
+               <a class="btn1 next1"><i class="next fa fa-angle-right"></i></a>
+            </div>
+            <div class="container container-banner">
+               <div class="logo-banner text-center">
+                  <a href="https://www.duthuyenvinhhalong.vn" title="Du Thuyền Hạ Long">
+                  <img src="https://www.duthuyenvinhhalong.vn/images/logo-mobile.svg" alt="Du Thuyền Hạ Long"/>
                   </a>
                </div>
-               <!-- Banner Content -->
-               <div class="banner-cn">
-                  <!-- Tabs Cat Form -->
-                  <!-- End Tabs Cat -->
-                  <!-- Tabs Content -->
-                  <div class="tab-content" style="float: left;width: 100%;">
+               <!--<div class="div-offer">
+                  <img class="offer-slide" src="https://www.duthuyenvinhhalong.vn/images/save10-40.svg" alt="" />
+                       </div>-->
+               <div class="homepage-slide promotion">
+                  <!--data-target="#myfooter" data-toggle="modal" onclick="tripadv();return false"-->
+                  <!--<a class="trip_2015" href="javascript:"><img src="https://www.duthuyenvinhhalong.vn/images/tripad.png" /></a>
+                     <a class="trip_2015" href="javascript:"><img src="https://www.duthuyenvinhhalong.vn/images/tripad2016.png" /></a>
+                     <a class="trip_2015" href="javascript:"><img src="https://www.duthuyenvinhhalong.vn/images/tripad2017.png" /></a>
+                     <a class="trip_2015" href="javascript:"><img src="https://www.duthuyenvinhhalong.vn/images/tripad2018.png" /></a>-->
+               </div>
+               <div class="banner-cn home">
+                  <div class="tab-content" style="float:left">
                      <!-- search form -->
-                     <div class="form-cn form-hotel tab-pane active in certificate" id="form-hotel">
-                        <!--    <div class="heard-tab">
-                           <h2>Find the best Halong bay cruises</h2>
-                           <div class="float-right">
-                               <a href="javascript:;" onclick="tripadv();return false;" data-toggle="modal" data-target="#myfooter"><span id="trip_h"></span> Certificate of Excellence 2016</a>
-                               <a href="javascript:;" onclick="bestprice();return false;" data-toggle="modal" data-target="#myfooter"><span id="best_ph"></span> Best Price Guarantee Policy</a>
-                           </div>
-                           </div>
-                           -->
-                        <form name="form_check_booking" id="form_search_cruise" action="https://www.halongbaycruises.com/cruise/" method="post">
+                     <div class="form-cn form-hotel tab-pane active in certificate" id="form-hotel" style="margin-top:52px; border-radius:3px;">
+                        <!---->
+                        <form name="form_check_booking" id="form_search_cruise" action="https://www.duthuyenvinhhalong.vn/du-thuyen/" method="post">
                            <div class="form-search home-search clearfix">
-                              <input type="hidden" value="0" name="search_cruise_id">
+                              <input type="hidden" value="0" name="search_cruise_id" />
                               <div class="form-field field-destination con_sel_cruise">
-                                 <label for="destination"><span>Cruise name:</span> Orchid, Paradise...</label>
-                                 <input type="text" id="con_sel_cruise" name="cruise_sel" value="" class="field-input ui-autocomplete-input" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                                 <label for="destination"><span>Du Thuyền:</span> Paradise, Era, Stellar...</label>
+                                 <input type="text" id="con_sel_cruise" name="cruise_sel" value="" class="field-input">
                               </div>
                               <div class="form-field field-select">
                                  <div class="select" style="width:100%;">
-                                    <span>1 night</span>
+                                    <span>1 Đêm</span>
                                     <select name="package_vir">
                                        <!--<option value="">Cruise Itinerary</option>-->
-                                       <option value="2">1 night</option>
-                                       <option value="3">2 nights</option>
+                                       <option value="2">1 Đêm</option>
+                                       <option value="3">2 Đêm</option>
                                     </select>
                                  </div>
                               </div>
                               <div class="form-field field-date div_check_in">
-                                 <input type="text" id="check_in" name="check_in" value="Departure" class="field-input calendar-input hasDatepicker">
+                                 <input type="text" id="check_in" name="check_in" value="Ngày Đi" class="field-input calendar-input">
                               </div>
                               <div class="form-field field-select div_sel_cabin">
                                  <div class="select" style="width:100%;">
-                                    <input type="text" id="ip-room" name="nocabin_t" value="1 Room(s), 2 Adult(s), 0 Children">
+                                    <input type="text" id="ip-room" name="nocabin_t" value="1 Phòng, 2 Người lớn, 0 Trẻ em" />
                                  </div>
                                  <!-- check no cabin -->
                                  <div class="cd-sub cd-sub-room">
                                     <span class="fa fa-times cd-sub-close c6 z_18"></span>
                                     <div class="row">
                                        <div class="col-sm-3 form-group">
-                                          <label class="control-label">No. Rooms</label>
+                                          <label class="control-label">Số Phòng</label>
                                           <select class="form-control form-control-angle-down" name="nocabin" id="rooms" onchange="room();textroom();">
-                                             <option value="1">1</option>
-                                             <option value="2">2</option>
-                                             <option value="3">3</option>
-                                             <option value="4">4</option>
-                                             <option value="5">5</option>
+                                             <option value="1" >1</option>
+                                             <option value="2" >2</option>
+                                             <option value="3" >3</option>
+                                             <option value="4" >4</option>
+                                             <option value="5" >5</option>
                                           </select>
                                        </div>
                                     </div>
                                     <span id="listRoom">
                                        <div class="room-chose">
-                                          <p class="text-bold z_16 room-tit">Room 1</p>
+                                          <p class="text-bold z_16 room-tit">Phòng 1</p>
                                           <div class="">
                                              <div class="col-ms-3 form-group">
-                                                <label class="control-label-sm">Type</label>
-                                                <select class="form-control form-control-angle-down type-cruise" name="typecab1" id="typecab1">
-                                                   <option value="0" selected="selected">Double</option>
-                                                   <option value="1">Twin</option>
-                                                   <option value="2">Single</option>
+                                                <label class="control-label-sm">Loại</label>
+                                                <select class="form-control form-control-angle-down type-cruise" name="typecab1" class="typecab" id="typecab1">
+                                                   <option value="0" selected="selected">giường đôi</option>
+                                                   <option value="1">2 giường đơn</option>
+                                                   <option value="2">giường đơn</option>
                                                 </select>
                                              </div>
                                              <div class="col-ms-3 form-group">
-                                                <label class="control-label-sm">Adult (&gt; 10)</label>
+                                                <label class="control-label-sm">Người lớn (> 10)</label>
                                                 <select class="form-control form-control-angle-down" onchange="textroom();" name="adult1" rel="adult" id="adult1">
                                                    <option value="0">0</option>
                                                    <option value="1">1</option>
@@ -321,7 +331,7 @@
                                                 </select>
                                              </div>
                                              <div class="col-ms-3 form-group">
-                                                <label class="control-label-sm">Child (4 - 10)</label>
+                                                <label class="control-label-sm">Trẻ em (4 - 10)</label>
                                                 <select class="form-control form-control-angle-down" onchange="textroom();" name="child1" rel="child" id="child1">
                                                    <option value="0">0</option>
                                                    <option value="1">1</option>
@@ -329,8 +339,8 @@
                                                 </select>
                                              </div>
                                              <div class="col-ms-3 form-group">
-                                                <label class="control-label-sm">Infant (0 - 3)</label>
-                                                <select class="form-control form-control-angle-down" name="infant1" rel="infant" id="infant1">
+                                                <label class="control-label-sm">Em bé (0 - 3)</label>
+                                                <select class="form-control form-control-angle-down" onchange="textroom();" name="infant1" rel="infant" id="infant1">
                                                    <option value="0">0</option>
                                                    <option value="1">1</option>
                                                    <option value="2">2</option>
@@ -338,10 +348,10 @@
                                              </div>
                                           </div>
                                        </div>
-                                       <input type="hidden" id="count" value="1">
+                                       <input type="hidden" id="count" value="1"/>
                                     </span>
                                  </div>
-                                 <input type="hidden" id="duration_detail" value="1">
+                                 <input type="hidden" id="duration_detail" value="1"/>
                                  <!-- end no cabin -->        
                               </div>
                               <!--<div class="form-field field-select div_sel_cabin">
@@ -354,28 +364,26 @@
                                  </div>-->
                               <div class="form-field field-select div_sel_guest" style="display: none;">
                                  <div class="select" style="width:100%;">
-                                    <span>No.Guest</span>
+                                    <span>Số người</span>
                                     <select name="noguest" class="sel_guest">
-                                       <option value="0">No.Guest</option>
+                                       <option value="0">Số người</option>
                                     </select>
                                  </div>
                               </div>
                               <div class="form-submit">
-                                 <input type="hidden" id="sear_cruise_home" name="sear_cruise_home" value="1">
-                                 <button type="button" id="btn_search" class="awe-btn awe-btn-2 awe-btn-lager arrow-white" onclick="cruise_search1();" style="display: none;">Check Rates</button>
-                                 <button type="button" id="btn_search1" class="awe-btn awe-btn-2 awe-btn-lager arrow-white" onclick="cruise_search2();" style="display: none;">Check Rates</button>
-                                 <button type="button" id="btn_search2" class="awe-btn awe-btn-2 awe-btn-lager arrow-white" onclick="cruise_search1();">Check Rates</button>
+                                 <input type="hidden" id="sear_cruise_home" name="sear_cruise_home" value="1"/>
+                                 <button type="button" id="btn_search" class="awe-btn awe-btn-2 awe-btn-lager arrow-right arrow-white" onclick="cruise_search1();" style="display: none;">Tìm kiếm</button>
+                                 <button type="button" id="btn_search1" class="awe-btn awe-btn-2 awe-btn-lager arrow-right arrow-white" onclick="cruise_search2();" style="display: none;">Tìm kiếm</button>
+                                 <button type="button" id="btn_search2" class="awe-btn awe-btn-2 awe-btn-lager arrow-right arrow-white" onclick="cruise_search1();" >Tìm kiếm</button>
                               </div>
                            </div>
                         </form>
                      </div>
-                     <!-- end search form--><!-- Search Cruise -->
+                     <!-- end search form-->            
                   </div>
-                  <!-- End Tabs Content -->
                </div>
-               <!-- End Banner Content -->
             </div>
-            <!-- New -->
+         
          </section>
          <section class="sales home_page intro-coutry">
             <div class="container">
