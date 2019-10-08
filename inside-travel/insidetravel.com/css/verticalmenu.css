@@ -1,0 +1,482 @@
+ @media (min-width: 1200px) and (max-width: 1360px){
+
+ .container{max-width:970px;}
+ }
+  @media (min-width: 1360px) and (max-width: 1500px){
+
+ .container{max-width:1140px;}
+ }
+
+ .nav-side-menu {
+     font-size: 14px;
+     background-color: rgba(6, 138, 170, 1);
+     position: fixed;
+     top: 0px;
+     z-index: 999;
+     width: 200px;
+     height: 100%;
+     color: #fff;
+     font-weight: 600;
+}
+ .nav-side-menu .brand {
+     line-height: 71px;
+     display: block;
+     padding: 10px;
+     font-size: 14px 
+}
+ .nav-side-menu .toggle-btn {
+     display: none;
+}
+ .nav-side-menu ul, .nav-side-menu li {
+     list-style: none;
+     margin: 0px;
+     line-height: 45px;
+     cursor: pointer;
+}
+ .nav-side-menu ul .active, .nav-side-menu li .active {
+     background-color: #097794;
+}
+ .nav-side-menu ul .sub-menu li.active, .nav-side-menu li .sub-menu li.active, .nav-side-menu ul .sub-menu li.active a, .nav-side-menu li .sub-menu li.active a {
+     color: #222;
+}
+ .nav-side-menu ul .sub-menu li, .nav-side-menu li .sub-menu li {
+     background-color: #31bee4;
+     border: none;
+     line-height: 34px;
+     border-bottom: 1px solid #087693;
+     margin-left: 0px;
+     min-width: 150px;
+}
+ .nav-side-menu ul .sub-menu li:hover, .nav-side-menu li .sub-menu li:hover {
+     background-color: #097794;
+}
+ .nav-side-menu li a {
+     text-decoration: none;
+     color: #fff;
+	 letter-spacing:1px;
+     line-height: 20px!important;
+     display: inline-block;
+     padding: 0 17px;
+	 font-weight: bold;
+     font-size: 11px;
+     text-transform: uppercase;
+}
+ .nav-side-menu li a i {
+     padding-left: 10px;
+     width: 20px;
+     padding-right: 20px;
+}
+ .nav-side-menu li:hover {
+     background-color: #097794;
+     -webkit-transition: all 0.3s ease;
+     -moz-transition: all 0.3s ease;
+     -o-transition: all 0.3s ease;
+     -ms-transition: all 0.3s ease;
+     transition: all 0.3s ease;
+}
+
+ .round-icon{
+    background: #3b85a2;
+     border-radius: 50%;
+     color: #fff;
+     width: 23px;
+     height: 23px;
+     line-height: 25px;
+     text-align: center;
+     background-color: #097794;
+     -webkit-transition: all 0.3s ease;
+     -moz-transition: all 0.3s ease;
+     -o-transition: all 0.3s ease;
+     -ms-transition: all 0.3s ease;
+     transition: all 0.3s ease;
+}
+ .round-icon:hover{
+    background: #2594BF!important;
+}
+ .vertical-menu-info {
+     position: absolute;
+     bottom: 0px;
+     width: 100%;
+}
+ .vertical-menu-info li a {
+     line-height: 20px;
+}
+ .vertical-social-link {
+     text-align: center;
+     height: 46px;
+     display: inline-block!important;
+     background: rgba(245, 247, 247, 0.84);
+     padding: 0px!important;
+     border-left: 1px solid #009cc6;
+     width: 33.9%;
+     line-height: 45px;
+     font-size: 20px;
+     color: #3b86a2!important;
+     margin: 0 -2px;
+}
+ .vertical-social-link:hover {
+     background: rgba(245, 247, 247, 1);
+}
+ .vertical-menu-info a {
+     color: #fff;
+     display: block;
+     /* padding: 10px; */
+}
+ @media (max-width: 600px) {
+     .horizontal-nav.navbar-nav {
+         width: 100%;
+    }
+     .menu-hidden{
+        display:none;
+    }
+}
+ @media (min-width: 600px) {
+     .menu-not-hidden{
+        display:none;
+    }
+}
+ @media (max-width: 1300px) {
+	 ul.menu-content{    
+		 max-height: 300px;
+		overflow-y: scroll;
+	}
+
+	.navbar-nav .open .dropdown-menu {
+         float: left!important;
+    }
+     #new-sticky-header {
+         height: 40px!important;
+         top: 49px;
+    }
+     #new-sticky-header .dropdown-menu {
+         top: 100%;
+         right: 0px;
+    }
+     #new-sticky-header li {
+         -webkit-transition: all 0.3s ease;
+         -moz-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+         -ms-transition: all 0.3s ease;
+         transition: all 0.3s ease;
+         display: inline!important;
+    }
+     #new-sticky-header .navbar-nav .open .dropdown-menu {
+         right: 0px;
+         background: white;
+         width: 100%!important;
+         min-width: 100%;
+         display: inline-table;
+         margin-top: -3px;
+         left: 0px;
+         border: 0px;
+    }
+     .dropdown-menu .search-box{
+         padding: 10px;
+    }
+     .dropdown-menu .search-box button{
+        margin-top:5px;
+    }
+     .horizontal-nav.navbar-nav {
+         margin: 4.5px -15px;
+         top: -5px;
+         left:15px;
+         position: absolute;
+		 text-align:center;
+    }
+     .custom-dropdown .btn {
+         line-height: 20px!important;
+    }
+     .hidden-1200{
+        display:none;
+    }
+     .vertical-menu-info {
+         display: none;
+    }
+     .nav-side-menu {
+         width: 100%;
+         height: auto;
+    }
+     .nav-side-menu .toggle-btn {
+         display: block;
+         cursor: pointer;
+         position: absolute;
+         right: 10px;
+         top: 10px;
+         z-index: 10 !important;
+         padding: 3px;
+         color: #fff;
+         width: 40px;
+         text-align: center;
+    }
+     .nav-side-menu .toggle-btn:hover {
+         background: #077b96;
+    }
+     .brand img {
+         max-width: 101px; /*vuongcm fix*/
+    }
+     .brand {
+         line-height: 0!important;
+         padding: 10px!important;
+    }
+}
+ @media (min-width: 1301px) {
+	.nav-side-menu .caret {
+		border-bottom: 4px solid transparent;
+		border-top: 4px solid transparent;
+		border-left: 4px solid;
+		display: inline-block;
+		height: 0;
+	}
+	ul.menu-content li:hover > ul,
+	ul.menu-content li ul:hover {
+		visibility: visible;
+		opacity: 1;
+		display: block;
+	}
+	ul.sub-menu{
+	 float: left;
+	 position: absolute;
+	 display: inline-block!important;
+	 left: 200px;
+	 padding: 0px;
+	}
+     .horizontal-nav li a{
+        line-height: 50px!important;
+    }
+     #new-sticky-header .navbar-form{
+         margin-left:200px;
+    }
+     .search-drop {
+         display: none;
+    }
+     #menu-content.collapse {
+         display: block!important;
+         visibility: visible!important;
+    }
+     #wrap {
+         width: calc(100% - 200px);
+         float: right;
+    }
+}
+ @media (max-width: 300px) {
+     .nav-side-menu .brand img{
+        max-width:120px;
+    }
+     .nav-side-menu .toggle-btn {
+         font-size: 12px;
+    }
+     #new-sticky-header {
+         top: 40px;
+    }
+     .horizontal-nav li a {
+         padding: 0px 5px!important;
+    }
+     .navbar-nav .open .dropdown-menu>li>a {
+         line-height: 25px;
+    }
+}
+ .nav-side-menu li.custom-dropdown {
+     width: 0;
+}
+ .nav-side-menu li.custom-dropdown:hover {
+     background: none;
+}
+ .custom-dropdown .btn {
+     text-transform: none!important;
+     line-height: 36px;
+     -moz-transition: all 0.3s ease;
+     -o-transition: all 0.3s ease;
+     -ms-transition: all 0.3s ease;
+     transition: all 0.3s ease;
+     background: transparent;
+}
+ .custom-dropdown .dropdown-menu>li>a {
+     text-transform: none!important;
+}
+ .custom-dropdown .btn:hover, .custom-dropdown .btn:focus {
+     background: white;
+}
+ .contact-section a {
+     float: left;
+     line-height: 40px;
+     text-transform: uppercase;
+     font-weight: 600;
+     margin: 0;
+     color: #3b86a2;
+}
+ .contact-section strong {
+     float: left;
+     line-height: 40px;
+     text-transform: uppercase;
+     font-weight: 700;
+     padding-right: 5px;
+     margin: 0;
+     color: #3b86a2;
+}
+ .search-box input {
+     height: 28px;
+     outline: 0;
+     border: 1px solid #009cc6;
+     text-indent: 10px;
+}
+ .search-box button {
+     background: #009cc6;
+     border: 0px;
+     outline: 0;
+     color: #fff;
+     margin-left: -4px;
+     height: 28px;
+}
+ .search-box button:hover {
+     background: #3b85a2;
+}
+ #new-sticky-header {
+     width: 100%;
+     right: 0px;
+     height: 50px;
+     position: fixed;
+     z-index: 99;
+     background-color: rgba(16, 16, 16, 0.7)!important;
+}
+ .horizontal-nav li a {
+     color: #3b86a2;
+     font-weight: 600;
+     line-height: 40px;
+     padding: 0px 20px;
+}
+ .horizontal-nav li a:hover{color:#03a5cc;}
+ .horizontal-nav .btn:active, .horizontal-nav .btn.active {
+     -webkit-box-shadow:none!important;
+     box-shadow: none!important;
+}
+ .horizontal-nav i {
+     margin-right: 5px;
+}
+/* fix */
+.banner-cn .tab-content{float:none!important;}
+
+.nav-side-menu li a{width:100%;} 
+
+@media (min-width: 1301px){
+      ul.sub-menu {
+      margin-top:-45px!important;
+      }
+}
+/* phối màu */
+.nav-side-menu {
+    background-color: #166f68;
+    background: linear-gradient(315deg,#71b781 0%,#166f68 40%);
+}
+.vertical-menu-info .vertical-social-link {
+    border-color: #094843;
+    color: #166f68 !important;
+}
+.nav-side-menu .menu-list ul .sub-menu li, .nav-side-menu .menu-list li .sub-menu li {
+    background-color: #166f68;
+    border-color: #094843;
+}
+.search-box button, .round-icon {
+    background-color: #90a42a;
+}
+.horizontal-nav li a {
+    color: #90a42a;
+}
+.search-box input {
+    border-color: #90a42a;
+}
+.round-icon:hover, .search-box button:hover, .nav-side-menu .menu-list  li:hover, .nav-side-menu .menu-list ul .sub-menu li:hover, .nav-side-menu .menu-list li .sub-menu li:hover {
+    background-color: #439375 !important;
+}
+.horizontal-nav li a:hover {
+    color: #439375;
+}
+.form-search .form-field .field-input {
+    color: #166f68;
+    border-color: #166f68;
+}
+.awe-btn.awe-btn-2, #help-contact a.bt-help {
+    background-color: #166f68;
+    border-color: #094843;
+}
+.awe-btn.awe-btn-2 {
+    border-color: #094843;
+}
+/*======================================*/
+.head-detail h1,.cruise-list .list_search .intro-group-tour > h1, .hotel-list .list_search .intro-group-tour > h1,.home-other-cruise h2,.sales.home_page h2.hlbcruise,.title-detail.tour-detail-other, .hotel-list-item .hotel-text .hotel-name a,.sales.home_page h2, .content-trip-tour .header-trip-tour .icon-trip-tour, .icon-tour, .sales.home_page .tour-contry .title-contry > h2,.title-wrap .travel-title h2,.experience-content-country #title-line h2 {
+    color: #166f68;
+}
+.why-book-us .container .col-md-2.why-book:hover .mix-grid .mix-slide .thumbnail a,.why-book-us .container .col-md-2.why-book:hover a, .why-book-us .container .col-md-2.why-book.active a,.why-book-us .container .col-md-2.why-book:hover a i, .why-book-us .container .col-md-2.why-book.active a i {
+    color: #90a42a;
+}
+.head-detail .detal-tours-head .detail-t > .row > .col-sm-12 > h1:after,.cruise-list .list_search .intro-group-tour > h1:after, .hotel-list .list_search .intro-group-tour > h1:after,.content-trip-tour .header-trip-tour h2:after,.sales.home_page.intro-coutry .content-intro-coutry > h2:after,.sales.home_page .tour-contry .title-contry > h2:after,.experience-content-country #title-line h2:after {
+    border-bottom: 3px solid #90a42a;
+}
+.cruise-list .list_search .intro-group-tour > h1:after, .hotel-list .list_search .intro-group-tour > h1:after,.home-other-cruise h2:after,.sales.home_page h2.hlbcruise:after,.sales.home_page h2:after {
+    background-color: #90a42a;
+}
+.experience_suplier .exp-content > a,.cruise-item .cruise-text address.hotel-address,#show_r a, #hide_r a,.footer-trip-tour .intro-group-tour a {
+    color: #90a42a;
+}
+.experience_suplier .exp-content > a:hover,#show_r a:hover, #hide_r a:hover,.footer-trip-tour .intro-group-tour a:hover {
+    color: #EA6D2F;
+}
+.view-tour a {
+    color: #90a42a;
+    border-color: #90a42a;
+}
+.awe-btn.awe-btn-2:hover,.view-tour a:hover, #help-contact a.bt-help:hover {
+    background-color: #90a42a;
+}
+.travel-link li a:hover {
+    border: 1px solid #90a42a;
+    color: #90a42a;
+}
+.tours.awe-btn.awe-btn-2.arrow-white:hover {
+    background-color: transparent;
+}
+.tours.awe-btn.awe-btn-2 i {
+    color: #166f68;
+    border-color: #166f68;
+}
+.link-content ul li a.active, .link-content ul li a:hover,.tours.awe-btn.awe-btn-2.arrow-white:hover i, .tours.awe-btn.awe-btn-2.arrow-white:hover span {
+    color: #90a42a;
+    border-color: #90a42a;
+}
+.option-hotel .open-suplier:hover,.list-tour .title-list-tour h4 a:hover {
+    color: #90a42a;
+}
+.view-tour.detail-tour-other .bt-more-tourhome {
+    color: #90a42a;
+}
+.title-detail.tour-detail-other:before {
+    border-color: #90a42a;
+}
+.detail-tour .element-cn .tabs-head li.active a {
+    border-bottom: 3px solid #90a42a;
+    color: #166f68;
+}
+.detail-tour .element-cn .tabs-head.nav-tabs-one li.active a i {
+    color: #166f68;
+}
+.detail-tour .element-cn .tabs-head li:hover a {
+    border-bottom: 3px solid #90a42a;
+    color: #166f68;
+}
+.detail-tour .element-cn .tabs-head li:hover a i,.detail-tour .element-cn .tabs-head.nav-tabs-one li a:hover i {
+    color: #166f68;
+}
+.experience-content-country #title-line .icon-experence {
+    color: #166f68;
+}
+.tour-list-cn .cruise-item .cruise-text .cruise-name a {
+    color: #166f68;
+}
+.top-10-tour .ship-port > p > i.fa-heart-o,.cruise-text .header-cruise .day-cruise,.cruise-text .header-cruise .day-cruise > span {
+    color: #90a42a;
+}
+.nav-side-menu li {
+    text-align: center;
+}
+.nav-side-menu li>ul>li>a {
+    text-align: left;
+}
