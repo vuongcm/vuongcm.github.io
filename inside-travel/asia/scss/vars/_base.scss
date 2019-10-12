@@ -1,0 +1,196 @@
+@font-face{ 
+	font-family: 'Theano Didot';
+	src: url('../fonts/theano-didot/TheanoDidot.eot');
+	src: url('../fonts/theano-didot/TheanoDidot.eot?iefix') format('eot'),
+	     url('../fonts/theano-didot/TheanoDidot.woff') format('woff'),
+	     url('../fonts/theano-didot/TheanoDidot.ttf') format('truetype'),
+	     url('../fonts/theano-didot/TheanoDidot.svg#webfont') format('svg');
+}
+@import "var";
+body {
+    width: 100%;
+	font-family: 'Montserrat', Arial, sans-serif;
+	font-size: 14px;
+	color: #555;
+    --bodyWidth: 1583px;
+}
+ol,ul,li {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+button,a {
+	cursor: pointer;
+	text-decoration: none;
+}
+a {
+    letter-spacing: 1px;
+    display: inline-block;
+    line-height: 1;
+    color: $main-color;
+}
+button:hover,a:hover {
+	text-decoration: none;
+	opacity: .8;
+}
+section {
+	margin: 15px 0 25px;
+}
+h1,h2,h3,h4,h5,h6 {
+	margin: 15px 0 10px;
+}
+img {
+	width: 100%;
+}
+select {
+    display: inline-block;
+    width: 100%;
+    height: 25px;
+    margin: 0;
+    padding: 0 0 0 .5rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../images/icon/select-arrow-thin.svg) no-repeat top 9px right 3px,url(../images/icon/select-arrow-thin.svg) no-repeat top 9px right 3px;
+    background-size: 12px;
+    background-color: transparent;
+    outline: none;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border: none;
+    position: relative;
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+select:focus {
+	outline-style: dotted;
+	outline-width: 1px;
+}
+.select-st1 {
+    padding-right: 15px;
+}
+.btn-st1 {
+	background-color: $btn-bg-color-st1;
+	color: $btn-text-color-st1;
+    display: inline-block;
+    letter-spacing: 1px;
+    @include smooth(.2s);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 25px;
+    line-height: 1;
+}
+.btn-st1:hover {
+	background-color: #dbd9d9;
+}
+.btn-st2{
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 1px;
+    border: 1px solid #000;
+    color: #000;
+    @include smooth(.2s);
+}
+.btn-st2:hover{
+    color: $higlight-color;
+    border-color: $higlight-color;
+}
+.link-st1 {
+	color: $higlight-color;
+	@include smooth(.2s);
+}
+.link-st1:hover{
+	color: $color-hover;
+}
+.title-h1 {
+	font-size: 25px;
+	font-family: 'Theano Didot','Times New Roman', serif;
+	font-weight: 600;
+	letter-spacing: 2px;
+	line-height: 1;
+	text-align: center;
+}
+.paragraph {
+	margin: 10px 0;
+	line-height: 1.5;
+	text-align: center;
+}
+.mg-left{
+    margin-left: 40px;
+}
+.mg-right{
+    margin-right: 40px;
+}
+.bg-map-menu{
+    display: block;
+    width: 140px;
+    height: 150px;
+    @include smooth(0.25s);
+    background-image: url(../images/sprite.png);
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-size: 921px;
+}
+.bg-map-vi{
+    background-position: -21px -2254px;
+}
+.bg-map-ca{
+    background-position: -140px -2254px;
+}
+.bg-map-la{
+    background-position: -267px -2254px;
+}
+.bg-map-my{
+    background-position: -388px -2254px;
+}
+.bg-map-th{
+    background-position: -504px -2254px;
+}
+.bg-map-menu:hover{
+    background-position-y: -2399px;
+}
+.open-block{
+    display: block!important;
+}
+.open-flex{
+    display: flex!important;
+}
+.open-opacity:after,.open-opacity:before{
+    opacity: 1!important;
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;        
+    }
+}
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;        
+    }
+}
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;        
+    }
+}

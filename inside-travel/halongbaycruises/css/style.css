@@ -2920,7 +2920,7 @@ td .fa-check, i.fa-gift, li i.fa-check {color: #59c45b;font-size: 14px;}
 .faq-page .hotel-list {margin-top: 20px;}
 .faq-page .panel-group .panel {background: transparent;}
 .ficon-cycling:before {content: "\f129";}
-.supplier-gp .banner-cn > .tab-content {margin-top: 70px;}
+.supplier-gp .banner-cn > .tab-content {margin-top: 10px;}/*fixed*/
 .banner.banner-family {margin-top: 82px!important;}
 .page-family.sales {width: 100%;float: left;}
 .page-family.sales .title-wrap {background-color: transparent;padding: 0;}
@@ -5407,4 +5407,7 @@ footer .currency-lang-bottom {margin-top: 65px;width: 100%;float: left;}
 	.synch-carousels .right-slick {
 		width: 90%;
 	}
+}
+.test {
+	justify-content: space-between;
 }
