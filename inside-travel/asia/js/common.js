@@ -20,7 +20,9 @@ $(document).ready(function() {
         $(this).css('display','none');
         $('#menu-lv1-2 a').removeClass('open-opacity');
 	});
-
+	$('.tooltip>span').each(function(){
+		$(this).css('left',`-${$(this).width()/2 -5}px`);
+	});
 });
 window.onload = function() {
 	$('.map-home').height($('.map-home img').height());

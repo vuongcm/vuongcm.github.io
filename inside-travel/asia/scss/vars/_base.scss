@@ -273,6 +273,58 @@ select:focus {
     width: 50%;
     margin: 0 auto;
 }
+.tooltip{
+    position: relative;
+    span{
+        visibility: hidden;
+        position: absolute;
+        display: block;
+        background-color: $background-color;
+        color: $main-color;
+        text-align: center;
+        padding: 10px 5px;
+        border-radius: 6px;
+        z-index: 1;
+        opacity: 0;
+        @include smooth(.3s);
+        bottom: 135%;
+        box-shadow: 0px 1px 3px 2px rgba(0,0,0,.13);
+        b{
+            display: inline-block;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 18px;
+            margin-bottom: 10px;
+            margin-top: 5px;
+            white-space: nowrap;
+        }
+        font{
+            display: inline-block;
+            font-size: 13px;
+            width: 100%;
+            white-space: nowrap;
+            font-family: 'Theano Didot','Times New Roman', serif;
+            margin-bottom: 5px;
+        }
+        i{
+            display: block;
+            height: 10px;
+            width: 20px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -10px;
+            background-color: $background-color;
+            @include retang();
+        }
+
+    }
+    &:hover span{
+        visibility:visible;
+        opacity: 1;
+    }
+}
 .map-coo{
     width: 25px;
     height: 26px;
@@ -280,6 +332,11 @@ select:focus {
     background-repeat-x: no-repeat;
     background-repeat-y: no-repeat;
     background-size: 99%;
+}
+.map-coo:hover{
+    width: 27px;
+    height: 28px;
+    opacity: 1;
 }
 .container{
     width: 85%;
