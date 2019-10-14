@@ -1,0 +1,107 @@
+#booking-widget-homepage{
+	position: absolute;
+	bottom: 20%;
+	width: 100%;
+	form{
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		width: 60%;
+		margin: 0 auto;
+		background-color: $background-color;
+		&>div{
+			cursor: pointer;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 10px;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			border-right: 1px solid #cecece;
+			color: #a09c9c;
+			input{
+				width: 90%;
+				border: none;
+				color: $light-color;
+				cursor: pointer;
+			}
+			select{
+				color: $light-color;
+				width: 100%;
+			}
+		}
+		.booking-step-where{
+			width: 28%;
+		}
+		.booking-step-when{
+			width: 15%;
+		}
+		.booking-step-room{
+			width: 16%;
+		}
+		.booking-step-promo{
+			width: 16%;
+			border-right: none;
+		}
+		.booking-step-submit{
+			width: 25%;
+			border-right: none;
+			padding: 0;
+			margin: 0;
+			button{
+				width: 100%;
+				height: 100%;
+				color: #fff;
+				background-color: #333;
+				text-transform: uppercase;
+				font-size: 16px;
+			}
+		}
+	}
+}
+.best-support{
+	article{
+		h3{
+			font-size: 18px;
+			font-weight: 700;
+		}
+		p{
+			color: $light-color;
+		}
+	}
+}
+.wrap-map{
+	padding: 15px;
+	.map-home{
+		width: 100%;
+		position: relative;
+		box-shadow: inset 0 0 100px 50px #fff;
+		&>img{
+			z-index: -1;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+		}
+		&>div{
+			position: absolute;
+			z-index: 2;
+			background-color: transparent;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			.map-coo{
+				background-image: url('../images/icon/poin_optimized.png');
+			}
+			#map-coo-1{
+				top: 39.4%;
+				left: 58.5%;
+			}
+			#map-coo-2{
+				top: 67.4%;
+				left: 63.5%;
+			}
+		}
+	}
+}
