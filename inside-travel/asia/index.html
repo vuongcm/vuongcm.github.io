@@ -4,8 +4,9 @@
 	<meta charset="utf-8"/>
 	<title>Asia</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
 	<link rel="stylesheet" type="text/css" href="css/slick.css">
 	<link rel="stylesheet" type="text/css" href="css/dateselector.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -37,7 +38,7 @@
 					</select>
 				</li>
 				<li class="login-top">
-					<a href="#"><i class="far fa-user"></i>Account</a>
+					<a href="#"><i class="icon-font user-regular"></i>Account</a>
 				</li>
 				<li class="book-top"><button class="btn-st1">enquire</button></li>
 			</ul>
@@ -269,15 +270,15 @@
 			</div>
 			<div class="booking-step-when">
 				<input type="text" placeholder="When">
-				<i class="far fa-calendar"></i>
+				<i class="icon-font calendar-regular"></i>
 			</div>
 			<div class="booking-step-room">
 				<input type="text" value="2 Guests, 1 room">
-				<i class="fas fa-angle-down"></i>
+				<i class="icon-font select-arrow-thin"></i>
 			</div>
 			<div class="booking-step-promo">
 				<input type="text" placeholder="Promo/Corp">
-				<i class="fas fa-plus"></i>
+				<i class="icon-font plus"></i>
 			</div>
 			<div class="booking-step-submit">
 				<button type="submit">create my trip</button>
@@ -317,7 +318,7 @@
 		</div>
 	</div>
 </section>
-<section>
+<section class="mg-top">
 	<article class="wrap-mini-intro">
 		<h2 class="title-h2-line">Discover Asia with Insider</h2>
 		<p class="paragraph">Discover the authentic tapestry of each exceptional Belmond destination in Asia. A diverse world of majestic monuments, vibrant flavours and intriguing cultures. Immerse yourself in Lao culture by giving alms to saffron-robbed monks at dawn. Feel the hum of chanting envelop you as 500 oil lamps are lit at Shwedagon Temple, Myanmar. Our five hotels, enchanting train and pioneering river cruise are filled with exhilarating adventures waiting to be had.</p>
@@ -325,8 +326,111 @@
 	<div class="wrap-map mg-left mg-right">
 		<div class="map-home">
 			<img src="images/map-home.jpg" alt="map-sea">
-			<div>
-				<a href="javascript:" class="map-coo tooltip" id="map-coo-1">
+			<div class="synch-carousels" id="slick-slider-map">
+				<div class="gallery">
+					<div class="item">
+						<img src="images/thailand-slider.jpg" alt="Thailand" title="Thailand">
+						<article>
+							<h3>thailand</h3>
+							<h4>Eastern & Oriental Express</h4>
+							<p class="paragraph">Set off from Bangkok and cross the emerald jungles of Southeast Asia in style on one of the world’s most luxurious trains.</p>
+						</article>
+						<a href="#" class="link-st2">Discover more</a>
+					</div>
+					<div class="item">
+						<img src="images/singapore-slider.jpg" alt="Singapore" title="Singapore">
+						<article>
+							<h3>Singapore</h3>
+							<h4>Eastern & Oriental Express</h4>
+							<p class="paragraph">Depart from Singapore and settle into your luxurious cabin as the train begins a breathtaking, rolling journey through the southern Malaysian countryside.</p>
+						</article>
+						<a href="#" class="link-st2">Discover more</a>
+					</div>
+					<div class="item">
+						<img src="images/Siem-Reap-slider.jpg" alt="Siem Reap" title="Siem Reap">
+						<article>
+							<h3>Siem Reap</h3>
+							<h4>Belmond La Résidence d'Angkor</h4>
+							<p class="paragraph">An oasis of calm, discover a gateway to Cambodia’s old and new worlds: the temples of Angkor Wat and the thriving town of Siem Reap.</p>
+						</article>
+						<a href="#" class="link-st2">Discover more</a>
+					</div>
+					<div class="item">
+						<img src="images/bali-slider.jpg" alt="Bali" title="Bali">
+						<article>
+							<h3>Bali</h3>
+							<h4>Belmond Jimbaran Puri</h4>
+							<p class="paragraph">Experience true serenity on the golden sands of Jimbaran Bay, hemmed by jungle and lapped by the waves of the Indian Ocean.</p>
+						</article>
+						<a href="#" class="link-st2">Discover more</a>
+					</div>
+					<div class="item">
+						<img src="images/Luang-Prabang-slider.jpg" alt="Luang Prabang" title="Luang Prabang">
+						<article>
+							<h3>Luang Prabang</h3>
+							<h4>Belmond La Résidence Phou Vao</h4>
+							<p class="paragraph">Once the country’s royal capital, Luang Prabang now stands as a UNESCO World Heritage site. Ancient temples and nostalgic architecture whisk you into Laos’ past.</p>
+						</article>
+						<a href="#" class="link-st2">Discover more</a>
+					</div>
+					<div class="item">
+						<img src="images/Luang-Prabang-slider.jpg" alt="Luang Prabang" title="Luang Prabang">
+						<article>
+							<h3>Koh Samui</h3>
+							<h4>Belmond Napasai</h4>
+							<p class="paragraph">Located in the sparkling waters of the Gulf of Thailand, Koh Samui channels the spiritual sense of the mainland mixed with the tropical charm of an island paradise.</p>
+						</article>
+						<a href="#" class="link-st2">Discover more</a>
+					</div>
+					<div class="item">
+						<img src="images/Yangon-slider.jpg" alt="Yangon" title="Yangon">
+						<article>
+							<h3>Yangon</h3>
+							<h4>Belmond Governor's Residence</h4>
+							<p class="paragraph">Make your base in the leafy embassy quarter of Yangon, Myanmar’s largest city —a region that’s simultaneously steeped in history and humming with promise.</p>
+						</article>
+						<a href="#" class="link-st2">Discover more</a>
+					</div>
+					<div class="item">
+						<img src="images/Bagan-slider.jpg" alt="Bagan" title="Bagan">
+						<article>
+							<h3>Bagan</h3>
+							<h4>Belmond Road to Mandalay</h4>
+							<p class="paragraph">Bagan is the ancient capital of the Kingdom of Pagan, and home to over two thousand ancient pagodas. The countryside surrounding the city is just as stunning,</p>
+						</article>
+						<a href="#" class="link-st2">Discover more</a>
+					</div>
+					<div class="item">
+						<img src="images/Mandalay-slider.jpg" alt="Mandalay" title="Mandalay">
+						<article>
+							<h3>Mandalay</h3>
+							<h4>Belmond Road to Mandalay</h4>
+							<p class="paragraph">Steeped in mystique and immortalised in Rudyard Kipling’s famous poem, Mandalay is a city that more than lives up to its romantic reputation as Myanmar’s last royal city.</p>
+						</article>
+						<a href="#" class="link-st2">Discover more</a>
+					</div>
+					<div class="item">
+						<img src="images/vietnam-slider.jpg" alt="Vietnam" title="Vietnam">
+						<article>
+							<h3>Vietnam</h3>
+							<h4>The timeless Charm</h4>
+							<p class="paragraph">Set off from Bangkok and cross the emerald jungles of Southeast Asia in style on one of the world’s most luxurious trains.</p>
+						</article>
+						<a href="#" class="link-st2">Discover more</a>
+					</div>
+				</div>
+				<div class="nav-arrows">
+					<button class="arrow-left">
+						<i class="icon-font select-arrow-thin"></i>
+					</button>
+					<span><strong>1</strong> of 10 Destinations</span>
+					<button class="arrow-right">
+						<i class="icon-font select-arrow-thin"></i>
+					</button>
+				</div>
+			</div>
+			<div class="wrap-coo">
+				<a href="javascript:" class="map-coo tooltip map-coo-active" id="map-coo-1">
 					<span><b>thailand</b><font>Eastern & Oriental Express</font><i></i></span>
 				</a>
 				<a href="javascript:" class="map-coo tooltip" id="map-coo-2">
@@ -360,6 +464,143 @@
 		</div>
 		<div></div>
 	</div>
+</section>
+<section class="mg-top">
+	<div class="wrap-mini-intro">
+		<h2 class="title-h2-line">Asia Inspired Travel Itineraries</h2>
+	</div>
+	<div class="container">
+		<div class="col-lg-4">
+			<article class="trip">
+				<img src="images/demo-trip-1.jpg" alt="">
+				<h3 class="title-h2-line">Peru and the Galapagos Luxury Tour</h3>
+				<span>16 day from <strong>$8,950</strong> pp</span>
+				<p> A combination of two of the most stunning and important destinations in South America, all in...</p>
+				<div class="wrap-tooltip">
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-kayaking"></i>
+						<span>Kayaking<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cuisine"></i>
+						<span>Cuisine<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-nature"></i>
+						<span>Nature<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span>Heritage<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cultural"></i>
+						<span>Cultural<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span>Heritage<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-mountain"></i>
+						<span>Mountain<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-swimming"></i>
+						<span>Swimming<i></i></span>
+					</a>
+				</div>
+				<a class="btn-st2" href="#">explore this trip</a>
+			</article>
+		</div>
+		<div class="col-lg-4">
+			<article class="trip">
+				<img src="images/demo-trip-2.jpg" alt="">
+				<h3 class="title-h2-line"> Total Patagonia Vacation</h3>
+				<span>10 day from <strong>$9,950</strong> pp</span>
+				<p>Experience the great variety of Argentinean Patagonia from the Beagle Channel and Ushuai...</p>
+				<div class="wrap-tooltip">
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-kayaking"></i>
+						<span>Kayaking<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cuisine"></i>
+						<span>Cuisine<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-nature"></i>
+						<span>Nature<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span>Heritage<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cultural"></i>
+						<span>Cultural<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span>Heritage<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-mountain"></i>
+						<span>Mountain<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-swimming"></i>
+						<span>Swimming<i></i></span>
+					</a>
+				</div>
+				<a class="btn-st2" href="#">explore this trip</a>
+			</article>
+		</div>
+		<div class="col-lg-4">
+			<article class="trip">
+				<img src="images/demo-trip-3.jpg" alt="">
+				<h3 class="title-h2-line">Luxury Adventure in Costa Rica</h3>
+				<span>8 day from <strong>$10,750</strong> pp</span>
+				<p>The incredible Pacuare Reserve, majestic Arenal volcano and the beautiful Guanacaste Coast</p>
+				<div class="wrap-tooltip">
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-kayaking"></i>
+						<span>Kayaking<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cuisine"></i>
+						<span>Cuisine<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-nature"></i>
+						<span>Nature<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span>Heritage<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cultural"></i>
+						<span>Cultural<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span>Heritage<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-mountain"></i>
+						<span>Mountain<i></i></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-swimming"></i>
+						<span>Swimming<i></i></span>
+					</a>
+				</div>
+				<a class="btn-st2" href="#">explore this trip</a>
+			</article>
+		</div>
+	</div>
+
 </section>
 <section></section>
 <footer></footer>

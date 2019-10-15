@@ -56,9 +56,9 @@ header{
 					font-size: 13px;
 					display: flex;
 					justify-content: center;
-					.fa-user{
+					.user-regular{
 						margin-right: 5px;
-						font-size: 15px;
+						font-size: 12px;
 					}
 					&:hover{
 						color: $main-color;
@@ -92,7 +92,7 @@ header{
     				color: $main-color;
     				@include smooth(.2s);
     			}
-    			&:after{
+    			&:before{
 					background-color: $higlight-color;
 					content: " ";
 					display: inline-block;
@@ -100,7 +100,7 @@ header{
 					width: 8px;
 					border-radius: 50%;
     			}
-    			&:last-child:after{
+    			&:first-child:before{
     				display: none;
     			}
     		}
@@ -279,6 +279,7 @@ header{
 				text-align: center;
 				font-size: 13px;
 				margin: 10px 0;
+				text-transform: uppercase;
 			}
 			&:hover{
 				color: $higlight-color;

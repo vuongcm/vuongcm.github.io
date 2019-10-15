@@ -38,10 +38,16 @@
 		}
 		.booking-step-room{
 			width: 16%;
+			.select-arrow-thin{
+				font-size: 7px;
+			}
 		}
 		.booking-step-promo{
 			width: 16%;
 			border-right: none;
+			.plus{
+				font-size: 10px;
+			}
 		}
 		.booking-step-submit{
 			width: 25%;
@@ -54,7 +60,8 @@
 				color: #fff;
 				background-color: #333;
 				text-transform: uppercase;
-				font-size: 16px;
+				font-size: 14px;
+				letter-spacing: 2px;
 			}
 		}
 	}
@@ -62,11 +69,8 @@
 .best-support{
 	article{
 		h3{
-			font-size: 18px;
-			font-weight: 700;
-		}
-		p{
-			color: $light-color;
+			font-size: 20px;
+			font-family: 'Theano Didot','Times New Roman', serif;
 		}
 	}
 }
@@ -83,7 +87,7 @@
 			top: 0;
 			width: 100%;
 		}
-		&>div{
+		&>.wrap-coo{
 			position: absolute;
 			z-index: 2;
 			background-color: transparent;
@@ -93,6 +97,9 @@
 			bottom: 0;
 			.map-coo{
 				background-image: url('../images/icon/poin_2_optimized.png');
+			}
+			.map-coo-active{
+				background-image: url('../images/icon/poin_optimized.png')!important;
 			}
 			#map-coo-1{
 				top: 39.4%;
@@ -133,6 +140,62 @@
 			#map-coo-10{
 				top: 23.4%;
 				left: 65.4%;
+			}
+		}
+		.synch-carousels{
+			width: 30%;
+			height: 70%;
+			top: 15%;
+			left: 5%;
+			z-index: 4;
+			background-color: $background-color;
+			.item{
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				article{
+					width: 100%;
+					padding-left: 15px;
+					padding-right: 15px;
+					text-align: center;
+					h3{
+						font-size: 18px;
+						text-transform: uppercase;
+						font-weight: 500;
+						color: $title-color;
+					}
+					h4{
+						font-size: 16px;
+						font-family: 'Theano Didot','Times New Roman', serif;
+					}
+					.paragraph{
+						font-size: 13px;
+					}
+				}
+			}
+			.nav-arrows{
+				bottom: 10px;
+				button{
+					bottom: 0;
+					.select-arrow-thin{
+						font-size: 12px;
+					}
+				}
+				.arrow-left{
+					margin-left: 20%;
+					.select-arrow-thin{
+						@include rotage(90deg)
+					}
+				}
+				.arrow-right{
+					margin-right: 20%;
+					.select-arrow-thin{
+						@include rotage(-90deg)
+					}
+				}
+				span>strong{
+					font-weight: 400;
+				}
 			}
 		}
 	}

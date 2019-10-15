@@ -54,8 +54,9 @@ img{max-width: 100%;vertical-align: middle;object-fit: cover;}
 body {
     width: 100%;
 	font-family: 'Montserrat', Arial, sans-serif;
-	font-size: 14px;
+	font-size: 13px;
 	color: #555;
+    letter-spacing: 1px;
     --bodyWidth: 1583px;
 }
 input{
@@ -89,7 +90,7 @@ a {
     letter-spacing: 1px;
     display: inline-block;
     line-height: 1;
-    color: $main-color;
+    color: $title-color;
 }
 button:hover,a:hover {
 	text-decoration: none;
@@ -173,7 +174,16 @@ select:focus {
 	@include smooth(.2s);
 }
 .link-st1:hover{
-	color: $color-hover;
+	opacity: .8;
+}
+.link-st2{
+    color: $title-color;
+    @include smooth(.2s);
+    line-height: 1.5;
+    border-bottom: 1px solid $title-color;
+}
+.link-st2:hover{
+    opacity: .8;
 }
 .title-h1 {
 	font-size: 26px;
@@ -182,14 +192,17 @@ select:focus {
 	letter-spacing: 2px;
 	line-height: 1;
 	text-align: center;
+    color: $title-color;
 }
 .title-h2-line {
     font-size: 25px;
     font-family: 'Theano Didot','Times New Roman', serif;
-    font-weight: 600;
     letter-spacing: 2px;
+    color: $title-color;
     line-height: 1;
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
 }
 .title-h2-line:after{
     max-width: 200px;
@@ -275,6 +288,15 @@ select:focus {
 }
 .tooltip{
     position: relative;
+    &>.icon-font{
+        font-size: 30px;
+        &:before{
+            color: $light-color;
+        }
+        &:hover:before{
+            color: $higlight-color;
+        }
+    }
     span{
         visibility: hidden;
         position: absolute;
@@ -325,6 +347,82 @@ select:focus {
         opacity: 1;
     }
 }
+.wrap-tooltip{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 10px auto;
+    .tooltip{
+        margin: 5px 3px;
+        &:hover{
+            opacity: 1;
+        }
+        &>span{
+            box-shadow: none;
+            border: 1px solid $higlight-color;
+            color: $higlight-color;
+            &>i{
+                background-color: $higlight-color;
+            }
+            &:after{
+                content: " ";
+                height: 9px;
+                width: 18px;
+                position: absolute;
+                top: calc(100% - 1px);
+                left: calc(50% + 1px);
+                margin-left: -10px;
+                background-color: #fff;
+                -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+                clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+                -webkit-shape-outside: polygon(0% 0%, 100% 0%, 50% 100%);
+                shape-outside: polygon(0% 0%, 100% 0%, 50% 100%);
+            }
+        }
+    }
+}
+.synch-carousels {
+    position: relative;
+    box-shadow: 2px 5px 15px rgba(0,0,0,.13);
+    .slick-slide{
+        outline: none;
+        border: none;
+    }
+    .nav-arrows{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        height: 40px;
+        button{
+            position: absolute;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            @include smooth(.2s);
+            i{
+                font-size: 30px;
+                color: $main-color;
+            }
+        }
+        .arrow-left{
+            left: 0;
+        }
+        .arrow-right{
+            right: 0;
+        }
+    }
+}
 .map-coo{
     width: 25px;
     height: 26px;
@@ -337,6 +435,39 @@ select:focus {
     width: 27px;
     height: 28px;
     opacity: 1;
+}
+.trip{
+    width: 100%;
+    margin: 20px 0;
+    h3{
+        font-size: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        line-height: 1.5;
+    }
+    &>span{
+        display: block;
+        width: 100%;
+        font-size: 18px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        color: $higlight-color;
+        &>strong{
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+    &>p{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .btn-st2{
+        margin-top: 20px;
+    }
 }
 .container{
     width: 85%;
@@ -362,6 +493,11 @@ select:focus {
     padding-left: 15px;
     padding-right: 15px;
     text-align: center;
+}
+@media (min-width: 1199px) {
+    .mg-top{
+        margin-top: 80px;
+    }
 }
 @media (max-width: 991px) {
     .col-md-6{
