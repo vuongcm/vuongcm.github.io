@@ -47,6 +47,18 @@ $(document).ready(function() {
 			$('.map-home .map-coo').eq(slick.currentSlide).addClass('map-coo-active');
 		});
 	}
+	//carousel-st1
+	if ($('.wrap-slide-st1').length > 0) {
+		$(`.wrap-slide-st1 .gallery`).slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			infinite: true,
+			adaptiveHeight: true,
+			useTransform: false,
+	        prevArrow: `.wrap-slide-st1 .arrow-left`,
+	        nextArrow: `.wrap-slide-st1 .arrow-right`
+	    });
+	}
 });
 window.onload = function() {
 	$('.map-home').height($('.map-home img').height());

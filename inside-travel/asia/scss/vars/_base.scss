@@ -91,6 +91,7 @@ a {
     display: inline-block;
     line-height: inherit;
     color: $title-color;
+    @include smooth(.2s);
 }
 button:hover,a:hover {
 	text-decoration: none;
@@ -132,6 +133,9 @@ select:focus {
 	outline-style: dotted;
 	outline-width: 1px;
 }
+.background-st1{
+    background-color: $background-color-st1;
+}
 .select-st1 {
     padding-right: 15px;
 }
@@ -171,14 +175,12 @@ select:focus {
 }
 .link-st1 {
 	color: $higlight-color;
-	@include smooth(.2s);
 }
 .link-st1:hover{
 	opacity: .8;
 }
 .link-st2{
     color: $title-color;
-    @include smooth(.2s);
     line-height: 1.5;
     border-bottom: 1px solid $title-color;
 }
@@ -187,7 +189,6 @@ select:focus {
 }
 .link-st3{
     color: $title-color;
-    @include smooth(.2s);
     line-height: 1.5;
     font-weight: 500;
     &:after{
@@ -232,7 +233,7 @@ select:focus {
     width: 40%;
 }
 .paragraph {
-	margin: 10px 0;
+	margin: 10px auto;
 	line-height: 2;
 	text-align: center;
 }
@@ -327,20 +328,57 @@ select:focus {
     }
 }
 .wrap-slide-st1{
+    margin-top: 15px;
+    width: 100%;
     .synch-carousels{
         box-shadow: none;
+        .nav-arrows{
+            top: 213px;
+            button{
+                i{
+                    font-size: 40px;
+                    color: #d4d4d4;
+                }
+            }
+            .arrow-left{
+                margin-left: 20px;
+            }
+            .arrow-right{
+                margin-right: 20px;
+            }
+        }
     }
     .gallery{
         width: 76%;
         margin: 0 auto;
         .item>a:first-child{
-            display: flex;
             position: relative;
+            width: 100%;
             .box-text{
                 position: absolute;
                 width: 100%;
                 height: 100%;
+                top: 0;
+                left: 0;
                 background-color: $color-cover-dak;
+                @include smooth(.2s);
+            }
+            &:hover{
+                opacity: 1;
+                .box-text{
+                    background-color: transparent;
+                }
+            }
+        }
+        .item{
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 5px;
+            .paragraph{
+                width: 90%;
+                font-size: 12px;
+                margin-bottom: 25px;
+                margin-top: 20px;
             }
         }
     }
@@ -474,6 +512,17 @@ select:focus {
                 color: $main-color;
             }
         }
+        .arrow-radius{
+            border: 1px solid $title-color;
+            border-radius: 50%;
+            .select-arrow-thin{
+                font-size: 9px;
+                color: $title-color;
+            }
+            &:hover{
+                color: $light-color;
+            }
+        }
         .arrow-left{
             left: 0;
             .select-arrow-thin{
@@ -546,7 +595,71 @@ select:focus {
         margin-top: 20px;
     }
 }
-
+.team-name{
+    text-align: center;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 35px;
+}
+.team-mess{
+    width: 80%;
+    margin: 0 auto;
+    p{
+        font-size: 18px;
+        letter-spacing: 2px;
+        text-align: center;
+        padding-right: 15px;
+        padding-left: 15px;
+        line-height: 2;
+        font-weight: 500;
+    }
+}
+.team-quote{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: 15px auto;
+    &>img{
+        width: 80px;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 5px;
+    }
+    .team-name{
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+.call-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 15px auto 20px;
+    span{
+        display: inline-block;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+    strong{
+        font-size: 22px;
+        font-style: italic;
+        color: $higlight-color;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+    .btn-st2{
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+}
 .container{
     width: 85%;
     display: flex;
@@ -576,6 +689,9 @@ select:focus {
 @media (min-width: 1199px) {
     .mg-top{
         margin-top: 80px;
+    }
+    .mg-bottom{
+        margin-bottom: 80px;
     }
 }
 @media (max-width: 991px) {
