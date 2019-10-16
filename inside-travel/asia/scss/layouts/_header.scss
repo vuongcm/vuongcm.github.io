@@ -121,7 +121,7 @@ header{
 						right: 0;
 						@include rotage(45deg);
 						@include smooth(.25s);
-						animation: fadein .25s;
+						@include animationed(fadein,.25s);
 						top: calc(100% - 5px);
 						width: 12px;
 						background-color: transparent;

@@ -87,9 +87,9 @@ button,a {
 	text-decoration: none;
 }
 a {
-    letter-spacing: 1px;
+    letter-spacing: inherit;
     display: inline-block;
-    line-height: 1;
+    line-height: inherit;
     color: $title-color;
 }
 button:hover,a:hover {
@@ -185,6 +185,24 @@ select:focus {
 .link-st2:hover{
     opacity: .8;
 }
+.link-st3{
+    color: $title-color;
+    @include smooth(.2s);
+    line-height: 1.5;
+    font-weight: 500;
+    &:after{
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: $title-color;
+        @include animationed(lineAnimatedOut,.5s);
+        width: 100%;
+    }
+    &:hover:after{
+        @include animationed(lineAnimatedIn,.5s);
+        width: 0;
+    }
+}
 .title-h1 {
 	font-size: 26px;
 	font-family: 'Theano Didot','Times New Roman', serif;
@@ -201,8 +219,8 @@ select:focus {
     color: $title-color;
     line-height: 1;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 25px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 .title-h2-line:after{
     max-width: 200px;
@@ -285,13 +303,54 @@ select:focus {
 .wrap-mini-intro{
     width: 50%;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box-text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    h1,h2,h3,h4{
+        font-size: 20px;
+        color: #fff;
+        /*text-shadow: 0 1px 1px $main-color;*/
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+    }
+    p{
+        color: #fff;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+}
+.wrap-slide-st1{
+    .synch-carousels{
+        box-shadow: none;
+    }
+    .gallery{
+        width: 76%;
+        margin: 0 auto;
+        .item>a:first-child{
+            display: flex;
+            position: relative;
+            .box-text{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: $color-cover-dak;
+            }
+        }
+    }
 }
 .tooltip{
     position: relative;
     &>.icon-font{
         font-size: 30px;
         &:before{
-            color: $light-color;
+            color: #c3bdbd;
         }
         &:hover:before{
             color: $higlight-color;
@@ -417,9 +476,15 @@ select:focus {
         }
         .arrow-left{
             left: 0;
+            .select-arrow-thin{
+                @include rotage(90deg)
+            }
         }
         .arrow-right{
             right: 0;
+            .select-arrow-thin{
+                @include rotage(-90deg)
+            }
         }
     }
 }
@@ -438,12 +503,24 @@ select:focus {
 }
 .trip{
     width: 100%;
-    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    align-content: space-between;
+    padding-bottom: 20px;
+    box-shadow: 1px 2px 10px rgba(0,0,0,.13);
     h3{
-        font-size: 20px;
+        font-size: 16px;
         padding-left: 15px;
         padding-right: 15px;
         line-height: 1.5;
+        font-family: inherit;
+        text-transform: uppercase;
+        font-weight: 500;
+        &>a{
+            min-height: 48px;
+        }
     }
     &>span{
         display: block;
@@ -469,11 +546,13 @@ select:focus {
         margin-top: 20px;
     }
 }
+
 .container{
     width: 85%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
     margin: 0 auto;
 }
 .col-lg-6{
@@ -539,6 +618,14 @@ select:focus {
         width: 25%;
     }
 }
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;        
+    }
+}
 @-webkit-keyframes fadein {
     from {
         opacity: 0;
@@ -561,5 +648,69 @@ select:focus {
     }
     to {
         opacity: 1;        
+    }
+}
+@keyframes lineAnimatedIn {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+@-webkit-keyframes lineAnimatedIn {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+@-moz-keyframes lineAnimatedIn {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+@-ms-keyframes lineAnimatedIn {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+@keyframes lineAnimatedOut {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@-webkit-keyframes lineAnimatedOut {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@-moz-keyframes lineAnimatedOut {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@-ms-keyframes lineAnimatedOut {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
     }
 }

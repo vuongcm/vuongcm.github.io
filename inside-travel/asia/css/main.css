@@ -144,9 +144,9 @@ button, a {
   text-decoration: none; }
 
 a {
-  letter-spacing: 1px;
+  letter-spacing: inherit;
   display: inline-block;
-  line-height: 1;
+  line-height: inherit;
   color: #111; }
 
 button:hover, a:hover {
@@ -258,6 +258,32 @@ select:focus {
 .link-st2:hover {
   opacity: .8; }
 
+.link-st3 {
+  color: #111;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  line-height: 1.5;
+  font-weight: 500; }
+  .link-st3:after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #111;
+    animation: lineAnimatedOut 0.5s;
+    -moz-animation: lineAnimatedOut 0.5s;
+    -webkit-animation: lineAnimatedOut 0.5s;
+    -o-animation: lineAnimatedOut 0.5s;
+    width: 100%; }
+  .link-st3:hover:after {
+    animation: lineAnimatedIn 0.5s;
+    -moz-animation: lineAnimatedIn 0.5s;
+    -webkit-animation: lineAnimatedIn 0.5s;
+    -o-animation: lineAnimatedIn 0.5s;
+    width: 0; }
+
 .title-h1 {
   font-size: 26px;
   font-family: 'Theano Didot','Times New Roman', serif;
@@ -274,8 +300,8 @@ select:focus {
   color: #111;
   line-height: 1;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 25px; }
+  margin-top: 20px;
+  margin-bottom: 10px; }
 
 .title-h2-line:after {
   max-width: 200px;
@@ -361,14 +387,48 @@ select:focus {
 
 .wrap-mini-intro {
   width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.box-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center; }
+  .box-text h1, .box-text h2, .box-text h3, .box-text h4 {
+    font-size: 20px;
+    color: #fff;
+    /*text-shadow: 0 1px 1px $main-color;*/
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700; }
+  .box-text p {
+    color: #fff;
+    letter-spacing: 2px;
+    text-align: center; }
+
+.wrap-slide-st1 .synch-carousels {
+  box-shadow: none; }
+.wrap-slide-st1 .gallery {
+  width: 76%;
   margin: 0 auto; }
+  .wrap-slide-st1 .gallery .item > a:first-child {
+    display: flex;
+    position: relative; }
+    .wrap-slide-st1 .gallery .item > a:first-child .box-text {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(51, 39, 21, 0.4); }
 
 .tooltip {
   position: relative; }
   .tooltip > .icon-font {
     font-size: 30px; }
     .tooltip > .icon-font:before {
-      color: #a09c9c; }
+      color: #c3bdbd; }
     .tooltip > .icon-font:hover:before {
       color: #d0aa3f; }
   .tooltip span {
@@ -488,8 +548,16 @@ select:focus {
         color: #555; }
     .synch-carousels .nav-arrows .arrow-left {
       left: 0; }
+      .synch-carousels .nav-arrows .arrow-left .select-arrow-thin {
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg); }
     .synch-carousels .nav-arrows .arrow-right {
       right: 0; }
+      .synch-carousels .nav-arrows .arrow-right .select-arrow-thin {
+        -ms-transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg); }
 
 .map-coo {
   width: 25px;
@@ -506,12 +574,23 @@ select:focus {
 
 .trip {
   width: 100%;
-  margin: 20px 0; }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  align-content: space-between;
+  padding-bottom: 20px;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.13); }
   .trip h3 {
-    font-size: 20px;
+    font-size: 16px;
     padding-left: 15px;
     padding-right: 15px;
-    line-height: 1.5; }
+    line-height: 1.5;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-weight: 500; }
+    .trip h3 > a {
+      min-height: 48px; }
   .trip > span {
     display: block;
     width: 100%;
@@ -535,8 +614,9 @@ select:focus {
 .container {
   width: 85%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
   margin: 0 auto; }
 
 .col-lg-6 {
@@ -594,6 +674,11 @@ select:focus {
 
   .col-xsm-3 {
     width: 25%; } }
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 @-webkit-keyframes fadein {
   from {
     opacity: 0; }
@@ -609,6 +694,46 @@ select:focus {
     opacity: 0; }
   to {
     opacity: 1; } }
+@keyframes lineAnimatedIn {
+  from {
+    width: 100%; }
+  to {
+    width: 0; } }
+@-webkit-keyframes lineAnimatedIn {
+  from {
+    width: 100%; }
+  to {
+    width: 0; } }
+@-moz-keyframes lineAnimatedIn {
+  from {
+    width: 100%; }
+  to {
+    width: 0; } }
+@-ms-keyframes lineAnimatedIn {
+  from {
+    width: 100%; }
+  to {
+    width: 0; } }
+@keyframes lineAnimatedOut {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+@-webkit-keyframes lineAnimatedOut {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+@-moz-keyframes lineAnimatedOut {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+@-ms-keyframes lineAnimatedOut {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
 header {
   width: 100%;
   z-index: 100;
@@ -731,7 +856,10 @@ header {
           -o-transition: all 0.25s linear;
           -ms-transition: all 0.25s linear;
           transition: all 0.25s linear;
-          animation: fadein .25s;
+          animation: fadein 0.25s;
+          -moz-animation: fadein 0.25s;
+          -webkit-animation: fadein 0.25s;
+          -o-animation: fadein 0.25s;
           top: calc(100% - 5px);
           width: 12px;
           background-color: transparent;
@@ -1054,17 +1182,15 @@ header {
             font-size: 12px; }
         .wrap-map .map-home .synch-carousels .nav-arrows .arrow-left {
           margin-left: 20%; }
-          .wrap-map .map-home .synch-carousels .nav-arrows .arrow-left .select-arrow-thin {
-            -ms-transform: rotate(90deg);
-            -webkit-transform: rotate(90deg);
-            transform: rotate(90deg); }
         .wrap-map .map-home .synch-carousels .nav-arrows .arrow-right {
           margin-right: 20%; }
-          .wrap-map .map-home .synch-carousels .nav-arrows .arrow-right .select-arrow-thin {
-            -ms-transform: rotate(-90deg);
-            -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg); }
         .wrap-map .map-home .synch-carousels .nav-arrows span > strong {
           font-weight: 400; }
+
+.list-trip .container {
+  align-items: stretch; }
+  .list-trip .container .col-lg-4 {
+    margin-top: 15px;
+    margin-bottom: 50px; }
 
 /*# sourceMappingURL=main.css.map */

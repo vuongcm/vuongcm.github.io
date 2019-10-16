@@ -183,20 +183,23 @@
 				}
 				.arrow-left{
 					margin-left: 20%;
-					.select-arrow-thin{
-						@include rotage(90deg)
-					}
 				}
 				.arrow-right{
 					margin-right: 20%;
-					.select-arrow-thin{
-						@include rotage(-90deg)
-					}
 				}
 				span>strong{
 					font-weight: 400;
 				}
 			}
+		}
+	}
+}
+.list-trip{
+	.container{
+		align-items: stretch;
+		.col-lg-4{
+			margin-top: 15px;
+			margin-bottom: 50px;
 		}
 	}
 }
