@@ -115,8 +115,8 @@ img {
 body {
   width: 100%;
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 13px;
-  color: #555;
+  font-size: 12px;
+  color: #111;
   letter-spacing: 1px;
   --bodyWidth: 1583px; }
 
@@ -124,13 +124,13 @@ input {
   white-space: nowrap;
   text-overflow: ellipsis; }
   input::-webkit-input-placeholder {
-    color: #a09c9c; }
+    color: #333; }
   input::-moz-placeholder {
-    color: #a09c9c; }
+    color: #333; }
   input:-ms-input-placeholder {
-    color: #a09c9c; }
+    color: #333; }
   input:-moz-placeholder {
-    color: #a09c9c; }
+    color: #333; }
 
 ol, ul, li {
   margin: 0;
@@ -239,11 +239,11 @@ select:focus {
   transition: all 0.2s linear; }
 
 .btn-st2:hover {
-  color: #d0aa3f;
-  border-color: #d0aa3f; }
+  color: #ccaf3d;
+  border-color: #ccaf3d; }
 
 .link-st1 {
-  color: #d0aa3f; }
+  color: #ccaf3d; }
 
 .link-st1:hover {
   opacity: .8; }
@@ -308,7 +308,8 @@ select:focus {
 .paragraph {
   margin: 10px auto;
   line-height: 2;
-  text-align: center; }
+  text-align: center;
+  color: #333; }
 
 .mg-left {
   margin-left: 40px; }
@@ -522,6 +523,94 @@ select:focus {
   .wrap-slide-st2 .item.slick-center .theme-slide-img {
     padding-bottom: 125%; }
 
+.tripadvisor {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px; }
+  .tripadvisor .path2, .tripadvisor .path3, .tripadvisor .path4, .tripadvisor .path5 {
+    position: absolute; }
+    .tripadvisor .path2:before, .tripadvisor .path3:before, .tripadvisor .path4:before, .tripadvisor .path5:before {
+      margin-left: 0; }
+
+.wrap-tripadvisor {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .wrap-tripadvisor strong {
+    margin-left: 5px;
+    font-weight: 400; }
+
+.wrap-dots {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .wrap-dots li {
+    margin-left: 4px;
+    margin-right: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ececec;
+    overflow: hidden; }
+  .wrap-dots .slick-active {
+    background-color: #686868; }
+
+.wrap-slide-st3 {
+  width: 100%; }
+  .wrap-slide-st3 .synch-carousels {
+    box-shadow: none; }
+  .wrap-slide-st3 .gallery {
+    width: 85%;
+    margin: 0 auto; }
+  .wrap-slide-st3 .item {
+    display: flex;
+    justify-content: flex-start; }
+    .wrap-slide-st3 .item > div:first-child {
+      width: 30%;
+      padding-right: 20px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .wrap-slide-st3 .item > div:first-child img:last-child {
+        display: block;
+        position: absolute;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        width: 70%; }
+    .wrap-slide-st3 .item > div:last-child {
+      width: 55%;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; }
+      .wrap-slide-st3 .item > div:last-child > p {
+        font-size: 18px;
+        letter-spacing: 2px;
+        line-height: 1.8;
+        position: relative;
+        margin-top: 15px;
+        margin-bottom: 15px; }
+        .wrap-slide-st3 .item > div:last-child > p > font {
+          font-family: 'Theano Didot','Times New Roman', serif; }
+          .wrap-slide-st3 .item > div:last-child > p > font:first-child {
+            position: absolute;
+            left: -15px; }
+      .wrap-slide-st3 .item > div:last-child > div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; }
+        .wrap-slide-st3 .item > div:last-child > div > span {
+          font-size: 14px; }
+        .wrap-slide-st3 .item > div:last-child > div > a {
+          margin-left: 10px; }
+  .wrap-slide-st3 .wrap-dots {
+    margin: 30px 0; }
+    .wrap-slide-st3 .wrap-dots button {
+      color: rgba(255, 255, 255, 0); }
+
 .tooltip {
   position: relative; }
   .tooltip > .icon-font {
@@ -529,13 +618,13 @@ select:focus {
     .tooltip > .icon-font:before {
       color: #c3bdbd; }
     .tooltip > .icon-font:hover:before {
-      color: #d0aa3f; }
+      color: #ccaf3d; }
   .tooltip span {
     visibility: hidden;
     position: absolute;
     display: block;
     background-color: #fff;
-    color: #555;
+    color: #111;
     text-align: center;
     padding: 10px 5px;
     border-radius: 6px;
@@ -596,10 +685,10 @@ select:focus {
       opacity: 1; }
     .wrap-tooltip .tooltip > span {
       box-shadow: none;
-      border: 1px solid #d0aa3f;
-      color: #d0aa3f; }
+      border: 1px solid #ccaf3d;
+      color: #ccaf3d; }
       .wrap-tooltip .tooltip > span > i {
-        background-color: #d0aa3f; }
+        background-color: #ccaf3d; }
       .wrap-tooltip .tooltip > span:after {
         content: " ";
         height: 9px;
@@ -647,7 +736,7 @@ select:focus {
       transition: all 0.2s linear; }
       .synch-carousels .nav-arrows button i {
         font-size: 30px;
-        color: #555; }
+        color: #111; }
     .synch-carousels .nav-arrows .arrow-radius {
       border: 1px solid #111;
       border-radius: 50%; }
@@ -655,7 +744,7 @@ select:focus {
         font-size: 9px;
         color: #111; }
       .synch-carousels .nav-arrows .arrow-radius:hover {
-        color: #a09c9c; }
+        color: #333; }
     .synch-carousels .nav-arrows .arrow-left {
       left: 0; }
       .synch-carousels .nav-arrows .arrow-left .select-arrow-thin {
@@ -710,7 +799,7 @@ select:focus {
     margin-top: 15px;
     margin-bottom: 15px;
     text-transform: uppercase;
-    color: #d0aa3f; }
+    color: #ccaf3d; }
     .trip > span > strong {
       font-size: 20px;
       font-weight: 600; }
@@ -771,7 +860,7 @@ select:focus {
   .call-info strong {
     font-size: 22px;
     font-style: italic;
-    color: #d0aa3f;
+    color: #ccaf3d;
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 10px; }
@@ -940,7 +1029,7 @@ header {
         header .menu-wrap .search-nav input:focus {
           outline-style: dotted;
           outline-width: 1px;
-          border-bottom: 1px solid #555;
+          border-bottom: 1px solid #111;
           font-size: 14px; }
     header .menu-wrap .brand {
       width: 30%;
@@ -966,7 +1055,7 @@ header {
             margin-right: 5px;
             font-size: 12px; }
           header .menu-wrap .global-menu .login-top a:hover {
-            color: #555; }
+            color: #111; }
     header .menu-wrap .main-menu {
       width: 100%;
       background-color: #f6f4f0;
@@ -991,14 +1080,15 @@ header {
           padding-bottom: 20px;
           padding-top: 20px;
           text-transform: uppercase;
-          color: #555;
+          color: #111;
           -webkit-transition: all 0.2s linear;
           -moz-transition: all 0.2s linear;
           -o-transition: all 0.2s linear;
           -ms-transition: all 0.2s linear;
-          transition: all 0.2s linear; }
+          transition: all 0.2s linear;
+          font-size: 13px; }
         header .menu-wrap .main-menu > li:before {
-          background-color: #d0aa3f;
+          background-color: #ccaf3d;
           content: " ";
           display: inline-block;
           height: 8px;
@@ -1128,7 +1218,7 @@ header {
         font-size: 13px;
         text-transform: uppercase;
         font-weight: 700;
-        color: #555; }
+        color: #111; }
       .sub-menu-destinations > li > a:first-child:hover > img {
         transform: scale(1.1);
         -moz-transform: scale(1.1);
@@ -1152,7 +1242,7 @@ header {
       font-size: 13px;
       padding: 0 15px; }
       .sub-menu-destinations > li > div > a:hover {
-        color: #d0aa3f; }
+        color: #ccaf3d; }
     .sub-menu-destinations > li .btn-st2 {
       margin-top: 15px;
       margin-bottom: 15px; }
@@ -1202,7 +1292,7 @@ header {
         margin: 10px 0;
         text-transform: uppercase; }
       .sub-menu-travel > li a:hover {
-        color: #d0aa3f; }
+        color: #ccaf3d; }
         .sub-menu-travel > li a:hover img {
           opacity: 1; }
 
@@ -1230,10 +1320,10 @@ header {
       #booking-widget-homepage form > div input {
         width: 90%;
         border: none;
-        color: #a09c9c;
+        color: #333;
         cursor: pointer; }
       #booking-widget-homepage form > div select {
-        color: #a09c9c;
+        color: #333;
         width: 100%; }
     #booking-widget-homepage form .booking-step-where {
       width: 28%; }

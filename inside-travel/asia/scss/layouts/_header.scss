@@ -91,6 +91,7 @@ header{
     				text-transform: uppercase;
     				color: $main-color;
     				@include smooth(.2s);
+    				font-size: 13px;
     			}
     			&:before{
 					background-color: $higlight-color;

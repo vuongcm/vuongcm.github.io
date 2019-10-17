@@ -73,6 +73,18 @@ $(document).ready(function() {
 	        nextArrow: `.wrap-slide-st2 .arrow-right`
 	    });
 	}
+	//carousel-st3
+	if ($('.wrap-slide-st3').length > 0) {
+		$(`.wrap-slide-st3 .gallery`).slick({
+			dots: true,
+			dotsClass: 'wrap-dots',
+			infinite: false,
+			slidesToShow: 1,
+			autoplay: true,
+			autoplaySpeed: 7000,
+			arrows: false
+		});
+	}
 });
 window.onload = function() {
 	$('.map-home').height($('.map-home img').height());

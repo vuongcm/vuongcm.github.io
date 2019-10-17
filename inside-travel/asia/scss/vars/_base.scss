@@ -54,8 +54,8 @@ img{max-width: 100%;vertical-align: middle;object-fit: cover;}
 body {
     width: 100%;
 	font-family: 'Montserrat', Arial, sans-serif;
-	font-size: 13px;
-	color: #555;
+	font-size: 12px;
+	color: $main-color;
     letter-spacing: 1px;
     --bodyWidth: 1583px;
 }
@@ -236,6 +236,7 @@ select:focus {
 	margin: 10px auto;
 	line-height: 2;
 	text-align: center;
+    color: $light-color;
 }
 .mg-left{
     margin-left: 40px;
@@ -463,6 +464,113 @@ select:focus {
     .item.slick-center .theme-slide-img{
         padding-bottom: 125%;
     }
+}
+.tripadvisor{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    .path2, .path3, .path4, .path5{
+        position: absolute;
+        &:before{
+            margin-left: 0;
+        }
+    }
+}
+.wrap-tripadvisor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    strong{
+        margin-left: 5px;
+        font-weight: 400;
+    }
+}
+.wrap-dots{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    li{
+        margin-left: 4px;
+        margin-right: 4px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ececec;
+        overflow: hidden;
+    }
+    .slick-active{
+        background-color: #686868;
+    }
+}
+.wrap-slide-st3{
+    width: 100%;
+    .synch-carousels{
+        box-shadow: none;
+    }
+    .gallery{
+        width: 85%;
+        margin: 0 auto;
+    }
+    .item{
+        display: flex;
+        justify-content: flex-start;
+        &>div:first-child{
+            width: 30%;
+            padding-right: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img:last-child{
+                display: block;
+                position: absolute;
+                border: 5px solid #fff;
+                border-radius: 50%;
+                width: 70%;
+            }
+        }
+        &>div:last-child{
+            width: 55%;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            &>p{
+                font-size: 18px;
+                letter-spacing: 2px;
+                line-height: 1.8;
+                position: relative;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                &>font{
+                    font-family: 'Theano Didot','Times New Roman', serif;
+                    &:first-child{
+                        position: absolute;
+                        left: -15px;
+                    }
+                }
+            }
+            &>div{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                &>span{
+                    font-size: 14px;
+                }
+                &>a{
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .wrap-dots{
+        margin: 30px 0;
+        button{
+            color: rgba(255,255,255,0);
+        }
+    }    
 }
 .tooltip{
     position: relative;
