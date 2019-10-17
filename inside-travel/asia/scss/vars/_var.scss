@@ -46,6 +46,13 @@ $color-cover-dak: rgba(51, 39, 21, .4);
     -ms-transition: all $val linear;
     transition: all $val linear;
 }
+@mixin smoothInOut($val){
+    -webkit-transition: all $val ease-in-out;
+    -moz-transition: all $val ease-in-out;
+    -o-transition: all $val ease-in-out;
+    -ms-transition: all $val ease-in-out;
+    transition: all $val ease-in-out;
+}
 @mixin bfhide(){
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;

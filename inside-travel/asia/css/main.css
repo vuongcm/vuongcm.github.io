@@ -448,6 +448,80 @@ select:focus {
         margin-bottom: 25px;
         margin-top: 20px; }
 
+.theme-slide-img {
+  width: 100%;
+  height: 0;
+  padding-bottom: 80%;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+
+.theme-slide-text {
+  width: 100%;
+  text-align: left; }
+  .theme-slide-text h3, .theme-slide-text h4 {
+    width: 100%;
+    letter-spacing: 2px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 20px; }
+  .theme-slide-text p {
+    font-size: 11px;
+    font-weight: 300;
+    max-height: 45px; }
+
+.type-rotate {
+  position: absolute;
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  text-align: right;
+  text-transform: uppercase; }
+
+.wrap-slide-st2 {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .wrap-slide-st2 .synch-carousels {
+    box-shadow: none; }
+    .wrap-slide-st2 .synch-carousels .nav-arrows {
+      top: 40%; }
+      .wrap-slide-st2 .synch-carousels .nav-arrows .arrow-left {
+        margin-left: 20px; }
+      .wrap-slide-st2 .synch-carousels .nav-arrows .arrow-right {
+        margin-right: 20px; }
+  .wrap-slide-st2 .gallery {
+    width: 85%;
+    margin: 0 auto; }
+  .wrap-slide-st2 .slick-track {
+    display: flex;
+    align-items: center; }
+  .wrap-slide-st2 .item {
+    position: relative;
+    padding-right: 20px;
+    padding-left: 20px;
+    min-height: 300px;
+    max-height: 900px; }
+    .wrap-slide-st2 .item a {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%; }
+      .wrap-slide-st2 .item a:hover {
+        opacity: 1; }
+      .wrap-slide-st2 .item a .type-rotate {
+        width: 250px;
+        height: 50px;
+        left: -99px;
+        top: 105px; }
+  .wrap-slide-st2 .item.slick-center .theme-slide-img {
+    padding-bottom: 125%; }
+
 .tooltip {
   position: relative; }
   .tooltip > .icon-font {
@@ -546,13 +620,16 @@ select:focus {
   .synch-carousels .slick-slide {
     outline: none;
     border: none; }
+  .synch-carousels .gallery {
+    z-index: 3; }
   .synch-carousels .nav-arrows {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     position: absolute;
-    height: 40px; }
+    height: 40px;
+    z-index: 2; }
     .synch-carousels .nav-arrows button {
       position: absolute;
       display: inline-flex;

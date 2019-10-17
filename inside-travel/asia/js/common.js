@@ -59,7 +59,22 @@ $(document).ready(function() {
 	        nextArrow: `.wrap-slide-st1 .arrow-right`
 	    });
 	}
+	//carousel-st2
+	if ($('.wrap-slide-st2').length > 0) {
+		$(`.wrap-slide-st2 .gallery`).slick({
+			slidesToShow: 3,
+			infinite: true,
+			centerMode: true,
+			centerPadding: '0',
+			adaptiveHeight: false,
+			useTransform: false,
+			initialSlide: 2,
+	        prevArrow: `.wrap-slide-st2 .arrow-left`,
+	        nextArrow: `.wrap-slide-st2 .arrow-right`
+	    });
+	}
 });
 window.onload = function() {
 	$('.map-home').height($('.map-home img').height());
+	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());
 };
