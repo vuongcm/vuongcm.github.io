@@ -63,16 +63,16 @@ input{
     white-space: nowrap;
     text-overflow: ellipsis;
     &::-webkit-input-placeholder{
-        color: $light-color;
+        color: #d8d8d8;
     }
     &::-moz-placeholder {
-        color: $light-color;
+        color: #d8d8d8;
     }
     &:-ms-input-placeholder{
-        color: $light-color;
+        color: #d8d8d8;
     }
     &:-moz-placeholder{
-        color: $light-color;
+        color: #d8d8d8;
     }
 }
 ol,ul,li {
@@ -132,6 +132,22 @@ select {
 select:focus {
 	outline-style: dotted;
 	outline-width: 1px;
+}
+.input-st1{
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+    padding-bottom: 5px;
+    @include smooth(.2s);
+    font-size: 13px;
+    letter-spacing: 2px;
+    outline: none;
+}
+.input-st1:focus{
+    outline-style: dotted;
+    outline-width: 1px;
+    border-bottom: 1px solid #111;
+    font-size: 14px;
 }
 .background-st1{
     background-color: $background-color-st1;
@@ -308,6 +324,20 @@ select:focus {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+.water-mask{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 100px;
+    color: rgba(51, 51, 51, .04);
+    letter-spacing: 10px;
+    font-family: 'Theano Didot','Times New Roman', serif;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .box-text{
     display: flex;
@@ -861,6 +891,12 @@ select:focus {
     justify-content: center;
     margin: 0 auto;
 }
+.col-lg-12{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
 .col-lg-6{
     width: 50%;
     padding-left: 15px;
@@ -888,6 +924,9 @@ select:focus {
     }
 }
 @media (max-width: 991px) {
+    .col-md-12{
+        width: 100%;
+    }
     .col-md-6{
         width: 50%;
     }
@@ -906,6 +945,9 @@ select:focus {
         margin-left: 0;
         margin-right: 0;
     }
+    .col-sm-12{
+        width: 100%;
+    }
     .col-sm-6{
         width: 50%;
     }
@@ -917,6 +959,9 @@ select:focus {
     }
 }
 @media (max-width: 479px) {
+    .col-xsm-12{
+        width: 100%;
+    }
     .col-xsm-6{
         width: 50%;
     }

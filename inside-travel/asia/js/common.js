@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	//===========header
 	$('#menu-lv1-1 a').hover(function(){
 		$('#menu-lv1-1').nextAll('.sub-menu-destinations').toggleClass('open-flex');
 	});
@@ -20,6 +21,28 @@ $(document).ready(function() {
         $(this).css('display','none');
         $('#menu-lv1-2 a').removeClass('open-opacity');
 	});
+
+	$('#menu-lv1-3 a').hover(function(){
+		$('#menu-lv1-3').nextAll('.sub-menu-cruises').toggleClass('open-flex');
+	});
+	$('.sub-menu-cruises').hover(function(){
+        $(this).css('display','flex');
+        $('#menu-lv1-3 a').addClass('open-opacity');
+    },function(){
+        $(this).css('display','none');
+        $('#menu-lv1-3 a').removeClass('open-opacity');
+	});
+	$('header').next('section').css('margin-top',`${$('header').height()}px`);
+	$(window).bind('scroll', function(){
+			nav1Height = $('#nav-1').height() + 100;
+	        if($(this).scrollTop() > 100){
+	        	$('.main-menu').css('order','2');
+	        	$('.brand').css('display','none');
+	        } else{
+	            $('#nav-2').css('display','none');
+	        }
+        });
+//==============end header==============
 	$('.tooltip>span').each(function(){
 		$(this).css('left',`-${$(this).width()/2 -7}px`);
 	});
