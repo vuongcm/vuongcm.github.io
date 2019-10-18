@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	//===========header
-	$('#menu-lv1-1 a').hover(function(){
+	$('#menu-lv1-1').hover(function(){
 		$('#menu-lv1-1').nextAll('.sub-menu-destinations').toggleClass('open-flex');
 	});
 	$('.sub-menu-destinations').hover(function(){
@@ -11,7 +11,7 @@ $(document).ready(function() {
         $('#menu-lv1-1 a').removeClass('open-opacity');
 	});
 
-	$('#menu-lv1-2 a').hover(function(){
+	$('#menu-lv1-2').hover(function(){
 		$('#menu-lv1-2').nextAll('.sub-menu-travel').toggleClass('open-flex');
 	});
 	$('.sub-menu-travel').hover(function(){
@@ -22,8 +22,12 @@ $(document).ready(function() {
         $('#menu-lv1-2 a').removeClass('open-opacity');
 	});
 
-	$('#menu-lv1-3 a').hover(function(){
-		$('#menu-lv1-3').nextAll('.sub-menu-cruises').toggleClass('open-flex');
+	$('#menu-lv1-3').hover(function(){
+		$('#menu-lv1-3').nextAll('.sub-menu-cruises').addClass('open-flex');
+	},function(){
+		setTimeout(function(){
+			$('.sub-menu-cruises').removeClass('open-flex');
+		}, 100);
 	});
 	$('.sub-menu-cruises').hover(function(){
         $(this).css('display','flex');
@@ -33,15 +37,24 @@ $(document).ready(function() {
         $('#menu-lv1-3 a').removeClass('open-opacity');
 	});
 	$('header').next('section').css('margin-top',`${$('header').height()}px`);
+	if ($('body').width() > 991) {
+
+	}
 	$(window).bind('scroll', function(){
-			nav1Height = $('#nav-1').height() + 100;
-	        if($(this).scrollTop() > 100){
-	        	$('.main-menu').css('order','2');
-	        	$('.brand').css('display','none');
+		if ($('body').width() > 991) {
+			if($(this).scrollTop() > 200){
+	        	$('header .menu-wrap').addClass('menu-wrap-scroll');
 	        } else{
-	            $('#nav-2').css('display','none');
+	            $('header .menu-wrap').removeClass('menu-wrap-scroll');
 	        }
-        });
+		} else{
+			if($(this).scrollTop() > 100){
+	        	$('header .menu-wrap .brand').css('width','5%');
+	        } else{
+	            $('header .menu-wrap .brand').css('width','10%');
+	        }
+		}
+	});
 //==============end header==============
 	$('.tooltip>span').each(function(){
 		$(this).css('left',`-${$(this).width()/2 -7}px`);
