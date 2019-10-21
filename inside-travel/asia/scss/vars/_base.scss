@@ -302,6 +302,9 @@ select:focus {
 .open-opacity:after,.open-opacity:before{
     opacity: 1!important;
 }
+.close-opacity:after,.close-opacity:before{
+    opacity: 0!important;
+}
 .banner-top {
     position: relative;
     margin-top: 0;
@@ -956,8 +959,8 @@ select:focus {
         width: 100%;
     }
     .mg-left, .mg-right{
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .col-sm-12{
         width: 100%;

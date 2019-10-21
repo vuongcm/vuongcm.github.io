@@ -91,6 +91,9 @@ header{
     				color: $main-color;
     				@include smooth(.2s);
     				font-size: 13px;
+    				&>i{
+    					display: none;
+    				}
     			}
     			&:before{
 					background-color: $higlight-color;
@@ -225,7 +228,6 @@ header{
 			position: relative;
 			line-height: 1;
 			overflow: hidden;
-			@include smooth(0.25s);
 			opacity: .8;
 			display: flex;
 			justify-content: center;
@@ -243,6 +245,9 @@ header{
 				text-transform: uppercase;
 				font-weight: 700;
 				color: $main-color;
+				&>i{
+					display: none;
+				}
 			}
 			&:hover>img{
 				@include scale(1.1);
@@ -258,7 +263,7 @@ header{
 			margin-bottom: 10px;
 			margin-top: 10px;
 		}
-		&>div{
+		&>.menu-lv-3{
 			text-align: center;
 			font-size: 13px;
 			padding: 0 15px;
@@ -291,7 +296,6 @@ header{
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: center;
-			@include smooth(0.5s);
 			overflow: hidden;
 			img{
 				width: 60%;
@@ -336,8 +340,6 @@ header{
 			padding-bottom: 30px;
 			padding-top: 30px;
 			text-transform: uppercase;
-			color: #111;
-			@include smooth(0.2s);
 			font-size: 13px;
 		}
 	}
@@ -369,10 +371,17 @@ header{
 	}
 }
 @media (max-width: 991px) {
+	.close-menu{
+		display: none!important;
+	}
+	.close-opacity-menu:after,.close-opacity-menu:before{
+	    opacity: 0!important;
+	}
 	header{
 		.menu-wrap{
 			margin-top: 10px;
 			border-bottom: 1px solid #dcdcdc;
+			position: relative;
 			.search-nav{
 				width: 18%;
 				margin-bottom: 10px;
@@ -404,6 +413,7 @@ header{
 					display: none;
 				}
 				.login-top{
+					margin-right: 5px;
 					a{
 						font{
 							display: none;
@@ -417,7 +427,150 @@ header{
 			}
 			.main-menu{
 				display: none;
-				flex-wrap: wrap;
+				flex-direction: column;
+				position: absolute;
+				top: 100%;
+				margin-top: 0;
+				width: auto;
+				border-right: 1px solid #dcdcdc;
+				&>li{
+					width: 100%;
+					&:before{
+						display: none;
+					}
+					&>a{
+						line-height: 1;
+						margin-right: 0;
+						margin-left: 0;
+						padding-left: 50px;
+						padding-right: 50px;
+						width: 100%;
+						&:focus{
+							background-color: $background-color-st1;
+						}
+					}
+				}
+				&>.sub-menu-title{
+					&>a{
+						&>i{
+							display: inline-block;
+							margin-left: 5px;
+							font-style: normal;
+							font-size: 16px;
+						}
+						&:before{
+							top: calc(50% - 6px);
+							left: calc(100% - 6px);
+						}
+						&:after{
+							top: calc(50% - 2px);
+							left: calc(100% - 2px);
+						}
+						&:hover:before{
+							opacity: 0;
+	    				}
+	    				&:hover:after{
+	    					opacity: 0;
+	    				}
+					}
+				}
+			}
+			
+		}
+	}
+	.sub-menu{
+		top: 0;
+		left: calc(100% + 1px);
+		padding: 0;
+		flex-direction: column;
+		&>li{
+			padding: 0;
+			width: 100%;
+			margin-left: 0;
+			&>a:first-child{
+				margin: 0;
+				img{
+					display: none;
+				}
+				&>span{
+					position: static;
+					background-color: transparent;
+					font-weight: 400;
+					padding: 0;
+					justify-content: flex-start;
+					&>i{
+						display: inline-block;
+						margin-left: 5px;
+						font-size: 16px;
+						font-style: normal;
+						@include rotage(90deg)
+					}
+				}
+				&:hover>span{
+					color: $main-color;
+				}
+			}
+			&>.menu-lv-3{
+				padding: 0;
+				display: none;
+				text-align: left;
+				a{
+					padding: 10px 10px 10px 50px;
+					width: 100%;
+				}
+			}
+			&>a{
+				padding: 20px;
+				width: 100%;
+			}
+		}
+	}
+	.sub-menu-destinations{
+		&>li{
+			&>a:nth-child(2){
+				display: none;
+			}
+			.btn-st2{
+				display: none;
+			}
+		}
+	}
+	.sub-menu-travel{
+		width: auto;
+		&>li{
+			a{
+				span{
+					margin: 0;
+					white-space: nowrap;
+					text-align: left;
+				}
+			}
+
+		}
+	}
+}
+@media (max-width: 767px) {
+	header{
+		.menu-wrap{
+			.global-menu{
+				padding-left: 0;
+				.book-top{
+					width: 80%;
+					button{
+						padding-left: 0;
+						padding-right: 0;
+						width: 100%;
+					}
+				}
+
+			}
+			.main-menu{
+				&>li{
+					&>a{
+						padding-left: 20px;
+						padding-right: 20px;
+					}
+				}
 			}
 		}
 	}

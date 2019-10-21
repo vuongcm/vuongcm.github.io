@@ -1,45 +1,44 @@
 $(document).ready(function() {
 	//===========header
-	$('#menu-lv1-1').hover(function(){
-		$('#menu-lv1-1').nextAll('.sub-menu-destinations').toggleClass('open-flex');
-	});
-	$('.sub-menu-destinations').hover(function(){
-        $(this).css('display','flex');
-        $('#menu-lv1-1 a').addClass('open-opacity');
-    },function(){
-        $(this).css('display','none');
-        $('#menu-lv1-1 a').removeClass('open-opacity');
-	});
+	if($('body').width() > 991){
+		$('#menu-lv1-1').hover(function(){
+			$('#menu-lv1-1').nextAll('.sub-menu-destinations').toggleClass('open-flex');
+		});
+		$('.sub-menu-destinations').hover(function(){
+	        $(this).css('display','flex');
+	        $('#menu-lv1-1 a').addClass('open-opacity');
+	    },function(){
+	        $(this).css('display','none');
+	        $('#menu-lv1-1 a').removeClass('open-opacity');
+		});
 
-	$('#menu-lv1-2').hover(function(){
-		$('#menu-lv1-2').nextAll('.sub-menu-travel').toggleClass('open-flex');
-	});
-	$('.sub-menu-travel').hover(function(){
-        $(this).css('display','flex');
-        $('#menu-lv1-2 a').addClass('open-opacity');
-    },function(){
-        $(this).css('display','none');
-        $('#menu-lv1-2 a').removeClass('open-opacity');
-	});
+		$('#menu-lv1-2').hover(function(){
+			$('#menu-lv1-2').nextAll('.sub-menu-travel').toggleClass('open-flex');
+		});
+		$('.sub-menu-travel').hover(function(){
+	        $(this).css('display','flex');
+	        $('#menu-lv1-2 a').addClass('open-opacity');
+	    },function(){
+	        $(this).css('display','none');
+	        $('#menu-lv1-2 a').removeClass('open-opacity');
+		});
 
-	$('#menu-lv1-3').hover(function(){
-		$('#menu-lv1-3').nextAll('.sub-menu-cruises').addClass('open-flex');
-	},function(){
-		setTimeout(function(){
-			$('.sub-menu-cruises').removeClass('open-flex');
-		}, 100);
-	});
-	$('.sub-menu-cruises').hover(function(){
-        $(this).css('display','flex');
-        $('#menu-lv1-3 a').addClass('open-opacity');
-    },function(){
-        $(this).css('display','none');
-        $('#menu-lv1-3 a').removeClass('open-opacity');
-	});
-	$('header').next('section').css('margin-top',`${$('header').height()}px`);
-	if ($('body').width() > 991) {
-
+		$('#menu-lv1-3').hover(function(){
+			$('#menu-lv1-3').nextAll('.sub-menu-cruises').addClass('open-flex');
+		},function(){
+			setTimeout(function(){
+				$('.sub-menu-cruises').removeClass('open-flex');
+			}, 100);
+		});
+		$('.sub-menu-cruises').hover(function(){
+	        $(this).css('display','flex');
+	        $('#menu-lv1-3 a').addClass('open-opacity');
+	    },function(){
+	        $(this).css('display','none');
+	        $('#menu-lv1-3 a').removeClass('open-opacity');
+		});
 	}
+	$('header').next('section').css('margin-top',`${$('header').height()}px`);
 	$(window).bind('scroll', function(){
 		if ($('body').width() > 991) {
 			if($(this).scrollTop() > 200){
@@ -55,6 +54,38 @@ $(document).ready(function() {
 	        }
 		}
 	});
+	if ($('body').width() <= 991) {
+		$('.search-nav button').click(function(){
+			$('.main-menu').toggleClass('open-flex');
+		});
+		$('body').click(function(e){
+			if (!$('.main-menu,.search-nav button').is(e.target) && $('.main-menu,.search-nav button').has(e.target).length === 0) {
+	            $('.main-menu').removeClass('open-flex');
+	        }
+		});
+		for(let i=0; i<3; i++){
+			$('.sub-menu-title a').eq(i).click(function(){
+				if($('.sub-menu').eq(i).attr('class').indexOf('open-flex') == -1){
+					$('.sub-menu').removeClass('open-flex');
+					$('.sub-menu-title a').removeClass('open-opacity');
+					$('.sub-menu').eq(i).addClass('open-flex');
+					$('.sub-menu-title a').eq(i).addClass('open-opacity');
+				}
+				else {
+					$('.sub-menu').removeClass('open-flex');
+					$('.sub-menu-title a').removeClass('open-opacity');
+				}
+			});
+		}
+		$('.sub-menu-destinations li>a:first-child').click(function(){
+			if($(this).nextAll('.menu-lv-3').attr('class').indexOf('open-block') == -1){
+				$('.sub-menu-destinations li>a:first-child').nextAll('div').removeClass('open-block');
+				$(this).nextAll('div').addClass('open-block');
+			} else{
+				$('.sub-menu-destinations li>a:first-child').nextAll('div').removeClass('open-block');
+			}
+		});
+	}
 //==============end header==============
 	$('.tooltip>span').each(function(){
 		$(this).css('left',`-${$(this).width()/2 -7}px`);
