@@ -75,6 +75,20 @@ $color-cover-dak: rgba(51, 39, 21, .4);
     background: -moz-linear-gradient(right, $val);
     background: linear-gradient(to right, $val);
 }
+@mixin gradient3(){
+    background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,0.65)));
+    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 50%);
+    background: -moz-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 50%);
+    background: -ms-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 50%);
+    background: -o-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 50%);
+}
+@mixin gradient4(){
+    background: -webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,0)),to(rgba(0,0,0,0.65)));
+    background: -webkit-linear-gradient(bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 50%);
+    background: -moz-linear-gradient(bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 50%);
+    background: -ms-linear-gradient(bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 50%);
+    background: -o-linear-gradient(bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 50%);
+}
 @mixin translate2d($x,$y){
     transform: translate($x,$y);
     -moz-transform: translate($x,$y);

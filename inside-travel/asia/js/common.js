@@ -46,11 +46,17 @@ $(document).ready(function() {
 	        } else{
 	            $('header .menu-wrap').removeClass('menu-wrap-scroll');
 	        }
-		} else{
+		} else if($('body').width() > 520){
 			if($(this).scrollTop() > 100){
 	        	$('header .menu-wrap .brand').css('width','5%');
 	        } else{
 	            $('header .menu-wrap .brand').css('width','10%');
+	        }
+		} else{
+			if($(this).scrollTop() > 100){
+	        	$('header .menu-wrap .brand').css('width','15%');
+	        } else{
+	            $('header .menu-wrap .brand').css('width','20%');
 	        }
 		}
 	});
@@ -75,6 +81,9 @@ $(document).ready(function() {
 					$('.sub-menu').removeClass('open-flex');
 					$('.sub-menu-title a').removeClass('open-opacity');
 				}
+				if($('body').width() <= 520){
+					$('.main-menu').addClass('main-menu-transform');
+				}
 			});
 		}
 		$('.sub-menu-destinations li>a:first-child').click(function(){
@@ -84,6 +93,12 @@ $(document).ready(function() {
 			} else{
 				$('.sub-menu-destinations li>a:first-child').nextAll('div').removeClass('open-block');
 			}
+		});
+	}
+	if ($('body').width() <= 520) {
+		$('.menu-mobile-back button').click(function(){
+			$('.main-menu').removeClass('main-menu-transform');
+			$('.sub-menu').removeClass('open-flex');
 		});
 	}
 //==============end header==============
@@ -127,6 +142,7 @@ $(document).ready(function() {
 	    });
 	}
 	//carousel-st2
+	let bodyWidth = $('body').width();
 	if ($('.wrap-slide-st2').length > 0) {
 		$(`.wrap-slide-st2 .gallery`).slick({
 			slidesToShow: 3,
@@ -137,7 +153,16 @@ $(document).ready(function() {
 			useTransform: false,
 			initialSlide: 2,
 	        prevArrow: `.wrap-slide-st2 .arrow-left`,
-	        nextArrow: `.wrap-slide-st2 .arrow-right`
+	        nextArrow: `.wrap-slide-st2 .arrow-right`,
+	        responsive: [
+		    {
+		      breakpoint: 992,
+		      settings: {
+		      	slidesToShow: 1,
+		        centerPadding: `${bodyWidth/4.5}px`
+		      }
+		    }
+		  ]
 	    });
 	}
 	//carousel-st3
@@ -154,6 +179,8 @@ $(document).ready(function() {
 	}
 });
 window.onload = function() {
-	$('.map-home').height($('.map-home img').height());
+	if($('body').width() > 767){
+		$('.map-home').height($('.map-home img').height());
+	}
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());
 };
