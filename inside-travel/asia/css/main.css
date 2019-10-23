@@ -151,7 +151,8 @@ a {
 
 button:hover, a:hover {
   text-decoration: none;
-  opacity: .8; }
+  opacity: .8;
+  color: #ccaf3d; }
 
 section {
   margin: 30px 0 45px;
@@ -271,7 +272,8 @@ select:focus {
   border-bottom: 1px solid #111; }
 
 .link-st2:hover {
-  opacity: .8; }
+  opacity: .8;
+  color: #ccaf3d; }
 
 .link-st3 {
   color: #111;
@@ -287,15 +289,18 @@ select:focus {
     -webkit-animation: lineAnimatedOut 0.5s;
     -o-animation: lineAnimatedOut 0.5s;
     width: 100%; }
+  .link-st3:hover {
+    color: #ccaf3d; }
   .link-st3:hover:after {
     animation: lineAnimatedIn 0.5s;
     -moz-animation: lineAnimatedIn 0.5s;
     -webkit-animation: lineAnimatedIn 0.5s;
     -o-animation: lineAnimatedIn 0.5s;
-    width: 0; }
+    width: 0;
+    background-color: #ccaf3d; }
 
 .title-h1 {
-  font-size: 26px;
+  font-size: 30px;
   font-family: 'Theano Didot','Times New Roman', serif;
   font-weight: 600;
   letter-spacing: 2px;
@@ -304,7 +309,7 @@ select:focus {
   color: #111; }
 
 .title-h2-line {
-  font-size: 25px;
+  font-size: 28px;
   font-family: 'Theano Didot','Times New Roman', serif;
   letter-spacing: 2px;
   color: #111;
@@ -315,7 +320,7 @@ select:focus {
 
 .title-h2-line:after {
   max-width: 200px;
-  height: 2px;
+  height: 1px;
   display: block;
   background-color: #c1aa80;
   margin: 15px auto 20px;
@@ -425,9 +430,8 @@ select:focus {
 
 .box-text {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-content: center; }
+  align-items: center; }
   .box-text h1, .box-text h2, .box-text h3, .box-text h4 {
     font-size: 20px;
     color: #fff;
@@ -821,7 +825,7 @@ select:focus {
   .trip > a:first-child {
     width: 100%; }
   .trip h3 {
-    font-size: 16px;
+    font-size: 14px;
     padding-left: 15px;
     padding-right: 15px;
     line-height: 1.5;
@@ -834,7 +838,7 @@ select:focus {
   .trip > span {
     display: block;
     width: 100%;
-    font-size: 18px;
+    font-size: 12px;
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 15px;
@@ -860,7 +864,7 @@ select:focus {
   width: 80%;
   margin: 0 auto; }
   .team-mess p {
-    font-size: 18px;
+    font-size: 14px;
     letter-spacing: 2px;
     text-align: center;
     padding-right: 15px;
@@ -872,6 +876,7 @@ select:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
   width: 80%;
   margin: 15px auto; }
   .team-quote > img {
@@ -900,7 +905,6 @@ select:focus {
     margin-bottom: 10px; }
   .call-info strong {
     font-size: 22px;
-    font-style: italic;
     color: #ccaf3d;
     margin-left: 5px;
     margin-right: 5px;
@@ -1019,6 +1023,15 @@ select:focus {
   .water-mask {
     font-size: 56px; } }
 @media (max-width: 767px) {
+  .bg-parallax {
+    z-index: 0; }
+
+  .title-h1 {
+    font-size: 26px; }
+
+  .title-h2-line {
+    font-size: 24px; }
+
   .container {
     width: 100%; }
 
@@ -2086,7 +2099,8 @@ footer .brand-section {
     margin-left: 0; }
     .wrap-map .map-home .synch-carousels {
       min-height: auto;
-      height: 100%; }
+      height: auto;
+      padding-bottom: 15px; }
       .wrap-map .map-home .synch-carousels .item article .paragraph {
         font-size: 11px; }
       .wrap-map .map-home .synch-carousels .nav-arrows {
@@ -2131,10 +2145,8 @@ footer .brand-section {
     .wrap-map .map-home .synch-carousels {
       width: 65%;
       margin: 0 auto;
-      height: auto;
       top: 10%;
-      left: 0;
-      padding-bottom: 15px; }
+      left: 0; }
     .wrap-map .map-home .wrap-coo {
       display: none; } }
 @media (max-width: 479px) {

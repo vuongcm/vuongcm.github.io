@@ -96,6 +96,7 @@ a {
 button:hover,a:hover {
 	text-decoration: none;
 	opacity: .8;
+    color: $higlight-color;
 }
 section {
 	margin: 30px 0 45px;
@@ -204,6 +205,7 @@ select:focus {
 }
 .link-st2:hover{
     opacity: .8;
+    color: $higlight-color;
 }
 .link-st3{
     color: $title-color;
@@ -217,13 +219,17 @@ select:focus {
         @include animationed(lineAnimatedOut,.5s);
         width: 100%;
     }
+    &:hover{
+        color: $higlight-color;
+    }
     &:hover:after{
         @include animationed(lineAnimatedIn,.5s);
         width: 0;
+        background-color: $higlight-color;
     }
 }
 .title-h1 {
-	font-size: 26px;
+	font-size: 30px;
 	font-family: 'Theano Didot','Times New Roman', serif;
 	font-weight: 600;
 	letter-spacing: 2px;
@@ -232,7 +238,7 @@ select:focus {
     color: $title-color;
 }
 .title-h2-line {
-    font-size: 25px;
+    font-size: 28px;
     font-family: 'Theano Didot','Times New Roman', serif;
     letter-spacing: 2px;
     color: $title-color;
@@ -243,7 +249,7 @@ select:focus {
 }
 .title-h2-line:after{
     max-width: 200px;
-    height: 2px;
+    height: 1px;
     display: block;
     background-color: #c1aa80;
     margin: 15px auto 20px;
@@ -349,9 +355,8 @@ select:focus {
 }
 .box-text{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     h1,h2,h3,h4{
         font-size: 20px;
         color: #fff;
@@ -797,7 +802,7 @@ select:focus {
         width: 100%;
     }
     h3{
-        font-size: 16px;
+        font-size: 14px;
         padding-left: 15px;
         padding-right: 15px;
         line-height: 1.5;
@@ -812,7 +817,7 @@ select:focus {
     &>span{
         display: block;
         width: 100%;
-        font-size: 18px;
+        font-size: 12px;
         padding-left: 15px;
         padding-right: 15px;
         margin-top: 15px;
@@ -842,7 +847,7 @@ select:focus {
     width: 80%;
     margin: 0 auto;
     p{
-        font-size: 18px;
+        font-size: 14px;
         letter-spacing: 2px;
         text-align: center;
         padding-right: 15px;
@@ -855,6 +860,7 @@ select:focus {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
     width: 80%;
     margin: 15px auto;
     &>img{
@@ -886,7 +892,6 @@ select:focus {
     }
     strong{
         font-size: 22px;
-        font-style: italic;
         color: $higlight-color;
         margin-left: 5px;
         margin-right: 5px;
@@ -1035,6 +1040,15 @@ select:focus {
     }
 }
 @media (max-width: 767px) {
+    .bg-parallax{
+        z-index: 0;
+    }
+    .title-h1{
+        font-size: 26px;
+    }
+    .title-h2-line{
+        font-size: 24px;
+    }
     .container{
         width: 100%;
     }

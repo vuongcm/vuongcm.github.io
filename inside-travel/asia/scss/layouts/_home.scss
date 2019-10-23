@@ -235,7 +235,8 @@
 		.map-home{
 			.synch-carousels{
 				min-height: auto;
-				height: 100%;
+				height: auto;
+				padding-bottom: 15px;
 				.item{
 					article{
 						.paragraph{
@@ -297,10 +298,8 @@
 			.synch-carousels{
 				width: 65%;
 				margin: 0 auto;
-				height: auto;
 				top: 10%;
 				left: 0;
-				padding-bottom: 15px;
 			}
 			.wrap-coo{
 				display: none;
