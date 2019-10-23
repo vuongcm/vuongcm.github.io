@@ -281,6 +281,7 @@
 				padding-bottom: 10px;
 				padding-top: 10px;
 				border-top: 1px solid #d8d8d8;
+				border-right: none;
 				&:first-child{
 					border-top: none;
 				}
@@ -299,9 +300,19 @@
 				height: auto;
 				top: 10%;
 				left: 0;
+				padding-bottom: 15px;
 			}
 			.wrap-coo{
 				display: none;
+			}
+		}
+	}
+}
+@media (max-width: 479px) {
+	.wrap-map{
+		.map-home{
+			.synch-carousels{
+				width: 75%;
 			}
 		}
 	}

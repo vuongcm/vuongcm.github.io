@@ -444,7 +444,7 @@ select:focus {
     p{
         font-size: 11px;
         font-weight: 300;
-        max-height: 45px;
+        //max-height: 45px;
     }
 }
 .type-rotate{
@@ -1056,6 +1056,14 @@ select:focus {
     }
     .wrap-mini-intro{
         width: 80%;
+        .paragraph{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .paragraph{
+        padding-left: 15px;
+        padding-right: 15px;
     }
     .map-coo{
         width: 7px;
@@ -1084,7 +1092,11 @@ select:focus {
         }
         .gallery{
             width: 88%;
-            .item>a:first-child{
+            .item{
+                .paragraph{
+                    padding-left: 0;
+                    padding-right: 0;
+                }
             }
         }
     }
@@ -1114,6 +1126,9 @@ select:focus {
     }
 }
 @media (max-width: 479px) {
+    body {
+        font-size: 11px;
+    }
     .col-xsm-12{
         width: 100%;
     }
@@ -1125,6 +1140,59 @@ select:focus {
     }
     .col-xsm-3{
         width: 25%;
+    }
+    .wrap-mini-intro{
+        width: 90%;
+    }
+    .wrap-slide-st1{
+        .synch-carousels{
+             .nav-arrows{
+                top: 50px;
+                button{
+                    i{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .gallery{
+            width: 85%;
+        }
+    }
+    .team-quote{
+        width: 90%;
+    }
+    .team-mess{
+        width: 100%;
+        p{
+            font-size: 16px;
+        }
+    }
+    .call-info{
+        width: 90%;
+    }
+    .wrap-slide-st3{
+        .item{
+            &>div:first-child{
+                padding-right: 5px;
+            }
+            &>div:last-child{
+                padding-left: 5px;
+                &>p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .water-mask{
+        font-size: 27px;
+    }
+}
+@media (max-width: 375px) {
+    .water-mask{
+        font-size: 22px;
+        margin-bottom: 15px;
+        margin-top: 15px;
     }
 }
 @keyframes fadein {
