@@ -38,7 +38,7 @@ $(document).ready(function() {
 	        $('#menu-lv1-3 a').removeClass('open-opacity');
 		});
 	}
-	$('header').next('section').css('margin-top',`${$('header').height()}px`);
+	$('header').next('section').css('padding-top',`${$('header').height()}px`);
 	$(window).bind('scroll', function(){
 		if ($('body').width() > 991) {
 			if($(this).scrollTop() > 200){
@@ -48,9 +48,9 @@ $(document).ready(function() {
 	        }
 		} else if($('body').width() > 520){
 			if($(this).scrollTop() > 100){
-	        	$('header .menu-wrap .brand').css('width','5%');
+	        	$('header .menu-wrap .brand').css('width','10%');
 	        } else{
-	            $('header .menu-wrap .brand').css('width','10%');
+	            $('header .menu-wrap .brand').css('width','15%');
 	        }
 		} else{
 			if($(this).scrollTop() > 100){
@@ -177,6 +177,29 @@ $(document).ready(function() {
 			arrows: false
 		});
 	}
+	//================modal===================
+	$('.btn-contact').click(function(){
+		$('.modal-container').removeClass('close-display');
+		$('#contact-modal').removeClass('close-display');
+		$('body').css('--modalWidth',`${$('#contact-modal').outerWidth()}px`);
+	});
+	$('.modal-container').on('click',function(){
+		$(this).addClass('close-display');
+		$('.modal').addClass('close-display');
+	});
+	$('.btn-close').click(function(){
+		$(this).closest('.modal').addClass('close-display');
+		$('.modal-container').addClass('close-display');
+	});
+	//============search box=============
+	$('.booking-step-where .text').on('click',function(){
+		$(this).next('.value').toggleClass('open-block');
+	});
+	$('body').click(function(e){
+		if (!$('.booking-step-where .text,.booking-step-where .value').is(e.target) && $('.booking-step-where .text,.booking-step-where .value').has(e.target).length === 0) {
+            $('.booking-step-where .value').removeClass('open-block');
+        }
+	});
 });
 window.onload = function() {
 	if($('body').width() > 767){

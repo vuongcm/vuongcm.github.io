@@ -19,6 +19,10 @@
 					<i class="icon-font bars"></i>
 					<i class="icon-font search"></i>
 				</button>
+				<a href="#" class="phone-box">
+					<i class="icon-font phone"></i>
+					<strong>+84 96 564 257</strong>
+				</a>
 				<i class="icon-font search"></i>
 				<input class="input-st1" type="search" name="search-nav" placeholder="Search">
 			</div>
@@ -43,7 +47,7 @@
 				<li class="login-top">
 					<a href="#"><i class="icon-font user-regular"></i><font>Account</font></a>
 				</li>
-				<li class="book-top"><button class="btn-st1">enquire</button></li>
+				<li class="book-top"><button class="btn-st1 btn-contact">enquire</button></li>
 			</ul>
 			<ul class="main-menu">
 				<div class="search-menu-tablet">
@@ -235,71 +239,122 @@
 	<div id="booking-widget-homepage">
 		<form action="">
 			<div class="booking-step-where">
-				<select id="states">
-					<option value="">Where</option>
-					<optgroup label="Alaskan/Hawaiian Time Zone">
-						<option value="VN">Vietnam</option>
-						<option value="HI">Hawaii</option>
-					</optgroup>
-
-					<optgroup label="Pacific Time Zone">
-						<option value="CA">California</option>
-						<option value="NV">Nevada</option>
-						<option value="OR">Oregon</option>
-						<option value="WA">Washington</option>
-					</optgroup>
-
-					<optgroup label="Mountain Time Zone">
-						<option value="AZ">Arizona</option>
-						<option value="CO">Colorado</option>
-						<option value="ID">Idaho</option>
-						<option value="MT">Montana</option><option value="NE">Nebraska</option>
-						<option value="NM">New Mexico</option>
-						<option value="ND">North Dakota</option>
-						<option value="UT">Utah</option>
-						<option value="WY">Wyoming</option>
-					</optgroup>
-
-					<optgroup label="Central Time Zone">
-						<option value="AL">Alabama</option>
-						<option value="AR">Arkansas</option>
-						<option value="IL">Illinois</option>
-						<option value="IA">Iowa</option>
-						<option value="KS">Kansas</option>
-						<option value="KY">Kentucky</option>
-						<option value="LA">Louisiana</option>
-						<option value="MN">Minnesota</option>
-						<option value="MS">Mississippi</option>
-						<option value="MO">Missouri</option>
-						<option value="OK">Oklahoma</option>
-						<option value="SD">South Dakota</option>
-						<option value="TX">Texas</option>
-						<option value="TN">Tennessee</option>
-						<option value="WI">Wisconsin</option>
-					</optgroup>
-
-					<optgroup label="Eastern Time Zone">
-						<option value="CT">Connecticut</option>
-						<option value="DE">Delaware</option>
-						<option value="FL">Florida</option>
-						<option value="GA">Georgia</option>
-						<option value="IN">Indiana</option>
-						<option value="ME">Maine</option>
-						<option value="MD">Maryland</option>
-						<option value="MA">Massachusetts</option>
-						<option value="MI">Michigan</option>
-						<option value="NH">New Hampshire</option><option value="NJ">New Jersey</option>
-						<option value="NY">New York</option>
-						<option value="NC">North Carolina</option>
-						<option value="OH">Ohio</option>
-						<option value="PA">Pennsylvania</option>
-						<option value="RI">Rhode Island</option>
-						<option value="SC">South Carolina</option>
-						<option value="VT">Vermont</option>
-						<option value="VA">Virginia</option>
-						<option value="WV">West Virginia</option>
-					</optgroup>
+				<select id="states" name="">
+					<option value="" selected></option>
 				</select>
+				<span class="text">Where do you want to go?<i class="icon-font select-arrow-thin"></i></span>
+				<ul class="value">
+					<li>
+						<span>Alaskan/Hawaiian Time Zone</span>
+						<ul>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Vietnam</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Hawaii</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span>Pacific Time Zone</span>
+						<ul>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>California</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Nevada</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Oregon</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Washington</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span>Mountain Time Zone</span>
+						<ul>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Arizona</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Colorado</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Idaho</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Montana</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Nebraska</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>New Mexico</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>North Dakota</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Utah</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Wyoming</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span>Central Time Zone</span>
+						<ul>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Alabama</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Arkansas</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Illinois</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Iowa</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Kansas</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Kentucky</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Louisiana</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Minnesota</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Mississippi</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Missouri</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Oklahoma</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>South Dakota</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Texas</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Tennessee</a>
+							</li>
+							<li>
+								<a href="javascript:"><i class="icon-font map-marker"></i>Wisconsin</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 			<div class="booking-step-when">
 				<input type="text" placeholder="When">
@@ -314,7 +369,7 @@
 				<i class="icon-font plus"></i>
 			</div>
 			<div class="booking-step-submit">
-				<button type="submit">create my trip</button>
+				<button class="btn-st3" type="submit">create my trip</button>
 			</div>
 		</form>
 	</div>
@@ -377,7 +432,7 @@
 							<h4>Eastern & Oriental Express</h4>
 							<p class="paragraph">Depart from Singapore and settle into your luxurious cabin as the train begins a breathtaking, rolling journey through the southern Malaysian countryside.</p>
 						</article>
-						<a href="#" class="link-st2">Discover more</a>
+						<a href="#" class="link-st3">Discover more</a>
 					</div>
 					<div class="item">
 						<img src="images/Siem-Reap-slider.jpg" alt="Siem Reap" title="Siem Reap">
@@ -386,7 +441,7 @@
 							<h4>Belmond La Résidence d'Angkor</h4>
 							<p class="paragraph">An oasis of calm, discover a gateway to Cambodia’s old and new worlds: the temples of Angkor Wat and the thriving town of Siem Reap.</p>
 						</article>
-						<a href="#" class="link-st2">Discover more</a>
+						<a href="#" class="link-st3">Discover more</a>
 					</div>
 					<div class="item">
 						<img src="images/bali-slider.jpg" alt="Bali" title="Bali">
@@ -395,7 +450,7 @@
 							<h4>Belmond Jimbaran Puri</h4>
 							<p class="paragraph">Experience true serenity on the golden sands of Jimbaran Bay, hemmed by jungle and lapped by the waves of the Indian Ocean.</p>
 						</article>
-						<a href="#" class="link-st2">Discover more</a>
+						<a href="#" class="link-st3">Discover more</a>
 					</div>
 					<div class="item">
 						<img src="images/Luang-Prabang-slider.jpg" alt="Luang Prabang" title="Luang Prabang">
@@ -404,7 +459,7 @@
 							<h4>Belmond La Résidence Phou Vao</h4>
 							<p class="paragraph">Once the country’s royal capital, Luang Prabang now stands as a UNESCO World Heritage site. Ancient temples and nostalgic architecture whisk you into Laos’ past.</p>
 						</article>
-						<a href="#" class="link-st2">Discover more</a>
+						<a href="#" class="link-st3">Discover more</a>
 					</div>
 					<div class="item">
 						<img src="images/Luang-Prabang-slider.jpg" alt="Luang Prabang" title="Luang Prabang">
@@ -422,7 +477,7 @@
 							<h4>Belmond Governor's Residence</h4>
 							<p class="paragraph">Make your base in the leafy embassy quarter of Yangon, Myanmar’s largest city —a region that’s simultaneously steeped in history and humming with promise.</p>
 						</article>
-						<a href="#" class="link-st2">Discover more</a>
+						<a href="#" class="link-st3">Discover more</a>
 					</div>
 					<div class="item">
 						<img src="images/Bagan-slider.jpg" alt="Bagan" title="Bagan">
@@ -431,7 +486,7 @@
 							<h4>Belmond Road to Mandalay</h4>
 							<p class="paragraph">Bagan is the ancient capital of the Kingdom of Pagan, and home to over two thousand ancient pagodas. The countryside surrounding the city is just as stunning,</p>
 						</article>
-						<a href="#" class="link-st2">Discover more</a>
+						<a href="#" class="link-st3">Discover more</a>
 					</div>
 					<div class="item">
 						<img src="images/Mandalay-slider.jpg" alt="Mandalay" title="Mandalay">
@@ -440,7 +495,7 @@
 							<h4>Belmond Road to Mandalay</h4>
 							<p class="paragraph">Steeped in mystique and immortalised in Rudyard Kipling’s famous poem, Mandalay is a city that more than lives up to its romantic reputation as Myanmar’s last royal city.</p>
 						</article>
-						<a href="#" class="link-st2">Discover more</a>
+						<a href="#" class="link-st3">Discover more</a>
 					</div>
 					<div class="item">
 						<img src="images/vietnam-slider.jpg" alt="Vietnam" title="Vietnam">
@@ -449,7 +504,7 @@
 							<h4>The timeless Charm</h4>
 							<p class="paragraph">Set off from Bangkok and cross the emerald jungles of Southeast Asia in style on one of the world’s most luxurious trains.</p>
 						</article>
-						<a href="#" class="link-st2">Discover more</a>
+						<a href="#" class="link-st3">Discover more</a>
 					</div>
 				</div>
 				<div class="nav-arrows">
@@ -1226,6 +1281,37 @@
 		</div>
 	</div>
 </footer>
+<div class="modal-container close-display"></div>
+<div id="contact-modal" class="modal close-display">
+    <button class="btn-close">&times;</button>
+    <h3>Contact Us</h3>
+    <p>Our team of experts can help answer any questions you might have. Please fill out the form below and a consultant will respond shortly.</p>
+    <div class="form-box">
+        <form action="#">
+            <div class="form-field col-xlg-12">
+                <input type="text" name="" placeholder="Subject *" required>
+            </div>
+            <div class="form-field col-xlg-12">
+                <textarea name="" placeholder="Message *" required></textarea>
+            </div>
+            <div class="half">
+                <div class="form-field col-xlg-6">
+                    <input type="text" name=""  placeholder="Your Name *" required>
+                </div>
+                <div class="form-field col-xlg-6">
+                    <input type="email" name="" placeholder="Email *" required>
+                </div>
+            </div>
+            <button class="btn-st3" type="submit">Submit Message</button>
+        </form>
+    </div>
+    <div class="call-us">
+        <div>Give us a call:</div>
+        <p>US &amp; Canada: +1 888 263 2574<br> UK: +0 800 098 8486<br> AUS: +1 800 044 986</p>
+        <div>Send an email:</div>
+        <p><a href="mailto:contact@enchantingtravels.com">contact@enchantingtravels.com</a></p>
+    </div>
+</div>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js" defer></script>
 <script type="text/javascript" src="js/dateselector.min.js" defer></script>

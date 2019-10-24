@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/slick.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta charset="utf-8"/>
+    <title>Asia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700|Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/icon.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/dateselector.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-<h1 class="title-h1">Uncover the endless treasures of Asia</h1>
-<p class="paragraph">Discover the authentic tapestry of each exceptional Belmond destination in Asia. A diverse world of majestic monuments, vibrant flavours and intriguing cultures. Immerse yourself in Lao culture by giving alms to saffron-robbed monks at dawn. Feel the hum of chanting envelop you as 500 oil lamps are lit at Shwedagon Temple, Myanmar. Our five hotels, enchanting train and pioneering river cruise are filled with exhilarating adventures waiting to be had.</p>
-<button class="btn-st1">book</button>
-<a class="link-st1" href="#">link</a>
-<select class="select-st1" name="header--language-dd" dir="rtl" aria-label="Select language">
+<header>
+    <nav>
+        <div class="menu-wrap">
+            <div class="search-nav mg-left">
+                <button>
+                    <i class="icon-font bars"></i>
+                    <i class="icon-font search"></i>
+                </button>
+                <a href="#" class="phone-box">
+                    <i class="icon-font phone"></i>
+                    <strong>+84 96 564 257</strong>
+                </a>
+                <i class="icon-font search"></i>
+                <input class="input-st1" type="search" name="search-nav" placeholder="Search">
+            </div>
+            <div class="brand">
+            <a href="#">
+                <img src="images/asiatours_logo.svg" alt="Logo">
+            </a>
+            </div>
+            <ul class="global-menu mg-right">
+                <li class="lang-top">
+                    <select class="select-st1" name="header-language">
                         <option selected value="/" lang="en" class="en">English</option>
                         <option  value="/fr/" lang="fr" class="fr">Français</option>
                         <option  value="/de/" lang="de" class="de">Deutsch</option>
@@ -23,6 +42,407 @@
                         <option  value="/ru/" lang="ru" class="ru">Pусский</option>
                         <option  value="/es/" lang="es" class="es">Español</option>
                         <option  value="/pt-br/" lang="pt" class="pt-br">Português</option>
-                     </select>
+                    </select>
+                </li>
+                <li class="login-top">
+                    <a href="#"><i class="icon-font user-regular"></i><font>Account</font></a>
+                </li>
+                <li class="book-top"><button class="btn-st1 btn-contact">enquire</button></li>
+            </ul>
+            <ul class="main-menu">
+                <div class="search-menu-tablet">
+                    <i class="icon-font search"></i>
+                    <input class="input-st1" type="search" name="search-nav" placeholder="Search">
+                </div>
+                <li class="sub-menu-title" id="menu-lv1-1">
+                    <a href="#" class="">Destinations<i>&raquo;</i></a>
+                </li>
+                <li class="sub-menu-title" id="menu-lv1-2">
+                    <a href="#" class="">Travel themes<i>&raquo;</i></a>
+                </li>
+                <li class="sub-menu-title" id="menu-lv1-3">
+                    <a href="#" class="">Cruises<i>&raquo;</i></a>
+                </li>
+                <li class="">
+                    <a href="#" class="">Experiences</a>
+                </li>
+                <li class="">
+                    <a href="#" class="">Pre-Departure</a>
+                </li>
+                <li class="">
+                    <a href="#" class="">About</a>
+                </li>
+                <ul class="sub-menu sub-menu-destinations">
+                    <div class="menu-mobile-back">
+                        <img src="images/demo-mobile-menu.jpg" alt="">
+                        <button><i>&larr;</i></button>
+                        <span>Destinations</span>
+                    </div>
+                    <li class="mg-left">
+                        <a href="#">
+                            <img src="images/vietnam.jpg" alt="Vietnam">
+                            <span>Vietnam<i>&raquo;</i></span>
+                        </a>
+                        <a href="#">
+                            <span class="bg-map-menu bg-map-vi"></span>
+                        </a>
+                        <div class="menu-lv-3">
+                            <a href="#">Best Tours,</a>
+                            <a href="#">Preferred Hotels,</a>
+                            <a href="#">Experiences,</a>
+                            <a href="#">Pre-departure</a>
+                        </div>
+                        <a class="btn-st2" href="#">explore the Vietnam</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/cambodia.jpg" alt="Cambodia">
+                            <span>Cambodia<i>&raquo;</i></span>
+                        </a>
+                        <a href="#">
+                            <span class="bg-map-menu bg-map-ca"></span>
+                        </a>
+                        <div class="menu-lv-3">
+                            <a href="#">Best Tours,</a>
+                            <a href="#">Preferred Hotels,</a>
+                            <a href="#">Experiences,</a>
+                            <a href="#">Pre-departure</a>
+                        </div>
+                        <a class="btn-st2" href="#">explore the Cambodia</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/laos.jpg" alt="Laos">
+                            <span>Laos<i>&raquo;</i></span>
+                        </a>
+                        <a href="#">
+                            <span class="bg-map-menu bg-map-la"></span>
+                        </a>
+                        <div class="menu-lv-3">
+                            <a href="#">Best Tours,</a>
+                            <a href="#">Preferred Hotels,</a>
+                            <a href="#">Experiences,</a>
+                            <a href="#">Pre-departure</a>
+                        </div>
+                        <a class="btn-st2" href="#">explore the Laos</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/myanmar.jpg" alt="Myanmar">
+                            <span>Myanmar<i>&raquo;</i></span>
+                        </a>
+                        <a href="#">
+                            <span class="bg-map-menu bg-map-my"></span>
+                        </a>
+                        <div class="menu-lv-3">
+                            <a href="#">Best Tours,</a>
+                            <a href="#">Preferred Hotels,</a>
+                            <a href="#">Experiences,</a>
+                            <a href="#">Pre-departure</a>
+                        </div>
+                        <a class="btn-st2" href="#">explore the Myanmar</a>
+                    </li>
+                    <li class="mg-right">
+                        <a href="#">
+                            <img src="images/thailand.jpg" alt="Thailand">
+                            <span>Thailand<i>&raquo;</i></span>
+                        </a>
+                        <a href="#">
+                            <span class="bg-map-menu bg-map-th"></span>
+                        </a>
+                        <div class="menu-lv-3">
+                            <a href="#">Best Tours,</a>
+                            <a href="#">Preferred Hotels,</a>
+                            <a href="#">Experiences,</a>
+                            <a href="#">Pre-departure</a>
+                        </div>
+                        <a class="btn-st2" href="#">explore the Thailand</a>
+                    </li>
+                </ul>
+                <ul class="sub-menu sub-menu-travel">
+                    <div class="menu-mobile-back">
+                        <img src="images/demo-mobile-menu-2.jpg" alt="">
+                        <button><i>&larr;</i></button>
+                        <span>Travel themes</span>
+                    </div>
+                    <li class="mg-left">
+                        <a href="#">
+                            <img src="images/test-1_optimized.jpg" alt="">
+                            <span>Best tours</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/test-1_optimized.jpg" alt="">
+                            <span>Classic Highlights</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/test-1_optimized.jpg" alt="">
+                            <span>Family Tours</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/test-1_optimized.jpg" alt="">
+                            <span>Honeymoon Holidays</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/test-1_optimized.jpg" alt="">
+                            <span>Luxury Tours</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/test-1_optimized.jpg" alt="">
+                            <span>Cruise Packages</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/test-1_optimized.jpg" alt="">
+                            <span>Adventure & Special Interest</span>
+                        </a>
+                    </li>
+                    <li class="mg-right">
+                        <a href="#">
+                            <img src="images/test-1_optimized.jpg" alt="">
+                            <span>Day Trips & Short Breaks</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="sub-menu sub-menu-cruises">
+                    <div class="menu-mobile-back">
+                        <img src="images/demo-mobile-menu-3.jpg" alt="">
+                        <button><i>&larr;</i></button>
+                        <span>Cruises</span>
+                    </div>
+                    <li>
+                        <a href="#">halong bay</a>
+                    </li>
+                    <li>
+                        <a href="#">Mekong River</a>
+                    </li>
+                    <li>
+                        <a href="#">Myanmar(Burma)</a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+</header>
+<section class="banner-top">
+    <div class="bg-parallax bg-home"></div>
+    <div id="booking-widget-homepage">
+        <form action="">
+            <div class="booking-step-where">
+                <select id="states">
+                    <option value="">Where</option>
+                    <optgroup label="Alaskan/Hawaiian Time Zone">
+                        <option value="VN">Vietnam</option>
+                        <option value="HI">Hawaii</option>
+                    </optgroup>
+
+                    <optgroup label="Pacific Time Zone">
+                        <option value="CA">California</option>
+                        <option value="NV">Nevada</option>
+                        <option value="OR">Oregon</option>
+                        <option value="WA">Washington</option>
+                    </optgroup>
+
+                    <optgroup label="Mountain Time Zone">
+                        <option value="AZ">Arizona</option>
+                        <option value="CO">Colorado</option>
+                        <option value="ID">Idaho</option>
+                        <option value="MT">Montana</option><option value="NE">Nebraska</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="UT">Utah</option>
+                        <option value="WY">Wyoming</option>
+                    </optgroup>
+
+                    <optgroup label="Central Time Zone">
+                        <option value="AL">Alabama</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TX">Texas</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="WI">Wisconsin</option>
+                    </optgroup>
+
+                    <optgroup label="Eastern Time Zone">
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="IN">Indiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="NH">New Hampshire</option><option value="NJ">New Jersey</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="OH">Ohio</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WV">West Virginia</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="booking-step-when">
+                <input type="text" placeholder="When">
+                <i class="icon-font calendar-regular"></i>
+            </div>
+            <div class="booking-step-room">
+                <input type="text" value="2 Guests, 1 room">
+                <i class="icon-font select-arrow-thin"></i>
+            </div>
+            <div class="booking-step-promo">
+                <input type="text" placeholder="Promo/Corp">
+                <i class="icon-font plus"></i>
+            </div>
+            <div class="booking-step-submit">
+                <button type="submit">create my trip</button>
+            </div>
+        </form>
+    </div>
+</section>
+<footer>
+    
+    <div>
+        <div class="container">
+            <div class="col-xlg-4 col-md-6 col-xsm-12">
+                <article>
+                    <h3>about us</h3>
+                    <p>We are proud to be your gateway to premier private tour experiences throughout Asia. You can choose from any of our amazing itineraries or have one of our friendly native consultants design a unique tour just for you... <a href="#" class="link-st3">Read more</a></p>
+                </article>
+                <article>
+                    <h3>Contact Us</h3>
+                    <p><span>Email:</span>experts@insidetravel.com</p>
+                    <p><span>Hotline:</span>(+84) 916 952 668</p>
+                    <p><span>Address:</span>Suite 316, G3CD Bld, Vu Pham Ham St, Hanoi</p>
+                </article>
+                <article>
+                    <h3>Follow Us</h3>
+                    <a href="#"><i class="icon-font twitter-brands"></i></a>
+                    <a href="#"><i class="icon-font facebook-square-brands"></i></a>
+                    <a href="#"><i class="icon-font instagram-brands"></i></a>
+                </article>
+            </div>
+            <div class="col-xlg-4 col-md-6 col-xsm-12">
+                <article class="col-xlg-6">
+                    <h3>useful information</h3>
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Privacy and cookies</a></li>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">Pre-Departures</a></li>
+                        <li><a href="#">Visa Notes</a></li>
+                    </ul>
+                </article>
+                <article class="col-xlg-6">
+                    <h3>our destinations</h3>
+                    <ul>
+                        <li><a href="#">Vietnam</a></li>
+                        <li><a href="#">Cambodia</a></li>
+                        <li><a href="#">Laos</a></li>
+                        <li><a href="#">Myanmar</a></li>
+                        <li><a href="#">Thailand</a></li>
+                        <li><a href="#">Indonesia</a></li>
+                    </ul>
+                </article>
+            </div>
+            <div class="col-xlg-4 col-md-12">
+                <article>
+                    <h3>sign up for exclusive offers, news, inspirations</h3>
+                    <form action="">
+                        <div class="col-xlg-6 col-md-12">
+                            <input class="input-st1" type="text" placeholder="Name" name="name">
+                        </div>
+                        <div class="col-xlg-6 col-md-12">
+                            <input class="input-st1" type="email" placeholder="Email" name="email">
+                        </div>
+                        <div class="col-xlg-12">
+                            <input class="input-st1" type="text" placeholder="Requires" name="requires">
+                        </div>
+                        <p>By entering your details you consent to be contacted via email by the Belmond group with offers and updates. To opt out, use the unsubscribe link or email. View our for details.</p>
+                        <button class="btn-st2">inquire now</button>
+                    </form>
+                </article>
+            </div>
+            <div class="brand-footer">
+                <img src="images/asiatours_logo.svg" alt="logo">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="brand-section">
+            <h3>as seen in...</h3>
+            <ul class="brand-magazine">
+                <li><img src="images/demo-brand.png" alt=""></li>
+                <li><img src="images/demo-brand-2.png" alt=""></li>
+                <li><img src="images/demo-brand-3.png" alt=""></li>
+                <li><img src="images/demo-brand-4.png" alt=""></li>
+                <li><img src="images/demo-brand-5.png" alt=""></li>
+                <li><img src="images/demo-brand-6.png" alt=""></li>
+                <li><img src="images/demo-brand-7.png" alt=""></li>
+            </ul>
+            <p class="copy-right">Copyright 2019. All copyright and other intellectual property rights in all logos, designs, text, images and other</p>
+        </div>
+    </div>
+
+</footer>
+<div class="modal-container close-display"></div>
+<div id="contact-modal" class="modal close-display">
+    <button class="btn-close">&times;</button>
+    <h3>Contact Us</h3>
+    <p>Our team of experts can help answer any questions you might have. Please fill out the form below and a consultant will respond shortly.</p>
+    <div class="form-box">
+        <form action="#">
+            <div class="form-field col-xlg-12">
+                <input type="text" name="" placeholder="Subject *" required>
+            </div>
+            <div class="form-field col-xlg-12">
+                <textarea name="" placeholder="Message *" required></textarea>
+            </div>
+            <div class="half">
+                <div class="form-field col-xlg-6">
+                    <input type="text" name=""  placeholder="Your Name *" required>
+                </div>
+                <div class="form-field col-xlg-6">
+                    <input type="email" name="" placeholder="Email *" required>
+                </div>
+            </div>
+            <button class="btn-st3" type="submit">Submit Message</button>
+        </form>
+    </div>
+    <div class="call-us">
+        <div>Give us a call:</div>
+        <p>US &amp; Canada: +1 888 263 2574<br> UK: +0 800 098 8486<br> AUS: +1 800 044 986</p>
+        <div>Send an email:</div>
+        <p><a href="mailto:contact@enchantingtravels.com">contact@enchantingtravels.com</a></p>
+    </div>
+</div>  
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js" defer></script>
+<script type="text/javascript" src="js/dateselector.min.js" defer></script>
+<script type="text/javascript" src="js/common.js"></script>
 </body>
 </html>

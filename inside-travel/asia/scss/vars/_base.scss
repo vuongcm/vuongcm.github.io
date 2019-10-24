@@ -2,6 +2,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    &::-webkit-input-placeholder{
+        color: #d8d8d8;
+    }
+    &:-moz-placeholder{
+        color: #d8d8d8;
+    }
+    &::-moz-placeholder{
+        color: #d8d8d8;
+    }
+    &:-ms-input-placeholder{
+        color: #d8d8d8;
+    }
 }
 @font-face{ 
 	font-family: 'Theano Didot';
@@ -45,7 +57,7 @@ label{font-weight:normal}
 input[type="text"],input[type="email"],input[type="password"]{padding-left:5px;padding-right:5px}
 select{padding-left:8px; cursor: pointer;}
 input[type="number"]{padding-left:5px}
-textarea{padding:8px 12px 5px 12px}
+textarea{padding:8px 5px 8px 5px}
 input,textarea,select,button,a,button:hover,button:active,button:focus{outline:none}
 button{border:none;background:none;padding:0; cursor: pointer;}
 img{max-width: 100%;vertical-align: middle;object-fit: cover;}
@@ -56,24 +68,14 @@ body {
 	font-size: 12px;
 	color: $main-color;
     letter-spacing: 1px;
+    position: relative;
     --bodyWidth: 1583px;
+    --modalWidth: 500px;
 }
 input{
     white-space: nowrap;
     text-overflow: ellipsis;
     height: 25px;
-    &::-webkit-input-placeholder{
-        color: #d8d8d8;
-    }
-    &::-moz-placeholder {
-        color: #d8d8d8;
-    }
-    &:-ms-input-placeholder{
-        color: #d8d8d8;
-    }
-    &:-moz-placeholder{
-        color: #d8d8d8;
-    }
 }
 ol,ul,li {
 	margin: 0;
@@ -139,6 +141,7 @@ select:focus {
     background-color: transparent;
     font-weight: 500;
     padding-bottom: 5px;
+    padding-top: 5px;
     @include smooth(.2s);
     font-size: 13px;
     letter-spacing: 2px;
@@ -191,6 +194,17 @@ select:focus {
 .btn-st2:hover{
     color: $higlight-color;
     border-color: $higlight-color;
+}
+.btn-st3{
+    color: #fff;
+    background-color: #333;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    @include smooth(.25s);
+    &:hover{
+        color: #fff;
+    }
 }
 .link-st1 {
 	color: $higlight-color;
@@ -305,6 +319,12 @@ select:focus {
 .close-display{
     display: none!important;
 }
+.open-visiblity{
+    visibility: visible!important;
+}
+.close-visiblity{
+    visibility: hidden!important;
+}
 .open-opacity:after,.open-opacity:before{
     opacity: 1!important;
 }
@@ -352,6 +372,20 @@ select:focus {
     margin-bottom: 30px;
     overflow: hidden;
     white-space: nowrap;
+}
+.phone-box{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 15px;
+    height: 100%;
+    .phone{
+        font-size: 15px;
+        margin-right: 5px;
+    }
+    strong{
+        font-weight: 600;
+    }
 }
 .box-text{
     display: flex;
@@ -1038,6 +1072,17 @@ select:focus {
     .water-mask{
         font-size: 56px;
     }
+    .phone-box{
+        margin-left: 15px;
+        margin-right: 0;
+        .phone{
+            font-size: 18px;
+            padding: 10px 8px;
+        }
+        strong{
+            display: none;
+        }
+    }
 }
 @media (max-width: 767px) {
     .bg-parallax{
@@ -1207,6 +1252,9 @@ select:focus {
         font-size: 22px;
         margin-bottom: 15px;
         margin-top: 15px;
+    }
+    .phone-box{
+        margin-left: 0;
     }
 }
 @keyframes fadein {

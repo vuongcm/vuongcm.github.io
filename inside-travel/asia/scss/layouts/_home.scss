@@ -18,7 +18,7 @@
 			margin-top: 15px;
 			margin-bottom: 15px;
 			border-right: 1px solid #cecece;
-			color: #a09c9c;
+			//color: #a09c9c;
 			input{
 				width: 90%;
 				border: none;
@@ -31,7 +31,62 @@
 			}
 		}
 		.booking-step-where{
+			position: relative;
 			width: 28%;
+			select{
+				position: absolute;
+				visibility: hidden;
+			}
+			.text{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+				height: 100%;
+				padding-left: 5px;
+				padding-right: 5px;
+				.select-arrow-thin{
+					font-size: 10px;
+				}
+			}
+			.value{
+				max-height: 245px;
+				width: 100%;
+				position: absolute;
+				top: calc(100% + 15px);
+				left: 0;
+				overflow-y: scroll;
+				background-color: #fff;
+				border: 1px solid #dcdcdc;
+				display: none;
+				&>li{
+					&>span{
+						display: block;
+						padding-top: 12px;
+						padding-bottom: 6px;
+						padding-left: 15px;
+						color: $light-color;
+					}
+					&>ul>li>a{
+						padding: 10px 0px 10px 30px;
+						@include smooth(.25s);
+						display: block;
+						width: 100%;
+						.map-marker{
+							margin-right: 8px;
+							font-size: 15px;
+							color: $higlight-color;
+							@include smooth(.25s);
+						}
+						&:hover{
+							background-color: #ececec;
+							.map-marker{
+								color: $main-color;
+							}
+						}
+					}
+				}
+			}
 		}
 		.booking-step-when{
 			width: 15%;
@@ -57,11 +112,6 @@
 			button{
 				width: 100%;
 				height: 100%;
-				color: #fff;
-				background-color: #333;
-				text-transform: uppercase;
-				font-size: 14px;
-				letter-spacing: 2px;
 			}
 		}
 	}
@@ -312,6 +362,15 @@
 		.map-home{
 			.synch-carousels{
 				width: 75%;
+			}
+		}
+	}
+}
+@media (max-width: 375px) {
+	.wrap-map{
+		.map-home{
+			.synch-carousels{
+				width: 90%;
 			}
 		}
 	}
