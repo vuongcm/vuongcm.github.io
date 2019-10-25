@@ -37,11 +37,7 @@ footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
     line-height: inherit;
     color: inherit;
     font-family: inherit;
-    font-weight: inherit;
-    font-style: inherit;
 }
-b,strong, th{font-weight: bold;}
-i, em{font-style: italic;}
 sub, sup{font-size: 75%;}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block;}
 a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}
@@ -334,7 +330,7 @@ select:focus {
 .banner-top {
     position: relative;
     margin-top: 0;
-    min-height: 500px;
+    height: 740px;
 }
 .bg-parallax{
     position: absolute;
@@ -343,7 +339,7 @@ select:focus {
     right: 0;
     bottom: 0;
     z-index: -3;
-    background-position: 50% 50%;
+    background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -397,7 +393,7 @@ select:focus {
         /*text-shadow: 0 1px 1px $main-color;*/
         text-transform: uppercase;
         text-align: center;
-        font-weight: 700;
+        font-weight: 600;
     }
     p{
         color: #fff;
@@ -1000,6 +996,9 @@ select:focus {
     .col-lg-3{
         width: 25%;
     }
+    .banner-top{
+        height: 660px;
+    }
 }
 @media (max-width: 991px) {
     .col-md-12{
@@ -1083,11 +1082,11 @@ select:focus {
             display: none;
         }
     }
+    .banner-top{
+        height: 500px;
+    }
 }
 @media (max-width: 767px) {
-    .bg-parallax{
-        z-index: 0;
-    }
     .title-h1{
         font-size: 26px;
     }

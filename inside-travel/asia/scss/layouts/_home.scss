@@ -1,12 +1,39 @@
+.wrap-title-banner-top{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	z-index: 2;
+	background-color: $color-cover-dak-2;
+	padding: 15px;
+	h1,h2{
+		font-family: 'Reenie Beanie', cursive;
+		font-size: 88px;
+		margin-top: 0;
+		margin-bottom: 15px;
+		@include rotage(-3deg);
+		line-height: 1;
+		font-weight: normal;
+		text-align: center;
+	}
+	p{
+		font-size: 18px;
+		text-align: center;
+	}
+}
 #booking-widget-homepage{
 	position: absolute;
-	bottom: 20%;
+	bottom: 50px;
 	width: 100%;
-	form{
+	z-index: 3;
+	.form-banner-top{
 		display: flex;
 		justify-content: space-between;
 		align-items: stretch;
-		width: 60%;
+		width: 80%;
 		margin: 0 auto;
 		background-color: $background-color;
 		&>div{
@@ -32,86 +59,158 @@
 		}
 		.booking-step-where{
 			position: relative;
-			width: 28%;
-			select{
-				position: absolute;
-				visibility: hidden;
-			}
-			.text{
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				width: 100%;
-				height: 100%;
-				padding-left: 5px;
-				padding-right: 5px;
-				.select-arrow-thin{
-					font-size: 10px;
-				}
-			}
+			width: 21%;
 			.value{
-				max-height: 245px;
-				width: 100%;
-				position: absolute;
 				top: calc(100% + 15px);
-				left: 0;
-				overflow-y: scroll;
-				background-color: #fff;
-				border: 1px solid #dcdcdc;
-				display: none;
-				&>li{
-					&>span{
-						display: block;
-						padding-top: 12px;
-						padding-bottom: 6px;
-						padding-left: 15px;
-						color: $light-color;
-					}
-					&>ul>li>a{
-						padding: 10px 0px 10px 30px;
+				.btn-value{
+					.map-marker{
+						margin-right: 8px;
+						font-size: 15px;
+						color: $higlight-color;
 						@include smooth(.25s);
-						display: block;
-						width: 100%;
+					}
+					&:hover{
 						.map-marker{
-							margin-right: 8px;
-							font-size: 15px;
-							color: $higlight-color;
-							@include smooth(.25s);
-						}
-						&:hover{
-							background-color: #ececec;
-							.map-marker{
-								color: $main-color;
-							}
+							color: $main-color;
 						}
 					}
 				}
 			}
 		}
 		.booking-step-when{
-			width: 15%;
+			position: relative;
+			width: 23%;
+			.value{
+				top: calc(100% + 15px);
+				.btn-value{
+					padding-left: 15px;
+					.icon-font:first-child{
+						display: inline-block;
+						width: 10%;
+						margin-right: 8px;
+						font-size: 15px;
+						color: $higlight-color;
+						@include smooth(.25s);
+					}
+					&:hover{
+						.icon-font:first-child{
+							color: $main-color;
+						}
+					}
+				}
+			}
 		}
 		.booking-step-room{
+			position: relative;
 			width: 16%;
-			.select-arrow-thin{
-				font-size: 7px;
+			.value{
+				top: calc(100% + 15px);
+				.btn-value{
+					padding-left: 15px;
+				}
 			}
 		}
 		.booking-step-promo{
-			width: 16%;
+			position: relative;
+			width: 22%;
 			border-right: none;
-			.plus{
-				font-size: 10px;
+			.value{
+				top: calc(100% + 15px);
+				.btn-value{
+					padding-left: 15px;
+				}
 			}
 		}
 		.booking-step-submit{
-			width: 25%;
+			width: 18%;
 			border-right: none;
 			padding: 0;
 			margin: 0;
 			button{
 				width: 100%;
 				height: 100%;
+			}
+		}
+	}
+	&>button{
+		display: none;
+	}
+}
+.select-st1{
+	select{
+		position: absolute;
+		visibility: hidden;
+	}
+}
+.select-st2{
+	select{
+		position: absolute;
+		visibility: hidden;
+	}
+}
+.text{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 25px;
+	padding-left: 5px;
+	padding-right: 5px;
+	b{
+		font-weight: normal;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		width: 85%;
+	}
+	.select-arrow-thin{
+		font-size: 8px;
+		margin-left: 5px;
+	}
+}
+.value{
+	max-height: 245px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	overflow-y: scroll;
+	background-color: #fff;
+	border: 1px solid #dcdcdc;
+	display: none;
+	span{
+		display: block;
+		padding-top: 12px;
+		padding-bottom: 6px;
+		padding-left: 15px;
+		color: $light-color;
+		cursor: auto;
+	}
+	&>li{
+		.btn-value{
+			padding: 10px 20px 10px 30px;
+			@include smooth(.25s);
+			width: 100%;
+			display: flex;
+			&>b{
+				font-weight: normal;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+				width: 85%;
+			}
+			.checkmark{
+				font-size: 15px;
+				margin-left: auto;
+				color: #69ac7c;
+				opacity: 0;
+			}
+			&:hover{
+				background-color: #ececec;
+			}
+		}
+		.btn-value.checked{
+			.checkmark{
+				opacity: 1;
 			}
 		}
 	}
@@ -256,8 +355,15 @@
 }
 @media (max-width: 1199px) {
 	#booking-widget-homepage{
-		form{
-			width: 80%;
+		&>.form-banner-top{
+			display: none;
+		}
+		&>button{
+			display: block;
+			margin: 0 auto;
+			max-width: 280px;
+			width: 90%;
+			height: 50px;
 		}
 	}
 	.wrap-map{
@@ -274,11 +380,6 @@
 	}
 }
 @media (max-width: 991px) {
-	#booking-widget-homepage{
-		form{
-			width: 90%;
-		}
-	}
 	.wrap-map{
 		margin-right: 0;
 		margin-left: 0;
@@ -321,9 +422,17 @@
 	}
 }
 @media (max-width: 767px) {
+	.wrap-title-banner-top{
+		h1,h2{
+			font-size: 74px;
+		}
+		p{
+			font-size: 16px;
+		}
+	}
 	#booking-widget-homepage{
-		bottom: 15px;
-		form{
+		bottom: 30px;
+		.form-banner-top{
 			flex-wrap: wrap;
 			&>div{
 				width: 100%!important;
@@ -358,6 +467,11 @@
 	}
 }
 @media (max-width: 479px) {
+	.wrap-title-banner-top{
+		h1,h2{
+			font-size: 56px;
+		}
+	}
 	.wrap-map{
 		.map-home{
 			.synch-carousels{

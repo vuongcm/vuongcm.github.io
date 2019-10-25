@@ -95,7 +95,6 @@ header{
     				text-transform: uppercase;
     				color: $main-color;
     				@include smooth(.2s);
-    				font-size: 13px;
     				&>i{
     					display: none;
     				}
@@ -256,7 +255,6 @@ header{
 				height: 45%;
 				padding: 8px 0;
 				background-color: $color-cover-text;
-				font-size: 13px;
 				text-transform: uppercase;
 				font-weight: 700;
 				color: $main-color;
@@ -280,7 +278,6 @@ header{
 		}
 		&>.menu-lv-3{
 			text-align: center;
-			font-size: 13px;
 			padding: 0 15px;
 			&>a:hover{
 				color: $higlight-color;
@@ -322,7 +319,6 @@ header{
 				display: inline-block;
 				width: 100%;
 				text-align: center;
-				font-size: 13px;
 				margin: 10px 0;
 				text-transform: uppercase;
 			}
@@ -355,16 +351,34 @@ header{
 			padding-bottom: 30px;
 			padding-top: 30px;
 			text-transform: uppercase;
-			font-size: 13px;
 		}
 	}
 }
-@media (max-width: 1395px) {
+@media (min-width: 1351px) and (max-width: 1395px) {
+	header{
+		.menu-wrap-scroll{
+			.search-nav{
+				width: 14%;
+				.phone-box{
+					display: none;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1350px) {
 	header{
 		.menu-wrap-scroll{
 			flex-wrap: wrap;
 			border-bottom: none;
 			margin-top: 15px;
+			.search-nav{
+				.phone-box{
+					strong{
+						display: inline-block;
+					}
+				}
+			}
 			.brand{
 				display: none;
 			}
