@@ -219,7 +219,7 @@
 	article{
 		h3{
 			font-size: 20px;
-			font-family: 'Theano Didot','Times New Roman', serif;
+			font-weight: 500;
 		}
 	}
 }
@@ -321,9 +321,7 @@
 					h4{
 						font-size: 16px;
 						font-family: 'Theano Didot','Times New Roman', serif;
-					}
-					.paragraph{
-						font-size: 13px;
+						font-weight: 400;
 					}
 				}
 			}
@@ -349,6 +347,8 @@
 	}
 }
 .list-trip{
+	background-color: $background-color-st1;
+	padding-top: 30px;
 	.container{
 		align-items: stretch;
 		.col-xlg-4{

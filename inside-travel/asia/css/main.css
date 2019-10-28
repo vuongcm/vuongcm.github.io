@@ -325,7 +325,8 @@ select:focus {
   line-height: 1;
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font-weight: 400; }
 
 .title-h2-line:after {
   max-width: 200px;
@@ -465,7 +466,7 @@ select:focus {
     /*text-shadow: 0 1px 1px $main-color;*/
     text-transform: uppercase;
     text-align: center;
-    font-weight: 600; }
+    font-weight: 500; }
   .box-text p {
     color: #fff;
     letter-spacing: 2px;
@@ -535,8 +536,14 @@ select:focus {
     width: 100%;
     letter-spacing: 2px;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
     margin: 0; }
+    .theme-slide-text h3 a, .theme-slide-text h4 a {
+      margin: 0;
+      text-transform: none; }
+  .theme-slide-text p {
+    line-height: 2;
+    color: #333; }
 
 .type-rotate {
   position: absolute;
@@ -578,6 +585,8 @@ select:focus {
       text-transform: uppercase;
       margin-top: 15px;
       margin-bottom: 15px; }
+    .wrap-slide-st2 .item .theme-slide-text h3 a, .wrap-slide-st2 .item .theme-slide-text h4 a {
+      text-transform: none; }
     .wrap-slide-st2 .item .theme-slide-img > a {
       margin-top: 0;
       margin-bottom: 0; }
@@ -852,11 +861,11 @@ select:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 540px;
+  height: 566px;
   align-content: space-between;
   padding-bottom: 20px;
-  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.13);
-  position: relative; }
+  position: relative;
+  background-color: #fff; }
   .trip > a:first-child {
     width: 100%; }
   .trip h3 {
@@ -872,14 +881,14 @@ select:focus {
       min-height: 48px; }
   .trip .content-trip {
     position: absolute;
-    bottom: 140px;
+    bottom: 122px;
     z-index: 1;
     background-color: #fff; }
     .trip .content-trip > p {
       width: 100%;
       padding-left: 15px;
       padding-right: 15px;
-      max-height: 32px;
+      max-height: 50px;
       overflow-y: hidden;
       -webkit-transition: all 0.5s linear;
       -moz-transition: all 0.5s linear;
@@ -904,7 +913,12 @@ select:focus {
     margin-bottom: 0;
     flex-wrap: nowrap; }
   .trip .btn-st2 {
-    margin-top: 20px; }
+    margin-top: 20px;
+    color: #c3bdbd;
+    border-color: #c3bdbd; }
+    .trip .btn-st2:hover {
+      color: #ccaf3d;
+      border-color: #ccaf3d; }
 
 .trip-active .content-trip > p {
   max-height: 152px; }
@@ -1213,7 +1227,10 @@ select:focus {
     margin-top: 15px; }
 
   .phone-box {
-    margin-left: 0; } }
+    margin-left: 0; }
+
+  .trip {
+    height: 529px; } }
 @keyframes fadein {
   from {
     opacity: 0; }
@@ -2331,7 +2348,7 @@ footer .brand-section {
 
 .best-support article h3 {
   font-size: 20px;
-  font-family: 'Theano Didot','Times New Roman', serif; }
+  font-weight: 500; }
 
 .wrap-map {
   padding: 15px; }
@@ -2414,9 +2431,8 @@ footer .brand-section {
             color: #111; }
           .wrap-map .map-home .synch-carousels .item article h4 {
             font-size: 16px;
-            font-family: 'Theano Didot','Times New Roman', serif; }
-          .wrap-map .map-home .synch-carousels .item article .paragraph {
-            font-size: 13px; }
+            font-family: 'Theano Didot','Times New Roman', serif;
+            font-weight: 400; }
       .wrap-map .map-home .synch-carousels .nav-arrows {
         bottom: 10px; }
         .wrap-map .map-home .synch-carousels .nav-arrows button {
@@ -2430,11 +2446,14 @@ footer .brand-section {
         .wrap-map .map-home .synch-carousels .nav-arrows span > strong {
           font-weight: 400; }
 
-.list-trip .container {
-  align-items: stretch; }
-  .list-trip .container .col-xlg-4 {
-    margin-top: 15px;
-    margin-bottom: 50px; }
+.list-trip {
+  background-color: #f6f4f0;
+  padding-top: 30px; }
+  .list-trip .container {
+    align-items: stretch; }
+    .list-trip .container .col-xlg-4 {
+      margin-top: 15px;
+      margin-bottom: 50px; }
 
 @media (max-width: 1199px) {
   #booking-widget-homepage > .form-banner-top {

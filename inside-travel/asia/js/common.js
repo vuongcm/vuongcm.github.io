@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	//$('body').css('--bodyWidth',`${$('body').width()}px`);
 	//===========header
 	if($('body').width() > 991){
 		$('#menu-lv1-1').hover(function(){
@@ -113,6 +114,8 @@ $(document).ready(function() {
 	$('.tooltip span').each(function(){
 		$(this).css('left',`-${$(this).width()/2 -7}px`);
 	});
+	let heightTrip = 91+$('.content-trip').height()+$('.trip a').height();
+	$('.trip').height(heightTrip);
 	$('.content-trip').hover(function(){
 		$(this).parent('.trip').toggleClass('trip-active');
 	});
@@ -256,7 +259,7 @@ $(document).ready(function() {
 				$('.booking-step-room').find('.text b').html($(this).children('b').text());
 				$('#creat-trip-modal .booking-step-room').find('select option').val($(this).children('b').text());
 			}
-
+			$(this).closest('.value').removeClass('open-block');
 		});
 	}
 	let number2 = $('.booking-step-promo .btn-value').length;
@@ -280,7 +283,7 @@ $(document).ready(function() {
 				$('.booking-step-promo').find('.text b').html($(this).children('b').text());
 				$('#creat-trip-modal .booking-step-promo').find('select option').val($(this).children('b').text());
 			}
-
+			$(this).closest('.value').removeClass('open-block');
 		});
 	}
 	let number3 = $('.booking-step-where .btn-value').length;
@@ -345,6 +348,7 @@ $(document).ready(function() {
 			$(this).closest('.select-st2').find('.text b').html($(this).children('b').text());
 			$(this).closest('.select-st2').find('select option').val($(this).children('b').text());
 		}
+		$(this).closest('.value').removeClass('open-block');
 	});
 });
 window.onload = function() {
