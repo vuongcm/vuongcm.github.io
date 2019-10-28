@@ -534,14 +534,9 @@ select:focus {
   .theme-slide-text h3, .theme-slide-text h4 {
     width: 100%;
     letter-spacing: 2px;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-bottom: 20px;
-    margin-top: 20px; }
-  .theme-slide-text p {
-    font-size: 11px;
-    font-weight: 300; }
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0; }
 
 .type-rotate {
   position: absolute;
@@ -573,20 +568,24 @@ select:focus {
     position: relative;
     padding-right: 20px;
     padding-left: 20px;
-    min-height: 300px;
-    max-height: 900px; }
+    max-height: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; }
     .wrap-slide-st2 .item a {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      width: 100%; }
-      .wrap-slide-st2 .item a:hover {
-        opacity: 1; }
-      .wrap-slide-st2 .item a .type-rotate {
-        width: 250px;
-        height: 50px;
-        left: -99px;
-        top: 105px; }
+      display: block;
+      width: 100%;
+      text-transform: uppercase;
+      margin-top: 15px;
+      margin-bottom: 15px; }
+    .wrap-slide-st2 .item .theme-slide-img > a {
+      margin-top: 0;
+      margin-bottom: 0; }
+    .wrap-slide-st2 .item .type-rotate {
+      width: 250px;
+      height: 50px;
+      left: -99px;
+      top: 105px; }
   .wrap-slide-st2 .item.slick-center .theme-slide-img {
     padding-bottom: 125%; }
 
@@ -635,7 +634,7 @@ select:focus {
     display: flex;
     justify-content: flex-start; }
     .wrap-slide-st3 .item > div:first-child {
-      width: 30%;
+      width: 25%;
       padding-right: 20px;
       position: relative;
       display: flex;
@@ -648,7 +647,7 @@ select:focus {
         border-radius: 50%;
         width: 70%; }
     .wrap-slide-st3 .item > div:last-child {
-      width: 55%;
+      width: 75%;
       padding-left: 20px;
       display: flex;
       flex-direction: column;
@@ -688,6 +687,10 @@ select:focus {
       color: #c3bdbd; }
     .tooltip > .icon-font:hover:before {
       color: #ccaf3d; }
+  .tooltip > a {
+    opacity: 1; }
+    .tooltip > a span i {
+      top: calc(100% - 1px); }
   .tooltip span {
     visibility: hidden;
     position: absolute;
@@ -699,11 +702,11 @@ select:focus {
     border-radius: 6px;
     z-index: 1;
     opacity: 0;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    -ms-transition: all 0.3s linear;
-    transition: all 0.3s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
     bottom: 135%;
     box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.13); }
     .tooltip span b {
@@ -736,6 +739,9 @@ select:focus {
       -webkit-shape-outside: polygon(0% 0%, 100% 0%, 50% 100%);
       shape-outside: polygon(0% 0%, 100% 0%, 50% 100%); }
   .tooltip:hover span {
+    visibility: visible;
+    opacity: 1; }
+  .tooltip:hover > span {
     visibility: visible;
     opacity: 1; }
 
@@ -833,7 +839,8 @@ select:focus {
   position: absolute;
   background-repeat-x: no-repeat;
   background-repeat-y: no-repeat;
-  background-size: 99%; }
+  background-size: 99%;
+  cursor: pointer; }
 
 .map-coo:hover {
   width: 27px;
@@ -843,12 +850,13 @@ select:focus {
 .trip {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  height: 540px;
   align-content: space-between;
   padding-bottom: 20px;
-  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.13); }
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.13);
+  position: relative; }
   .trip > a:first-child {
     width: 100%; }
   .trip h3 {
@@ -862,25 +870,44 @@ select:focus {
     width: 100%; }
     .trip h3 > a {
       min-height: 48px; }
-  .trip > span {
-    display: block;
-    width: 100%;
-    font-size: 12px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    color: #ccaf3d; }
-    .trip > span > strong {
-      font-size: 20px;
-      font-weight: 600; }
-  .trip > p {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px; }
+  .trip .content-trip {
+    position: absolute;
+    bottom: 140px;
+    z-index: 1;
+    background-color: #fff; }
+    .trip .content-trip > p {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+      max-height: 32px;
+      overflow-y: hidden;
+      -webkit-transition: all 0.5s linear;
+      -moz-transition: all 0.5s linear;
+      -o-transition: all 0.5s linear;
+      -ms-transition: all 0.5s linear;
+      transition: all 0.5s linear; }
+    .trip .content-trip > span {
+      display: block;
+      width: 100%;
+      font-size: 12px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      color: #ccaf3d; }
+      .trip .content-trip > span > strong {
+        font-size: 20px;
+        font-weight: 600; }
+  .trip .wrap-tooltip {
+    margin-top: auto;
+    margin-bottom: 0;
+    flex-wrap: nowrap; }
   .trip .btn-st2 {
     margin-top: 20px; }
+
+.trip-active .content-trip > p {
+  max-height: 152px; }
 
 .team-name {
   text-align: center;
@@ -1022,12 +1049,10 @@ select:focus {
     padding-right: 15px; }
     .wrap-slide-st3 .gallery {
       width: 100%; }
-    .wrap-slide-st3 .item > div:last-child {
-      width: 70%; }
-      .wrap-slide-st3 .item > div:last-child > p {
-        font-size: 15px; }
-      .wrap-slide-st3 .item > div:last-child > div > span {
-        font-size: 12px; }
+    .wrap-slide-st3 .item > div:last-child > p {
+      font-size: 15px; }
+    .wrap-slide-st3 .item > div:last-child > div > span {
+      font-size: 12px; }
 
   .map-coo {
     width: 15px;
@@ -1123,10 +1148,8 @@ select:focus {
       padding-right: 0; }
 
   .wrap-slide-st3 .item > div:first-child {
-    width: 25%;
     padding-right: 10px; }
   .wrap-slide-st3 .item > div:last-child {
-    width: 75%;
     padding-left: 10px; }
     .wrap-slide-st3 .item > div:last-child > p {
       letter-spacing: 1px; }
@@ -1923,10 +1946,12 @@ footer > div:first-child {
       footer > div:first-child .container .col-xlg-4:nth-child(3) form > div {
         padding: 15px 10px 15px 0;
         text-align: left; }
-        footer > div:first-child .container .col-xlg-4:nth-child(3) form > div input {
+        footer > div:first-child .container .col-xlg-4:nth-child(3) form > div input, footer > div:first-child .container .col-xlg-4:nth-child(3) form > div textarea {
           width: 100%;
           padding-left: 0;
           border-bottom: 1px solid #111; }
+        footer > div:first-child .container .col-xlg-4:nth-child(3) form > div textarea {
+          height: 55px; }
       footer > div:first-child .container .col-xlg-4:nth-child(3) form p {
         margin-top: 15px;
         margin-bottom: 15px; }
@@ -2374,6 +2399,9 @@ footer .brand-section {
         width: 100%;
         height: 100%;
         text-align: center; }
+        .wrap-map .map-home .synch-carousels .item > a:first-child {
+          display: block;
+          width: 100%; }
         .wrap-map .map-home .synch-carousels .item article {
           width: 100%;
           padding-left: 15px;

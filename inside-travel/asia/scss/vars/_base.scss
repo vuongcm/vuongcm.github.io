@@ -470,16 +470,9 @@ select:focus {
     h3,h4{
         width: 100%;
         letter-spacing: 2px;
-        font-size: 15px;
-        text-transform: uppercase;
-        font-weight: 500;
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
-    p{
-        font-size: 11px;
-        font-weight: 300;
-        //max-height: 45px;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0;
     }
 }
 .type-rotate{
@@ -516,22 +509,29 @@ select:focus {
         position: relative;
         padding-right: 20px;
         padding-left: 20px;
-        min-height: 300px;
+        //min-height: 300px;
         max-height: 900px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
         a{
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
+            display: block;
             width: 100%;
-            &:hover{
-                opacity: 1;
+            text-transform: uppercase;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .theme-slide-img{
+            &>a{
+                margin-top: 0;
+                margin-bottom: 0;
             }
-            .type-rotate{
-                width: 250px;
-                height: 50px;
-                left: -99px;
-                top: 105px;
-            }
+        }
+        .type-rotate{
+            width: 250px;
+            height: 50px;
+            left: -99px;
+            top: 105px;
         }
     }
     .item.slick-center .theme-slide-img{
@@ -590,7 +590,7 @@ select:focus {
         display: flex;
         justify-content: flex-start;
         &>div:first-child{
-            width: 30%;
+            width: 25%;
             padding-right: 20px;
             position: relative;
             display: flex;
@@ -605,7 +605,7 @@ select:focus {
             }
         }
         &>div:last-child{
-            width: 55%;
+            width: 75%;
             padding-left: 20px;
             display: flex;
             flex-direction: column;
@@ -659,6 +659,14 @@ select:focus {
             color: $higlight-color;
         }
     }
+    &>a{
+        opacity: 1;
+        span{
+            i{
+                top: calc(100% - 1px);
+            }
+        }
+    }
     span{
         visibility: hidden;
         position: absolute;
@@ -670,7 +678,7 @@ select:focus {
         border-radius: 6px;
         z-index: 1;
         opacity: 0;
-        @include smooth(.3s);
+        @include smooth(.2s);
         bottom: 135%;
         box-shadow: 0px 1px 3px 2px rgba(0,0,0,.13);
         b{
@@ -705,6 +713,10 @@ select:focus {
 
     }
     &:hover span{
+        visibility:visible;
+        opacity: 1;
+    }
+    &:hover>span{
         visibility:visible;
         opacity: 1;
     }
@@ -813,6 +825,7 @@ select:focus {
     background-repeat-x: no-repeat;
     background-repeat-y: no-repeat;
     background-size: 99%;
+    cursor: pointer;
 }
 .map-coo:hover{
     width: 27px;
@@ -822,12 +835,13 @@ select:focus {
 .trip{
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    height: 540px;
     align-content: space-between;
     padding-bottom: 20px;
     box-shadow: 1px 2px 10px rgba(0,0,0,.13);
+    position: relative;
     &>a:first-child{
         width: 100%;
     }
@@ -844,28 +858,49 @@ select:focus {
             min-height: 48px;
         }
     }
-    &>span{
-        display: block;
-        width: 100%;
-        font-size: 12px;
-        padding-left: 15px;
-        padding-right: 15px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        text-transform: uppercase;
-        color: $higlight-color;
-        &>strong{
-            font-size: 20px;
-            font-weight: 600;
+    .content-trip{
+        position: absolute;
+        bottom: 140px;
+        z-index: 1;
+        background-color: $background-color;
+        &>p{
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            max-height: 32px;
+            overflow-y: hidden;
+            @include smooth(.5s);
+        }
+        &>span{
+            display: block;
+            width: 100%;
+            font-size: 12px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            color: $higlight-color;
+            &>strong{
+                font-size: 20px;
+                font-weight: 600;
+            }
         }
     }
-    &>p{
-        width: 100%;
-        padding-left: 15px;
-        padding-right: 15px;
+    .wrap-tooltip{
+        margin-top: auto;
+        margin-bottom: 0;
+        flex-wrap: nowrap;
     }
     .btn-st2{
         margin-top: 20px;
+    }
+}
+.trip-active{
+    .content-trip{
+        &>p{
+            max-height: 152px;
+        }
     }
 }
 .team-name{
@@ -1021,7 +1056,6 @@ select:focus {
         }
         .item{
             &>div:last-child{
-                width: 70%;
                 &>p{
                     font-size: 15px;
                 }
@@ -1161,12 +1195,10 @@ select:focus {
     .wrap-slide-st3{
         .item{
             &>div:first-child{
-                width: 25%;
                 padding-right: 10px;
             }
             &>div:last-child{
-                width: 75%;
-                padding-left: 10px;
+                 padding-left: 10px;
                 &>p{
                     letter-spacing: 1px;
                 }

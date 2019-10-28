@@ -37,10 +37,13 @@ footer{
 					&>div{
 						padding: 15px 10px 15px 0;
 						text-align: left;
-						input{
+						input, textarea{
 							width: 100%;
 							padding-left: 0;
 							border-bottom: 1px solid #111;
+						}
+						textarea{
+							height: 55px;
 						}
 					}
 					p{

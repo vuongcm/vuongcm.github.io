@@ -110,8 +110,11 @@ $(document).ready(function() {
 		});
 	}
 //==============end header==============
-	$('.tooltip>span').each(function(){
+	$('.tooltip span').each(function(){
 		$(this).css('left',`-${$(this).width()/2 -7}px`);
+	});
+	$('.content-trip').hover(function(){
+		$(this).parent('.trip').toggleClass('trip-active');
 	});
 	// slick map home
 	if ($('#slick-slider-map').length > 0) {
@@ -232,24 +235,6 @@ $(document).ready(function() {
         	$('.booking-step-plan .value').removeClass('open-block');
         }
 	});
-	$('.select-st1 .btn-value').click(function(){
-		$(this).toggleClass('checked');
-		let numberValue = $(this).closest('.value').find('.checked').length;
-		$(this).closest('.select-st1').children('select').html('');
-		for(let i=0; i < numberValue; i++){
-			$(this).closest('.select-st1').children('select').append(`<option value="${$(this).closest('.value').find('.checked b').eq(i).text()}" selected></option>`);
-		}
-		if(numberValue == 0){
-			if($(this).closest('.select-st1').attr('class').search('booking-step-where') != -1){
-				$(this).closest('.select-st1').find('.text b').html(`Where do you want to go?`);
-			} else if($(this).closest('.select-st1').attr('class').search('booking-step-when') != -1) {
-				$(this).closest('.select-st1').find('.text b').html(`Your Interests?`);
-			}
-			
-		} else{
-			$(this).closest('.select-st1').find('.text b').html(`${numberValue} selected`);
-		}
-	});
 	let number1 = $('.booking-step-room .btn-value').length;
 	for (let i=0; i<number1; i++){
 		$('.booking-step-room .btn-value').eq(i).click(function(){
@@ -274,40 +259,83 @@ $(document).ready(function() {
 
 		});
 	}
-	/*for (let i=0; i<6; i++){
-		for(let j=0; j<$('.select-st2').eq(i).find('.btn-value').length; j++){
-			$('.select-st2').eq(i).find('.btn-value').eq(j).click(function(){
-				if($(this).attr('class').search('checked') != -1){
-					$('.form-banner-top .select-st2').eq(i).find('.btn-value').removeClass('checked');
-					$('#creat-trip-modal .select-st2').eq(i).find('.btn-value').removeClass('checked');
-				} else {
-					$('.form-banner-top .select-st2').eq(i).find('.btn-value').removeClass('checked');
-					$('#creat-trip-modal .select-st2').eq(i).find('.btn-value').removeClass('checked');
-					$('.form-banner-top .select-st2').eq(i).find('.btn-value').eq(j).addClass('checked');
-					$('#creat-trip-modal .select-st2').eq(i).find('.btn-value').eq(j).addClass('checked');
+	let number2 = $('.booking-step-promo .btn-value').length;
+	for (let i=0; i<number2; i++){
+		$('.booking-step-promo .btn-value').eq(i).click(function(){
+			if($(this).attr('class').search('checked') != -1){
+				$('.booking-step-promo .btn-value').removeClass('checked');
+			} else{
+				$('.booking-step-promo .btn-value').removeClass('checked');
+				$(this).addClass('checked');
+				if(i<(number2/2)){
+					$('.booking-step-promo .btn-value').eq(number2/2 + i).addClass('checked');
+				} else{
+					$('.booking-step-promo .btn-value').eq(i - number2/2).addClass('checked');
 				}
-			});
-		}
-	}*/
-	/*$('.select-st2 .btn-value').click(function(){
-		let index = $(this).parent('li').index();
-		let index2 = $(this).closest('.select-st2').index();
+			}
+			if($(this).closest('.value').find('.checked').length == 0){
+				$('.booking-step-promo').find('.text b').html(`Budget Per Person`);
+				$('#creat-trip-modal .booking-step-promo').find('select option').val('');
+			} else{
+				$('.booking-step-promo').find('.text b').html($(this).children('b').text());
+				$('#creat-trip-modal .booking-step-promo').find('select option').val($(this).children('b').text());
+			}
+
+		});
+	}
+	let number3 = $('.booking-step-where .btn-value').length;
+	for (let i=0; i<number3; i++){
+		$('.booking-step-where .btn-value').eq(i).click(function(){
+			$(this).toggleClass('checked');
+			if(i<(number3/2)){
+				$('.booking-step-where .btn-value').eq(number3/2 + i).toggleClass('checked');
+			} else{
+				$('.booking-step-where .btn-value').eq(i - number3/2).toggleClass('checked');
+			}
+			$('#creat-trip-modal .booking-step-where').children('select').html('');
+			let numberValue = $('.booking-step-where .checked').length/2;
+			for(let j=0; j < numberValue; j++){
+				$('#creat-trip-modal .booking-step-where').children('select').append(`<option value="${$(this).closest('.value').find('.checked b').eq(j).text()}" selected></option>`);
+			}
+			if(numberValue == 0){
+				$('.booking-step-where').find('.text b').html(`Where do you want to go?`);
+			} else{
+				$('.booking-step-where').find('.text b').html(`${numberValue} selected`);
+			}
+
+		});
+	}
+	let number4 = $('.booking-step-when .btn-value').length;
+	for (let i=0; i<number4; i++){
+		$('.booking-step-when .btn-value').eq(i).click(function(){
+			$(this).toggleClass('checked');
+			if(i<(number4/2)){
+				$('.booking-step-when .btn-value').eq(number4/2 + i).toggleClass('checked');
+			} else{
+				$('.booking-step-when .btn-value').eq(i - number4/2).toggleClass('checked');
+			}
+			$('#creat-trip-modal .booking-step-when').children('select').html('');
+			let numberValue = $('.booking-step-when .checked').length/2;
+			for(let j=0; j < numberValue; j++){
+				$('#creat-trip-modal .booking-step-when').children('select').append(`<option value="${$(this).closest('.value').find('.checked b').eq(j).text()}" selected></option>`);
+			}
+			if(numberValue == 0){
+				$('.booking-step-when').find('.text b').html(`Your Interests?`);
+			} else{
+				$('.booking-step-when').find('.text b').html(`${numberValue} selected`);
+			}
+
+		});
+	}
+	$('.booking-step-time .btn-value, .booking-step-plan .btn-value').click(function(){
 		if($(this).attr('class').search('checked') != -1){
-			$(this).closest('.value').find('.btn-value').removeClass('checked');
-			$('#creat-trip-modal ')
+			$(this).closest('.select-st2').find('.btn-value').removeClass('checked');
 		} else {
-			$(this).closest('.value').find('.btn-value').removeClass('checked');
+			$(this).closest('.select-st2').find('.btn-value').removeClass('checked');
 			$(this).addClass('checked');
 		}
-		$(this).closest('.select-st2').find('select option').val($(this).children('b').text());
-		let numberValue = $(this).closest('.value').find('.checked').length;
-		if(numberValue == 0){
-			if($(this).closest('.select-st2').attr('class').search('booking-step-room') != -1){
-				$(this).closest('.select-st2').find('.text b').html(`No. of travelers`);
-				//$('#creat-trip-modal').find('.text b').html(`No. of travelers`);
-			} else if($(this).closest('.select-st2').attr('class').search('booking-step-promo') != -1) {
-				$(this).closest('.select-st2').find('.text b').html(`Budget Per Person`);
-			} else if($(this).closest('.select-st2').attr('class').search('booking-step-time') != -1){
+		if($(this).closest('.value').find('.checked').length == 0){
+			if($(this).closest('.select-st2').attr('class').search('booking-step-time') != -1){
 				$(this).closest('.select-st2').find('.text b').html(`When?`);
 			} else if($(this).closest('.select-st2').attr('class').search('booking-step-plan') != -1){
 				$(this).closest('.select-st2').find('.text b').html(`What stage of planning are you in?`);
@@ -317,7 +345,7 @@ $(document).ready(function() {
 			$(this).closest('.select-st2').find('.text b').html($(this).children('b').text());
 			$(this).closest('.select-st2').find('select option').val($(this).children('b').text());
 		}
-	});*/
+	});
 });
 window.onload = function() {
 	if($('body').width() > 767){
