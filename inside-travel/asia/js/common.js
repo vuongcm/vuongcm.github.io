@@ -346,7 +346,7 @@ $(document).ready(function() {
 
 		});
 	}
-	$('.booking-step-time .btn-value, .booking-step-plan .btn-value').click(function(){
+	$('.booking-step-time .btn-value').click(function(){
 		if($(this).attr('class').search('checked') != -1){
 			$(this).closest('.select-st2').find('.btn-value').removeClass('checked');
 		} else {
@@ -354,11 +354,7 @@ $(document).ready(function() {
 			$(this).addClass('checked');
 		}
 		if($(this).closest('.value').find('.checked').length == 0){
-			if($(this).closest('.select-st2').attr('class').search('booking-step-time') != -1){
-				$(this).closest('.select-st2').find('.text b').html(`When?`);
-			} else if($(this).closest('.select-st2').attr('class').search('booking-step-plan') != -1){
-				$(this).closest('.select-st2').find('.text b').html(`What stage of planning are you in?`);
-			}
+			$(this).closest('.select-st2').find('.text b').html(`When?`);
 			$(this).closest('.select-st2').find('select option').val('');
 		} else{
 			$(this).closest('.select-st2').find('.text b').html($(this).children('b').text());
