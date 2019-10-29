@@ -122,6 +122,7 @@ $(document).ready(function() {
 	$('.content-trip').hover(function(){
 		$(this).parent('.trip').toggleClass('trip-active');
 	});
+
 	/*// ==============vẽ canvas==============
 	let context = document.getElementById('canvas').getContext('2d')
 	context.beginPath();
@@ -141,6 +142,7 @@ $(document).ready(function() {
 	        slidesToShow: 1,
 	        slidesToScroll: 1,
 	        fade: true,
+	        lazyLoad: 'ondemand',
 	        //initialSlide: c,
 	        useTransform: false,
 	        prevArrow: `#slick-slider-map .arrow-left`,
@@ -162,6 +164,7 @@ $(document).ready(function() {
 	//carousel-st1
 	if ($('.wrap-slide-st1').length > 0) {
 		$(`.wrap-slide-st1 .gallery`).slick({
+			lazyLoad: 'ondemand',
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			infinite: true,
@@ -176,6 +179,7 @@ $(document).ready(function() {
 	if ($('.wrap-slide-st2').length > 0) {
 		$(`.wrap-slide-st2 .gallery`).slick({
 			slidesToShow: 3,
+			lazyLoad: 'ondemand',
 			infinite: true,
 			centerMode: true,
 			centerPadding: '0',
