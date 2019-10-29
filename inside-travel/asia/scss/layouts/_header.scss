@@ -343,7 +343,7 @@ header{
 				left: 0;
 				right: 0;
 				bottom: 0;
-				border: 1px solid rgba(207,172,27,.8);
+				border: 0px;
 				border-radius: 0;
 				@include smooth(.25s);
 			}
@@ -358,6 +358,7 @@ header{
 					right: 20px;
 					bottom: 20px;
 					border-radius: 140px 140px 0px 140px;
+					border: 1px solid rgba(207,172,27,.8);
 				}
 			}
 		}

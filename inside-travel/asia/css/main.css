@@ -1677,7 +1677,7 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        border: 1px solid rgba(207, 172, 27, 0.8);
+        border: 0px;
         border-radius: 0;
         -webkit-transition: all 0.25s linear;
         -moz-transition: all 0.25s linear;
@@ -1693,7 +1693,8 @@ header {
           left: 20px;
           right: 20px;
           bottom: 20px;
-          border-radius: 140px 140px 0px 140px; }
+          border-radius: 140px 140px 0px 140px;
+          border: 1px solid rgba(207, 172, 27, 0.8); }
 
 .sub-menu-cruises {
   display: none;
