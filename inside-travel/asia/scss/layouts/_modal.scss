@@ -128,6 +128,11 @@
 		.value{
 			top: 100%;
 			z-index: 3;
+			&>li{
+				.btn-value{
+					padding: 10px;
+				}
+			}
 			.btn-value{
 				.icon-font:first-child{
 					display: inline-block;

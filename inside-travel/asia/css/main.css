@@ -2186,6 +2186,8 @@ footer .brand-section {
     #creat-trip-modal .select-st1 .value, #creat-trip-modal .select-st2 .value {
       top: 100%;
       z-index: 3; }
+      #creat-trip-modal .select-st1 .value > li .btn-value, #creat-trip-modal .select-st2 .value > li .btn-value {
+        padding: 10px; }
       #creat-trip-modal .select-st1 .value .btn-value .icon-font:first-child, #creat-trip-modal .select-st2 .value .btn-value .icon-font:first-child {
         display: inline-block;
         width: 10%;
