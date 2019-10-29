@@ -662,7 +662,7 @@ select:focus {
       flex-direction: column;
       justify-content: flex-end; }
       .wrap-slide-st3 .item > div:last-child > p {
-        font-size: 18px;
+        font-size: 14px;
         letter-spacing: 2px;
         line-height: 1.8;
         position: relative;
@@ -890,6 +890,7 @@ select:focus {
       padding-right: 15px;
       max-height: 50px;
       overflow-y: hidden;
+      color: #555;
       -webkit-transition: all 0.5s linear;
       -moz-transition: all 0.5s linear;
       -o-transition: all 0.5s linear;
@@ -914,8 +915,8 @@ select:focus {
     flex-wrap: nowrap; }
   .trip .btn-st2 {
     margin-top: 20px;
-    color: #c3bdbd;
-    border-color: #c3bdbd; }
+    color: #555;
+    border-color: #555; }
     .trip .btn-st2:hover {
       color: #ccaf3d;
       border-color: #ccaf3d; }
@@ -985,6 +986,17 @@ select:focus {
 .mg-top-0 {
   margin-top: 0 !important; }
 
+.mg-top-30 {
+  margin-top: 30px; }
+
+/*.a-hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}*/
 .container {
   width: 85%;
   display: flex;
@@ -1602,8 +1614,13 @@ header {
       margin-bottom: 10px;
       margin-top: 10px; }
     .sub-menu-destinations > li > .menu-lv-3 {
-      text-align: center;
-      padding: 0 15px; }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+      .sub-menu-destinations > li > .menu-lv-3 a {
+        margin-top: 10px; }
       .sub-menu-destinations > li > .menu-lv-3 > a:hover {
         color: #ccaf3d; }
     .sub-menu-destinations > li .btn-st2 {
@@ -1612,47 +1629,71 @@ header {
 
 .sub-menu-travel {
   display: none;
-  justify-content: space-between;
-  padding: 30px 0;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 30px 12%;
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
   background-color: #f6f4f0;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  transition: all 0.5s linear;
   border-bottom: 1px solid #dcdcdc; }
   .sub-menu-travel > li {
-    width: 12.5%;
+    width: 25%;
     padding: 0 15px; }
     .sub-menu-travel > li a {
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      overflow: hidden; }
+      justify-content: center;
+      align-items: flex-start;
+      position: relative; }
       .sub-menu-travel > li a img {
-        width: 60%;
-        border-radius: 50%;
-        opacity: .7;
+        width: 100%;
         -webkit-transition: all 0.5s linear;
         -moz-transition: all 0.5s linear;
         -o-transition: all 0.5s linear;
         -ms-transition: all 0.5s linear;
         transition: all 0.5s linear; }
       .sub-menu-travel > li a span {
-        display: inline-block;
-        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
         text-align: center;
-        margin: 10px 0;
-        text-transform: uppercase; }
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.4); }
+      .sub-menu-travel > li a:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid rgba(207, 172, 27, 0.8);
+        border-radius: 0;
+        -webkit-transition: all 0.25s linear;
+        -moz-transition: all 0.25s linear;
+        -o-transition: all 0.25s linear;
+        -ms-transition: all 0.25s linear;
+        transition: all 0.25s linear; }
       .sub-menu-travel > li a:hover {
-        color: #ccaf3d; }
+        opacity: 1; }
         .sub-menu-travel > li a:hover img {
           opacity: 1; }
+        .sub-menu-travel > li a:hover:after {
+          top: 20px;
+          left: 20px;
+          right: 20px;
+          bottom: 20px;
+          border-radius: 140px 140px 0px 140px; }
 
 .sub-menu-cruises {
   display: none;
@@ -1703,6 +1744,9 @@ header {
       background-color: #f6f4f0;
       border-top: 1px solid #dcdcdc;
       border-bottom: 1px solid #dcdcdc; } }
+@media (max-width: 1199px) {
+  .sub-menu-travel > li a span {
+    font-size: 14px; } }
 @media (max-width: 991px) {
   .close-menu {
     display: none !important; }
@@ -1797,7 +1841,7 @@ header {
         opacity: 0; }
 
   .sub-menu {
-    top: 60px;
+    top: 65px;
     left: calc(100% + 1px);
     padding: 0;
     flex-direction: column; }
@@ -1831,7 +1875,8 @@ header {
         text-align: left; }
         .sub-menu > li > .menu-lv-3 a {
           padding: 10px 10px 10px 50px;
-          width: 100%; }
+          width: 100%;
+          margin-top: 0; }
       .sub-menu > li > a {
         padding: 20px;
         width: 100%; }
@@ -1846,7 +1891,13 @@ header {
     .sub-menu-travel > li a span {
       margin: 0;
       white-space: nowrap;
-      text-align: left; } }
+      text-align: left;
+      color: #111;
+      font-size: 12px; }
+    .sub-menu-travel > li a:after {
+      display: none; }
+    .sub-menu-travel > .mg-top-30 {
+      margin-top: 0; } }
 @media (max-width: 767px) {
   header .menu-wrap .global-menu {
     padding-left: 0; }
@@ -2189,7 +2240,8 @@ footer .brand-section {
     font-weight: normal;
     text-align: center; }
   .wrap-title-banner-top p {
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 600;
     text-align: center; }
 
 #booking-widget-homepage {
@@ -2347,8 +2399,8 @@ footer .brand-section {
     opacity: 1; }
 
 .best-support article h3 {
-  font-size: 20px;
-  font-weight: 500; }
+  font-size: 14px;
+  font-weight: 600; }
 
 .wrap-map {
   padding: 15px; }
@@ -2502,7 +2554,7 @@ footer .brand-section {
   .wrap-title-banner-top h1, .wrap-title-banner-top h2 {
     font-size: 74px; }
   .wrap-title-banner-top p {
-    font-size: 16px; }
+    font-size: 14px; }
 
   #booking-widget-homepage {
     bottom: 30px; }

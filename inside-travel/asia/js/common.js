@@ -111,14 +111,30 @@ $(document).ready(function() {
 		});
 	}
 //==============end header==============
-	$('.tooltip span').each(function(){
-		$(this).css('left',`-${$(this).width()/2 -7}px`);
+	$('.tooltip>span').each(function(){
+		$(this).css('left',`-${$(this).width()/2 -6}px`);
+	});
+	$('.tooltip>a>span').each(function(){
+		$(this).css('left',`-${$(this).width()/2 -8}px`);
 	});
 	let heightTrip = 91+$('.content-trip').height()+$('.trip a').height();
 	$('.trip').height(heightTrip);
 	$('.content-trip').hover(function(){
 		$(this).parent('.trip').toggleClass('trip-active');
 	});
+	/*// ==============vẽ canvas==============
+	let context = document.getElementById('canvas').getContext('2d')
+	context.beginPath();
+	context.arc(250,250,200,Math.PI/4,0);
+	context.strokeStyle = '#fff';
+    context.stroke();
+    context.beginPath();
+    context.moveTo(450,250);
+    context.lineTo(450,440);
+    context.stroke();
+    context.beginPath();
+	context.arc(450,382,58,Math.PI/2,Math.PI/1.04);
+    context.stroke();*/
 	// slick map home
 	if ($('#slick-slider-map').length > 0) {
 		$(`#slick-slider-map .gallery`).slick({
