@@ -920,7 +920,7 @@ select:focus {
       width: 100%;
       padding-left: 15px;
       padding-right: 15px;
-      max-height: 50px;
+      max-height: 39px;
       overflow-y: hidden;
       color: #555;
       -webkit-transition: all 0.5s linear;
@@ -1273,7 +1273,10 @@ select:focus {
     font-size: 27px; }
 
   .banner-top {
-    height: 440px; } }
+    height: 440px; }
+
+  .trip .content-trip > p {
+    max-height: 36px; } }
 @media (max-width: 375px) {
   .water-mask {
     font-size: 22px;
@@ -2170,7 +2173,7 @@ footer .brand-section {
     -ms-transition: all 0.25s linear;
     transition: all 0.25s linear; }
   .form-field textarea {
-    height: 105px; }
+    height: 130px; }
 
 .half {
   width: 100%;
@@ -2662,5 +2665,61 @@ footer .brand-section {
 .bg-country {
   background-image: url("../images/background/bg-country.jpg");
   height: 100%; }
+
+.banner-top-detail {
+  height: 610px; }
+
+.wrap-title-banner-top-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  padding-top: 6%; }
+  .wrap-title-banner-top-line h1, .wrap-title-banner-top-line h2 {
+    font-size: 43px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 15px; }
+  .wrap-title-banner-top-line p {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center; }
+
+@media (max-width: 1351px) {
+  .banner-top-detail {
+    height: 600px; }
+
+  .wrap-title-banner-top-line {
+    padding-top: 8%; } }
+@media (max-width: 991px) {
+  .banner-top-detail {
+    height: 500px; }
+
+  .wrap-title-banner-top-line {
+    padding-top: 13%; } }
+@media (max-width: 767px) {
+  .banner-top-detail {
+    height: 300px; }
+
+  .wrap-title-banner-top-line {
+    padding-top: 0; }
+    .wrap-title-banner-top-line h1, .wrap-title-banner-top-line h2 {
+      font-size: 35px; }
+    .wrap-title-banner-top-line p {
+      font-size: 14px; } }
+@media (max-width: 479px) {
+  .wrap-title-banner-top-line h1, .wrap-title-banner-top-line h2 {
+    font-size: 35px; }
+  .wrap-title-banner-top-line p {
+    font-size: 12px; } }
 
 /*# sourceMappingURL=main.css.map */

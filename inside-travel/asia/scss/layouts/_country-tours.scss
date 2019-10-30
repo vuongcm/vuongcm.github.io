@@ -2,3 +2,73 @@
     background-image: url('../images/background/bg-country.jpg');
     height: 100%;
 }
+.banner-top-detail{
+	height: 610px;
+}
+.wrap-title-banner-top-line{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	z-index: 2;
+	background-color: rgba(0, 0, 0, .3);
+	padding: 15px;
+	padding-top: 6%;
+	h1,h2{
+		font-size: 43px;
+		margin-top: 0;
+		margin-bottom: 0;
+		line-height: 1;
+		font-weight: normal;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	p{
+		font-size: 16px;
+		font-weight: 600;
+		text-align: center;
+	}
+}
+@media (max-width: 1351px) {
+	.banner-top-detail{
+		height: 600px;
+	}
+	.wrap-title-banner-top-line{
+		padding-top: 8%;
+	}
+}
+@media (max-width: 991px) {
+	.banner-top-detail{
+		height: 500px;
+	}
+	.wrap-title-banner-top-line{
+		padding-top: 13%;
+	}
+}
+@media (max-width: 767px) {
+	.banner-top-detail{
+		height: 300px;
+	}
+	.wrap-title-banner-top-line{
+		padding-top: 0;
+		h1,h2{
+			font-size: 35px;
+		}
+		p{
+			font-size: 14px;
+		}
+	}
+}
+@media (max-width: 479px) {
+	.wrap-title-banner-top-line{
+		h1,h2{
+			font-size: 35px;
+		}
+		p{
+			font-size: 12px;
+		}
+	}
+}

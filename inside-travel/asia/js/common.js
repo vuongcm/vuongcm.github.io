@@ -168,7 +168,7 @@ $(document).ready(function() {
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			infinite: true,
-			adaptiveHeight: true,
+			//adaptiveHeight: true,
 			useTransform: false,
 	        prevArrow: `.wrap-slide-st1 .arrow-left`,
 	        nextArrow: `.wrap-slide-st1 .arrow-right`
