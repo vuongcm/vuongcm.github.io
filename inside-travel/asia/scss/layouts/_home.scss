@@ -9,10 +9,10 @@
 	z-index: 2;
 	background-color: rgba(0, 0, 0, .05);;
 	padding: 15px;
-	padding-top: 15%;
+	padding-top: 11%;
 	h1,h2{
 		font-family: 'Reenie Beanie', cursive;
-		font-size: 88px;
+		font-size: 83px;
 		margin-top: 0;
 		margin-bottom: 0;
 		line-height: 1;
@@ -222,6 +222,9 @@
 			font-size: 14px;
 			font-weight: 600;
 		}
+		.paragraph{
+			line-height: 1.6;
+		}
 	}
 }
 .wrap-map{
@@ -428,6 +431,7 @@
 }
 @media (max-width: 767px) {
 	.wrap-title-banner-top{
+		padding-top: 22%;
 		h1,h2{
 			font-size: 74px;
 		}
@@ -459,6 +463,9 @@
 	.wrap-map{
 		padding: 0;
 		.map-home{
+			&>img{
+				display: none;
+			}
 			.synch-carousels{
 				width: 65%;
 				margin: 0 auto;
@@ -473,6 +480,7 @@
 }
 @media (max-width: 479px) {
 	.wrap-title-banner-top{
+		padding-top: 29%;
 		h1,h2{
 			font-size: 56px;
 		}
@@ -491,6 +499,22 @@
 			.synch-carousels{
 				width: 90%;
 			}
+		}
+	}
+	.wrap-title-banner-top{
+		p{
+			font-size: 12px;
+		}
+	}
+}
+@media (max-width: 375px) {
+	.wrap-title-banner-top{
+		padding-top: 29%;
+		h1,h2{
+			font-size: 48px;
+		}
+		p{
+			font-size: 10px;
 		}
 	}
 }
