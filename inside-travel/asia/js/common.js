@@ -136,6 +136,11 @@ $(document).ready(function() {
     context.beginPath();
 	context.arc(450,382,58,Math.PI/2,Math.PI/1.04);
     context.stroke();*/
+    $('.best-support article').hover(function(){
+    	$(this).children('.paragraph').css('max-height','132px');
+    },function(){
+    	$(this).children('.paragraph').removeAttr('style');
+    });
 	// slick map home
 	if ($('#slick-slider-map').length > 0) {
 		$(`#slick-slider-map .gallery`).slick({

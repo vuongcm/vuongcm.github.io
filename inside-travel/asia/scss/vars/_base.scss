@@ -947,9 +947,9 @@ select:focus {
                 font-weight: 600;
             }
         }
-        &:hover{
+        &:hover, &:active{
             &>p{
-                max-height: 152px!important;
+                max-height: 152px;
             }
         }
     }
@@ -1339,7 +1339,7 @@ select:focus {
     .team-mess{
         width: 100%;
         p{
-            font-size: 16px;
+            font-size: 12px;
         }
     }
     .call-info{
@@ -1368,6 +1368,11 @@ select:focus {
         .content-trip{
             &>p{
                 max-height: 36px;
+            }
+            &:hover, &:active{
+                &>p{
+                    max-height: 152px;
+                }
             }
         }
     }

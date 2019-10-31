@@ -220,6 +220,13 @@
 		max-height: calc(98vh - 20px);
 		overflow-y: scroll;
 	}
+	.check-field{
+		&>.phone-wrap{
+			input{
+				padding-left: 25%;
+			}
+		}
+	}
 }
 @media (max-width: 479px) {
 	.modal{

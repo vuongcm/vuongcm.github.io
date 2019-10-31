@@ -234,11 +234,11 @@
             overflow-y: hidden;
             @include smooth(.5s);
 		}
-		&:hover{
+		/*&:hover, &:active{
 			.paragraph{
-				max-height: 132px !important;
+				max-height: 132px;
 			}
-		}
+		}*/
 	}
 }
 .wrap-map{
@@ -514,6 +514,11 @@
 			.paragraph{
 				max-height: 27px;
 			}
+			/*&:hover, &:active{
+				.paragraph{
+					max-height: 132px;
+				}
+			}*/
 		}
 	}
 }
