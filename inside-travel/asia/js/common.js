@@ -3,7 +3,9 @@ $(document).ready(function() {
 	//===========header
 	if($('body').width() > 991){
 		$('#menu-lv1-1').hover(function(){
-			$('#menu-lv1-1').nextAll('.sub-menu-destinations').toggleClass('open-flex');
+			$('#menu-lv1-1').nextAll('.sub-menu-destinations').addClass('open-flex');
+		},function(){
+			$('#menu-lv1-1').nextAll('.sub-menu-destinations').removeClass('open-flex');
 		});
 		$('.sub-menu-destinations').hover(function(){
 	        $(this).css('display','flex');
@@ -14,7 +16,9 @@ $(document).ready(function() {
 		});
 
 		$('#menu-lv1-2').hover(function(){
-			$('#menu-lv1-2').nextAll('.sub-menu-travel').toggleClass('open-flex');
+			$('#menu-lv1-2').nextAll('.sub-menu-travel').addClass('open-flex');
+		},function(){
+			$('#menu-lv1-2').nextAll('.sub-menu-travel').removeClass('open-flex');
 		});
 		$('.sub-menu-travel').hover(function(){
 	        $(this).css('display','flex');
@@ -119,10 +123,6 @@ $(document).ready(function() {
 	});
 	let heightTrip = 91+$('.content-trip').height()+$('.trip a').height();
 	$('.trip').height(heightTrip);
-	$('.content-trip').hover(function(){
-		$(this).parent('.trip').toggleClass('trip-active');
-	});
-
 	/*// ==============vẽ canvas==============
 	let context = document.getElementById('canvas').getContext('2d')
 	context.beginPath();
@@ -183,8 +183,8 @@ $(document).ready(function() {
 			infinite: true,
 			centerMode: true,
 			centerPadding: '0',
-			adaptiveHeight: false,
-			useTransform: false,
+			//adaptiveHeight: false,
+			useTransform: true,
 			initialSlide: 2,
 	        prevArrow: `.wrap-slide-st2 .arrow-left`,
 	        nextArrow: `.wrap-slide-st2 .arrow-right`,
@@ -230,7 +230,36 @@ $(document).ready(function() {
 		$(this).closest('.modal').addClass('close-display');
 		$('.modal-container').addClass('close-display');
 	});
-
+	for(let i=1; i<=$('.phone-wrap').length; i++){
+		$(`#cb-p-${i}`).click(function(){
+			if (this.checked){
+	            $(`#pw-${i}`).addClass('open-flex');
+	        }
+	        else{
+	            $(`#pw-${i}`).removeClass('open-flex');
+	        }
+		});
+		let input = document.querySelector(`#phonenumber-${i}`);
+		window.intlTelInput(input, {
+	      preferredCountries: ['us','gb','au'],
+	    });
+	    input.value = '+1 ';
+	    input.onclick=input.onkeydown=function(event){
+	    	if(input.value.length<2||input.value=='+1 '){
+	        	input.value='+';
+	    	}
+			var key=event.keyCode||event.charCode;
+			if(key==8){
+				if(input.value.length<3||input.value=='+1 '){
+					input.value='++';
+				}
+			}else if(key==46){
+				if(input.value.length<2||input.value=='+1 '){
+					input.value='+';
+				}
+			}
+		};
+	}
 	//============search box=============
 	$('.select-st1 .text').on('click',function(){
 		$(this).next('.value').toggleClass('open-block');

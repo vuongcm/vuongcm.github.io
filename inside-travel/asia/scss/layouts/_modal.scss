@@ -18,7 +18,7 @@
 	width: 95%;
 	z-index: 201;
 	position: fixed;
-	top: 10%;
+	top: 5%;
 	left: calc(50% - var(--modalWidth)/2);
 	background-color: $background-color-st1;
 	padding: 30px 15px;
@@ -44,6 +44,16 @@
 	.call-us{
 		margin-right: 15px;
 		margin-left: 15px;
+		p{
+			color: $higlight-color;
+			font-weight: 600;
+			a{
+				opacity: 1;
+				&:hover{
+					opacity: .8;
+				}
+			}
+		}
 	}
 }
 .form-field{
@@ -60,7 +70,58 @@
 		@include smooth(.25s);
 	}
 	textarea{
-		height: 130px;
+		height: 210px;
+	}
+}
+.check-field{
+	margin-top: 15px;
+	width: 100%;
+	&>div:first-child{
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		input[type=checkbox]{
+			height: auto;
+		}
+		label{
+			margin-left: 10px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			cursor: pointer;
+			i{
+				font-size: 14px;
+			}
+			span{
+				text-align: left;
+				margin-left: 5px;
+			}
+		}
+	}
+	&>.phone-wrap{
+		margin-top: 15px;
+		display: none;
+		justify-content: center;
+		&>div{
+			width: 70%;
+		}
+		.iti{
+			width: 100%;
+			.iti__country-list{
+				max-width: 206px;
+			}
+		}
+		input{
+			width: 100%;
+			height: auto;
+			border: 1px solid #aaa;
+			font-size: 14px;
+			vertical-align: middle;
+			line-height: 1.5;
+			color: #36312a;
+			padding: 10px 8px 10px 15%;
+			@include smooth(.25s);
+		}
 	}
 }
 .half{
@@ -94,7 +155,6 @@
 	}
 }
 #creat-trip-modal{
-	top: 5%;
 	&>p{
 		text-align: center;
 	}
@@ -109,10 +169,10 @@
 		width: 100%;
 		height: auto;
 		border: 1px solid #aaa;
-		font-size: 14px;
+		font-size: 12px;
 		vertical-align: middle;
 		line-height: 1.5;
-		color: #36312a;
+		color: #555;
 		padding: 10px 8px;
 		@include smooth(.25s);
 		background-color: #fff;
@@ -155,6 +215,12 @@
 		}
 	}
 }
+@media (max-width: 767px) {
+	.modal{
+		max-height: calc(98vh - 20px);
+		overflow-y: scroll;
+	}
+}
 @media (max-width: 479px) {
 	.modal{
 		top: 20px;
@@ -169,8 +235,6 @@
 @media (max-width: 375px) {
 	.modal{
 		padding: 15px 10px;
-		max-height: calc(98vh - 20px);
-		overflow-y: scroll;
 		&>p{
 			padding: 0 5px;
 		}
