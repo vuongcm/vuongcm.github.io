@@ -953,7 +953,7 @@ select:focus {
       .trip .content-trip > span > strong {
         font-size: 20px;
         font-weight: 600; }
-    .trip .content-trip:hover > p, .trip .content-trip:active > p {
+    .trip .content-trip:hover > p {
       max-height: 152px; }
   .trip .wrap-tooltip {
     margin-top: auto;
@@ -1107,6 +1107,10 @@ select:focus {
 
   .banner-top {
     height: 660px; } }
+@media (max-width: 1024px) {
+  .bg-parallax {
+    z-index: 0;
+    background-attachment: scroll; } }
 @media (max-width: 991px) {
   .col-md-12 {
     width: 100%; }
@@ -1287,9 +1291,7 @@ select:focus {
     height: 440px; }
 
   .trip .content-trip > p {
-    max-height: 36px; }
-  .trip .content-trip:hover > p, .trip .content-trip:active > p {
-    max-height: 152px; } }
+    max-height: 36px; } }
 @media (max-width: 375px) {
   .water-mask {
     font-size: 22px;
@@ -2525,12 +2527,7 @@ footer .brand-section {
   position: absolute;
   bottom: 10px;
   z-index: 2;
-  background-color: #fff;
-  /*&:hover, &:active{
-  	.paragraph{
-  		max-height: 132px;
-  	}
-  }*/ }
+  background-color: #fff; }
   .best-support article h3 {
     font-size: 14px;
     font-weight: 600; }
@@ -2543,6 +2540,8 @@ footer .brand-section {
     -o-transition: all 0.5s linear;
     -ms-transition: all 0.5s linear;
     transition: all 0.5s linear; }
+  .best-support article:hover .paragraph {
+    max-height: 132px; }
 
 .wrap-map {
   padding: 15px; }
@@ -2739,14 +2738,8 @@ footer .brand-section {
 
   .best-support .col-xlg-3 {
     padding-bottom: 80px; }
-  .best-support article {
-    /*&:hover, &:active{
-    	.paragraph{
-    		max-height: 132px;
-    	}
-    }*/ }
-    .best-support article .paragraph {
-      max-height: 27px; } }
+  .best-support article .paragraph {
+    max-height: 27px; } }
 @media (max-width: 375px) {
   .wrap-map .map-home .synch-carousels {
     width: 90%; }

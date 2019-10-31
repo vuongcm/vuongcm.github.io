@@ -947,7 +947,7 @@ select:focus {
                 font-weight: 600;
             }
         }
-        &:hover, &:active{
+        &:hover{
             &>p{
                 max-height: 152px;
             }
@@ -1117,6 +1117,12 @@ select:focus {
     }
     .banner-top{
         height: 660px;
+    }
+}
+@media (max-width: 1024px) {
+    .bg-parallax{
+        z-index: 0;
+        background-attachment: scroll;
     }
 }
 @media (max-width: 991px) {
@@ -1368,11 +1374,6 @@ select:focus {
         .content-trip{
             &>p{
                 max-height: 36px;
-            }
-            &:hover, &:active{
-                &>p{
-                    max-height: 152px;
-                }
             }
         }
     }
