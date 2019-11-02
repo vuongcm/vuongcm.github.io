@@ -115,6 +115,11 @@ $(document).ready(function() {
 	    },function(){
 	    	$(this).children('.paragraph').removeAttr('style');
 	    });
+	    $('.wrap-slide-sp article').hover(function(){
+	    	$(this).children('.paragraph').css('max-height','132px');
+	    },function(){
+	    	$(this).children('.paragraph').removeAttr('style');
+	    });
 	    $('.content-trip').hover(function(){
 	    	$(this).children('.paragraph').css('max-height','152px');
 	    },function(){
@@ -241,6 +246,36 @@ $(document).ready(function() {
 			autoplay: true,
 			autoplaySpeed: 7000,
 			arrows: false
+		});
+	}
+	//carousel-sp
+	if ($('.wrap-slide-sp').length > 0) {
+		$(`.wrap-slide-sp .gallery`).slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			//lazyLoad: 'ondemand',
+			infinite: true,
+			useTransform: true,
+	        prevArrow: `.wrap-slide-sp .arrow-left`,
+	        nextArrow: `.wrap-slide-sp .arrow-right`,
+	        responsive: [
+		    {
+		      breakpoint: 768,
+		      settings: {
+		      	slidesToShow: 2,
+		      	centerMode: true,
+		        centerPadding: `${bodyWidth/7.5}px`
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		      	slidesToShow: 1,
+		      	centerMode: true,
+		        centerPadding: `${bodyWidth/4.5}px`
+		      }
+		    }
+		  ]
 		});
 	}
 	//================modal===================
