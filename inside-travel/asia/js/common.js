@@ -143,10 +143,17 @@ $(document).ready(function() {
 		} else{
 			$(this).text('Read More ...');
 		}
+		if(bodyWidth < 1200 && bodyWidth > 991){
+			$('.pull-up').height($('.foreground').outerHeight()-190);
+		} else if(bodyWidth <= 991){
+			$('.pull-up').height($('.foreground').outerHeight()-120);
+		} else{
+			$('.pull-up').height($('.foreground').outerHeight()-220);
+		}
 	});
 	if(bodyWidth < 1200 && bodyWidth > 991){
 		$('.pull-up').height($('.foreground').outerHeight()-190);
-	} else if(bodyWidth < 992){
+	} else if(bodyWidth <= 991){
 		$('.pull-up').height($('.foreground').outerHeight()-120);
 	} else{
 		$('.pull-up').height($('.foreground').outerHeight()-220);
