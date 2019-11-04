@@ -2,7 +2,7 @@
     background-image: url('../images/background/bg-country.jpg');
     height: 100%;
 }
-.banner-top-detail{
+.banner-top-country-tour{
 	height: 610px;
 }
 .wrap-title-banner-top-line{
@@ -23,7 +23,6 @@
 	h1,h2{
 		font-size: 43px;
 		margin-top: 0;
-		margin-bottom: 0;
 		line-height: 1;
 		font-weight: normal;
 		text-align: center;
@@ -89,7 +88,7 @@
     }
 }
 @media (max-width: 1351px) {
-	.banner-top-detail{
+	.banner-top-country-tour{
 		height: 600px;
 	}
 	.wrap-title-banner-top-line{
@@ -97,7 +96,7 @@
 	}
 }
 @media (max-width: 991px) {
-	.banner-top-detail{
+	.banner-top-country-tour{
 		height: 500px;
 	}
 	.wrap-title-banner-top-line{
@@ -119,7 +118,7 @@
 	}
 }
 @media (max-width: 767px) {
-	.banner-top-detail{
+	.banner-top-country-tour{
 		height: 300px;
 	}
 	.wrap-title-banner-top-line{

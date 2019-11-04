@@ -1,0 +1,70 @@
+.bg-detail {
+    background-image: url('../images/background/bg-detail.jpg');
+    height: 100%;
+}
+.wrap-title-banner-detail{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	z-index: 2;
+	background-color: rgba(0, 0, 0, .65);
+	padding: 15px;
+	h1,h2{
+		font-size: 42px;
+		margin-top: 0;
+		margin-bottom: 30px;
+		line-height: 1;
+		font-weight: normal;
+		text-transform: uppercase;
+		z-index: 2;
+	}
+}
+.detail-subtitle-box{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.subtitle{
+		font-size: 20px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	.heart-tour{
+		font-size: 40px;
+	}
+	.price{
+		font-size: 20px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	.btn-st2{
+		font-size: 24px;
+		color: #fff;
+		border-color: #fff;
+	}
+}
+.location-list{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	&>a{
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		height: 25px;
+		padding-left: 20px;
+		padding-right: 20px;
+		text-transform: uppercase;
+		font-size: 14px;
+		border-right: 1px solid $higlight-color;
+	}
+	&>div{
+		font-size: 20px;
+		color: $higlight-color;
+	}
+}
