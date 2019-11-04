@@ -1,0 +1,51 @@
+.wrap-contact-box{
+    border: 1px solid #cecece;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    text-align: center;
+    h2{
+    	    width: 100%;
+	    font-size: 28px;
+	    font-family: 'Theano Didot','Times New Roman', serif;
+	    letter-spacing: 2px;
+	    color: #111;
+	    line-height: 1;
+	    text-align: center;
+	    margin-top: 0;
+	    margin-bottom: 0;
+	    font-weight: 400;
+    }
+    &>p{
+	    padding: 0 15px;
+    }
+    button[type="submit"]{
+    	margin-top: 20px;
+    	padding-left: 30px;
+    	padding-right: 30px;
+    	height: 44px;
+    }
+    .check-field{
+    	&>.phone-wrap{
+    		input{
+				padding-left: calc(50px + 1%);
+    		}
+    	}
+    }
+    .call-us{
+    	border-bottom: none;
+    	p{
+    		font-size: 14px;
+    		color: $higlight-color;
+    		a{
+    			opacity: 1;
+    		}
+    	}
+    }
+}
+@media (max-width: 767px) {
+	.wrap-contact-box{
+    	padding: 15px 20px;
+	}
+}
