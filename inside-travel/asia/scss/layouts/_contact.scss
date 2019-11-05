@@ -1,3 +1,11 @@
+.banner-top-contact{
+    height: 580px;
+    margin-top: 0;
+    position: relative;
+    .wrap-title-banner-top-line{
+        padding-top: 15px;
+    }
+}
 .wrap-contact-box{
     border: 1px solid #cecece;
     width: 90%;
@@ -38,10 +46,22 @@
     	p{
     		font-size: 14px;
     		color: $higlight-color;
+            font-size: 22px;
+            font-weight: 600;
     		a{
     			opacity: 1;
     		}
     	}
+    }
+}
+@media (max-width: 1351px) {
+    .banner-top-contact{
+        height: 560px;
+    }
+}
+@media (max-width: 991px) {
+    .banner-top-contact{
+        height: 450px;
     }
 }
 @media (max-width: 767px) {

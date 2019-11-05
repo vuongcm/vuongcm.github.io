@@ -323,10 +323,9 @@
         </form>
     </div>
 </section>
-<section style="width: 100%; height: 800px;">
-    <div class="icon-dropdown">
-        <i class="icon-font select-arrow-thin"></i>
-        <i class="icon-font select-arrow-thin"></i>
+<section>
+    <div id="map-tour" style="width: 798px;height: 600px">
+
     </div>
 </section>
 <footer>
@@ -450,5 +449,45 @@
 <script type="text/javascript" src="js/slick.min.js" defer></script>
 <script type="text/javascript" src="js/dateselector.min.js" defer></script>
 <script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript"
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVWfkSoV5qvGMCom61IAH8FEhFJLfCRg0">
+</script>
+<script>
+   function initialize() {
+       var myOptions = {
+           zoom: 5,
+           center: new google.maps.LatLng(17.05256,105.51927),
+           mapTypeId: google.maps.MapTypeId.ROADMAP
+       };
+       map = new google.maps.Map(document.getElementById('map-tour'), myOptions);
+       marker = new google.maps.Marker({
+           map: map,
+           position: new google.maps.LatLng(21.0202896,105.7211331)
+       });
+       infowindow = new google.maps.InfoWindow({
+           content: `<div class="loca-info-map">
+                        <div>
+                            <div class="col-xlg-6">
+                                <h5>Jour 1 - Arrivée à Hanoi</h5>
+                                <p><span>Activités:</span>Arrivée à Hanoi, l’enregistrement à hôtel et profiter d'un dîner</p>
+                                <p><span>Inclus:</span>Transfert de l'aéroport, le guide, le dîner, l'hébergement</p>
+                            </div>
+                            <div class="col-xlg-6">
+                                <img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-tour/discover-the-gems-of-indochina92-820-440.jpg" alt="">
+                            </div>
+                        </div>
+                        <div><a href="#">En savoir plus</a></div>
+                    </div>`
+       });
+       google.maps.event.addListener(marker, 'click', function() {
+           infowindow.open(map, marker);
+       });
+       infowindow.open(map, marker);
+   }
+   //google.maps.event.addDomListener(window, 'load', initialize);
+
+ 
+</script>
+
 </body>
 </html>

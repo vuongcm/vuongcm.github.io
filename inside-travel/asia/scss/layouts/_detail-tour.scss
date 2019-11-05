@@ -1,6 +1,7 @@
 .bg-detail {
     background-image: url('../images/background/bg-detail.jpg');
     height: 100%;
+    @include dakkenImg(65%);
 }
 .wrap-title-banner-detail{
 	display: flex;
@@ -11,15 +12,18 @@
 	height: 100%;
 	color: #fff;
 	z-index: 2;
-	background-color: rgba(0, 0, 0, .65);
 	padding: 15px;
 	h1,h2{
 		font-size: 42px;
 		margin-top: 0;
 		margin-bottom: 30px;
-		line-height: 1;
+		line-height: 1.1;
 		font-weight: normal;
 		text-transform: uppercase;
+		z-index: 2;
+		text-align: center;
+	}
+	.detail-subtitle-box{
 		z-index: 2;
 	}
 }
@@ -62,9 +66,236 @@
 		text-transform: uppercase;
 		font-size: 14px;
 		border-right: 1px solid $higlight-color;
+		&:last-child{
+			border-right: none;
+		}
 	}
 	&>div{
 		font-size: 20px;
 		color: $higlight-color;
+	}
+}
+.detail-location{
+	.wrap-slide-st4{
+		margin-top: 40px;
+		margin-bottom: 30px;
+	}
+	.wrap-tooltip{
+		.tooltip{
+			margin-left: 10px;
+			margin-right: 10px;
+			&>.icon-font{
+				font-size: 60px;
+			}
+			&>span{
+				bottom: 120%;
+			}
+		}
+	}
+	.paragraph{
+		width: 70%;
+	}
+}
+.view-out{
+	width: 100%;
+	text-align: center;
+	.link-st3{
+		margin: 15px;
+		.icon-font{
+			margin-left: 5px;
+		}
+	}
+}
+.hightlight-tour{
+	background-color: $background-color-st1;
+	padding-top: 30px;
+	padding-bottom: 70px;
+}
+.content-hl-tour{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	&>div:first-child{
+		width: 45%;
+		padding-right: 15px;
+		img{
+			max-height: 210px;
+			&:first-child{
+				margin-bottom: 10px;
+			}
+		}
+	}
+	&>div:last-child{
+		width: 55%;
+		padding-left: 15px;
+		p{
+			font-size: 14px;
+			line-height: 1.5;
+			margin-bottom: 15px;
+		}
+		.checkmark{
+			color: $higlight-color;
+			font-size: 16px;
+			margin-right: 10px;
+		}
+	}
+}
+.loca-info-map{
+	width: 550px;
+	padding: 15px 0;
+	&>div:first-child{
+		display: flex;
+		justify-content: space-between;
+		h5{
+			font-size: 16px;
+			font-weight: 600;
+			text-align: left;
+		}
+		p{
+			text-align: left;
+			line-height: 1.2;
+			margin-bottom: 10px;
+			span{
+				color: $higlight-color;
+				font-weight: 600;
+				margin-right: 5px;
+			}
+		}
+	}
+	&>div:last-child{
+		margin-right: 15px;
+		margin-left: 15px;
+		text-align: right;
+		a{
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			height: 25px;
+			padding-left: 20px;
+			padding-right: 20px;
+			background-color: $higlight-color;
+			color: #fff;
+		}
+	}
+}
+.wrap-map-loca{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	padding-right: 15px;
+	padding-left: 15px;
+	.left-daybyday{
+		width: 23%;
+		ul{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+			height: 100%;
+			width: 100%;
+			li{
+				width: 100%;
+				&:last-child{
+					&>a{
+						border-bottom: 1px solid #dcdcdc;
+					}
+				}
+			}
+			a{
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				height: calc(700px / 6);
+				width: 90%;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+				border-top: 1px solid #dcdcdc;
+				border-left: 1px solid #dcdcdc;
+				border-right: 1px solid #dcdcdc;
+				background-color: $background-color-st1;
+				padding-right: 10px;
+				padding-left: 10px;
+				.icon-font{
+					color: $higlight-color;
+					font-size: 26px;
+					margin-right: 5px;
+					&:before{
+						color: inherit;
+					}
+				}
+			}
+		}
+		
+	}
+	#map-tour{
+		width: 77%;
+		min-height: 700px;
+	}
+}
+@media (max-width: 991px) {
+	.content-hl-tour{
+		flex-wrap: wrap;
+		&>div:first-child{
+			width: 100%;
+			padding-left: 15px;
+			img{
+				max-height: none;
+				&:first-child{
+					margin-bottom: 15px;
+				}
+				&:last-child{
+					display: none;
+				}
+			}
+		}
+		&>div:last-child{
+			width: 100%;
+			padding-right: 15px;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.wrap-title-banner-detail{
+		h1,h2{
+			font-size: 22px;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+	.detail-subtitle-box{
+		.subtitle{
+			font-size: 14px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.heart-tour{
+			font-size: 30px;
+			display: none;
+		}
+		.price{
+			font-size: 14px;
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+		.btn-st2{
+			font-size: 16px;
+		}
+	}
+	.location-list{
+		flex-wrap: wrap;
+		&>a{
+			margin-bottom: 10px;
+		}
+	}
+	.detail-location{
+		.wrap-slide-st4{
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
+		.paragraph{
+			width: 100%;
+		}
 	}
 }
