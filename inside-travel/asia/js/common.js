@@ -153,12 +153,33 @@ $(document).ready(function() {
 			}
 		}
 	});
+	$('.order-day>a:first-child').click(function(){
+		$(this).next('.panel').slideToggle(500);
+		$(this).toggleClass('active');
+	});
+	$('#open-all-1').click(function(){
+		$('.order-day>a:first-child').addClass('active');
+		$('.panel').slideDown(500);
+	});
+	$('#close-all-1').click(function(){
+		$('.order-day>a:first-child').removeClass('active');
+		$('.panel').slideUp(500);
+	});
 	if(bodyWidth < 1200 && bodyWidth > 991){
 		$('.pull-up').height($('.foreground').outerHeight()-190);
 	} else if(bodyWidth <= 991){
 		$('.pull-up').height($('.foreground').outerHeight()-120);
 	} else{
 		$('.pull-up').height($('.foreground').outerHeight()-220);
+	}
+	if(bodyWidth > 991){
+		if($('.wrap-map-loca').length > 0){
+			$('.left-daybyday li>a').height($('.wrap-map-loca').height()/$('.left-daybyday ul li').length);
+			$('.left-daybyday li>a').click(function(){
+				$(this).closest('ul').children('li').removeClass('active');
+				$(this).parent('li').addClass('active');
+			});
+		}
 	}
 	/*// ==============vẽ canvas==============
 	let context = document.getElementById('canvas').getContext('2d')
@@ -178,7 +199,7 @@ $(document).ready(function() {
     	if(selectValue1 == ''){
     		$(this).nextAll('span').text($(this).children('option').eq(0).text());
     	} else{
-    		let textSelect1 = $(this).children(`option[value=${selectValue1}]`).text();
+    		let textSelect1 = $(this).children(`option[value='${selectValue1}']`).text();
     		$(this).nextAll('span').text(textSelect1);
     	}
     	

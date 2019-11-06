@@ -67,7 +67,7 @@ select{padding-left:8px; cursor: pointer;}
 input[type="number"]{padding-left:5px}
 textarea{padding:8px 5px 8px 5px}
 input,textarea,select,button,a,button:hover,button:active,button:focus{outline:none}
-button{border:none;background:none;padding:0; cursor: pointer;}
+button{border:none;background:none;}
 img{max-width: 100%;vertical-align: middle;object-fit: cover;}
 @import "var";
 body {
@@ -377,6 +377,38 @@ select:focus {
     margin-top: 0;
     height: 680px;
 }
+.count-img{
+    position: absolute;
+    top: 5px;
+    right: 22px;
+    color: #fff;
+    line-height: 1;
+    font-weight: 600;
+}
+.enlarge{
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    color: #fff;
+}
+.location{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #fff;
+    line-height: 1;
+    font-weight: 600;
+    .map-marker{
+        margin-right: 5px;
+    }
+}
+.star-box{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+    font-size: 14px;
+}
 .pre-title{
     font-size: 20px;
     width: 100%;
@@ -420,15 +452,8 @@ select:focus {
     justify-content: center;
     align-items: center;
     .arrow-radius{
-        border: 1px solid #111;
-        border-radius: 50%;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
         width: 50px;
         height: 50px;
-        outline: none;
-        background-color: transparent;
         @include smooth(.2s);
         .select-arrow-thin{
             font-size: 10px;
@@ -721,6 +746,9 @@ select:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    img{
+        width: 15px;
+    }
     strong{
         margin-left: 5px;
         font-weight: 400;
@@ -1002,6 +1030,23 @@ select:focus {
         }
     }
 }
+.arrow-radius{
+    border: 1px solid $title-color;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    .select-arrow-thin{
+        font-size: 9px;
+        color: $title-color;
+    }
+    &:hover{
+        color: $light-color;
+    }
+}
 .synch-carousels {
     position: relative;
     box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.05);
@@ -1038,10 +1083,8 @@ select:focus {
         }
         .arrow-radius{
             border: 1px solid $title-color;
-            border-radius: 50%;
             .select-arrow-thin{
                 font-size: 9px;
-                color: $title-color;
             }
             &:hover{
                 color: $light-color;
@@ -1050,13 +1093,13 @@ select:focus {
         .arrow-left{
             left: 0;
             .select-arrow-thin{
-                @include rotage(90deg)
+                @include rotage(90deg);
             }
         }
         .arrow-right{
             right: 0;
             .select-arrow-thin{
-                @include rotage(-90deg)
+                @include rotage(-90deg);
             }
         }
     }
