@@ -918,6 +918,12 @@ select:focus {
         }
     }
 }
+.triagle-st1{
+    -webkit-clip-path: polygon(-1px -1px, -1px 100%, 100% 50%);
+    clip-path: polygon(-1px -1px, -1px 100%, 100% 50%);
+    -webkit-shape-outside: polygon(-1px -1px, -1px 100%, 100% 50%);
+    shape-outside: polygon(-1px -1px, -1px 100%, 100% 50%);
+}
 .tooltip{
     position: relative;
     &>.icon-font{

@@ -174,7 +174,7 @@ $(document).ready(function() {
 	}
 	if(bodyWidth > 991){
 		if($('.wrap-map-loca').length > 0){
-			$('.left-daybyday li>a').height($('.wrap-map-loca').height()/$('.left-daybyday ul li').length);
+			//$('.left-daybyday li>a').height($('.wrap-map-loca').height()/$('.left-daybyday ul li').length);
 			$('.left-daybyday li>a').click(function(){
 				$(this).closest('ul').children('li').removeClass('active');
 				$(this).parent('li').addClass('active');

@@ -1,7 +1,17 @@
+.banner-top-detail{
+	height: 715px;
+}
 .bg-detail {
-    background-image: url('../images/background/bg-detail.jpg');
     height: 100%;
-    @include dakkenImg(65%);
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    img{
+    	@include dakkenImg(65%);
+    	position: absolute;
+    	bottom: 0;
+    }
 }
 .wrap-title-banner-detail{
 	display: flex;
@@ -14,11 +24,11 @@
 	z-index: 2;
 	padding: 15px;
 	h1,h2{
-		font-size: 42px;
+		font-size: 36px;
 		margin-top: 0;
 		margin-bottom: 30px;
 		line-height: 1.1;
-		font-weight: normal;
+		font-weight: 500;
 		text-transform: uppercase;
 		z-index: 2;
 		text-align: center;
@@ -68,6 +78,7 @@
 		border-right: 1px solid $higlight-color;
 		text-align: center;
 		color: $higlight-color;
+		font-weight: 500;
 		&:last-child{
 			border-right: none;
 		}
@@ -131,9 +142,10 @@
 		width: 55%;
 		padding-left: 15px;
 		p{
-			font-size: 14px;
+			font-size: 16px;
 			line-height: 1.5;
 			margin-bottom: 15px;
+			display: flex;
 		}
 		.checkmark{
 			color: $higlight-color;
@@ -193,7 +205,7 @@
 		ul{
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			justify-content: flex-start;
 			align-items: flex-start;
 			height: 100%;
 			width: 100%;
@@ -203,22 +215,34 @@
 				justify-content: flex-start;
 				align-items: center;
 				&:last-child{
-					&>a{
-						border-bottom: 1px solid #dcdcdc;
+					height: 100%;
+					&>div{
+						border-top: 2px solid #fff;
+						height: 100%;
+						width: calc(100% - 20px);
+						background-color: $background-color-st1;
 					}
 				}
-				.caret-right{
-					font-size: 30px;
-					color: $higlight-color;
+				.triagle-st1{
+					height: 100%;
+					width: 20px;
+					background-color: $higlight-color;
 					visibility: hidden;
 				}
 			}
 			li.active{
-				.caret-right{
+				.triagle-st1{
 					visibility: visible;
 				}
 				a{
-					color: $higlight-color;
+					background-color: $higlight-color;
+					border-color: $higlight-color;
+					span{
+						color: #fff;
+					}
+					.icon-font{
+						color: #fff;
+					}
 				}
 			}
 			a{
@@ -226,25 +250,37 @@
 				justify-content: flex-start;
 				align-items: center;
 				//height: calc(700px / 6);
-				width: calc(100% - 12px);
-				border-top: 1px solid #dcdcdc;
-				border-left: 1px solid #dcdcdc;
-				border-right: 1px solid #dcdcdc;
+				width: calc(100% - 20px);
+				border-top: 2px solid #fff;
 				background-color: $background-color-st1;
-				padding-right: 10px;
-				padding-left: 10px;
+				padding: 0 10px;
+				height: 42px;
+				color: $light-color-2;
 				span{
-					font-weight: 500;
+					font-weight: 700;
+					font-size: 14px;
+					letter-spacing: 1px;
 					text-overflow: ellipsis;
 					white-space: nowrap;
 					overflow: hidden;
 				}
 				.icon-font{
-					color: $higlight-color;
 					font-size: 26px;
 					margin-right: 5px;
+					@include smooth(.25s);
 					&:before{
 						color: inherit;
+					}
+				}
+				&:hover{
+					background-color: $higlight-color;
+					border-color: $higlight-color;
+					opacity: 1;
+					span{
+						color: #fff;
+					}
+					.icon-font{
+						color: #fff;
 					}
 				}
 			}
@@ -300,6 +336,9 @@
 }
 .detail-day{
 	width: 100%;
+	.order-day:last-child{
+		margin-top: 40px;
+	}
 }
 .order-day{
 	width: 100%;
@@ -370,47 +409,40 @@
 			}
 		}
 	}
-	.head-pn{
-		display: inline-flex;
-		justify-content: flex-start;
-		align-items: center;
-		margin-right: 15px;
+}
+.head-pn{
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-right: 15px;
+	.icon-font{
+		font-size: 18px;
+		margin-right: 5px;
+	}
+	span{
+		font-size: 14px;
+	}
+}
+.body-pn{
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	.wrap-tooltip{
+		width: auto;
+		margin: 0;
+	}
+	.tooltip{
+		opacity: 1;
 		.icon-font{
 			font-size: 18px;
-			margin-right: 5px;
 		}
-		span{
-			font-size: 14px;
-		}
-	}
-	.body-pn{
-		display: inline-flex;
-		justify-content: flex-start;
-		align-items: center;
-		.wrap-tooltip{
-			width: auto;
-			margin: 0;
-		}
-		.tooltip{
-			opacity: 1;
-			.icon-font{
-				font-size: 18px;
-			}
-			&>span{
-				width: 200px;
-				left: calc(-100px + 50%);
-				bottom: 150%;
-			}
-		}
-	}
-	.accordion{
-		.head-pn{
-			width: 100%;
-			margin-bottom: 15px;
+		&>span{
+			width: 200px;
+			left: calc(-100px + 50%);
+			bottom: 150%;
 		}
 	}
 }
-
 .rank{
 	display: inline-flex;
 	align-items: center;
@@ -426,13 +458,19 @@
 }
 .experience-suplier{
 	display: flex;
-	justify-content: center;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 	align-items: flex-start;
+	.head-pn{
+		width: 100%;
+		margin-bottom: 15px;
+	}
 	.row{
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;
 		margin-bottom: 15px;
+		width: 100%;
 		&:last-child{
 			margin-bottom: 0;
 		}
@@ -514,12 +552,9 @@
 	.inclusion{
 		width: 72%;
 		padding-right: 20%;
-		padding-left: 15px;
 	}
 	.exclusion{
 		width: 28%;
-		padding-right: 15px;
-		padding-left: 15px;
 		p{
 			.checkmark{
 				color: $light-color-2;
@@ -549,7 +584,15 @@
 		}
 	}
 }
+@media (max-width: 1351px){
+	.banner-top-detail{
+		height: 639px;
+	}
+}
 @media (max-width: 1199px) {
+	.banner-top-detail{
+		height: 550px;
+	}
 	.wrap-inclusion{
 		.inclusion{
 			padding-right: 15px;
@@ -557,6 +600,16 @@
 	}
 }
 @media (max-width: 991px) {
+	.banner-top-detail{
+		height: 388px;
+	}
+	.wrap-title-banner-detail{
+		h1,h2{
+			font-size: 26px;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
 	.content-hl-tour{
 		flex-wrap: wrap;
 		&>div:first-child{
@@ -600,11 +653,17 @@
 	}
 }
 @media (max-width: 767px) {
+	.banner-top-detail{
+		height: 338px;
+	}
+	.bg-detail {
+	    img{
+	    	min-width: 767px;
+	    }
+	}
 	.wrap-title-banner-detail{
 		h1,h2{
 			font-size: 22px;
-			margin-top: 0;
-			margin-bottom: 0;
 		}
 	}
 	.detail-subtitle-box{
@@ -680,9 +739,15 @@
 	}
 }
 @media (max-width: 479px) {
+	.bg-detail {
+	    img{
+	    	left: calc(-383px + 35%);
+	    }
+	}
 	.wrap-inclusion{
 		.inclusion{
 			width: 100%;
+			padding-right: 0;
 		}
 		.exclusion{
 			width: 100%;

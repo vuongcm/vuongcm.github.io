@@ -56,6 +56,22 @@
 		}
 	}
 }
+.modal-2{
+	width: 95%;
+	max-width: 900px;
+	padding: 40px 30px;
+	position: relative;
+	background-color: $background-color-st1;
+	.modal-content{
+		max-width: 1000px;
+		overflow-y: scroll;
+	}
+	.experience-suplier{
+		padding-bottom: 15px;
+		padding-top: 15px;
+		border-top: 1px dotted #dcdcdc;
+	}
+}
 .form-field{
 	margin-top: 15px;
 	input, textarea{
@@ -211,6 +227,18 @@
 						color: $main-color;
 					}
 				}
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.modal-2{
+		.experience-suplier{
+			.experience-img{
+				width: 27%;
+			}
+			.experience-content{
+				width: 73%;
 			}
 		}
 	}
