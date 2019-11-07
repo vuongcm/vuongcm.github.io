@@ -168,7 +168,6 @@ select:focus {
 .btn-st1 {
 	background-color: $btn-bg-color-st1;
 	color: $btn-text-color-st1;
-    display: inline-block;
     letter-spacing: 1px;
     @include smooth(.2s);
     display: inline-flex;
