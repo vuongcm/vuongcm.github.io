@@ -52,25 +52,31 @@ $(document).ready(function() {
 			if($(this).scrollTop() > 250){
 	        	$('header .menu-wrap').addClass('menu-wrap-scroll');
 	        	$('.bg-parallax').css('background-position-y',`20px`);
+	        	$('.fab-box').css('right','0');
 	        } else{
 	            $('header .menu-wrap').removeClass('menu-wrap-scroll');
 	            $('.bg-parallax').css('background-position-y',`${headerHeight}px`);
+	            $('.fab-box').css('right','-46px');
 	        }
 		} else if(bodyWidth > 520){
 			if($(this).scrollTop() > 100){
 	        	$('header .menu-wrap .brand').css('width','10%');
 	        	//$('.bg-parallax').css('background-position-y',`20px`);
+	        	$('.fab-box').css('bottom','0');
 	        } else{
 	            $('header .menu-wrap .brand').css('width','15%');
 	            //$('.bg-parallax').css('background-position-y',`${headerHeight}px`);
+	            $('.fab-box').css('bottom','-50px');
 	        }
 		} else{
 			if($(this).scrollTop() > 100){
 	        	$('header .menu-wrap .brand').css('width','15%');
 	        	//$('.bg-parallax').css('background-position-y',`20px`);
+	        	$('.fab-box').css('bottom','0');
 	        } else{
 	            $('header .menu-wrap .brand').css('width','20%');
 	            //$('.bg-parallax').css('background-position-y',`${headerHeight}px`);
+	            $('.fab-box').css('bottom','0');
 	        }
 		}
 	});
@@ -352,19 +358,21 @@ $(document).ready(function() {
 	$('.btn-contact').click(function(){
 		$('.modal-container').removeClass('close-display');
 		$('#contact-modal').removeClass('close-display');
-		$('body').css('--modalWidth',`${$('#contact-modal').outerWidth()}px`);
 	});
 	$('.btn-create-trip').click(function(){
 		$('.modal-container').removeClass('close-display');
 		$('#creat-trip-modal').removeClass('close-display');
-		$('body').css('--modalWidth',`${$('#creat-trip-modal').outerWidth()}px`);
+	});
+	$('.btn-modal-tour').click(function(){
+		$('.modal-container').removeClass('close-display');
+		$('.modal-tour').removeClass('close-display');
 	});
 	$('.modal-container').on('click',function(){
 		$(this).addClass('close-display');
-		$('.modal').addClass('close-display');
+		$('.modal, .modal-2').addClass('close-display');
 	});
 	$('.btn-close').click(function(){
-		$(this).closest('.modal').addClass('close-display');
+		$(this).closest('.modal, .modal-2').addClass('close-display');
 		$('.modal-container').addClass('close-display');
 	});
 	for(let i=1; i<=$('.phone-wrap').length; i++){
@@ -404,6 +412,9 @@ $(document).ready(function() {
 	$('.select-st2 .text').on('click',function(){
 		$(this).next('.value').toggleClass('open-block');
 	});
+	$('.booking-st1 .text').on('click',function(){
+		$(this).next('.value-2').toggleClass('open-block');
+	});
 	$('body').click(function(e){
 		if (!$('.booking-step-where .text,.booking-step-where .value').is(e.target) && $('.booking-step-where .text,.booking-step-where .value').has(e.target).length === 0) {
             $('.booking-step-where .value').removeClass('open-block');
@@ -423,31 +434,58 @@ $(document).ready(function() {
         if(!$('.booking-step-plan .text,.booking-step-plan .value').is(e.target) && $('.booking-step-plan .text,.booking-step-plan .value').has(e.target).length === 0){
         	$('.booking-step-plan .value').removeClass('open-block');
         }
+        if(!$('.booking-st1  .text,.booking-st1  .value-2').is(e.target) && $('.booking-st1  .text,.booking-st1  .value-2').has(e.target).length === 0){
+        	$('.booking-st1  .value-2').removeClass('open-block');
+        }
 	});
-	let number1 = $('.booking-step-room .btn-value').length;
-	for (let i=0; i<number1; i++){
-		$('.booking-step-room .btn-value').eq(i).click(function(){
-			if($(this).attr('class').search('checked') != -1){
-				$('.booking-step-room .btn-value').removeClass('checked');
-			} else{
-				$('.booking-step-room .btn-value').removeClass('checked');
-				$(this).addClass('checked');
-				if(i<(number1/2)){
-					$('.booking-step-room .btn-value').eq(number1/2 + i).addClass('checked');
-				} else{
-					$('.booking-step-room .btn-value').eq(i - number1/2).addClass('checked');
-				}
-			}
-			if($(this).closest('.value').find('.checked').length == 0){
-				$('.booking-step-room').find('.text b').html(`No. of travelers`);
-				$('#creat-trip-modal .booking-step-room').find('select option').val('');
-			} else{
-				$('.booking-step-room').find('.text b').html($(this).children('b').text());
-				$('#creat-trip-modal .booking-step-room').find('select option').val($(this).children('b').text());
-			}
-			$(this).closest('.value').removeClass('open-block');
-		});
-	}
+	$('.wrap-room-number .btn-down').click(function(){
+		let number1 = Number($(this).nextAll('input').val());
+		if(number1 > 0){
+			$('.wrap-room-number input').val(`${number1-1}`);
+		}
+		$('.room-number').text($('.wrap-room-number input').val());
+		if($('.wrap-room-number input').val() == 0){
+			$('.wrap-room-number .btn-down').addClass('btn-disabled');
+		}
+	});
+	$('.wrap-room-number .btn-up').click(function(){
+		let number1 = Number($(this).nextAll('input').val());
+		$('.wrap-room-number input').val(`${number1+1}`);
+		$('.room-number').text($('.wrap-room-number input').val());
+		$('.wrap-room-number .btn-down').removeClass('btn-disabled');
+	});
+	$('.wrap-adult-number .btn-down').click(function(){
+		let number1 = Number($(this).nextAll('input').val());
+		if(number1 > 0){
+			$('.wrap-adult-number input').val(`${number1-1}`);
+		}
+		$('.adult-number').text($('.wrap-adult-number input').val());
+		if($('.wrap-adult-number input').val() == 0){
+			$('.wrap-adult-number .btn-down').addClass('btn-disabled');
+		}
+	});
+	$('.wrap-adult-number .btn-up').click(function(){
+		let number1 = Number($(this).nextAll('input').val());
+		$('.wrap-adult-number input').val(`${number1+1}`);
+		$('.adult-number').text($('.wrap-adult-number input').val());
+		$('.wrap-adult-number .btn-down').removeClass('btn-disabled');
+	});
+	$('.wrap-child-number .btn-down').click(function(){
+		let number1 = Number($(this).nextAll('input').val());
+		if(number1 > 0){
+			$('.wrap-child-number input').val(`${number1-1}`);
+		}
+		$('.child-number').text($('.wrap-child-number input').val());
+		if($('.wrap-child-number input').val() == 0){
+			$('.wrap-child-number .btn-down').addClass('btn-disabled');
+		}
+	});
+	$('.wrap-child-number .btn-up').click(function(){
+		let number1 = Number($(this).nextAll('input').val());
+		$('.wrap-child-number input').val(`${number1+1}`);
+		$('.child-number').text($('.wrap-child-number input').val());
+		$('.wrap-child-number .btn-down').removeClass('btn-disabled');
+	});
 	let number2 = $('.booking-step-promo .btn-value').length;
 	for (let i=0; i<number2; i++){
 		$('.booking-step-promo .btn-value').eq(i).click(function(){

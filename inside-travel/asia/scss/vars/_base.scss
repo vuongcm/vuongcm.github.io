@@ -78,7 +78,7 @@ body {
     letter-spacing: 1px;
     position: relative;
     --bodyWidth: 1583px;
-    --modalWidth: 500px;
+    overflow-x: hidden;
 }
 input{
     white-space: nowrap;
@@ -211,6 +211,11 @@ select:focus {
     &:hover{
         color: #fff;
     }
+}
+.btn-disabled{
+    color: $color-cover-dak!important;
+    border-color: $color-cover-dak!important;
+    opacity: 1!important;
 }
 .link-st1 {
 	color: $higlight-color;
