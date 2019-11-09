@@ -476,10 +476,10 @@
 		}
 	}
 	.experience-img{
+		display: block;
 		width: 20%;
 		padding-right: 15px;
 		position: relative;
-		cursor: pointer;
 		img{
 			@include dakkenImg(70%);
 		}
@@ -491,6 +491,7 @@
 			right: 20px;
 		}
 		&:hover{
+			opacity: 1;
 			img{
 				@include dakkenImg(100%);
 			}

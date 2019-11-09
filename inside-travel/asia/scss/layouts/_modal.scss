@@ -253,6 +253,35 @@
 		}
 	}
 }
+.wrap-gallery-img{
+	position: fixed;
+    top: 10%;
+    width: 50%;
+	z-index: -5;
+	left: 50%;
+	@include translateX(-50%);
+	visibility: hidden;
+	.synch-carousels{
+		box-shadow: none;
+		.nav-arrows{
+			top: 50%;
+			@include translateY(-50%);
+			button{
+				background-color: #fff;
+				border-color: #fff;
+				&:hover{
+					background-color: rgba(255,255,255,.5);
+				}
+			}
+			.arrow-left{
+				@include translateX(calc(-100% - 10px));
+			}
+			.arrow-right{
+				@include translateX(calc(100% + 10px));
+			}
+		}
+	}
+}
 @media (min-width: 992px) {
 	.modal-2{
 		.experience-suplier{
