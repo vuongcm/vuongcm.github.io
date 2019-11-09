@@ -255,11 +255,12 @@
 }
 .wrap-gallery-img{
 	position: fixed;
-    top: 10%;
-    width: 50%;
+    top: 50%;
+    width: 95%;
+    max-width: 800px;
 	z-index: -5;
 	left: 50%;
-	@include translateX(-50%);
+	@include translate2d(-50%,-50%);
 	visibility: hidden;
 	.synch-carousels{
 		box-shadow: none;
@@ -290,6 +291,23 @@
 			}
 			.experience-content{
 				width: 73%;
+			}
+		}
+	}
+}
+@media (max-width: 991px) {
+	.wrap-gallery-img{
+		top: 40%;
+		.synch-carousels{
+			.nav-arrows{
+				top: calc(100% + 5px);
+				@include translateY(0);
+				.arrow-left{
+					left: 50%;
+				}
+				.arrow-right{
+					right: 50%;
+				}
 			}
 		}
 	}
