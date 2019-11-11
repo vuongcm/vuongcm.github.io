@@ -163,6 +163,10 @@ $(document).ready(function() {
 		$(this).next('.panel').slideToggle(500);
 		$(this).toggleClass('active');
 	});
+	$('.accordion>a:first-child').click(function(){
+		$(this).nextAll('.row').toggleClass('open-flex');
+		$(this).toggleClass('active');
+	});
 	$('#open-all-1').click(function(){
 		$('.order-day>a:first-child').addClass('active');
 		$('.panel').slideDown(500);
@@ -185,6 +189,37 @@ $(document).ready(function() {
 				$(this).closest('ul').children('li').removeClass('active');
 				$(this).parent('li').addClass('active');
 			});
+			$('.left-daybyday li>a').hover(function(){
+				$(this).next('.triagle-st1').css('visibility','visible');
+			},function(){
+				$(this).next('.triagle-st1').css('visibility','hidden');
+			});
+			let mapLocaLength = $('.left-daybyday ul>li').length - 1;
+			let locaScrollMaxTop = (mapLocaLength - 14)*50;
+			if(mapLocaLength > 14){
+				$('.left-daybyday ul').bind('scroll', function(){
+					if($(this).scrollTop() > 1){
+						$('.btn-day-up').css('display','inline-flex');
+					} else{
+						$('.btn-day-up').css('display','none');
+					}
+					if($(this).scrollTop() >= locaScrollMaxTop){
+						$('.btn-day-down').css('display','none');
+					} else{
+						$('.btn-day-down').css('display','inline-flex');
+					}
+				});
+				$('.btn-day-up').click(function(){
+					$('.left-daybyday ul').animate({ scrollTop: '-=50' }, 300);
+	        		return false; 
+				});
+				$('.btn-day-down').click(function(){
+					$('.left-daybyday ul').animate({ scrollTop: '+=50' }, 300);
+	        		return false; 
+				});
+			} else{
+				$('.btn-day-down').css('display','none');
+			}
 		}
 	}
 	/*// ==============vẽ canvas==============

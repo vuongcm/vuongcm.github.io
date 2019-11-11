@@ -59,7 +59,7 @@
 }
 .modal-2{
 	width: 95%;
-	max-width: 900px;
+	max-width: 820px;
 	padding: 40px 30px;
 	position: fixed;
 	top: 3%;
@@ -73,22 +73,36 @@
 	}
 	.modal-content{
 		max-height: 84vh;
-		overflow-y: scroll;
+		//overflow-y: scroll;
+		overflow-y: auto;
+		webkit-overflow-scrolling: touch;
+		padding: 0 10px;
+		scrollbar-color: transparent transparent;/*fire fox 64*/
+		scrollbar-width: thin;/*fire fox 64*/
 		&::-webkit-scrollbar{
 			width: 3px;
 			background-color: transparent;
 		}
 		&::-webkit-scrollbar-thumb{
-			background-color: $color-cover-dak;
+			background-color: transparent;
 		}
 		&::-webkit-scrollbar-track{
 			background-color: transparent;
+		}
+		&:hover{
+			&::-webkit-scrollbar-thumb{
+				background-color: $color-cover-dak;
+			}
+			scrollbar-color: rgba(0,0,0,.3) transparent;/*fire fox 64*/
 		}
 	}
 	.experience-suplier{
 		padding-bottom: 15px;
 		padding-top: 15px;
 		border-top: 1px dotted #dcdcdc;
+	}
+	.accordion{
+		padding-top: 0;
 	}
 }
 .form-field{
