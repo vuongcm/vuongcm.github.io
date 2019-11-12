@@ -1203,6 +1203,149 @@ select:focus {
             border-color: #ccaf3d;
         }
     }
+    .heart-tour{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 2;
+        font-size: 30px;
+        color: $color-cover-text;
+    }
+}
+.wrap-trip-st2{
+    width: 85.5%;
+    margin: 0 auto;
+}
+.trip-st2{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    &>a:first-child{
+        width: 45%;
+        padding-right: 10px;
+    }
+    .heart-tour{
+        position: absolute;
+        top: 25px;
+        right: calc(55% + 25px);
+        font-size: 30px;
+        color: $color-cover-text;
+    }
+    .right-trip{
+        width: 55%;
+        padding-left: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        .head-trip{
+            padding-bottom: 10px;
+            border-bottom: 1px dotted #dcdcdc;
+        }
+        h3{
+            font-size: 14px;
+            line-height: 1.5;
+            font-family: inherit;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .price-trip-box{
+            border-top: 1px dotted #dcdcdc;
+        }
+        .content-trip{
+            position: absolute;
+            //bottom: 44px;
+            left: 0;
+            z-index: 2;
+            background-color: #fff;
+            padding-left: 10px;
+            .paragraph{
+                max-height: 126px;
+                overflow-y: hidden;
+                text-align: left;
+                color: #555;
+                line-height: 1.6;
+                //padding-left: 10px;
+                @include smooth(.5s);
+            }
+        }
+    }
+}
+.head-trip{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    .title-info{
+        width: calc(100% - 60px);
+        padding-left: 15px;
+    }
+}
+.title-info{
+    .title-h2{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+}
+.address{
+    font-style: normal;
+    text-align: left;
+    color: $light-color-3;
+    a{
+        color: $light-color-3;
+    }
+}
+.price-trip-box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .wrap-tooltip{
+        width: auto;
+        flex-grow: 1;
+        justify-content: flex-start;
+        padding-left: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    &>span{
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #d0b316;
+        margin-left: auto;
+        strong{
+            font-weight: 600;
+            font-size: 20px;
+        }
+    }
+}
+.day-trip{
+    position: relative;
+    width: 60px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    span{
+        position: absolute;
+        text-align: center;
+        font-size: 9px;
+        text-transform: uppercase;
+        color: $higlight-color;
+        font-weight: 500;
+        line-height: 1;
+        b{
+            display: block;
+            width: 100%;
+            font-size: 20px;
+        }
+    }
 }
 .team-name{
     text-align: center;
@@ -1295,7 +1438,7 @@ select:focus {
     &:hover{
         .heart-empty{
             &:before{
-                content: "\e926";
+                content: "\e915";
             }
         }
     }
@@ -1348,6 +1491,11 @@ select:focus {
         margin-bottom: 80px;
     }
 }
+@media (max-width: 1351px) {
+    .wrap-trip-st2{
+        width: 100%;
+    }
+}
 @media (max-width: 1199px) {
     .btn-st2{
         padding: 10px 5px;
@@ -1379,6 +1527,15 @@ select:focus {
     .bg-parallax{
         z-index: 0;
         background-attachment: scroll;
+    }
+    .trip-st2{
+        .right-trip{
+            .content-trip{
+                .paragraph{
+                    max-height: 50px;
+                }
+            }
+        }
     }
 }
 @media (max-width: 991px) {
@@ -1562,6 +1719,34 @@ select:focus {
     }
     .wrap-filter{
         width: 100%;
+    }
+    .wrap-trip-st2{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .trip-st2{
+        flex-wrap: wrap;
+        &>a:first-child{
+            width: 100%;
+            padding-right: 0;
+        }
+        .heart-tour{
+            top: 25px;
+            right: 25px;
+        }
+        .right-trip{
+            width: 100%;
+            padding-left: 0;
+            margin-top: 10px;
+            .content-trip{
+                padding-left: 0;
+                .paragraph{
+                    padding-right: 0;
+                    padding-left: 0;
+                    //max-height: 50px;
+                }
+            }
+        }
     }
 }
 @media (max-width: 479px) {

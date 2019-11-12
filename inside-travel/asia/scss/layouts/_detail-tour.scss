@@ -99,9 +99,6 @@
 			&>.icon-font{
 				font-size: 40px;
 			}
-			&>span{
-				bottom: 120%;
-			}
 		}
 	}
 	.paragraph{
@@ -752,7 +749,26 @@
 		}
 		.filter-box{
 			display: flex;
-			max-width: 500px;
+			//max-width: 500px;
+			.select-st10{
+				option{
+					text-transform: uppercase;
+					font-size: 14px;
+					font-weight: 500;
+					letter-spacing: 1px;
+				    text-overflow: ellipsis;
+				    white-space: nowrap;
+				    overflow: hidden;
+				}
+			}
+			&>span{
+				font-size: 14px;
+				font-weight: 500;
+				color: #555;
+				b{
+					color: $light-color-3;
+				}
+			}
 		}
 		#map-tour{
 			width: 100%;
