@@ -690,6 +690,53 @@
 		}
 	}
 }
+.experience-box-st1{
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	margin-right: auto;
+	&>a{
+		display: block;
+		width: 30%;
+		border-radius: 8px;
+		img{
+			border-radius: 8px;
+		}
+	}
+	.right-box{
+		width: 70%;
+		text-align: left;
+		padding-left: 15px;
+		h3{
+			font-size: 14px;
+			margin-top: 0;
+			a{
+				color: $light-color-3;
+				&:hover{
+					color: $higlight-color;
+				}
+			}
+		}
+		strong{
+			color: $light-color-3;
+			text-transform: uppercase;
+		}
+		.provice{
+			margin-top: 10px;
+			font-size: 11px;
+			&:before{
+				background-color: #d0b316;
+			    content: " ";
+			    display: inline-block;
+			    height: 8px;
+			    width: 8px;
+			    border-radius: 140px 140px 0 140px;
+			    margin-right: 5px;
+			}
+		}
+	}
+}
 @media (max-width: 1351px){
 	.banner-top-detail{
 		height: 639px;
