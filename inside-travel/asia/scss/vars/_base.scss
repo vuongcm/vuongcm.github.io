@@ -257,6 +257,9 @@ select:focus {
     width: 100%;
     text-align: center;
 }
+.read-more-st2{
+    width: 100%;
+}
 .title-h1 {
 	font-size: 30px;
 	font-family: 'Theano Didot','Times New Roman', serif;
@@ -1208,7 +1211,7 @@ select:focus {
         top: 5px;
         right: 5px;
         z-index: 2;
-        font-size: 30px;
+        font-size: 26px;
         color: $color-cover-text;
     }
 }
@@ -1232,8 +1235,25 @@ select:focus {
         position: absolute;
         top: 25px;
         right: calc(55% + 25px);
-        font-size: 30px;
+        font-size: 26px;
         color: $color-cover-text;
+    }
+    .left-trip{
+        position: relative;
+        width: 45%;
+        min-width: 550px;
+        padding-right: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        .heart-tour{
+            top: 5px;
+            right: 15px;
+        }
+        .view-all-img{
+            width: calc(100% - 10px);
+        }
+
     }
     .right-trip{
         width: 55%;
@@ -1254,9 +1274,26 @@ select:focus {
             font-family: inherit;
             text-transform: uppercase;
             font-weight: 500;
+            text-align: left;
+        }
+        .title-cruise{
+            margin-top: 0;
+            font-size: 16px;
         }
         .price-trip-box{
             border-top: 1px dotted #dcdcdc;
+        }
+        .content-trip-cruise{
+            .price-trip-box{
+                border-top: 0;
+                .wrap-tooltip{
+                    .tooltip{
+                        .icon-font{
+                            font-size: 35px;
+                        }
+                    }
+                }
+            }
         }
         .content-trip{
             position: absolute;
@@ -1275,6 +1312,95 @@ select:focus {
                 @include smooth(.5s);
             }
         }
+    }
+}
+.sub-slider-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+        display: block;
+        width: 50%;
+    }
+}
+.sale{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: 0 10px;
+    color: #fff;
+    background-color: $higlight-color-st2;
+    border-radius: 2px;
+    line-height: 2;
+    font-weight: 600;
+    font-size: 14px;
+}
+.content-trip-cruise{
+    width: 100%;
+    text-align: left;
+    .read-more-st2{
+        .link-st3{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
+.hotel-news{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    span{
+        font-size: 11px;
+        display: inline-flex;
+        align-items: center;
+        .icon-font{
+            font-size: 14px;
+            color: $higlight-color;
+        }
+    }
+}
+.box-hidden{
+    width: 100%;
+    max-height: 88px;
+    overflow-y: hidden;
+    p{
+        line-height: 1.4;
+        margin-bottom: 10px;
+        font-weight: 500;
+        color: #555;
+        .icon-font{
+            margin-right: 5px;
+            color: $higlight-color;
+        }
+    }
+}
+.view-all-img{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    padding: 5px 0;
+    color: #fff;
+    @include gradient3();
+    a{
+        color: inherit;
+        text-decoration: underline;
+        padding-right: 5px;
+        padding-left: 5px;
+        &:hover{
+            color: $higlight-color;
+        }
+    }
+    p{
+        font-size: 11px;
+        padding: 5px 15px 5px 10px;
+        background-color: $higlight-color;
+        font-weight: 600;
     }
 }
 .head-trip{
@@ -1326,6 +1452,15 @@ select:focus {
         }
     }
 }
+.commitment{
+    width: 100%;
+    text-align: right;
+    color: $light-color-2;
+    font-weight: 600;
+    .checkmark{
+        color: $higlight-color;
+    }
+}
 .day-trip{
     position: relative;
     width: 60px;
@@ -1366,6 +1501,7 @@ select:focus {
         padding-right: 15px;
         padding-left: 15px;
         font-weight: 500;
+        line-height: 1.5;
         color: $light-color-3;
     }
     .link-st3{
@@ -1522,6 +1658,11 @@ select:focus {
     .wrap-filter{
         width: 90%;
     }
+    .trip-st2{
+        .left-trip{
+            min-width: 0;
+        }
+    }
 }
 @media (max-width: 1024px) {
     .bg-parallax{
@@ -1621,6 +1762,23 @@ select:focus {
     }
     .banner-top{
         height: 500px;
+    }
+    .trip-st2{
+        flex-wrap: wrap;
+        .left-trip{
+            width: 100%;
+            padding-right: 0;
+            .view-all-img{
+                width: 100%;
+            }
+        }
+        .pd-sm-0{
+            padding-left: 0;
+            width: 100%;
+            .head-trip{
+                margin-top: 15px;
+            }
+        }
     }
 }
 @media (max-width: 767px) {
@@ -1725,7 +1883,6 @@ select:focus {
         padding-right: 15px;
     }
     .trip-st2{
-        flex-wrap: wrap;
         &>a:first-child{
             width: 100%;
             padding-right: 0;
@@ -1738,6 +1895,9 @@ select:focus {
             width: 100%;
             padding-left: 0;
             margin-top: 10px;
+            .head-trip{
+                margin-top: 0;
+            }
             .content-trip{
                 padding-left: 0;
                 .paragraph{
@@ -1828,6 +1988,36 @@ select:focus {
             }
         }
     }
+    .sub-slider-img{
+        display: none;
+    }
+    .trip-st2{
+        .pd-sm-0{
+            .price-trip-box{
+                justify-content: center;
+                .wrap-tooltip{
+                    padding-right: 0;
+                    width: 100%;
+                    justify-content: center;
+                }
+                &>span{
+                    margin-left: 0;
+                    margin-top: 10px;
+                    width: 100%;
+                    text-align: center;
+                }
+                .commitment{
+                    text-align: center;
+                }
+            }
+            .best-offer{
+                .col-xlg-12{
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
 }
 @media (max-width: 375px) {
     .water-mask{
@@ -1847,6 +2037,9 @@ select:focus {
                 top: 40%;
             }
         }
+    }
+    .view-all-img{
+        display: none;
     }
 }
 @keyframes fadein {

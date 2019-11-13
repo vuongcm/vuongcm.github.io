@@ -177,8 +177,21 @@ $(document).ready(function() {
 			}
 		}
 	});
+	$('.read-more-st2>a').click(function(){
+		let boxHide = $(this).parent('.read-more-st2').prev('.box-hidden');
+		boxHide.toggleClass('paragraph-show');
+		if(boxHide.css('max-height') == 'none'){
+			$(this).text('... Less');
+		} else{
+			$(this).text('... More');
+		}
+	});
 	$('.order-day>a:first-child').click(function(){
 		$(this).next('.panel').slideToggle(500);
+		$(this).toggleClass('active');
+	});
+	$('.best-offer .col-xlg-12>a:first-child').click(function(){
+		$(this).next('.panel-st2').slideToggle(500);
 		$(this).toggleClass('active');
 	});
 	$('.accordion>a:first-child').click(function(){
