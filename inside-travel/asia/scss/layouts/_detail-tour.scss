@@ -192,16 +192,13 @@
 	display: none;
 	position: absolute;
 	top: 0;
-	left: calc(50% - 25px);
+	left: 0;
 	z-index: 2;
 	//display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	width: 35px;
-	height: 35px;
-	-webkit-filter: drop-shadow(0 0 15px rgba(0,0,0,.6));
-	filter: drop-shadow(0 0 15px rgba(0,0,0,.6));
-	border-radius: 50%;
+	width: calc(100% - 20px);
+	height: 25px;
 	background-color: #fff;
 	opacity: .8;
 	@include rotage(180deg);
@@ -218,16 +215,13 @@
 .btn-day-down{
 	position: absolute;
 	bottom: 0;
-	left: calc(50% - 25px);
+	left: 0;
 	z-index: 2;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	width: 35px;
-	height: 35px;
-	-webkit-filter: drop-shadow(0 0 15px rgba(0,0,0,.6));
-	filter: drop-shadow(0 0 15px rgba(0,0,0,.6));
-	border-radius: 50%;
+	width: calc(100% - 20px);
+	height: 25px;
 	background-color: #fff;
 	opacity: .8;
 	.select-arrow-thin{

@@ -259,6 +259,7 @@ select:focus {
 }
 .read-more-st2{
     width: 100%;
+    text-align: left;
 }
 .title-h1 {
 	font-size: 30px;
@@ -1216,8 +1217,10 @@ select:focus {
     }
 }
 .wrap-trip-st2{
-    width: 85.5%;
-    margin: 0 auto;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    //margin: 0 auto;
 }
 .trip-st2{
     position: relative;
@@ -1241,7 +1244,7 @@ select:focus {
     .left-trip{
         position: relative;
         width: 45%;
-        min-width: 550px;
+        //min-width: 550px;
         padding-right: 10px;
         display: flex;
         flex-wrap: wrap;
@@ -1312,6 +1315,12 @@ select:focus {
                 @include smooth(.5s);
             }
         }
+        .read-more-st2{
+            .link-st3{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
     }
 }
 .sub-slider-img{
@@ -1338,12 +1347,6 @@ select:focus {
 .content-trip-cruise{
     width: 100%;
     text-align: left;
-    .read-more-st2{
-        .link-st3{
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-    }
 }
 .hotel-news{
     width: 100%;
@@ -1363,6 +1366,8 @@ select:focus {
     width: 100%;
     max-height: 88px;
     overflow-y: hidden;
+    text-align: left;
+    margin-top: 10px;
     p{
         line-height: 1.4;
         margin-bottom: 10px;
@@ -1627,11 +1632,6 @@ select:focus {
         margin-bottom: 80px;
     }
 }
-@media (max-width: 1351px) {
-    .wrap-trip-st2{
-        width: 100%;
-    }
-}
 @media (max-width: 1199px) {
     .btn-st2{
         padding: 10px 5px;
@@ -1657,11 +1657,6 @@ select:focus {
     }
     .wrap-filter{
         width: 90%;
-    }
-    .trip-st2{
-        .left-trip{
-            min-width: 0;
-        }
     }
 }
 @media (max-width: 1024px) {
@@ -1878,10 +1873,6 @@ select:focus {
     .wrap-filter{
         width: 100%;
     }
-    .wrap-trip-st2{
-        padding-left: 15px;
-        padding-right: 15px;
-    }
     .trip-st2{
         &>a:first-child{
             width: 100%;
@@ -1992,11 +1983,13 @@ select:focus {
         display: none;
     }
     .trip-st2{
+        .wrap-tooltip{
+            padding-right: 0;
+        }
         .pd-sm-0{
             .price-trip-box{
                 justify-content: center;
                 .wrap-tooltip{
-                    padding-right: 0;
                     width: 100%;
                     justify-content: center;
                 }
