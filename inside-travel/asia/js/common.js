@@ -329,7 +329,11 @@ $(document).ready(function() {
 			centerPadding: '0',
 			//adaptiveHeight: false,
 			useTransform: true,
-			initialSlide: 2,
+			initialSlide: 1,
+			//swipeToSlide: true,
+			//mobileFirst: true,
+			//cssEase: "linear",
+			//easing: "none",
 	        prevArrow: `.wrap-slide-st2 .arrow-left`,
 	        nextArrow: `.wrap-slide-st2 .arrow-right`,
 	        responsive: [
@@ -607,13 +611,18 @@ $(document).ready(function() {
 	for (let i=0; i<number3; i++){
 		$('.booking-step-where .btn-value').eq(i).click(function(){
 			$(this).toggleClass('checked');
-			if(i<(number3/2)){
-				$('.booking-step-where .btn-value').eq(number3/2 + i).toggleClass('checked');
+			let numberValue;
+			if($('.booking-step-where').length == 1){
+				numberValue = $('.booking-step-where .checked').length;
 			} else{
-				$('.booking-step-where .btn-value').eq(i - number3/2).toggleClass('checked');
+				if(i<(number3/2)){
+					$('.booking-step-where .btn-value').eq(number3/2 + i).toggleClass('checked');
+				} else{
+					$('.booking-step-where .btn-value').eq(i - number3/2).toggleClass('checked');
+				}
+				numberValue = $('.booking-step-where .checked').length/2;
 			}
 			$('#creat-trip-modal .booking-step-where').children('select').html('');
-			let numberValue = $('.booking-step-where .checked').length/2;
 			for(let j=0; j < numberValue; j++){
 				$('#creat-trip-modal .booking-step-where').children('select').append(`<option value="${$(this).closest('.value').find('.checked b').eq(j).text()}" selected></option>`);
 			}
@@ -629,13 +638,18 @@ $(document).ready(function() {
 	for (let i=0; i<number4; i++){
 		$('.booking-step-when .btn-value').eq(i).click(function(){
 			$(this).toggleClass('checked');
-			if(i<(number4/2)){
-				$('.booking-step-when .btn-value').eq(number4/2 + i).toggleClass('checked');
+			let numberValue;
+			if($('.booking-step-when').length == 1){
+				numberValue = $('.booking-step-when .checked').length;
 			} else{
-				$('.booking-step-when .btn-value').eq(i - number4/2).toggleClass('checked');
+				if(i<(number4/2)){
+					$('.booking-step-when .btn-value').eq(number4/2 + i).toggleClass('checked');
+				} else{
+					$('.booking-step-when .btn-value').eq(i - number4/2).toggleClass('checked');
+				}
+				numberValue = $('.booking-step-when .checked').length/2;
 			}
 			$('#creat-trip-modal .booking-step-when').children('select').html('');
-			let numberValue = $('.booking-step-when .checked').length/2;
 			for(let j=0; j < numberValue; j++){
 				$('#creat-trip-modal .booking-step-when').children('select').append(`<option value="${$(this).closest('.value').find('.checked b').eq(j).text()}" selected></option>`);
 			}

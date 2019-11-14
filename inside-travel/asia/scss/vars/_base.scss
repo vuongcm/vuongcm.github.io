@@ -52,7 +52,6 @@ footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
 }
 sub, sup{font-size: 75%;}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block;}
-a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}
 del{text-decoration: line-through;}
 abbr[title], dfn[title]{border-bottom:1px dotted;cursor:help;}
 table{border-collapse:collapse;border-spacing:0;}
@@ -92,9 +91,9 @@ ol,ul,li {
 li {
 	list-style: none;
 }
-button,a {
-	cursor: pointer;
-	text-decoration: none;
+b{
+    font-weight: 600;
+    color: #555;
 }
 a {
     letter-spacing: inherit;
@@ -256,10 +255,22 @@ select:focus {
 .read-more-st1{
     width: 100%;
     text-align: center;
+    a{
+        color: $light-color-4;
+        &:after{
+            background-color: $light-color-4;
+        }
+    }
 }
 .read-more-st2{
     width: 100%;
     text-align: left;
+    a{
+        color: $light-color-4;
+        &:after{
+            background-color: $light-color-4;
+        }
+    }
 }
 .title-h1 {
 	font-size: 30px;
@@ -530,7 +541,7 @@ select:focus {
     align-items: center;
     position: relative;
     background-color: $background-color;
-    border-radius: 8px;
+    //border-radius: 8px;
     box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.05);
     margin-bottom: 15px;
     select{
@@ -571,8 +582,8 @@ select:focus {
         position: absolute;
         top: 0;
         right: 0;
-        border-top-right-radius: 8px;
-        border-bottom-right-radius: 8px;
+        //border-top-right-radius: 8px;
+        //border-bottom-right-radius: 8px;
         z-index: 2;
     }
 }
@@ -653,7 +664,6 @@ select:focus {
     text-align: left;
     h3,h4{
         width: 100%;
-        letter-spacing: 2px;
         font-size: 14px;
         font-weight: 600;
         margin: 0;
@@ -921,10 +931,6 @@ select:focus {
     .select-arrow-thin{
         font-size: 6px;
         padding: 2px;
-        &:first-child{
-            @include rotage(180deg);
-            padding-left: 3px;
-        }
     }
 }
 .triagle-st1{
@@ -2010,6 +2016,9 @@ select:focus {
                 }
             }
         }
+    }
+    .count-img{
+        display: none;
     }
 }
 @media (max-width: 375px) {

@@ -66,7 +66,7 @@
 	left: 50%;
 	@include translateX(-50%);
 	z-index: 201;
-	background-color: $background-color-st1;
+	background-color: #fff;
 	h3{
 		font-size: 16px;
 		text-transform: uppercase;
@@ -91,9 +91,9 @@
 		}
 		&:hover{
 			&::-webkit-scrollbar-thumb{
-				background-color: $color-cover-dak;
+				background-color: rgba(227,227,227,0.6);
 			}
-			scrollbar-color: rgba(0,0,0,.3) transparent;/*fire fox 64*/
+			scrollbar-color: rgba(227,227,227,0.6) transparent;/*fire fox 64*/
 		}
 	}
 	.experience-suplier{
