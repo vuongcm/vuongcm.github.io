@@ -976,8 +976,17 @@
 	}
 	.accordion{
 		.head-pn{
-			.plus{
-				display: none;
+			span{
+				b{
+					display: none;
+				}
+			}
+		}
+	}
+	.mobile-row{
+		.rank{
+			.wrap-tripadvisor{
+				margin-top: 5px;
 			}
 		}
 	}
