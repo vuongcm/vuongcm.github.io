@@ -297,6 +297,53 @@
 		}
 	}
 }
+.video-modal{
+	width: 95%;
+	max-width: 700px;
+	position: fixed;
+	top: 10%;
+	left: 50%;
+	padding: 30px 15px 0 15px;
+	@include translateX(-50%);
+	z-index: 201;
+	background-color: #000;
+	.btn-close{
+		top: 0;
+		right: 5px;
+		color: #fff;
+	}
+	iframe{
+		width: 100%;
+	}
+}
+#preloader{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 210;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img:first-child{
+    	width: 120px;
+    	position: absolute;
+    	@include animationed(around,1.5s);
+    	animation-iteration-count: infinite;
+		-moz-animation-iteration-count: infinite;
+		-webkit-animation-iteration-count: infinite;
+		-o-animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	    -moz-animation-timing-function: linear;
+	    -webkit-animation-timing-function: linear;
+	    -o-animation-timing-function: linear;
+    }
+    img:last-child{
+    	width: 54px;
+    }
+}
 @media (min-width: 992px) {
 	.modal-2{
 		.experience-suplier{
@@ -365,4 +412,36 @@
 			margin-left: 5px;
 		}
 	}
+}
+@keyframes around {
+    from {
+    	@include rotage(0deg);
+    }
+    to {
+        @include rotage(360deg);
+    }
+}
+@-webkit-keyframes around {
+    from {
+    	-webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes around {
+    from {
+        @include rotage(0deg);
+    }
+    to {
+        @include rotage(360deg);
+    }
+}
+@-ms-keyframes around {
+    from {
+    	-ms-transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+    }
 }

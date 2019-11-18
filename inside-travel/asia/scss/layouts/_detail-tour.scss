@@ -131,10 +131,33 @@
 	&>div:first-child{
 		width: 45%;
 		padding-right: 15px;
-		img{
-			max-height: 210px;
+		a{
+			display: block;
+			width: 100%;
+			img{
+				max-height: 210px;
+			}
 			&:first-child{
 				margin-bottom: 10px;
+			}
+		}
+		.video-box{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.play-video{
+				position: absolute;
+				z-index: 2;
+				color: #fff;
+				font-size: 66px;
+				//top: 50%;
+				//left: 50%;
+			}
+			&:hover{
+				.play-video{
+					color: #bbb4b4;
+				}
 			}
 		}
 	}
@@ -256,6 +279,7 @@
 			scrollbar-width: none;/*fire fox 64*/
 			&::-webkit-scrollbar{
 				width: 0px;
+				height: 0px;
 				background-color: transparent;
 			}
 			li{
@@ -347,9 +371,6 @@
 			
 		}
 		
-	}
-	.filter-box{
-		display: none;
 	}
 	#map-tour{
 		width: 77%;
@@ -580,6 +601,8 @@
 		h4{
 			margin-top: 0;
 			color: #555;
+			font-size: 14px;
+			font-weight: 600;
 		}
 		.paragraph-hide{
 			max-height: 35px;
@@ -733,7 +756,7 @@
 			font-size: 14px;
 			margin-top: 0;
 			a{
-				color: $light-color-3;
+				font-weight: 600;
 				&:hover{
 					color: $higlight-color;
 				}
@@ -746,6 +769,7 @@
 		.desti{
 			margin-top: 10px;
 			font-size: 11px;
+			text-transform: uppercase;
 		}
 	}
 }
@@ -809,29 +833,53 @@
 	.wrap-map-loca{
 		flex-wrap: wrap;
 		.left-daybyday{
-			display: none;
-		}
-		.filter-box{
-			display: flex;
-			//max-width: 500px;
-			.select-st10{
-				option{
-					text-transform: uppercase;
-					font-size: 14px;
-					font-weight: 500;
-					letter-spacing: 1px;
-				    text-overflow: ellipsis;
-				    white-space: nowrap;
-				    overflow: hidden;
+			width: 100%;
+			ul{
+				flex-direction: row;
+				height: auto;
+				overflow-x: auto;
+				li{
+					flex-direction: column;
+					flex-shrink: 0;
+					width: 250px;
+					&:last-child{
+						display: none;
+					}
+					.triagle-st1{
+						height: 20px;
+						width: 100%;
+						-webkit-clip-path: polygon(0 0, 50% 20px, 100% 0);
+					    clip-path: polygon(0 0, 50% 20px, 100% 0);
+					    -webkit-shape-outside: polygon(0 0, 50% 20px, 100% 0);
+					    shape-outside: polygon(0 0, 50% 20px, 100% 0);
+					}
+					a{
+						width: 100%;
+						border-top: none;
+						border-left: 2px solid #fff;
+						justify-content: center;
+					}
+					&:first-child{
+						a{
+							border-left: none;
+						}
+					}
 				}
+
 			}
-			&>span{
-				font-size: 14px;
-				font-weight: 500;
-				color: #555;
-				b{
-					color: $light-color-3;
-				}
+			.btn-day{
+				width: 50px;
+				height: 50px;
+				bottom: auto;
+				top: 0;
+			}
+			.btn-day-down{
+				left: auto;
+				right: 0;
+				@include rotage(-90deg);
+			}
+			.btn-day-up{
+				@include rotage(90deg);
 			}
 		}
 		#map-tour{

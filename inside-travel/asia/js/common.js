@@ -249,8 +249,43 @@ $(document).ready(function() {
 	        		return false; 
 				});
 			} else{
-				$('.btn-day-down').css('display','none');
+				$('.btn-day').css('display','none');
 			}
+		}
+	} else{
+		if($('.wrap-map-loca').length > 0){
+			$('.left-daybyday li>a').click(function(){
+				$(this).closest('ul').children('li').removeClass('active');
+				$(this).parent('li').addClass('active');
+			});
+			let mapLocaLength = $('.left-daybyday ul>li').length - 1;
+			let leftDayByDayWidth = $('.wrap-map-loca .left-daybyday').width();
+			if(mapLocaLength*250 > leftDayByDayWidth){
+				let locaScrollMaxLeft = mapLocaLength*250 - leftDayByDayWidth - 1;
+				$('.left-daybyday ul').bind('scroll', function(){
+					if($(this).scrollLeft() > 1){
+						$('.btn-day-up').css('display','inline-flex');
+					} else{
+						$('.btn-day-up').css('display','none');
+					}
+					if($(this).scrollLeft() >= locaScrollMaxLeft){
+						$('.btn-day-down').css('display','none');
+					} else{
+						$('.btn-day-down').css('display','inline-flex');
+					}
+				});
+				$('.btn-day-up').click(function(){
+					$('.left-daybyday ul').animate({ scrollLeft: '-=250' }, 300);
+	        		return false; 
+				});
+				$('.btn-day-down').click(function(){
+					$('.left-daybyday ul').animate({ scrollLeft: '+=250' }, 300);
+	        		return false; 
+				});
+			} else {
+				$('.btn-day').css('display','none');
+			}
+
 		}
 	}
 	/*// ==============vẽ canvas==============
@@ -465,13 +500,19 @@ $(document).ready(function() {
 	});
 	$('.modal-container').on('click',function(){
 		$(this).addClass('close-display');
-		$('.modal, .modal-2').addClass('close-display');
+		$('.modal, .modal-2,.video-modal').addClass('close-display');
 		$('.wrap-gallery-img').removeAttr('style');
 	});
 	$('.btn-close').click(function(){
-		$(this).closest('.modal, .modal-2').addClass('close-display');
+		$(this).closest('.modal, .modal-2, .video-modal').addClass('close-display');
 		$('.modal-container').addClass('close-display');
 	});
+	if($('.video-box').length > 0){
+		$('.video-box').click(function(){
+			$('.modal-container').removeClass('close-display');
+			$('.video-modal').removeClass('close-display');
+		});
+	}
 	for(let i=1; i<=$('.phone-wrap').length; i++){
 		$(`#cb-p-${i}`).click(function(){
 			if (this.checked){
@@ -692,4 +733,8 @@ window.onload = function() {
 	$('.detail-location .tooltip>span').each(function(){
 		$(this).css('left',`-${$(this).width()/2 - 14}px`);
 	});
+	$('#preloader').delay(500).fadeOut(300);
+    /*setTimeout(function(){
+	    $('body').removeClass('preloading-bd');
+	}, 800);*/
 };
