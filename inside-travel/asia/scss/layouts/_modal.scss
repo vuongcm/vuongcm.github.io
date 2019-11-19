@@ -105,6 +105,22 @@
 		padding-top: 0;
 	}
 }
+.modal-include{
+	max-width: 610px;
+	top: 12%;
+	.modal-content{
+		h3{
+			margin-bottom: 15px;
+			.icon-font{
+				margin-right: 5px;
+			}
+		}
+		p{
+			line-height: 1.5;
+			font-size: 14px;
+		}
+	}
+}
 .form-field{
 	margin-top: 15px;
 	input, textarea{
@@ -316,7 +332,7 @@
 		width: 100%;
 	}
 }
-#preloader{
+/*#preloader{
 	width: 100%;
 	height: 100%;
 	background-color: #fff;
@@ -343,7 +359,7 @@
     img:last-child{
     	width: 54px;
     }
-}
+}*/
 @media (min-width: 992px) {
 	.modal-2{
 		.experience-suplier{
@@ -385,6 +401,9 @@
 			}
 		}
 	}
+	.modal-include{
+		top: 3%;
+	}
 }
 @media (max-width: 479px) {
 	.modal{
@@ -413,7 +432,7 @@
 		}
 	}
 }
-@keyframes around {
+/*@keyframes around {
     from {
     	@include rotage(0deg);
     }
@@ -444,4 +463,4 @@
     to {
         -ms-transform: rotate(360deg);
     }
-}
+}*/

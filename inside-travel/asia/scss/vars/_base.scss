@@ -116,6 +116,7 @@ section {
 }
 h1,h2,h3,h4,h5,h6 {
 	margin: 15px 0 10px;
+    //font-weight: 600;
 }
 img {
 	width: 100%;
@@ -274,6 +275,19 @@ select:focus {
             background-color: $light-color-4;
         }
     }
+}
+.read-more-st3{
+    width: 100%;
+    text-align: left;
+    a{
+        color: $light-color-4;
+        &:after{
+            background-color: $light-color-4;
+        }
+    }
+}
+.div-hidden{
+    overflow-y: hidden;
 }
 .title-h1 {
 	font-size: 30px;

@@ -60,8 +60,10 @@
 		color: #fff;
 		border-color: #fff;
 		opacity: .8;
+		font-weight: 600;
 		&:hover{
 			opacity: 1;
+			background-color: rgba(200, 200, 200, 0.2);
 		}
 	}
 }
@@ -128,6 +130,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
+	--heightHlTour: 430px;
+	//height: var(--heightHlTour);
 	&>div:first-child{
 		width: 45%;
 		padding-right: 15px;
@@ -161,7 +165,7 @@
 			}
 		}
 	}
-	&>div:last-child{
+	&>div:nth-child(2){
 		width: 55%;
 		padding-left: 15px;
 		p{
@@ -175,7 +179,15 @@
 			font-size: 16px;
 			margin-right: 10px;
 		}
+		&>.div-hidden{
+			max-height: calc(var(--heightHlTour) - 40px);
+		}
+		.read-more-st3{
+		    padding-top: 20px;
+		    padding-left: 15px;
+		}
 	}
+	
 }
 .section-map-day{
 	.wrap-mini-intro{
@@ -784,6 +796,117 @@
 	    margin-right: 5px;
 	}
 }
+.include-box{
+	display: flex;
+	flex-wrap: wrap;
+	//align-items: flex-start;
+	.col-xlg-4{
+		padding: 10px;
+		&>div{
+			display: flex;
+			padding: 20px;
+			width: 100%;
+			height: 100%;
+			border: 1px solid #dcdcdc;
+			&>div:first-child{
+				flex: 1 0 120px;
+			    padding-right: 20px;
+			    display: flex;
+			    flex-direction: column;
+			    align-items: center;
+			    justify-content: flex-start;
+			    .icon-font{
+			    	font-size: 30px;
+			    	color: $color-cover-dak;
+			    }
+			    h3{
+			    	margin-top: 5px;
+			    	margin-bottom: 0;
+			    	display: inline-block;
+			    	color: #555;
+			    	font-size: 14px;
+			    	font-weight: 600;
+			    	&:after{
+			    		content: '';
+			    		display: block;
+			    		width: 100%;
+			    		height: 7px;
+			    		//background-color: #000;
+			    		margin-top: 5px;
+			    	}
+			    }
+			}
+			&>div:last-child{
+				width: 100%;
+				text-align: left;
+				p{
+					line-height: 1.5;
+				}
+			}
+			.read-more-st1{
+				text-align: left;
+				a{
+					margin-top: 15px;
+					font-size: 11px;
+				}
+			}
+		}
+	}
+}
+.include-accommodation{
+	&>div:first-child{
+		h3{
+			&:after{
+				background-color: #b0c4de;
+			}
+		}
+	}
+}
+.include-meal{
+	&>div:first-child{
+		h3{
+			&:after{
+				background-color: #FEBBAD;
+			}
+		}
+	}
+}
+.include-team{
+	&>div:first-child{
+		h3{
+			&:after{
+				background-color: #FFE5B4;
+			}
+		}
+	}
+}
+.include-exchange{
+	&>div:first-child{
+		h3{
+			&:after{
+				background-color: #E2C7E0;
+			}
+		}
+	}
+}
+.include-experience{
+	&>div:first-child{
+		h3{
+			&:after{
+				background-color: #A4DED0;
+			}
+		}
+	}
+}
+.include-service{
+	&>div:first-child{
+		h3{
+			&:after{
+				background-color: #8ee683;
+			}
+		}
+	}
+}
 @media (max-width: 1351px){
 	.banner-top-detail{
 		height: 639px;
@@ -812,11 +935,14 @@
 	}
 	.content-hl-tour{
 		flex-wrap: wrap;
+		--heightHlTour: 286px;
 		&>div:first-child{
 			width: 100%;
 			padding-left: 15px;
-			img{
-				max-height: none;
+			a{
+				img{
+					max-height: none;
+				}
 				&:first-child{
 					margin-bottom: 15px;
 				}
@@ -825,10 +951,14 @@
 				}
 			}
 		}
-		&>div:last-child{
+		&>div:nth-child(2){
 			width: 100%;
 			padding-right: 15px;
+			.read-more-st3{
+				padding-right: 15px;
+			}
 		}
+		
 	}
 	.wrap-map-loca{
 		flex-wrap: wrap;
@@ -848,10 +978,10 @@
 					.triagle-st1{
 						height: 20px;
 						width: 100%;
-						-webkit-clip-path: polygon(0 0, 50% 20px, 100% 0);
-					    clip-path: polygon(0 0, 50% 20px, 100% 0);
-					    -webkit-shape-outside: polygon(0 0, 50% 20px, 100% 0);
-					    shape-outside: polygon(0 0, 50% 20px, 100% 0);
+						-webkit-clip-path: polygon(0 -1px, 50% 20px, 100% -1px);
+					    clip-path: polygon(0 -1px, 50% 20px, 100% -1px);
+					    -webkit-shape-outside: polygon(0 -1px, 50% 20px, 100% -1px);
+					    shape-outside: polygon(0 -1px, 50% 20px, 100% -1px);
 					}
 					a{
 						width: 100%;
@@ -1007,6 +1137,25 @@
 			flex-wrap: wrap;
 			right: 0;
 			top: 35px;
+		}
+	}
+	.include-box{
+		.col-xlg-4{
+			padding: 10px;
+			&>div{
+				flex-wrap: wrap;
+				&>div:first-child{
+				    padding-right: 0;
+				    width: 100%;
+				    align-items: flex-start;
+				    h3{
+				    	text-align: left;
+				    }
+				}
+				&>div:last-child{
+					margin-top: 15px;
+				}
+			}
 		}
 	}
 }
