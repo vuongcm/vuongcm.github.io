@@ -51,7 +51,7 @@
 		font-size: 40px;
 	}
 	.price{
-		font-size: 20px;
+		font-size: 16px;
 		margin-top: 15px;
 		margin-bottom: 15px;
 	}
@@ -60,7 +60,6 @@
 		color: #fff;
 		border-color: #fff;
 		opacity: .8;
-		font-weight: 600;
 		&:hover{
 			opacity: 1;
 			background-color: rgba(200, 200, 200, 0.2);
@@ -816,7 +815,7 @@
 			    align-items: center;
 			    justify-content: flex-start;
 			    .icon-font{
-			    	font-size: 30px;
+			    	font-size: 18px;
 			    	color: $color-cover-dak;
 			    }
 			    h3{
@@ -824,14 +823,14 @@
 			    	margin-bottom: 0;
 			    	display: inline-block;
 			    	color: #555;
-			    	font-size: 14px;
+			    	//font-size: 14px;
 			    	font-weight: 600;
 			    	&:after{
 			    		content: '';
 			    		display: block;
 			    		width: 100%;
-			    		height: 7px;
-			    		//background-color: #000;
+			    		height: 1px;
+			    		background-color: #c1aa80;
 			    		margin-top: 5px;
 			    	}
 			    }
@@ -849,60 +848,6 @@
 					margin-top: 15px;
 					font-size: 11px;
 				}
-			}
-		}
-	}
-}
-.include-accommodation{
-	&>div:first-child{
-		h3{
-			&:after{
-				background-color: #b0c4de;
-			}
-		}
-	}
-}
-.include-meal{
-	&>div:first-child{
-		h3{
-			&:after{
-				background-color: #FEBBAD;
-			}
-		}
-	}
-}
-.include-team{
-	&>div:first-child{
-		h3{
-			&:after{
-				background-color: #FFE5B4;
-			}
-		}
-	}
-}
-.include-exchange{
-	&>div:first-child{
-		h3{
-			&:after{
-				background-color: #E2C7E0;
-			}
-		}
-	}
-}
-.include-experience{
-	&>div:first-child{
-		h3{
-			&:after{
-				background-color: #A4DED0;
-			}
-		}
-	}
-}
-.include-service{
-	&>div:first-child{
-		h3{
-			&:after{
-				background-color: #8ee683;
 			}
 		}
 	}
@@ -978,10 +923,10 @@
 					.triagle-st1{
 						height: 20px;
 						width: 100%;
-						-webkit-clip-path: polygon(0 -1px, 50% 20px, 100% -1px);
-					    clip-path: polygon(0 -1px, 50% 20px, 100% -1px);
-					    -webkit-shape-outside: polygon(0 -1px, 50% 20px, 100% -1px);
-					    shape-outside: polygon(0 -1px, 50% 20px, 100% -1px);
+						-webkit-clip-path: polygon(40% -1px, 50% 20px, 60% -1px);
+					    clip-path: polygon(40% -1px, 50% 20px, 60% -1px);
+					    -webkit-shape-outside: polygon(40% -1px, 50% 20px, 60% -1px);
+					    shape-outside: polygon(40% -1px, 50% 20px, 60% -1px);
 					}
 					a{
 						width: 100%;
@@ -1190,7 +1135,9 @@
 		.head-pn{
 			span{
 				b{
-					display: none;
+					.external-link{
+						display: none;
+					}
 				}
 			}
 		}

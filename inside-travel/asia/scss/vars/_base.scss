@@ -180,9 +180,9 @@ select:focus {
     border: none;
     padding: 10px 25px;
     line-height: 1;
-}
-.btn-st1:hover {
-	background-color: #dbd9d9;
+    &:hover{
+        background-color: #dbd9d9;
+    }
 }
 .btn-st2{
     background-color: transparent;
@@ -198,10 +198,10 @@ select:focus {
     color: #000;
     @include smooth(.2s);
     font-size: 12px;
-}
-.btn-st2:hover{
-    color: $higlight-color;
-    border-color: $higlight-color;
+    &:hover{
+        color: $higlight-color;
+        border-color: $higlight-color;
+    }
 }
 .btn-st3{
     color: #fff;
@@ -230,10 +230,10 @@ select:focus {
     color: $title-color;
     line-height: 1.5;
     border-bottom: 1px solid $title-color;
-}
-.link-st2:hover{
-    opacity: .8;
-    color: $higlight-color;
+    &:hover{
+        opacity: .8;
+        color: $higlight-color;
+    }
 }
 .link-st3{
     color: $title-color;

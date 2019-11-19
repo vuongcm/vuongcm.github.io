@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	//$('body').css('--bodyWidth',`${bodyWidth}px`);
 	let bodyWidth = $('body').width();
-	//===========header
+	//===========header===================
 	if(bodyWidth > 991){
 		$('#menu-lv1-1').hover(function(){
 			$('#menu-lv1-1').nextAll('.sub-menu-destinations').addClass('open-flex');
@@ -500,9 +500,9 @@ $(document).ready(function() {
 	    });
 	}
 	//================modal===================
-	$('.btn-include').click(function(){
+	$('.btn-include-1').click(function(){
 		$('.modal-container').removeClass('close-display');
-		$('.modal-include').removeClass('close-display');
+		$('.modal-include-1').removeClass('close-display');
 	});
 	$('.btn-contact').click(function(){
 		$('.modal-container').removeClass('close-display');
@@ -743,6 +743,30 @@ $(document).ready(function() {
 		}
 		$(this).closest('.value').removeClass('open-block');
 	});
+	/*======================LOAD JSON============================*/
+	let loadJson = function(x,y,z) {
+        $.ajax({
+            dataType: 'json',
+            url: `data/include.json`})
+            .done(function(response) {
+                // let response = JSON.parse(data);
+                $(x).html(response[y][z]);
+
+            })
+            .fail(function() {
+                alert('lỗi load dữ liệu');
+            });
+        return false; 
+    };
+    /*$('#btn-accommodation').click(function(e){
+    	e.preventDefault();
+    	loadJson('.modal-include-1 .modal-content','include-1','accommodation');
+    });
+    $('#btn-experience').click(function(e){
+    	e.preventDefault();
+    	loadJson('.modal-include-1 .modal-content','include-1','experience');
+    });*/
+    /*======================END JSON============================*/
 });
 window.onload = function() {
 	if($('body').width() > 767){
@@ -758,7 +782,7 @@ window.onload = function() {
 	$('.detail-location .tooltip>span').each(function(){
 		$(this).css('left',`-${$(this).width()/2 - 14}px`);
 	});
-	$('#preloader').delay(500).fadeOut(300);
+	//$('#preloader').delay(500).fadeOut(300);
     /*setTimeout(function(){
 	    $('body').removeClass('preloading-bd');
 	}, 800);*/
