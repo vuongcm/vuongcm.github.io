@@ -504,6 +504,10 @@ $(document).ready(function() {
 		$('.modal-container').removeClass('close-display');
 		$('.modal-include-1').removeClass('close-display');
 	});
+	$('.btn-include-2').click(function(){
+		$('.modal-container').removeClass('close-display');
+		$('.modal-include-2').removeClass('close-display');
+	});
 	$('.btn-contact').click(function(){
 		$('.modal-container').removeClass('close-display');
 		$('#contact-modal').removeClass('close-display');
@@ -744,13 +748,13 @@ $(document).ready(function() {
 		$(this).closest('.value').removeClass('open-block');
 	});
 	/*======================LOAD JSON============================*/
-	let loadJson = function(x,y,z) {
+	let loadJson = function(a,x,y) {
         $.ajax({
             dataType: 'json',
-            url: `data/include.json`})
+            url: `data/include-${a}.json`})
             .done(function(response) {
                 // let response = JSON.parse(data);
-                $(x).html(response[y][z]);
+                $(x).html(response[y]);
 
             })
             .fail(function() {
@@ -758,14 +762,24 @@ $(document).ready(function() {
             });
         return false; 
     };
-    /*$('#btn-accommodation').click(function(e){
-    	e.preventDefault();
-    	loadJson('.modal-include-1 .modal-content','include-1','accommodation');
+    $('#btn-accommodation').click(function(){
+    	loadJson(1,'.modal-include-1 .modal-content','accommodation');
     });
-    $('#btn-experience').click(function(e){
-    	e.preventDefault();
-    	loadJson('.modal-include-1 .modal-content','include-1','experience');
-    });*/
+    $('#btn-experience').click(function(){
+    	loadJson(1,'.modal-include-1 .modal-content','experience');
+    });
+    $('#btn-transport').click(function(){
+    	loadJson(2,'.modal-include-2 .modal-content','transport');
+    });
+    $('#btn-team').click(function(){
+    	loadJson(2,'.modal-include-2 .modal-content','team');
+    });
+    $('#btn-meal').click(function(){
+    	loadJson(2,'.modal-include-2 .modal-content','meal');
+    });
+    $('#btn-service').click(function(){
+    	loadJson(2,'.modal-include-2 .modal-content','services');
+    });
     /*======================END JSON============================*/
 });
 window.onload = function() {

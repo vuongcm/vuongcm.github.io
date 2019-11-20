@@ -24,6 +24,22 @@
 	background-color: $background-color-st1;
 	padding: 30px 15px;
 	text-align: center;
+	max-height: calc(100vh - 6%);
+	overflow-y: auto;
+	webkit-overflow-scrolling: touch;
+	scrollbar-color: transparent transparent;/*fire fox 64*/
+	scrollbar-width: thin;/*fire fox 64*/
+	scrollbar-color: rgba(227,227,227,1) transparent;/*fire fox 64*/
+	&::-webkit-scrollbar{
+		width: 5px;
+		background-color: transparent;
+	}
+	&::-webkit-scrollbar-thumb{
+		background-color: rgba(227,227,227,1);
+	}
+	&::-webkit-scrollbar-track{
+		background-color: transparent;
+	}
 	&>h3{
 		font-size: 40px;
 		font-weight: 300;
@@ -132,6 +148,51 @@
 				text-transform: none;
 				font-weight: normal;
 				font-size: 12px;
+			}
+		}
+	}
+}
+.modal-include-2{
+	max-width: 610px;
+	top: 10%;
+	.title-modal-include{
+		border-bottom: 1px dotted #dcdcdc;
+		border-top: 1px dotted #dcdcdc;
+		margin-top: 15px;
+		&:first-child{
+			border-top: none;
+			margin-top: 0;
+		}
+	}
+	h3{
+		margin-bottom: 15px;
+		.icon-font{
+			margin-right: 5px;
+			color: $higlight-color;
+		}
+		span{
+			text-transform: none;
+			font-weight: normal;
+			font-size: 12px;
+		}
+	}
+	.modal-content{
+		&>p{
+			font-size: 14px;
+			margin-top: 15px;
+		}
+		article{
+			font-size: 14px;
+			margin-top: 15px;
+			h4{
+
+			}
+			p{
+				margin-top: 10px;
+			}
+			.icon-font{
+				margin-right: 5px;
+				color: $higlight-color;
 			}
 		}
 	}
@@ -405,10 +466,6 @@
 	}
 }
 @media (max-width: 767px) {
-	.modal{
-		max-height: calc(98vh - 20px);
-		overflow-y: scroll;
-	}
 	.check-field{
 		&>.phone-wrap{
 			input{
