@@ -511,10 +511,12 @@ $(document).ready(function() {
 	$('.btn-contact').click(function(){
 		$('.modal-container').removeClass('close-display');
 		$('#contact-modal').removeClass('close-display');
+		$('#contact-modal').css('top',`${$(window).scrollTop()+15}px`);
 	});
 	$('.btn-create-trip').click(function(){
 		$('.modal-container').removeClass('close-display');
 		$('#creat-trip-modal').removeClass('close-display');
+		$('#creat-trip-modal').css('top',`${$(window).scrollTop()+15}px`);
 	});
 	$('.btn-modal-tour').click(function(){
 		$('.modal-container').removeClass('close-display');
@@ -523,6 +525,7 @@ $(document).ready(function() {
 	$('.modal-container').on('click',function(){
 		$(this).addClass('close-display');
 		$('.modal, .modal-2,.video-modal').addClass('close-display');
+		$('.modal').removeAttr('style');
 		$('.wrap-gallery-img').removeAttr('style');
 		if($('.video-modal').length){
 			$('#playvideo').attr('src', $('#playvideo').attr('src').replace('autoplay=1', 'autoplay=0'));
@@ -530,6 +533,7 @@ $(document).ready(function() {
 	});
 	$('.btn-close').click(function(){
 		$(this).closest('.modal, .modal-2, .video-modal').addClass('close-display');
+		$(this).closest('.modal').removeAttr('style');
 		$('.modal-container').addClass('close-display');
 		if($('.video-modal').length){
 			$('#playvideo').attr('src', $('#playvideo').attr('src').replace('autoplay=1', 'autoplay=0'));

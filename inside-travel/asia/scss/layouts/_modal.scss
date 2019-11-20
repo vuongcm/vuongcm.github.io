@@ -17,20 +17,21 @@
 	max-width: 500px;
 	width: 95%;
 	z-index: 201;
-	position: fixed;
-	top: 5%;
+	position: absolute;
+	top: -100vh;
 	left: 50%;
 	@include translateX(-50%);
+	@include smooth(.5s);
 	background-color: $background-color-st1;
 	padding: 30px 15px;
 	text-align: center;
-	max-height: calc(100vh - 6%);
-	overflow-y: auto;
-	webkit-overflow-scrolling: touch;
-	scrollbar-color: transparent transparent;/*fire fox 64*/
-	scrollbar-width: thin;/*fire fox 64*/
-	scrollbar-color: rgba(227,227,227,1) transparent;/*fire fox 64*/
-	&::-webkit-scrollbar{
+	//max-height: calc(100vh - 6%);
+	//overflow-y: auto;
+	//webkit-overflow-scrolling: touch;
+	//scrollbar-color: transparent transparent;/*fire fox 64*/
+	//scrollbar-width: thin;/*fire fox 64*/
+	//scrollbar-color: rgba(227,227,227,1) transparent;/*fire fox 64*/
+	/*&::-webkit-scrollbar{
 		width: 5px;
 		background-color: transparent;
 	}
@@ -39,7 +40,7 @@
 	}
 	&::-webkit-scrollbar-track{
 		background-color: transparent;
-	}
+	}*/
 	&>h3{
 		font-size: 40px;
 		font-weight: 300;
@@ -131,6 +132,8 @@
 		.filter-box{
 			width: 130px;
 			flex-shrink: 0;
+			box-shadow: none;
+			border: 1px solid #eee;
 			&>span{
 				font-weight: 600;
 			}
@@ -146,8 +149,13 @@
 			}
 			span{
 				text-transform: none;
-				font-weight: normal;
 				font-size: 12px;
+
+			}
+		}
+		.head-pn{
+			span{
+				font-weight: 600;
 			}
 		}
 	}
@@ -172,17 +180,15 @@
 		}
 		span{
 			text-transform: none;
-			font-weight: normal;
 			font-size: 12px;
 		}
 	}
 	.modal-content{
 		&>p{
-			font-size: 14px;
 			margin-top: 15px;
+			line-height: 1.8;
 		}
 		article{
-			font-size: 14px;
 			margin-top: 15px;
 			h4{
 
