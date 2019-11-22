@@ -599,6 +599,9 @@ $(document).ready(function() {
         if(!$('.booking-step-promo .text,.booking-step-promo .value').is(e.target) && $('.booking-step-promo .text,.booking-step-promo .value').has(e.target).length === 0){
         	$('.booking-step-promo .value').removeClass('open-block');
         }
+        if(!$('.booking-step-class .text,.booking-step-class .value').is(e.target) && $('.booking-step-class .text,.booking-step-class .value').has(e.target).length === 0){
+        	$('.booking-step-class .value').removeClass('open-block');
+        }
         if(!$('.booking-step-time .text,.booking-step-time .value').is(e.target) && $('.booking-step-time .text,.booking-step-time .value').has(e.target).length === 0){
         	$('.booking-step-time .value').removeClass('open-block');
         }
@@ -657,6 +660,14 @@ $(document).ready(function() {
 		$('.child-number').text($('.wrap-child-number input').val());
 		$('.wrap-child-number .btn-down').removeClass('btn-disabled');
 	});
+	$('.booking-step-calendar input').datepicker({
+		//inline: true,
+		minDate:new Date(),
+		showOtherMonths: true
+	});
+	$('.booking-step-calendar input').change(function(){
+		$(this).next('.text').children('b').text($(this).val());
+	});
 	let number2 = $('.booking-step-promo .btn-value').length;
 	for (let i=0; i<number2; i++){
 		$('.booking-step-promo .btn-value').eq(i).click(function(){
@@ -665,10 +676,12 @@ $(document).ready(function() {
 			} else{
 				$('.booking-step-promo .btn-value').removeClass('checked');
 				$(this).addClass('checked');
-				if(i<(number2/2)){
-					$('.booking-step-promo .btn-value').eq(number2/2 + i).addClass('checked');
-				} else{
-					$('.booking-step-promo .btn-value').eq(i - number2/2).addClass('checked');
+				if($('.booking-step-promo').length == 2){
+					if(i<(number2/2)){
+						$('.booking-step-promo .btn-value').eq(number2/2 + i).addClass('checked');
+					} else{
+						$('.booking-step-promo .btn-value').eq(i - number2/2).addClass('checked');
+					}
 				}
 			}
 			if($(this).closest('.value').find('.checked').length == 0){
