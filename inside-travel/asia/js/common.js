@@ -953,57 +953,7 @@ $(document).ready(function() {
 		});
 	}
 	/*===end search cruise =====*/
-	/*======================LOAD JSON============================*/
-	let loadJson = function(a,x,y) {
-        $.ajax({
-            dataType: 'json',
-            url: `data/include-${a}.json`})
-            .done(function(response) {
-                // let response = JSON.parse(data);
-                $(x).html(response[y]);
-				$('.read-more-st1>a').click(function(){
-					let paraHide = $(this).parent('.read-more-st1').prev('.paragraph-hide');
-					paraHide.toggleClass('paragraph-show');
-					if(paraHide.css('max-height') == 'none'){
-						$(this).text('Less ...');
-					} else{
-						$(this).text('Read More ...');
-					}
-					if($(this).closest('.pull-up').length > 0){
-						if(bodyWidth < 1200 && bodyWidth > 991){
-							$('.pull-up').height($('.foreground').outerHeight()-190);
-						} else if(bodyWidth <= 991){
-							$('.pull-up').height($('.foreground').outerHeight()-120);
-						} else{
-							$('.pull-up').height($('.foreground').outerHeight()-220);
-						}
-					}
-				});
-            })
-            .fail(function() {
-                alert('lỗi load dữ liệu');
-            });
-        return false; 
-    };
-    $('#btn-accommodation').click(function(){
-    	loadJson(1,'.modal-include-1 .modal-content','accommodation');
-    });
-    $('#btn-experience').click(function(){
-    	loadJson(1,'.modal-include-1 .modal-content','experience');
-    });
-    $('#btn-transport').click(function(){
-    	loadJson(2,'.modal-include-2 .modal-content','transport');
-    });
-    $('#btn-team').click(function(){
-    	loadJson(2,'.modal-include-2 .modal-content','team');
-    });
-    $('#btn-meal').click(function(){
-    	loadJson(2,'.modal-include-2 .modal-content','meal');
-    });
-    $('#btn-service').click(function(){
-    	loadJson(2,'.modal-include-2 .modal-content','services');
-    });
-    /*======================END JSON============================*/
+
 });
 window.onload = function() {
 	if($('body').width() > 767){
@@ -1058,3 +1008,54 @@ let selectChange = function(a,b){
 	$(b).find('.room-type option').removeAttr('selected');
 	$(b).find(`.room-type option[value=${optionVal}]`).attr('selected','selected');
 }
+/*======================LOAD JSON============================*/
+let loadJson = function(a,x,y) {
+    $.ajax({
+        dataType: 'json',
+        url: `data/include-${a}.json`})
+        .done(function(response) {
+            // let response = JSON.parse(data);
+            $(x).html(response[y]);
+			/*$('.read-more-st1>a').click(function(){
+				let paraHide = $(this).parent('.read-more-st1').prev('.paragraph-hide');
+				paraHide.toggleClass('paragraph-show');
+				if(paraHide.css('max-height') == 'none'){
+					$(this).text('Less ...');
+				} else{
+					$(this).text('Read More ...');
+				}
+				if($(this).closest('.pull-up').length > 0){
+					if(bodyWidth < 1200 && bodyWidth > 991){
+						$('.pull-up').height($('.foreground').outerHeight()-190);
+					} else if(bodyWidth <= 991){
+						$('.pull-up').height($('.foreground').outerHeight()-120);
+					} else{
+						$('.pull-up').height($('.foreground').outerHeight()-220);
+					}
+				}
+			});*/
+        })
+        .fail(function() {
+            alert('lỗi load dữ liệu');
+        });
+    return false; 
+};
+$('#btn-accommodation').click(function(){
+	loadJson(1,'.modal-include-1 .modal-content','accommodation');
+});
+$('#btn-experience').click(function(){
+	loadJson(1,'.modal-include-1 .modal-content','experience');
+});
+$('#btn-transport').click(function(){
+	loadJson(2,'.modal-include-2 .modal-content','transport');
+});
+$('#btn-team').click(function(){
+	loadJson(2,'.modal-include-2 .modal-content','team');
+});
+$('#btn-meal').click(function(){
+	loadJson(2,'.modal-include-2 .modal-content','meal');
+});
+$('#btn-service').click(function(){
+	loadJson(2,'.modal-include-2 .modal-content','services');
+});
+/*======================END JSON============================*/

@@ -182,3 +182,22 @@
 		//padding-bottom: 10px;
 	}
 }
+@media (max-width: 1199px) {
+	#booking-widget-cruisepage{
+		&>.form-banner-top{
+			display: none;
+		}
+		&>button{
+			display: block;
+			margin: 0 auto;
+			max-width: 280px;
+			width: 90%;
+			height: 50px;
+		}
+	}
+}
+@media (max-width: 767px) {
+	#booking-widget-cruisepage{
+		bottom: 10px;
+	}
+}
