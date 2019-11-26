@@ -366,10 +366,19 @@
 						}
 					}
 					.icon-font{
-						font-size: 26px;
+						font-size: 16px;
 						margin-right: 5px;
 						@include smooth(.25s);
 						color: $higlight-color;
+						width: 32px;
+						height: 32px;
+						border: 1px solid;
+						border-radius: 50%;
+						display: inline-flex;
+						justify-content: center;
+						align-items: center;
+						padding-left: 2px;
+						flex-shrink: 0;
 						&:before{
 							color: inherit;
 						}
@@ -982,14 +991,17 @@
 				height: 50px;
 				bottom: auto;
 				top: 0;
+				background: -webkit-linear-gradient(left,rgba(255,255,255,0) 0%,rgba(255,255,255,0.45) 40%);
+			    background: -moz-linear-gradient(left,rgba(255,255,255,0) 0%,rgba(255,255,255,0.45) 40%);
+			    background: -ms-linear-gradient(left,rgba(255,255,255,0) 0%,rgba(255,255,255,0.45) 40%);
+			    background: -o-linear-gradient(left,rgba(255,255,255,0) 0%,rgba(255,255,255,0.45) 40%);
+				.select-arrow-thin{
+					display: none;
+				}
 			}
 			.btn-day-down{
 				left: auto;
 				right: 0;
-				@include rotage(-90deg);
-			}
-			.btn-day-up{
-				@include rotage(90deg);
 			}
 		}
 		#map-tour{

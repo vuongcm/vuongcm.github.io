@@ -115,8 +115,6 @@ $(document).ready(function() {
 			}
 		});
 	}
-	let heightTrip = 91+$('.content-trip').height()+$('.trip a').height();
-	$('.trip').height(heightTrip);
 	if(bodyWidth < 1025){
     	$('.best-support article').hover(function(){
 	    	$(this).children('.paragraph').css('max-height','132px');
@@ -130,6 +128,11 @@ $(document).ready(function() {
 	    });
 	    $('.trip .content-trip').hover(function(){
 	    	$(this).children('.paragraph').css('max-height','152px');
+	    },function(){
+	    	$(this).children('.paragraph').removeAttr('style');
+	    });
+	    $('.wrap-guide-step article').hover(function(){
+	    	$(this).children('.paragraph').css('max-height','500px');
 	    },function(){
 	    	$(this).children('.paragraph').removeAttr('style');
 	    });
@@ -867,7 +870,7 @@ $(document).ready(function() {
 					}
 				}
 				if($(this).closest('.value').find('.checked').length == 0){
-					$('.booking-step-night').find('.text b').html(`Night?`);
+					$('.booking-step-night').find('.text b').html(`No. Night`);
 					$('#search-cruise-modal .booking-step-night').find('select option').val('');
 				} else{
 					$('.booking-step-night').find('.text b').html($(this).children('b').text());
@@ -969,6 +972,8 @@ window.onload = function() {
 	$('.detail-location .tooltip>span').each(function(){
 		$(this).css('left',`-${$(this).width()/2 - 14}px`);
 	});
+	let heightTrip = 91+$('.content-trip').height()+$('.trip a').height();
+	$('.trip').height(heightTrip);
 	//$('#preloader').delay(500).fadeOut(300);
     /*setTimeout(function(){
 	    $('body').removeClass('preloading-bd');

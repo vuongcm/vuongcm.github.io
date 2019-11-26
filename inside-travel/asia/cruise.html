@@ -257,7 +257,7 @@
 		<p>All Vietnam Tours can be tailored & designed for you</p>
 	</div>
 	<div id="booking-widget-cruisepage">
-		<div class="form-banner-top">
+		<form action="" class="form-banner-top">
 			<div class="booking-step-cruise select-st1">
 				<span class="text">
 					<b>Cruise name:</b>
@@ -380,7 +380,7 @@
 			</div>
 			<div class="booking-step-night select-st2">
 				<span class="text">
-					<b>Night?</b>
+					<b>No. Night</b>
 					<i class="icon-font select-arrow-thin"></i>
 				</span>
 				<ul class="value">
@@ -401,7 +401,7 @@
 			<div class="booking-step-depature booking-st2">
         		<input type="text" name="">
 				<span class="text">
-					<b>Approx Start Date</b>
+					<b>Departure Date</b>
 					<i class="icon-font calendar-regular"></i>
 				</span>
 			</div>
@@ -417,9 +417,9 @@
 				</span>
 				<div class="value-2">
 					<div class="wrap-room-number">
-						<button class="btn-down btn-disabled">-</button>
+						<button class="btn-down btn-disabled" type="button">-</button>
 						<span><strong class="room-number">1</strong>&nbsp;Room(s)</span>
-						<button class="btn-up">+</button>
+						<button class="btn-up" type="button">+</button>
 						<input type="text" name="" value="1">
 					</div>
 					<div class="room-cruise room-cruise-1">
@@ -433,21 +433,21 @@
 						</div>
 						<div class="room-element">
 							<div class="wrap-adult-number">
-								<button class="btn-down" onclick="btnDownClick(this,'.adult-number-sum','.room-cruise-1')">-</button>
+								<button class="btn-down" onclick="btnDownClick(this,'.adult-number-sum','.room-cruise-1')" type="button">-</button>
 								<span><strong class="adult-number">2</strong>&nbsp;Adult(>12)</span>
-								<button class="btn-up" onclick="btnUpClick(this,'.adult-number-sum','.room-cruise-1',4)">+</button>
+								<button class="btn-up" onclick="btnUpClick(this,'.adult-number-sum','.room-cruise-1',4)" type="button">+</button>
 								<input type="text" name="" value="2">
 							</div>
 							<div class="wrap-child-number">
-								<button class="btn-down btn-disabled" onclick="btnDownClick(this,'.child-number-sum','.room-cruise-1')">-</button>
+								<button class="btn-down btn-disabled" onclick="btnDownClick(this,'.child-number-sum','.room-cruise-1')" type="button">-</button>
 								<span><strong class="child-number">0</strong>&nbsp;Child(4-12)</span>
-								<button class="btn-up" onclick="btnUpClick(this,'.child-number-sum','.room-cruise-1',2)">+</button>
+								<button class="btn-up" onclick="btnUpClick(this,'.child-number-sum','.room-cruise-1',2)" type="button">+</button>
 								<input type="text" name="" value="0">
 							</div>
 							<div class="wrap-infant-number">
-								<button class="btn-down btn-disabled" onclick="btnDownClick(this,'.infant-number-sum','.room-cruise-1')">-</button>
+								<button class="btn-down btn-disabled" onclick="btnDownClick(this,'.infant-number-sum','.room-cruise-1')" type="button">-</button>
 								<span><strong class="infant-number">0</strong>&nbsp;Infant(<3)</span>
-								<button class="btn-up" onclick="btnUpClick(this,'.infant-number-sum','.room-cruise-1',2)">+</button>
+								<button class="btn-up" onclick="btnUpClick(this,'.infant-number-sum','.room-cruise-1',2)" type="button">+</button>
 								<input type="text" name="" value="0">
 							</div>
 						</div>
@@ -455,9 +455,9 @@
 				</div>
 			</div>
 			<div class="booking-step-submit">
-				<button class="btn-st3 btn-search-cruise">Search Cruises</button>
+				<button class="btn-st3" type="submit">Search Cruises</button>
 			</div>
-		</div>
+		</form>
 		<button class="btn-st3 btn-search-cruise">Search Cruises Now</button>
 	</div>
 </section>
@@ -1930,8 +1930,7 @@
 </div>
 <div id="search-cruise-modal" class="modal close-display">
     <button class="btn-close">&times;</button>
-    <h3>Almost There!</h3>
-    <p>We need a bit more info to create your itinerary:</p>
+    <h3>Search Cruises</h3>
     <div class="form-box">
         <form action="" method="get">
         	<div class="form-field col-xlg-12">
@@ -2064,7 +2063,7 @@
                 	<div class="booking-step-depature booking-st2">
 		        		<input type="text" name="">
 						<span class="text">
-							<b>Approx Start Date</b>
+							<b>Departure Date</b>
 							<i class="icon-font calendar-regular"></i>
 						</span>
 					</div>
@@ -2075,7 +2074,7 @@
 							<option value="" selected></option>
 						</select>
 						<span class="text">
-							<b>Night?</b>
+							<b>No. Night</b>
 							<i class="icon-font select-arrow-thin"></i>
 						</span>
 						<ul class="value">
@@ -2146,31 +2145,7 @@
 					</div>
 				</div>
             </div>
-            <div class="form-field col-xlg-12">
-                <input type="text" name="" placeholder="Full Name *" required>
-            </div>
-            <div class="form-field col-xlg-12">
-                <input name="" type="email" placeholder="Email Address *" required></input>
-            </div>
-            <div class="form-field col-xlg-12">
-            	<textarea name="" placeholder="Enter notes or special requests..."></textarea>
-            </div>
-            <div class="check-field">
-            	<div class="col-xlg-12">
-            		<input type="checkbox" class="checkbox-phone" id="cb-p-2">
-                	<label for="cb-p-2">
-                		<i class="icon-font phone"></i>
-                		<span>Sometimes emails get lost, help us: you'll receive our email.</span>
-                </label>
-            	</div>
-                <div class="phone-wrap col-xlg-12" id="pw-2">
-                	<div>
-                		<input id="phonenumber-2" class="phonenumber" type="text" name="">
-            			<input type="hidden" name="full_number">
-                	</div>
-                </div>
-            </div>
-            <button class="btn-st3" type="submit">Submit</button>
+            <button class="btn-st3" type="submit">Search Cruises</button>
         </form>
     </div>
 </div>
