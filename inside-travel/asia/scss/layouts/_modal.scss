@@ -445,8 +445,13 @@
 	}
 }
 #creat-detail-modal{
+	h3{
+		text-transform: uppercase;
+	}
 	&>p{
 		text-align: center;
+		font-weight: 500;
+		text-transform: uppercase;
 	}
 	.form-field textarea{
 		height: 70px;
