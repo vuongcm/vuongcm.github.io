@@ -889,133 +889,68 @@ $(document).ready(function() {
 		});
 	}
 	if($('.booking-step-room-cruise').length){
-		let roomCruise = `<div class="room-type">
-							<select class="select-st9">
-								<option value="1" selected>Double</option>
-								<option value="2">Twin</option>
-								<option value="3">Single</option>
-							</select>
-						</div>
-						<div class="room-element">
-							<div class="wrap-adult-number">
-								<button class="btn-down" type="button">-</button>
-								<span><strong class="adult-number">2</strong>&nbsp;Adult(>12)</span>
-								<button class="btn-up" type="button">+</button>
-								<input type="text" name="" value="2">
-							</div>
-							<div class="wrap-child-number">
-								<button class="btn-down btn-disabled" type="button">-</button>
-								<span><strong class="child-number">0</strong>&nbsp;Child(4-12)</span>
-								<button class="btn-up" type="button">+</button>
-								<input type="text" name="" value="0">
-							</div>
-							<div class="wrap-infant-number">
-								<button class="btn-down" type="button">-</button>
-								<span><strong class="infant-number">1</strong>&nbsp;Infant(<3)</span>
-								<button class="btn-up" type="button">+</button>
-								<input type="text" name="" value="1">
-							</div>
-						</div>`
 		$('.wrap-room-number .btn-down').click(function(){
 			let number1 = Number($(this).nextAll('input').val());
+			let adultSum = Number($('.adult-number-sum').html());
+			let childSum = Number($('.child-number-sum').html());
+			let infantSum = Number($('.infant-number-sum').html());
+			let elementRemo = $(`.value-2 .room-cruise-${number1}`);
 			if(number1 > 1){
 				$('.wrap-room-number input').val(`${number1-1}`);
-				$(`.booking-step-room-cruise .value-2 .room-cruise-${number1}`).remove();
+				$('.adult-number-sum').html(`${adultSum - elementRemo.find('.wrap-adult-number input').val()}`);
+				$('.child-number-sum').html(`${childSum - elementRemo.find('.wrap-child-number input').val()}`);
+				$('.infant-number-sum').html(`${infantSum - elementRemo.find('.wrap-infant-number input').val()}`);
+				elementRemo.remove();
+				$('.room-number').text(`${number1-1}`);
+				$('.wrap-room-number .btn-up').removeClass('btn-disabled');
 			}
-			$('.room-number').text($('.wrap-room-number input').val());
-			$('.wrap-room-number .btn-up').removeClass('btn-disabled');
 			if($('.wrap-room-number input').val() == 1){
 				$('.wrap-room-number .btn-down').addClass('btn-disabled');
 			}
 		});
 		$('.wrap-room-number .btn-up').click(function(){
 			let number1 = Number($(this).nextAll('input').val());
+			let adultSum = Number($('.adult-number-sum').html());
 			if(number1 < 5){
 				$('.wrap-room-number input').val(`${number1+1}`);
-				$('.booking-step-room-cruise .value-2').append(`<div class="room-cruise-${number1+1} room-cruise"><b>Room ${number1+1}:</b>${roomCruise}</div>`);
+				$('.booking-step-room-cruise .value-2').append(`<div class="room-cruise room-cruise-${number1+1}">
+							<b>Room ${number1+1}:</b>
+							<div class="room-type">
+								<select class="select-st9" onchange="selectChange(this,'.room-cruise-${number1+1}')">
+									<option value="1" selected>Double</option>
+									<option value="2">Twin</option>
+									<option value="3">Single</option>
+								</select>
+							</div>
+							<div class="room-element">
+								<div class="wrap-adult-number">
+									<button class="btn-down" type="button" onclick="btnDownClick(this,'.adult-number-sum','.room-cruise-${number1+1}')">-</button>
+									<span><strong class="adult-number">2</strong>&nbsp;Adult(>12)</span>
+									<button class="btn-up" type="button" onclick="btnUpClick(this,'.adult-number-sum','.room-cruise-${number1+1}',4)">+</button>
+									<input type="text" name="" value="2">
+								</div>
+								<div class="wrap-child-number">
+									<button class="btn-down btn-disabled" type="button" onclick="btnDownClick(this,'.child-number-sum','.room-cruise-${number1+1}')">-</button>
+									<span><strong class="child-number">0</strong>&nbsp;Child(4-12)</span>
+									<button class="btn-up" type="button" onclick="btnUpClick(this,'.child-number-sum','.room-cruise-${number1+1}',2)">+</button>
+									<input type="text" name="" value="0">
+								</div>
+								<div class="wrap-infant-number">
+									<button class="btn-down btn-disabled" type="button" onclick="btnDownClick(this,'.infant-number-sum','.room-cruise-${number1+1}')">-</button>
+									<span><strong class="infant-number">0</strong>&nbsp;Infant(<3)</span>
+									<button class="btn-up" type="button" onclick="btnUpClick(this,'.infant-number-sum','.room-cruise-${number1+1}',2)">+</button>
+									<input type="text" name="" value="0">
+								</div>
+							</div>
+						</div>`);
+				$('.room-number').text(`${number1+1}`);
+				$('.adult-number-sum').text(`${adultSum+2}`);
+				$('.wrap-room-number .btn-down').removeClass('btn-disabled');
 			}
-			$('.room-number').text($('.wrap-room-number input').val());
-			$('.wrap-room-number .btn-down').removeClass('btn-disabled');
 			if($('.wrap-room-number input').val() == 5){
 				$('.wrap-room-number .btn-up').addClass('btn-disabled');
 			}
 		});
-		
-		/*$('.wrap-adult-number .btn-down').click(function(){
-			let number1 = Number($(this).nextAll('input').val());
-			let numberSum = Number($('.adult-number-sum').html());
-			if(number1 > 0){
-				$('.wrap-adult-number input').val(`${number1-1}`);
-				$('.adult-number-sum').text(`${numberSum-1}`);
-			}
-			$('.adult-number').text($('.wrap-adult-number input').val());
-			$('.wrap-adult-number .btn-up').removeClass('btn-disabled');
-			if($('.wrap-adult-number input').val() == 0){
-				$('.wrap-adult-number .btn-down').addClass('btn-disabled');
-			}
-		});
-		$('.wrap-adult-number .btn-up').click(function(){
-			let number1 = Number($(this).nextAll('input').val());
-			let numberSum = Number($('.adult-number-sum').html());
-			if(number1 < 4){
-				$('.wrap-adult-number input').val(`${number1+1}`);
-				$('.adult-number-sum').text(`${numberSum+1}`);
-			}
-			if($('.wrap-adult-number input').val() == 4){
-				$('.wrap-adult-number .btn-up').addClass('btn-disabled');
-			}
-			$('.adult-number').text($('.wrap-adult-number input').val());
-			$('.wrap-adult-number .btn-down').removeClass('btn-disabled');
-		});
-*/
-		/*$('.wrap-infant-number .btn-down').click(function(){
-			let number1 = Number($(this).nextAll('input').val());
-			if(number1 > 0){
-				$('.wrap-infant-number input').val(`${number1-1}`);
-			}
-			$('.infant-number').text($('.wrap-infant-number input').val());
-			if($('.wrap-infant-number input').val() == 0){
-				$('.wrap-infant-number .btn-down').addClass('btn-disabled');
-			}
-		});
-		$('.wrap-infant-number .btn-up').click(function(){
-			let number1 = Number($(this).nextAll('input').val());
-			$('.wrap-infant-number input').val(`${number1+1}`);
-			$('.infant-number').text($('.wrap-infant-number input').val());
-			$('.wrap-infant-number .btn-down').removeClass('btn-disabled');
-		});
-		$('.wrap-adult-number .btn-down').click(function(){
-			let number1 = Number($(this).nextAll('input').val());
-			if(number1 > 0){
-				$('.wrap-adult-number input').val(`${number1-1}`);
-			}
-			$('.adult-number').text($('.wrap-adult-number input').val());
-			if($('.wrap-adult-number input').val() == 0){
-				$('.wrap-adult-number .btn-down').addClass('btn-disabled');
-			}
-		});
-		$('.wrap-adult-number .btn-up').click(function(){
-			let number1 = Number($(this).nextAll('input').val());
-			$('.wrap-adult-number input').val(`${number1+1}`);
-			$('.adult-number').text($('.wrap-adult-number input').val());
-			$('.wrap-adult-number .btn-down').removeClass('btn-disabled');
-		});
-		$('.wrap-child-number .btn-down').click(function(){
-			let number1 = Number($(this).nextAll('input').val());
-			if(number1 > 0){
-				$('.wrap-child-number input').val(`${number1-1}`);
-			}
-			$('.child-number').text($('.wrap-child-number input').val());
-			if($('.wrap-child-number input').val() == 0){
-				$('.wrap-child-number .btn-down').addClass('btn-disabled');
-			}
-		});
-		$('.wrap-child-number .btn-up').click(function(){
-			let number1 = Number($(this).nextAll('input').val());
-			$('.wrap-child-number input').val(`${number1+1}`);
-			$('.child-number').text($('.wrap-child-number input').val());
-			$('.wrap-child-number .btn-down').removeClass('btn-disabled');
-		});*/
 	}
 	/*===end search cruise =====*/
 	/*======================LOAD JSON============================*/
@@ -1026,7 +961,24 @@ $(document).ready(function() {
             .done(function(response) {
                 // let response = JSON.parse(data);
                 $(x).html(response[y]);
-
+				$('.read-more-st1>a').click(function(){
+					let paraHide = $(this).parent('.read-more-st1').prev('.paragraph-hide');
+					paraHide.toggleClass('paragraph-show');
+					if(paraHide.css('max-height') == 'none'){
+						$(this).text('Less ...');
+					} else{
+						$(this).text('Read More ...');
+					}
+					if($(this).closest('.pull-up').length > 0){
+						if(bodyWidth < 1200 && bodyWidth > 991){
+							$('.pull-up').height($('.foreground').outerHeight()-190);
+						} else if(bodyWidth <= 991){
+							$('.pull-up').height($('.foreground').outerHeight()-120);
+						} else{
+							$('.pull-up').height($('.foreground').outerHeight()-220);
+						}
+					}
+				});
             })
             .fail(function() {
                 alert('lỗi load dữ liệu');
@@ -1072,11 +1024,37 @@ window.onload = function() {
 	    $('body').removeClass('preloading-bd');
 	}, 800);*/
 };
-let btnUpClick = function(a,b,c){
+let btnUpClick = function(a,b,c,d){
 	let number1 = Number($(a).nextAll('input').val());
 	let numberSum = Number($(b).html());
-	if(number1 < 4){
-		$(c).find('.adult-number').text(`${number1+1}`);
+	let wrap = $(a).parent('div').attr('class');
+	if(number1 < d){
+		$(c).find(`.${wrap} input`).val(`${number1+1}`);
+		$(b).html(`${numberSum+1}`);
+		$(c).find(`.${wrap} span>strong`).html(`${number1+1}`);
+		$(c).find(`.${wrap} .btn-down`).removeClass('btn-disabled');
 	}
-	//alert(numberSum);
+	if((number1+1) == d){
+		$(c).find(`.${wrap} .btn-up`).addClass('btn-disabled');
+	}
+	//alert(`.${wrap} input`);
+}
+let btnDownClick = function(a,b,c){
+	let number1 = Number($(a).nextAll('input').val());
+	let numberSum = Number($(b).html());
+	let wrap = $(a).parent('div').attr('class');
+	if(number1 > 0){
+		$(c).find(`.${wrap} input`).val(`${number1-1}`);
+		$(b).html(`${numberSum-1}`);
+		$(c).find(`.${wrap} span>strong`).html(`${number1-1}`);
+		$(c).find(`.${wrap} .btn-up`).removeClass('btn-disabled');
+	}
+	if((number1-1) == 0){
+		$(c).find(`.${wrap} .btn-down`).addClass('btn-disabled');
+	}
+}
+let selectChange = function(a,b){
+	let optionVal = $(a).val();
+	$(b).find('.room-type option').removeAttr('selected');
+	$(b).find(`.room-type option[value=${optionVal}]`).attr('selected','selected');
 }

@@ -411,7 +411,7 @@
 						<i class="icon-font key"></i>&nbsp;
 						<strong class="room-number">1</strong>&nbsp;Room(s)&nbsp;
 						<i class="icon-font icon-users"></i>&nbsp;
-						<strong class="adult-number-sum">2</strong>&nbsp;Adult(s),&nbsp;<strong class="child-number-sum">0</strong>&nbsp;Children,&nbsp;<strong class="infant-number-sum">1</strong>&nbsp;Infant
+						<strong class="adult-number-sum">2</strong>&nbsp;Adult(s),&nbsp;<strong class="child-number-sum">0</strong>&nbsp;Children,&nbsp;<strong class="infant-number-sum">0</strong>&nbsp;Infant
 					</b>
 					<i class="icon-font select-arrow-thin"></i>
 				</span>
@@ -425,7 +425,7 @@
 					<div class="room-cruise room-cruise-1">
 						<b>Room 1:</b>
 						<div class="room-type">
-							<select class="select-st9">
+							<select class="select-st9" onchange="selectChange(this,'.room-cruise-1')">
 								<option value="1" selected>Double</option>
 								<option value="2">Twin</option>
 								<option value="3">Single</option>
@@ -433,22 +433,22 @@
 						</div>
 						<div class="room-element">
 							<div class="wrap-adult-number">
-								<button class="btn-down">-</button>
+								<button class="btn-down" onclick="btnDownClick(this,'.adult-number-sum','.room-cruise-1')">-</button>
 								<span><strong class="adult-number">2</strong>&nbsp;Adult(>12)</span>
-								<button class="btn-up">+</button>
+								<button class="btn-up" onclick="btnUpClick(this,'.adult-number-sum','.room-cruise-1',4)">+</button>
 								<input type="text" name="" value="2">
 							</div>
 							<div class="wrap-child-number">
-								<button class="btn-down btn-disabled">-</button>
+								<button class="btn-down btn-disabled" onclick="btnDownClick(this,'.child-number-sum','.room-cruise-1')">-</button>
 								<span><strong class="child-number">0</strong>&nbsp;Child(4-12)</span>
-								<button class="btn-up">+</button>
+								<button class="btn-up" onclick="btnUpClick(this,'.child-number-sum','.room-cruise-1',2)">+</button>
 								<input type="text" name="" value="0">
 							</div>
 							<div class="wrap-infant-number">
-								<button class="btn-down">-</button>
-								<span><strong class="infant-number">1</strong>&nbsp;Infant(<3)</span>
-								<button class="btn-up">+</button>
-								<input type="text" name="" value="1">
+								<button class="btn-down btn-disabled" onclick="btnDownClick(this,'.infant-number-sum','.room-cruise-1')">-</button>
+								<span><strong class="infant-number">0</strong>&nbsp;Infant(<3)</span>
+								<button class="btn-up" onclick="btnUpClick(this,'.infant-number-sum','.room-cruise-1',2)">+</button>
+								<input type="text" name="" value="0">
 							</div>
 						</div>
 					</div>
@@ -2102,7 +2102,7 @@
 							<i class="icon-font key"></i>&nbsp;
 							<strong class="room-number">1</strong>&nbsp;Room(s)&nbsp;
 							<i class="icon-font icon-users"></i>&nbsp;
-							<strong class="adult-number-sum">2</strong>&nbsp;Adult(s),&nbsp;<strong class="child-number-sum">0</strong>&nbsp;Children,&nbsp;<strong class="infant-number-sum">1</strong>&nbsp;Infant
+							<strong class="adult-number-sum">2</strong>&nbsp;Adult(s),&nbsp;<strong class="child-number-sum">0</strong>&nbsp;Children,&nbsp;<strong class="infant-number-sum">0</strong>&nbsp;Infant
 						</b>
 						<i class="icon-font select-arrow-thin"></i>
 					</span>
@@ -2116,7 +2116,7 @@
 						<div class="room-cruise room-cruise-1">
 							<b>Room 1:</b>
 							<div class="room-type">
-								<select class="select-st9">
+								<select class="select-st9" onchange="selectChange(this,'.room-cruise-1')">
 									<option value="1" selected>Double</option>
 									<option value="2">Twin</option>
 									<option value="3">Single</option>
@@ -2124,22 +2124,22 @@
 							</div>
 							<div class="room-element">
 								<div class="wrap-adult-number">
-									<button class="btn-down" type="button">-</button>
+									<button class="btn-down" type="button" onclick="btnDownClick(this,'.adult-number-sum','.room-cruise-1')">-</button>
 									<span><strong class="adult-number">2</strong>&nbsp;Adult(>12)</span>
-									<button class="btn-up" type="button" onclick="btnUpClick(this,'.adult-number-sum','.room-cruise-1')">+</button>
+									<button class="btn-up" type="button" onclick="btnUpClick(this,'.adult-number-sum','.room-cruise-1',4)">+</button>
 									<input type="text" name="" value="2">
 								</div>
 								<div class="wrap-child-number">
-									<button class="btn-down btn-disabled" type="button">-</button>
+									<button class="btn-down btn-disabled" type="button" onclick="btnDownClick(this,'.child-number-sum','.room-cruise-1')">-</button>
 									<span><strong class="child-number">0</strong>&nbsp;Child(4-12)</span>
-									<button class="btn-up" type="button">+</button>
+									<button class="btn-up" type="button" onclick="btnUpClick(this,'.child-number-sum','.room-cruise-1',2)">+</button>
 									<input type="text" name="" value="0">
 								</div>
 								<div class="wrap-infant-number">
-									<button class="btn-down" type="button">-</button>
-									<span><strong class="infant-number">1</strong>&nbsp;Infant(<3)</span>
-									<button class="btn-up" type="button">+</button>
-									<input type="text" name="" value="1">
+									<button class="btn-down btn-disabled" type="button" onclick="btnDownClick(this,'.infant-number-sum','.room-cruise-1')">-</button>
+									<span><strong class="infant-number">0</strong>&nbsp;Infant(<3)</span>
+									<button class="btn-up" type="button" onclick="btnUpClick(this,'.infant-number-sum','.room-cruise-1',2)">+</button>
+									<input type="text" name="" value="0">
 								</div>
 							</div>
 						</div>
