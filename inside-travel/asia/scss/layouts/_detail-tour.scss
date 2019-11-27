@@ -1139,13 +1139,13 @@
 				&>div:first-child{
 				    padding-right: 0;
 				    width: 100%;
-				    text-align: left;
-				    h3{
-				    	text-align: left;
-				    }
 				}
 				&>div:last-child{
 					margin-top: 15px;
+					text-align: center;
+				}
+				.read-more-st1{
+					text-align: center;
 				}
 			}
 		}

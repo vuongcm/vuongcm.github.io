@@ -131,11 +131,13 @@ $(document).ready(function() {
 	    },function(){
 	    	$(this).children('.paragraph').removeAttr('style');
 	    });
-	    $('.wrap-guide-step article').hover(function(){
-	    	$(this).children('.paragraph').css('max-height','500px');
-	    },function(){
-	    	$(this).children('.paragraph').removeAttr('style');
-	    });
+	    if(bodyWidth > 479){
+	    	$('.wrap-guide-step article').hover(function(){
+		    	$(this).children('.paragraph').css('max-height','500px');
+		    },function(){
+		    	$(this).children('.paragraph').removeAttr('style');
+		    });
+	    }
     }
 	if (bodyWidth <= 520) {
 		$('.menu-mobile-back button').click(function(){
