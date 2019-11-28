@@ -27,14 +27,14 @@
         font-family: 'Montserrat', Arial, sans-serif;
     }
 }
-@font-face{ 
+/*@font-face{ 
 	font-family: 'Theano Didot';
 	src: url('../fonts/theano-didot/TheanoDidot.eot');
 	src: url('../fonts/theano-didot/TheanoDidot.eot?iefix') format('eot'),
 	     url('../fonts/theano-didot/TheanoDidot.woff') format('woff'),
 	     url('../fonts/theano-didot/TheanoDidot.ttf') format('truetype'),
 	     url('../fonts/theano-didot/TheanoDidot.svg#webfont') format('svg');
-}
+}*/
 object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, 
 ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, 
@@ -291,7 +291,6 @@ select:focus {
 }
 .title-h1 {
 	font-size: 30px;
-	font-family: 'Theano Didot','Times New Roman', serif;
 	letter-spacing: 2px;
     font-weight: 600;
 	line-height: 1;
@@ -300,7 +299,6 @@ select:focus {
 }
 .title-h2{
     font-size: 24px;
-    font-family: 'Theano Didot','Times New Roman', serif;
     font-weight: 400;
     letter-spacing: 2px;
     line-height: 1;
@@ -310,15 +308,15 @@ select:focus {
 }
 .title-h2-line {
     width: 100%;
-    font-size: 28px;
-    font-family: 'Theano Didot','Times New Roman', serif;
+    font-size: 22px;
     letter-spacing: 2px;
-    color: $title-color;
-    line-height: 1;
+    color: #000;
+    line-height: 1.3;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 10px;
     font-weight: 400;
+    text-transform: uppercase;
 }
 .title-h2-line:after, .line:after{
     max-width: 200px;
@@ -625,6 +623,9 @@ select:focus {
                     font-size: 40px;
                     color: #d4d4d4;
                 }
+                &:hover i{
+                    color: $higlight-color;
+                }
             }
             .arrow-left{
                 margin-left: 20px;
@@ -744,6 +745,15 @@ select:focus {
             h3,h4{
                 a{
                     text-transform: none;
+                }
+            }
+            .box-button{
+                display: inline-block;
+                margin-left: auto;
+                margin-right: auto;
+                .link-st3{
+                    text-transform: none;
+                    margin-bottom: 0;
                 }
             }
         }
@@ -1079,9 +1089,14 @@ select:focus {
     .select-arrow-thin{
         font-size: 9px;
         color: $title-color;
+        @include smooth(.25s);
     }
     &:hover{
-        color: $light-color;
+        color: $higlight-color;
+        border-color: $higlight-color;
+        .select-arrow-thin{
+            color: $higlight-color;
+        }
     }
 }
 .synch-carousels {
@@ -1124,7 +1139,7 @@ select:focus {
                 font-size: 9px;
             }
             &:hover{
-                color: $light-color;
+                border-color: $higlight-color;
             }
         }
         .arrow-left{

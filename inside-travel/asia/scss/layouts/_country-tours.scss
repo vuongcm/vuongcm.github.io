@@ -89,16 +89,15 @@
 }
 .intro-country-tour{
 	.paragraph-hide{
-		max-height: 90px;
+		max-height: 95px;
+		width: 80%;
+	}
+	.paragraph:first-child{
+		margin-bottom: 15px;
 	}
 	.read-more-st1{
 		a{
 			margin-top: 15px;
-		}
-	}
-	.team-mess{
-		p:first-child{
-			margin-bottom: 15px;
 		}
 	}
 }
@@ -107,20 +106,15 @@
 		.title-h2-line{
 			font-family: 'Reenie Beanie', cursive;
 			font-size: 35px;
+			text-transform: none;
 		}
 	}
-}
-.wrap-highlight-tour{
-	width: 60%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 15px;
-	text-align: center;
-	h3{
-		font-size: 14px;
-		//text-transform: uppercase;
-		font-weight: 600;
-		margin: 0;
+	.read-more-st1{
+		display: none;
+	}
+	.container.paragraph-hide{
+		max-height: none;
+		line-height: inherit;
 	}
 }
 .wrap-icon-highlight{
@@ -206,6 +200,10 @@
 		&>a:first-child{
 			background-color: #fff;
 			border-bottom: 1px solid #dcdcdc;
+			img{
+				width: 30px;
+				margin-right: 10px;
+			}
 			h3{
 				text-transform: none;
 				white-space: normal;
@@ -304,11 +302,6 @@
 	.wrap-guide-step{
 		padding-bottom: 149px;
 	}
-	.wrap-highlight-tour{
-		width: 100%;
-		padding-left: 15px;
-		padding-right: 15px;
-	}
 }
 @media (max-width: 479px) {
 	.wrap-title-banner-top-line{
@@ -334,9 +327,20 @@
 			}
 		}
 	}
+	.list-highlight-tour{
+		.read-more-st1{
+			display: block;
+			.link-st3{
+				margin-top: 15px;
+			}
+		}
+		.container.paragraph-hide{
+			max-height: 90px;
+		}
+	}
 	.wrap-guide{
 		.container.paragraph-hide{
-			max-height: 531px;
+			max-height: 90px;
 		}
 		.read-more-st1{
 			display: block;
@@ -352,6 +356,11 @@
 			.paragraph{
 				max-height: none;
 			}
+		}
+	}
+	.intro-country-tour{
+		.paragraph-hide{
+			width: 100%;
 		}
 	}
 }
