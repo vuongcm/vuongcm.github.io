@@ -552,7 +552,7 @@ select:focus {
     position: relative;
     background-color: $background-color;
     //border-radius: 8px;
-    box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.05);
+    //box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.05);
     margin-bottom: 15px;
     height: 40px;
     //border: 1px solid rgba(255,255,255,0);
@@ -574,9 +574,8 @@ select:focus {
             flex-grow: 1;
             text-align: left;
             padding-left: 10px;
-            font-size: 14px;
             text-transform: uppercase;
-
+            color: #333;
         }
     }
     .icon-dropdown{
@@ -1567,6 +1566,10 @@ select:focus {
         display: inline-block;
         margin: 0 5px;
     }
+    &>.lag-img{
+        width: 90%;
+        border-radius: 0;
+    }
     .team-name{
         width: 100%;
         margin-top: 10px;
@@ -1938,6 +1941,11 @@ select:focus {
                     //max-height: 50px;
                 }
             }
+        }
+    }
+    .team-quote{
+        &>.lag-img{
+            width: 100%;
         }
     }
 }
