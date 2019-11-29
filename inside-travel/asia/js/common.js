@@ -324,16 +324,6 @@ $(document).ready(function() {
     context.beginPath();
 	context.arc(450,382,58,Math.PI/2,Math.PI/1.04);
     context.stroke();*/
-    $('.select-st10').change(function(){
-    	let selectValue1 = $(this).val();
-    	if(selectValue1 == ''){
-    		$(this).nextAll('span').text($(this).children('option').eq(0).text());
-    	} else{
-    		let textSelect1 = $(this).children(`option[value='${selectValue1}']`).text();
-    		$(this).nextAll('span').html(textSelect1);
-    	}
-    	
-    });
 	// slick map home
 	if ($('#slick-slider-map').length > 0) {
 		$(`#slick-slider-map .gallery`).slick({
@@ -631,6 +621,15 @@ $(document).ready(function() {
         }
         if(!$('.booking-step-night .text,.booking-step-night .value').is(e.target) && $('.booking-step-night .text,.booking-step-night .value').has(e.target).length === 0){
         	$('.booking-step-night .value').removeClass('open-block');
+        }
+        if(!$('.filter-des').is(e.target) && $('.filter-des').has(e.target).length === 0){
+        	$('.filter-des .value').removeClass('open-block');
+        }
+        if(!$('.filter-who').is(e.target) && $('.filter-who').has(e.target).length === 0){
+        	$('.filter-who .value').removeClass('open-block');
+        }
+        if(!$('.filter-price').is(e.target) && $('.filter-price').has(e.target).length === 0){
+        	$('.filter-price .value').removeClass('open-block');
         }
 	});
 	if($('.booking-step-room').length){
@@ -958,7 +957,15 @@ $(document).ready(function() {
 		});
 	}
 	/*===end search cruise =====*/
-
+	if($('.filter-box').length){
+		$('.filter-box>a').click(function(){
+			$(this).next('.value').toggleClass('open-block');
+		});
+		$('.filter-box .btn-value').click(function(){
+			$(this).closest('.filter-box').find('.text-2').html($(this).children('span').text());
+			$(this).closest('.value').removeClass('open-block');
+		});
+	}
 });
 window.onload = function() {
 	if($('body').width() > 767){
@@ -1041,6 +1048,35 @@ let loadJson = function(a,x,y) {
 					}
 				}
 			});*/
+			if($('.modal-include-1 .filter-box').length){
+				$('.modal-include-1 .filter-box>a').click(function(){
+					$(this).next('.value').toggleClass('open-block');
+				});
+				$('.filter-box .btn-value').click(function(){
+					$(this).closest('.filter-box').find('.text-2').html($(this).children('span').text());
+					$(this).closest('.value').removeClass('open-block');
+				});
+			}
+			if($('.modal-include-1 .read-more-st1').length){
+				$('.modal-include-1 .read-more-st1>a').click(function(){
+					let paraHide = $(this).parent('.read-more-st1').prev('.paragraph-hide');
+					paraHide.toggleClass('paragraph-show');
+					if(paraHide.css('max-height') == 'none'){
+						$(this).text('Less ...');
+					} else{
+						$(this).text('Read More ...');
+					}
+					if($(this).closest('.pull-up').length > 0){
+						if(bodyWidth < 1200 && bodyWidth > 991){
+							$('.pull-up').height($('.foreground').outerHeight()-190);
+						} else if(bodyWidth <= 991){
+							$('.pull-up').height($('.foreground').outerHeight()-120);
+						} else{
+							$('.pull-up').height($('.foreground').outerHeight()-220);
+						}
+					}
+				});
+			}
         })
         .fail(function() {
             alert('lỗi load dữ liệu');
