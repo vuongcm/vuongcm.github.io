@@ -966,16 +966,29 @@ $(document).ready(function() {
 			$(this).closest('.value').removeClass('open-block');
 		});
 	}
-	if($('.box-blog').length && bodyWidth < 992){
-		$('.box-blog>a').click(function(){
-			$(this).next('ul').slideToggle(500);
+	if($('.blog-des-list').length && bodyWidth < 992){
+		$('.blog-des-list>a').click(function(){
+			let desUl = $(this).next('ul');
+			let des = $(this).parent('.blog-des-list');
+			desUl.slideToggle(500);
 		});
 	}
 	if($('.recent-posts').length && bodyWidth < 992){
 		$('.recent-posts>a').click(function(){
-			$(this).next('.box-blog-flex').slideToggle(500,function(){
-				$(this).css('display','flex');
-			});
+			let boxFlex = $(this).next('.box-blog-flex');
+			if(boxFlex.css('display') == 'none'){
+				boxFlex.css({
+					'display':'flex',
+					'overflow':'hidden',
+					'height':'0'
+				});
+				boxFlex.animate({
+				    height: "252px"
+				    }, 500, 'swing', function() {
+				        // Animation complete.
+				});;
+			}
+			
 		});
 	}
 });
