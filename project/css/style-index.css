@@ -22,6 +22,31 @@
     line-height: 1.5;
     color: #FFFFFF;
 }
+#slide-3 .carousel-caption {
+    right: 20%;
+    top: 25%;
+    bottom: auto;
+    left: auto;
+    
+    max-width: 700px;
+}
+#slide-3 .carousel-caption h2 {
+    font-size: 55px;
+    font-weight: 400;
+    /*font-size: calc(var(--fontSize) * 4);*/
+    line-height: 1.5;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 2px #191717;
+}
+#slide-3 .carousel-caption p {
+    font-size: 27px;
+    font-weight: 600;
+    /*font-size: calc(var(--fontSize) * 4);*/
+    line-height: 1.5;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 2px #191717;
+    text-align: right;
+}
 #slide-1 .btn {
     font-size: calc(var(--fontSize) * 2);
     color: #FFFFFF;
