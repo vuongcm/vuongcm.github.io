@@ -21,10 +21,10 @@
 		margin-bottom: 0;
 	}
 	h1,h2{
-		font-size: 43px;
+		font-size: 40px;
+		font-weight: 300;
 		margin-top: 0;
 		line-height: 1;
-		font-weight: normal;
 		text-align: center;
 		margin-bottom: 15px;
 		text-transform: uppercase;
@@ -73,8 +73,11 @@
 		article{
 			position: absolute;
 	        bottom: 10px;
+	        left: 0;
 	        z-index: 2;
 	        background-color: $background-color;
+	        padding-right: 15px;
+			padding-left: 15px;
 			h3{
 				font-size: 14px;
 				font-weight: 600;
@@ -115,6 +118,7 @@
 			font-size: 35px;
 			color: #000;
 			margin-bottom: 30px;
+			text-transform: none;
 		}
 	}
 	.read-more-st1{
@@ -306,6 +310,14 @@
 	    .item{
 	    	padding-left: 5px;
 	    	padding-right: 5px;
+		    	article{
+		        padding-right: 5px;
+				padding-left: 5px;
+				.paragraph{
+					padding-right: 0;
+					padding-left: 0;
+				}
+			}
 	    }
 	}
 	.wrap-guide-step{

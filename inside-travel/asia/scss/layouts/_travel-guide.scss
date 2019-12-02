@@ -129,9 +129,14 @@
 		width: 100%;
 	}
 	h3,h2,h1{
-		font-size: 20px;
 		line-height: 1.3;
 		font-weight: 600;
+	}
+	h1,h2{
+		font-size: 26px;
+	}
+	h3{
+		font-size: 20px;
 	}
 	.box-share, .box-button{
 		margin-bottom: 15px;
@@ -259,8 +264,9 @@
 				padding-bottom: 10px;
 				padding-top: 10px;
 				width: 100%;
-				font-weight: 500;
 				color: #555;
+				font-size: 14px;
+				text-transform: uppercase;
 				&:hover{
 					color: $higlight-color;
 				}

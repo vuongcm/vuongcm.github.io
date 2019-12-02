@@ -279,7 +279,7 @@
 	}
 }
 .best-support{
-	.col-xlg-3{
+	.col-xlg-3, .col-xlg-4{
 		position: relative;
 		padding-bottom: 84px;
 	}
@@ -288,6 +288,9 @@
         bottom: 10px;
         z-index: 2;
         background-color: $background-color;
+        left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
 		h3{
 			font-size: 14px;
 			font-weight: 600;
@@ -674,6 +677,14 @@
 	}
 	.section-blog{
 		.col-xlg-4{
+			.paragraph{
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+	.best-support{
+		article{
 			.paragraph{
 				padding-left: 0;
 				padding-right: 0;
