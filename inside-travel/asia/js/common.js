@@ -631,6 +631,9 @@ $(document).ready(function() {
         if(!$('.filter-price').is(e.target) && $('.filter-price').has(e.target).length === 0){
         	$('.filter-price .value').removeClass('open-block');
         }
+        if(!$('.blog-des-list').is(e.target) && $('.blog-des-list').has(e.target).length === 0){
+        	$('.blog-des-list ul').slideUp(500);
+        }
 	});
 	if($('.booking-step-room').length){
 		$('.wrap-infant-number .btn-down').click(function(){
@@ -971,24 +974,6 @@ $(document).ready(function() {
 			let desUl = $(this).next('ul');
 			let des = $(this).parent('.blog-des-list');
 			desUl.slideToggle(500);
-		});
-	}
-	if($('.recent-posts').length && bodyWidth < 992){
-		$('.recent-posts>a').click(function(){
-			let boxFlex = $(this).next('.box-blog-flex');
-			if(boxFlex.css('display') == 'none'){
-				boxFlex.css({
-					'display':'flex',
-					'overflow':'hidden',
-					'height':'0'
-				});
-				boxFlex.animate({
-				    height: "252px"
-				    }, 500, 'swing', function() {
-				        // Animation complete.
-				});;
-			}
-			
 		});
 	}
 });
