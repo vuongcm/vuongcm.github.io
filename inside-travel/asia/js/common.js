@@ -631,7 +631,7 @@ $(document).ready(function() {
         if(!$('.filter-price').is(e.target) && $('.filter-price').has(e.target).length === 0){
         	$('.filter-price .value').removeClass('open-block');
         }
-        if(!$('.blog-des-list').is(e.target) && $('.blog-des-list').has(e.target).length === 0){
+        if(!$('.blog-des-list').is(e.target) && $('.blog-des-list').has(e.target).length === 0 && bodyWidth < 992){
         	$('.blog-des-list ul').slideUp(500);
         }
 	});
