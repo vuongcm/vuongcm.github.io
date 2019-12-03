@@ -279,10 +279,13 @@
 	}
 }
 .best-support{
-	.col-xlg-3, .col-xlg-4{
-		position: relative;
-		padding-bottom: 84px;
+	.container{
+		.col-xlg-3, .col-xlg-4{
+			position: relative;
+			padding-bottom: 84px;
+		}
 	}
+	
 	article{
 		position: absolute;
         bottom: 10px;
@@ -715,6 +718,9 @@
 				max-height: 27px;
 			}
 		}
+	}
+	#booking-widget-homepage{
+		bottom: 25px;
 	}
 }
 @media (max-width: 375px) {

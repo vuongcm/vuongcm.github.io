@@ -985,6 +985,11 @@ window.onload = function() {
 	$('.trip .tooltip>span, .trip-st2 .tooltip>span').each(function(){
 		$(this).css('left',`-${$(this).width()/2 -10}px`);
 	});
+	if($('.experience-dt-container').length){
+		$('.experience-dt-container .wrap-tooltip .tooltip>span').each(function(){
+			$(this).css('left',`-${$(this).width()/2 -10}px`);
+		});
+	}
 	$('.wrap-coo .tooltip>a>span').each(function(){
 		$(this).css('left',`-${$(this).width()/2 -8}px`);
 	});
