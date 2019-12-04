@@ -131,6 +131,13 @@ $(document).ready(function() {
 	    },function(){
 	    	$(this).children('.paragraph').removeAttr('style');
 	    });
+	    if($('.experience-container').length){
+	    	$('.experience-container .col-xlg-4 article').hover(function(){
+		    	$(this).css('max-height','500px');
+		    },function(){
+		    	$(this).css('max-height','120px');
+		    });
+	    }
 	    if(bodyWidth > 479){
 	    	$('.wrap-guide-step article').hover(function(){
 		    	$(this).children('.paragraph').css('max-height','500px');
@@ -985,8 +992,8 @@ window.onload = function() {
 	$('.trip .tooltip>span, .trip-st2 .tooltip>span').each(function(){
 		$(this).css('left',`-${$(this).width()/2 -10}px`);
 	});
-	if($('.experience-dt-container').length){
-		$('.experience-dt-container .wrap-tooltip .tooltip>span').each(function(){
+	if($('.experience-dt-container').length || $('.experience-container').length){
+		$('.experience-dt-container .wrap-tooltip .tooltip>span,.experience-container .wrap-tooltip .tooltip>span').each(function(){
 			$(this).css('left',`-${$(this).width()/2 -10}px`);
 		});
 	}

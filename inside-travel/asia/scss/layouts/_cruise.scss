@@ -182,6 +182,78 @@
 		//padding-bottom: 10px;
 	}
 }
+.cruise-container-st2{
+	.wrap-filter{
+		.filter-box{
+			border: 1px solid #eee;
+		}
+	}
+	.cruise-box-st2{
+		flex-wrap: wrap;
+		&:after{
+			content: '';
+			width: 100%;
+			display: block;
+			height: 1px;
+			background-color: #eee;
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		&:last-child{
+			&:after{
+				display: none;
+			}
+		}
+	}
+	.view-more-wrap{
+		margin-top: 40px;
+	}
+}
+.cruise-box-st2{
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	display: flex;
+	align-items: stretch;
+	&>div{
+		width: 50%;
+	}
+	.cruise-img{
+		align-self: flex-start;
+	}
+}
+.cruise-img{
+	position: relative;
+	&>a{
+		width: 100%;
+	}
+	.heart-tour{
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		font-size: 26px;
+    	color: rgba(255,255,255,0.8);
+	}
+}
+.cruise-text{
+	background-image: url(../images/icon/icon_a.svg);
+    background-repeat: no-repeat;
+    background-size: 120px;
+    background-position: top;
+	article{
+		width: 85%;
+		height: 100%;
+		max-width: 480px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		.paragraph{
+			text-align: justify;
+		}
+	}
+}
 @media (max-width: 1199px) {
 	#booking-widget-cruisepage{
 		&>.form-banner-top{
@@ -193,6 +265,37 @@
 			max-width: 280px;
 			width: 90%;
 			height: 50px;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.cruise-text{
+		article{
+			.paragraph{
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+}
+@media (max-width: 991px) {
+	.cruise-box-st2{
+		flex-wrap: wrap;
+		&>div{
+			width: 100%;
+		}
+		.cruise-img{
+			order: 1;
+		}
+		.cruise-text{
+			order: 2;
+			article{
+				width: 100%;
+				max-width: none;
+			}
+		}
+		&:after{
+			order: 3;
 		}
 	}
 }
