@@ -1237,6 +1237,12 @@ select:focus {
         margin-top: auto;
         margin-bottom: 0;
         flex-wrap: nowrap;
+        .tooltip{
+            &>span{
+                @include translateX(-50%);
+                left: 15px;
+            }
+        }
     }
     .btn-st2{
         margin-top: 20px;
@@ -1333,6 +1339,10 @@ select:focus {
                     .tooltip{
                         .icon-font{
                             font-size: 35px;
+                        }
+                        &>span{
+                            @include translateX(-50%);
+                            left: 19px;
                         }
                     }
                 }
@@ -2039,6 +2049,7 @@ select:focus {
                 .wrap-tooltip{
                     width: 100%;
                     justify-content: center;
+                    
                 }
                 &>span{
                     margin-left: 0;

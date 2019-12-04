@@ -378,6 +378,14 @@
 				top: 23.4%;
 				left: 65.4%;
 			}
+			.tooltip{
+				&>a{
+					&>span{
+						@include translateX(-50%);
+						left: 12px;
+					}
+				}
+			}
 		}
 		.synch-carousels{
 			width: 30%;
@@ -620,6 +628,15 @@
 					}
 					span{
 						color: #fff;
+					}
+				}
+			}
+			&>.wrap-coo{
+				.tooltip{
+					&>a{
+						&>span{
+							left: 8px;
+						}
 					}
 				}
 			}
