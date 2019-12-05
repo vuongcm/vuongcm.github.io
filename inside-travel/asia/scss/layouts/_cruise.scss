@@ -117,7 +117,7 @@
 				}
 			}
 		}
-		.booking-step-depature{
+		.booking-step-depature, .booking-step-m-time{
 			position: relative;
 			width: 18%;
 			margin-top: 0;
@@ -263,6 +263,25 @@
 		span{
 			@include translateX(-50%);
 			left: 15px;
+		}
+	}
+}
+.cruise-container-st3{
+	.trip{
+		.title-h2-line{
+			&>a{
+				min-height: 0;
+			}
+		}
+		.star-box{
+			width: 100%;
+		}
+		.content-trip{
+			&>span{
+				del{
+					color: #c3bdbd;
+				}
+			}
 		}
 	}
 }

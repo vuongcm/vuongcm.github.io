@@ -431,7 +431,7 @@
 			}
 		}
 	}
-	.booking-st2{
+	.booking-st2, .booking-st3{
 		border: 1px solid #aaa;
 		position: relative;
 		input{
@@ -441,6 +441,23 @@
 		.text{
 			padding-left: 8px;
 			padding-right: 8px;
+		}
+	}
+	.booking-st3{
+		.box-mon-time{
+			flex-wrap: wrap;
+			min-width: 280px;
+			max-height: 320px;
+			overflow-y: auto;
+			webkit-overflow-scrolling: touch;
+			&>div{
+				width: 100%;
+				padding: 0;
+				&:first-child{
+					border-right: none;
+					margin-bottom: 30px;
+				}
+			}
 		}
 	}
 }
@@ -541,6 +558,97 @@
 		text-align: left;
 		.icon-font{
 			color: $light-color-2;
+		}
+	}
+}
+.booking-st3{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+	input{
+		z-index: 5;
+		opacity: 0;
+	}
+	.text{
+		position: absolute;
+		color: #555;
+		text-align: left;
+		.icon-font{
+			color: $light-color-2;
+		}
+	}
+}
+.box-mon-time{
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	min-width: 500px;
+	background-color: #fff;
+	z-index: 3;
+	border: 1px solid #dcdcdc;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 25px;
+	&>div{
+		width: 50%;
+		span{
+			display: inline-block;
+			width: 100%;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			border-bottom: 1px solid #dcdcdc;
+			font-weight: 600;
+			text-align: center;
+			font-size: 16px;
+		}
+		&:first-child{
+			border-right: 1px solid #dcdcdc;
+			padding-right: 25px;
+		}
+		&:last-child{
+			padding-left: 25px;
+		}
+	}
+	ul{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-right: -5px;
+		margin-left: -8px;
+		li{
+			padding-left: 5px;
+			padding-right: 5px;
+			width: 33.3333%;
+			margin-top: 10px;
+			button{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				line-height: 1.3;
+				width: 100%;
+				padding-bottom: 10px;
+				padding-top: 10px;
+				&:hover{
+					background-color: $higlight-color;
+					color: $main-color;
+				}
+			}
+			button[disabled="disabled"]{
+				background-color: transparent;
+				color: rgba(0,0,0,0.4);
+				opacity: 1;
+				cursor: auto;
+			}
+			button.active{
+				background-color: $higlight-color;
+				//color: $main-color;
+			}
 		}
 	}
 }

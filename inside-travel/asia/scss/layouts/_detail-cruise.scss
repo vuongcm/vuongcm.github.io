@@ -1,0 +1,169 @@
+.mg-bot-0{
+	margin-bottom: 0!important;
+}
+.navbar-cruise{
+	position: sticky;
+	z-index: 102;
+	background-color: #fff;
+	top: 0;
+	border-bottom: 1px solid #eee;
+	ul{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		width: 100%;
+		li{
+			a{
+				padding-top: 25px;
+				padding-bottom: 25px;
+				text-transform: uppercase;
+				//font-size: 14px;
+				font-weight: 500;
+				display: inline-flex;
+				align-items: center;
+				padding-right: 20px;
+				padding-left: 20px;
+				.icon-font{
+					margin-right: 5px;
+					font-size: 24px;
+					&:before{
+						color: $higlight-color;
+					}
+				}
+			}
+		}
+	}
+}
+.cruise-intro-container{
+
+	.wrap-mini-intro{
+		.title-h2{
+			text-transform: uppercase;
+		}
+		.star-box{
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+		.hotel-news{
+			text-align: center;
+		}
+		.wrap-tooltip{
+			.tooltip{
+				.icon-font{
+					font-size: 42px;
+				}
+				span{
+					left: 21px;
+				}
+			}
+		}
+		.review-exci{
+			margin-right: 15px;
+		}
+	} 
+}
+.review-exci{
+	text-transform: uppercase;
+	.thumbs-up{
+		border: 1px solid #dcdcdc;
+		border-radius: 50%;
+		display: inline-block;
+		padding: 3px;
+		color: #25ab4b;
+	}
+	strong{
+		font-weight: normal;
+		text-transform: none;
+	}
+}
+.check-r-container{
+	padding-top: 30px;
+	.container{
+		.best-offer{
+			padding-left: 15px;
+			padding-right: 15px;
+			max-width: 800px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+	#booking-widget-cruisepage{
+		position: static;
+		padding-left: 15px;
+		padding-right: 15px;
+		.form-banner-top{
+			width: 100%;
+			.booking-step-cruise{
+				width: 31%;
+			}
+			.booking-step-depature{
+				width: 23%;
+			}
+			.booking-step-room-cruise{
+				width: 28%;
+			}
+		}
+	}
+}
+.booking-cr-sub{
+	width: 100%;
+	display: flex;
+	padding: 15px 0;
+	font-weight: 600;
+	div{
+		padding-left: 5px;
+		&:first-child{
+			width: 31%;
+		}
+		&:nth-child(2){
+			width: 23%;
+		}
+		&:last-child{
+			flex-grow: 1;
+		}
+	}
+}
+.room-type-wrap{
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+	table{
+		width: 100%;
+		th{
+			font-size: 16px;
+			padding: 20px 10px;
+			&:first-child{
+				text-align: left;
+			}
+			&:nth-child(2){
+				text-align: right;
+			}
+			&:last-child{
+				text-align: right;
+			}
+		}
+	}
+}
+.item-table{
+	display: flex;
+	align-items: flex-start;
+}
+.cruise-room-info{
+
+}
+.cruise-max-pe{
+	
+}
+@media (max-width: 1351px) {
+	.navbar-cruise{
+		ul{
+			justify-content: center;
+		}
+	}
+}
+@media (max-width: 1199px) {
+	.navbar-cruise{
+		position: static;
+	}
+}

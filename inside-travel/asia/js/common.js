@@ -135,7 +135,7 @@ $(document).ready(function() {
 	    	$('.experience-container .col-xlg-4 article').hover(function(){
 		    	$(this).css('max-height','400px');
 		    },function(){
-		    	$(this).css('max-height','128px');
+		    	$(this).css('max-height','152px');
 		    });
 	    }
 	    if(bodyWidth > 479){
@@ -641,6 +641,9 @@ $(document).ready(function() {
         if(!$('.blog-des-list').is(e.target) && $('.blog-des-list').has(e.target).length === 0 && bodyWidth < 992){
         	$('.blog-des-list ul').slideUp(500);
         }
+        if(!$('.booking-step-m-time').is(e.target) && $('.booking-step-m-time').has(e.target).length === 0){
+        	$('.box-mon-time').removeClass('open-flex');
+        }
 	});
 	if($('.booking-step-room').length){
 		$('.wrap-infant-number .btn-down').click(function(){
@@ -964,6 +967,29 @@ $(document).ready(function() {
 			if($('.wrap-room-number input').val() == 5){
 				$('.wrap-room-number .btn-up').addClass('btn-disabled');
 			}
+		});
+	}
+	if($('.booking-step-m-time').length){
+		let now = new Date();
+		let monthNow = now.getUTCMonth();
+		let yearNow = now.getUTCFullYear();
+		let liDis = $('.box-mon-time>div:first-child li');
+		let btnMonth = $('.box-mon-time ul button');
+		$('.booking-step-m-time>input').click(function(){
+			$('.box-mon-time>div:first-child font, .box-mon-time>div:first-child>span').html(yearNow);
+			$('.box-mon-time>div:last-child font, .box-mon-time>div:last-child>span').html(yearNow+1);
+			for(let i=0; i<monthNow; i++){
+				liDis.eq(i).children('button').attr('disabled','disabled');
+			}
+			$(this).nextAll('.box-mon-time').toggleClass('open-flex');
+		});
+		btnMonth.click(function(){
+			let thisText = $(this).text();
+			btnMonth.removeClass('active');
+			$(this).addClass('active');
+			$(this).closest('.booking-step-m-time').children('input').val(thisText);
+			$(this).closest('.booking-step-m-time').find('.text>b').html(thisText);
+			$('.box-mon-time').removeClass('open-flex');
 		});
 	}
 	/*===end search cruise =====*/
