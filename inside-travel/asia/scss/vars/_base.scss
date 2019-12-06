@@ -933,7 +933,7 @@ select:focus {
                 @include smooth(.2s);
                 border-radius: 10px;
                 flex-direction: column;
-                .line{
+                h3{
                     font-size: 14px;
                     margin-bottom: 0;
                     margin-top: 0;
@@ -1415,6 +1415,12 @@ select:focus {
             color: $higlight-color;
         }
     }
+}
+.flex-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .box-hidden{
     width: 100%;
