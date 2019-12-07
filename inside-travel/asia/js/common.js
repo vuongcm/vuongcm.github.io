@@ -558,6 +558,24 @@ $(document).ready(function() {
 			$('#playvideo').attr('src', $('#playvideo').attr('src').replace('autoplay=0', 'autoplay=1'));
 		});
 	}
+	if($('.modal-cr-like').length > 0){
+		$('.btn-open-cr-like').click(function(){
+			$('.modal-container').removeClass('close-display');
+			$('.modal-cr-like').removeClass('close-display');
+		});
+	}
+	if($('.modal-cr-overview').length > 0){
+		$('.btn-open-cr-overview').click(function(){
+			$('.modal-container').removeClass('close-display');
+			$('.modal-cr-overview').removeClass('close-display');
+		});
+	}
+	if($('.modal-cr-info-room').length > 0){
+		$('.btn-open-cr-info').click(function(){
+			$('.modal-container').removeClass('close-display');
+			$('.modal-cr-info-room').removeClass('close-display');
+		});
+	}
 	for(let i=1; i<=$('.phone-wrap').length; i++){
 		$(`#cb-p-${i}`).click(function(){
 			if (this.checked){
