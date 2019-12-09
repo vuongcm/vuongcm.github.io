@@ -836,6 +836,13 @@
 	left: 50%;
 	@include translate2d(-50%,-50%);
 	visibility: hidden;
+	.btn-close{
+		color: #fff;
+		z-index: 4;
+		&:hover{
+			color: $higlight-color;
+		}
+	}
 	.synch-carousels{
 		box-shadow: none;
 		.nav-arrows{
@@ -865,7 +872,7 @@
 	left: 50%;
 	padding: 30px 15px 0 15px;
 	@include translateX(-50%);
-	z-index: 201;
+	z-index: 202;
 	background-color: #000;
 	.btn-close{
 		top: 0;
@@ -874,6 +881,23 @@
 	}
 	iframe{
 		width: 100%;
+	}
+}
+.modal-cr-desti{
+	.modal-content{
+		.desti{
+			text-transform: uppercase;
+			text-align: center;
+		}
+		.wrap-tooltip{
+			.tooltip{
+				&>span{
+					left: 15px;
+					@include translateX(-50%);
+				}
+			}
+			
+		}
 	}
 }
 /*#preloader{

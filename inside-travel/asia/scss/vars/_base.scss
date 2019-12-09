@@ -387,14 +387,14 @@ select:focus {
 .bg-map-menu:hover{
     background-position-y: -2399px;
 }
-.open-block{
-    display: block!important;
-}
 .open-flex{
     display: flex!important;
 }
 .close-display{
     display: none!important;
+}
+.open-block{
+    display: block!important;
 }
 .open-visiblity{
     visibility: visible!important;
@@ -708,6 +708,9 @@ select:focus {
         color: $light-color;
     }
 }
+.rotage180{
+    @include rotage(180deg);
+}
 .type-rotate{
     position: absolute;
     @include rotage(-90deg);
@@ -983,6 +986,7 @@ select:focus {
             //width: 100%;
             &>a{
                 width: 100%;
+                background-color: rgba(0,0,0,0.4);
             }
         }
     }
@@ -1539,6 +1543,9 @@ select:focus {
             font-weight: 600;
             font-size: 16px;
         }
+    }
+    del{
+        font-size: 16px;
     }
 }
 .commitment{

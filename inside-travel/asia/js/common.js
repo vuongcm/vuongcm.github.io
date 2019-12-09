@@ -210,6 +210,20 @@ $(document).ready(function() {
 			$(this).text('... More');
 		}
 	});
+	if($('.hide-exp-wrap').length){
+		$('.togg-wrap>a').click(function(){
+			//$(this).parent('.togg-wrap').prev('.hide-exp-wrap').css('max-height','none');
+			let boxHide = $(this).parent('.togg-wrap').prev('.hide-exp-wrap');
+			boxHide.toggleClass('paragraph-show');
+			if(boxHide.css('max-height') == 'none'){
+				$(this).parent('.togg-wrap').children('.arrow-radius').addClass('rotage180');
+				$(this).parent('.togg-wrap').children('.link-st3').text('Less');
+			} else{
+				$(this).parent('.togg-wrap').children('.arrow-radius').removeClass('rotage180');
+				$(this).parent('.togg-wrap').children('.link-st3').text('Click to view more experiences');
+			}
+		});
+	}
 	if($('.content-hl-tour').length){
 		let heightHlTour = Number($('.content-hl-tour').css('--heightHlTour').slice(0,-2));
 		let divHidden = $('.content-hl-tour div:nth-child(2)>div:first-child');
@@ -478,7 +492,7 @@ $(document).ready(function() {
 			});
 		});
 		$(`.wrap-slide-st5 .gallery`).slick({
-			//lazyLoad: 'ondemand',
+			lazyLoad: 'ondemand',
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			//infinite: true,
@@ -487,6 +501,7 @@ $(document).ready(function() {
 	        prevArrow: `.wrap-slide-st5 .arrow-left`,
 	        nextArrow: `.wrap-slide-st5 .arrow-right`
 		});
+		$('.wrap-slide-st5 .item>a:first-child').height($('.wrap-slide-st5 .img-origin').height());
 	}
 	//carousel-sp
 	if ($('.wrap-slide-sp').length > 0) {
@@ -528,11 +543,17 @@ $(document).ready(function() {
 			});
 			$(`.wrap-gallery-img .gallery`).slick("slickGoTo", 0);
 		});
+		$('.wrap-gallery-img .btn-close').click(function(){
+			$('.wrap-gallery-img').css({
+				'z-index':'-5',
+				'visibility':'hidden'
+			});
+		});
 		$(`.wrap-gallery-img .gallery`).slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
             fade: true,
-			//lazyLoad: 'ondemand',
+			lazyLoad: 'ondemand',
 			infinite: true,
 			adaptiveHeight: true,
 			useTransform: false,
@@ -575,6 +596,7 @@ $(document).ready(function() {
 	});
 	$('.modal-container').on('click',function(){
 		$(this).addClass('close-display');
+		$(this).removeClass('open-block');
 		$('.modal, .modal-2,.video-modal').addClass('close-display');
 		$('.modal').removeAttr('style');
 		$('.wrap-gallery-img').removeAttr('style');
@@ -619,6 +641,19 @@ $(document).ready(function() {
 		$('.btn-open-cr-info').click(function(){
 			$('.modal-container').removeClass('close-display');
 			$('.modal-cr-info-room').removeClass('close-display');
+		});
+	}
+	$('.btn-cr-desti').click(function(){
+		$('.modal-container').addClass('open-block');
+		$('.modal-cr-desti').removeClass('close-display');
+	});
+	if($('.modal-cr-desti').length){
+		$('.btn-cr-desti').click(function(){
+			$('.modal-container').addClass('open-block');
+			$('.modal-cr-desti').removeClass('close-display');
+		});
+		$('.modal-cr-desti .btn-close').click(function(){
+			$('.modal-container').removeClass('open-block');
 		});
 	}
 	for(let i=1; i<=$('.phone-wrap').length; i++){
