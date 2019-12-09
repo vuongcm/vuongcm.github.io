@@ -962,7 +962,31 @@ select:focus {
         }
     }
 }
-
+.wrap-slide-st5{
+    width: 100%;
+    .synch-carousels{
+        box-shadow: none;
+        .nav-arrows{
+            top: 42%;
+            z-index: inherit;
+            button{
+                z-index: 4;
+                i{
+                    font-size: 14px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .gallery{
+        .item{
+            //width: 100%;
+            &>a{
+                width: 100%;
+            }
+        }
+    }
+}
 .triagle-st1{
     -webkit-clip-path: polygon(-1px -1px, -1px 100%, 100% 50%);
     clip-path: polygon(-1px -1px, -1px 100%, 100% 50%);

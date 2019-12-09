@@ -150,11 +150,13 @@ header{
 						top: calc(100% - 2px);
 						z-index: 9;
     				}
-    				&:hover:before{
-						opacity: 1;
-    				}
-    				&:hover:after{
-    					opacity: 1;
+    				&:hover{
+    					&:before{
+    						opacity: 1;
+    					}
+    					&:after{
+    						opacity: 1;
+    					}
     				}
     			}
     		}

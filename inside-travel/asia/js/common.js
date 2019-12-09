@@ -5,33 +5,43 @@ $(document).ready(function() {
 	if(bodyWidth > 991){
 		$('#menu-lv1-1').hover(function(){
 			$('#menu-lv1-1').nextAll('.sub-menu-destinations').addClass('open-flex');
+			$('header').css('z-index','103');
 		},function(){
 			$('#menu-lv1-1').nextAll('.sub-menu-destinations').removeClass('open-flex');
+			$('header').css('z-index','101');
 		});
 		$('.sub-menu-destinations').hover(function(){
 	        $(this).css('display','flex');
+	        $('header').css('z-index','103');
 	        $('#menu-lv1-1 a').addClass('open-opacity');
 	    },function(){
 	        $(this).css('display','none');
 	        $('#menu-lv1-1 a').removeClass('open-opacity');
+	        $('header').css('z-index','101');
 		});
 
 		$('#menu-lv1-2').hover(function(){
 			$('#menu-lv1-2').nextAll('.sub-menu-travel').addClass('open-flex');
+			$('header').css('z-index','103');
 		},function(){
 			$('#menu-lv1-2').nextAll('.sub-menu-travel').removeClass('open-flex');
+			$('header').css('z-index','101');
 		});
 		$('.sub-menu-travel').hover(function(){
 	        $(this).css('display','flex');
 	        $('#menu-lv1-2 a').addClass('open-opacity');
+	        $('header').css('z-index','103');
 	    },function(){
 	        $(this).css('display','none');
 	        $('#menu-lv1-2 a').removeClass('open-opacity');
+	        $('header').css('z-index','101');
 		});
 
 		$('#menu-lv1-3').hover(function(){
 			$('#menu-lv1-3').nextAll('.sub-menu-cruises').addClass('open-flex');
+			$('header').css('z-index','103');
 		},function(){
+			$('header').css('z-index','101');
 			setTimeout(function(){
 				$('.sub-menu-cruises').removeClass('open-flex');
 			}, 100);
@@ -39,9 +49,11 @@ $(document).ready(function() {
 		$('.sub-menu-cruises').hover(function(){
 	        $(this).css('display','flex');
 	        $('#menu-lv1-3 a').addClass('open-opacity');
+	        $('header').css('z-index','103');
 	    },function(){
 	        $(this).css('display','none');
 	        $('#menu-lv1-3 a').removeClass('open-opacity');
+	        $('header').css('z-index','101');
 		});
 	}
 	let headerHeight = $('header').height();
@@ -449,6 +461,33 @@ $(document).ready(function() {
 		  ]
 		});
 	}
+	//carousel-st5
+	if ($('.wrap-slide-st5').length > 0) {
+		$('.btn-open-cr-info').click(function(){
+			$('.modal-container').removeClass('close-display');
+			$('.modal-cr-info-room').css({
+				'z-index':'210',
+				'visibility':'visible'
+			});
+			$(`.modal-cr-info-room .gallery`).slick("slickGoTo", 0);
+		});
+		$('.modal-cr-info-room .btn-close').click(function(){
+			$('.modal-cr-info-room').css({
+				'z-index':'-3',
+				'visibility':'hidden'
+			});
+		});
+		$(`.wrap-slide-st5 .gallery`).slick({
+			//lazyLoad: 'ondemand',
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			//infinite: true,
+			adaptiveHeight: true,
+			useTransform: false,
+	        prevArrow: `.wrap-slide-st5 .arrow-left`,
+	        nextArrow: `.wrap-slide-st5 .arrow-right`
+		});
+	}
 	//carousel-sp
 	if ($('.wrap-slide-sp').length > 0) {
 		$(`.wrap-slide-sp .gallery`).slick({
@@ -541,6 +580,12 @@ $(document).ready(function() {
 		$('.wrap-gallery-img').removeAttr('style');
 		if($('.video-modal').length){
 			$('#playvideo').attr('src', $('#playvideo').attr('src').replace('autoplay=1', 'autoplay=0'));
+	    }
+	    if($('.modal-cr-info-room').length){
+	    	$('.modal-cr-info-room').css({
+	    		'z-index':'-3',
+	    		'visibility':'hidden'
+	    	});
 	    }
 	});
 	$('.btn-close').click(function(){
