@@ -1107,6 +1107,30 @@ $(document).ready(function() {
 			desUl.slideToggle(500);
 		});
 	}
+	/*====setting to offset=======*/
+	if($('.navbar-cruise').length){
+		$('.to-offset-desti').click(function(){
+			$('html, body').animate({ scrollTop:$('#cruise-desti').offset().top - 120}, 'slow');
+		});
+		$('.to-offset-high').click(function(){
+			$('html, body').animate({ scrollTop:$('#cruise-highlight').offset().top - 120}, 'slow');
+		});
+		$('.to-offset-review').click(function(){
+			$('html, body').animate({ scrollTop:$('#cruise-review').offset().top - 120}, 'slow');
+		});
+		$('.to-offset-iti').click(function(){
+			$('html, body').animate({ scrollTop:$('#cruise-iti').offset().top - 120}, 'slow');
+		});
+		$('.to-offset-cabins').click(function(){
+			$('html, body').animate({ scrollTop:$('#cruise-cabins').offset().top - 120}, 'slow');
+		});
+		$('.to-offset-offer').click(function(){
+			$('html, body').animate({ scrollTop:$('#cruise-offer').offset().top - 120}, 'slow');
+		});
+		$('.to-offset-overview').click(function(){
+			$('html, body').animate({ scrollTop:$('#cruise-overview').offset().top - 120}, 'slow');
+		});
+	}
 });
 window.onload = function() {
 	if($('body').width() > 767){
