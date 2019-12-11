@@ -5,6 +5,7 @@
 	    background-size: 250px;
 	    background-position: top;
 	    padding-top: 30px;
+	    margin-top: 30px;
 		.desti{
 			text-transform: uppercase;
 		}
@@ -169,5 +170,299 @@
 	text-align: center;
 	input[type="radio"]{
 		cursor: pointer;
+	}
+}
+.booking-room{
+	width: 100%;
+	padding-bottom: 30px;
+	&>div{
+		width: 100%;
+	}
+	h2{
+		font-size: 16px;
+		text-align: center;
+		margin-bottom: 15px;
+		margin-top: 30px;
+		font-weight: normal;
+		&>.bed{
+			margin-right: 5px;
+			color: $higlight-color;
+		}
+		strong{
+			font-weight: 600;
+		}
+		span{
+			font-weight: 600;
+			color: $light-color-2;
+			i{
+				font-size: 10px;
+			}
+		}
+		&>a{
+			margin-left: 15px;
+			font-size: 12px;
+			display: inline-flex;
+			align-items: flex-end;
+			color: $light-color-4;
+			.icon-font{
+				font-size: 14px;
+			}
+			&:hover{
+				color: $higlight-color;
+			}
+		}
+	}
+}
+.booking-r-option{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	border: 1px dotted #aaa;
+
+	input{
+		height: auto;
+		cursor: pointer;
+		margin-right: 5px;
+	}
+	h2{
+		font-size: 16px;
+		margin-bottom: 15px;
+	}
+	.col-xlg-6{
+		text-align: left;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		&:first-child{
+			border-right: 1px dotted #aaa;
+			li{
+				label{
+					&>b{
+						color: $higlight-color;
+					}
+				}
+			}
+		}
+		ul{
+			li{
+				margin-bottom: 10px;
+				display: inline-flex;
+				width: 100%;
+				align-items: center;
+				label{
+					cursor: pointer;
+					.icon-font{
+						color: $higlight-color;
+						font-size: 14px;
+					}
+					a{
+						&:hover{
+							color: $higlight-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.box-summary{
+	background-color: #fff;
+	padding: 10px 10px 40px 10px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	position: relative;
+	&:after{
+		display: block;
+		width: 30px;
+		height: 30px;
+		content: '';
+		background-color: #fff;
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translate(-50%,50%) rotate(45deg);
+    	-moz-transform: translate(-50%,50%) rotate(45deg);
+    	-webkit-transform: translate(-50%,50%) rotate(45deg);
+    	-o-transform: translate(-50%,50%) rotate(45deg);
+    	-ms-transform: translate(-50%,50%) rotate(45deg);
+	}
+	h2{
+		font-size: 18px;
+		text-align: center;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #eee;
+		.icon-font{
+			color: $higlight-color;
+			//font-size: 18px;
+			margin-right: 5px;
+		}
+	}
+	&>div{
+		width: 80%;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 10px 0;
+		border-bottom: 1px solid #eee;
+		li{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		&:last-child{
+			border-bottom: none;
+			margin-top: 15px;
+		}
+	}
+
+}
+#title-cruise{
+	ul{
+		display: flex;
+		flex-wrap: wrap;
+		li{
+			width: 50%;
+			padding-right: 30px;
+			padding-left: 30px;
+			font-weight: 600;
+			color: $higlight-color;
+			.icon-font{
+				margin-right: 5px;
+			}
+			span{
+				color: $higlight-color-st2;
+			}
+			&:first-child{
+				border-right: 1px solid #eee;
+				text-align: right;
+			}
+		}
+	}
+}
+.sum-cabin{
+	ul{
+		li{
+			display: flex;
+			flex-wrap: wrap;
+			background-color: #fbfaf9;
+			margin-bottom: 10px;
+			margin-top: 10px;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			&>div{
+				p{
+					margin-bottom: 5px;
+					margin-left: 15px;
+				}
+			}
+			.price-trip-box{
+				width: unset;
+				margin-left: auto;
+				align-items: flex-end;
+				del{
+					color: #c3bdbd;
+				}
+			}
+		}
+	}
+}
+.sum-trans{
+	ul{
+		margin-top: 10px;
+		li{
+			display: flex;
+			align-items: center;
+			border-bottom: 1px dotted #aaa;
+			.icon-font{
+				margin-right: 5px;
+				color: $higlight-color;
+			}
+			&>b{
+				color: $higlight-color;
+			}
+			font{
+				margin-left: auto;
+				color: $higlight-color;
+				font-weight: 600;
+				font-size: 16px;
+			}
+			#sum-pri-trans{
+				margin-left: auto;
+			}
+			&:last-child{
+				border-bottom: none;
+			}
+		}
+	}
+}
+.total-price{
+	display: flex;
+	justify-content: space-between;
+	.price-trip-box{
+		span{
+			font-weight: 600;
+			color: $light-color-2;
+			del{
+				font-size: 20px;
+			}
+			strong{
+				font-size: 20px;
+				color: $higlight-color-st2;
+			}
+		}
+	}
+}
+.promotion-code{
+	display: inline-flex;
+	align-items: center;
+	button{
+		width: 60px;
+		height: 25px;
+		flex-shrink: 0;
+		color: #fff;
+		background-color: $light-color;
+	}
+	input{
+		flex-grow: 1;
+		min-width: 160px;
+	}
+}
+.contact-info-box{
+	background-color: #fff;
+	padding: 10px 10px 40px 10px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	h2{
+		font-size: 18px;
+		text-align: center;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #eee;
+		.icon-font{
+			color: $higlight-color;
+			//font-size: 18px;
+			margin-right: 5px;
+		}
+	}
+	&>div{
+		display: flex;
+		.logo-list{
+			width: 35%;
+		}
+		.contact-info{
+			width: 65%;
+		}
+	}
+}
+.logo-list{
+	text-align: center;
+	h3,&>div{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	h3{
+		font-size: 14px;
+	}
+}
+.logo{
+	h4{
+		font-weight: normal;
 	}
 }

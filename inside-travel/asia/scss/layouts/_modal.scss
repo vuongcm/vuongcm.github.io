@@ -377,10 +377,18 @@
 		}
 	}
 }
-
+.select-st8{
+	height: 100%;
+	//outline-style: unset;
+	background-position-y: 50%;
+	background-color: #fff;
+    &:focus{
+    	outline: none;
+    }
+}
 .form-field{
 	margin-top: 15px;
-	input, textarea{
+	input, textarea,.select-st8{
 		width: 100%;
 		height: auto;
 		border: 1px solid #aaa;
@@ -393,6 +401,16 @@
 	}
 	textarea{
 		height: 210px;
+	}
+}
+.phone-wrap{
+	margin-top: 15px;
+	&>div{
+		height: 100%;
+	}
+	.iti{
+		width: 100%;
+		height: 100%;
 	}
 }
 .check-field{
@@ -427,21 +445,17 @@
 		&>div{
 			width: 70%;
 		}
-		.iti{
-			width: 100%;
-			.iti__country-list{
-				max-width: 206px;
-			}
-		}
 		input{
-			width: 100%;
+			//width: 100%;
 			height: auto;
-			border: 1px solid #aaa;
+			//border: 1px solid #aaa;
 			font-size: 14px;
 			vertical-align: middle;
 			line-height: 1.5;
 			color: #36312a;
-			padding: 10px 8px 10px 15%;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			//padding: 10px 8px 10px 15%;
 			@include smooth(.25s);
 		}
 	}
@@ -959,13 +973,6 @@
 
 }
 @media (max-width: 767px) {
-	.check-field{
-		&>.phone-wrap{
-			input{
-				padding-left: 25%;
-			}
-		}
-	}
 	.modal-include-1{
 		.modal-content{
 			.title-modal-include{
@@ -992,6 +999,13 @@
 	}
 	.half{
 		flex-wrap: wrap;
+	}
+	.check-field{
+		&>.phone-wrap{
+			&>div{
+				width: 100%;
+			}
+		}
 	}
 }
 @media (max-width: 375px) {
