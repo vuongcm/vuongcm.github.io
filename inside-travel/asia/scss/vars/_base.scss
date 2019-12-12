@@ -1539,6 +1539,7 @@ select:focus {
         text-transform: uppercase;
         color: #d0b316;
         margin-left: auto;
+        text-align: right;
         strong{
             font-weight: 600;
             font-size: 16px;
@@ -1736,6 +1737,7 @@ select:focus {
         .iti__country-list{
             width: 100%;
             min-width: 200px;
+            //max-width: 400px;
         }
     }
     input[type="text"]{

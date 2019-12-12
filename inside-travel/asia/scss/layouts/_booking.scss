@@ -26,8 +26,6 @@
     	justify-content: center;
     	align-items: flex-start;
     	width: 100%;
-    	padding-left: 15px;
-    	padding-right: 15px;
     	li{
 			width: 33.333%;
 			text-align: center;
@@ -38,13 +36,14 @@
 				align-items: center;
 				justify-content: center;
 				font-weight: 500;
-				span{
+				div{
 					margin-right: 5px;
 					display: inline-flex;
 					align-items: center;
 					justify-content: center;
 					width: 30px;
 					height: 30px;
+					flex-shrink: 0;
 					//border: 1px solid #dcdcdc;
 					//border-radius: 50%;
 					background-image: url(../images/icon/icon_a.svg);
@@ -54,6 +53,11 @@
 	    			font-size: 16px;
 	    			font-weight: 800;
 	    			padding-left: 1px;
+				}
+			}
+			.tooltip{
+				&>span{
+					display: none;
 				}
 			}
     	}
@@ -83,6 +87,15 @@
 						width: 100%;
 						height: 100%;
 					}
+					&>.info-cabins{
+						min-width: 355px;
+					}
+					&>.cruise-max-pe{
+						ul{
+							justify-content: center;
+						}
+						
+					}
 				}
 				&:hover{
 					background-color: #fff;
@@ -96,11 +109,12 @@
 }
 .info-cabins{
 	display: flex;
-	flex-wrap: wrap;
+	//flex-wrap: wrap;
 	padding: 10px;
 	&>a{
 		position: relative;
-
+		width: 60px;
+		flex-shrink: 0;
 	}
 	.item-listcabin{
 		h3{
@@ -117,6 +131,10 @@
 		}
 		.icon-font{
 			color: $higlight-color;
+		}
+		.connecting-r{
+			justify-content: flex-start;
+			font-size: 10px;
 		}
 	}
 }
@@ -143,6 +161,7 @@
 		margin-bottom: 10px;
 	}
 	p{
+		text-align: center;
 		.checkmark{
 			color: $higlight-color;
 		}
@@ -224,6 +243,7 @@
 		height: auto;
 		cursor: pointer;
 		margin-right: 5px;
+		width: 13px;
 	}
 	h2{
 		font-size: 16px;
@@ -237,6 +257,7 @@
 			border-right: 1px dotted #aaa;
 			li{
 				label{
+
 					&>b{
 						color: $higlight-color;
 					}
@@ -247,10 +268,12 @@
 			li{
 				margin-bottom: 10px;
 				display: inline-flex;
+				flex-wrap: wrap;
 				width: 100%;
 				align-items: center;
 				label{
 					cursor: pointer;
+					width: calc(100% - 18px);
 					.icon-font{
 						color: $higlight-color;
 						font-size: 14px;
@@ -260,6 +283,9 @@
 							color: $higlight-color;
 						}
 					}
+				}
+				.box-seaplanes{
+					margin-top: 10px;
 				}
 			}
 		}
@@ -287,7 +313,7 @@
     	-ms-transform: translate(-50%,50%) rotate(45deg);
 	}
 	h2{
-		font-size: 18px;
+		font-size: 22px;
 		text-align: center;
 		padding-bottom: 15px;
 		border-bottom: 1px solid #eee;
@@ -371,6 +397,14 @@
 			display: flex;
 			align-items: center;
 			border-bottom: 1px dotted #aaa;
+			&>div{
+				&:first-child{
+					flex-grow: 1;
+					overflow: hidden;
+    				white-space: nowrap;
+    				text-overflow: ellipsis;
+				}
+			}
 			.icon-font{
 				margin-right: 5px;
 				color: $higlight-color;
@@ -386,6 +420,7 @@
 			}
 			#sum-pri-trans{
 				margin-left: auto;
+				flex-shrink: 0;
 			}
 			&:last-child{
 				border-bottom: none;
@@ -431,7 +466,7 @@
 	margin-top: 30px;
 	margin-bottom: 30px;
 	h2{
-		font-size: 18px;
+		font-size: 22px;
 		text-align: center;
 		padding-bottom: 15px;
 		border-bottom: 1px solid #eee;
@@ -464,5 +499,242 @@
 .logo{
 	h4{
 		font-weight: normal;
+	}
+}
+.contact-info{
+	.btn-st3{
+		background-color: $higlight-color;
+		width: 100%;
+		max-width: 300px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		font-size: 16px;
+	}
+	.form-field{
+		textarea{
+			height: 150px;
+		}
+	}
+	.phone-wrap{
+		input[type="text"]{
+			padding-bottom: 13px;
+			padding-top: 13px;
+			font-size: 14px;
+		}
+	}
+}
+.box-seaplanes{
+	width: 100%;
+	display: flex;
+	&>div{
+		width: 33.333%;
+		padding-left: 10px;
+		padding-right: 10px;
+		.select-st8{
+			width: 100%;
+		    border: 1px solid #aaa;
+		    line-height: 1.5;
+		    color: #36312a;
+		    padding: 5px 8px;
+		    @include smooth(.25s);
+		}
+	}
+}
+.transpick{
+	width: 100%;
+	input{
+		width: 100%;
+	}
+}
+@media (max-width: 1199px) {
+	.contact-info-box{
+		&>div{
+			.logo-list{
+				display: none;
+			}
+			.contact-info{
+				width: 100%;
+			}
+		}
+	}
+}
+@media (max-width: 991px) {
+	.room-booking-wrap{
+		table{
+			tbody{
+				tr{
+					td{
+						&>.info-cabins{
+							min-width: unset;
+						}
+						&>.cruise-max-pe{
+							ul{
+								justify-content: center;
+							}
+							
+						}
+					}
+				}
+			}
+		}
+	}
+	.info-cabins{
+		flex-wrap: wrap;
+		.item-listcabin{
+			padding-left: 0;
+		}
+	}
+	.box-summary{
+		&>div{
+			width: 100%;
+		}
+	}
+	#title-cruise{
+		ul{
+			li{
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+	.navbar-booking{
+	    ul{
+	    	li{
+				a{
+					div{
+					}
+					font{
+						display: none;
+					}
+				}
+				.tooltip{
+					&>span{
+						display: block;
+					    box-shadow: none;
+					    border: 1px solid $higlight-color;
+					    color: $higlight-color;
+					    left: 50%;
+					    top: 90%;
+					    bottom: unset;
+					    @include translateX(-50%);
+					    width: 80%;
+					    &>i{
+					    	background-color: $higlight-color;
+					    	top: unset;
+					    	bottom: 100%;
+					    	-webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+						    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+						    -webkit-shape-outside: polygon(50% 0%, 100% 100%, 0% 100%);
+						    shape-outside: polygon(50% 0%, 100% 100%, 0% 100%);
+					    }
+					    &:after{
+			                content: " ";
+			                height: 9px;
+			                width: 18px;
+			                position: absolute;
+			                bottom: calc(100% - 1px);
+			                left: calc(50% + 1px);
+			                margin-left: -10px;
+			                background-color: #fff;
+			                -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+						    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+						    -webkit-shape-outside: polygon(50% 0%, 100% 100%, 0% 100%);
+						    shape-outside: polygon(50% 0%, 100% 100%, 0% 100%);
+			            }
+					}
+					&:hover{
+						opacity: 1;
+					}
+				}
+	    	}
+	    }
+	}
+	.room-booking-wrap{
+		table{
+			th{
+				&:nth-child(2){
+					display: none;
+				}
+			}
+			tbody{
+				tr{
+					td{
+						&:nth-child(2){
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	.info-cabins{
+		text-align: center;
+		&>a{
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.item-listcabin{
+			p,div{
+				display: none;
+			}
+		}
+	}
+	.booking-r-option{
+		.col-xlg-6:first-child{
+			border-bottom: 1px dotted #aaa;
+			border-right: none;
+		}
+	}
+	.sum-cabin{
+		ul{
+			li{
+				&>div{
+					margin-bottom: 5px;
+					p{
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 479px) {
+	.room-booking-wrap{
+
+		table{
+			//overflow-x: auto;
+			th{
+				font-size: 12px;
+			}
+		}
+	}
+	.price-save{
+		.sales-offer{
+			font-size: 12px;
+		}
+	}
+	.total-price{
+		flex-wrap: wrap;
+		.promotion-code{
+			width: 100%;
+		}
+		.price-trip-box{
+			margin-top: 15px;
+		}
+	}
+	.box-seaplanes{
+		flex-wrap: wrap;
+		&>div{
+			width: 50%;
+			margin-bottom: 5px;
+		}
+	}
+}
+@media (max-width: 375px) {
+	.room-booking-wrap{
+		overflow-x: auto;
+		webkit-overflow-scrolling: touch;
 	}
 }

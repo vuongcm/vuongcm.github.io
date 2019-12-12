@@ -299,9 +299,27 @@
 <nav class="navbar-booking">
 	<div class="container">
 		<ul>
-			<li><a href="#"><span>1</span>Check room rates</a></li>
-			<li><a href="#"><span>2</span>Select your room(s)</a></li>
-			<li><a href="#"><span>3</span>Confirm &amp; Submit</a></li>
+			<li>
+				<a href="javascript:;" class="tooltip to-offset-check">
+					<div>1</div>
+					<font>Check room rates</font>
+					<span>Check room rates<i></i></span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="tooltip to-offset-select">
+					<div>2</div>
+					<font>Select your room(s)</font>
+					<span>Select your room(s)<i></i></span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="tooltip to-offset-submit">
+					<div>3</div>
+					<font>Confirm &amp; Submit</font>
+					<span>Confirm &amp; Submit<i></i></span>
+				</a>
+			</li>
 		</ul>
 	</div>
 </nav>
@@ -492,9 +510,9 @@
 		</div>
 		<div class="room-booking-wrap">
 			<form action="">
-				<div class="booking-room">
+				<div class="booking-room" id="select-room">
 					<div>
-						<h2><i class="icon-font bed"></i><strong>Room 1:</strong> Double - <span>2 Adult <i>(&gt; 11)</i></span><a href="javascript:;"><i class="icon-font icon-pencil"></i>&nbsp;Edit</a></h2>
+						<h2><i class="icon-font bed"></i><strong>Room 1:</strong> Double - <span>2 Adult <i>(&gt; 11)</i></span><a href="javascript:;" class="to-offset-check"><i class="icon-font icon-pencil"></i>&nbsp;Edit</a></h2>
 						<table>
 							<thead>
 								<tr>
@@ -515,6 +533,11 @@
 											</a>
 											<div class="item-listcabin">
 												<h3><a href="javascript:;">Deluxe</a></h3>
+												<div class="connecting-r">
+													
+													<span>Room with balcony</span>
+							    					<span>Connecting room</span>
+								    			</div>
 												<p><i class="icon-font checkmark"></i>&nbsp;All board-meals included</p>
 												<p><i class="icon-font checkmark"></i>&nbsp;Included tax 10%, Service charge 5%</p>
 											</div>
@@ -710,7 +733,7 @@
 						</table>
 					</div>
 					<div>
-						<h2><i class="icon-font bed"></i><strong>Room 2:</strong> Double - <span>2 Adult <i>(&gt; 11)</i></span><a href="javascript:;"><i class="icon-font icon-pencil"></i>&nbsp;Edit</a></h2>
+						<h2><i class="icon-font bed"></i><strong>Room 2:</strong> Double - <span>2 Adult <i>(&gt; 11)</i></span><a href="javascript:;" class="to-offset-check"><i class="icon-font icon-pencil"></i>&nbsp;Edit</a></h2>
 						<table>
 							<thead>
 								<tr>
@@ -926,8 +949,8 @@
 						</table>
 					</div>
 				</div>
-				<div class="booking-r-option">
-					<div class="col-xlg-6">
+				<div class="booking-r-option" id="room-option">
+					<div class="col-xlg-6 col-sm-12">
 						<h2>Other Services</h2>
 						<ul>
 							<li>
@@ -941,32 +964,89 @@
 							<li>
 								<input type="checkbox" value="" id="service-3">
 								<label for="service-3">Seaplane <a href="javascript:;"><b>(25’ Scenic Flight)</b></a> - From <b>$10 - $99</b></label>
+								<div class="box-seaplanes close-display">
+									<div>
+										<select name="" id="" class="select-st8">
+											<option value="0">Adult</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+										</select>
+									</div>
+									<div>
+										<select name="" id="" class="select-st8">
+											<option value="0">Child</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+										</select>
+									</div>
+									<div>
+										<select name="" id="" class="select-st8">
+											<option value="0">Infant</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+										</select>
+									</div>
+									<div>
+										<select name="" id="" class="select-st8">
+											<option value="">Time</option>
+											<option value="10:30">10:30</option>
+											<option value="11:30">11:30</option>
+											<option value="13:30">13:30</option>
+											<option value="14:30">14:30</option>
+										</select>
+									</div>
+								</div>
 							</li>
 						</ul>
 					</div>
-					<div class="col-xlg-6">
+					<div class="col-xlg-6 col-sm-12">
 						<h2>Transfer(optional)</h2>
 						<ul>
 							<li>
-								<input type="radio" value="" id="radio-trans-1" name="trans">
+								<input type="radio" value="" class="radio-trans" id="radio-trans-1" name="trans">
 								<label for="radio-trans-1"><b>Shuttle Bus </b>Hanoi - Halong bay - Hanoi ($30/pp*4) - <b>$120</b></label>
+								<div class="transpick close-display">
+									<input type="text" name="pickupaddress" value="Pick-up &amp; Drop-off Address">
+								</div>
 							</li>
 							<li>
-								<input type="radio" value="" id="radio-trans-2" name="trans">
+								<input type="radio" value="" class="radio-trans" id="radio-trans-2" name="trans">
 								<label for="radio-trans-2"><b>Private car 4-seat </b>Hanoi - Halong bay - Hanoi - <b>$115</b></label>
+								<div class="transpick close-display">
+									<input type="text" name="pickupaddress" value="Pick-up &amp; Drop-off Address">
+								</div>
 							</li>
 							<li>
-								<input type="radio" value="" id="radio-trans-3" name="trans">
+								<input type="radio" value="" class="radio-trans" id="radio-trans-3" name="trans">
 								<label for="radio-trans-3"><b>Private car 7-seat </b>Hanoi - Halong bay - Hanoi - <b>$125</b></label>
+								<div class="transpick close-display">
+									<input type="text" name="pickupaddress" value="Pick-up &amp; Drop-off Address">
+								</div>
 							</li>
 							<li>
-								<input type="radio" value="" id="radio-trans-4" name="trans">
+								<input type="radio" value="" class="radio-trans" id="radio-trans-4" name="trans">
 								<label for="radio-trans-4"><b>Private car 16-seat </b>Hanoi - Halong bay - Hanoi - <b>$140</b></label>
+								<div class="transpick close-display">
+									<input type="text" name="pickupaddress" value="Pick-up &amp; Drop-off Address">
+								</div>
 							</li>
 						</ul>
 					</div>
 				</div>
-				<div class="box-summary">
+				<div class="box-summary" id="confirm-submit">
 					<h2><i class="icon-font check-square-o"></i>Booking Summary</h2>
 					<div id="title-cruise">
 						<ul>
@@ -1007,9 +1087,11 @@
 					<div class="sum-trans">
 						<ul>
 							<li>
-								<i class="icon-font checkmark"></i>
-								<b>Transportation:&nbsp;</b>
-								<span>Private car 7-seat Roundtrip transfers Hanoi - Halong bay - Hanoi</span>
+								<div>
+									<i class="icon-font checkmark"></i>
+									<b>Transportation:&nbsp;</b>
+									<span>Private car 7-seat Roundtrip transfers Hanoi - Halong bay - Hanoi</span>
+								</div>
 								<div id="sum-pri-trans"><font>$125</font></div>
 							</li>
 							<li>- Pick-up Address: </li>
@@ -1070,10 +1152,10 @@
 						</div>
 						<div class="contact-info">
 							<div class="half">
-								<div class="form-field col-xlg-6">
+								<div class="form-field col-xlg-6 col-xsm-12">
 									<input type="text" name="" placeholder="Full Name *" required>
 								</div>
-								<div class="form-field col-xlg-6">
+								<div class="form-field col-xlg-6 col-xsm-12">
 									<select name="" id="" class="select-st8">
 										<option value="Australia">Australia</option>
 										<option value="United Kingdom">United Kingdom</option>
@@ -1085,18 +1167,21 @@
 								</div>
 							</div>
 							<div class="half">
-								<div class="form-field col-xlg-6">
+								<div class="form-field col-xlg-6 col-xsm-12">
 									<input name="" type="email" placeholder="Email Address *" required>
 								</div>
-								<div class="phone-wrap col-xlg-6" id="pw-1">
+								<div class="phone-wrap col-xlg-6 col-xsm-12" id="pw-3">
 				                	<div>
-				                		<input id="phonenumber-1" class="phonenumber" type="text" name="">
+				                		<input id="phonenumber-3" class="phonenumber" type="text" name="">
 				            			<input type="hidden" name="full_number">
 				                	</div>
 				                </div>
 							</div>
 							<div class="form-field col-xlg-12">
 				            	<textarea name="" placeholder="Other Request" rows="5"></textarea>
+				            </div>
+				            <div class="form-field col-xlg-12">
+				            	<button class="btn-st3" type="submit">Send</button>
 				            </div>
 						</div>
 					</div>

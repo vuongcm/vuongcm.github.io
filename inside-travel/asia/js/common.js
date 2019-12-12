@@ -183,7 +183,7 @@ $(document).ready(function() {
 	    	$(this).children('.paragraph').removeAttr('style');
 	    });
 	}
-	$('.read-more-st1>a').click(function(){
+	$('body').delegate('.read-more-st1>a','click',function(){
 		let paraHide = $(this).parent('.read-more-st1').prev('.paragraph-hide');
 		paraHide.toggleClass('paragraph-show');
 		if(paraHide.css('max-height') == 'none'){
@@ -1091,15 +1091,13 @@ $(document).ready(function() {
 		});
 	}
 	/*===end search cruise =====*/
-	if($('.filter-box').length){
-		$('.filter-box>a').click(function(){
-			$(this).next('.value').toggleClass('open-block');
-		});
-		$('.filter-box .btn-value').click(function(){
-			$(this).closest('.filter-box').find('.text-2').html($(this).children('span').text());
-			$(this).closest('.value').removeClass('open-block');
-		});
-	}
+	$('body').delegate('.filter-box>a','click',function(){
+		$(this).next('.value').toggleClass('open-block');
+	});
+	$('body').delegate('.filter-box .btn-value','click',function(){
+		$(this).closest('.filter-box').find('.text-2').html($(this).children('span').text());
+		$(this).closest('.value').removeClass('open-block');
+	});
 	if($('.blog-des-list').length && bodyWidth < 992){
 		$('.blog-des-list>a').click(function(){
 			let desUl = $(this).next('ul');
@@ -1110,27 +1108,60 @@ $(document).ready(function() {
 	/*====setting to offset=======*/
 	if($('.navbar-cruise').length){
 		$('.to-offset-desti').click(function(){
-			$('html, body').animate({ scrollTop:$('#cruise-desti').offset().top - 120}, 'slow');
+			goToOffset('#cruise-desti');
 		});
 		$('.to-offset-high').click(function(){
-			$('html, body').animate({ scrollTop:$('#cruise-highlight').offset().top - 120}, 'slow');
+			goToOffset('#cruise-highlight');
 		});
 		$('.to-offset-review').click(function(){
-			$('html, body').animate({ scrollTop:$('#cruise-review').offset().top - 120}, 'slow');
+			goToOffset('#cruise-review');
 		});
 		$('.to-offset-iti').click(function(){
-			$('html, body').animate({ scrollTop:$('#cruise-iti').offset().top - 120}, 'slow');
+			goToOffset('#cruise-iti');
 		});
 		$('.to-offset-cabins').click(function(){
-			$('html, body').animate({ scrollTop:$('#cruise-cabins').offset().top - 120}, 'slow');
+			goToOffset('#cruise-cabins');
 		});
 		$('.to-offset-offer').click(function(){
-			$('html, body').animate({ scrollTop:$('#cruise-offer').offset().top - 120}, 'slow');
+			goToOffset('#cruise-offer');
 		});
 		$('.to-offset-overview').click(function(){
-			$('html, body').animate({ scrollTop:$('#cruise-overview').offset().top - 120}, 'slow');
+			goToOffset('#cruise-overview');
 		});
 	}
+	if($('.navbar-booking').length){
+		$('.to-offset-check').click(function(){
+			goToOffset('#booking-widget-cruisepage');
+		});
+		$('.to-offset-select').click(function(){
+			goToOffset('#select-room');
+		});
+		$('.to-offset-submit').click(function(){
+			goToOffset('#confirm-submit');
+		});
+	}
+	/*======booking=======*/
+	if($('.room-booking-wrap').length){
+		$('.room-booking-wrap').delegate(`.select-cabin input[type="radio"]`,'click',function(){
+			if (this.checked){
+	            goToOffset('#room-option');
+	        }
+		});
+		$('.room-booking-wrap').delegate(`#service-3`,'click',function(){
+			if (this.checked){
+	            $(this).nextAll('.box-seaplanes').removeClass('close-display');
+	        } else{
+	        	$(this).nextAll('.box-seaplanes').addClass('close-display');
+	        }
+		});
+		$('.room-booking-wrap').delegate(`.radio-trans`,'click',function(){
+			$('.transpick').addClass('close-display');
+			if (this.checked){
+	            $(this).nextAll('.transpick').removeClass('close-display');
+	        }
+		});
+	}
+	
 });
 window.onload = function() {
 	if($('body').width() > 767){
@@ -1178,6 +1209,9 @@ let selectChange = function(a,b){
 	$(b).find('.room-type option').removeAttr('selected');
 	$(b).find(`.room-type option[value=${optionVal}]`).attr('selected','selected');
 }
+let goToOffset = function(id){
+	$('html, body').animate({ scrollTop:$(id).offset().top - 120}, 'slow');
+}
 /*======================LOAD JSON============================*/
 let loadJson = function(a,x,y) {
     $.ajax({
@@ -1186,53 +1220,6 @@ let loadJson = function(a,x,y) {
         .done(function(response) {
             // let response = JSON.parse(data);
             $(x).html(response[y]);
-			/*$('.read-more-st1>a').click(function(){
-				let paraHide = $(this).parent('.read-more-st1').prev('.paragraph-hide');
-				paraHide.toggleClass('paragraph-show');
-				if(paraHide.css('max-height') == 'none'){
-					$(this).text('Less ...');
-				} else{
-					$(this).text('Read More ...');
-				}
-				if($(this).closest('.pull-up').length > 0){
-					if(bodyWidth < 1200 && bodyWidth > 991){
-						$('.pull-up').height($('.foreground').outerHeight()-190);
-					} else if(bodyWidth <= 991){
-						$('.pull-up').height($('.foreground').outerHeight()-120);
-					} else{
-						$('.pull-up').height($('.foreground').outerHeight()-220);
-					}
-				}
-			});*/
-			if($('.modal-include-1 .filter-box').length){
-				$('.modal-include-1 .filter-box>a').click(function(){
-					$(this).next('.value').toggleClass('open-block');
-				});
-				$('.filter-box .btn-value').click(function(){
-					$(this).closest('.filter-box').find('.text-2').html($(this).children('span').text());
-					$(this).closest('.value').removeClass('open-block');
-				});
-			}
-			if($('.modal-include-1 .read-more-st1').length){
-				$('.modal-include-1 .read-more-st1>a').click(function(){
-					let paraHide = $(this).parent('.read-more-st1').prev('.paragraph-hide');
-					paraHide.toggleClass('paragraph-show');
-					if(paraHide.css('max-height') == 'none'){
-						$(this).text('Less ...');
-					} else{
-						$(this).text('Read More ...');
-					}
-					if($(this).closest('.pull-up').length > 0){
-						if(bodyWidth < 1200 && bodyWidth > 991){
-							$('.pull-up').height($('.foreground').outerHeight()-190);
-						} else if(bodyWidth <= 991){
-							$('.pull-up').height($('.foreground').outerHeight()-120);
-						} else{
-							$('.pull-up').height($('.foreground').outerHeight()-220);
-						}
-					}
-				});
-			}
         })
         .fail(function() {
             alert('lỗi load dữ liệu');
