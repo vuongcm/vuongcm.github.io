@@ -323,7 +323,7 @@
 		</ul>
 	</div>
 </nav>
-<section class="check-r-container background-st1">
+<section class="check-r-container booking-cr-container background-st1">
 	<div class="container">
 		<div id="booking-widget-cruisepage">
 			<form action="" class="form-banner-top">
@@ -1015,53 +1015,53 @@
 						<h2>Transfer(optional)</h2>
 						<ul>
 							<li>
-								<input type="radio" value="" class="radio-trans" id="radio-trans-1" name="trans">
+								<input type="radio" value="Shuttle Bus;120" class="radio-trans" id="radio-trans-1" name="trans">
 								<label for="radio-trans-1"><b>Shuttle Bus </b>Hanoi - Halong bay - Hanoi ($30/pp*4) - <b>$120</b></label>
 								<div class="transpick close-display">
-									<input type="text" name="pickupaddress" value="Pick-up &amp; Drop-off Address">
+									<input type="text" name="" value="Pick-up &amp; Drop-off Address">
 								</div>
 							</li>
 							<li>
-								<input type="radio" value="" class="radio-trans" id="radio-trans-2" name="trans">
+								<input type="radio" value="Private car 4-seat;115" class="radio-trans" id="radio-trans-2" name="trans">
 								<label for="radio-trans-2"><b>Private car 4-seat </b>Hanoi - Halong bay - Hanoi - <b>$115</b></label>
 								<div class="transpick close-display">
-									<input type="text" name="pickupaddress" value="Pick-up &amp; Drop-off Address">
+									<input type="text" name="" value="Pick-up &amp; Drop-off Address">
 									<div>
-										<input id="pick-up-2" type="checkbox" name="" value="">
+										<input class="pick-up-checkbox" id="pick-up-2" type="checkbox" name="" value="20">
 										<label for="pick-up-2">Hanoi Airport Pick-up - $20</label>
 									</div>
 									<div>
-										<input id="airport-drop-2" type="checkbox" name="" value="">
+										<input class="airport-drop-checkbox" id="airport-drop-2" type="checkbox" name="" value="20">
 										<label for="airport-drop-2">Hanoi Airport Drop-off - $20</label>
 									</div>
 								</div>
 							</li>
 							<li>
-								<input type="radio" value="" class="radio-trans" id="radio-trans-3" name="trans">
+								<input type="radio" value="Private car 7-seat;125" class="radio-trans" id="radio-trans-3" name="trans">
 								<label for="radio-trans-3"><b>Private car 7-seat </b>Hanoi - Halong bay - Hanoi - <b>$125</b></label>
 								<div class="transpick close-display">
-									<input type="text" name="pickupaddress" value="Pick-up &amp; Drop-off Address">
+									<input type="text" name="" value="Pick-up &amp; Drop-off Address">
 									<div>
-										<input id="pick-up-3" type="checkbox" name="" value="">
+										<input class="pick-up-checkbox" id="pick-up-3" type="checkbox" name="" value="25">
 										<label for="pick-up-3">Hanoi Airport Pick-up - $25</label>
 									</div>
 									<div>
-										<input id="airport-drop-3" type="checkbox" name="" value="">
+										<input class="airport-drop-checkbox" id="airport-drop-3" type="checkbox" name="" value="25">
 										<label for="airport-drop-3">Hanoi Airport Drop-off - $25</label>
 									</div>
 								</div>
 							</li>
 							<li>
-								<input type="radio" value="" class="radio-trans" id="radio-trans-4" name="trans">
+								<input type="radio" value="Private car 16-seat;140" class="radio-trans" id="radio-trans-4" name="trans">
 								<label for="radio-trans-4"><b>Private car 16-seat </b>Hanoi - Halong bay - Hanoi - <b>$140</b></label>
 								<div class="transpick close-display">
-									<input type="text" name="pickupaddress" value="Pick-up &amp; Drop-off Address">
+									<input type="text" name="" value="Pick-up &amp; Drop-off Address">
 									<div>
-										<input id="pick-up-4" type="checkbox" name="" value="">
+										<input class="pick-up-checkbox" id="pick-up-4" type="checkbox" name="" value="35">
 										<label for="pick-up-4">Hanoi Airport Pick-up - $35</label>
 									</div>
 									<div>
-										<input id="airport-drop-4" type="checkbox" name="" value="">
+										<input class="airport-drop-checkbox" id="airport-drop-4" type="checkbox" name="" value="35">
 										<label for="airport-drop-4">Hanoi Airport Drop-off - $35</label>
 									</div>
 								</div>
@@ -1107,19 +1107,19 @@
 							</li>
 						</ul>
 					</div>
-					<div class="sum-trans">
+					<div class="sum-trans close-display" id="sum-trans">
 						<ul>
 							<li>
-								<div>
+								<div id="type-trans">
 									<i class="icon-font checkmark"></i>
 									<b>Transportation:&nbsp;</b>
 									<span>Private car 7-seat Roundtrip transfers Hanoi - Halong bay - Hanoi</span>
 								</div>
 								<div id="sum-pri-trans"><font>$125</font></div>
 							</li>
-							<li>- Pick-up Address: </li>
-							<li>- Hanoi Airport Pick-up<font>$25</font></li>
-							<li>- Hanoi Airport Drop-off<font>$25</font></li>
+							<li>- Pick-up Address:&nbsp;<span id="pick-address"></span></li>
+							<li id="sum-pick-up" class="close-display">- Hanoi Airport Pick-up<font>$25</font></li>
+							<li id="sum-airport-drop" class="close-display">- Hanoi Airport Drop-off<font>$25</font></li>
 						</ul>
 					</div>
 					<div class="sum-trans close-display" id="sum-serv">

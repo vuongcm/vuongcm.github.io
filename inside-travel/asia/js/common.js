@@ -1194,10 +1194,41 @@ $(document).ready(function() {
 			$('#sum-service-seaplane font').html(`$${$('#adult-seaplane').val()*99 + $('#child-seaplane').val()*75 + $('#infant-seaplane').val()*10}`)
 		});
 		$('.room-booking-wrap').delegate(`.radio-trans`,'click',function(){
+			let valueT = $(this).val().split(';');
 			$('.transpick').addClass('close-display');
+			$('.pick-up-checkbox').each(function(){
+				$(this)[0].checked = false;
+			});
+			$('.airport-drop-checkbox').each(function(){
+				$(this)[0].checked = false;
+			});
 			if (this.checked){
+				$('#sum-pick-up').addClass('close-display');
+				$('#sum-airport-drop').addClass('close-display');
+				$('#type-trans span').html(`${valueT[0]} Roundtrip transfers Hanoi - Halong bay - Hanoi`);
+				$('#sum-pri-trans font').html(`$${valueT[1]}`);
 	            $(this).nextAll('.transpick').removeClass('close-display');
+	            $('#sum-trans').removeClass('close-display');
 	        }
+		});
+		$('.room-booking-wrap').delegate(`.transpick>input`,'change',function(){
+			$('#pick-address').html($(this).val());
+		});
+		$('.room-booking-wrap').delegate(`.pick-up-checkbox`,'click',function(){
+			if (this.checked){
+				$('#sum-pick-up font').html(`$${$(this).val()}`)
+				$('#sum-pick-up').removeClass('close-display');
+			} else{
+				$('#sum-pick-up').addClass('close-display');
+			}
+		});
+		$('.room-booking-wrap').delegate(`.airport-drop-checkbox`,'click',function(){
+			if (this.checked){
+				$('#sum-airport-drop font').html(`$${$(this).val()}`)
+				$('#sum-airport-drop').removeClass('close-display');
+			} else{
+				$('#sum-airport-drop').addClass('close-display');
+			}
 		});
 	}
 	

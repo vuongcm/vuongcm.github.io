@@ -98,6 +98,13 @@
 		margin-top: 30px;
 		.form-banner-top{
 			width: 100%;
+			&>div{
+				.text{
+					b,strong{
+						font-weight: 600;
+					}
+				}
+			}
 			.booking-step-cruise{
 				width: 31%;
 			}
@@ -496,6 +503,7 @@
 					border-left: none;
 				}
 				.booking-step-submit{
+					border-top: 1px solid #cecece;
 					width: 100%;
 					height: 50px;
 				}
