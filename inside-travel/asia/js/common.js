@@ -1144,15 +1144,54 @@ $(document).ready(function() {
 	if($('.room-booking-wrap').length){
 		$('.room-booking-wrap').delegate(`.select-cabin input[type="radio"]`,'click',function(){
 			if (this.checked){
+				let valueR = $(this).val().split(';');
+				let roomNumber = valueR[0].slice(5);
+				let pax = valueR[1].slice(4);
+				let del = valueR[2].slice(4);
+				let price = valueR[3].slice(6);
+				let rowParent = $(this).closest('tr');
+				$(`#room-${roomNumber} img`).attr('src',rowParent.find('.info-cabins img').attr('src'));
+				$(`#room-${roomNumber} .room-name`).html(rowParent.find('.item-listcabin h3').text());
+				$(`#room-${roomNumber} .pax-number`).html(pax);
+				$(`#room-${roomNumber} .price-trip-box del`).text('$'+del);
+				$(`#room-${roomNumber} .price-trip-box strong`).text('$'+price);
+				$(`.box-summary,#room-${roomNumber}`).removeClass('close-display');
 	            goToOffset('#room-option');
 	        }
 		});
-		$('.room-booking-wrap').delegate(`#service-3`,'click',function(){
+		$('.room-booking-wrap').delegate('.service-check','click',function(){
+			let valueS = $(this).val();
+			if (this.checked){
+				$(valueS).removeClass('close-display');
+				$('#sum-serv').removeClass('close-display');
+			} else{
+				$(valueS).addClass('close-display');
+				if($('#sum-serv li.close-display').length == $('#sum-serv li').length - 1){
+					$('#sum-serv').addClass('close-display');
+				}
+			}
+		});
+		$('.room-booking-wrap').delegate(`#service-seaplane`,'click',function(){
+			//let valueS = $(this).val();
 			if (this.checked){
 	            $(this).nextAll('.box-seaplanes').removeClass('close-display');
+	            $('#sum-service-seaplane').removeClass('close-display');
+				$('#sum-serv').removeClass('close-display');
 	        } else{
 	        	$(this).nextAll('.box-seaplanes').addClass('close-display');
+	        	$('#sum-service-seaplane').addClass('close-display');
+				if($('#sum-serv li.close-display').length == $('#sum-serv li').length - 1){
+					$('#sum-serv').addClass('close-display');
+				}
 	        }
+		});
+		$('.room-booking-wrap').delegate(`.box-seaplanes select`,'change',function(){
+			let adult = ($('#adult-seaplane').val() > 0) ? (', ' + $('#adult-seaplane').val() + ' Adult') : '';
+			let child = ($('#child-seaplane').val() > 0) ? (', ' + $('#child-seaplane').val() + ' Child') : '';
+			let infant = ($('#infant-seaplane').val() > 0) ? (', ' + $('#infant-seaplane').val() + ' Infant') : '';
+			let depature = ($('#time-seaplane').val() != 0) ? `, Depature: ${$('#time-seaplane').val()}` : '';
+			$('#sum-service-seaplane span').text(`Seaplane 25’ Scenic Flight ${depature}${adult}${child}${infant}`);
+			$('#sum-service-seaplane font').html(`$${$('#adult-seaplane').val()*99 + $('#child-seaplane').val()*75 + $('#infant-seaplane').val()*10}`)
 		});
 		$('.room-booking-wrap').delegate(`.radio-trans`,'click',function(){
 			$('.transpick').addClass('close-display');
