@@ -314,7 +314,7 @@
 	}
 }
 .wrap-map{
-	padding: 15px;
+	padding-top: 15px;
 	.map-home{
 		width: 100%;
 		position: relative;
@@ -582,6 +582,7 @@
 		}
 	}
 	.wrap-map{
+		padding-bottom: 70px;
 		.map-home{
 			.synch-carousels{
 				width: 40%;
@@ -596,8 +597,6 @@
 }
 @media (max-width: 991px) {
 	.wrap-map{
-		margin-right: 0;
-		margin-left: 0;
 		.map-home{
 			.synch-carousels{
 				min-height: auto;

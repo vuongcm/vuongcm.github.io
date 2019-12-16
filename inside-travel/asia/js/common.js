@@ -503,6 +503,36 @@ $(document).ready(function() {
 		});
 		$('.wrap-slide-st5 .item>a:first-child').height($('.wrap-slide-st5 .img-origin').height());
 	}
+	//carousel-st6
+	/*if ($('.wrap-slide-st6').length > 0) {
+		$(`.wrap-slide-st6 .gallery`).slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			//lazyLoad: 'ondemand',
+			infinite: true,
+			useTransform: true,
+	        prevArrow: `.wrap-slide-sp .arrow-left`,
+	        nextArrow: `.wrap-slide-sp .arrow-right`,
+	        responsive: [
+		    {
+		      breakpoint: 768,
+		      settings: {
+		      	slidesToShow: 2,
+		      	centerMode: true,
+		        centerPadding: `${bodyWidth/7.5}px`
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		      	slidesToShow: 1,
+		      	centerMode: true,
+		        centerPadding: `${bodyWidth/4.5}px`
+		      }
+		    }
+		  ]
+		});
+	}*/
 	//carousel-sp
 	if ($('.wrap-slide-sp').length > 0) {
 		$(`.wrap-slide-sp .gallery`).slick({
