@@ -504,20 +504,22 @@ $(document).ready(function() {
 		$('.wrap-slide-st5 .item>a:first-child').height($('.wrap-slide-st5 .img-origin').height());
 	}
 	//carousel-st6
-	/*if ($('.wrap-slide-st6').length > 0) {
+	if ($('.wrap-slide-st6').length > 0) {
 		$(`.wrap-slide-st6 .gallery`).slick({
 			slidesToShow: 4,
 			slidesToScroll: 1,
 			//lazyLoad: 'ondemand',
-			infinite: true,
-			useTransform: true,
-	        prevArrow: `.wrap-slide-sp .arrow-left`,
-	        nextArrow: `.wrap-slide-sp .arrow-right`,
+			adaptiveHeight: true,
+			infinite: false,
+			useTransform: false,
+	        prevArrow: `.wrap-slide-st6 .arrow-left`,
+	        nextArrow: `.wrap-slide-st6 .arrow-right`,
 	        responsive: [
 		    {
 		      breakpoint: 768,
 		      settings: {
 		      	slidesToShow: 2,
+		      	infinite: true,
 		      	centerMode: true,
 		        centerPadding: `${bodyWidth/7.5}px`
 		      }
@@ -526,13 +528,14 @@ $(document).ready(function() {
 		      breakpoint: 480,
 		      settings: {
 		      	slidesToShow: 1,
+		      	infinite: true,
 		      	centerMode: true,
 		        centerPadding: `${bodyWidth/4.5}px`
 		      }
 		    }
 		  ]
 		});
-	}*/
+	}
 	//carousel-sp
 	if ($('.wrap-slide-sp').length > 0) {
 		$(`.wrap-slide-sp .gallery`).slick({
@@ -771,6 +774,15 @@ $(document).ready(function() {
         }
         if(!$('.booking-step-m-time').is(e.target) && $('.booking-step-m-time').has(e.target).length === 0){
         	$('.box-mon-time').removeClass('open-flex');
+        }
+        if(!$('.filter-desti-2').is(e.target) && $('.filter-desti-2').has(e.target).length === 0){
+        	$('.filter-desti-2 .value').removeClass('open-block');
+        }
+        if(!$('.filter-who-2').is(e.target) && $('.filter-who-2').has(e.target).length === 0){
+        	$('.filter-who-2 .value').removeClass('open-block');
+        }
+        if(!$('.filter-price-2').is(e.target) && $('.filter-price-2').has(e.target).length === 0){
+        	$('.filter-price-2 .value').removeClass('open-block');
         }
 	});
 	if($('.booking-step-room').length){
@@ -1121,6 +1133,52 @@ $(document).ready(function() {
 		});
 	}
 	/*===end search cruise =====*/
+	/*===filter 2=====*/
+	if($('.wrap-filter-st2').length){
+		$('.filter-desti-2 .btn-value').click(function(){
+			$(this).toggleClass('checked');
+			let numberValue = $('.filter-desti-2 .checked').length;
+			$('.filter-desti-2').children('select').html('');
+			for(let j=0; j < numberValue; j++){
+				$('.filter-desti-2>select').append(`<option value="${$(this).closest('.value').find('.checked b').eq(j).text()}" selected></option>`);
+			}
+			if(numberValue == 0){
+				$('.filter-desti-2 .text b').html(`Destinations`);
+			} else{
+				$('.filter-desti-2 .text b').html(`${numberValue} selected`);
+			}
+		});
+		$('.filter-who-2 .btn-value').click(function(){
+			if($(this).attr('class').search('checked') != -1){
+				$('.filter-who-2 .btn-value').removeClass('checked');
+				$('.filter-who-2 .text b').html(`Who`);
+				$('.filter-who-2>input').val('');
+			} else{
+				let thisValue = $(this).children('b').text();
+				$('.filter-who-2 .btn-value').removeClass('checked');
+				$(this).addClass('checked');
+				$('.filter-who-2 .text b').html(thisValue);
+				$('.filter-who-2>input').val(thisValue);
+			}
+			$('.filter-who-2 .value').removeClass('open-block');
+		});
+		$('.filter-price-2 .btn-value').click(function(){
+			if($(this).attr('class').search('checked') != -1){
+				$('.filter-price-2 .btn-value').removeClass('checked');
+				$('.filter-price-2 .text b').html(`Price`);
+				$('.filter-price-2>input').val('');
+			} else{
+				let thisValue = $(this).children('b').text();
+				$('.filter-price-2 .btn-value').removeClass('checked');
+				$(this).addClass('checked');
+				$('.filter-price-2 .text b').html(thisValue);
+				$('.filter-price-2>input').val(thisValue);
+			}
+			$('.filter-price-2 .value').removeClass('open-block');
+		});
+	}
+	
+	/*===end filter 2=====*/
 	$('body').delegate('.filter-box>a','click',function(){
 		$(this).next('.value').toggleClass('open-block');
 	});
