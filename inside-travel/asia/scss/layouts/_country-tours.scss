@@ -356,6 +356,17 @@
 				.btn-value{
 					padding-right: 10px;
 					padding-left: 10px;
+					.icon-font:first-child{
+						margin-right: 8px;
+					    font-size: 15px;
+					    color: $higlight-color;
+					    @include smooth(.25s);
+					}
+					&:hover{
+						.icon-font:first-child{
+							color: $main-color;
+						}
+					}
 				}
 			}
 		}
