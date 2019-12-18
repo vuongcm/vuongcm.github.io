@@ -61,6 +61,22 @@
 		.review-exci{
 			margin-right: 15px;
 		}
+		.view-out{
+			padding-top: 40px;
+			&>div{
+				display: inline-flex;
+				align-items: center;
+				&>.icon-font{
+					margin-left: 15px;
+					font-size: 18px;
+					color: $higlight-color;
+				}
+			}
+			.link-st3{
+				text-transform: uppercase;
+				margin-left: 5px;
+			}
+		}
 	} 
 }
 .review-exci{
@@ -93,30 +109,39 @@
 	#booking-widget-cruisepage{
 		position: static;
 		z-index: unset;
-		padding-left: 15px;
-		padding-right: 15px;
 		margin-top: 30px;
 		.form-banner-top{
 			width: 100%;
+			box-shadow: 0px 0px 6px #DDD;
+			border-radius: 6px;
 			&>div{
+				
 				.text{
 					b,strong{
 						font-weight: 600;
+						font-size: 16px;
 					}
 				}
 			}
 			.booking-step-cruise{
 				width: 31%;
+				margin-top: 20px;
+				margin-bottom: 20px;
 			}
 			.booking-step-depature{
 				width: 23%;
 			}
 			.booking-step-room-cruise{
 				width: 28%;
+				margin-top: 20px;
+				margin-bottom: 20px;
 			}
 		}
 		.btn-st3{
 			background-color: $higlight-color;
+			font-size: 14px;
+			border-top-right-radius: 6px;
+			border-bottom-right-radius: 6px;
 		}
 	}
 }
@@ -154,9 +179,8 @@
 .booking-cr-sub{
 	width: 100%;
 	display: flex;
-	padding: 15px 0;
+	padding: 15px;
 	font-weight: 600;
-	font-size: 14px;
 	div{
 		padding-left: 5px;
 		&:first-child{
@@ -176,6 +200,7 @@
 	padding-right: 15px;
 	margin-top: 30px;
 	margin-bottom: 30px;
+	background-color: #fff;
 	table{
 		width: 100%;
 		thead{
@@ -184,7 +209,6 @@
 			}
 		}
 		th{
-			font-size: 14px;
 			padding: 20px 10px;
 			font-weight: 600;
 			&:first-child{
@@ -199,8 +223,11 @@
 			
 		}
 		tr{
-			border-top: 1px dotted #aaa;
-			border-bottom: 1px dotted #aaa;
+			border-top: 1px dotted #ddd;
+			border-bottom: 1px dotted #ddd;
+			&:last-child{
+				border-bottom: none;
+			}
 		}
 		td{
 			vertical-align: middle;
@@ -523,6 +550,12 @@
 		.rank{
 			flex-wrap: wrap;
 			justify-content: center;
+		}
+	}
+	.check-r-container{
+		#booking-widget-cruisepage{
+			padding-right: 15px;
+			padding-left: 15px;
 		}
 	}
 	.room-type-wrap{

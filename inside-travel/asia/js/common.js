@@ -134,7 +134,7 @@ $(document).ready(function() {
 	    	$(this).children('.paragraph').removeAttr('style');
 	    });
 	    $('.wrap-slide-sp article').hover(function(){
-	    	$(this).children('.paragraph').css('max-height','132px');
+	    	$(this).children('.paragraph').css('max-height','500px');
 	    },function(){
 	    	$(this).children('.paragraph').removeAttr('style');
 	    });
@@ -152,9 +152,9 @@ $(document).ready(function() {
 	    }
 	    if(bodyWidth > 479){
 	    	$('.wrap-guide-step article').hover(function(){
-		    	$(this).children('.paragraph').css('max-height','500px');
+		    	$(this).css('max-height','500px');
 		    },function(){
-		    	$(this).children('.paragraph').removeAttr('style');
+		    	$(this).removeAttr('style');
 		    });
 	    }
     }
@@ -220,7 +220,8 @@ $(document).ready(function() {
 				$(this).parent('.togg-wrap').children('.link-st3').text('Less');
 			} else{
 				$(this).parent('.togg-wrap').children('.arrow-radius').removeClass('rotage180');
-				$(this).parent('.togg-wrap').children('.link-st3').text('Click to view more experiences');
+				$(this).parent('.togg-wrap').children('.link-st3.btn-more-ex').text('Click to view more experiences');
+				$(this).parent('.togg-wrap').children('.link-st3.btn-more-food').text('Click to view more Vietnamese Foods');
 			}
 		});
 	}
@@ -538,33 +539,70 @@ $(document).ready(function() {
 	}
 	//carousel-sp
 	if ($('.wrap-slide-sp').length > 0) {
-		$(`.wrap-slide-sp .gallery`).slick({
-			slidesToShow: 4,
-			slidesToScroll: 1,
-			//lazyLoad: 'ondemand',
-			infinite: true,
-			useTransform: true,
-	        prevArrow: `.wrap-slide-sp .arrow-left`,
-	        nextArrow: `.wrap-slide-sp .arrow-right`,
-	        responsive: [
-		    {
-		      breakpoint: 768,
-		      settings: {
-		      	slidesToShow: 2,
-		      	centerMode: true,
-		        centerPadding: `${bodyWidth/7.5}px`
-		      }
-		    },
-		    {
-		      breakpoint: 480,
-		      settings: {
-		      	slidesToShow: 1,
-		      	centerMode: true,
-		        centerPadding: `${bodyWidth/4.5}px`
-		      }
-		    }
-		  ]
-		});
+		if($('.about-container .wrap-slide-sp').length){
+			$(`.wrap-slide-sp .gallery`).slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				//lazyLoad: 'ondemand',
+				infinite: true,
+				useTransform: true,
+		        prevArrow: `.wrap-slide-sp .arrow-left`,
+		        nextArrow: `.wrap-slide-sp .arrow-right`,
+		        responsive: [
+			    {
+			      breakpoint: 1351,
+			      settings: {
+			      	slidesToShow: 2
+			      }
+			    },
+			    {
+			      breakpoint: 768,
+			      settings: {
+			      	slidesToShow: 1,
+			      	centerMode: true,
+			        centerPadding: `${bodyWidth/4.5}px`
+			      }
+			    },
+			    {
+			      breakpoint: 480,
+			      settings: {
+			      	slidesToShow: 1,
+			      	centerMode: true,
+			        centerPadding: `${bodyWidth/7.5}px`
+			      }
+			    }
+			  ]
+			});
+		} else{
+			$(`.wrap-slide-sp .gallery`).slick({
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				//lazyLoad: 'ondemand',
+				infinite: true,
+				useTransform: true,
+		        prevArrow: `.wrap-slide-sp .arrow-left`,
+		        nextArrow: `.wrap-slide-sp .arrow-right`,
+		        responsive: [
+			    {
+			      breakpoint: 768,
+			      settings: {
+			      	slidesToShow: 2,
+			      	centerMode: true,
+			        centerPadding: `${bodyWidth/7.5}px`
+			      }
+			    },
+			    {
+			      breakpoint: 480,
+			      settings: {
+			      	slidesToShow: 1,
+			      	centerMode: true,
+			        centerPadding: `${bodyWidth/4.5}px`
+			      }
+			    }
+			  ]
+			});
+		}
+		
 	}
 	//gallery-img
 	if ($('.wrap-gallery-img').length > 0) {

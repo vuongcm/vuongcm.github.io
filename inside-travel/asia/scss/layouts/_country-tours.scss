@@ -54,6 +54,10 @@
                 z-index: 4;
             }
         }
+        .slick-list{
+        	//overflow-y: visible;
+        	//overflow-x: hidden;
+        }
     }
     .gallery{
 		width: 95%;
@@ -78,6 +82,9 @@
 	        background-color: $background-color;
 	        padding-right: 15px;
 			padding-left: 15px;
+			max-height: 85px;
+            overflow-y: hidden;
+            @include smooth(1.5s);
 			h3{
 				font-size: 14px;
 				font-weight: 600;
@@ -85,14 +92,9 @@
 			}
 			.paragraph{
 				line-height: 1.6;
-				max-height: 31px;
-	            overflow-y: hidden;
-	            @include smooth(.5s);
 			}
 			&:hover{
-				.paragraph{
-					max-height: 132px;
-				}
+				max-height: 500px;
 			}
 		}
     }
@@ -249,16 +251,15 @@
 		bottom: 10px;
 		z-index: 2;
 		background-color: #fff;
+		max-height: 105px;
+	    overflow-y: hidden;
+	    @include smooth(1.2s);
 		.paragraph{
 			line-height: 1.6;
-		    max-height: 31px;
-		    overflow-y: hidden;
-		    @include smooth(1s);
+		    
 		}
 		&:hover{
-			.paragraph{
-			    max-height: 300px;
-			}
+			max-height: 400px;
 		}
 	}
 }
@@ -394,9 +395,6 @@
 	.wrap-title-banner-top-line{
 		padding-top: 8%;
 	}
-	.wrap-guide-step {
-	    padding-bottom: 125px;
-	}
 }
 @media (max-width: 1199px) {
 	.wrap-faq{
@@ -446,9 +444,6 @@
 	        }
 	    }
 	}
-	.wrap-guide-step {
-	    padding-bottom: 110px;
-	}
 	.wrap-filter-st2{
 		.select-st1{
 			width: 33.333%;
@@ -481,6 +476,9 @@
 	    }
 	    .gallery{
 	    	width: 100%;
+	    	.slick-list{
+	    		overflow: visible;
+	    	}
 	    }
 	    .item{
 	    	padding-left: 5px;
@@ -521,9 +519,6 @@
 			}
 	    }
 	}
-	.wrap-guide-step{
-		padding-bottom: 149px;
-	}
 }
 @media (max-width: 479px) {
 	.wrap-title-banner-top-line{
@@ -536,16 +531,6 @@
 		.line{
 			&:after{
 				margin: 10px auto;
-			}
-		}
-	}
-	.wrap-slide-sp{
-		.item{
-			//padding-bottom: 80px;
-			article{
-				.paragraph{
-					max-height: 27px;
-				}
 			}
 		}
 	}
@@ -575,9 +560,7 @@
 		padding-bottom: 0;
 		article{
 			position: static;
-			.paragraph{
-				max-height: none;
-			}
+			max-height: none;
 		}
 	}
 	.intro-country-tour{
