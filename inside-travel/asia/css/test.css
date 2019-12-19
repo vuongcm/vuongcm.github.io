@@ -24,6 +24,7 @@ p {
     font-size: 13px;
     flex-direction: column;
     justify-content: space-between;
+    justify-content: space-around;
     align-items: stretch;
     text-overflow: 
 }

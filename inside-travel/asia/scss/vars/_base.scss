@@ -162,6 +162,17 @@ select:focus {
     border-bottom: 1px solid #111;
     font-size: 14px;
 }
+.input-st2{
+    width: 100%;
+    height: auto;
+    border: 1px solid #aaa;
+    //font-size: 14px;
+    vertical-align: middle;
+    line-height: 1.5;
+    color: #555;
+    padding: 10px 8px;
+    @include smooth(.25s);
+}
 .background-st1{
     background-color: $background-color-st1;
 }

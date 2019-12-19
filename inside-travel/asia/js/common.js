@@ -632,6 +632,41 @@ $(document).ready(function() {
 	        nextArrow: `.wrap-gallery-img .arrow-right`
 	    });
 	}
+
+	if ($('.wrap-slide-team').length > 0) {
+		if(bodyWidth >479){
+			$(`.wrap-slide-team .gallery`).slick({
+				slidesToShow: 5,
+				slidesToScroll: 3,
+				rows: 2,
+				infinite: true,
+				useTransform: false,
+		        prevArrow: `.wrap-slide-team .nav-arrows>a:first-child`,
+		        nextArrow: `.wrap-slide-team .nav-arrows>a:last-child`,
+		        responsive: [
+				    {
+				      breakpoint: 992,
+				      settings: {
+				      	slidesToShow: 3,
+				      	centerMode: true,
+				        centerPadding: `${bodyWidth/11.5}px`
+				      }
+				    }
+				]
+		    });
+		} else{
+			$(`.wrap-slide-team .gallery`).slick({
+				slidesToShow: 1,
+				infinite: true,
+				useTransform: false,
+				centerMode: true,
+				centerPadding: `${bodyWidth/5.5}px`,
+		        prevArrow: `.wrap-slide-team .nav-arrows>a:first-child`,
+		        nextArrow: `.wrap-slide-team .nav-arrows>a:last-child`,
+		    });
+		}
+		
+	}
 	//================modal===================
 	$('.btn-include-1').click(function(){
 		$('.modal-container').removeClass('close-display');
@@ -1266,6 +1301,18 @@ $(document).ready(function() {
 			goToOffset('#confirm-submit');
 		});
 	}
+	$('body').delegate('.input-radio-st1 label','click',function(){
+		let inputName = $(this).prev('input').attr('name');
+		$(`input[name=${inputName}]`).next('label').removeClass('active');
+		$(this).addClass('active');
+	});
+	$('body').delegate('.input-checkbox-st1 input','click',function(){
+		if(this.checked){
+			$(this).next('label').addClass('active');
+		} else{
+			$(this).next('label').removeClass('active');
+		}
+	});
 	/*======booking=======*/
 	if($('.room-booking-wrap').length){
 		$('.room-booking-wrap').delegate(`.select-cabin input[type="radio"]`,'click',function(){
@@ -1282,6 +1329,8 @@ $(document).ready(function() {
 				$(`#room-${roomNumber} .price-trip-box del`).text('$'+del);
 				$(`#room-${roomNumber} .price-trip-box strong`).text('$'+price);
 				$(`.box-summary,#room-${roomNumber}`).removeClass('close-display');
+				$(this).closest('tbody').children('tr').removeClass('active');
+				$(this).closest('tr').addClass('active');
 	            goToOffset('#room-option');
 	        }
 		});
@@ -1300,11 +1349,11 @@ $(document).ready(function() {
 		$('.room-booking-wrap').delegate(`#service-seaplane`,'click',function(){
 			//let valueS = $(this).val();
 			if (this.checked){
-	            $(this).nextAll('.box-seaplanes').removeClass('close-display');
+	            $(this).closest('li').children('.box-seaplanes').removeClass('close-display');
 	            $('#sum-service-seaplane').removeClass('close-display');
 				$('#sum-serv').removeClass('close-display');
 	        } else{
-	        	$(this).nextAll('.box-seaplanes').addClass('close-display');
+	        	$(this).closest('li').children('.box-seaplanes').addClass('close-display');
 	        	$('#sum-service-seaplane').addClass('close-display');
 				if($('#sum-serv li.close-display').length == $('#sum-serv li').length - 1){
 					$('#sum-serv').addClass('close-display');
@@ -1324,16 +1373,18 @@ $(document).ready(function() {
 			$('.transpick').addClass('close-display');
 			$('.pick-up-checkbox').each(function(){
 				$(this)[0].checked = false;
+				$(this).parent('.input-checkbox-st1').children('label').removeClass('active');
 			});
 			$('.airport-drop-checkbox').each(function(){
 				$(this)[0].checked = false;
+				$(this).parent('.input-checkbox-st1').children('label').removeClass('active');
 			});
 			if (this.checked){
 				$('#sum-pick-up').addClass('close-display');
 				$('#sum-airport-drop').addClass('close-display');
 				$('#type-trans span').html(`${valueT[0]} Roundtrip transfers Hanoi - Halong bay - Hanoi`);
 				$('#sum-pri-trans font').html(`$${valueT[1]}`);
-	            $(this).nextAll('.transpick').removeClass('close-display');
+	            $(this).closest('li').children('.transpick').removeClass('close-display');
 	            $('#sum-trans').removeClass('close-display');
 	        }
 		});

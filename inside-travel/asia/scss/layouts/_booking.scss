@@ -13,10 +13,6 @@
 			margin-bottom: 15px;
 		}
 	}
-	#booking-widget-cruisepage{
-		padding-right: 0;
-		padding-left: 0;
-	}
 }
 .navbar-booking{
 	position: sticky;
@@ -75,7 +71,7 @@
 		border: 1px dotted #aaa;
 		th{
 			font-size: 14px;
-		    padding: 20px 10px;
+		    padding: 10px;
 		    font-weight: 600;
 		    border: 1px solid #eae2b7;
 		    color: #fff;
@@ -114,11 +110,11 @@
 					}
 				}
 				&:hover{
-					background-color: #fff;
+					background-color: $background-color-st1;
 				}
 			}
 			tr.active{
-				background-color: #fff;
+				background-color: $background-color-st1;
 			}
 		}
 	}
@@ -257,25 +253,35 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: stretch;
-	padding: 30px 10px;
+	padding: 10px 10px 30px;
 	background-color: #fff;
-	input{
-		height: auto;
-		cursor: pointer;
-		margin-right: 5px;
-		width: 13px;
+	position: relative;
+	&:after{
+		display: block;
+	    width: 30px;
+	    height: 30px;
+	    content: '';
+	    background-color: #fff;
+	    position: absolute;
+	    left: 50%;
+	    bottom: 0;
+	    transform: translate(-50%, 50%) rotate(45deg);
+	    -moz-transform: translate(-50%, 50%) rotate(45deg);
+	    -webkit-transform: translate(-50%, 50%) rotate(45deg);
+	    -o-transform: translate(-50%, 50%) rotate(45deg);
+	    -ms-transform: translate(-50%, 50%) rotate(45deg);
 	}
 	h2{
 		font-size: 16px;
 		margin-bottom: 15px;
+		border-bottom: 1px solid #eee;
+		padding-bottom: 15px;
 	}
 	.col-xlg-6{
 		text-align: left;
-		padding-top: 10px;
-		padding-bottom: 10px;
 		&:first-child{
 			li{
-				label{
+				span{
 
 					&>b{
 						color: $higlight-color;
@@ -284,24 +290,33 @@
 			}
 		}
 		ul{
+			margin-top: 30px;
 			li{
-				margin-bottom: 15px;
+				margin-bottom: 20px;
 				display: inline-flex;
 				flex-wrap: wrap;
 				width: 100%;
 				align-items: center;
-				label{
-					cursor: pointer;
-					width: calc(100% - 18px);
+				&>span{
+					width: calc(100% - 23px);
 					.icon-font{
 						color: $higlight-color;
 						font-size: 14px;
 					}
 					a{
 						&:hover{
-							color: $higlight-color;
+							b{
+								color: $higlight-color;
+							}
+							
 						}
 					}
+				}
+				.input-radio-st1{
+					margin-right: 5px;
+				}
+				.input-checkbox-st1{
+					margin-right: 5px;
 				}
 				.box-seaplanes{
 					margin-top: 10px;
@@ -416,7 +431,6 @@
 		li{
 			display: flex;
 			align-items: center;
-			border-bottom: 1px dotted #aaa;
 			&>div{
 				&:first-child{
 					flex-grow: 1;
@@ -499,27 +513,18 @@
 	&>div{
 		display: flex;
 		justify-content: center;
-		.logo-list{
-			width: 35%;
-		}
 		.contact-info{
 			width: 65%;
 		}
 	}
 }
-.logo-list{
-	text-align: center;
-	h3,&>div{
-		padding-right: 15px;
-		padding-left: 15px;
-	}
-	h3{
-		font-size: 14px;
-	}
-}
-.logo{
-	h4{
-		font-weight: normal;
+.logo-intro{
+	display: inline-block;
+	margin-right: auto;
+	margin-left: auto;
+	.icon-font{
+		font-size: 40px;
+		color: $higlight-color;
 	}
 }
 .contact-info{
@@ -555,8 +560,8 @@
 			width: 100%;
 		    border: 1px solid #aaa;
 		    line-height: 1.5;
-		    color: #36312a;
-		    padding: 5px 8px;
+		    color: #555;
+		    padding: 10px 8px;
 		    @include smooth(.25s);
 		}
 	}
@@ -570,9 +575,8 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	&>input{
-		width: 100%;
-		padding: 5px 8px;
 		cursor: text;
+		width: 100%;
 	}
 	&>div{
 		width: 50%;
@@ -581,12 +585,79 @@
 		align-items: center;
 	}
 }
+.input-radio-st1{
+	display: inline-block;
+	//cursor: pointer;
+	line-height: 0;
+	input{
+		display: none;
+	}
+	label{
+		position: relative;
+		cursor: pointer;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		&:before{
+			content: '';
+			display: block;
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			background-color: #e1e1e1;
+    		border: 1px solid #c1c1c1;
+		}
+	}
+	label.active{
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: $higlight-color;
+		}
+	}
+}
+.input-checkbox-st1{
+	display: inline-block;
+	line-height: 0;
+	//margin-right: 10px;
+	input{
+		display: none;
+	}
+	label{
+		cursor: pointer;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		&:before{
+			content: '';
+			display: block;
+			width: 14px;
+			height: 14px;
+			background-color: #e1e1e1;
+    		border: 1px solid #c1c1c1;
+		}
+	}
+	label.active{
+		&:after{
+			content: '\ea10';
+			display: block;
+			position: absolute;
+			color: $higlight-color;
+			font-family: 'insideTravel';
+		    speak: none;
+		    line-height: 1;
+		    font-size: 10px;
+		}
+	}
+}
 @media (max-width: 1199px) {
 	.contact-info-box{
 		&>div{
-			.logo-list{
-				display: none;
-			}
 			.contact-info{
 				width: 100%;
 			}
@@ -716,12 +787,6 @@
 			}
 		}
 	}
-	.booking-r-option{
-		.col-xlg-6:first-child{
-			border-bottom: 1px dotted #aaa;
-			border-right: none;
-		}
-	}
 	.sum-cabin{
 		ul{
 			li{
@@ -729,6 +794,9 @@
 					margin-bottom: 5px;
 					p{
 						margin-left: 0;
+					}
+					&:first-child{
+						margin-right: 10px;
 					}
 				}
 			}
