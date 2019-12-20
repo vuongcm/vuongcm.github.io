@@ -39,28 +39,16 @@ header{
 			max-width: 400px;
 			display: flex;
 			justify-content: space-between;
-			align-items: center;
+			align-items: stretch;
 			padding-left: 20px;
 			order: 3;
 			.lang-top{
-				width: 33.33%;
-				max-width: 110px;
+				display: flex;
+				align-items: center;
+				max-width: 33.33%;
 			}
 			.login-top{
-				width: 33.33%;
-				max-width: 85px;
-				a {
-					font-size: 13px;
-					display: flex;
-					justify-content: center;
-					.user-regular{
-						margin-right: 5px;
-						font-size: 12px;
-					}
-					&:hover{
-						color: $higlight-color;
-					}
-				}
+				max-width: 33.33%;
 			}
 			.book-top{
 				
@@ -390,6 +378,64 @@ header{
 		}
 	}
 }
+.login-top{
+	position: relative;
+	display: flex;
+	align-items: center;
+	.login-menu{
+		display: none;
+		z-index: 103;
+	}
+	&>a{
+		font-size: 13px;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    height: 100%;
+	    width: 100%;
+		.user-regular{
+			margin-right: 5px;
+			font-size: 12px;
+		}
+		&:hover{
+			color: $higlight-color;
+		}
+		.select-arrow-thin{
+			font-size: 9px;
+			padding-top: 3px;
+			margin-left: 15px;
+		}
+	}
+	&>a.active{
+		border: 1px dotted #555;
+	}
+	
+}
+.login-menu{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #fff;
+	border: 1px solid #dcdcdc;
+	min-width: 130px;
+	font-size: 11px;
+	//box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+	li{
+		border-bottom: 1px solid #eee;
+		a{
+			padding: 10px 15px;
+			width: 100%;
+			//text-transform: uppercase;
+			&:hover{
+				background-color: #ececec;
+				color: #555;
+			}
+		}
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+}
 @media (min-width: 1351px) and (max-width: 1395px) {
 	header{
 		.menu-wrap-scroll{
@@ -421,7 +467,7 @@ header{
 			.global-menu{
 				width: 35%;
 				.lang-top, .login-top{
-					display: list-item;
+					display: flex;
 				}
 			}
 			.main-menu{
@@ -441,6 +487,22 @@ header{
 			a{
 				span{
 					font-size: 14px;
+				}
+			}
+		}
+	}
+	header{
+		.menu-wrap{
+			.global-menu{
+				#account-top{
+					a{
+						font{
+							display: none;
+						}
+						.select-arrow-thin{
+							margin-left: 5px;
+						}
+					}
 				}
 			}
 		}
@@ -494,13 +556,30 @@ header{
 				}
 				.login-top{
 					margin-right: 5px;
-					a{
-						font{
-							display: none;
-						}
+					position: static;
+					&>a{
 						.user-regular{
 							margin-right: 0;
 							font-size: 18px;
+						}
+						.select-arrow-thin{
+							display: none;
+						}
+					}
+					.login-menu{
+						background-color: $background-color-st1;
+						width: 30%;
+						left: unset;
+						right: 0;
+						text-align: right;
+						font-size: 12px;
+						li{
+							border-bottom: none;
+							a{
+								padding-top: 20px;
+								padding-bottom: 20px;
+								text-transform: uppercase;
+							}
 						}
 					}
 				}
@@ -657,14 +736,16 @@ header{
 			.global-menu{
 				padding-left: 0;
 				.book-top{
-					width: 80%;
+					width: 75%;
 					button{
 						padding-left: 0;
 						padding-right: 0;
 						width: 100%;
 					}
 				}
-
+				#account-top{
+					flex-grow: 1;
+				}
 			}
 			.main-menu{
 				&>li{
@@ -695,6 +776,28 @@ header{
 			}
 			.global-menu{
 				width: 33%;
+				.login-top{
+					.login-menu{
+						width: 100%;
+						text-align: left;
+						li{
+							//padding-left: 10%;
+							a{
+								padding-left: 10%;
+								&:before{
+									background-color: $higlight-color;
+								    content: '';
+								    margin-right: 20px;
+								    display: inline-block;
+								    height: 8px;
+								    width: 8px;
+								    border-radius: 140px 140px 0 140px;
+								}
+							}
+							
+						}
+					}
+				}
 			}
 			.main-menu{
 				width: 100%;
