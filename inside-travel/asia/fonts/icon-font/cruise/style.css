@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Inside-Cruise';
-  src:  url('../fonts/cruise/Inside-Cruise.eot?ybi4bq');
-  src:  url('../fonts/cruise/Inside-Cruise.eot?ybi4bq#iefix') format('embedded-opentype'),
-    url('../fonts/cruise/Inside-Cruise.ttf?ybi4bq') format('truetype'),
-    url('../fonts/cruise/Inside-Cruise.woff?ybi4bq') format('woff'),
-    url('../fonts/cruise/Inside-Cruise.svg?ybi4bq#Inside-Cruise') format('svg');
+  src:  url('fonts/Inside-Cruise.eot?ybi4bq');
+  src:  url('fonts/Inside-Cruise.eot?ybi4bq#iefix') format('embedded-opentype'),
+    url('fonts/Inside-Cruise.ttf?ybi4bq') format('truetype'),
+    url('fonts/Inside-Cruise.woff?ybi4bq') format('woff'),
+    url('fonts/Inside-Cruise.svg?ybi4bq#Inside-Cruise') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
