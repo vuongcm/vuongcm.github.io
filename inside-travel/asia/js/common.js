@@ -759,6 +759,9 @@ $(document).ready(function() {
 			}
 		};
 	}
+	$('.wrap-more-inclusions>a').click(function(){
+		$(this).parent('.wrap-more-inclusions').prevAll('p').toggleClass('open-block');
+	});
 	//============search box=============
 	$('.select-st1 .text').on('click',function(){
 		$(this).next('.value').toggleClass('open-block');

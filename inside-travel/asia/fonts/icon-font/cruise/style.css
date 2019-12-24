@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Inside-Cruise';
-  src:  url('fonts/Inside-Cruise.eot?ybi4bq');
-  src:  url('fonts/Inside-Cruise.eot?ybi4bq#iefix') format('embedded-opentype'),
-    url('fonts/Inside-Cruise.ttf?ybi4bq') format('truetype'),
-    url('fonts/Inside-Cruise.woff?ybi4bq') format('woff'),
-    url('fonts/Inside-Cruise.svg?ybi4bq#Inside-Cruise') format('svg');
+  src:  url('fonts/Inside-Cruise.eot?hqdps7');
+  src:  url('fonts/Inside-Cruise.eot?hqdps7#iefix') format('embedded-opentype'),
+    url('fonts/Inside-Cruise.ttf?hqdps7') format('truetype'),
+    url('fonts/Inside-Cruise.woff?hqdps7') format('woff'),
+    url('fonts/Inside-Cruise.svg?hqdps7#Inside-Cruise') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -46,13 +46,13 @@
 .icon-cr-additional-bath:before {
   content: "\f10a";
 }
-.icon-cr-additional-information:before {
+.icon-cr-speak:before {
   content: "\f10b";
 }
-.icon-cr-additional-toilet:before {
+.icon-cr-toilet:before {
   content: "\f10c";
 }
-.icon-cr-air-conditioning:before {
+.icon-cr-air-condition:before {
   content: "\f10d";
 }
 .icon-cr-air-purifier:before {
@@ -73,10 +73,10 @@
 .icon-cr-babysitting:before {
   content: "\f11c";
 }
-.icon-cr-badminton-court:before {
+.icon-cr-badminton:before {
   content: "\f11d";
 }
-.icon-cr-balcony-terrace:before {
+.icon-cr-balcony:before {
   content: "\f11e";
 }
 .icon-cr-bathrobes:before {
@@ -94,7 +94,7 @@
 .icon-cr-bathtub:before {
   content: "\f124";
 }
-.icon-cr-bbq-facilities:before {
+.icon-cr-bbq:before {
   content: "\f125";
 }
 .icon-cr-bed:before {
@@ -103,13 +103,13 @@
 .icon-cr-bedroom:before {
   content: "\f128";
 }
-.icon-cr-bicycle-rental:before {
+.icon-cr-bicycle:before {
   content: "\f129";
 }
 .icon-cr-billiards:before {
   content: "\f12a";
 }
-.icon-cr-blackout-curtains:before {
+.icon-cr-blackout:before {
   content: "\f12b";
 }
 .icon-cr-boat:before {
@@ -121,7 +121,7 @@
 .icon-cr-book-without:before {
   content: "\f12e";
 }
-.icon-cr-bowling-alley:before {
+.icon-cr-bowling:before {
   content: "\f12f";
 }
 .icon-cr-breakfast:before {
@@ -133,22 +133,22 @@
 .icon-cr-business-facilities:before {
   content: "\f132";
 }
-.icon-cr-buzzer-wireless-intercom:before {
+.icon-cr-buzzer:before {
   content: "\f133";
 }
-.icon-cr-cancellation:before {
+.icon-cr-cancell:before {
   content: "\f135";
 }
 .icon-cr-canoe:before {
   content: "\f136";
 }
-.icon-cr-car-hire:before {
+.icon-cr-car:before {
   content: "\f137";
 }
 .icon-cr-car-park:before {
   content: "\f138";
 }
-.icon-cr-car-power-charging-station:before {
+.icon-cr-car-charging:before {
   content: "\f139";
 }
 .icon-cr-carbon:before {
@@ -166,22 +166,22 @@
 .icon-cr-children-high:before {
   content: "\f143";
 }
-.icon-cr-children-playground:before {
+.icon-cr-children-play:before {
   content: "\f144";
 }
 .icon-cr-city-view:before {
   content: "\f145";
 }
-.icon-cr-cleaning-products:before {
+.icon-cr-cleaning:before {
   content: "\f146";
 }
-.icon-cr-close-popup:before {
+.icon-cr-close:before {
   content: "\f147";
 }
 .icon-cr-closet:before {
   content: "\f148";
 }
-.icon-cr-clothes-dryer-pay:before {
+.icon-cr-clothes-dry:before {
   content: "\f149";
 }
 .icon-cr-clothes-rack:before {
@@ -196,25 +196,25 @@
 .icon-cr-coffee:before {
   content: "\f14d";
 }
-.icon-cr-complimentary-bottled-water:before {
+.icon-cr-bot-water:before {
   content: "\f14e";
 }
-.icon-cr-complimentary-instant-coffee:before {
+.icon-cr-coffee-maker:before {
   content: "\f14f";
 }
-.icon-cr-complimentary-tea:before {
+.icon-cr-tea:before {
   content: "\f150";
 }
 .icon-cr-concierge:before {
   content: "\f151";
 }
-.icon-cr-currency-exchange:before {
+.icon-cr-currency-ex:before {
   content: "\f158";
 }
-.icon-cr-daily-housekeeping:before {
+.icon-cr-sweep:before {
   content: "\f159";
 }
-.icon-cr-daily-newspaper:before {
+.icon-cr-newspaper:before {
   content: "\f15a";
 }
 .icon-cr-dart-board:before {
@@ -229,7 +229,7 @@
 .icon-cr-diving:before {
   content: "\f162";
 }
-.icon-cr-domestic-rates:before {
+.icon-cr-domestic:before {
   content: "\f163";
 }
 .icon-cr-dressing-room:before {
@@ -238,58 +238,58 @@
 .icon-cr-dryer:before {
   content: "\f166";
 }
-.icon-cr-dvd-cd-player:before {
+.icon-cr-dvd:before {
   content: "\f167";
 }
-.icon-cr-electric-blanket:before {
+.icon-cr-electric:before {
   content: "\f169";
 }
 .icon-cr-elevator:before {
   content: "\f16a";
 }
-.icon-cr-email-envelope:before {
+.icon-cr-email:before {
   content: "\f16b";
 }
 .icon-cr-essentials:before {
   content: "\f16c";
 }
-.icon-cr-executive-floor:before {
+.icon-cr-ex-floor:before {
   content: "\f16d";
 }
-.icon-cr-executive-lounge:before {
+.icon-cr-ex-lounge:before {
   content: "\f16e";
 }
-.icon-cr-express-check-in:before {
+.icon-cr-check-in:before {
   content: "\f16f";
 }
-.icon-cr-extra-long-beds:before {
+.icon-cr-long-bed:before {
   content: "\f170";
 }
-.icon-cr-facilities-for:before {
+.icon-cr-facilities:before {
   content: "\f172";
 }
-.icon-cr-family-room:before {
+.icon-cr-family:before {
   content: "\f173";
 }
 .icon-cr-fan:before {
   content: "\f174";
 }
-.icon-cr-fax-machine:before {
+.icon-cr-fax:before {
   content: "\f176";
 }
-.icon-cr-fire-extinguisher:before {
+.icon-cr-fire-ext:before {
   content: "\f178";
 }
 .icon-cr-fireplace:before {
   content: "\f179";
 }
-.icon-cr-first-aid-kit:before {
+.icon-cr-aid-kit:before {
   content: "\f17a";
 }
 .icon-cr-fishing:before {
   content: "\f17b";
 }
-.icon-cr-fitness-center:before {
+.icon-cr-fitness:before {
   content: "\f17c";
 }
 .icon-cr-flight-earn:before {
@@ -298,7 +298,7 @@
 .icon-cr-free-cancel:before {
   content: "\f17f";
 }
-.icon-cr-welcome-drink:before {
+.icon-cr-drink:before {
   content: "\f180";
 }
 .icon-cr-free-wifi:before {
@@ -307,16 +307,16 @@
 .icon-cr-garden:before {
   content: "\f182";
 }
-.icon-cr-gift-shop:before {
+.icon-cr-gift:before {
   content: "\f184";
 }
-.icon-cr-golf-course:before {
+.icon-cr-golf:before {
   content: "\f185";
 }
-.icon-cr-golf-course-3k:before {
+.icon-cr-golf-3k:before {
   content: "\f186";
 }
-.icon-cr-grocery-deliveries:before {
+.icon-cr-grocery:before {
   content: "\f187";
 }
 .icon-cr-guest-house:before {
@@ -328,10 +328,10 @@
 .icon-cr-hair-dryer:before {
   content: "\f18a";
 }
-.icon-cr-halal-restaurant:before {
+.icon-cr-halal:before {
   content: "\f18b";
 }
-.icon-cr-half-full-board:before {
+.icon-cr-half-full:before {
   content: "\f18c";
 }
 .icon-cr-hangers:before {
@@ -340,10 +340,10 @@
 .icon-cr-heating:before {
   content: "\f18e";
 }
-.icon-cr-hiking-trails:before {
+.icon-cr-hiking:before {
   content: "\f18f";
 }
-.icon-cr-holiday-house:before {
+.icon-cr-holi-house:before {
   content: "\f190";
 }
 .icon-cr-homestay:before {
@@ -352,7 +352,7 @@
 .icon-cr-horse-riding:before {
   content: "\f192";
 }
-.icon-cr-hot-spring-bath:before {
+.icon-cr-hot-bath:before {
   content: "\f193";
 }
 .icon-cr-hot-tub:before {
@@ -361,31 +361,31 @@
 .icon-cr-humidifier:before {
   content: "\f19c";
 }
-.icon-cr-in-room-safe:before {
+.icon-cr-in-safe:before {
   content: "\f19f";
 }
-.icon-cr-in-room-tablet:before {
+.icon-cr-in-tablet:before {
   content: "\f1a0";
 }
 .icon-cr-video-games:before {
   content: "\f1a1";
 }
-.icon-cr-indoor-poor:before {
+.icon-cr-indoor:before {
   content: "\f1a2";
 }
 .icon-cr-infirmary:before {
   content: "\f1a4";
 }
-.icon-cr-info-with-circle:before {
+.icon-cr-info-circle:before {
   content: "\f1a5";
 }
 .icon-cr-inhouse-movies:before {
   content: "\f1a6";
 }
-.icon-cr-interconnecting:before {
+.icon-cr-interconnect:before {
   content: "\f1a8";
 }
-.icon-cr-ipod-docking-station:before {
+.icon-cr-ipod:before {
   content: "\f1a9";
 }
 .icon-cr-islamic:before {
@@ -418,13 +418,13 @@
 .icon-cr-laundromat:before {
   content: "\f1b4";
 }
-.icon-cr-laundry-service:before {
+.icon-cr-laundry:before {
   content: "\f1b5";
 }
 .icon-cr-library:before {
   content: "\f1b6";
 }
-.icon-cr-line-empty-circle:before {
+.icon-cr-line-circle:before {
   content: "\f1b9";
 }
 .icon-cr-linens:before {
@@ -433,7 +433,7 @@
 .icon-cr-lockers:before {
   content: "\f1bb";
 }
-.icon-cr-luggage-storage:before {
+.icon-cr-luggage-sto:before {
   content: "\f1bc";
 }
 .icon-cr-luggage:before {
@@ -445,7 +445,7 @@
 .icon-cr-max-plus:before {
   content: "\f1c7";
 }
-.icon-cr-max-occupancy:before {
+.icon-cr-max-occu:before {
   content: "\f1c8";
 }
 .icon-cr-meeting:before {
@@ -484,13 +484,13 @@
 .icon-cr-pay-at:before {
   content: "\f1e6";
 }
-.icon-cr-payment-no-cart:before {
+.icon-cr-pay-no-cart:before {
   content: "\f1e7";
 }
-.icon-cr-pets-allowed:before {
+.icon-cr-pet-allow:before {
   content: "\f1e9";
 }
-.icon-cr-photocopying:before {
+.icon-cr-photocopy:before {
   content: "\f1ea";
 }
 .icon-cr-pool-kids:before {
@@ -499,10 +499,10 @@
 .icon-cr-pool:before {
   content: "\f1f3";
 }
-.icon-cr-poolside-bar:before {
+.icon-cr-pool-bar:before {
   content: "\f1f4";
 }
-.icon-cr-portable-wifi:before {
+.icon-cr-por-wifi:before {
   content: "\f1f5";
 }
 .icon-cr-postal-service:before {
@@ -511,13 +511,13 @@
 .icon-cr-printer:before {
   content: "\f1f8";
 }
-.icon-cr-private-beach:before {
+.icon-cr-pri-beach:before {
   content: "\f1f9";
 }
-.icon-cr-private-entrance:before {
+.icon-cr-pri-entrance:before {
   content: "\f1fa";
 }
-.icon-cr-private-pool:before {
+.icon-cr-pri-pool:before {
   content: "\f1fb";
 }
 .icon-cr-refrigerator:before {
@@ -529,22 +529,22 @@
 .icon-cr-restaurant:before {
   content: "\f200";
 }
-.icon-cr-room-flashdeal:before {
+.icon-cr-flash:before {
   content: "\f202";
 }
-.icon-cr-room-mobiledeal:before {
+.icon-cr-mobile:before {
   content: "\f203";
 }
-.icon-cr-room-otherdeal:before {
+.icon-cr-otherdeal:before {
   content: "\f204";
 }
-.icon-cr-room-smartdeal:before {
+.icon-cr-smartdeal:before {
   content: "\f205";
 }
-.icon-cr-room-savedeal:before {
+.icon-cr-savedeal:before {
   content: "\f206";
 }
-.icon-cr-room-promotion:before {
+.icon-cr-promotion:before {
   content: "\f207";
 }
 .icon-cr-room-service:before {
@@ -562,19 +562,19 @@
 .icon-cr-scale:before {
   content: "\f20c";
 }
-.icon-cr-search-icon:before {
+.icon-cr-search:before {
   content: "\f20e";
 }
 .icon-cr-seating-area:before {
   content: "\f20f";
 }
-.icon-cr-separate-dining:before {
+.icon-cr-se-dining:before {
   content: "\f211";
 }
-.icon-cr-separate-living:before {
+.icon-cr-se-living:before {
   content: "\f212";
 }
-.icon-cr-separate-shower:before {
+.icon-cr-se-shower:before {
   content: "\f213";
 }
 .icon-cr-sewing-kit:before {
@@ -598,13 +598,13 @@
 .icon-cr-shrine:before {
   content: "\f21b";
 }
-.icon-cr-shuttle-service:before {
+.icon-cr-shuttle:before {
   content: "\f21c";
 }
-.icon-cr-ski-equipment-rentals:before {
+.icon-cr-ski-rentals:before {
   content: "\f21d";
 }
-.icon-cr-ski-lessons:before {
+.icon-cr-ski-less:before {
   content: "\f21e";
 }
 .icon-cr-skiing:before {
@@ -613,13 +613,13 @@
 .icon-cr-slippers:before {
   content: "\f220";
 }
-.icon-cr-smoke-detector:before {
+.icon-cr-smok-detector:before {
   content: "\f221";
 }
-.icon-cr-smoking-allowed:before {
+.icon-cr-smok-allow:before {
   content: "\f222";
 }
-.icon-cr-smoking-area:before {
+.icon-cr-smok-area:before {
   content: "\f223";
 }
 .icon-cr-snorkeling:before {
@@ -628,10 +628,10 @@
 .icon-cr-sofa:before {
   content: "\f225";
 }
-.icon-cr-solarium:before {
+.icon-cr-solar:before {
   content: "\f226";
 }
-.icon-cr-soundproofing:before {
+.icon-cr-sound:before {
   content: "\f227";
 }
 .icon-cr-spa-sauna:before {
@@ -643,13 +643,13 @@
 .icon-cr-sqm:before {
   content: "\f22a";
 }
-.icon-cr-squash-courts:before {
+.icon-cr-squash:before {
   content: "\f22b";
 }
 .icon-cr-steam:before {
   content: "\f235";
 }
-.icon-cr-suitable-events:before {
+.icon-cr-suitable:before {
   content: "\f236";
 }
 .icon-cr-surfing:before {
@@ -661,16 +661,16 @@
 .icon-cr-tamil:before {
   content: "\f239";
 }
-.icon-cr-tax-receipt:before {
+.icon-cr-tax:before {
   content: "\f23a";
 }
-.icon-cr-taxi-service:before {
+.icon-cr-taxi:before {
   content: "\f23b";
 }
 .icon-cr-telephone:before {
   content: "\f23c";
 }
-.icon-cr-tennis-courts:before {
+.icon-cr-tennis:before {
   content: "\f23d";
 }
 .icon-cr-theme-park:before {
@@ -679,10 +679,10 @@
 .icon-cr-thumb-up:before {
   content: "\f241";
 }
-.icon-cr-ticket-service:before {
+.icon-cr-ticket:before {
   content: "\f244";
 }
-.icon-cr-time-icon:before {
+.icon-cr-time:before {
   content: "\f245";
 }
 .icon-cr-toiletries:before {
@@ -739,10 +739,10 @@
 .icon-cr-water-moto:before {
   content: "\f260";
 }
-.icon-cr-water-non-moto:before {
+.icon-cr-water-sport:before {
   content: "\f261";
 }
-.icon-cr-water-equipment:before {
+.icon-cr-water-eq:before {
   content: "\f262";
 }
 .icon-cr-wheelchair:before {
@@ -757,9 +757,9 @@
 .icon-cr-wind-surfing:before {
   content: "\f266";
 }
-.icon-cr-wooden-flooring:before {
+.icon-cr-wooden-floor:before {
   content: "\f267";
 }
-.icon-cr-yoga-room:before {
+.icon-cr-yoga:before {
   content: "\f269";
 }

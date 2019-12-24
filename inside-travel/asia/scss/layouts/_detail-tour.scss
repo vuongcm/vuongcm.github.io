@@ -1048,6 +1048,9 @@
 			margin-right: 5px;
 			color: $higlight-color;
 		}
+		a{
+			display: inline;
+		}
 	}
 	.price-trip-box{
 		justify-content: center;
@@ -1056,10 +1059,30 @@
 		
 		&>span{
 			margin-left: unset;
-			font-size: 18px;
+			//font-size: 18px;
+			strong{
+				font-size: 22px;
+			}
 		}
 	}
-
+	.wrap-more-inclusions{
+		display: none;
+	}
+}
+.wrap-more-inclusions{
+	font-size: 11px;
+	a{
+		color: $light-color-4;
+		&:after{
+			background-color: $light-color-4;
+		}
+		&:hover{
+			color: $higlight-color;
+			&:after{
+				background-color: $higlight-color;
+			}
+		}
+	}
 }
 @media (max-width: 1351px){
 	.banner-top-detail{
@@ -1416,6 +1439,18 @@
 			}
 		}
 		 
+	}
+	.body-current-box{
+		p{
+			display: none;
+			&:last-child{
+				display: block;
+			}
+		}
+		.wrap-more-inclusions{
+			display: block;
+			margin-top: 15px;
+		}
 	}
 }
 @media (max-width: 375px) {
