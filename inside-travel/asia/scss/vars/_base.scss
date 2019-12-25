@@ -1148,8 +1148,8 @@ select:focus {
         }
         &>span{
             box-shadow: none;
-            border: 1px solid $higlight-color;
-            color: $higlight-color;
+            background-color: $higlight-color;
+            color: #fff;
             &>i{
                 background-color: $higlight-color;
             }
@@ -1161,7 +1161,7 @@ select:focus {
                 top: calc(100% - 1px);
                 left: calc(50% + 1px);
                 margin-left: -10px;
-                background-color: #fff;
+                background-color: $higlight-color;
                 -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
                 clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
                 -webkit-shape-outside: polygon(0% 0%, 100% 0%, 50% 100%);
@@ -1268,9 +1268,9 @@ select:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 566px;
+    //height: 566px;
     align-content: space-between;
-    padding-bottom: 20px;
+    padding-bottom: 312px;
     position: relative;
     background-color: $background-color;
     &>a:first-child{
@@ -1300,7 +1300,7 @@ select:focus {
             max-height: 39px;
             overflow-y: hidden;
             color: $btn-text-color-st1;
-            @include smooth(.5s);
+            @include smooth(1.5s);
         }
         &>span{
             display: block;
@@ -1319,7 +1319,7 @@ select:focus {
         }
         &:hover{
             &>p{
-                max-height: 152px;
+                max-height: 400px;
             }
         }
     }
@@ -1327,6 +1327,8 @@ select:focus {
         margin-top: auto;
         margin-bottom: 0;
         flex-wrap: nowrap;
+        position: absolute;
+        bottom: 80px;
         .tooltip{
             &>span{
                 @include translateX(-50%);
@@ -1335,9 +1337,10 @@ select:focus {
         }
     }
     .btn-st2{
-        margin-top: 20px;
         color: $btn-text-color-st1;
         border-color: #bbb;
+        position: absolute;
+        bottom: 20px;
         &:hover{
             color: #ccaf3d;
             border-color: #ccaf3d;
@@ -2167,13 +2170,13 @@ select:focus {
     .banner-top{
         height: 440px;
     }
-    .trip{
+    /*.trip{
         .content-trip{
             &>p{
                 max-height: 36px;
             }
         }
-    }
+    }*/
     .wrap-slide-st4{
         .synch-carousels{
             .nav-arrows{
@@ -2226,9 +2229,6 @@ select:focus {
     }
     .phone-box{
         margin-left: 0;
-    }
-    .trip{
-        height: 529px;
     }
     .wrap-slide-st4{
         .synch-carousels{

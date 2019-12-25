@@ -139,7 +139,7 @@ $(document).ready(function() {
 	    	$(this).children('.paragraph').removeAttr('style');
 	    });
 	    $('.trip .content-trip').hover(function(){
-	    	$(this).children('.paragraph').css('max-height','152px');
+	    	$(this).children('.paragraph').css('max-height','400px');
 	    },function(){
 	    	$(this).children('.paragraph').removeAttr('style');
 	    });
@@ -169,7 +169,7 @@ $(document).ready(function() {
 		$(this).toggleClass('active');
 	});
 //==============end header==============
-	if($('.trip-st2').length > 0){
+	if($('.trip-st2').length){
 		/*$('.trip-st2').each(function(){
 			let maxHeightCtTrip2 = $(this).find('.right-trip').outerHeight() - $(this).find('.head-trip').outerHeight() - $(this).find('.price-trip-box').outerHeight() - 22 + 'px';
 			$(this).find('.paragraph').css('max-height',maxHeightCtTrip2);
@@ -1393,8 +1393,10 @@ window.onload = function() {
 		$('.map-home').height($('.map-home>img').height());
 	}
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());
-	let heightTrip = 91+$('.content-trip').height()+$('.trip a').height();
-	$('.trip').height(heightTrip);
+
+	/*let heightTrip = 91+$('.content-trip').height()+$('.trip a').height();
+	$('.trip').height(heightTrip);*/
+
 	//$('#preloader').delay(500).fadeOut(300);
     /*setTimeout(function(){
 	    $('body').removeClass('preloading-bd');
