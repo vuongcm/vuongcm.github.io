@@ -145,6 +145,30 @@ select:focus {
 	outline-style: dotted;
 	outline-width: 1px;
 }
+.icon-font-cr{
+    font-size: 22px;
+}
+.icon-cr-baybycot{
+    background: url(../images/icon/babycot.svg) no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 20px;
+    display: inline-block;
+}
+.icon-cr-mini-golf{
+    background: url(../images/icon/mini-golf.svg) no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 22px;
+    display: inline-block;
+}
+.icon-cr-taichiclass.hover{
+    &:hover{
+        ellipse,path{
+            stroke: $higlight-color;
+        }
+    }
+}
 .input-st1{
     border: none;
     background-color: transparent;
@@ -1032,6 +1056,18 @@ select:focus {
         }
         &:hover{
             border-color: $higlight-color;
+        }
+    }
+    &>.icon-cr-taichiclass{
+        width: 35px;
+        height: 35px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #c3bdbd;
+        border-radius: 50%;
+        ellipse,path{
+            stroke: #8a8686;
         }
     }
     &>a{
