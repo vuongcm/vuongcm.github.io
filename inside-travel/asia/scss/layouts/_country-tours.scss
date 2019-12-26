@@ -323,7 +323,7 @@
 		justify-content: center;
 	}
 	.select-st1{
-		width: 29%;
+		width: 26.6666%;
 		padding-left: 10px;
 		padding-right: 10px;
 		position: relative;
@@ -372,8 +372,30 @@
 			}
 		}
 	}
+	.filter-who-2{
+		.value{
+			&>li{
+				.btn-value{
+					.icon-font:first-child{
+						font-size: 22px;
+						&:before{
+							color: $higlight-color;
+						}
+					}
+					&:hover{
+						.icon-font:first-child{
+							&:before{
+								color: $main-color;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 	.filter-submit-2{
-		width: 13%;
+		max-width: 20%;
+		flex-grow: 1;
 		padding-left: 10px;
 		padding-right: 10px;
 
@@ -385,6 +407,8 @@
 			width: 100%;
 			height: 40px;
 			max-height: 100%;
+			letter-spacing: 1px;
+			font-size: 14px;
 		}
 	}
 }

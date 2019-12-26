@@ -148,27 +148,6 @@ select:focus {
 .icon-font-cr{
     font-size: 22px;
 }
-.icon-cr-baybycot{
-    background: url(../images/icon/babycot.svg) no-repeat;
-    background-size: contain;
-    width: 24px;
-    height: 20px;
-    display: inline-block;
-}
-.icon-cr-mini-golf{
-    background: url(../images/icon/mini-golf.svg) no-repeat;
-    background-size: contain;
-    width: 20px;
-    height: 22px;
-    display: inline-block;
-}
-.icon-cr-taichiclass.hover{
-    &:hover{
-        ellipse,path{
-            stroke: $higlight-color;
-        }
-    }
-}
 .input-st1{
     border: none;
     background-color: transparent;
@@ -242,7 +221,7 @@ select:focus {
     color: #fff;
     background-color: #333;
     text-transform: uppercase;
-    font-size: 12px;
+    //font-size: 12px;
     letter-spacing: 3px;
     @include smooth(.25s);
     font-weight: 600;
@@ -1043,7 +1022,7 @@ select:focus {
         }
     }
     &>.icon-font-cr{
-        font-size: 22px;
+        font-size: 20px;
         padding: 5px;
         border: 1px solid #c3bdbd;
         border-radius: 50%;
@@ -1058,25 +1037,8 @@ select:focus {
             border-color: $higlight-color;
         }
     }
-    &>.icon-cr-taichiclass{
-        width: 35px;
-        height: 35px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid #c3bdbd;
-        border-radius: 50%;
-        ellipse,path{
-            stroke: #8a8686;
-        }
-    }
     &>a{
         opacity: 1;
-        span{
-            i{
-                top: calc(100% - 1px);
-            }
-        }
     }
     span{
         visibility: hidden;
@@ -1085,7 +1047,7 @@ select:focus {
         background-color: $background-color;
         color: $main-color;
         text-align: center;
-        padding: 10px 5px;
+        padding: 5px;
         border-radius: 6px;
         z-index: 99;
         opacity: 0;
@@ -1109,16 +1071,20 @@ select:focus {
             white-space: nowrap;
             margin-bottom: 5px;
         }
-        i{
-            display: block;
-            height: 10px;
-            width: 20px;
+        &:after{
+            content: '';
+            height: 12px;
+            width: 12px;
             position: absolute;
-            top: 100%;
+            bottom: 0;
             left: 50%;
-            margin-left: -10px;
-            background-color: $background-color;
-            @include retang();
+            transform: translate(-50%,50%) rotate(45deg);
+            -moz-transform: translate(-50%,50%) rotate(45deg);
+            -webkit-transform: translate(-50%,50%) rotate(45deg);
+            -o-transform: translate(-50%,50%) rotate(45deg);
+            -ms-transform: translate(-50%,50%) rotate(45deg);
+            background-color: #fff;
+            box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.13);
         }
 
     }
@@ -1150,22 +1116,12 @@ select:focus {
             box-shadow: none;
             background-color: $higlight-color;
             color: #fff;
-            &>i{
-                background-color: $higlight-color;
+            font{
+                margin-bottom: 0;
             }
             &:after{
-                content: " ";
-                height: 9px;
-                width: 18px;
-                position: absolute;
-                top: calc(100% - 1px);
-                left: calc(50% + 1px);
-                margin-left: -10px;
                 background-color: $higlight-color;
-                -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-                clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-                -webkit-shape-outside: polygon(0% 0%, 100% 0%, 50% 100%);
-                shape-outside: polygon(0% 0%, 100% 0%, 50% 100%);
+                box-shadow: none;
             }
         }
     }
@@ -1317,6 +1273,7 @@ select:focus {
                 font-weight: 600;
             }
         }
+        
         &:hover{
             &>p{
                 max-height: 400px;
@@ -1353,6 +1310,36 @@ select:focus {
         z-index: 2;
         font-size: 26px;
         color: $color-cover-text;
+    }
+}
+.trip.trip-itine{
+    padding-bottom: 369px;
+    .content-trip{
+        &>.tooltip{
+            display: inline-block;
+            .icon-itine{
+                font-size: 40px;
+                &:before{
+                    color: $higlight-color;
+                }
+                
+            }
+            span{
+                left: 50%;
+                box-shadow: none;
+                background-color: $higlight-color;
+                color: #fff;
+                width: 300px;
+                max-width: 90vw;
+
+                 @include translateX(-50%);
+                &:after{
+                    background-color: $higlight-color;
+                    box-shadow: none;
+                }
+            }
+        }
+        
     }
 }
 .wrap-trip-st2{
