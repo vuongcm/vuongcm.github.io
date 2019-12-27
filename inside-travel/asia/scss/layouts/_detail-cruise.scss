@@ -106,11 +106,23 @@
 		align-items: flex-start;
 		width: 100%;
 		&>div{
-			width: 33.333%;
+			a{
+				padding: 1px;
+			}
 		}
-		.box-img-divi{
+		.wrap-media{
+			width: 50%;
+		}
+		.box-divi-row{
+			width: 25%;
+			a{
+				overflow: hidden;
+			}
+		}
+		.box-divi-col{
 			display: flex;
 			flex-wrap: wrap;
+			width: 33.333%;
 			a{
 				width: 50%;
 				overflow: hidden;
@@ -578,7 +590,7 @@
 		margin-left: auto;
 		margin-right: auto;
 		.row{
-			.box-img-divi{
+			.box-divi-row,.box-divi-col{
 				display: none;
 			}
 			.wrap-media{

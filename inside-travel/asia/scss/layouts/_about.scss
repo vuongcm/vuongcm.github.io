@@ -1,5 +1,6 @@
-.banner-top-sub{
+.banner-small{
 	height: 450px;
+	background-color: rgba(0,0,0,0.3);
 	.wrap-title-banner-top{
 		padding: 15px 15px 100px;
 	}
@@ -119,8 +120,8 @@
     			filter: grayscale(100%);
 			}
 			.network{
-				top: 10px;
-				left: 10px;
+				top: 1px;
+				left: 5px;
 				@include bfhide();
 				@include smooth(.8s);
 				transform: rotateY(180deg);
@@ -156,8 +157,6 @@
 }
 .network{
 	position: absolute;
-	padding: 10px 5px;
-	background-color: $color-cover-dak-2;
 	display: inline-flex;
 	justify-content: space-around;
 	a{
@@ -190,7 +189,7 @@
 	margin-right: auto;
 }
 @media (max-width: 991px) {
-	.banner-top-sub{
+	.banner-small{
 		height: 330px;
 	}
 	.wrap-slide-team{
@@ -204,8 +203,8 @@
 	}
 }
 @media (max-width: 767px) {
-	.banner-top-sub{
-		height: 250px;
+	.banner-small{
+		height: 265px;
 	}
 	.wrap-slide-team{
 		.item{

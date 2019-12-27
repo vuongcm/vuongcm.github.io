@@ -764,8 +764,8 @@ $(document).ready(function() {
 		$(this).next('.icon-font').toggleClass('plus').toggleClass('minus');
 	});
 	if($('.wrap-cruise-media').length){
-		let mediaHeight = $('.wrap-cruise-media .wrap-media').height()/2;
-		$('.box-img-divi a').height(mediaHeight);
+		let mediaHeight = ($('.wrap-cruise-media .wrap-media').height() - 7)/2;
+		$('.box-divi-row a').height(mediaHeight);
 	}
 	//============search box=============
 	$('.select-st1 .text').on('click',function(){
