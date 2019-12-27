@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'insideTravel';
-  src:  url('fonts/insideTravel.eot?uvi3o5');
-  src:  url('fonts/insideTravel.eot?uvi3o5#iefix') format('embedded-opentype'),
-    url('fonts/insideTravel.ttf?uvi3o5') format('truetype'),
-    url('fonts/insideTravel.woff?uvi3o5') format('woff'),
-    url('fonts/insideTravel.svg?uvi3o5#insideTravel') format('svg');
+  src:  url('fonts/insideTravel.eot?yyihjl');
+  src:  url('fonts/insideTravel.eot?yyihjl#iefix') format('embedded-opentype'),
+    url('fonts/insideTravel.ttf?yyihjl') format('truetype'),
+    url('fonts/insideTravel.woff?yyihjl') format('woff'),
+    url('fonts/insideTravel.svg?yyihjl#insideTravel') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,9 @@
 
 .icon-itine:before {
   content: "\e930";
+}
+.icon-boating:before {
+  content: "\e931";
 }
 .icon-festival:before {
   content: "\e936";
