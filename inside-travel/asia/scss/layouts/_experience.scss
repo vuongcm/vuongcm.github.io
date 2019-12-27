@@ -20,10 +20,6 @@
 			padding-bottom: 152px;
 			&>a{
 				position: relative;
-				opacity: .8;
-				&:hover{
-					opacity: 1;
-				}
 			}
 			.wrap-text-abso{
 				top: 0;
@@ -119,7 +115,7 @@
 		.tooltip{
 			span{
 				@include translateX(-50%);
-				left: 15px;
+				left: 17px;
 			}
 		}
 	}

@@ -36,7 +36,9 @@
 	}
 }
 .cruise-intro-container{
-
+	.wrap-cruise-media{
+		margin-bottom: 20px;
+	}
 	.wrap-mini-intro{
 		.title-h2{
 			text-transform: uppercase;
@@ -45,39 +47,43 @@
 			font-size: 20px;
 			margin-bottom: 30px;
 		}
-		.hotel-news{
-			text-align: center;
+	}
+	.hotel-news{
+		text-align: center;
+	}
+	.view-out{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-top: 40px;
+		&>div{
+			display: inline-flex;
+    		align-items: center;
+    		&>.icon-font{
+    			margin-left: 15px;
+			    font-size: 18px;
+			    color: #d0b316;
+    		}
 		}
-		.wrap-tooltip{
-			.tooltip{
-				.icon-font-cr{
-					font-size: 28px;
-				}
-				span{
-					left: 20px;
-				}
+		.link-st3{
+			text-transform: uppercase;
+    		margin-left: 5px;
+		}
+	}
+	.wrap-tooltip{
+		.tooltip{
+			.icon-font-cr{
+				font-size: 33px;
+			}
+			span{
+				left: 24px;
+				@include translateX(-50%);
 			}
 		}
-		.review-exci{
-			margin-right: 15px;
-		}
-		.view-out{
-			padding-top: 40px;
-			&>div{
-				display: inline-flex;
-				align-items: center;
-				&>.icon-font{
-					margin-left: 15px;
-					font-size: 18px;
-					color: $higlight-color;
-				}
-			}
-			.link-st3{
-				text-transform: uppercase;
-				margin-left: 5px;
-			}
-		}
-	} 
+	}
+	.review-exci{
+		margin-right: 15px;
+	}
 }
 .review-exci{
 	text-transform: uppercase;
@@ -91,6 +97,25 @@
 	strong{
 		font-weight: normal;
 		text-transform: none;
+	}
+}
+.wrap-cruise-media{
+	.row{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		width: 100%;
+		&>div{
+			width: 33.333%;
+		}
+		.box-img-divi{
+			display: flex;
+			flex-wrap: wrap;
+			a{
+				width: 50%;
+				overflow: hidden;
+			}
+		}
 	}
 }
 .check-r-container{
@@ -179,7 +204,7 @@
 .booking-cr-sub{
 	width: 100%;
 	display: flex;
-	padding: 15px;
+	padding: 15px 0;
 	font-weight: 600;
 	div{
 		padding-left: 5px;
@@ -548,6 +573,19 @@
 			margin-right: auto;
 		}
 	}
+	.wrap-cruise-media{
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		.row{
+			.box-img-divi{
+				display: none;
+			}
+			.wrap-media{
+				width: 100%;
+			}
+		}
+	}
 }
 @media (max-width: 767px){
 	.cruise-intro-container{
@@ -589,5 +627,12 @@
 		figure{
 			width: 100%;
 		}
+	}
+}
+@media (max-width: 479px){
+	.wrap-cruise-media{
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }

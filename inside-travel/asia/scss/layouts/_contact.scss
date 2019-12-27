@@ -2,9 +2,7 @@
     height: 580px;
     margin-top: 0;
     position: relative;
-    .wrap-title-banner-top-line{
-        padding-top: 15px;
-    }
+    background-color: rgba(0, 0, 0, .3);
 }
 .wrap-contact-box{
     border: 1px solid #cecece;
@@ -61,11 +59,14 @@
 }
 @media (max-width: 991px) {
     .banner-top-contact{
-        height: 450px;
+        height: 370px;
     }
 }
 @media (max-width: 767px) {
 	.wrap-contact-box{
     	padding: 15px 20px;
 	}
+    .banner-top-contact{
+        height: 320px;
+    }
 }
