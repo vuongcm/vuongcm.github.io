@@ -1048,7 +1048,7 @@ select:focus {
         color: $main-color;
         text-align: center;
         padding: 5px 10px;
-        border-radius: 20px;
+        border-radius: 6px;
         z-index: 99;
         opacity: 0;
         @include smooth(.2s);
