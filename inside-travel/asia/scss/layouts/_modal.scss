@@ -526,6 +526,9 @@
 		text-align: left;
 		.text{
 			cursor: pointer;
+			&>.icon-font:first-child{
+				color: $light-color-2;
+			}
 		}
 		.value-2{
 			top: 100%;
@@ -545,7 +548,7 @@
 			.btn-value{
 				.icon-font:first-child{
 					display: inline-block;
-					width: 10%;
+					//width: 10%;
 					margin-right: 8px;
 					font-size: 15px;
 					color: $higlight-color;
@@ -558,6 +561,25 @@
 				&:hover{
 					.icon-font:first-child{
 						color: $main-color;
+					}
+				}
+			}
+		}
+	}
+	.booking-step-when{
+		.value{
+			.btn-value{
+				.icon-font:first-child{
+					font-size: 22px;
+					&:before{
+						color: $higlight-color;
+					}
+				}
+				&:hover{
+					.icon-font:first-child{
+						&:before{
+							color: $main-color;
+						}
 					}
 				}
 			}

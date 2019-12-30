@@ -60,6 +60,11 @@
 				width: 100%;
 			}
 		}
+		.text{
+			&>.icon-font:first-child{
+				color: $light-color-2;
+			}
+		}
 		.booking-step-where{
 			position: relative;
 			width: 21%;
@@ -89,15 +94,21 @@
 					padding-left: 15px;
 					.icon-font:first-child{
 						display: inline-block;
-						width: 10%;
+						//width: 10%;
 						margin-right: 8px;
-						font-size: 15px;
+						font-size: 22px;
 						color: $higlight-color;
 						@include smooth(.25s);
+						&:before{
+							color: $higlight-color;
+						}
 					}
 					&:hover{
 						.icon-font:first-child{
 							color: $main-color;
+							&:before{
+								color: $main-color;
+							}
 						}
 					}
 				}
@@ -217,19 +228,23 @@
 .text{
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	//justify-content: space-between;
 	width: 100%;
 	height: 20px;
+	&>.icon-font:first-child{
+		font-size: 16px;
+		margin-right: 5px;
+	}
 	b{
 		font-weight: normal;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		overflow: hidden;
-		width: 85%;
+		flex-grow: 1;
 	}
 	.select-arrow-thin{
 		font-size: 8px;
-		margin-left: 5px;
+		margin-left: auto;
 	}
 }
 .value{
@@ -261,7 +276,7 @@
 				text-overflow: ellipsis;
 				white-space: nowrap;
 				overflow: hidden;
-				width: 85%;
+				flex-grow: 1;
 			}
 			.checkmark{
 				font-size: 15px;
