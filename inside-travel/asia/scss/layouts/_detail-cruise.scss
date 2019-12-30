@@ -105,9 +105,14 @@
 		flex-wrap: wrap;
 		align-items: flex-start;
 		width: 100%;
+		line-height: 0;
 		&>div{
-			a{
+			&>a{
 				padding: 1px;
+			}
+			.img-box{
+    			padding: 5px 10px;
+    			line-height: 2;
 			}
 		}
 		.wrap-media{

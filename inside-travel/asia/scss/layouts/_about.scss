@@ -1,9 +1,14 @@
 .banner-small{
 	height: 450px;
-	background-color: rgba(0,0,0,0.3);
+	background-color: rgba(0,0,0,0.5);
 	.wrap-title-banner-top{
 		padding: 15px 15px 100px;
 	}
+}
+.bg-about{
+	background-image: url(../images/background/bg-about.jpg);
+    height: 100%;
+    background-position-y: 37px;
 }
 .about-container{
 	//margin-top: 50px;
@@ -200,6 +205,9 @@
 	            }
 	        }
 		}
+	}
+	.bg-about{
+	    //background-position-y: 50px;
 	}
 }
 @media (max-width: 767px) {
