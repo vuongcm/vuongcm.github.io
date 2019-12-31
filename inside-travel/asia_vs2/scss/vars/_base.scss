@@ -148,6 +148,27 @@ select:focus {
 .icon-font-cr{
     font-size: 22px;
 }
+.icon-cr-baybycot{
+    background: url(../images/icon/babycot.svg) no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 20px;
+    display: inline-block;
+}
+.icon-cr-mini-golf{
+    background: url(../images/icon/mini-golf.svg) no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 22px;
+    display: inline-block;
+}
+.icon-cr-taichiclass.hover{
+    &:hover{
+        ellipse,path{
+            stroke: $higlight-color;
+        }
+    }
+}
 .input-st1{
     border: none;
     background-color: transparent;
@@ -527,20 +548,7 @@ select:focus {
     overflow: hidden;
     white-space: nowrap;
 }
-.phone-box{
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 35px;
-    height: 100%;
-    .phone{
-        font-size: 15px;
-        margin-right: 5px;
-    }
-    strong{
-        font-weight: 600;
-    }
-}
+
 .box-text{
     display: flex;
     justify-content: center;
@@ -1013,7 +1021,7 @@ select:focus {
 .tooltip{
     position: relative;
     &>.icon-font{
-        font-size: 34px;
+        font-size: 30px;
         &:before{
             color: #c3bdbd;
         }
@@ -1022,7 +1030,7 @@ select:focus {
         }
     }
     &>.icon-font-cr{
-        font-size: 26px;
+        font-size: 20px;
         padding: 5px;
         border: 1px solid #c3bdbd;
         border-radius: 50%;
@@ -1037,6 +1045,18 @@ select:focus {
             border-color: $higlight-color;
         }
     }
+    &>.icon-cr-taichiclass{
+        width: 35px;
+        height: 35px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #c3bdbd;
+        border-radius: 50%;
+        ellipse,path{
+            stroke: #8a8686;
+        }
+    }
     &>a{
         opacity: 1;
     }
@@ -1047,7 +1067,7 @@ select:focus {
         background-color: $background-color;
         color: $main-color;
         text-align: center;
-        padding: 10px;
+        padding: 5px;
         border-radius: 6px;
         z-index: 99;
         opacity: 0;
@@ -1226,7 +1246,7 @@ select:focus {
     align-items: center;
     //height: 566px;
     align-content: space-between;
-    padding-bottom: 315px;
+    padding-bottom: 312px;
     position: relative;
     background-color: $background-color;
     &>a:first-child{
@@ -1247,7 +1267,7 @@ select:focus {
     }
     .content-trip{
         position: absolute;
-        bottom: 125px;
+        bottom: 122px;
         z-index: 1;
         background-color: $background-color;
         &>p{
@@ -1273,7 +1293,6 @@ select:focus {
                 font-weight: 600;
             }
         }
-        
         &:hover{
             &>p{
                 max-height: 400px;
@@ -1289,7 +1308,7 @@ select:focus {
         .tooltip{
             &>span{
                 @include translateX(-50%);
-                left: 17px;
+                left: 15px;
             }
         }
     }
@@ -1310,41 +1329,6 @@ select:focus {
         z-index: 2;
         font-size: 26px;
         color: $color-cover-text;
-    }
-}
-.trip.trip-itine{
-    padding-bottom: 350px;
-    .content-trip{
-        bottom: 160px;
-    }
-    &>.tooltip{
-        display: inline-block;
-        position: absolute;
-        bottom: 125px;
-        cursor: pointer;
-        .icon-itine{
-            font-size: 32px;
-            &:before{
-                color: $higlight-color;
-            }
-            &:hover{
-                opacity: .6;
-            }
-        }
-        span{
-            left: 50%;
-            box-shadow: none;
-            background-color: $higlight-color;
-            color: #fff;
-            width: 300px;
-            max-width: 90vw;
-
-             @include translateX(-50%);
-            &:after{
-                background-color: $higlight-color;
-                box-shadow: none;
-            }
-        }
     }
 }
 .wrap-trip-st2{
@@ -1427,7 +1411,7 @@ select:focus {
                         }
                         &>span{
                             @include translateX(-50%);
-                            left: 20px;
+                            left: 17px;
                             bottom: calc(100% + 10px);
                         }
                     }
@@ -1510,7 +1494,7 @@ select:focus {
     span{
         display: inline-flex;
         align-items: center;
-        font-weight: 400;
+        font-weight: 500;
         color: #555;
         .icon-font{
             font-size: 14px;
@@ -1726,9 +1710,6 @@ select:focus {
 }
 .mg-top-0{
     margin-top: 0!important;
-}
-.mg-bot-0{
-    margin-bottom: 0!important;
 }
 .mg-top-30{
     margin-top: 30px;
