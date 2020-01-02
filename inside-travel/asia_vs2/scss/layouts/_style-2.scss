@@ -11,9 +11,9 @@
 	video{
 		width: 100%;
 		position: absolute;
-		top: 0;
+		top: 50%;
 		left: 0;
-		@include translateY(-33.333%);
+		@include translateY(-50%);
 	}
 	.search-container-st2{
 		z-index: 2;
@@ -41,6 +41,11 @@
 		}
 	}
 }
+.banner-top-logo{
+	width: 100%;
+	max-width: 450px;
+	margin: 0 auto 30px;
+}
 .box-input-st2{
 	flex-grow: 1;
 	padding-left: 15px;
@@ -55,7 +60,7 @@
 	}
 }
 .box-submit-st2{
-	padding-left: 30px;
+	padding-left: 15px;
 	button{
 		display: flex;
 		justify-content: center;
@@ -81,20 +86,25 @@
 			//width: 16.6666%;
 			padding-left: 15px;
 			padding-right: 15px;
-			.btn-st2{
+			.btn-st3{
 				height: 100%;
 			    color: #fff;
 			    border-color: #fff;
-			    padding-right: 10px;
-			    padding-left: 10px;
-			    opacity: .8;
+			    padding: 15px 10px;
+			    font-weight: normal;
+			    letter-spacing: 1px;
+			    background-color: $color-cover-dak;
+			    border-radius: 6px;
+			    display: flex;
+			    align-items: center;
+			    justify-content: center;
 			    .icon-font{
 			    	margin-right: 5px;
 			    	font-size: 16px;
 			    }
 			    &:hover{
-			    	opacity: 1;
-    				background-color: rgba(200,200,200,0.2);
+			    	opacity: .8;
+			    	background-color: $higlight-color;
 			    }
 			}
 		}
@@ -108,7 +118,7 @@
 		padding-right: 50px;
 		ul{
 			li{
-				.btn-st2{
+				.btn-st3{
 					flex-wrap: wrap;
 				    .icon-font{
 				    	margin-right: 0;
@@ -149,8 +159,10 @@
 		padding-left: 0;
 		ul{
 			li{
-				.btn-st2{
-					background-color: rgba(200,200,200,0.2);
+				.btn-st3{
+					font{
+						text-align: center;
+					}
 				}
 			}
 		}
@@ -176,11 +188,12 @@
 			li{
 				width: 33.3333%;
 				margin-bottom: 15px;
-				.btn-st2{
+				.btn-st3{
 					width: 100%;
 					//margin-bottom: 15px;
 					.icon-font{
 						width: 100%;
+						text-align: center;
 					}
 				}
 			}

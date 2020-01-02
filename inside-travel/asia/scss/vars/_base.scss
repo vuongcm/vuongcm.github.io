@@ -104,11 +104,14 @@ a {
 }
 button{
     cursor: pointer;
+    font-size: 12px;
+    font-family: inherit;
 }
 button:hover,a:hover {
 	text-decoration: none;
 	opacity: .8;
     color: $higlight-color;
+
 }
 section {
 	margin: 30px 0;

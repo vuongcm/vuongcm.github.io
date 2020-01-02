@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Inside-Cruise';
-  src:  url('fonts/Inside-Cruise.eot?aqg0su');
-  src:  url('fonts/Inside-Cruise.eot?aqg0su#iefix') format('embedded-opentype'),
-    url('fonts/Inside-Cruise.ttf?aqg0su') format('truetype'),
-    url('fonts/Inside-Cruise.woff?aqg0su') format('woff'),
-    url('fonts/Inside-Cruise.svg?aqg0su#Inside-Cruise') format('svg');
+  src:  url('fonts/Inside-Cruise.eot?xjt81k');
+  src:  url('fonts/Inside-Cruise.eot?xjt81k#iefix') format('embedded-opentype'),
+    url('fonts/Inside-Cruise.ttf?xjt81k') format('truetype'),
+    url('fonts/Inside-Cruise.woff?xjt81k') format('woff'),
+    url('fonts/Inside-Cruise.svg?xjt81k#Inside-Cruise') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-cr-babycot:before {
+  content: "\e900";
+}
+.icon-cr-mini-golf:before {
+  content: "\e903";
+}
+.icon-cr-taichi:before {
+  content: "\e904";
+}
 .icon-cr-frontdesk:before {
   content: "\f102";
 }

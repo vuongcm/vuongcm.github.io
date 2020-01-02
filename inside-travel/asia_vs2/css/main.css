@@ -151,7 +151,9 @@ a {
   transition: all 0.2s linear; }
 
 button {
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 12px;
+  font-family: inherit; }
 
 button:hover, a:hover {
   text-decoration: none;
@@ -2077,9 +2079,13 @@ header {
     width: 100%;
     padding-right: 40px;
     padding-left: 40px;
-    position: relative; }
+    position: relative;
+    background-image: url(../images/background/bg-header.png);
+    background-color: #fff; }
     header .menu-wrap-st2 a {
       opacity: 1; }
+    header .menu-wrap-st2:hover {
+      background-image: unset; }
   header .menu-wrap-scroll {
     border-bottom: 1px solid #ddd; }
     header .menu-wrap-scroll .brand-st2 {
@@ -2102,8 +2108,8 @@ header {
   padding-right: 50px;
   padding-left: 50px; }
   .main-menu-st2 > li {
-    border-right: 1px solid #fff;
-    border-left: 1px solid #fff;
+    border-right: 1px solid rgba(255, 255, 255, 0);
+    border-left: 1px solid rgba(255, 255, 255, 0);
     border-bottom: none; }
     .main-menu-st2 > li > a {
       padding: 15px 25px;
@@ -2118,19 +2124,6 @@ header {
         color: #666; }
     .main-menu-st2 > li:hover {
       border-color: #ddd; }
-
-.global-menu-st2 {
-  display: flex;
-  align-items: center; }
-  .global-menu-st2 a .select-arrow-thin {
-    font-size: 9px; }
-  .global-menu-st2 .phone-box {
-    padding: 15px 20px; }
-  .global-menu-st2 .login-top-st2 a {
-    z-index: 2; }
-  .global-menu-st2 .login-top-st2 .login-menu {
-    display: none;
-    z-index: 1; }
 
 .title-sub-des-st2 {
   position: relative; }
@@ -2164,8 +2157,9 @@ header {
   display: none; }
 
 .title-sub-menu > a {
-  position: relative;
-  background-color: #ffffff; }
+  position: relative; }
+  .title-sub-menu > a:hover {
+    background-color: #ffffff; }
 
 .icon-menu-arrow {
   display: none;
@@ -2205,15 +2199,43 @@ header {
   .phone-box strong {
     font-weight: 600; }
 
+.global-menu-st2 {
+  display: flex;
+  align-items: center; }
+  .global-menu-st2 a .select-arrow-thin {
+    font-size: 9px; }
+  .global-menu-st2 .phone-box {
+    padding: 15px 20px; }
+  .global-menu-st2 .login-top-st2 {
+    height: 100%;
+    border-left: 1px solid rgba(255, 255, 255, 0); }
+    .global-menu-st2 .login-top-st2 a {
+      z-index: 2; }
+    .global-menu-st2 .login-top-st2 .login-menu {
+      display: none;
+      z-index: 1; }
+    .global-menu-st2 .login-top-st2:hover {
+      border-color: #ddd; }
+      .global-menu-st2 .login-top-st2:hover a {
+        background-color: #fff; }
+      .global-menu-st2 .login-top-st2:hover .login-menu {
+        display: block; }
+
 .login-top-st2 {
-  border-left: 1px solid #ddd;
   position: relative; }
   .login-top-st2 > a {
-    background-color: #fff;
     padding-bottom: 15px;
     padding-top: 15px;
+    height: 100%;
     padding-left: 20px;
-    position: relative; }
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+    .login-top-st2 > a .icon-user-2 {
+      font-size: 30px; }
+      .login-top-st2 > a .icon-user-2:before {
+        color: #666; }
 
 .login-menu {
   position: absolute;
@@ -2387,7 +2409,8 @@ header {
     font-size: 22px;
     text-transform: uppercase;
     color: #fff;
-    margin-top: 0; }
+    margin-top: 0;
+    font-weight: 500; }
   .newsletter-text p {
     font-size: 14px;
     text-transform: uppercase;
@@ -7708,13 +7731,13 @@ header {
   .video-top-container video {
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
-    transform: translateY(-33.333%);
-    -moz-transform: translateY(-33.333%);
-    -webkit-transform: translateY(-33.333%);
-    -o-transform: translateY(-33.333%);
-    -ms-transform: translateY(-33.333%); }
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%); }
   .video-top-container .search-container-st2 {
     z-index: 2; }
 
@@ -7736,6 +7759,11 @@ header {
       color: #fff;
       font-size: 16px; }
 
+.banner-top-logo {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto 30px; }
+
 .box-input-st2 {
   flex-grow: 1;
   padding-left: 15px;
@@ -7749,7 +7777,7 @@ header {
     padding-right: 10px; }
 
 .box-submit-st2 {
-  padding-left: 30px; }
+  padding-left: 15px; }
   .box-submit-st2 button {
     display: flex;
     justify-content: center;
@@ -7773,19 +7801,24 @@ header {
     .quick-link ul li {
       padding-left: 15px;
       padding-right: 15px; }
-      .quick-link ul li .btn-st2 {
+      .quick-link ul li .btn-st3 {
         height: 100%;
         color: #fff;
         border-color: #fff;
-        padding-right: 10px;
-        padding-left: 10px;
-        opacity: .8; }
-        .quick-link ul li .btn-st2 .icon-font {
+        padding: 15px 10px;
+        font-weight: normal;
+        letter-spacing: 1px;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .quick-link ul li .btn-st3 .icon-font {
           margin-right: 5px;
           font-size: 16px; }
-        .quick-link ul li .btn-st2:hover {
-          opacity: 1;
-          background-color: rgba(200, 200, 200, 0.2); }
+        .quick-link ul li .btn-st3:hover {
+          opacity: .8;
+          background-color: #d0b316; }
 
 @media (max-width: 1199px) {
   .box-submit-st2 {
@@ -7793,9 +7826,9 @@ header {
 
   .quick-link {
     padding-right: 50px; }
-    .quick-link ul li .btn-st2 {
+    .quick-link ul li .btn-st3 {
       flex-wrap: wrap; }
-      .quick-link ul li .btn-st2 .icon-font {
+      .quick-link ul li .btn-st3 .icon-font {
         margin-right: 0;
         margin-bottom: 5px; } }
 @media (max-width: 991px) {
@@ -7821,8 +7854,8 @@ header {
   .quick-link {
     padding-right: 0;
     padding-left: 0; }
-    .quick-link ul li .btn-st2 {
-      background-color: rgba(200, 200, 200, 0.2); } }
+    .quick-link ul li .btn-st3 font {
+      text-align: center; } }
 @media (max-width: 767px) {
   .search-container-st2 > .btn-st3 {
     display: block;
@@ -7839,10 +7872,11 @@ header {
     .quick-link ul li {
       width: 33.3333%;
       margin-bottom: 15px; }
-      .quick-link ul li .btn-st2 {
+      .quick-link ul li .btn-st3 {
         width: 100%; }
-        .quick-link ul li .btn-st2 .icon-font {
-          width: 100%; } }
+        .quick-link ul li .btn-st3 .icon-font {
+          width: 100%;
+          text-align: center; } }
 @media (max-width: 375px) {
   .quick-link ul li {
     width: 50%; } }

@@ -14,8 +14,13 @@ header{
 		padding-right: 40px;
 		padding-left: 40px;
 		position: relative;
+		background-image: url(../images/background/bg-header.png);
+	    background-color: #fff;
 		a{
 			opacity: 1;
+		}
+		&:hover{
+			background-image: unset;
 		}
 	}
 	.menu-wrap-scroll{
@@ -38,8 +43,8 @@ header{
 	padding-right: 50px;
 	padding-left: 50px;
 	&>li{
-		border-right: 1px solid #fff;
-		border-left: 1px solid #fff;
+		border-right: 1px solid rgba(255,255,255,0);
+		border-left: 1px solid rgba(255,255,255,0);
 		border-bottom: none;
 		&>a{
 			padding: 15px 25px;
@@ -59,28 +64,7 @@ header{
 		}
 	}
 }
-.global-menu-st2{
-	//margin-left: auto;
-	display: flex;
-	align-items: center;
-	a{
-		.select-arrow-thin{
-			font-size: 9px;
-		}
-	}
-	.phone-box{
-		padding: 15px 20px;
-	}
-	.login-top-st2{
-		a{
-			z-index: 2;
-		}
-		.login-menu{
-			display: none;
-			z-index: 1;
-		}
-	}
-}
+
 .title-sub-des-st2{
 	position: relative;
 	//margin-bottom: -1px;
@@ -129,7 +113,10 @@ header{
 .title-sub-menu{
 	&>a{
 		position: relative;
-		background-color: #ffffff;
+		//background-color: #ffffff;
+		&:hover{
+			background-color: #ffffff;
+		}
 	}
 }
 .icon-menu-arrow{
@@ -183,16 +170,58 @@ header{
         font-weight: 600;
     }
 }
+.global-menu-st2{
+	//margin-left: auto;
+	display: flex;
+	align-items: center;
+	a{
+		.select-arrow-thin{
+			font-size: 9px;
+		}
+	}
+	.phone-box{
+		padding: 15px 20px;
+	}
+	.login-top-st2{
+		height: 100%;
+		border-left: 1px solid rgba(255,255,255,0);
+		a{
+			z-index: 2;
+		}
+		.login-menu{
+			display: none;
+			z-index: 1;
+		}
+		&:hover{
+			border-color: $border-color;
+			a{
+				background-color: #fff;
+			}
+			.login-menu{
+				display: block;
+
+			}
+		}
+	}
+}
 .login-top-st2{
-	border-left: 1px solid $border-color;
-	//border-right: 1px solid #fff;
 	position: relative;
 	&>a{
-		background-color: #fff;
+		//background-color: #fff;
 		padding-bottom: 15px;
 		padding-top: 15px;
+		height: 100%;
 		padding-left: 20px;
 		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		.icon-user-2{
+			font-size: 30px;
+			&:before{
+				color: $light-color-3;
+			}
+		}
 	}
 }
 .login-menu{
