@@ -520,6 +520,31 @@
 		color: #25ab4b;
 	}
 }
+.view-all-img{
+	position: relative;
+	&:after{
+		content: "\e9ce";
+		font-size: 36px;
+		font-family: 'insideTravel';
+		line-height: 1;
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include translate2d(-50%,-50%);
+		@include smooth(.25s);
+		opacity: 0;
+	}
+	&:hover{
+		opacity: 1;
+		&>img{
+			@include dakkenImg(60%);
+		}
+		&:after{
+			opacity: 1;
+		}
+	}
+}
 @media (max-width: 1351px) {
 	.navbar-cruise{
 		ul{
