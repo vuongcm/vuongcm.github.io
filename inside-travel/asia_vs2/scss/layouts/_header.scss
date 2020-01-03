@@ -30,18 +30,49 @@ header{
 		}
 	}
 }
+.promo-crisis{
+	display: flex;
+	//justify-content: center;
+	align-items: center;
+	background-color: $higlight-color;
+	padding: 5px 15px;
+	a{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		color: #fff;
+		flex-grow: 1;
+		text-align: center;
+		.icon-font{
+			font-size: 14px;
+		}
+		span{
+			text-transform: uppercase;
+		}
+		&:hover{
+
+		}
+	}
+	button{
+		margin-left: auto;
+		font-size: 36px;
+		color: #fff;
+		line-height: 0;
+	}
+}
 .brand-st2{
 	width: 30%;
 	max-width: 120px;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	@include smooth(.25s);
+	//margin-right: 5%;
 }
 .main-menu-st2{
 	display: flex;
 	justify-content: space-between;
 	padding-right: 50px;
 	padding-left: 50px;
+	margin-left: auto;
 	&>li{
 		border-right: 1px solid rgba(255,255,255,0);
 		border-left: 1px solid rgba(255,255,255,0);
@@ -401,7 +432,11 @@ header{
 	}
 }
 @media (max-width: 767px) {
-
+	.global-menu-st2{
+		.phone-box {
+		    padding: 15px 0;
+		}
+	} 
 }
 @media (max-width: 479px) {
 	.main-menu-st2{
@@ -410,6 +445,9 @@ header{
 	.login-top-st2{
 		font{
 			display: none;
+		}
+		&>a{
+			padding-left: 0;
 		}
 	}
 
