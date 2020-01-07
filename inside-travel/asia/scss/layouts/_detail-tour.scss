@@ -1081,17 +1081,31 @@
 		color: $higlight-color;
 	}
 }
+.wrap-content-tab{
+	.blogs-tab{
+		border-bottom: none;
+	}
+}
 .detail-tour-content{
 	width: 100%;
-	margin-top: 30px;
+	padding: 30px 15px;
+	border: 1px solid #eee;
+	margin-left: 15px;
+	margin-right: 15px;
 	&>div{
 		//display: none;
-	}
-	.wrap-detail-day{
-		display: none;
+		padding: 0;
 	}
 	.experience-wrap{
-		display: none;
+
+	}
+	.wrap-map-loca{
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.wrap-inclusion{
+		display: flex;
+    	flex-wrap: wrap;
 	}
 }
 .experience-wrap{

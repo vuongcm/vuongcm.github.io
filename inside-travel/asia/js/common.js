@@ -774,6 +774,38 @@ $(document).ready(function() {
 		let mediaHeight = ($('.wrap-cruise-media .wrap-media').height() - 4)/2;
 		$('.box-divi-row a').height(mediaHeight);
 	}
+	if($('.wrap-content-tab').length){
+		$('.btn-tab-itinerary').click(function(){
+			$('.detail-tour-content>div').addClass('close-display');
+			$('.wrap-full-itinerary').removeClass('close-display');
+			$('.wrap-content-tab .blogs-tab a').removeClass('active');
+			$(this).addClass('active');
+		});
+		$('.btn-tab-experience').click(function(){
+			$('.detail-tour-content>div').addClass('close-display');
+			$('.experience-wrap').removeClass('close-display');
+			$('.wrap-content-tab .blogs-tab a').removeClass('active');
+			$(this).addClass('active');
+		});
+		$('.btn-tab-accmmo').click(function(){
+			$('.detail-tour-content>div').addClass('close-display');
+			$('.accommodation-wrap').removeClass('close-display');
+			$('.wrap-content-tab .blogs-tab a').removeClass('active');
+			$(this).addClass('active');
+		});
+		$('.btn-tab-inclusion').click(function(){
+			$('.detail-tour-content>div').addClass('close-display');
+			$('.wrap-inclusion').removeClass('close-display');
+			$('.wrap-content-tab .blogs-tab a').removeClass('active');
+			$(this).addClass('active');
+		});
+		$('.btn-tab-map').click(function(){
+			$('.detail-tour-content>div').addClass('close-display');
+			$('.wrap-map-loca').removeClass('close-display');
+			$('.wrap-content-tab .blogs-tab a').removeClass('active');
+			$(this).addClass('active');
+		});
+	}
 	//============search box=============
 	$('.select-st1 .text').on('click',function(){
 		$(this).next('.value').toggleClass('open-block');
