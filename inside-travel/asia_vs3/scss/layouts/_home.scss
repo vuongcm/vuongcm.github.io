@@ -231,6 +231,10 @@
 		font-size: 8px;
 		margin-left: 5px;
 	}
+	.icon-font:first-child{
+		font-size: 16px;
+		margin-right: 5px;
+	}
 }
 .value{
 	max-height: 245px;
@@ -292,7 +296,7 @@
 		position: absolute;
         bottom: 10px;
         z-index: 2;
-        background-color: $background-color;
+        background: $background-color url(../images/background/footer-bg.jpg) repeat;
         left: 0;
         padding-left: 15px;
         padding-right: 15px;
@@ -465,7 +469,7 @@
 		align-items: center;
 		text-transform: uppercase;
 		color: #fff;
-		background-color: rgba(0, 0, 0, .7);
+		background-color: rgba(168, 40, 6, 0.7);
 		span{
 			font-size: 10px;
 			font-weight: 600;

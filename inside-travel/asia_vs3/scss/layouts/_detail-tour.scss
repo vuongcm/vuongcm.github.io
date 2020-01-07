@@ -1034,9 +1034,11 @@
 	}
 }
 .body-current-box{
-	&>.checkmark{
-		font-size: 60px;
-		color: #ff5722;
+	.icon-tick{
+		width: 100px;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
 	}
 	p{
 		font-size: 13px;

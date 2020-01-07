@@ -78,7 +78,7 @@ body {
     position: relative;
     --bodyWidth: 1583px;
     overflow-x: hidden;
-    background: $background-color url(../images/background/footer-bg.jpg) repeat;;
+    background: $background-color url(../images/background/footer-bg.jpg) repeat;
 }
 input{
     white-space: nowrap;
@@ -94,7 +94,7 @@ li {
 }
 b{
     font-weight: 600;
-    color: #555;
+    color: $higlight-red-1;
 }
 a {
     letter-spacing: inherit;
@@ -209,6 +209,7 @@ select:focus {
 }
 .select-st9 {
     padding-right: 15px;
+    color: $title-3;
 }
 .btn-st1 {
 	background-color: $btn-bg-color-st1;
@@ -278,35 +279,35 @@ select:focus {
     }
 }
 .link-st3{
-    color: $title-color;
+    //color: $title-3;
     line-height: 1.5;
     font-weight: 500;
     &:after{
         content: "";
         display: block;
         height: 1px;
-        background-color: $title-color;
+        background-color: $title-3;
         @include animationed(lineAnimatedOut,.5s);
         width: 100%;
     }
     &:hover{
-        color: $higlight-color;
+        color: $price-red-3;
     }
     &:hover:after{
         @include animationed(lineAnimatedIn,.5s);
         width: 0;
-        background-color: $higlight-color;
+        background-color: $price-red-3;
     }
 }
 .read-more-st1{
     width: 100%;
     text-align: center;
-    a{
+    /*a{
         color: $light-color-4;
         &:after{
             background-color: #ddd;
         }
-    }
+    }*/
 }
 .read-more-st2{
     width: 100%;
@@ -320,12 +321,12 @@ select:focus {
 .read-more-st3{
     width: 100%;
     text-align: left;
-    a{
+    /*a{
         color: $light-color-4;
         &:after{
             background-color: $light-color-4;
         }
-    }
+    }*/
 }
 .div-hidden{
     overflow-y: hidden;
@@ -344,7 +345,7 @@ select:focus {
     letter-spacing: 2px;
     line-height: 1.3;
     text-align: center;
-    color: $title-color;
+    color: $title-3;
     width: 100%;
     text-transform: uppercase;
 }
@@ -579,7 +580,7 @@ select:focus {
     display: flex;
     align-items: center;
     position: relative;
-    background-color: $background-color;
+    background-color: #fff;
     //border-radius: 8px;
     //box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.05);
     margin-bottom: 15px;
@@ -1038,17 +1039,17 @@ select:focus {
     &>.icon-font-cr{
         font-size: 20px;
         padding: 5px;
-        border: 1px solid #c3bdbd;
+        border: 1px solid $icon-expe;
         border-radius: 50%;
         &:before{
-            color: #c3bdbd;
+            color: $icon-expe;
         }
         &:hover:before{
-            color: $higlight-color;
+            color: $title-3;
             //border-color: $higlight-color;
         }
         &:hover{
-            border-color: $higlight-color;
+            border-color: $title-3;
         }
     }
     &>.icon-cr-taichiclass{
@@ -1109,7 +1110,7 @@ select:focus {
             -webkit-transform: translate(-50%,50%) rotate(45deg);
             -o-transform: translate(-50%,50%) rotate(45deg);
             -ms-transform: translate(-50%,50%) rotate(45deg);
-            background-color: #fff;
+            background-color: $background-color;
             box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.13);
         }
 
@@ -1153,7 +1154,7 @@ select:focus {
     }
 }
 .arrow-radius{
-    border: 1px solid $title-color;
+    border: 1px solid $price-red-3;
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
@@ -1163,7 +1164,7 @@ select:focus {
     background-color: transparent;
     .select-arrow-thin{
         font-size: 9px;
-        color: $title-color;
+        //color: $price-red-3;
         @include smooth(.25s);
     }
     &:hover{
@@ -1269,6 +1270,9 @@ select:focus {
         width: 100%;
         &>a{
             min-height: 48px;
+            &:hover{
+                color: $price-red-3;
+            }
         }
     }
     .content-trip{
@@ -1281,7 +1285,7 @@ select:focus {
             padding-right: 15px;
             max-height: 39px;
             overflow-y: hidden;
-            color: $btn-text-color-st1;
+            //color: $text-3;
             @include smooth(1.5s);
         }
         &>span{
@@ -1293,7 +1297,7 @@ select:focus {
             margin-top: 15px;
             margin-bottom: 15px;
             text-transform: uppercase;
-            color: $price-red-3;
+            color: $higlight-red-1;
             &>strong{
                 font-size: 20px;
                 font-weight: 600;
@@ -1336,6 +1340,41 @@ select:focus {
         color: $color-cover-text;
     }
 }
+.trip.trip-itine{
+    padding-bottom: 350px;
+    .content-trip{
+        bottom: 160px;
+    }
+    &>.tooltip{
+        display: inline-block;
+        position: absolute;
+        bottom: 125px;
+        cursor: pointer;
+        .icon-itine{
+            font-size: 32px;
+            &:before{
+                color: $higlight-red-1;
+            }
+            &:hover{
+                opacity: .6;
+            }
+        }
+        span{
+            left: 50%;
+            box-shadow: none;
+            background-color: $title-3;
+            color: #fff;
+            width: 300px;
+            max-width: 90vw;
+
+             @include translateX(-50%);
+            &:after{
+                background-color: $title-3;
+                box-shadow: none;
+            }
+        }
+    }
+}
 .wrap-trip-st2{
     width: 100%;
     padding-left: 15px;
@@ -1348,7 +1387,7 @@ select:focus {
     display: flex;
     align-items: flex-start;
     padding: 20px;
-    background-color: #fff;
+    background-color: $background-color;
     margin-bottom: 30px;
     &>a:first-child{
         width: 45%;
@@ -1591,7 +1630,7 @@ select:focus {
     &>span{
         font-size: 12px;
         text-transform: uppercase;
-        color: #d0b316;
+        color: $higlight-red-1;
         margin-left: auto;
         text-align: right;
         strong{

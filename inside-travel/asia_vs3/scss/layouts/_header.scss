@@ -18,6 +18,9 @@ header{
 	    background-color: $background-color;
 		a{
 			opacity: 1;
+			&:hover{
+				color: $price-red-3;
+			}
 		}
 		&:hover{
 			background-image: unset;
@@ -251,7 +254,7 @@ header{
 		.icon-user-2{
 			font-size: 30px;
 			&:before{
-				color: $light-color-3;
+				color: $title-3;
 			}
 		}
 	}
