@@ -73,7 +73,7 @@ header{
 .main-menu-st2{
 	display: flex;
 	justify-content: space-between;
-	padding-right: 50px;
+	padding-right: 120px;
 	padding-left: 50px;
 	margin-left: auto;
 	&>li{
@@ -277,10 +277,15 @@ header{
 	display: none;
 }
 @media (min-width: 1351px) and (max-width: 1395px) {
-
+	.main-menu-st2{
+		padding-right: 50px;
+	}
 }
 @media (max-width: 1350px) {
-
+	.main-menu-st2{
+		padding-right: 0;
+		padding-left: 0;
+	}
 }
 @media (max-width: 1199px) {
 	header{
@@ -319,8 +324,6 @@ header{
 		background-color: #fff;
 		width: 300px;
 		height: 100vh;
-		padding-left: 0;
-		padding-right: 0;
 		overflow: hidden;
 		&>li{
 			width: 100%;
@@ -402,7 +405,7 @@ header{
 		position: absolute;
 		top: 0;
 		left: 0;
-		background-color: #fff;
+		background-color: $background-color;
 		//display: none;
 		width: 100%;
 		height: 100%;

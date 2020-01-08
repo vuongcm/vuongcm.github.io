@@ -136,6 +136,8 @@
 	justify-content: center;
 	align-items: flex-start;
 	--heightHlTour: 430px;
+	padding-left: 15px;
+	padding-right: 15px;
 	//height: var(--heightHlTour);
 	&>div:first-child{
 		width: 45%;
@@ -881,6 +883,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	//align-items: flex-start;
+	padding-left: 5px;
+	padding-right: 5px;
 	.col-xlg-4{
 		padding: 10px;
 		&>div{
@@ -1198,7 +1202,7 @@
 		--heightHlTour: 286px;
 		&>div:first-child{
 			width: 100%;
-			padding-left: 15px;
+			padding-right: 0;
 			margin-bottom: 15px;
 			a{
 				img{
@@ -1218,7 +1222,7 @@
 		}
 		&>div:nth-child(2){
 			width: 100%;
-			padding-right: 15px;
+			padding-left: 0;
 			.read-more-st3{
 				padding-right: 15px;
 			}

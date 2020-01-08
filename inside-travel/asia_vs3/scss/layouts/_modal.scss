@@ -855,6 +855,8 @@
 				width: 100%;
 				padding-bottom: 10px;
 				padding-top: 10px;
+				border: 1px solid #888;
+				border-radius: 5px;
 				&:hover{
 					background-color: $higlight-color;
 					color: $main-color;
