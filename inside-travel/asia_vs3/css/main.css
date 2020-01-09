@@ -8152,7 +8152,9 @@ header {
   margin-bottom: 30px; }
   .trip-cruise .left-trip {
     width: calc(35% - 49px);
-    padding-right: 10px; }
+    padding-right: 10px;
+    position: relative;
+    align-self: flex-start; }
     .trip-cruise .left-trip > a {
       width: 100%;
       position: relative;
@@ -8213,7 +8215,110 @@ header {
   justify-content: center;
   align-items: center; }
   .info-cruise .link-st3 {
-    padding: 15px; }
+    padding: 15px;
+    position: relative; }
+  .info-cruise .active:before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color: #c8bca6;
+    transform: translate(-50%, 50%) rotate(45deg);
+    -moz-transform: translate(-50%, 50%) rotate(45deg);
+    -webkit-transform: translate(-50%, 50%) rotate(45deg);
+    -o-transform: translate(-50%, 50%) rotate(45deg);
+    -ms-transform: translate(-50%, 50%) rotate(45deg); }
+
+.box-schedule {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  width: 700px;
+  z-index: 5;
+  background-color: #c8bca6;
+  padding: 20px;
+  display: none; }
+  .box-schedule .list-cabins {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px dotted #967856; }
+    .box-schedule .list-cabins:first-child {
+      padding-top: 0; }
+    .box-schedule .list-cabins:last-child {
+      padding-bottom: 0;
+      border-bottom: none; }
+  .box-schedule table {
+    border: 1px solid #b09e7e; }
+    .box-schedule table th {
+      border: 1px solid #b09e7e;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+    .box-schedule table td {
+      border: 1px solid #b09e7e;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+
+.list-cabins {
+  width: 100%;
+  display: flex;
+  align-items: stretch; }
+  .list-cabins > img {
+    width: calc(35% - 49px);
+    padding-right: 10px;
+    align-self: flex-start; }
+  .list-cabins .cabin-info-box {
+    width: calc(65% - 91px);
+    padding-left: 20px;
+    padding-right: 15px; }
+  .list-cabins .button-cabin {
+    width: 140px;
+    padding-left: 15px; }
+
+.button-cabin {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .button-cabin .btn-st2 {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 10px;
+    color: #b3350a;
+    border-color: #b3350a; }
+    .button-cabin .btn-st2:hover {
+      color: #d0b316;
+      border-color: #d0b316; }
+
+.cabin-info-box h4 {
+  margin-top: 0;
+  font-size: 18px; }
+
+.item-cabin p {
+  margin-bottom: 10px;
+  line-height: 1.4;
+  font-weight: 500; }
+
+.facilities {
+  margin-top: 10px; }
+  .facilities > a {
+    font-weight: 600;
+    color: #b3350a; }
+  .facilities ul {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    display: none; }
+    .facilities ul li {
+      width: 50%;
+      padding-left: 15px;
+      margin-bottom: 10px; }
+      .facilities ul li .icon-font {
+        margin-right: 5px; }
 
 .number-day {
   position: relative; }
@@ -8341,7 +8446,13 @@ header {
     width: 100%; }
   .trip-cruise .mid-trip {
     width: 100%;
-    padding-left: 0; } }
+    padding-left: 0; }
+
+  .box-schedule-2 {
+    overflow-x: auto;
+    webkit-overflow-scrolling: touch; }
+    .box-schedule-2 table {
+      min-width: 863px; } }
 @media (max-width: 767px) {
   .search-container-st2 > .btn-st3 {
     display: block;
@@ -8372,7 +8483,23 @@ header {
     flex-wrap: wrap;
     justify-content: center; }
     .trip-cruise .right-trip > div {
-      margin: 0 15px 15px; } }
+      margin: 0 15px 15px; }
+
+  .list-cabins {
+    flex-wrap: wrap; }
+    .list-cabins > img {
+      width: 100%; }
+    .list-cabins .cabin-info-box {
+      margin-top: 20px;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0; }
+    .list-cabins .button-cabin {
+      margin-top: 20px;
+      width: 100%;
+      padding-left: 0; }
+      .list-cabins .button-cabin .btn-st2 {
+        max-width: 150px; } }
 @media (max-width: 479px) {
   .video-top-container {
     padding: 30px 0; } }

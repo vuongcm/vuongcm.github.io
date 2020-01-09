@@ -1379,9 +1379,21 @@ $(document).ready(function() {
 			}
 		});
 	}
-	/*=======icon=========*/
-	$('.icon-cr-taichiclass').html(`<svg x="0px" y="0px" width="24px" height="24px" viewBox="-2 -2 24 24" enable-background="new -2 -2 24 24" xml:space="preserve"> <g id="taichi"> <ellipse fill="none" stroke="#333333" stroke-width="0.5" stroke-miterlimit="10" cx="9.603" cy="3.008" rx="2.222" ry="2.139"/> <path fill="none" stroke="#333333" stroke-width="0.5" stroke-miterlimit="10" d="M8.034-0.562L5.531,3.127 c0,0,1.81,2.956,1.929,3.038c0.122,0.08,4.103,0,4.103,0l1.93-2.963l-1.869-3.464c0,0-0.574-1.412,0.406-1.139 c0.98,0.271,3.603,4.553,3.603,4.553l-3.104,4.651l0.028,2.696c0,0,4.435,2.526,4.163,3.219c-0.272,0.692-5.398,3.341-5.761,3.489 s-1.448-0.346-0.452-1.162c0.994-0.816,2.595-2.129,2.595-2.129l-3.319-1.335l-0.635,3.735c0,0,0.754,4.627,0.423,4.952 c-0.332,0.32-1.417,0.789-1.87-0.297c-0.452-1.09-1.115-4.802-1.115-4.802l0.24-8.268l-3.558-4.7c0,0,3.016-4.08,4.163-4.638 C7.762-1.675,8.395-1.093,8.034-0.562z"/> </g> </svg>`);
-
+	/*=======cruise-2=========*/
+	if($('.trip-cruise').length){
+		$('.box-schedule').outerWidth($('.trip-cruise').outerWidth());
+		$('.open-schedule-1').click(function(){
+			$(this).toggleClass('active');
+			$(this).closest('.left-trip').children('.box-schedule-1').slideToggle(500);
+		});
+		$('.open-schedule-2').click(function(){
+			$(this).toggleClass('active');
+			$(this).closest('.left-trip').children('.box-schedule-2').slideToggle(500);
+		});
+		$('.facilities>a').click(function(){
+			$(this).next('ul').toggleClass('open-flex');
+		});
+	}
 });
 window.onload = function() {
 	if($('body').width() > 767){
