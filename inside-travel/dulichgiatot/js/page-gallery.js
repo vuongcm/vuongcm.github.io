@@ -1,0 +1,1 @@
+var page_gallery=function(){var a=function(){$(".mix-grid").mixItUp({animation:{duration:400,effects:"fade stagger(34ms) translateZ(-700px) scale(0.01)",easing:"cubic-bezier(0.175, 0.885, 0.32, 1.275)"}})};return{init:function(){a()}}}(jQuery);
