@@ -533,6 +533,31 @@ $(document).ready(function() {
             $('.box-step-when .autocomplete-fix').removeClass('open-flex');
         }
     });
+    /*===header mới=====*/
+    $('.login-top-st2>a').click(function(){
+        $('.login-menu').toggle();
+    });
+    if(bodyWidth <= 1199){
+        $('.main-menu-st2 .dot-toggle').html(`<i class="fa fa-hotel"></i>Khách sạn<i class="fa fa-angle-down"></i>`);
+        $('.menu-drop-st2>a, .menu-drop-st3>a').click(function(){
+            $(this).next('.sub-menu-lv1').slideToggle(300);
+        });
+        $('.menu-drop-lv2>a').click(function(){
+            $(this).next('.sub-menu-lv2').slideToggle(300);
+        });
+        $('.mobi-btn-menu').click(function(){
+            $('.main-menu-st2').fadeIn(500);
+        });
+        $('.main-menu-st2 .btn-close').click(function(){
+            $('.main-menu-st2').fadeOut(500);
+        });
+        $('body').click(function(e){
+            if (!$('.main-menu-st2,.mobi-btn-menu').is(e.target) && $('.main-menu-st2,.mobi-btn-menu').has(e.target).length === 0) {
+                $('.main-menu-st2').fadeOut(500);
+            }
+        });
+    }
+
     /*xóa*/
     if(bodyWidth <= 1199){
         $('.home-page #owl-demo1').remove();
