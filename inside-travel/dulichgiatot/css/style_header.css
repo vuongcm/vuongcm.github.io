@@ -1,6 +1,7 @@
 .header-st2{
 	background-color: #f9f9f9;
 	position: relative;
+	z-index: 888;
 }
 .header-top-st2{
 	display: flex;
@@ -208,26 +209,33 @@
 
 }
 .video-top-container {
-    display: flex;
+     position: relative;
+     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 0;
-    position: relative;
+     padding: 180px 0 80px;
+}
+.media-box-top{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     overflow: hidden;
 }
-.video-top-container > img {
+.media-box-top img {
     display: none;
 }
-.video-top-container video {
+.media-box-top video {
     width: 100%;
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
-    transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
+    transform: translateY(-25%);
+    -moz-transform: translateY(-25%);
+    -webkit-transform: translateY(-25%);
+    -o-transform: translateY(-25%);
+    -ms-transform: translateY(-25%);
 }
 .search-container-st2 {
     padding-left: 15px;
@@ -253,19 +261,74 @@
 .search-container-st2 > .btn-st3 {
     display: none;
 }
-.banner-top-logo {
-    width: 100%;
-    max-width: 368px;
-    margin: 0 auto 30px;
-}
-.search-container-st2 form {
+.search-box-st3 form {
     display: flex;
     justify-content: space-between;
 }
+.search-box-st3 form h3 {
+    display: inline-flex;
+    align-items: center;
+    width: 80px;
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+}
+.box-step-submit-st2{
+	width: 58px;
+	margin-left: 10px;
+	flex-shrink: 0;
+}
+.box-step-submit-st2 button{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 20px;
+	background-color: rgba(0,0,0,.4);
+}
+.box-step-submit-st2 button:hover{
+	color: rgba(0,0,0,.4);
+	background-color: #fff;
+}
 .quick-link {
-    padding-left: 100px;
-    padding-right: 80px;
+    padding-left: 80px;
+    padding-right: 68px;
     margin-top: 40px;
+}
+.quick-link ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.quick-link ul li {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.quick-link ul li>a {
+    height: 100%;
+    color: #fff;
+    padding: 15px 10px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    background-color: rgba(6, 153, 171, .8);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+}
+.quick-link ul li>a>.fa {
+    font-size: 18px;
+    margin-right: 5px;
+}
+.quick-link ul li>a:hover {
+    color: rgba(6, 153, 171, .8);
+    background-color: #fff;
 }
 @media (min-width: 1200px){
 	.mobi-btn-menu{
@@ -381,5 +444,86 @@
 		background-color: transparent;
 		font-size: 26px;
 		color: #0699ab;
+	}
+	.media-box-top img {
+	    display: block;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    height: 100%;
+	    width: 100%;
+	}
+	.media-box-top video {
+	    display: none;
+	}
+}
+@media (max-width: 991px){
+	.quick-link ul {
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: space-between;
+		margin-bottom: -15px;
+	}
+	.quick-link ul>li{
+		width: 33.333%;
+		margin-bottom: 15px;
+	}
+	.video-top-container{
+		padding: 140px 0 40px;
+	}
+}
+@media (max-width: 767px){
+	.header-st2{
+		z-index: unset;
+	}
+	.search-box-st3{
+		display: none;
+	}
+	.search-container-st2>.btn-st3{
+		display: block;
+		margin: 0 auto;
+		border: none;
+		background-color: rgba(6, 153, 171, .8);
+		padding: 15px 20px;
+		border-radius: 6px;
+	}
+	.search-box-st3 form{
+		margin-top: 60px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.search-box-st3 form>h3{
+		width: 100%;
+		font-size: 22px;
+		justify-content: center;
+		margin-bottom: 15px;
+	}
+	.search-box-st3 form>.box-step{
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.box-step-submit-st2{
+		height: 58px;
+	}
+	.quick-link{
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.quick-link ul li>a{
+		flex-wrap: wrap;
+	}
+	.quick-link ul li>a>.fa{
+		margin-bottom: 5px;
+		margin-right: 0;
+	}
+	.quick-link ul li>a>font{
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+}
+@media (max-width: 479px){
+	.media-box-top img {
+	    width: unset;
 	}
 }
