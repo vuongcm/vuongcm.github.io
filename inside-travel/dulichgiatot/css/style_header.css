@@ -343,6 +343,9 @@
 	.menu-drop-st2:hover .sub-menu-lv1,.menu-drop-st3:hover .sub-menu-full{
 		display: flex;
 	}
+	.phone-wrap>a{
+		display: none;
+	}
 }
 @media (max-width: 1199px){
 	.main-menu-st2{
@@ -456,6 +459,12 @@
 	.media-box-top video {
 	    display: none;
 	}
+	.phone-wrap>a{
+		display: block;
+	}
+	.phone-wrap .call-box{
+		display: none;
+	}
 }
 @media (max-width: 991px){
 	.quick-link ul {
@@ -523,6 +532,19 @@
 	}
 }
 @media (max-width: 479px){
+	.header-st2 .container{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.header-top-st2{
+		justify-content: flex-start;
+	}
+	.global-menu-st2{
+		margin-left: auto;
+	}
+	.mobi-btn-menu{
+		margin-right: 10px;
+	}
 	.media-box-top img {
 	    width: unset;
 	}
