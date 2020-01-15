@@ -1427,9 +1427,6 @@ $(document).ready(function() {
 	}
 });
 window.onload = function() {
-	if($('body').width() > 767){
-		$('.map-home').height($('.map-home>img').height());
-	}
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());
 
 	/*let heightTrip = 91+$('.content-trip').height()+$('.trip a').height();

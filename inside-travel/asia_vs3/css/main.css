@@ -163,7 +163,7 @@ button {
 button:hover, a:hover {
   text-decoration: none;
   opacity: .8;
-  color: #d0b316; }
+  color: #bdb316; }
 
 section {
   margin: 30px 0;
@@ -217,7 +217,7 @@ select:focus {
   display: inline-block; }
 
 .icon-cr-taichiclass.hover:hover ellipse, .icon-cr-taichiclass.hover:hover path {
-  stroke: #d0b316; }
+  stroke: #bdb316; }
 
 .input-st1 {
   border: none;
@@ -302,8 +302,8 @@ select:focus {
   transition: all 0.2s linear;
   font-size: 12px; }
   .btn-st2:hover {
-    color: #d0b316;
-    border-color: #d0b316; }
+    color: #bdb316;
+    border-color: #bdb316; }
 
 .btn-st3 {
   color: #fff;
@@ -325,7 +325,7 @@ select:focus {
   opacity: 1 !important; }
 
 .link-st1 {
-  color: #d0b316; }
+  color: #bdb316; }
 
 .link-st1:hover {
   opacity: .8; }
@@ -336,7 +336,7 @@ select:focus {
   border-bottom: 1px solid #111; }
   .link-st2:hover {
     opacity: .8;
-    color: #d0b316; }
+    color: #bdb316; }
 
 .link-st3 {
   line-height: 1.5;
@@ -425,7 +425,7 @@ select:focus {
   max-width: 200px;
   height: 1px;
   display: block;
-  background-color: #d0b316;
+  background-color: #bdb316;
   margin: 15px auto 20px;
   content: "";
   width: 40%; }
@@ -547,7 +547,7 @@ select:focus {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  color: #d0b316;
+  color: #bdb316;
   font-size: 14px; }
 
 .pre-title {
@@ -665,7 +665,7 @@ select:focus {
     height: 100%;
     color: #fff;
     flex-shrink: 0;
-    background-color: #d0b316; }
+    background-color: #bdb316; }
   .filter-box .value {
     top: 100%;
     z-index: 4; }
@@ -1126,10 +1126,10 @@ select:focus {
     -ms-transition: all 0.25s linear;
     transition: all 0.25s linear; }
   .arrow-radius:hover {
-    color: #d0b316;
-    border-color: #d0b316; }
+    color: #bdb316;
+    border-color: #bdb316; }
     .arrow-radius:hover .select-arrow-thin {
-      color: #d0b316; }
+      color: #bdb316; }
 
 .synch-carousels {
   position: relative;
@@ -1170,7 +1170,7 @@ select:focus {
       .synch-carousels .nav-arrows .arrow-radius .select-arrow-thin {
         font-size: 9px; }
       .synch-carousels .nav-arrows .arrow-radius:hover {
-        border-color: #d0b316; }
+        border-color: #bdb316; }
     .synch-carousels .nav-arrows .arrow-left {
       left: 0; }
       .synch-carousels .nav-arrows .arrow-left .select-arrow-thin {
@@ -1435,7 +1435,7 @@ select:focus {
       color: #555; }
       .content-trip-cruise .box-hidden p .icon-font {
         margin-right: 5px;
-        color: #d0b316; }
+        color: #bdb316; }
   .content-trip-cruise .read-more-st2 {
     text-align: left; }
 
@@ -1450,7 +1450,7 @@ select:focus {
     color: #555; }
     .hotel-news span .icon-font {
       font-size: 14px;
-      color: #d0b316; }
+      color: #bdb316; }
 
 .flex-box {
   display: flex;
@@ -1488,11 +1488,11 @@ select:focus {
     padding-right: 5px;
     padding-left: 5px; }
     .view-all-img a:hover {
-      color: #d0b316; }
+      color: #bdb316; }
   .view-all-img p {
     font-size: 11px;
     padding: 5px 15px 5px 10px;
-    background-color: #d0b316;
+    background-color: #bdb316;
     font-weight: 600; }
 
 .head-trip {
@@ -1546,7 +1546,7 @@ select:focus {
   color: #888;
   font-weight: 600; }
   .commitment .checkmark {
-    color: #d0b316; }
+    color: #bdb316; }
 
 .day-trip {
   position: relative;
@@ -1559,14 +1559,14 @@ select:focus {
     text-align: center;
     font-size: 9px;
     text-transform: uppercase;
-    color: #d0b316;
+    color: #bdb316;
     font-weight: 500;
     line-height: 1; }
     .day-trip span b {
       display: block;
       width: 100%;
       font-size: 20px;
-      color: #d0b316; }
+      color: #bdb316; }
 
 .team-name {
   text-align: center;
@@ -2113,7 +2113,8 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #e6ddcc; }
+  background-color: #e6ddcc;
+  background-image: url(../images/background/bg-header.png); }
   header .menu-wrap-st2 {
     display: flex;
     justify-content: space-between;
@@ -2132,7 +2133,7 @@ header {
   header .menu-wrap-scroll {
     border-bottom: 1px solid #d8cbbe; }
     header .menu-wrap-scroll .brand-st2 {
-      max-width: 70px; }
+      max-width: 150px; }
 
 .promo-crisis {
   display: flex;
@@ -2157,9 +2158,9 @@ header {
 
 .brand-st2 {
   width: 30%;
-  max-width: 120px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
   -webkit-transition: all 0.25s linear;
   -moz-transition: all 0.25s linear;
   -o-transition: all 0.25s linear;
@@ -2325,8 +2326,6 @@ header {
     padding-right: 0;
     padding-left: 0; } }
 @media (max-width: 1199px) {
-  header .menu-wrap-scroll .brand-st2 {
-    max-width: 100px; }
   header .menu-wrap-st2 {
     border-bottom: 1px solid #d8cbbe; }
 
@@ -2350,7 +2349,7 @@ header {
     position: absolute;
     top: calc(100% + 1px);
     left: 0;
-    background-color: #fff;
+    background-color: #e6ddcc;
     width: 300px;
     height: 100vh;
     overflow: hidden; }
@@ -2446,7 +2445,10 @@ header {
     padding-right: 15px; } }
 @media (max-width: 767px) {
   .global-menu-st2 .phone-box {
-    padding: 15px 0; } }
+    padding: 15px 0; }
+
+  .brand-st2 {
+    width: 80%; } }
 @media (max-width: 479px) {
   .main-menu-st2 {
     width: 100%; }
@@ -2455,6 +2457,9 @@ header {
     display: none; }
   .login-top-st2 > a {
     padding-left: 0; } }
+@media (max-width: 375px) {
+  .global-menu-st2 .lang-top {
+    display: none; } }
 .footer-banner-container {
   position: relative;
   padding: 40px 0;
@@ -2658,7 +2663,7 @@ header {
     margin-right: 15px;
     margin-left: 15px; }
     .modal .call-us p {
-      color: #d0b316;
+      color: #bdb316;
       font-weight: 600; }
       .modal .call-us p a {
         opacity: 1; }
@@ -2728,7 +2733,7 @@ header {
   overflow: hidden; }
   .modal-include-1 .modal-content h3 .icon-font {
     margin-right: 5px;
-    color: #d0b316; }
+    color: #bdb316; }
   .modal-include-1 .modal-content h3 span {
     text-transform: none;
     font-size: 12px; }
@@ -2749,7 +2754,7 @@ header {
     margin-bottom: 15px; }
     .modal-include-2 h3 .icon-font {
       margin-right: 5px;
-      color: #d0b316; }
+      color: #bdb316; }
     .modal-include-2 h3 span {
       text-transform: none;
       font-size: 12px; }
@@ -2762,7 +2767,7 @@ header {
       margin-top: 10px; }
     .modal-include-2 .modal-content article .icon-font {
       margin-right: 5px;
-      color: #d0b316; }
+      color: #bdb316; }
 
 .modal-cr-like {
   max-width: 610px;
@@ -2774,7 +2779,7 @@ header {
       .modal-cr-like .title-modal h3 .icon-font {
         margin-right: 5px;
         font-size: 18px;
-        color: #d0b316; }
+        color: #bdb316; }
   .modal-cr-like article {
     margin-top: 15px; }
     .modal-cr-like article p {
@@ -2782,7 +2787,7 @@ header {
       line-height: 1.4; }
       .modal-cr-like article p .icon-font {
         margin-right: 5px;
-        color: #d0b316;
+        color: #bdb316;
         font-size: 14px;
         font-weight: 800; }
 
@@ -2809,7 +2814,7 @@ header {
     align-items: center; }
     .modal-cr-overview article p .icon-font {
       margin-right: 5px;
-      color: #d0b316;
+      color: #bdb316;
       font-size: 14px;
       font-weight: 800; }
     .modal-cr-overview article p .icon-font-cr {
@@ -2858,7 +2863,7 @@ header {
     width: 100%; }
     .modal-cr-info-room .title-modal h3 .icon-font {
       font-size: 18px;
-      color: #d0b316;
+      color: #bdb316;
       margin-right: 5px; }
   .modal-cr-info-room .wrap-slide-st5 {
     margin-bottom: 30px; }
@@ -2903,7 +2908,7 @@ header {
         .modal-cr-info-room .cr-info-room article .row p.col-xlg-6 .icon-font {
           margin-right: 5px;
           font-size: 14px;
-          color: #d0b316; }
+          color: #bdb316; }
         .modal-cr-info-room .cr-info-room article .row p.col-xlg-6 .icon-font-cr {
           margin-right: 5px; }
 
@@ -3000,7 +3005,7 @@ header {
     .call-us div:first-child {
       margin-top: 0; }
   .call-us p a {
-    color: #d0b316;
+    color: #bdb316;
     opacity: .8; }
     .call-us p a:hover {
       opacity: 1; }
@@ -3047,7 +3052,7 @@ header {
       display: inline-block;
       margin-right: 8px;
       font-size: 15px;
-      color: #d0b316;
+      color: #bdb316;
       -webkit-transition: all 0.25s linear;
       -moz-transition: all 0.25s linear;
       -o-transition: all 0.25s linear;
@@ -3060,7 +3065,7 @@ header {
 #creat-trip-modal .booking-step-when .value .btn-value .icon-font:first-child {
   font-size: 22px; }
   #creat-trip-modal .booking-step-when .value .btn-value .icon-font:first-child:before {
-    color: #d0b316; }
+    color: #bdb316; }
 #creat-trip-modal .booking-step-when .value .btn-value:hover .icon-font:first-child:before {
   color: #ad6816; }
 
@@ -3108,7 +3113,7 @@ header {
       width: 10%;
       margin-right: 8px;
       font-size: 15px;
-      color: #d0b316;
+      color: #bdb316;
       -webkit-transition: all 0.25s linear;
       -moz-transition: all 0.25s linear;
       -o-transition: all 0.25s linear;
@@ -3185,7 +3190,7 @@ header {
       width: 10%;
       margin-right: 8px;
       font-size: 15px;
-      color: #d0b316;
+      color: #bdb316;
       -webkit-transition: all 0.25s linear;
       -moz-transition: all 0.25s linear;
       -o-transition: all 0.25s linear;
@@ -3289,7 +3294,7 @@ header {
         border: 1px solid #eee;
         border-radius: 5px; }
         .box-mon-time ul li button:hover {
-          background-color: #d0b316;
+          background-color: #bdb316;
           color: #ad6816; }
       .box-mon-time ul li button[disabled="disabled"] {
         background-color: transparent;
@@ -3297,7 +3302,7 @@ header {
         opacity: 1;
         cursor: auto; }
       .box-mon-time ul li button.active {
-        background-color: #d0b316; }
+        background-color: #bdb316; }
 
 .wrap-gallery-img {
   position: fixed;
@@ -3316,7 +3321,7 @@ header {
     color: #fff;
     z-index: 4; }
     .wrap-gallery-img .btn-close:hover {
-      color: #d0b316; }
+      color: #bdb316; }
   .wrap-gallery-img .synch-carousels {
     box-shadow: none; }
     .wrap-gallery-img .synch-carousels .nav-arrows {
@@ -3551,7 +3556,7 @@ header {
         #booking-widget-homepage .form-banner-top .booking-step-where .value .btn-value .map-marker {
           margin-right: 8px;
           font-size: 15px;
-          color: #d0b316;
+          color: #bdb316;
           -webkit-transition: all 0.25s linear;
           -moz-transition: all 0.25s linear;
           -o-transition: all 0.25s linear;
@@ -3571,7 +3576,7 @@ header {
             width: 10%;
             margin-right: 8px;
             font-size: 15px;
-            color: #d0b316;
+            color: #bdb316;
             -webkit-transition: all 0.25s linear;
             -moz-transition: all 0.25s linear;
             -o-transition: all 0.25s linear;
@@ -3713,7 +3718,7 @@ header {
     .value > li .btn-value .checkmark {
       font-size: 15px;
       margin-left: auto;
-      color: #d0b316;
+      color: #bdb316;
       opacity: 0; }
     .value > li .btn-value:hover {
       background-color: #ececec; }
@@ -3750,14 +3755,7 @@ header {
   padding-top: 15px; }
   .wrap-map .map-home {
     width: 100%;
-    position: relative;
-    box-shadow: inset 0 0 100px 50px #fff; }
-    .wrap-map .map-home > img {
-      z-index: -1;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%; }
+    position: relative; }
     .wrap-map .map-home > .wrap-coo {
       position: absolute;
       z-index: 2;
@@ -3765,7 +3763,8 @@ header {
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0; }
+      bottom: 0;
+      box-shadow: inset 0 0 100px 50px #fff; }
       .wrap-map .map-home > .wrap-coo .map-coo {
         background-image: url("../images/icon/poin_2_optimized.png"); }
       .wrap-map .map-home > .wrap-coo .map-coo-active {
@@ -3814,7 +3813,8 @@ header {
       top: 10%;
       left: 5%;
       z-index: 4;
-      background-color: #e6ddcc; }
+      background-color: #e6ddcc;
+      position: absolute; }
       .wrap-map .map-home .synch-carousels .item {
         width: 100%;
         height: 100%;
@@ -3912,7 +3912,7 @@ header {
     padding-right: 15px;
     text-align: left; }
   .section-blog .col-xlg-4 .desti {
-    color: #d0b316;
+    color: #bdb316;
     font-weight: 500;
     text-transform: uppercase; }
 .section-blog .view-more-wrap {
@@ -4035,10 +4035,12 @@ header {
     bottom: 30px; }
 
   .wrap-map {
-    padding: 0; }
+    padding: 0;
+    margin-top: 15px; }
     .wrap-map .map-home > img {
       display: none; }
     .wrap-map .map-home .synch-carousels {
+      position: relative;
       width: 65%;
       margin: 0 auto;
       top: 10%;
@@ -4327,7 +4329,7 @@ header {
       text-align: justify; }
       .wrap-faq .order-day .panel .paragraph a {
         display: inline;
-        color: #d0b316; }
+        color: #bdb316; }
 
 .wrap-filter-st2 {
   width: 100%;
@@ -4351,14 +4353,14 @@ header {
       padding-left: 10px;
       cursor: pointer; }
       .wrap-filter-st2 .select-st1 .text > .icon-font:first-child {
-        color: #d0b316; }
+        color: #bdb316; }
       .wrap-filter-st2 .select-st1 .text b {
         font-weight: 600;
         font-size: 14px; }
       .wrap-filter-st2 .select-st1 .text .icon-dropdown {
         width: 35px;
         height: 100%;
-        background-color: #d0b316;
+        background-color: #bdb316;
         flex-shrink: 0;
         color: #fff; }
         .wrap-filter-st2 .select-st1 .text .icon-dropdown .select-arrow-thin {
@@ -4374,7 +4376,7 @@ header {
         .wrap-filter-st2 .select-st1 .value > li .btn-value .icon-font:first-child {
           margin-right: 8px;
           font-size: 15px;
-          color: #d0b316;
+          color: #bdb316;
           -webkit-transition: all 0.25s linear;
           -moz-transition: all 0.25s linear;
           -o-transition: all 0.25s linear;
@@ -4385,7 +4387,7 @@ header {
   .wrap-filter-st2 .filter-who-2 .value > li .btn-value .icon-font:first-child {
     font-size: 22px; }
     .wrap-filter-st2 .filter-who-2 .value > li .btn-value .icon-font:first-child:before {
-      color: #d0b316; }
+      color: #bdb316; }
   .wrap-filter-st2 .filter-who-2 .value > li .btn-value:hover .icon-font:first-child:before {
     color: #ad6816; }
   .wrap-filter-st2 .filter-submit-2 {
@@ -4394,7 +4396,7 @@ header {
     padding-left: 10px;
     padding-right: 10px; }
     .wrap-filter-st2 .filter-submit-2 .btn-st3 {
-      background-color: #d0b316;
+      background-color: #bdb316;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -4675,7 +4677,7 @@ header {
     background-color: transparent; }
     .wrap-contact-box .call-us p {
       font-size: 14px;
-      color: #d0b316;
+      color: #bdb316;
       font-size: 22px;
       font-weight: 600; }
       .wrap-contact-box .call-us p a {
@@ -4767,14 +4769,14 @@ header {
     padding-left: 20px;
     padding-right: 20px;
     text-transform: uppercase;
-    border-right: 1px solid #d0b316;
+    border-right: 1px solid #bdb316;
     text-align: center;
     font-weight: 500; }
     .location-list > a:last-child {
       border-right: none; }
   .location-list > div {
     font-size: 18px;
-    color: #d0b316; }
+    color: #bdb316; }
 
 .detail-location .wrap-slide-st4 {
   margin-top: 40px;
@@ -4837,7 +4839,7 @@ header {
       margin-bottom: 15px;
       display: flex; }
     .content-hl-tour > div:nth-child(2) .checkmark {
-      color: #d0b316;
+      color: #bdb316;
       font-size: 16px;
       margin-right: 10px; }
     .content-hl-tour > div:nth-child(2) > .div-hidden {
@@ -4877,11 +4879,11 @@ header {
     font-weight: 600; }
   .img-box:hover {
     opacity: 1;
-    color: #d0b316; }
+    color: #bdb316; }
 
 .section-map-day .wrap-mini-intro .paragraph {
   font-size: 16px;
-  color: #d0b316;
+  color: #bdb316;
   font-weight: 600; }
 
 .loca-info-map {
@@ -4899,7 +4901,7 @@ header {
       line-height: 1.2;
       margin-bottom: 10px; }
       .loca-info-map > div:first-child p span {
-        color: #d0b316;
+        color: #bdb316;
         font-weight: 600;
         margin-right: 5px; }
   .loca-info-map > div:last-child {
@@ -4913,7 +4915,7 @@ header {
       height: 25px;
       padding-left: 20px;
       padding-right: 20px;
-      background-color: #d0b316;
+      background-color: #bdb316;
       color: #fff; }
 
 .btn-day {
@@ -4986,7 +4988,7 @@ header {
         .wrap-map-loca .left-daybyday ul li .triagle-st1 {
           height: 100%;
           width: 20px;
-          background-color: #d0b316;
+          background-color: #bdb316;
           visibility: hidden; }
         .wrap-map-loca .left-daybyday ul li a {
           display: flex;
@@ -5016,7 +5018,7 @@ header {
             -o-transition: all 0.25s linear;
             -ms-transition: all 0.25s linear;
             transition: all 0.25s linear;
-            color: #d0b316;
+            color: #bdb316;
             width: 32px;
             height: 32px;
             border: 1px solid;
@@ -5029,8 +5031,8 @@ header {
             .wrap-map-loca .left-daybyday ul li a .icon-font:before {
               color: inherit; }
           .wrap-map-loca .left-daybyday ul li a:hover {
-            background-color: #d0b316;
-            border-color: #d0b316;
+            background-color: #bdb316;
+            border-color: #bdb316;
             opacity: 1; }
             .wrap-map-loca .left-daybyday ul li a:hover span {
               color: #fff; }
@@ -5041,8 +5043,8 @@ header {
       .wrap-map-loca .left-daybyday ul li.active .triagle-st1 {
         visibility: visible !important; }
       .wrap-map-loca .left-daybyday ul li.active a {
-        background-color: #d0b316;
-        border-color: #d0b316; }
+        background-color: #bdb316;
+        border-color: #bdb316; }
         .wrap-map-loca .left-daybyday ul li.active a span {
           color: #fff; }
           .wrap-map-loca .left-daybyday ul li.active a span b {
@@ -5070,15 +5072,15 @@ header {
     .wrap-detail-day .toggle-day > div .icon-font {
       margin-right: 10px;
       font-size: 12px;
-      color: #d0b316; }
+      color: #bdb316; }
     .wrap-detail-day .toggle-day > div .link-st3 {
       font-size: 14px; }
     .wrap-detail-day .toggle-day > div:hover .icon-font {
-      color: #d0b316; }
+      color: #bdb316; }
     .wrap-detail-day .toggle-day > div:hover .link-st3 {
-      color: #d0b316; }
+      color: #bdb316; }
       .wrap-detail-day .toggle-day > div:hover .link-st3:after {
-        background-color: #d0b316; }
+        background-color: #bdb316; }
   .wrap-detail-day .detail-day {
     margin-top: 30px; }
 
@@ -5180,7 +5182,7 @@ header {
   .head-pn .icon-font {
     font-size: 18px;
     margin-right: 5px;
-    color: #d0b316; }
+    color: #bdb316; }
   .head-pn span {
     font-size: 14px; }
 
@@ -5249,9 +5251,9 @@ header {
         -webkit-filter: brightness(100%);
         filter: brightness(100%); }
       .experience-suplier .experience-img:hover .count-img {
-        color: #d0b316; }
+        color: #bdb316; }
       .experience-suplier .experience-img:hover .enlarge {
-        color: #d0b316; }
+        color: #bdb316; }
   .experience-suplier .experience-content {
     width: 85%;
     padding-left: 15px; }
@@ -5296,11 +5298,11 @@ header {
   .accordion .head-pn:hover {
     background-color: #fbfaf9; }
     .accordion .head-pn:hover > button .select-arrow-thin {
-      color: #d0b316; }
+      color: #bdb316; }
     .accordion .head-pn:hover span b {
-      color: #d0b316; }
+      color: #bdb316; }
       .accordion .head-pn:hover span b .external-link {
-        color: #d0b316; }
+        color: #bdb316; }
 .accordion .head-pn.active > button {
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
@@ -5315,12 +5317,12 @@ header {
 .wrap-inclusion > div article h4 {
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #d0b316; }
+  color: #bdb316; }
   .wrap-inclusion > div article h4 .icon-font {
     font-size: 14px;
     margin-right: 5px; }
 .wrap-inclusion > div article p .checkmark {
-  color: #d0b316; }
+  color: #bdb316; }
 .wrap-inclusion > div p {
   line-height: 1.4;
   margin-bottom: 10px; }
@@ -5345,7 +5347,7 @@ header {
   .wrap-tailor-made-btn .btn-st1 {
     width: 100%;
     height: 45px;
-    background-color: #d0b316;
+    background-color: #bdb316;
     color: #fff;
     font-size: 14px;
     font-weight: 700; }
@@ -5375,7 +5377,7 @@ header {
       .experience-box-st1 .right-box h3 a {
         font-weight: 600; }
         .experience-box-st1 .right-box h3 a:hover {
-          color: #d0b316; }
+          color: #bdb316; }
     .experience-box-st1 .right-box strong {
       color: #666;
       text-transform: uppercase; }
@@ -5482,12 +5484,12 @@ header {
     font-size: 14px; }
 
 .current-box-1 h3 {
-  background-color: #d0b316; }
+  background-color: #bdb316; }
 .current-box-1:before {
   content: '1';
-  background-color: #d0b316; }
+  background-color: #bdb316; }
 .current-box-1 .btn-st1 {
-  background-color: #d0b316; }
+  background-color: #bdb316; }
 
 .current-box-2 h3 {
   background-color: #96a089; }
@@ -5526,7 +5528,7 @@ header {
   padding-left: 10px; }
   .body-current-box p .icon-font {
     margin-right: 5px;
-    color: #d0b316; }
+    color: #bdb316; }
   .body-current-box p a {
     display: inline; }
 .body-current-box .price-trip-box {
@@ -5544,7 +5546,7 @@ header {
   font-weight: normal; }
 .wrap-more-inclusions .icon-font {
   margin-left: 5px;
-  color: #d0b316; }
+  color: #bdb316; }
 
 @media (max-width: 1351px) {
   .banner-top-detail {
@@ -5879,7 +5881,7 @@ header {
         #booking-widget-cruisepage .form-banner-top .booking-step-cruise .value .btn-value .ship {
           margin-right: 5px;
           font-size: 12px;
-          color: #d0b316;
+          color: #bdb316;
           -webkit-transition: all 0.25s linear;
           -moz-transition: all 0.25s linear;
           -o-transition: all 0.25s linear;
@@ -6172,7 +6174,7 @@ header {
       color: #aaa;
       display: inline; }
       .breadcrumb li a:hover {
-        color: #d0b316; }
+        color: #bdb316; }
     .breadcrumb li .active {
       cursor: auto; }
       .breadcrumb li .active:hover {
@@ -6680,7 +6682,7 @@ header {
         margin-right: 5px;
         font-size: 24px; }
         .navbar-cruise ul li a .icon-font:before {
-          color: #d0b316; }
+          color: #bdb316; }
 
 .cruise-intro-container .wrap-cruise-media {
   margin-bottom: 20px; }
@@ -6845,7 +6847,7 @@ header {
         margin-top: 20px;
         margin-bottom: 20px; }
     .check-r-container #booking-widget-cruisepage .btn-st3 {
-      background-color: #d0b316;
+      background-color: #bdb316;
       font-size: 14px;
       border-top-right-radius: 6px;
       border-bottom-right-radius: 6px; }
@@ -6875,7 +6877,7 @@ header {
     .cr-content span .icon-font {
       margin-right: 5px;
       font-size: 14px;
-      color: #d0b316; }
+      color: #bdb316; }
 
 .booking-cr-sub {
   width: 100%;
@@ -6950,7 +6952,7 @@ header {
     .item-table figure > a {
       position: relative; }
       .item-table figure > a:hover .count-img, .item-table figure > a:hover .enlarge {
-        color: #d0b316; }
+        color: #bdb316; }
   .item-table .view-more-wrap {
     margin-bottom: 0;
     align-items: flex-start; }
@@ -6961,9 +6963,9 @@ header {
       .item-table .view-more-wrap .link-st3:after {
         background-color: #ddd; }
       .item-table .view-more-wrap .link-st3:hover {
-        color: #d0b316; }
+        color: #bdb316; }
         .item-table .view-more-wrap .link-st3:hover:after {
-          background-color: #d0b316; }
+          background-color: #bdb316; }
 
 .cruise-room-info {
   padding-left: 20px;
@@ -6975,7 +6977,7 @@ header {
     font-weight: 600;
     text-transform: uppercase; }
     .cruise-room-info h3 a {
-      color: #d0b316; }
+      color: #bdb316; }
   .cruise-room-info ul {
     flex-grow: 1;
     display: flex;
@@ -7014,7 +7016,7 @@ header {
   margin-left: auto;
   margin-right: 0;
   max-width: 120px;
-  color: #d0b316;
+  color: #bdb316;
   padding-left: 15px; }
   .book-cruise-st1 span {
     font-size: 14px;
@@ -7050,7 +7052,7 @@ header {
         text-transform: none;
         color: #888; }
         .itineraries-cr-container .wrap-faq .order-day > a:first-child .price-trip-box > span strong {
-          color: #d0b316; }
+          color: #bdb316; }
     .itineraries-cr-container .wrap-faq .order-day > a:first-child:hover {
       background-color: #fbfaf9; }
 
@@ -7079,7 +7081,7 @@ header {
   webkit-filter: brightness(100%);
   filter: brightness(100%); }
 .highlight-cr-container .container .col-xlg-4 > a:hover .count-img, .highlight-cr-container .container .col-xlg-4 > a:hover .enlarge {
-  color: #d0b316; }
+  color: #bdb316; }
 
 .review-cr-container .wrap-slide-st3 {
   width: 80%;
@@ -7254,7 +7256,7 @@ header {
       border: 1px solid #eae2b7;
       color: #fff; }
     .room-booking-wrap table thead tr {
-      background-color: #d0b316; }
+      background-color: #bdb316; }
     .room-booking-wrap table tbody tr td {
       border: 1px solid #eae2b7;
       vertical-align: middle; }
@@ -7291,12 +7293,12 @@ header {
       margin-top: 0;
       font-size: 14px; }
       .info-cabins .item-listcabin h3 a {
-        color: #d0b316; }
+        color: #bdb316; }
     .info-cabins .item-listcabin p {
       margin-bottom: 10px;
       font-size: 10px; }
     .info-cabins .item-listcabin .icon-font {
-      color: #d0b316; }
+      color: #bdb316; }
     .info-cabins .item-listcabin .connecting-r {
       justify-content: flex-start;
       font-size: 10px; }
@@ -7316,14 +7318,14 @@ header {
     font-size: 22px;
     margin-bottom: 10px; }
   .price-save .sales-offer {
-    color: #d0b316;
+    color: #bdb316;
     font-weight: 600;
     margin-bottom: 10px;
     color: #ff5722; }
   .price-save p {
     text-align: center; }
     .price-save p .checkmark {
-      color: #d0b316; }
+      color: #bdb316; }
 
 .conditions ul {
   display: flex;
@@ -7333,10 +7335,10 @@ header {
   .conditions ul li {
     margin-bottom: 10px; }
     .conditions ul li .icon-font {
-      color: #d0b316;
+      color: #bdb316;
       font-size: 14px; }
     .conditions ul li b {
-      color: #d0b316; }
+      color: #bdb316; }
 
 .select-cabin {
   text-align: center; }
@@ -7358,7 +7360,7 @@ header {
     font-weight: normal; }
     .booking-room h2 > .bed {
       margin-right: 5px;
-      color: #d0b316; }
+      color: #bdb316; }
     .booking-room h2 strong {
       font-weight: 600; }
     .booking-room h2 span {
@@ -7375,7 +7377,7 @@ header {
       .booking-room h2 > a .icon-font {
         font-size: 14px; }
       .booking-room h2 > a:hover {
-        color: #d0b316; }
+        color: #bdb316; }
 
 .booking-r-option {
   width: 100%;
@@ -7407,7 +7409,7 @@ header {
   .booking-r-option .col-xlg-6 {
     text-align: left; }
     .booking-r-option .col-xlg-6:first-child li span > b {
-      color: #d0b316; }
+      color: #bdb316; }
     .booking-r-option .col-xlg-6 ul {
       margin-top: 30px; }
       .booking-r-option .col-xlg-6 ul li {
@@ -7419,10 +7421,10 @@ header {
         .booking-r-option .col-xlg-6 ul li > span {
           width: calc(100% - 23px); }
           .booking-r-option .col-xlg-6 ul li > span .icon-font {
-            color: #d0b316;
+            color: #bdb316;
             font-size: 14px; }
           .booking-r-option .col-xlg-6 ul li > span a:hover b {
-            color: #d0b316; }
+            color: #bdb316; }
         .booking-r-option .col-xlg-6 ul li .input-radio-st1 {
           margin-right: 5px; }
         .booking-r-option .col-xlg-6 ul li .input-checkbox-st1 {
@@ -7456,7 +7458,7 @@ header {
     padding-bottom: 15px;
     border-bottom: 1px solid #eee; }
     .box-summary h2 .icon-font {
-      color: #d0b316;
+      color: #bdb316;
       margin-right: 5px; }
   .box-summary > div {
     width: 80%;
@@ -7479,7 +7481,7 @@ header {
     padding-right: 30px;
     padding-left: 30px;
     font-weight: 600;
-    color: #d0b316;
+    color: #bdb316;
     font-size: 16px; }
     #title-cruise ul li .icon-font {
       margin-right: 5px; }
@@ -7519,12 +7521,12 @@ header {
       text-overflow: ellipsis; }
     .sum-trans ul li .icon-font {
       margin-right: 5px;
-      color: #d0b316; }
+      color: #bdb316; }
     .sum-trans ul li > b {
-      color: #d0b316; }
+      color: #bdb316; }
     .sum-trans ul li font {
       margin-left: auto;
-      color: #d0b316;
+      color: #bdb316;
       font-weight: 600;
       font-size: 16px; }
     .sum-trans ul li #sum-pri-trans {
@@ -7553,7 +7555,7 @@ header {
     height: 25px;
     flex-shrink: 0;
     color: #fff;
-    background-color: #d0b316; }
+    background-color: #bdb316; }
   .promotion-code input {
     flex-grow: 1;
     min-width: 160px; }
@@ -7569,7 +7571,7 @@ header {
     padding-bottom: 15px;
     border-bottom: 1px solid #eee; }
     .contact-info-box h2 .icon-font {
-      color: #d0b316;
+      color: #bdb316;
       margin-right: 5px; }
   .contact-info-box > div {
     display: flex;
@@ -7583,10 +7585,10 @@ header {
   margin-left: auto; }
   .logo-intro .icon-font {
     font-size: 40px;
-    color: #d0b316; }
+    color: #bdb316; }
 
 .contact-info .btn-st3 {
-  background-color: #d0b316;
+  background-color: #bdb316;
   width: 100%;
   max-width: 300px;
   padding-top: 20px;
@@ -7661,7 +7663,7 @@ header {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: #d0b316; }
+    background-color: #bdb316; }
 
 .input-checkbox-st1 {
   display: inline-block;
@@ -7685,7 +7687,7 @@ header {
     content: '\ea10';
     display: block;
     position: absolute;
-    color: #d0b316;
+    color: #bdb316;
     font-family: 'insideTravel';
     speak: none;
     line-height: 1;
@@ -7717,8 +7719,8 @@ header {
   .navbar-booking ul li .tooltip > span {
     display: block;
     box-shadow: none;
-    border: 1px solid #d0b316;
-    color: #d0b316;
+    border: 1px solid #bdb316;
+    color: #bdb316;
     left: 50%;
     top: 90%;
     bottom: unset;
@@ -7729,7 +7731,7 @@ header {
     -ms-transform: translateX(-50%);
     width: 80%; }
     .navbar-booking ul li .tooltip > span > i {
-      background-color: #d0b316;
+      background-color: #bdb316;
       top: unset;
       bottom: 100%;
       -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
@@ -7843,7 +7845,7 @@ header {
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
-  border: 5px solid #d0b316; }
+  border: 5px solid #bdb316; }
   .wrap-icon-trusted img {
     border-radius: 50%; }
 
@@ -8111,7 +8113,7 @@ header {
     color: #fff;
     border: 1px solid #fff; }
     .box-submit-st2 button:hover {
-      background-color: #d0b316; }
+      background-color: #bdb316; }
 
 .quick-link {
   padding-left: 100px;
@@ -8141,7 +8143,7 @@ header {
           font-size: 16px; }
         .quick-link ul li .btn-st3:hover {
           opacity: .8;
-          background-color: #d0b316; }
+          background-color: #bdb316; }
 
 .trip-cruise {
   display: flex;
@@ -8167,7 +8169,8 @@ header {
         z-index: 2;
         font-size: 16px;
         font-weight: 600;
-        color: #fff; }
+        color: #fff;
+        text-transform: uppercase; }
       .trip-cruise .left-trip > a img {
         -webkit-filter: brightness(60%);
         filter: brightness(60%);
@@ -8184,7 +8187,7 @@ header {
     .trip-cruise .left-trip .wrap-tooltip {
       padding-left: 0;
       padding-right: 0;
-      margin-top: 0;
+      margin-top: 15px;
       margin-bottom: 0; }
       .trip-cruise .left-trip .wrap-tooltip .tooltip span {
         left: 15px;
@@ -8208,7 +8211,8 @@ header {
         padding-left: 10px; }
         .trip-cruise .mid-trip .head-trip .cruise-iti .title-cruise {
           text-align: left;
-          margin: 0; }
+          margin: 0;
+          text-transform: none; }
         .trip-cruise .mid-trip .head-trip .cruise-iti address {
           line-height: 1.8;
           color: #895a36; }
@@ -8254,7 +8258,7 @@ header {
 
 .box-schedule {
   position: absolute;
-  top: calc(100% - 40px);
+  top: 100%;
   left: -20px;
   width: 700px;
   z-index: 5;
@@ -8310,8 +8314,8 @@ header {
     color: #b3350a;
     border-color: #b3350a; }
     .button-cabin .btn-st2:hover {
-      color: #d0b316;
-      border-color: #d0b316; }
+      color: #bdb316;
+      border-color: #bdb316; }
 
 .cabin-info-box h4 {
   margin-top: 0;

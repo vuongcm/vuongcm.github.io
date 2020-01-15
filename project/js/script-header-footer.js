@@ -172,7 +172,7 @@ let loginModal = `<div id="login-overlay" class="modal-dialog">
               <div class="row">
                   <div class="col-xs-12">
                       <div class="well">
-                          <form id="loginForm" method="POST" action="" novalidate="novalidate">
+                          <form id="loginForm" method="POST" action="">
                               <div class="form-group">
                                   <label for="username" class="control-label">Tài khoản</label>
                                   <input type="text" class="form-control" id="username" name="username" required title="Xin vui lòng nhập tên tài khoản">

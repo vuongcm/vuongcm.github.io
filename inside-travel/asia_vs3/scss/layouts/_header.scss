@@ -5,6 +5,7 @@ header{
 	top: 0;
 	left: 0;
 	background-color: $background-color;
+	background-image: url(../images/background/bg-header.png);
 	.menu-wrap-st2 {
 		display: flex;
 		//align-items: center;
@@ -29,7 +30,7 @@ header{
 	.menu-wrap-scroll{
 		border-bottom: 1px solid $border-color;
 		.brand-st2{
-			max-width: 70px;
+			max-width: 150px;
 		}
 	}
 }
@@ -64,9 +65,9 @@ header{
 }
 .brand-st2{
 	width: 30%;
-	max-width: 120px;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	max-width: 200px;
+	display: flex;
+	align-items: center;
 	@include smooth(.25s);
 	//margin-right: 5%;
 }
@@ -291,7 +292,7 @@ header{
 	header{
 		.menu-wrap-scroll{
 			.brand-st2{
-				max-width: 100px;
+				//max-width: 150px;
 			}
 		}
 		.menu-wrap-st2{
@@ -321,7 +322,7 @@ header{
 		position: absolute;
 		top: calc(100% + 1px);
 		left: 0;
-		background-color: #fff;
+	    background-color: $background-color;
 		width: 300px;
 		height: 100vh;
 		overflow: hidden;
@@ -444,7 +445,10 @@ header{
 		.phone-box {
 		    padding: 15px 0;
 		}
-	} 
+	}
+	.brand-st2{
+		width: 80%;
+	}
 }
 @media (max-width: 479px) {
 	.main-menu-st2{
@@ -461,5 +465,9 @@ header{
 
 }
 @media (max-width: 375px) {
-
+	.global-menu-st2{
+		.lang-top{
+			display: none;
+		}
+	}
 }
