@@ -1,8 +1,17 @@
 let nav1Height;
 let header = `<nav id="nav-1">
             <div class="loginBar">
-                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal">Đăng nhập</button>
-                <a href="validate.html" id="signUp" class="btn btn-light">Đăng ký</a>
+                <!--<button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal">Đăng nhập</button>
+                <a href="validate.html" id="signUp" class="btn btn-light">Đăng ký</a>-->
+                <div class="box-logined">
+                    <a href="javascript:;" class="dropdown-toggle btn btn-light">Xin chào, vuongcm</a>
+                    <ul>
+                        <li><a href="javascript:;" class="btn btn-light">Thông tin tài khoản</a></li>
+                        <li><a href="javascript:;" class="btn btn-light">Chỉnh sửa thông tin</a></li>
+                        <li><a href="javascript:;" class="btn btn-light">Đăng xuất</a></li>
+                    </ul>
+                </div>
+                
             </div>
             <div class="content-menu">
                 <div class="logo-menu">
@@ -79,8 +88,16 @@ let header = `<nav id="nav-1">
         <nav class="navbar navbar-light navbar-expand-md navigation-clean" id="nav-2">
             <div id="test">
             <div class="loginBar">
-                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal">Đăng nhập</button>
-                <a href="validate.html" id="signUp" class="btn btn-light">Đăng ký</a>
+                <!--<button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal">Đăng nhập</button>
+                <a href="validate.html" id="signUp" class="btn btn-light">Đăng ký</a>-->
+                <div class="box-logined">
+                    <a href="javascript:;" class="dropdown-toggle btn btn-light">Xin chào, vuongcm</a>
+                    <ul>
+                        <li><a href="javascript:;" class="btn btn-light">Thông tin tài khoản</a></li>
+                        <li><a href="javascript:;" class="btn btn-light">Chỉnh sửa thông tin</a></li>
+                        <li><a href="javascript:;" class="btn btn-light">Đăng xuất</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="content-menu">
                 <div class="logo-menu" class="navbar-brand">

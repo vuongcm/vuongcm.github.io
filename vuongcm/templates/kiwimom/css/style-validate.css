@@ -1,0 +1,162 @@
+.wrap>.row>div span {
+	font-family: FontAwesome;
+	color: #E77200;
+}
+.wrap>.row h5 {
+	color: #F50E0E;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+}
+.wrap .row>div h5, .wrap .row>div p {
+	line-height: 1.8;
+	margin-bottom: 1rem;
+}
+.wrap>.row form {
+	border: 1px solid rgba(231,114,0,.5);
+	padding: 1.2rem 1.2rem;
+	background-color: #f3feff;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.wrap>.row .form-control {
+	font-size: 14px;
+}
+.wrap>.row .form-group {
+	font-size: 14px;
+}
+.wrap>.row .form-group .radio {
+	font-size: 14px;
+	display: inline-block;
+	margin: 0 15px;
+}
+.wrap>.row .form-group .radio label {
+	cursor: pointer;
+	margin: 0;
+}
+.wrap>.row .form-inline {
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: space-between;
+}
+.wrap>.row .form-inline .form-group {
+	width: 47%;
+}
+.wrap>.row .form-inline .form-group>.form-control {
+	width: 100%;
+}
+.wrap>.row .form-group .checkbox {
+	text-align: center;
+}
+.wrap>.row form a {
+	color: #fc840e;
+  	cursor: pointer;
+}
+.wrap>.row form a:hover {
+	opacity: .8;
+}
+.wrap>.row form>div:last-child {
+	font-size: 14px;
+	text-align: center;
+}
+.wrap>.row form .btn {
+	-ms-touch-action: manipulation;
+    touch-action: manipulation;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    font-size: calc(var(--fontSize) * 2);
+    background-color: #FC840E;
+    border-color: transparent;
+    padding: .5rem 1.5rem;
+}
+.wrap>.row form .btn:hover {
+	opacity: .8;
+}
+#wrap-submit  {
+	text-align: center;
+}
+@media only screen and (max-width: 1024px) {
+	.wrap>.row .form-inline .form-group {
+		width: 100%;
+	}
+	.wrap>.row .form-inline .form-group:first-child {
+		margin-bottom: 1rem;
+	}
+}
+@media only screen and (max-width: 992px) {
+	.wrap>.row form .btn {
+		font-size: 12.6px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.wrap.content {
+		max-width: 96%;
+	}
+	.wrap>.row .form-inline .form-group {
+		width: 47%;
+	}
+	.wrap>.row .form-inline .form-group:first-child {
+		margin-bottom: 0;
+	}
+}
+@media only screen and (max-width: 576px) {
+	.wrap>.row .form-inline .form-group {
+		width: 100%;
+	}
+	.wrap>.row .form-inline .form-group:first-child {
+		margin-bottom: 1rem;
+	}
+}
+#lawModal {
+	background-color: rgba(108,117,125,.4);
+}
+#lawModal .modal-dialog {
+	width: 70%;
+	max-width: 70% !important;
+}
+#lawModal #law-content {
+	display: block;
+	margin: 1.5rem auto;
+	font-size: 13.5px;
+	padding: 10px;
+	background-color: #ffffff;
+	line-height: 1.8;
+	-webkit-box-shadow: 0 3px 4px rgba(0,0,0,.5);
+    box-shadow: 0 3px 4px rgba(0,0,0,.5);
+}
+#lawModal .close {
+    opacity: .2;
+    padding: .75rem;
+}
+#lawModal .close:hover {
+	opacity: 1;
+}
+#lawModal .icon-tuti {
+  display: inline-block;
+  width: 2%;
+  margin: 0 5px 0 1%;
+}
+#lawModal h4 {
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	margin: 1.2rem 0 .75rem;
+}
+#lawModal #law-content p:last-child {
+	color: #F90000;
+}
+@media only screen and (max-width: 767px) {
+	#lawModal .close {
+	    padding: .25rem;
+	    margin: 0;
+	}
+	#lawModal .icon-tuti {
+	  width: 7%;
+	}
+}

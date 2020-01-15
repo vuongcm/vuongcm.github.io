@@ -1,0 +1,52 @@
+.content .media {
+  width: 80%;
+  float: right;
+}
+@media only screen and (max-width: 992px) {
+  .content .media {
+    width: 100%;
+    float: none;
+  }
+}
+.content .media .articles {
+    padding-bottom: 10px;
+}
+.content .media .item {
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.content .media .item .name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+    color: #333;
+}
+.content .media .item a:hover .name {
+    color: #494b6b;
+}
+.interactive {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5%;
+    padding-left: 5%;
+    color: #424648;
+    margin-top: 1rem;
+    font-style: italic;
+}
+.interactive .date {
+    width: 45%;
+    display: flex;
+    justify-content: flex-start;
+   
+}
+.interactive .view {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.interactive .view p:nth-child(1) {
+    margin: 0;
+}
