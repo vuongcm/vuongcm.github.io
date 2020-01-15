@@ -50,7 +50,7 @@
 	top: 100%;
 	left: 0;
 	background-color: #f9f9f9;
-	z-index: 2;
+	z-index: 6;
 	padding: 10px 15px;
 	display: none;
 	flex-wrap: wrap;
@@ -118,7 +118,7 @@
 .call-box>img{
 	width: 45px;
 	height: 45px;
-	border: 2px solid #0699ab;
+	border: 2px solid #10bace;
 	border-radius: 50%;
 }
 .call-box ul{
@@ -165,7 +165,7 @@
 	top: 100%;
 	right: 0;
 	background-color: #f9f9f9;
-	z-index: 2;
+	z-index: 5;
 	display: none;
 }
 .login-menu>li>a{
@@ -294,7 +294,7 @@
     padding: 10px 20px;
     font-weight: normal;
     letter-spacing: 1px;
-    background-color: rgba(1,80,165,.8);
+    background-color: rgba(8, 191, 188, 0.7);
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -316,6 +316,7 @@
 	position: relative;
 }
 .btn-like small{
+	font-family: arial;
 	position: absolute;
 	top: -10px;
 	left: 17px;
@@ -578,11 +579,11 @@
 		order: 2;
 	}
 	.mobi-btn-menu{
-		margin-left: 10px;
 		order: 3;
 	}
 	.brand-st2{
 		order: 1;
+		padding-left: 10px;
 	}
 	.media-box-top img {
 	    width: unset;
