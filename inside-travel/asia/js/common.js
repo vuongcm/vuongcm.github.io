@@ -588,23 +588,49 @@ $(document).ready(function() {
 			});
 			$(`.wrap-gallery-img .gallery`).slick("slickGoTo", 0);
 		});
+		$('.wrap-gallery-img .synch-carousels').eq(0).addClass('open-relative');
+		for(let i=0; i<$('.open-img').length; i++){
+			$(`.open-exp-gallery-${i}`).click(function(){
+				$(`#synch-exp-${i}`).css({
+					'z-index':'210',
+					'visibility':'visible'
+				});
+			});
+			$(`#synch-exp-${i} .gallery`).slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+	            fade: true,
+				lazyLoad: 'ondemand',
+				infinite: true,
+				adaptiveHeight: true,
+				useTransform: false,
+		        prevArrow: `#synch-exp-${i} .arrow-left`,
+		        nextArrow: `#synch-exp-${i} .arrow-right`
+		    });
+		    $(`.open-acc-gallery-${i}`).click(function(){
+				$(`#synch-acc-${i}`).css({
+					'z-index':'210',
+					'visibility':'visible'
+				});
+			});
+			$(`#synch-acc-${i} .gallery`).slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+	            fade: true,
+				lazyLoad: 'ondemand',
+				infinite: true,
+				adaptiveHeight: true,
+				useTransform: false,
+		        prevArrow: `#synch-acc-${i} .arrow-left`,
+		        nextArrow: `#synch-acc-${i} .arrow-right`
+		    });
+		}
 		$('.wrap-gallery-img .btn-close').click(function(){
-			$('.wrap-gallery-img').css({
+			$('.wrap-gallery-img, .synch-carousels').css({
 				'z-index':'-5',
 				'visibility':'hidden'
 			});
 		});
-		$(`.wrap-gallery-img .gallery`).slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-            fade: true,
-			lazyLoad: 'ondemand',
-			infinite: true,
-			adaptiveHeight: true,
-			useTransform: false,
-	        prevArrow: `.wrap-gallery-img .arrow-left`,
-	        nextArrow: `.wrap-gallery-img .arrow-right`
-	    });
 	}
 
 	if ($('.wrap-slide-team').length > 0) {
@@ -679,7 +705,7 @@ $(document).ready(function() {
 		$(this).removeClass('open-block');
 		$('.modal, .modal-2,.video-modal').addClass('close-display');
 		$('.modal').removeAttr('style');
-		$('.wrap-gallery-img').removeAttr('style');
+		$('.wrap-gallery-img, .wrap-gallery-img .synch-carousels').removeAttr('style');
 		if($('.video-modal').length){
 			$('#playvideo').attr('src', $('#playvideo').attr('src').replace('autoplay=1', 'autoplay=0'));
 	    }

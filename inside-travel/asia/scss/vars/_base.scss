@@ -420,6 +420,9 @@ select:focus {
 .open-opacity:after,.open-opacity:before{
     opacity: 1!important;
 }
+.open-relative{
+    position: relative!important;
+}
 .close-opacity:after,.close-opacity:before{
     opacity: 0!important;
 }
