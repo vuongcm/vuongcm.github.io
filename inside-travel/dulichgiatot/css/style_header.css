@@ -269,6 +269,9 @@
 	color: #fff;
 	font-size: 20px;
 	background-color: rgba(0,0,0,.4);
+	display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .box-step-submit-st2 button:hover{
 	background-color: #ebb22b;
