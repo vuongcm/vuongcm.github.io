@@ -14,6 +14,7 @@ $(document).ready(function() {
 			$('.sub-menu').slideUp(300);
 			$('.sub-menu-lv2').slideUp(300);
 			$('.main-menu').css('max-width', mainMenuWidth);
+			$('.follow-top').fadeToggle(300);
 		});
 		$('.sub-menu-title>a').click(function(){
 			$('.main-menu').css('max-width', '500px');

@@ -2166,6 +2166,8 @@ header {
       background-color: transparent; }
 
 .main-menu {
+  display: flex;
+  flex-direction: column;
   width: unset;
   max-width: 50px;
   background-color: #f6f4f0;
@@ -2206,6 +2208,24 @@ header {
         margin-left: auto;
         font-size: 5px;
         line-height: 1; }
+  .main-menu > li:last-child {
+    margin-top: auto; }
+
+.line-top {
+  border-top: 1px solid #dcdcdc; }
+
+.follow-top {
+  display: none;
+  text-align: center; }
+  .follow-top font {
+    text-transform: uppercase; }
+  .follow-top > ul {
+    display: flex;
+    justify-content: center; }
+    .follow-top > ul li a {
+      padding: 20px 15px; }
+      .follow-top > ul li a .icon-font {
+        width: unset; }
 
 .btn-bar-toggle {
   position: absolute;
@@ -2279,11 +2299,16 @@ header {
 
 @media (max-width: 991px) {
   header .menu-wrap {
-    justify-content: flex-end; }
+    justify-content: flex-start; }
     header .menu-wrap .brand {
       position: absolute;
-      left: 60px;
-      z-index: 21; }
+      left: 50%;
+      z-index: 21;
+      transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      -ms-transform: translateX(-50%); }
     header .menu-wrap .search-nav {
       width: unset; }
       header .menu-wrap .search-nav .search {
@@ -2292,10 +2317,15 @@ header {
         display: none; }
     header .menu-wrap .global-menu {
       width: unset;
-      padding-left: 0; }
+      padding-left: 0;
+      margin-left: auto; }
       header .menu-wrap .global-menu > li a {
         padding-right: 10px;
         padding-left: 10px; }
+      header .menu-wrap .global-menu > li.lang-top {
+        display: none; }
+      header .menu-wrap .global-menu > li.login-top {
+        max-width: unset; }
       header .menu-wrap .global-menu > li.book-top a {
         padding-right: 0; }
 
@@ -2316,10 +2346,8 @@ header {
   body > section, body > footer {
     padding-left: 0; }
 
-  header .menu-wrap .global-menu {
-    margin-left: 0; }
-    header .menu-wrap .global-menu > li.lang-top {
-      display: none; }
+  header .menu-wrap .global-menu > li.lang-top {
+    display: none; }
   header .menu-wrap .search-nav {
     margin-left: 0;
     margin-right: 0; }
@@ -2332,11 +2360,12 @@ header {
     font-size: 14px; }
   .login-top > a .select-arrow-thin {
     display: none; } }
-@media (max-width: 374px) {
-  header .menu-wrap {
-    justify-content: flex-end; }
-    header .menu-wrap .brand {
-      left: 50px; }
+@media (max-width: 375px) {
+  header .menu-wrap .brand {
+    position: static;
+    margin-left: auto; }
+  header .menu-wrap .global-menu {
+    margin-left: 0; }
     header .menu-wrap .global-menu > li a {
       padding-right: 5px;
       padding-left: 5px; } }

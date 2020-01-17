@@ -94,10 +94,11 @@ header{
 	}
 }
 .main-menu{
+	display: flex;
+	flex-direction: column;
 	width: unset;
 	max-width: 50px;
 	background-color: $background-color-st1;
-	
 	@include smooth(.5s);
 	.search-menu-tablet{
 		display: none;
@@ -130,6 +131,31 @@ header{
 					margin-left: auto;
 					font-size: 5px;
 					line-height: 1;
+				}
+			}
+		}
+		&:last-child{
+			margin-top: auto;
+		}
+	}
+}
+.line-top{
+	border-top: 1px solid #dcdcdc;
+}
+.follow-top{
+	display: none;
+	text-align: center;
+	font{
+		text-transform: uppercase;
+	}
+	&>ul{
+		display: flex;
+		justify-content: center;
+		li{
+			a{
+				padding: 20px 15px;
+				.icon-font{
+					width: unset;
 				}
 			}
 		}
@@ -228,11 +254,12 @@ header{
 @media (max-width: 991px) {
 	header{
 		.menu-wrap{
-			justify-content: flex-end;
+			justify-content: flex-start;
 			.brand{
 				position: absolute;
-				left: 60px;
+				left: 50%;
 				z-index: 21;
+				@include translateX(-50%);
 			}
 			.search-nav{
 				width: unset;
@@ -246,12 +273,19 @@ header{
 			.global-menu{
 				width: unset;
 				padding-left: 0;
+				margin-left: auto;
 				&>li{
 					a{
 						padding-right: 10px;
 						padding-left: 10px;
 					}
 					
+				}
+				&>li.lang-top{
+					display: none;
+				}
+				&>li.login-top{
+					max-width: unset;
 				}
 				&>li.book-top{
 					a{
@@ -291,7 +325,6 @@ header{
 	header{
 		.menu-wrap{
 			.global-menu{
-				margin-left: 0;
 				&>li.lang-top{
 					display: none;
 				}
@@ -319,14 +352,15 @@ header{
 		}
 	}
 }
-@media (max-width: 374px) {
+@media (max-width: 375px) {
 		header{
 		.menu-wrap{
-			justify-content: flex-end;
 			.brand{
-				left: 50px;
+				position: static;
+				margin-left: auto;
 			}
 			.global-menu{
+				margin-left: 0;
 				&>li{
 					a{
 						padding-right: 5px;
