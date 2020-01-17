@@ -19,7 +19,7 @@ header{
 		margin-left: auto;
 		margin-right: auto;
 		.search-nav {
-			width: 35%;
+			width: 40%;
 			max-width: 400px;
 			display: flex;
 			align-items: center;
@@ -32,12 +32,12 @@ header{
 			}
 		}
 		.brand{
-			width: 30%;
+			width: 20%;
 			max-height: 100%;
 			max-width: 80px;
 		}
 		.global-menu {
-			width: 35%;
+			width: 40%;
 			max-width: 400px;
 			display: flex;
 			justify-content: space-between;
@@ -222,6 +222,119 @@ header{
 		}
 		&:last-child{
 			border-bottom: none;
+		}
+	}
+}
+@media (max-width: 991px) {
+	header{
+		.menu-wrap{
+			justify-content: flex-end;
+			.brand{
+				position: absolute;
+				left: 60px;
+				z-index: 21;
+			}
+			.search-nav{
+				width: unset;
+				.search{
+					display: none;
+				}
+				.input-st1{
+					display: none;
+				}
+			}
+			.global-menu{
+				width: unset;
+				padding-left: 0;
+				&>li{
+					a{
+						padding-right: 10px;
+						padding-left: 10px;
+					}
+					
+				}
+				&>li.book-top{
+					a{
+						padding-right: 0;
+					}
+					
+				}
+			}
+		}
+	}
+	.main-menu{
+		.search-menu-tablet{
+			padding: 20px 20px 20px 0;
+			display: flex;
+			.search{
+				font-size: 20px;
+			    width: 50px;
+			    display: inline-flex;
+			    justify-content: center;
+			    align-items: center;
+			    flex-shrink: 0;
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+	.wrap-main-menu{
+		.main-menu{
+			max-width: 0;
+		}
+	}
+	body{
+		&>section,&>footer{
+			padding-left: 0;
+		}
+	}
+	header{
+		.menu-wrap{
+			.global-menu{
+				margin-left: 0;
+				&>li.lang-top{
+					display: none;
+				}
+			}
+			.search-nav{
+				margin-left: 0;
+				margin-right: 0;
+				.phone-box{
+					margin-left: 0;
+				}
+			}
+		}
+	}
+	.login-top{
+		&>a{
+			font{
+				display: none;
+			}
+			.user-regular{
+				font-size: 14px;
+			}
+			.select-arrow-thin{
+				display: none;
+			}
+		}
+	}
+}
+@media (max-width: 374px) {
+		header{
+		.menu-wrap{
+			justify-content: flex-end;
+			.brand{
+				left: 50px;
+			}
+			.global-menu{
+				&>li{
+					a{
+						padding-right: 5px;
+						padding-left: 5px;
+					}
+					
+				}
+			}
 		}
 	}
 }

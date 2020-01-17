@@ -2107,7 +2107,7 @@ header {
     margin-left: auto;
     margin-right: auto; }
     header .menu-wrap .search-nav {
-      width: 35%;
+      width: 40%;
       max-width: 400px;
       display: flex;
       align-items: center; }
@@ -2117,11 +2117,11 @@ header {
       header .menu-wrap .search-nav input {
         text-transform: uppercase; }
     header .menu-wrap .brand {
-      width: 30%;
+      width: 20%;
       max-height: 100%;
       max-width: 80px; }
     header .menu-wrap .global-menu {
-      width: 35%;
+      width: 40%;
       max-width: 400px;
       display: flex;
       justify-content: space-between;
@@ -2277,6 +2277,69 @@ header {
     .login-menu li:last-child {
       border-bottom: none; }
 
+@media (max-width: 991px) {
+  header .menu-wrap {
+    justify-content: flex-end; }
+    header .menu-wrap .brand {
+      position: absolute;
+      left: 60px;
+      z-index: 21; }
+    header .menu-wrap .search-nav {
+      width: unset; }
+      header .menu-wrap .search-nav .search {
+        display: none; }
+      header .menu-wrap .search-nav .input-st1 {
+        display: none; }
+    header .menu-wrap .global-menu {
+      width: unset;
+      padding-left: 0; }
+      header .menu-wrap .global-menu > li a {
+        padding-right: 10px;
+        padding-left: 10px; }
+      header .menu-wrap .global-menu > li.book-top a {
+        padding-right: 0; }
+
+  .main-menu .search-menu-tablet {
+    padding: 20px 20px 20px 0;
+    display: flex; }
+    .main-menu .search-menu-tablet .search {
+      font-size: 20px;
+      width: 50px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0; } }
+@media (max-width: 767px) {
+  .wrap-main-menu .main-menu {
+    max-width: 0; }
+
+  body > section, body > footer {
+    padding-left: 0; }
+
+  header .menu-wrap .global-menu {
+    margin-left: 0; }
+    header .menu-wrap .global-menu > li.lang-top {
+      display: none; }
+  header .menu-wrap .search-nav {
+    margin-left: 0;
+    margin-right: 0; }
+    header .menu-wrap .search-nav .phone-box {
+      margin-left: 0; }
+
+  .login-top > a font {
+    display: none; }
+  .login-top > a .user-regular {
+    font-size: 14px; }
+  .login-top > a .select-arrow-thin {
+    display: none; } }
+@media (max-width: 374px) {
+  header .menu-wrap {
+    justify-content: flex-end; }
+    header .menu-wrap .brand {
+      left: 50px; }
+    header .menu-wrap .global-menu > li a {
+      padding-right: 5px;
+      padding-left: 5px; } }
 footer > div:first-child {
   padding-top: 50px;
   padding-bottom: 30px;

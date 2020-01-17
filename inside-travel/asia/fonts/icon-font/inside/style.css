@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'insideTravel';
-  src:  url('fonts/insideTravel.eot?rb5246');
-  src:  url('fonts/insideTravel.eot?rb5246#iefix') format('embedded-opentype'),
-    url('fonts/insideTravel.ttf?rb5246') format('truetype'),
-    url('fonts/insideTravel.woff?rb5246') format('woff'),
-    url('fonts/insideTravel.svg?rb5246#insideTravel') format('svg');
+  src:  url('fonts/insideTravel.eot?ruwre');
+  src:  url('fonts/insideTravel.eot?ruwre#iefix') format('embedded-opentype'),
+    url('fonts/insideTravel.ttf?ruwre') format('truetype'),
+    url('fonts/insideTravel.woff?ruwre') format('woff'),
+    url('fonts/insideTravel.svg?ruwre#insideTravel') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.speed-boat:before {
+  content: "\e933";
+  color: #606161;
+}
 .icon-user-2:before {
   content: "\e932";
   color: #ccc;
@@ -63,6 +67,100 @@
 }
 .play-video:before {
   content: "\e916";
+}
+.bamboo-rafting:before {
+  content: "\e934";
+  color: #606161;
+}
+.bikking:before {
+  content: "\e935";
+  color: #606161;
+}
+.cable-car:before {
+  content: "\e938";
+  color: #606161;
+}
+.canoe:before {
+  content: "\e939";
+  color: #606161;
+}
+.cidomo:before {
+  content: "\e93a";
+}
+.cyclo:before {
+  content: "\e93b";
+  color: #606161;
+}
+.electric-car:before {
+  content: "\e93c";
+  color: #606161;
+}
+.elephant:before {
+  content: "\e93d";
+  color: #606161;
+}
+.ferry:before {
+  content: "\e93e";
+  color: #606161;
+}
+.hill-truck:before {
+  content: "\e93f";
+  color: #606161;
+}
+.horse:before {
+  content: "\e940";
+  color: #606161;
+}
+.horse-cart:before {
+  content: "\e941";
+  color: #606161;
+}
+.jeep:before {
+  content: "\e943";
+  color: #606161;
+}
+.motorbike:before {
+  content: "\e944";
+  color: #606161;
+}
+.oxcart:before {
+  content: "\e945";
+  color: #606161;
+}
+.pedicab:before {
+  content: "\e946";
+}
+.rafting:before {
+  content: "\e947";
+  color: #606161;
+}
+.sidecar:before {
+  content: "\e948";
+  color: #606161;
+}
+.swimming:before {
+  content: "\e949";
+  color: #606161;
+}
+.train:before {
+  content: "\e94a";
+  color: #606161;
+}
+.trekking:before {
+  content: "\e94b";
+  color: #606161;
+}
+.trishaw:before {
+  content: "\e94c";
+  color: #606161;
+}
+.tuk-tuk:before {
+  content: "\e94d";
+  color: #606161;
+}
+.walking:before {
+  content: "\e94e";
+  color: #606161;
 }
 .heart-empty:before {
   content: "\e914";
