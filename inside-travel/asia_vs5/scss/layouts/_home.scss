@@ -30,13 +30,14 @@
 #booking-widget-homepage{
 	position: absolute;
 	bottom: 50px;
-	width: 100%;
+	width: calc(100% - 51px);
 	z-index: 3;
 	.form-banner-top{
 		display: flex;
 		justify-content: space-between;
 		align-items: stretch;
-		width: 80%;
+		width: 100%;
+		max-width: 1264px;
 		margin: 0 auto;
 		background-color: $background-color;
 		&>div{

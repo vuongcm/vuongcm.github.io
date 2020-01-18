@@ -2111,11 +2111,14 @@ header {
       max-width: 400px;
       display: flex;
       align-items: center; }
-      header .menu-wrap .search-nav .search {
-        margin-right: 5px;
-        font-size: 15px; }
-      header .menu-wrap .search-nav input {
-        text-transform: uppercase; }
+      header .menu-wrap .search-nav .open-search-top {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: 1px; }
+        header .menu-wrap .search-nav .open-search-top .search {
+          font-size: 14px;
+          margin-right: 5px; }
     header .menu-wrap .brand {
       width: 20%;
       max-height: 100%;
@@ -2176,8 +2179,6 @@ header {
   -o-transition: all 0.5s linear;
   -ms-transition: all 0.5s linear;
   transition: all 0.5s linear; }
-  .main-menu .search-menu-tablet {
-    display: none; }
   .main-menu > li a {
     display: flex;
     align-items: center;
@@ -2297,6 +2298,104 @@ header {
     .login-menu li:last-child {
       border-bottom: none; }
 
+#search-nav-top {
+  display: none;
+  position: absolute;
+  top: calc(100% + 1px);
+  left: calc(50% + 25px);
+  transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  width: calc(97% - 51px);
+  max-width: 1260px;
+  z-index: 4;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+
+.form-search-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  background-color: #fff; }
+  .form-search-nav > div {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-right: 1px solid #cecece; }
+  .form-search-nav .text > .icon-font:first-child {
+    color: #888; }
+  .form-search-nav .search-nav-where {
+    position: relative;
+    width: 26%; }
+    .form-search-nav .search-nav-where .value {
+      top: calc(100% + 15px); }
+      .form-search-nav .search-nav-where .value .btn-value .map-marker {
+        margin-right: 8px;
+        font-size: 15px;
+        color: #d0b316;
+        -webkit-transition: all 0.25s linear;
+        -moz-transition: all 0.25s linear;
+        -o-transition: all 0.25s linear;
+        -ms-transition: all 0.25s linear;
+        transition: all 0.25s linear; }
+      .form-search-nav .search-nav-where .value .btn-value:hover .map-marker {
+        color: #111; }
+  .form-search-nav .search-nav-exp {
+    position: relative;
+    width: 26%; }
+    .form-search-nav .search-nav-exp .value {
+      top: calc(100% + 15px); }
+      .form-search-nav .search-nav-exp .value .btn-value {
+        padding-left: 15px; }
+        .form-search-nav .search-nav-exp .value .btn-value .icon-font:first-child {
+          display: inline-block;
+          margin-right: 8px;
+          font-size: 22px;
+          color: #d0b316;
+          -webkit-transition: all 0.25s linear;
+          -moz-transition: all 0.25s linear;
+          -o-transition: all 0.25s linear;
+          -ms-transition: all 0.25s linear;
+          transition: all 0.25s linear; }
+          .form-search-nav .search-nav-exp .value .btn-value .icon-font:first-child:before {
+            color: #d0b316; }
+        .form-search-nav .search-nav-exp .value .btn-value:hover .icon-font:first-child {
+          color: #111; }
+          .form-search-nav .search-nav-exp .value .btn-value:hover .icon-font:first-child:before {
+            color: #111; }
+  .form-search-nav .search-nav-days {
+    position: relative;
+    width: 14%; }
+    .form-search-nav .search-nav-days .text {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 20px; }
+    .form-search-nav .search-nav-days .value {
+      top: calc(100% + 15px); }
+  .form-search-nav .search-nav-price {
+    position: relative;
+    width: 24%;
+    border-right: none; }
+    .form-search-nav .search-nav-price .value {
+      top: calc(100% + 15px); }
+      .form-search-nav .search-nav-price .value .btn-value {
+        padding-left: 15px; }
+  .form-search-nav .booking-step-submit {
+    width: 18%;
+    border-right: none;
+    padding: 0;
+    margin: 0; }
+    .form-search-nav .booking-step-submit button {
+      width: 100%;
+      height: 100%; }
+
 @media (max-width: 991px) {
   header .menu-wrap {
     justify-content: flex-start; }
@@ -2311,10 +2410,6 @@ header {
       -ms-transform: translateX(-50%); }
     header .menu-wrap .search-nav {
       width: unset; }
-      header .menu-wrap .search-nav .search {
-        display: none; }
-      header .menu-wrap .search-nav .input-st1 {
-        display: none; }
     header .menu-wrap .global-menu {
       width: unset;
       padding-left: 0;
@@ -2327,18 +2422,7 @@ header {
       header .menu-wrap .global-menu > li.login-top {
         max-width: unset; }
       header .menu-wrap .global-menu > li.book-top a {
-        padding-right: 0; }
-
-  .main-menu .search-menu-tablet {
-    padding: 20px 20px 20px 0;
-    display: flex; }
-    .main-menu .search-menu-tablet .search {
-      font-size: 20px;
-      width: 50px;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      flex-shrink: 0; } }
+        padding-right: 0; } }
 @media (max-width: 767px) {
   .wrap-main-menu .main-menu {
     max-width: 0; }
@@ -2357,9 +2441,28 @@ header {
   .login-top > a font {
     display: none; }
   .login-top > a .user-regular {
-    font-size: 14px; }
+    font-size: 18px; }
   .login-top > a .select-arrow-thin {
-    display: none; } }
+    margin-left: 5px;
+    font-size: 8px; } }
+@media (max-width: 479px) {
+  .wrap-main-menu {
+    width: 0;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear; }
+    .wrap-main-menu .main-menu {
+      max-width: unset;
+      width: 100%; }
+
+  header .menu-wrap .global-menu > li.book-top {
+    display: none; }
+
+  .login-top .login-menu {
+    left: unset;
+    right: 0; } }
 @media (max-width: 375px) {
   header .menu-wrap .brand {
     position: static;
@@ -3378,13 +3481,14 @@ footer .brand-section {
 #booking-widget-homepage {
   position: absolute;
   bottom: 50px;
-  width: 100%;
+  width: calc(100% - 51px);
   z-index: 3; }
   #booking-widget-homepage .form-banner-top {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    width: 80%;
+    width: 100%;
+    max-width: 1264px;
     margin: 0 auto;
     background-color: #fff; }
     #booking-widget-homepage .form-banner-top > div {
