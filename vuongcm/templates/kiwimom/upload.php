@@ -9,7 +9,7 @@ if (isset($_POST) && !empty($_FILES['file'])) {
             // Nếu thành công
             die('Upload thành công file: ' . $_FILES['file']['name']); //in ra thông báo + tên file
         } else { // nếu không thành công
-            die('Có lỗi!'); // in ra thông báo
+            die('Có lỗi trong quá trình upload!'); // in ra thông báo
         }
     } else { // nếu không phải file ảnh
         die('Chỉ được upload ảnh'); // in ra thông báo

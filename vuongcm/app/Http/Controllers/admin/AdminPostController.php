@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Post;
 
 class AdminPostController extends Controller
 {
@@ -46,7 +47,17 @@ class AdminPostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post;
+        $post->admin = Auth::user()->username;
+        $post->group = $request->group; 
+        $post->link = $request->link;
+        $post->title = $request->title;
+        $post->content = $request->content; 
+        $post->description = $request->description;
+        $post->keywords = $request->keywords;
+
+        $post->save();
+        return redirect()->action('admin\AdminPostController@create');
     }
 
     /**

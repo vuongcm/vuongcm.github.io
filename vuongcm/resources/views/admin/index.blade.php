@@ -30,6 +30,14 @@
                 <a class="btn btn-warning" href="#">Danh sách video</a>
             </div>
         </div>
+        <div class="row">
+            <div class="col-lg-6">
+            <a class="btn btn-warning" href="#">Tạo bài viết mới</a>
+            </div>
+            <div class="col-lg-6">
+                <a class="btn btn-warning" href="#">Upload video mới</a>
+            </div>
+        </div>
     </div>
 </article>
 @endsection

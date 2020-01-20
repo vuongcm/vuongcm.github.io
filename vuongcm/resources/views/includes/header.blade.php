@@ -15,7 +15,7 @@
                 @endif
                     <li><a href="javascript:;" class="btn btn-light" onclick="document.getElementById('logout-form').submit();">Đăng xuất</a></li>
                 </ul>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                <form action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
                 </form>
             </div>
@@ -110,7 +110,7 @@
                 @endif
                     <li><a href="javascript:;" class="btn btn-light" onclick="document.getElementById('logout-form').submit();">Đăng xuất</a></li>
                 </ul>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                <form action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
                 </form>
             </div>
