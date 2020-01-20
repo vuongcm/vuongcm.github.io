@@ -1207,6 +1207,82 @@ $(document).ready(function() {
 		});
 	}
 	/*===end search cruise =====*/
+	/*===search-top=====*/
+	$('body').click(function(e){
+		if (!$('.search-nav-where').is(e.target) && $('.search-nav-where').has(e.target).length === 0) {
+            $('.search-nav-where .value').removeClass('open-block');
+        }
+        if (!$('.search-nav-exp').is(e.target) && $('.search-nav-exp').has(e.target).length === 0) {
+            $('.search-nav-exp .value').removeClass('open-block');
+        }
+        if (!$('.search-nav-days').is(e.target) && $('.search-nav-days').has(e.target).length === 0) {
+            $('.search-nav-days .value').removeClass('open-block');
+        }
+        if (!$('.search-nav-price').is(e.target) && $('.search-nav-price').has(e.target).length === 0) {
+            $('.search-nav-price .value').removeClass('open-block');
+        }
+    });
+    $('.search-nav-where .btn-value').click(function(){
+    	if($(this).attr('class').search('checked') != -1){
+    		$(this).removeClass('checked');
+    	} else{
+    		$(this).addClass('checked');
+    	}
+    	let numCheck = $('.search-nav-where .btn-value.checked');
+    	$('.search-nav-where>select').html('');
+    	if(numCheck.length == 0){
+    		$('.search-nav-where .text b').text('Where do you want to go?');
+    	} else{
+    		for(let i=0; i<numCheck.length ; i++){
+    			$('.search-nav-where>select').append(`<option value="${numCheck.eq(i).children('b').text()}" selected></option>`);
+    		}
+    		$('.search-nav-where .text b').text(`${numCheck.length} selected`);
+    	}
+    });
+    $('.search-nav-exp .btn-value').click(function(){
+    	if($(this).attr('class').search('checked') != -1){
+    		$(this).removeClass('checked');
+    	} else{
+    		$(this).addClass('checked');
+    	}
+    	let numCheck = $('.search-nav-exp .btn-value.checked');
+    	$('.search-nav-exp>select').html('');
+    	if(numCheck.length == 0){
+    		$('.search-nav-exp .text b').text('Experiences');
+    	} else{
+    		for(let i=0; i<numCheck.length ; i++){
+    			$('.search-nav-exp>select').append(`<option value="${numCheck.eq(i).children('b').text()}" selected></option>`);
+    		}
+    		$('.search-nav-exp .text b').text(`${numCheck.length} selected`);
+    	}
+    });
+    $('.search-nav-days .btn-value').click(function(){
+    	if($(this).attr('class').search('checked') != -1){
+    		$(this).removeClass('checked');
+    		$('.search-nav-days>input').val('');
+    		$('.search-nav-days .text b').text('Departure');
+    	} else{
+    		$('.search-nav-days .btn-value').removeClass('checked');
+    		$(this).addClass('checked');
+    		$('.search-nav-days>input').val($(this).children('b').text());
+    		$('.search-nav-days .text b').text($(this).children('b').text());
+    	}
+    	$('.search-nav-days .value').removeClass('open-block');
+    });
+    $('.search-nav-price .btn-value').click(function(){
+    	if($(this).attr('class').search('checked') != -1){
+    		$(this).removeClass('checked');
+    		$('.search-nav-price>input').val('');
+    		$('.search-nav-price .text b').text('Departure');
+    	} else{
+    		$('.search-nav-price .btn-value').removeClass('checked');
+    		$(this).addClass('checked');
+    		$('.search-nav-price>input').val($(this).children('b').text());
+    		$('.search-nav-price .text b').text($(this).children('b').text());
+    	}
+    	$('.search-nav-price .value').removeClass('open-block');
+    });
+    /*===end search-top =====*/
 	/*===filter 2=====*/
 	if($('.wrap-filter-st2').length){
 		$('.filter-desti-2 .btn-value').click(function(){
