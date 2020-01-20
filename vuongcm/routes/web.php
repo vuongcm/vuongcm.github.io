@@ -13,10 +13,19 @@
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('index');
 
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 //route::get('login', 'Auth\LoginController@getLogin');
 //route::post('login', 'Auth\LoginController@postLogin');
+Route::get('/admin', 'admin\AuthController@check')->name('adminHome');
+Route::get('/thong-tin-tai-khoan', function () {
+    return view('user/profile');
+})->middleware('auth');
+Route::get('/chinh-sua-tai-khoan', function () {
+    return view('user/editprofile');
+})->middleware('auth');
+Route::post('/chinh-sua-tai-khoan', 'user\userProfileContraller@update');
+Route::get('/tao-bai-viet', 'admin\AdminPostController@create');

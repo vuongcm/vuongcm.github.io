@@ -67,7 +67,9 @@ $(function () {
         }
     });
     let thisUrl = location.href;
-    if(thisUrl.search('login') != -1 || $('.error-notification').length == 1){
+    if(thisUrl.search('login') != -1){
+        $('.btn-login').click();
+    } else if ($('#loginErrorMsg').length && !$('.error-regis').length) {
         $('.btn-login').click();
     }
     $('.box-logined .dropdown-toggle').click(function(){

@@ -39,8 +39,9 @@ class LoginController extends Controller
     }
     public function showLoginForm()
     {
-        return redirect()->back()->with('openLogin', '1');
+        return view('home')->with('openLogin', '1');
     }
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');

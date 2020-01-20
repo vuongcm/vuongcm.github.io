@@ -8,8 +8,11 @@
             <div class="box-logined">
                 <a href="javascript:;" class="dropdown-toggle btn btn-light">Xin chào, {{ Auth::user()->firstname }}</a>
                 <ul>
-                    <li><a href="javascript:;" class="btn btn-light">Thông tin tài khoản</a></li>
-                    <li><a href="javascript:;" class="btn btn-light">Chỉnh sửa thông tin</a></li>
+                    <li><a href="/thong-tin-tai-khoan" class="btn btn-light">Thông tin Tài khoản</a></li>
+                    <li><a href="/chinh-sua-tai-khoan" class="btn btn-light">Chỉnh sửa Tài khoản</a></li>
+                @if(Auth::user()->level == 1 || Auth::user()->level == 2)
+                    <li><a href="{{ route('adminHome') }}" class="btn btn-light">Quản lý nội dung</a></li>
+                @endif
                     <li><a href="javascript:;" class="btn btn-light" onclick="document.getElementById('logout-form').submit();">Đăng xuất</a></li>
                 </ul>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -100,8 +103,11 @@
             <div class="box-logined">
                 <a href="javascript:;" class="dropdown-toggle btn btn-light">Xin chào, {{ Auth::user()->firstname }}</a>
                 <ul>
-                    <li><a href="javascript:;" class="btn btn-light">Thông tin tài khoản</a></li>
-                    <li><a href="javascript:;" class="btn btn-light">Chỉnh sửa thông tin</a></li>
+                    <li><a href="/thong-tin-tai-khoan" class="btn btn-light">Thông tin Tài khoản</a></li>
+                    <li><a href="/chinh-sua-tai-khoan" class="btn btn-light">Chỉnh sửa Tài khoản</a></li>
+                @if(Auth::user()->level == 1 || Auth::user()->level == 2)
+                    <li><a href="{{ route('adminHome') }}" class="btn btn-light">Quản lý nội dung</a></li>
+                @endif
                     <li><a href="javascript:;" class="btn btn-light" onclick="document.getElementById('logout-form').submit();">Đăng xuất</a></li>
                 </ul>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

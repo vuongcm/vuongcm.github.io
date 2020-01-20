@@ -47,10 +47,12 @@
 	font-size: 35px;
 	color: #f8f5e2;
 }
-.about .banner h2 {
+.about .banner h2, .about .banner h1 {
 	margin: 0;
 	color: #f8f5e2;
 	font-size: calc(var(--fontSize) * 3.5);
+	font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
 }
 @media only screen and (max-width: 767px) {
 	.link {

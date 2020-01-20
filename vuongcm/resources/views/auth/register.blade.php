@@ -6,9 +6,9 @@
 
 @section('content')
 <div class="link">
-    <a href="index.html">Trang chủ </a>
+    <a href="{{ route('index') }}">Trang chủ </a>
     <span></span>
-    <a href="#"> Đăng ký tài khoản</a>
+    <a href="javascript:;"> Đăng ký tài khoản</a>
 </div>
 <article class="about">
     <div class="banner">
@@ -35,19 +35,19 @@
                 <div class="form-group">
                     <input type="text" pattern="^[a-zA-Z0-9_-]{3,16}$" class="form-control" id="userName" placeholder="Tên đăng nhập" title="'Tên đăng nhập' chỉ nên có số và chữ cái không dấu, từ 3 đến 16 ký tự" name="username" value="{{ old('username') }}" required autocomplete="username">
                     @error('username')
-                        <div class="error-notification" role="alert"><strong>{{ $message }}</strong></div>
+                        <div class="error-notification error-regis" role="alert"><strong>{{ $message }}</strong></div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <input type="text" pattern="^[^\\p{L}\\s]{1,10}$" class="form-control" id="lastName" placeholder="Họ" title="'Họ' chỉ nên có chữ cái, tối đa 10 ký tự" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname">
                     @error('lastname')
-                        <div class="error-notification" role="alert"><strong>{{ $message }}</strong></div>
+                        <div class="error-notification error-regis" role="alert"><strong>{{ $message }}</strong></div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <input type="text" pattern="^[^\\p{L}\\s]{1,10}$" class="form-control" id="firstName" placeholder="Tên" title="'Tên' chỉ nên có chữ cái, tối đa 10 ký tự" name="firstname" value="{{ old('firstname') }}" required autocomplete="firstname" autofocus>
                     @error('firstname')
-                        <div class="error-notification" role="alert"><strong>{{ $message }}</strong></div>
+                        <div class="error-notification error-regis" role="alert"><strong>{{ $message }}</strong></div>
                     @enderror
                 </div>
                 <div class="form-group">
@@ -65,13 +65,13 @@
                         </label>
                     </div>
                     @error('gender')
-                        <div class="error-notification" role="alert"><strong>{{ $message }}</strong></div>
+                        <div class="error-notification error-regis" role="alert"><strong>{{ $message }}</strong></div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <input type="email" class="form-control" pattern="^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$" id="email" placeholder="Email" title="Oh! Địa chỉ email không hợp lệ" name="email" value="{{ old('email') }}" required autocomplete="email">
                     @error('email')
-                        <div class="error-notification" role="alert"><strong>{{ $message }}</strong></div>
+                        <div class="error-notification error-regis" role="alert"><strong>{{ $message }}</strong></div>
                     @enderror
                 </div>
 
@@ -79,7 +79,7 @@
                     <div class="form-group">
                         <input type="password" pattern="^[a-zA-Z0-9_-]{6,20}$" data-minlength="6" class="form-control" id="password" placeholder="Mật khẩu" title="'Mật khẩu' chỉ bao gồm các ký tự: chữ, số, '_', '-'; từ 6 đến 20 ký tự" name="password" required autocomplete="new-password">
                         @error('password')
-                            <div class="error-notification" role="alert"><strong>{{ $message }}</strong></div>
+                            <div class="error-notification error-regis" role="alert"><strong>{{ $message }}</strong></div>
                         @enderror
                     </div>
                     <div class="form-group">

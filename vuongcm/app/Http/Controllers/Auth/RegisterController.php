@@ -49,14 +49,34 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
+        return Validator::make($data,
+        [
             'username' => ['required', 'string', 'min:3', 'max:16', 'unique:users'],
             'lastname' => ['required', 'string', 'max:10'],
             'firstname' => ['required', 'string', 'max:10'],
             'gender' => 'required',
             'email' => ['required', 'string', 'email', 'max:30', 'unique:users'],
             'password' => 'required|string|min:6|confirmed',
+        ],
+        [
+            'username.required' => 'Tên đăng nhập không được để trống',
+            'username.min' => 'Tên đăng nhập không được ít hơn 3 ký tự',
+            'username.max' => 'Tên đăng nhập không được nhiều hơn 16 ký tự',
+            'username.unique' => 'Tên đăng nhập đã tồn tại',
+            'lastname.required' => 'Bạn chưa điền "Họ" của mình',
+            'lastname.max' => '"Họ" không được nhiều hơn 10 ký tự',
+            'firstname.required' => 'Bạn chưa điền "Tên" của mình',
+            'firstname.max' => '"Tên" không được nhiều hơn 10 ký tự',
+            'email.unique' => 'Email đã tồn tại',
+            'email.required' => 'Email không được để trống',
+            'email.max' => 'Email không được nhiều hơn 30 ký tự',
+            'email.email' => 'Email không đúng định dạng',
+            'gender.required' => 'Bạn chưa chọn giới tính',
+            'password.required' => 'Mật khẩu không được để trống',
+            'password.min' => 'Mật khẩu không được ít hơn 6 ký tự',
+            'password.confirmed' => 'Xác nhận Mật khẩu không khớp',
         ]);
+
     }
 
     /**
