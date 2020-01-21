@@ -420,15 +420,24 @@ header{
 					
 				}
 				&>li.lang-top{
-					display: none;
+					max-width: unset;
+					select,option{
+						text-transform: uppercase;
+					}
+					select{
+						padding-right: 25px;
+					}
 				}
 				&>li.login-top{
 					max-width: unset;
+					&>a{
+						.select-arrow-thin{
+							margin-left: 5px;
+						}
+					}
 				}
 				&>li.book-top{
-					a{
-						padding-right: 0;
-					}
+					display: none;
 					
 				}
 			}
@@ -448,11 +457,6 @@ header{
 	}
 	header{
 		.menu-wrap{
-			.global-menu{
-				&>li.lang-top{
-					display: none;
-				}
-			}
 			.search-nav{
 				margin-left: 0;
 				margin-right: 0;
@@ -476,7 +480,6 @@ header{
 				font-size: 18px;
 			}
 			.select-arrow-thin{
-				margin-left: 5px;
 				font-size: 8px;
 			}
 		}
@@ -498,39 +501,10 @@ header{
 			width: 100%;
 		}
 	}
-	header{
-		.menu-wrap{
-			.global-menu{
-				&>li.book-top{
-					display: none;
-				}
-			}
-		}
-	}
 	.login-top{
 		.login-menu{
 			left: unset;
 			right: 0;
-		}
-	}
-}
-@media (max-width: 375px) {
-		header{
-		.menu-wrap{
-			.brand{
-				position: static;
-				margin-left: auto;
-			}
-			.global-menu{
-				margin-left: 0;
-				&>li{
-					a{
-						padding-right: 5px;
-						padding-left: 5px;
-					}
-					
-				}
-			}
 		}
 	}
 }

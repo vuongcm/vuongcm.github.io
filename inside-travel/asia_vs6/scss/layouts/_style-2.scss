@@ -1,0 +1,153 @@
+.banner-top-slider{
+	position: relative;
+	min-height: 230px;
+	margin-top: 0;
+	.wrap-title-banner-top{
+		position: absolute;
+		bottom: 130px;
+
+		left: calc(50% + 25px);
+		background-color: transparent;
+		z-index: 3;
+		height: unset;
+		width:calc(100% - 51px);
+		padding-top: 15px;
+		@include translateX(-50%);
+	}
+}
+.wrap-slide-st7{
+	width: 100%;
+	.synch-carousels{
+		box-shadow: none;
+		.item{
+			height: 450px;
+			&>div{
+				width: 100%;
+				height: 100%;
+				position: relative;
+				span{
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-size: cover;
+    				background-repeat: no-repeat;
+    				background-position: center;
+    				webkit-transform-origin: 100% 50%;
+				    -moz-transform-origin: 100% 50%;
+				    -o-transform-origin: 100% 50%;
+				    -ms-transform-origin: 100% 50%;
+				    transform-origin: 100% 50%;
+				    webkit-animation: imageAnimation 30s ease-in-out infinite 0s;
+					-moz-animation: imageAnimation 30s ease-in-out infinite 0s;
+					-o-animation: imageAnimation 30s ease-in-out infinite 0s;
+					-ms-animation: imageAnimation 30s ease-in-out infinite 0s;
+					animation: imageAnimation 30s ease-in-out infinite 0s;
+					@include bfhide();
+					@include dakkenImg(85%);
+				}
+			}
+		}
+		.slick-dots{
+			position: absolute;
+			z-index: 1;
+			bottom: 15px;
+			left: 50%;
+			@include translateX(-50%);
+			margin: 0;
+			padding: 0;
+			li{
+				display: inline-block;
+				padding: 0;
+				margin: 0 5px;
+				button{
+					background: rgba(255, 255, 255, 0.6);
+				    border: none;
+				    padding: 0;
+				    margin: 0;
+				    font-size: 0;
+				    line-height: 100%;
+				    width: 12px;
+				    height: 12px;
+				    border-radius: 50%;
+				}
+			}
+			li.slick-active{
+				button{
+					background: $higlight-color;
+				}
+			}
+
+		}
+	}
+}
+@media (max-width: 991px) {
+
+}
+@media (max-width: 767px) {
+	.banner-top-slider{
+		.wrap-title-banner-top{
+			left: 50%;
+			width: 100%;
+		}
+		#booking-widget-homepage{
+			bottom: 45px;
+		}
+	}
+	.wrap-slide-st7{
+		.synch-carousels{
+			.item{
+				height: 350px;
+			}
+			.slick-dots{
+				bottom: 5px;
+			}
+		}
+	}
+}
+@keyframes imageAnimation {
+	0%{
+		transform:scale(1.3);
+	}
+	50%{
+		transform:scale(1)
+	}
+	100%{
+		transform:scale(1.3)
+	}
+}
+@-webkit-keyframes imageAnimation {
+    0%{
+		-webkit-transform:scale(1.3);
+	}
+	50%{
+		-webkit-transform:scale(1)
+	}
+	100%{
+		-webkit-transform:scale(1.3)
+	}
+}
+@-moz-keyframes imageAnimation {
+    0%{
+		-moz-transform:scale(1.3);
+	}
+	50%{
+		-moz-transform:scale(1)
+	}
+	100%{
+		-moz-transform:scale(1.3)
+	}
+}
+@-ms-keyframes imageAnimation {
+    0%{
+		-ms-transform:scale(1.3);
+	}
+	50%{
+		-ms-transform:scale(1)
+	}
+	100%{
+		-ms-transform:scale(1.3)
+	}
+}

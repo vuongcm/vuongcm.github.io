@@ -2438,11 +2438,17 @@ header {
         padding-right: 10px;
         padding-left: 10px; }
       header .menu-wrap .global-menu > li.lang-top {
-        display: none; }
+        max-width: unset; }
+        header .menu-wrap .global-menu > li.lang-top select, header .menu-wrap .global-menu > li.lang-top option {
+          text-transform: uppercase; }
+        header .menu-wrap .global-menu > li.lang-top select {
+          padding-right: 25px; }
       header .menu-wrap .global-menu > li.login-top {
         max-width: unset; }
-      header .menu-wrap .global-menu > li.book-top a {
-        padding-right: 0; } }
+        header .menu-wrap .global-menu > li.login-top > a .select-arrow-thin {
+          margin-left: 5px; }
+      header .menu-wrap .global-menu > li.book-top {
+        display: none; } }
 @media (max-width: 767px) {
   .wrap-main-menu .main-menu {
     max-width: 0; }
@@ -2450,8 +2456,6 @@ header {
   body > section, body > footer {
     padding-left: 0; }
 
-  header .menu-wrap .global-menu > li.lang-top {
-    display: none; }
   header .menu-wrap .search-nav {
     margin-left: 0;
     margin-right: 0; }
@@ -2465,7 +2469,6 @@ header {
   .login-top > a .user-regular {
     font-size: 18px; }
   .login-top > a .select-arrow-thin {
-    margin-left: 5px;
     font-size: 8px; }
 
   #search-nav-top {
@@ -2486,21 +2489,9 @@ header {
       max-width: unset;
       width: 100%; }
 
-  header .menu-wrap .global-menu > li.book-top {
-    display: none; }
-
   .login-top .login-menu {
     left: unset;
     right: 0; } }
-@media (max-width: 375px) {
-  header .menu-wrap .brand {
-    position: static;
-    margin-left: auto; }
-  header .menu-wrap .global-menu {
-    margin-left: 0; }
-    header .menu-wrap .global-menu > li a {
-      padding-right: 5px;
-      padding-left: 5px; } }
 footer > div:first-child {
   padding-top: 50px;
   padding-bottom: 30px;
@@ -4025,7 +4016,8 @@ footer .brand-section {
       font-size: 14px; }
 
   #booking-widget-homepage {
-    bottom: 30px; }
+    bottom: 30px;
+    width: 100%; }
 
   .wrap-map {
     padding: 0;
@@ -5951,7 +5943,7 @@ footer .brand-section {
 #booking-widget-cruisepage {
   position: absolute;
   bottom: 50px;
-  width: 100%;
+  width: calc(100% - 51px);
   z-index: 3; }
   #booking-widget-cruisepage .form-banner-top {
     display: flex;
@@ -6190,7 +6182,8 @@ footer .brand-section {
       order: 3; } }
 @media (max-width: 767px) {
   #booking-widget-cruisepage {
-    bottom: 20px; } }
+    bottom: 20px;
+    width: 100%; } }
 .travel-guide-container .container {
   display: grid;
   grid-template-columns: 72% 28%;

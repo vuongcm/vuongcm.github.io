@@ -56,6 +56,11 @@ $(document).ready(function() {
 			$(this).next('.sub-menu').slideToggle(300);
 		});
 	}
+	if(bodyWidth < 992){
+		$('.global-menu .lang-top option').each(function(){
+			$(this).text($(this).attr('lang'));
+		});
+	}
 	$('.sub-menu-title-lv2>a').click(function(){
 		$(this).parent('.sub-menu-title-lv2').siblings('.sub-menu-title-lv2').children('.sub-menu-lv2').slideUp(300);
 		$(this).next('.sub-menu-lv2').slideToggle(300);
