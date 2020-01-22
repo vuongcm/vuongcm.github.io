@@ -587,7 +587,7 @@ $(document).ready(function() {
                 slidesToScroll: 1,
                 //useTransform: false,
                 //infinite: false,
-                swipe: true,
+                //swipe: true,
                 fade: true,
                 prevArrow: `.wrap-new-gallery-${i} .prev33`,
                 nextArrow: `.wrap-new-gallery-${i} .next33`
@@ -626,7 +626,7 @@ $(document).ready(function() {
                 loadJson(carouselGa.find('.item.slick-active').prev('.item'), Number(carouselGa.find('.item.slick-active').prev('.item').attr('data-slick-index'))-1);
             }
         });
-        $(`.carousel-gallery`).mousemove(function(){
+        $(`.carousel-gallery`).on('mousemove',function(){
             if($(this).find('.item.slick-active').html() == ''){
                 loadJson($(this).find('.item.slick-active'), Number($(this).find('.item.slick-active').attr('data-slick-index'))-1);
             }
@@ -636,13 +636,21 @@ $(document).ready(function() {
             if($(this).find('.item.slick-active').next('.item').html() == ''){
                 loadJson($(this).find('.item.slick-active').next('.item'), Number($(this).find('.item.slick-active').next('.item').attr('data-slick-index'))-1);
             }
-            /*if((Number($(this).find('.item.slick-active').attr('data-slick-index'))+1) == $(this).find('.item').length){
-                $(this).slick("slickGoTo", 0);
-            }
-            if(Number($(this).find('.item.slick-active').attr('data-slick-index')) == 0){
-                $(this).slick("slickGoTo", $(this).find('.item').length - 1);
-            }*/
         });
+        if(bodyWidth <= 1199){
+            $(`.carousel-gallery`).bind("swipe", function(e) {
+                if($(this).find('.item.slick-active').html() == ''){
+                    loadJson($(this).find('.item.slick-active'), Number($(this).find('.item.slick-active').attr('data-slick-index'))-1);
+                }
+                if($(this).find('.item.slick-active').prev('.item').html() == ''){
+                    loadJson($(this).find('.item.slick-active').prev('.item'), Number($(this).find('.item.slick-active').prev('.item').attr('data-slick-index'))-1);
+                }
+                if($(this).find('.item.slick-active').next('.item').html() == ''){
+                    loadJson($(this).find('.item.slick-active').next('.item'), Number($(this).find('.item.slick-active').next('.item').attr('data-slick-index'))-1);
+                }
+            });
+        }
+        
     }
     /*xóa*/
     if(bodyWidth <= 1199){

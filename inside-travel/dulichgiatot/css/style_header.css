@@ -636,6 +636,9 @@
   clear: both;
   display: block;
 }
+.carousel-gallery{
+	webkit-overflow-scrolling: touch;
+}
 .box-gallery .itinerary-list #day{
 	color: #168c9c;
     width: 45px;
