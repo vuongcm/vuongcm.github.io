@@ -175,6 +175,22 @@ $(document).ready(function() {
 		$(this).next('.login-menu').toggleClass('open-block');
 		$(this).toggleClass('active');
 	});
+	$('.lang-top>a').click(function(){
+		$(this).next('.lang-menu').toggleClass('open-block');
+		$(this).toggleClass('active');
+	});
+	if (bodyWidth <= 767) {
+		$('.lang-menu>li>a').click(function(){
+			$('.lang-top>a>font').text($(this).text().slice(0,2));
+			$('.lang-menu').removeClass('open-block');
+		});
+		$('.lang-top>a>font').text($('.lang-top>a>font').text().slice(0,2));
+	} else{
+		$('.lang-menu>li>a').click(function(){
+			$('.lang-top>a>font').text($(this).text());
+			$('.lang-menu').removeClass('open-block');
+		});
+	}
 //==============end header==============
 	if($('.trip-st2').length){
 		/*$('.trip-st2').each(function(){
@@ -921,6 +937,10 @@ $(document).ready(function() {
         if(!$('#account-top').is(e.target) && $('#account-top').has(e.target).length === 0){
         	$('#account-top .login-menu').removeClass('open-block');
         	$('#account-top>a').removeClass('active');
+        }
+        if(!$('.lang-top').is(e.target) && $('.lang-top').has(e.target).length === 0){
+        	$('.lang-top .lang-menu').removeClass('open-block');
+        	$('.lang-top>a').removeClass('active');
         }
 	});
 	if($('.booking-step-room').length){

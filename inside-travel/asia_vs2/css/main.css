@@ -1791,10 +1791,10 @@ select:focus {
         margin-top: 15px; } }
 @media (max-width: 767px) {
   .title-h1 {
-    font-size: 26px; }
+    font-size: 22px; }
 
   .title-h2-line {
-    font-size: 24px; }
+    font-size: 20px; }
 
   .container {
     width: 100%; }
@@ -3999,7 +3999,7 @@ footer {
   .wrap-title-banner-top {
     padding-top: 29%; }
     .wrap-title-banner-top h1, .wrap-title-banner-top h2 {
-      font-size: 56px; }
+      font-size: 46px; }
 
   .wrap-map .map-home .synch-carousels {
     width: 90%; }

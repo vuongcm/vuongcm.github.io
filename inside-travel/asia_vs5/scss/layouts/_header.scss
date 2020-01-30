@@ -41,6 +41,7 @@ header{
 		}
 		.global-menu {
 			width: 40%;
+			height: 100%;
 			max-width: 400px;
 			display: flex;
 			justify-content: space-between;
@@ -55,7 +56,9 @@ header{
 				max-width: 33.33%;
 			}
 			.book-top{
-				
+				display: flex;
+				align-items: center;
+				max-width: 33.33%;
 			}
 		}
 
@@ -219,22 +222,67 @@ header{
 			color: $higlight-color;
 		}
 		.select-arrow-thin{
-			font-size: 9px;
+			font-size: 7px;
 			padding-top: 3px;
 			margin-left: 15px;
 		}
 	}
-	&>a.active{
-		border: 1px dotted #555;
-	}
-	
 }
 .login-menu{
 	position: absolute;
 	top: 100%;
 	left: 0;
 	background-color: #fff;
-	border: 1px solid #dcdcdc;
+	min-width: 130px;
+	font-size: 11px;
+	li{
+		border-bottom: 1px solid #eee;
+		a{
+			padding: 10px 15px;
+			width: 100%;
+			&:hover{
+				background-color: #ececec;
+				color: #555;
+			}
+		}
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+}
+.lang-top{
+	position: relative;
+	display: flex;
+	align-items: center;
+	.lang-menu{
+		display: none;
+		z-index: 103;
+	}
+	&>a{
+		font-size: 13px;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    height: 100%;
+	    width: 100%;
+	    font{
+	    	margin-left: 5px;
+	    }
+		&:hover{
+			color: $higlight-color;
+		}
+		.select-arrow-thin{
+			font-size: 7px;
+			padding-top: 3px;
+			margin-left: 15px;
+		}
+	}
+}
+.lang-menu{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #fff;
 	min-width: 130px;
 	font-size: 11px;
 	li{
@@ -286,8 +334,8 @@ header{
 		justify-content: space-between;
 		align-items: center;
 		padding: 0 10px;
-		margin-top: 15px;
-		margin-bottom: 15px;
+		margin-top: 10px;
+		margin-bottom: 10px;
 		border-right: 1px solid #cecece;
 		//color: #a09c9c;
 	}
@@ -412,6 +460,7 @@ header{
 				width: unset;
 				padding-left: 0;
 				margin-left: auto;
+				
 				&>li{
 					a{
 						padding-right: 10px;
@@ -421,11 +470,10 @@ header{
 				}
 				&>li.lang-top{
 					max-width: unset;
-					select,option{
-						text-transform: uppercase;
-					}
-					select{
-						padding-right: 25px;
+					&>a{
+						.select-arrow-thin{
+							margin-left: 5px;
+						}
 					}
 				}
 				&>li.login-top{
@@ -472,6 +520,8 @@ header{
 		}
 	}
 	.login-top{
+		position: static;
+		text-transform: uppercase;
 		&>a{
 			font{
 				display: none;
@@ -479,9 +529,18 @@ header{
 			.user-regular{
 				font-size: 18px;
 			}
-			.select-arrow-thin{
-				font-size: 8px;
-			}
+		}
+		.login-menu{
+			left: unset;
+			right: 0;
+		}
+	}
+	.lang-top{
+		position: static;
+		text-transform: uppercase;
+		.lang-menu{
+			left: unset;
+			right: 0;
 		}
 	}
 	#search-nav-top{

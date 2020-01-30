@@ -56,11 +56,6 @@ $(document).ready(function() {
 			$(this).next('.sub-menu').slideToggle(300);
 		});
 	}
-	if(bodyWidth < 992){
-		$('.global-menu .lang-top option').each(function(){
-			$(this).text($(this).attr('lang'));
-		});
-	}
 	$('.sub-menu-title-lv2>a').click(function(){
 		$(this).parent('.sub-menu-title-lv2').siblings('.sub-menu-title-lv2').children('.sub-menu-lv2').slideUp(300);
 		$(this).next('.sub-menu-lv2').slideToggle(300);
@@ -125,8 +120,22 @@ $(document).ready(function() {
     }
 	$('.login-top>a').click(function(){
 		$(this).next('.login-menu').toggleClass('open-block');
-		$(this).toggleClass('active');
 	});
+	$('.lang-top>a').click(function(){
+		$(this).next('.lang-menu').toggleClass('open-block');
+	});
+	if (bodyWidth <= 767) {
+		$('.lang-menu>li>a').click(function(){
+			$('.lang-top>a>font').text($(this).text().slice(0,2));
+			$('.lang-menu').removeClass('open-block');
+		});
+		$('.lang-top>a>font').text($('.lang-top>a>font').text().slice(0,2));
+	} else{
+		$('.lang-menu>li>a').click(function(){
+			$('.lang-top>a>font').text($(this).text());
+			$('.lang-menu').removeClass('open-block');
+		});
+	}
 	$('.open-search-top').click(function(){
 		$('#search-nav-top').slideToggle(300);
 	});
@@ -890,7 +899,9 @@ $(document).ready(function() {
         }
         if(!$('#account-top').is(e.target) && $('#account-top').has(e.target).length === 0){
         	$('#account-top .login-menu').removeClass('open-block');
-        	$('#account-top>a').removeClass('active');
+        }
+        if(!$('.lang-top').is(e.target) && $('.lang-top').has(e.target).length === 0){
+        	$('.lang-top .lang-menu').removeClass('open-block');
         }
 	});
 	if($('.booking-step-room').length){

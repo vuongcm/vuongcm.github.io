@@ -1358,7 +1358,7 @@ $(document).ready(function() {
 		});
 		$('.room-booking-wrap').delegate(`.airport-drop-checkbox`,'click',function(){
 			if (this.checked){
-				$('#sum-airport-drop font').html(`$${$(this).val()}`)
+				$('#sum-airport-drop font').html(`$${$(this).val()}`);
 				$('#sum-airport-drop').removeClass('close-display');
 			} else{
 				$('#sum-airport-drop').addClass('close-display');

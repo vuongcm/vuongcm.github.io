@@ -398,16 +398,24 @@
 			</div>
 			<ul class="global-menu mg-right">
 				<li class="lang-top">
-					<select class="select-st9" name="header-language">
-						<option selected value="/" lang="en" class="en">English</option>
-						<option  value="/fr/" lang="fr" class="fr">Français</option>
-						<option  value="/de/" lang="de" class="de">Deutsch</option>
-						<option  value="/it/" lang="it" class="it">Italiano</option>
-						<option  value="/ja/" lang="ja" class="ja">日本語</option>
-						<option  value="/ru/" lang="ru" class="ru">Pусский</option>
-						<option  value="/es/" lang="es" class="es">Español</option>
-						<option  value="/pt-br/" lang="pt" class="pt-br">Português</option>
-					</select>
+					<a href="javascript:;" class="">
+						<font>English</font>
+						<i class="icon-font select-arrow-thin"></i>
+					</a>
+					<ul class="lang-menu">
+						<li>
+							<a href="javascript:;">English</a>
+						</li>
+						<li>
+							<a href="javascript:;">Français</a>
+						</li>
+						<li>
+							<a href="javascript:;">Deutsch</a>
+						</li>
+						<li>
+							<a href="javascript:;">Español</a>
+						</li>
+					</ul>
 				</li>
 				<li class="login-top" id="account-top">
 					<a href="javascript:;" class="">
@@ -602,8 +610,33 @@
 		</div>
 	</nav>
 </header>
-<section class="banner-top">
-	<div class="bg-parallax bg-home"></div>
+<section class="banner-top-slider">
+	<div class="wrap-slide-st7">
+		<div class="synch-carousels">
+			<div class="gallery">
+				<div class="item">
+					<div>
+						<span style="background-image:url('https://www.asiatripdeals.com/wp-content/uploads/2019/06/Mu-Cang-Chai-Vietnam-landscape-terraced-rice-field-near-Sapa.-Mu-Cang-Chai-rice-fields-stretching-across-mountainside-in-Vietnam..jpg');"></span>
+					</div>
+				</div>
+				<div class="item">
+					<div>
+						<span style="background-image:url('https://www.asiatripdeals.com/wp-content/uploads/2019/07/Fisherman-throwing-net-at-sunrise-Thailand.jpg');"></span>
+					</div>
+				</div>
+				<div class="item">
+					<div>
+						<span style="background-image:url('https://www.asiatripdeals.com/wp-content/uploads/2019/07/Ang-Thong-National-Marine-Park-Thailand.jpg');"></span>
+					</div>
+				</div>
+				<div class="item">
+					<div>
+						<span style="background-image:url('https://www.asiatripdeals.com/wp-content/uploads/2019/07/Panoramic-landscape-view-of-beautiful-old-temples-in-Bagan-Myanmar-Burma.jpg');"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="wrap-title-banner-top">
 		<h1>Asia is Our Homeland</h1>
 		<p>We’ll show you Asia, better than anyone else</p>
@@ -1577,7 +1610,7 @@
 	</div>
 
 </section>
-<section class="background-st1">
+<section class="section-bg">
 	<div class="container">
 		<div class="team-quote">
 			<img src="images/demo-team-1.png" alt="">
@@ -1588,11 +1621,24 @@
 		<div class="team-mess">
 			<p>We are here to take the stress out of the holiday planning process.<br>Let us help you plan an unforgettable journey of lifetime with High Quality & Affordable Price.<br>Surely, you will feel satisfactory!</p>
 		</div>
-		<div class="call-info">
-			<span>CALL/WHATSAPP</span>
-			<strong>+84 916 952 668</strong>
-			<span>OR</span>
-			<a href="javascript:" class="btn-st2 btn-contact">enquire online</a>
+		<div class="team-contact">
+			<form action="">
+				<div class="half">
+					<div class="form-field col-xlg-6 col-xsm-12">
+						<div>Name:<span>*</span></div>
+						<input type="text" name="" required="">
+					</div>
+					<div class="form-field col-xlg-6 col-xsm-12">
+						<div>Email:<span>*</span></div>
+						<input type="text" name="" required="">
+					</div>
+				</div>
+				<div class="form-field col-xlg-12">
+					<div>Message:<span>*</span></div>
+	                <textarea name="" required=""></textarea>
+	            </div>
+	            <button class="btn-st3" type="submit">Send</button>
+			</form>
 		</div>
 	</div>
 </section>
