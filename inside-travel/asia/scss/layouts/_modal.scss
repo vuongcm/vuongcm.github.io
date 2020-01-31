@@ -920,6 +920,9 @@
 		z-index: unset;
 		visibility: unset;
 		position: relative;
+		.slick-list{
+			height: unset !important;
+		}
 	}
 }
 .video-modal{
