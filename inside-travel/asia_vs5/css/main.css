@@ -281,7 +281,7 @@ select:focus {
 
 .btn-st3 {
   color: #fff;
-  background-color: #333;
+  background: linear-gradient(to right, #2d2c23 0%, #4a4022 51%, #302e23 100%);
   text-transform: uppercase;
   letter-spacing: 3px;
   -webkit-transition: all 0.25s linear;
@@ -2356,9 +2356,7 @@ header {
   z-index: 4;
   padding-bottom: 15px;
   padding-top: 15px;
-  background-color: #fff;
-  border-top: 1px solid #dcdcdc;
-  border-bottom: 1px solid #dcdcdc; }
+  background-color: #fff; }
 
 .form-search-nav {
   display: flex;
@@ -2446,19 +2444,23 @@ header {
     margin: 0; }
     .form-search-nav .booking-step-submit button {
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      border-radius: 999px;
+      font-weight: 600; }
+      .form-search-nav .booking-step-submit button i {
+        font-size: 16px;
+        font-style: normal;
+        margin-left: 10px; }
 
 @media (max-width: 1199px) {
   .form-search-nav {
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    max-width: 700px; }
     .form-search-nav .search-nav-where, .form-search-nav .search-nav-exp, .form-search-nav .search-nav-days, .form-search-nav .search-nav-price, .form-search-nav .booking-step-submit {
       width: 100%;
       border-right: none; }
     .form-search-nav .booking-step-submit {
-      height: 50px; }
-
-  .form-search-nav {
-    max-width: 700px; } }
+      height: 40px; } }
 @media (max-width: 991px) {
   header .menu-wrap {
     justify-content: flex-start; }
@@ -2527,8 +2529,7 @@ header {
     left: 50%;
     width: 100%;
     padding-bottom: 0;
-    padding-top: 0;
-    border-bottom: none; } }
+    padding-top: 0; } }
 @media (max-width: 479px) {
   .wrap-main-menu {
     width: 0;
@@ -8250,13 +8251,14 @@ footer .brand-section {
     justify-content: center; }
 
 .section-bg {
-  background: url(https://www.gostudy.com.au/wp-content/uploads/2019/03/waves-header-contact.jpg);
+  background: url(https://www.blacktomato.com/wp-content/uploads/2019/11/Homepage-banner-WAH-1.jpg);
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position: 46%; }
 
 .team-contact {
   width: 80%;
@@ -8265,7 +8267,7 @@ footer .brand-section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 800px;
+    max-width: 631px;
     margin: 0 auto;
     padding: 30px 40px;
     background-color: #fff; }
@@ -8274,8 +8276,7 @@ footer .brand-section {
       padding-left: 30px;
       padding-right: 30px;
       height: 44px;
-      width: calc(100% - 30px);
-      max-width: 400px; }
+      width: calc(100% - 30px); }
   .team-contact .form-field > div {
     width: 100%;
     margin-bottom: 10px;
@@ -8288,6 +8289,10 @@ footer .brand-section {
     margin-bottom: 50px; }
     .wrap-slide-st8 .gallery .item {
       margin-bottom: 30px; }
+    .wrap-slide-st8 .wrap-dots li {
+      background-color: #888; }
+    .wrap-slide-st8 .wrap-dots li.slick-active {
+      background-color: #d0b316; }
     .wrap-slide-st8 .wrap-dots button {
       color: rgba(255, 255, 255, 0); } }
 @media (max-width: 767px) {

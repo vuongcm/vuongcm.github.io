@@ -93,13 +93,14 @@
 	}
 }
 .section-bg{
-	background: url(https://www.gostudy.com.au/wp-content/uploads/2019/03/waves-header-contact.jpg);
+	background: url(https://www.blacktomato.com/wp-content/uploads/2019/11/Homepage-banner-WAH-1.jpg);
 	-o-object-fit: cover;
     object-fit: cover;
     -o-object-position: center;
     object-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 46%;
 }
 .team-contact{
 	width: 80%;
@@ -108,7 +109,7 @@
     	display: flex;
     	justify-content: center;
     	flex-wrap: wrap;
-    	max-width: 800px;
+    	max-width: 631px;
     	margin: 0 auto;
     	padding: 30px 40px;
     	//border: 1px solid #cecece;
@@ -119,7 +120,6 @@
 		    padding-right: 30px;
 		    height: 44px;
 		    width: calc(100% - 30px);
-		    max-width: 400px;
     	}
     }
     .form-field{
@@ -142,8 +142,16 @@
 		    }
 		}
 		.wrap-dots{
+			li{
+				background-color: #888;
+			}
+			li.slick-active{
+				background-color: $higlight-color;
+			}
 			button{
 				color: rgba(255,255,255,0);
+				
+
 			}
 		}
 	}
