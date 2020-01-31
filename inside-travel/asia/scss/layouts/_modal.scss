@@ -916,6 +916,11 @@
 			}
 		}
 	}
+	#carousel-img-cr{
+		z-index: unset;
+		visibility: unset;
+		position: relative;
+	}
 }
 .video-modal{
 	width: 95%;

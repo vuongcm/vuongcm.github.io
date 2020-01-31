@@ -8241,6 +8241,14 @@ footer .brand-section {
       .wrap-slide-st7 .synch-carousels .slick-dots li.slick-active button {
         background: #d0b316; }
 
+.wrap-slide-st8 {
+  width: 100%; }
+  .wrap-slide-st8 .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center; }
+
 .section-bg {
   background: url(https://www.gostudy.com.au/wp-content/uploads/2019/03/waves-header-contact.jpg);
   -o-object-fit: cover;
@@ -8275,6 +8283,13 @@ footer .brand-section {
     .team-contact .form-field > div span {
       color: red; }
 
+@media (max-width: 991px) {
+  .wrap-slide-st8 {
+    margin-bottom: 50px; }
+    .wrap-slide-st8 .gallery .item {
+      margin-bottom: 30px; }
+    .wrap-slide-st8 .wrap-dots button {
+      color: rgba(255, 255, 255, 0); } }
 @media (max-width: 767px) {
   .banner-top-slider .wrap-title-banner-top {
     left: 50%;

@@ -527,6 +527,17 @@ $(document).ready(function() {
 			arrows: false
 		});
 	}
+	//carousel-st8
+	if ($('.wrap-slide-st8').length > 0 && bodyWidth < 992) {
+		$(`.wrap-slide-st8 .gallery`).slick({
+			dots: true,
+			dotsClass: 'wrap-dots',
+			infinite: false,
+			slidesToShow: 1,
+			infinite: true,
+			arrows: false
+		});
+	}
 	//carousel-sp
 	if ($('.wrap-slide-sp').length > 0) {
 		$(`.wrap-slide-sp .gallery`).slick({

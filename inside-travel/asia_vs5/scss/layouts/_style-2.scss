@@ -83,6 +83,15 @@
 		}
 	}
 }
+.wrap-slide-st8{
+	width: 100%;
+	.gallery{
+	    display: flex;
+	    flex-wrap: wrap;
+	    align-items: flex-start;
+	    justify-content: center;
+	}
+}
 .section-bg{
 	background: url(https://www.gostudy.com.au/wp-content/uploads/2019/03/waves-header-contact.jpg);
 	-o-object-fit: cover;
@@ -125,7 +134,19 @@
     }
 }
 @media (max-width: 991px) {
-
+	.wrap-slide-st8{
+		margin-bottom: 50px;
+		.gallery{
+		    .item{
+		    	margin-bottom: 30px;
+		    }
+		}
+		.wrap-dots{
+			button{
+				color: rgba(255,255,255,0);
+			}
+		}
+	}
 }
 @media (max-width: 767px) {
 	.banner-top-slider{
