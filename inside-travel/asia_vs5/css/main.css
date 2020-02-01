@@ -283,7 +283,7 @@ select:focus {
 
 .btn-st3 {
   color: #fff;
-  background: linear-gradient(to right, #2d2c23 0%, #4a4022 51%, #302e23 100%);
+  background-color: #333;
   text-transform: uppercase;
   letter-spacing: 3px;
   -webkit-transition: all 0.25s linear;
@@ -2684,7 +2684,8 @@ footer .brand-section {
     margin-top: 15px;
     padding-left: 30px;
     padding-right: 30px;
-    height: 44px; }
+    height: 44px;
+    background: linear-gradient(to right, #2d2c23 0%, #4a4022 51%, #302e23 100%); }
   .modal .call-us {
     margin-right: 15px;
     margin-left: 15px; }
@@ -3642,7 +3643,8 @@ footer .brand-section {
       margin: 0; }
       #booking-widget-homepage .form-banner-top .booking-step-submit button {
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        background: linear-gradient(to right, #2d2c23 0%, #4a4022 51%, #302e23 100%); }
   #booking-widget-homepage > button {
     display: none; }
 
@@ -3997,6 +3999,7 @@ footer .brand-section {
     display: none; }
   #booking-widget-homepage > button {
     display: block;
+    background: linear-gradient(to right, #2d2c23 0%, #4a4022 51%, #302e23 100%);
     margin: 0 auto;
     max-width: 280px;
     width: 90%;
@@ -4744,7 +4747,8 @@ footer .brand-section {
     margin-top: 20px;
     padding-left: 30px;
     padding-right: 30px;
-    height: 44px; }
+    height: 44px;
+    background: linear-gradient(to right, #2d2c23 0%, #4a4022 51%, #302e23 100%); }
   .wrap-contact-box .call-us, .wrap-contact-box-2 .call-us {
     border-bottom: none; }
     .wrap-contact-box .call-us p, .wrap-contact-box-2 .call-us p {
@@ -8307,7 +8311,8 @@ footer .brand-section {
       padding-left: 30px;
       padding-right: 30px;
       height: 44px;
-      width: calc(100% - 30px); }
+      width: calc(100% - 30px);
+      background: linear-gradient(to right, #2d2c23 0%, #4a4022 51%, #302e23 100%); }
   .team-contact .form-field > div {
     width: 100%;
     margin-bottom: 10px;
