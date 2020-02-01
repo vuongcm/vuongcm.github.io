@@ -4594,7 +4594,9 @@ footer .brand-section {
 
   .wrap-filter-st2 .select-st1 {
     width: 100%;
-    margin-top: 15px; } }
+    margin-top: 15px; }
+  .wrap-filter-st2 .filter-submit-2 {
+    max-width: 100%; } }
 @media (max-width: 375px) {
   .wrap-title-banner-top-line h1, .wrap-title-banner-top-line h2 {
     font-size: 25px; }
