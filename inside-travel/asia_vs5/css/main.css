@@ -22,6 +22,8 @@
     letter-spacing: 1px;
     font-size: 12px;
     font-family: 'Montserrat', Arial, sans-serif; }
+  *:focus {
+    outline: none; }
 
 /*@font-face{ 
 	font-family: 'Theano Didot';
@@ -2141,8 +2143,6 @@ header {
         display: flex;
         align-items: center;
         max-width: 33.33%; }
-  header .menu-wrap-scroll {
-    border-bottom: 1px solid #dcdcdc; }
 
 .wrap-main-menu {
   height: 100vh;
@@ -4459,9 +4459,26 @@ footer .brand-section {
   z-index: 3;
   background-color: rgba(255, 255, 255, 0.8); }
 
+.banner-country-2 {
+  height: 510px; }
+  .banner-country-2 .bg-detail {
+    position: relative; }
+    .banner-country-2 .bg-detail img {
+      bottom: unset;
+      top: 0;
+      left: 49%;
+      transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      -ms-transform: translateX(-50%); }
+
 @media (max-width: 1351px) {
   .banner-top-country-tour {
-    height: 600px; } }
+    height: 600px; }
+
+  .banner-country-2 {
+    height: 450px; } }
 @media (max-width: 1199px) {
   .wrap-faq {
     width: 100%;
@@ -4470,6 +4487,9 @@ footer .brand-section {
 @media (max-width: 991px) {
   .banner-top-country-tour {
     height: 500px; }
+
+  .banner-country-2 {
+    height: 400px; }
 
   .wrap-slide-sp .synch-carousels .nav-arrows .arrow-left {
     margin-left: 0;
@@ -4496,6 +4516,9 @@ footer .brand-section {
 @media (max-width: 767px) {
   .banner-top-country-tour {
     height: 310px; }
+
+  .banner-country-2 {
+    height: 300px; }
 
   .wrap-title-banner-top-line {
     bottom: 80px; }
@@ -4696,14 +4719,14 @@ footer .brand-section {
   position: relative;
   background-color: rgba(0, 0, 0, 0.3); }
 
-.wrap-contact-box {
+.wrap-contact-box, .wrap-contact-box-2 {
   border: 1px solid #cecece;
   width: 90%;
   max-width: 800px;
   margin: 0 auto;
   padding: 30px 40px;
   text-align: center; }
-  .wrap-contact-box h2 {
+  .wrap-contact-box h2, .wrap-contact-box-2 h2 {
     width: 100%;
     font-size: 28px;
     letter-spacing: 2px;
@@ -4713,24 +4736,25 @@ footer .brand-section {
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 400; }
-  .wrap-contact-box > p {
+  .wrap-contact-box > p, .wrap-contact-box-2 > p {
     padding: 0 15px; }
-  .wrap-contact-box button[type="submit"] {
+  .wrap-contact-box button[type="submit"], .wrap-contact-box-2 button[type="submit"] {
     margin-top: 20px;
     padding-left: 30px;
     padding-right: 30px;
     height: 44px; }
-  .wrap-contact-box .check-field > .phone-wrap input {
-    padding-left: calc(50px + 1%); }
-  .wrap-contact-box .call-us {
+  .wrap-contact-box .call-us, .wrap-contact-box-2 .call-us {
     border-bottom: none; }
-    .wrap-contact-box .call-us p {
-      font-size: 14px;
+    .wrap-contact-box .call-us p, .wrap-contact-box-2 .call-us p {
       color: #d0b316;
       font-size: 22px;
       font-weight: 600; }
-      .wrap-contact-box .call-us p a {
+      .wrap-contact-box .call-us p a, .wrap-contact-box-2 .call-us p a {
         opacity: 1; }
+
+.wrap-contact-box-2 {
+  background-color: #f6f4f0;
+  border: none; }
 
 @media (max-width: 1351px) {
   .banner-top-contact {
@@ -4739,11 +4763,16 @@ footer .brand-section {
   .banner-top-contact {
     height: 370px; } }
 @media (max-width: 767px) {
-  .wrap-contact-box {
+  .wrap-contact-box, .wrap-contact-box-2 {
     padding: 15px 20px; }
+    .wrap-contact-box .call-us p, .wrap-contact-box-2 .call-us p {
+      font-size: 18px; }
 
   .banner-top-contact {
     height: 320px; } }
+@media (max-width: 375px) {
+  .wrap-contact-box .call-us p, .wrap-contact-box-2 .call-us p {
+    font-size: 14px; } }
 .banner-top-detail {
   height: 715px; }
 

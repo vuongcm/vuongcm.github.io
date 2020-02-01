@@ -34,7 +34,6 @@
     .call-us{
     	border-bottom: none;
     	p{
-    		font-size: 14px;
     		color: $higlight-color;
             font-size: 22px;
             font-weight: 600;
@@ -59,10 +58,24 @@
     }
 }
 @media (max-width: 767px) {
-	.wrap-contact-box{
+	.wrap-contact-box, .wrap-contact-box-2{
     	padding: 15px 20px;
+        .call-us{
+            p{
+                font-size: 18px;
+            }
+        }
 	}
     .banner-top-contact{
         height: 320px;
+    }
+}
+@media (max-width: 375px) {
+    .wrap-contact-box, .wrap-contact-box-2{
+        .call-us{
+            p{
+                font-size: 14px;
+            }
+        }
     }
 }

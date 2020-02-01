@@ -438,9 +438,24 @@
 	background-color: $color-cover-text;
 	//display: none;
 }
+.banner-country-2{
+	height: 510px;
+	.bg-detail{
+		position: relative;
+		img{
+			bottom: unset;
+			top: 0;
+			left: 49%;
+			@include translateX(-50%);
+		}
+	}
+}
 @media (max-width: 1351px) {
 	.banner-top-country-tour{
 		height: 600px;
+	}
+	.banner-country-2{
+		height: 450px;
 	}
 }
 @media (max-width: 1199px) {
@@ -453,6 +468,9 @@
 @media (max-width: 991px) {
 	.banner-top-country-tour{
 		height: 500px;
+	}
+	.banner-country-2{
+		height: 400px;
 	}
 	.wrap-slide-sp{
 		.synch-carousels{
@@ -501,6 +519,9 @@
 @media (max-width: 767px) {
 	.banner-top-country-tour{
 		height: 310px;
+	}
+	.banner-country-2{
+		height: 300px;
 	}
 	.wrap-title-banner-top-line{
 		bottom: 80px;

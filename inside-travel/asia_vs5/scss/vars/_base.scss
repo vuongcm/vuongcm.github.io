@@ -26,6 +26,9 @@
         font-size: 12px;
         font-family: 'Montserrat', Arial, sans-serif;
     }
+    &:focus{
+        outline: none;
+    }
 }
 /*@font-face{ 
 	font-family: 'Theano Didot';
