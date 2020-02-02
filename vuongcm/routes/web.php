@@ -28,5 +28,9 @@ Route::get('/chinh-sua-tai-khoan', function () {
     return view('user/editprofile');
 })->middleware('auth');
 Route::post('/chinh-sua-tai-khoan', 'user\userProfileContraller@update');
-Route::get('/tao-bai-viet', 'admin\AdminPostController@create')->name('tao-bai-viet');
-Route::post('/tao-bai-viet', 'admin\AdminPostController@store');
+Route::get('/admin/create-post', 'admin\AdminPostController@create')->name('create-post');
+Route::post('/admin/create-post', 'admin\AdminPostController@store');
+Route::get('/admin/list-post', 'admin\AdminPostController@index')->name('list-post');
+Route::DELETE('/admin/post/delete/{id}', 'admin\AdminPostController@destroy');
+Route::get('/admin/edit-post/{id}', 'admin\AdminPostController@edit');
+Route::PATCH('/admin/update-post/{id}', 'admin\AdminPostController@update');

@@ -77,14 +77,14 @@
 .container-edit-user .col-lg-8 .btn-primary:hover{
 	opacity: .8;
 }
-.admin-create-post>h1{
+.admin-create-post>h1, .admin-list-post>h1{
 	font-size: calc(var(--fontSize) * 3.5);
 	text-align: center;
 	margin-top: 30px;
 	margin-bottom: 30px;
 	font-family: "Times New Roman", Times, serif;
 }
-.admin-create-post>h1:after{
+.admin-create-post>h1:after, .admin-list-post>h1:after{
 	display: block;
     content: "";
     background-color: #333;
@@ -105,28 +105,6 @@
 	font-size: 22px;
 	font-family: "Times New Roman", Times, serif;
 	text-align: right;
-}
-.add-content button{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	color: #fff;
-	background-color: #E77200;
-}
-.add-content button:hover{
-	opacity: .8;
-	background-color: #047DB6;
-}
-.add-type{
-	width: calc(73% - 30px);
-	padding-right: 15px;
-	padding-left: 15px;
-}
-.add-content{
-	width: 30px;
-	height: 30px;
-	flex-shrink: 0;
 }
 .add-img{
 	padding-right: 15px;
@@ -149,5 +127,105 @@
     text-transform: uppercase;
 }
 .btn-submit:hover{
+	opacity: .8;
+}
+.admin-list-post table{
+	width: 100%;
+	text-align: center;
+}
+.admin-list-post table th{
+	padding: 20px 10px;
+	font-weight: 600;
+	font-size: 16px;
+}
+.admin-list-post table td{
+	vertical-align: middle;
+	padding: 10px;
+
+}
+.admin-list-post .container h2{
+	font-size: 20px;
+	margin-top: 30px;
+	text-align: center;
+	margin-bottom: 20px;
+	color: #E77200;
+	padding-top: 15px;
+	border-top:  1px dotted #333;
+}
+.border-none{
+	border: none!important;
+}
+.admin-list-post .btn-link{
+	color: #F90000;
+}
+.admin-list-post td>a{
+	color: #047DB6;
+}
+.admin-list-post .btn-link:hover{
+	color: #888;
+	text-decoration: none;
+}
+.admin-list-post td>a:hover{
+	color: #888;
+}
+.box-hidden-content{
+	display: none;
+}
+.admin-create-post .row .demo-box h3{
+	width: 100%;
+	text-align: center;
+}
+.demo-box .demo-content-box{
+	width: 100%;
+	min-height: 200px;
+	border: 1px solid #555;
+
+}
+.admin-create-post .row .demo-content-box{
+	padding: 10px;
+	font-size: 12px;
+	line-height: 1.4;
+}
+.admin-create-post .row .demo-content-box img{
+	width: 60%;
+    margin: 1rem auto;
+    display: block;
+}
+.admin-create-post .row .demo-content-box h3, .admin-create-post .row .demo-content-box h4, .admin-create-post .row .demo-content-box h5, .admin-create-post .row .demo-content-box h6 {
+	text-align: left;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.admin-create-post .row .demo-content-box h3 {
+	font-size: 18px;
+}
+.admin-create-post .row .demo-content-box h4 {
+	font-size: 16px;
+}
+.admin-create-post .row .demo-content-box h5 {
+	font-size: 14px;
+}
+.admin-create-post .row .demo-content-box h6 {
+	font-size: 13px;
+}
+.add-content{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.add-content .btn-link{
+	width: 48%;
+}
+.add-content .btn-remove-2{
+	color: red;
+}
+.add-content>button:hover{
+	color: #888;
+}
+#add-content{
+	background-color: #E77200;
+	color: #fff;
+}
+#add-content:hover{
 	opacity: .8;
 }

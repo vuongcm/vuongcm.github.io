@@ -1,4 +1,4 @@
-@extends('templates.all_default',['titleName' => "Tạo bài viết mới"])
+@extends('templates.all_default',['titleName' => "Chỉnh sửa bài viết"])
 @section('css')
 <link rel="stylesheet" type="text/css" href="{{asset('templates/kiwimom/css/style-about.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('templates/kiwimom/css/style-topic.css')}}">
@@ -8,23 +8,25 @@
 
 @section('content')
 <article class="about admin-create-post">
-    <h1>Tạo bài viết mới</h1>
+    <h1>Chỉnh sửa bài viết</h1>
+    <div class="box-hidden-content">{!! $content !!}</div>
     <div class="container">
-        <form action="{{ route('create-post') }}" method="post">
-            
+        <form action="/admin/update-post/{{$post->id}}" method="post">
+            @method('PATCH')
             @csrf
+            <input type="hidden" name="id" value="{{ $post->id }}">
             <div class="row">
                 <div class="col-lg-3">
                     <h3>Group:</h3>
                 </div>
                 <div class="col-lg-9">
                     <select name="group" required>
-                        <option value="ngon-ngu-nhan-thuc">Ngôn ngữ & Nhận thức</option>
-                        <option value="logic-toan-hoc">Logic & Toán học</option>
-                        <option value="van-dong">Vận động</option>
-                        <option value="am-nhac-nghe-thuat">Âm nhạc & Nghệ thuật</option>
-                        <option value="ky-nang-song">Kỹ năng sống</option>
-                        <option value="khoa-hoc">Khoa học</option>
+                        <option value="ngon-ngu-nhan-thuc" @if($post->group == 'ngon-ngu-nhan-thuc') {{'selected'}} @endif>Ngôn ngữ & Nhận thức</option>
+                        <option value="logic-toan-hoc" @if($post->group == 'logic-toan-hoc') {{'selected'}} @endif>Logic & Toán học</option>
+                        <option value="van-dong" @if($post->group == 'van-dong') {{'selected'}} @endif>Vận động</option>
+                        <option value="am-nhac-nghe-thuat" @if($post->group == 'am-nhac-nghe-thuat') {{'selected'}} @endif>Âm nhạc & Nghệ thuật</option>
+                        <option value="ky-nang-song" @if($post->group == 'ky-nang-song') {{'selected'}} @endif>Kỹ năng sống</option>
+                        <option value="khoa-hoc" @if($post->group == 'khoa-hoc') {{'selected'}} @endif>Khoa học</option>
                     </select>
                 </div>
             </div>
@@ -33,7 +35,7 @@
                     <h3>Link:</h3>
                 </div>
                 <div class="col-lg-9">
-                    <input type="text" name="link" required>
+                    <input type="text" name="link" required value="{{ $post->link }}">
                 </div>
             </div>
             <div class="row">
@@ -41,7 +43,7 @@
                     <h3>Description:</h3>
                 </div>
                 <div class="col-lg-9">
-                    <textarea rows="5" required name="description"></textarea>
+                    <textarea rows="5" required name="description">{{ $post->description }}</textarea>
                 </div>
             </div>
             <div class="row">
@@ -49,7 +51,7 @@
                     <h3>Keywords:</h3>
                 </div>
                 <div class="col-lg-9">
-                    <textarea rows="5" required name="keywords"></textarea>
+                    <textarea rows="5" required name="keywords">{{ $post->keywords }}</textarea>
                 </div>
             </div>
             <div class="row">
@@ -57,13 +59,13 @@
                     <h3>Tiêu đề:</h3>
                 </div>
                 <div class="col-lg-9">
-                    <input type="text" name="title" required>
+                    <input type="text" name="title" required value="{{ $post->title }}">
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 demo-box">
                     <h3>Xem trước nội dung:</h3>
-                    <div class="demo-content-box"></div>
+                    <div class="demo-content-box">{!! $content !!}</div>
                 </div>
                 <textarea rows="10" required name="content" class="box-hidden-content"></textarea>
             </div>
@@ -86,7 +88,7 @@
                 </div>
             </div>
             <div class="row">
-                <button type="submit" class="btn btn-submit">Đăng</button>
+                <button type="submit" class="btn btn-submit">Cập nhật</button>
             </div>
         </form>
     </div>
@@ -97,7 +99,109 @@
 <script type="text/javascript" src="{{asset('templates/kiwimom/te-editor/jquery-te-1.4.0.min.js')}}"></script>
 <script>
     $(document).ready(function() {
-        
+        $('.box-hidden-content').val(`${$('.demo-content-box').html()}`);
+        $('.demo-content-box').children().each(function(){
+            let tagName = $(this)[0].tagName.toLowerCase();
+            if(tagName == 'h3'){
+                $('.add-box').before(`
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h3>Đầu mục 1:</h3>
+                        </div>
+                        <div class="add-type col-lg-8">
+                            <input type="text" class="content-item" data-content="head-3" value="${$(this).html()}">
+                        </div>
+                        <div class="add-content col-lg-1">
+                            <button type="button" class="btn btn-link btn-remove-2">Xóa</button>
+                            <button type="button" class="btn btn-link btn-up-2">Thêm</button>
+                        </div>
+                    </div>
+                    `);
+            } else if(tagName == 'h4'){
+                $('.add-box').before(`
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h3>Đầu mục 2:</h3>
+                        </div>
+                        <div class="add-type col-lg-8">
+                            <input type="text" class="content-item" data-content="head-4" value="${$(this).html()}">
+                        </div>
+                        <div class="add-content col-lg-1">
+                            <button type="button" class="btn btn-link btn-remove-2">Xóa</button>
+                            <button type="button" class="btn btn-link btn-up-2">Thêm</button>
+                        </div>
+                    </div>
+                    `);
+            } else if(tagName == 'h5'){
+                $('.add-box').before(`
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h3>Đầu mục 3:</h3>
+                        </div>
+                        <div class="add-type col-lg-8">
+                            <input type="text" class="content-item" data-content="head-5" value="${$(this).html()}">
+                        </div>
+                        <div class="add-content col-lg-1">
+                            <button type="button" class="btn btn-link btn-remove-2">Xóa</button>
+                            <button type="button" class="btn btn-link btn-up-2">Thêm</button>
+                        </div>
+                    </div>
+                    `);
+            } else if(tagName == 'h6'){
+                $('.add-box').before(`
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h3>Đầu mục 4:</h3>
+                        </div>
+                        <div class="add-type col-lg-8">
+                            <input type="text" class="content-item" data-content="head-6" value="${$(this).html()}">
+                        </div>
+                        <div class="add-content col-lg-1">
+                            <button type="button" class="btn btn-link btn-remove-2">Xóa</button>
+                            <button type="button" class="btn btn-link btn-up-2">Thêm</button>
+                        </div>
+                    </div>
+                    `);
+            } else if(tagName == 'p'){
+                $('.add-box').before(`
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h3>Đoạn văn:</h3>
+                        </div>
+                        <div class="add-type col-lg-8">
+                            <textarea rows="12" class="content-item" data-content="para">${$(this).html()}</textarea>
+                        </div>
+                        <div class="add-content col-lg-1">
+                            <button type="button" class="btn btn-link btn-remove-2">Xóa</button>
+                            <button type="button" class="btn btn-link btn-up-2">Thêm</button>
+                        </div>
+                    </div>
+                    `);
+            } else if(tagName == 'img'){
+                $('.add-box').before(`
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h3>Chèn ảnh:</h3>
+                        </div>
+                        <div class="add-img col-lg-8">
+                            <form action="" method="POST">
+                                <label title="Upload file">
+                                    <input class="upload-img" type="file" style="display:none">
+                                    <i class="fas fa-paperclip"></i>
+                                </label>
+                                <button type="button" class="btn btn-primary btn-upload-img">Upload</button>
+                                <p class="fakeUp">${$(this).attr('src')}</p>
+                                <input type="text" style="display:none" class="get-url-img content-item" data-content="img" value="<img src='${$(this).attr('src')}' alt='img' class='img-responsive' title='${$(this).attr('title')}'>">
+                            </form>
+                        </div>
+                        <div class="add-content col-lg-1">
+                            <button type="button" class="btn btn-link btn-remove-2">Xóa</button>
+                            <button type="button" class="btn btn-link btn-up-2">Thêm</button>
+                        </div>
+                    </div>
+                    `);
+            }
+        });
         // Tạo ứng dụng chèn nội dung
         $('#add-content').click(function(){
             let addTypeVal = $('.add-type select').val();
@@ -275,7 +379,7 @@
             return false;
         });
         $('.btn-submit').click(function(){
-            if(confirm("Bạn chắc chắn muốn tạo bài viết này??") == true){
+            if(confirm("Bạn chắc chắn muốn sửa bài viết này??") == true){
                 return true;
             }else{
                 return false;

@@ -24,7 +24,7 @@
     <div class="container container-admin">
         <div class="row">
             <div class="col-lg-6">
-            <a class="btn btn-warning" href="#">Danh sách bài viết</a>
+            <a class="btn btn-warning" href="{{ route('list-post') }}">Danh sách bài viết</a>
             </div>
             <div class="col-lg-6">
                 <a class="btn btn-warning" href="#">Danh sách video</a>
@@ -32,7 +32,7 @@
         </div>
         <div class="row">
             <div class="col-lg-6">
-            <a class="btn btn-warning" href="#">Tạo bài viết mới</a>
+            <a class="btn btn-warning" href="{{ route('create-post') }}">Tạo bài viết mới</a>
             </div>
             <div class="col-lg-6">
                 <a class="btn btn-warning" href="#">Upload video mới</a>

@@ -15,7 +15,7 @@
                 @endif
                     <li><a href="javascript:;" class="btn btn-light" onclick="document.getElementById('logout-form').submit();">Đăng xuất</a></li>
                 </ul>
-                <form action="{{ route('logout') }}" method="POST" style="display: none;">
+                <form action="{{ route('logout') }}" id="logout-form" method="POST" style="display: none;">
                 @csrf
                 </form>
             </div>
@@ -27,7 +27,7 @@
             </div>
             <ul class="ca-menu clr">
                 <li>
-                    <a href="index.html">
+                    <a href="{{ route('home') }}">
                         <span class="ca-icon"></span>
                         <div class="ca-content">
                             <h2 class="ca-main">TRANG CHỦ</h2>
@@ -110,7 +110,6 @@
                 @endif
                     <li><a href="javascript:;" class="btn btn-light" onclick="document.getElementById('logout-form').submit();">Đăng xuất</a></li>
                 </ul>
-                <form action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
                 </form>
             </div>
@@ -123,7 +122,7 @@
             
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">TRANG CHỦ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">TRANG CHỦ</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">GIỚI THIỆU</a></li>
                     <li class="dropdown nav-item">
                         <a class="nav-link">BÀI HỌC</a>

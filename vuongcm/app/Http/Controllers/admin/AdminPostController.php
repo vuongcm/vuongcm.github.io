@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Post;
+use Illuminate\Support\Facades\DB;
 
 class AdminPostController extends Controller
 {
@@ -16,7 +17,22 @@ class AdminPostController extends Controller
      */
     public function index()
     {
-        //
+        if (Auth::check()) {
+            if(Auth::user()->level == 1 || Auth::user()->level == 2){
+                $post = DB::table('post')->select('*');
+                $post = $post->get();
+
+                $pageName = 'Tên Trang - Posts';
+
+                return view('admin/list-post', compact('post', 'pageName'));
+            } else{
+                return redirect()->route('home');
+            }
+
+        }
+        else{
+            return redirect()->route('login');
+        }
     }
 
     /**
@@ -79,7 +95,23 @@ class AdminPostController extends Controller
      */
     public function edit($id)
     {
-        //
+        if (Auth::check()) {
+            if(Auth::user()->level == 1 || Auth::user()->level == 2){
+                $post = Post::findOrFail($id);
+                $pageName = 'Post - Update';
+                $content = $post->content;
+                $a = substr_count($content, "<img");
+                //$content_array = explode('<img', $content);
+                //$b = count($content_array);
+                return view('/admin/edit-post', compact('post', 'a', 'content', 'pageName'));
+            } else{
+                return redirect()->route('home');
+            }
+
+        }
+        else{
+            return redirect()->route('login');
+        }
     }
 
     /**
@@ -91,7 +123,17 @@ class AdminPostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::find($id);
+        $post->admin = Auth::user()->username;
+        $post->group = $request->group;
+        $post->link = $request->link;
+        $post->title = $request->title;
+        $post->content = $request->content;
+        $post->description = $request->description;
+        $post->keywords  = $request->keywords;
+
+        $post->save();
+        return redirect()->route('list-post');
     }
 
     /**
@@ -102,6 +144,9 @@ class AdminPostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+
+        $post->delete();
+        return redirect()->action('admin\AdminPostController@index')->with('success','Dữ liệu xóa thành công.');
     }
 }
