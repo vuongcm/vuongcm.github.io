@@ -1080,7 +1080,7 @@ select:focus {
         background-color: $background-color;
         color: $main-color;
         text-align: center;
-        padding: 5px;
+        padding: 5px 10px;
         border-radius: 6px;
         z-index: 99;
         opacity: 0;
@@ -1099,7 +1099,7 @@ select:focus {
         }
         font{
             display: inline-block;
-            font-size: 13px;
+            font-size: 12px;
             width: 100%;
             white-space: nowrap;
             margin-bottom: 5px;
