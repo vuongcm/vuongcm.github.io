@@ -2224,6 +2224,9 @@ select:focus {
     .count-img{
         display: none;
     }
+    .mobile-hidden{
+        display: none!important;
+    }
 }
 @media (max-width: 375px) {
     .water-mask{
