@@ -494,6 +494,7 @@ header{
 }
 @media (max-width: 767px) {
 	.wrap-main-menu{
+
 		.main-menu{
 			max-width: 0;
 		}
@@ -553,6 +554,7 @@ header{
 @media (max-width: 479px) {
 	.wrap-main-menu{
 		width: 0;
+		border-right: none;
 		@include smooth(.5s);
 		.main-menu{
 			max-width: unset;
