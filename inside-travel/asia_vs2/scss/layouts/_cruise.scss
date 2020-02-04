@@ -322,28 +322,6 @@
 		}
 	}
 }
-@media (max-width: 767px) {
-	.cruise-text{
-		article{
-			.paragraph{
-				padding-left: 0;
-				padding-right: 0;
-			}
-		}
-	}
-	.cruise-container-st2{
-		.blogs-tab{
-			border-bottom: none;
-    		padding-right: 15px;
-    		padding-left: 15px;
-    		ul{
-    			li{
-    				border-bottom: 1px solid #eee;
-    			}
-    		}
-		}
-	}
-}
 @media (max-width: 991px) {
 	.cruise-box-st2{
 		flex-wrap: wrap;
@@ -368,5 +346,25 @@
 @media (max-width: 767px) {
 	#booking-widget-cruisepage{
 		bottom: 10px;
+	}
+	.cruise-text{
+		article{
+			.paragraph{
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+	.cruise-container-st2{
+		.blogs-tab{
+			border-bottom: none;
+    		padding-right: 15px;
+    		padding-left: 15px;
+    		ul{
+    			li{
+    				border-bottom: 1px solid #eee;
+    			}
+    		}
+		}
 	}
 }

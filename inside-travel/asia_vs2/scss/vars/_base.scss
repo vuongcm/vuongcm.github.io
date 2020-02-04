@@ -1387,6 +1387,7 @@ select:focus {
         .head-trip{
             padding-bottom: 10px;
             border-bottom: 1px dotted #dcdcdc;
+            margin-bottom: 10px;
         }
         h3{
             font-size: 14px;
@@ -1584,6 +1585,12 @@ select:focus {
         padding-left: 0;
         margin-bottom: 0;
         margin-top: 0;
+        .tooltip{
+            &>span{
+                left: 15px;
+                @include translateX(-50%);
+            }
+        }
     }
     &>span{
         font-size: 12px;
