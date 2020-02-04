@@ -47,6 +47,15 @@
 .wrap-contact-box-2{
     background-color: $background-color-st1;
     border: none;
+    .team-quote, .team-mess{
+        width: 100%;
+    }
+    .team-mess{
+        p{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 }
 @media (max-width: 1351px) {
     .banner-top-contact{
