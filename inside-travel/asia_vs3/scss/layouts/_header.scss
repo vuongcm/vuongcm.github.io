@@ -439,6 +439,16 @@ header{
 			padding-right: 15px;
 		}
 	}
+	.global-menu-st2{
+		.login-top-st2{
+			&:hover{
+				.login-menu{
+					display: none;
+
+				}
+			}
+		}
+	}
 }
 @media (max-width: 767px) {
 	.global-menu-st2{
@@ -448,6 +458,15 @@ header{
 	}
 	.brand-st2{
 		width: 80%;
+	}
+}
+@media (max-width: 520px) {
+	header{
+		-webkit-transition: top 1s linear;
+	    -moz-transition: top 1s linear;
+	    -o-transition: top 1s linear;
+	    -ms-transition: top 1s linear;
+	    transition: top 1s linear;
 	}
 }
 @media (max-width: 479px) {

@@ -9,6 +9,12 @@
 	width: 100%;
 	margin-top: 15px;
 	.col-xlg-12{
+		&:last-child{
+			&>a{
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+		}
 		&>a{
 			width: 100%;
 			display: flex;
@@ -431,6 +437,13 @@
 		clip-path: polygon(100% 0, 0 0, 100% 100%);
 		-webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
 	}
+	&:hover{
+		opacity: 1;
+		background-color: $higlight-color;
+		&:after{
+			background-color: #bb9f06;
+		}
+	}
 }
 .box-hidden-st3{
 	.paragraph{
@@ -684,6 +697,14 @@
 		&>span, .commitment{
 			text-align: center;
 			margin: 10px 0 0;
+		}
+	}
+	.hidden-offer-box{
+		.best-offer{
+			.col-xlg-12{
+				padding-right: 15px;
+				padding-left: 15px;
+			}
 		}
 	}
 }

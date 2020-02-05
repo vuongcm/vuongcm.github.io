@@ -9,6 +9,12 @@
 	width: 100%;
 	margin-top: 15px;
 	.col-xlg-12{
+		&:last-child{
+			&>a{
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+		}
 		&>a{
 			width: 100%;
 			display: flex;

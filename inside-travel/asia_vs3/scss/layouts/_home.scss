@@ -742,14 +742,16 @@
 	#booking-widget-homepage{
 		bottom: 20px;
 	}
-}
-@media (max-width: 375px) {
-	.wrap-title-banner-top{
-		p{
-			font-size: 12px;
+	.value-2{
+		&>div{
+		    span{
+		    	padding-right: 6px;
+		    	padding-left: 6px;
+		    }
 		}
 	}
 }
+
 @media (max-width: 375px) {
 	.wrap-title-banner-top{
 		padding-top: 29%;
@@ -758,6 +760,14 @@
 		}
 		p{
 			font-size: 10px;
+		}
+	}
+	.value-2{
+		&>div{
+		    span{
+		    	padding-right: 3px;
+		    	padding-left: 3px;
+		    }
 		}
 	}
 }

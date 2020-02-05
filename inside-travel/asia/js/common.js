@@ -90,14 +90,18 @@ $(document).ready(function() {
 	        }
 		} else{
 			if($(this).scrollTop() > 200){
-				if($(this).scrollTop() > pageScroll){
+				$('.fab-box').css('bottom','0');
+				if($(this).scrollTop() > pageScroll && $('.main-menu').css('display') == 'none'){
 		        	$('header').css('top','-100px');
+		        	$('.lang-menu,.login-menu').removeClass('open-block');
+		        	$('#search-nav-top').slideUp(100);
 		        	pageScroll = $(this).scrollTop();
 		        } else{
 		            $('header').css('top','0');
 		            pageScroll = $(this).scrollTop();
 		        }
 			} else{
+				$('.fab-box').css('bottom','-50px');
 				$('header').css('top','0');
 				pageScroll = 0;
 			}

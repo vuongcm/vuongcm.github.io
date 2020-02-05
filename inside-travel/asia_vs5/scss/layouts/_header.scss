@@ -551,6 +551,15 @@ header{
 		padding-top: 0;
 	}
 }
+@media (max-width: 520px) {
+	header{
+		-webkit-transition: top 1s linear;
+	    -moz-transition: top 1s linear;
+	    -o-transition: top 1s linear;
+	    -ms-transition: top 1s linear;
+	    transition: top 1s linear;
+	}
+}
 @media (max-width: 479px) {
 	.wrap-main-menu{
 		width: 0;

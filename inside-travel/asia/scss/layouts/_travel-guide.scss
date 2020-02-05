@@ -463,6 +463,14 @@
 			li{
 				a{
 					padding-right: 15px;
+					&:hover:after{
+					    width: 60%;
+					}
+				}
+				.active{
+					&:after{
+					    width: 60%;
+					}
 				}
 			}
 		}

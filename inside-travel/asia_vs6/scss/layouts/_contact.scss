@@ -4,7 +4,7 @@
     position: relative;
     background-color: rgba(0, 0, 0, .3);
 }
-.wrap-contact-box{
+.wrap-contact-box, .wrap-contact-box-2{
     border: 1px solid #cecece;
     width: 90%;
     max-width: 800px;
@@ -12,37 +12,49 @@
     padding: 30px 40px;
     text-align: center;
     h2{
-    	    width: 100%;
-	    font-size: 28px;
-	    letter-spacing: 2px;
-	    color: #111;
-	    line-height: 1;
-	    text-align: center;
-	    margin-top: 0;
-	    margin-bottom: 0;
-	    font-weight: 400;
+            width: 100%;
+        font-size: 28px;
+        letter-spacing: 2px;
+        color: #111;
+        line-height: 1;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 400;
     }
     &>p{
-	    padding: 0 15px;
+        padding: 0 15px;
     }
     button[type="submit"]{
-    	margin-top: 20px;
-    	padding-left: 30px;
-    	padding-right: 30px;
-    	height: 44px;
+        margin-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        height: 44px;
+        //background: linear-gradient(to right, #2d2c23 0%, #4a4022 51%, #302e23 100%);
     }
-
     .call-us{
-    	border-bottom: none;
-    	p{
-    		font-size: 14px;
-    		color: $higlight-color;
+        border-bottom: none;
+        p{
+            color: $higlight-color;
             font-size: 22px;
             font-weight: 600;
-    		a{
-    			opacity: 1;
-    		}
-    	}
+            a{
+                opacity: 1;
+            }
+        }
+    }
+}
+.wrap-contact-box-2{
+    background-color: $background-color-st1;
+    border: none;
+    .team-quote, .team-mess{
+        width: 100%;
+    }
+    .team-mess{
+        p{
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }
 @media (max-width: 1351px) {
@@ -56,10 +68,24 @@
     }
 }
 @media (max-width: 767px) {
-	.wrap-contact-box{
-    	padding: 15px 20px;
-	}
+    .wrap-contact-box, .wrap-contact-box-2{
+        padding: 15px 20px;
+        .call-us{
+            p{
+                font-size: 18px;
+            }
+        }
+    }
     .banner-top-contact{
         height: 320px;
+    }
+}
+@media (max-width: 375px) {
+    .wrap-contact-box, .wrap-contact-box-2{
+        .call-us{
+            p{
+                font-size: 14px;
+            }
+        }
     }
 }
