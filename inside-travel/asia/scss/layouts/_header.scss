@@ -967,7 +967,7 @@ header{
 				margin-bottom: 0;
 				@include translateX(-50%);
 				&>a{
-					display: flex;
+					display: block;
 					width: 100%;
 					img{
 						vertical-align: unset;
