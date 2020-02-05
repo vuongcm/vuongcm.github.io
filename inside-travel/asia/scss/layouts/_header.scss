@@ -961,14 +961,16 @@ header{
 				//margin-bottom: 0;
 			}
 			.brand{
-				width: 18%;
+				width: 19%;
 				position: absolute;
 				left: 50%;
 				margin-bottom: 0;
 				@include translateX(-50%);
 				&>a{
 					display: block;
-					width: 100%;
+					width: 99%;
+					margin-right: auto;
+					margin-left: auto;
 					img{
 						vertical-align: unset;
 					}
