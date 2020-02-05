@@ -731,6 +731,8 @@ header{
 					.search{
 						padding: 10px 8px;
 						font-size: 18px;
+						margin-right: 0;
+						display: block;
 					}
 				}
 			}
@@ -948,6 +950,11 @@ header{
 		-ms-transform: translateX(-100%);
 	}
 	header{
+		-webkit-transition: top 1s linear;
+	    -moz-transition: top 1s linear;
+	    -o-transition: top 1s linear;
+	    -ms-transition: top 1s linear;
+	    transition: top 1s linear;
 		.menu-wrap{
 			.search-nav{
 				width: unset;
@@ -959,6 +966,12 @@ header{
 				left: 50%;
 				margin-bottom: 0;
 				@include translateX(-50%);
+				&>a{
+					display: block;
+					img{
+						vertical-align: unset;
+					}
+				}
 			}
 			.global-menu{
 				width: unset;
