@@ -2097,6 +2097,9 @@ select:focus {
             width: 100%;
         }
     }
+    .title-h2-line:after, .line:after{
+        margin: 10px auto 15px;
+    }
 }
 @media (max-width: 479px) {
     .col-xsm-12{

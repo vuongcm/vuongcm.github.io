@@ -551,6 +551,68 @@
 	    justify-content: center;
 	}
 }
+.section-bg{
+	background: url(https://www.blacktomato.com/wp-content/uploads/2019/11/Homepage-banner-WAH-1.jpg);
+	-o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 48%;
+}
+.team-contact{
+	width: 80%;
+    margin: 30px auto 0;
+    form{
+    	display: flex;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	max-width: 631px;
+    	margin: 0 auto;
+    	padding: 30px 40px;
+    	//border: 1px solid #cecece;
+    	background-color: #fff;
+    	.btn-st3{
+    		margin-top: 15px;
+		    padding-left: 30px;
+		    padding-right: 30px;
+		    height: 44px;
+		    width: calc(100% - 30px);
+		    //background: linear-gradient(to right, #2d2c23 0%, #4a4022 51%, #302e23 100%);
+    	}
+    }
+    .form-field{
+    	&>div{
+    		width: 100%;
+    		margin-bottom: 10px;
+    		text-align: left;
+    		span{
+    			color: red;
+    		}
+    	}
+    }
+}
+.section-blog-st2{
+	.col-xlg-4{
+		margin-bottom: 15px;
+		margin-top: 15px;
+		text-align: left;
+		.desti{
+			text-transform: uppercase;
+			margin-top: 10px;
+		}
+		h3{
+			margin-top: 10px;
+			font-size: 14px;
+			font-weight: 600;
+		}
+		p{
+			line-height: 2;
+    		color: #333;
+		}
+	}
+}
 @media (min-width: 992px) {
 	.fab-box{
 		top: 50%;
@@ -756,6 +818,11 @@
 			}
 		}
 	}
+	.team-contact{
+		form{
+			padding: 15px 20px;
+		}
+	}
 }
 @media (max-width: 479px) {
 	.wrap-title-banner-top{
@@ -791,6 +858,9 @@
 		    	padding-left: 6px;
 		    }
 		}
+	}
+	.team-contact{
+		width: 90%;
 	}
 }
 @media (max-width: 375px) {
