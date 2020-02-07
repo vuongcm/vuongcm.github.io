@@ -1135,7 +1135,7 @@ select:focus {
             opacity: 1;
         }
         &>span{
-            box-shadow: none;
+            //box-shadow: none;
             background-color: $higlight-color;
             color: #fff;
             font{
@@ -1743,6 +1743,13 @@ select:focus {
             &:before{
                 content: "\e915";
             }
+        }
+    }
+}
+.heart-tour.active{
+    .heart-empty{
+        &:before{
+            content: "\e915";
         }
     }
 }

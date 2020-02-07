@@ -426,6 +426,21 @@
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+	.wrap-slide-sp{
+		.synch-carousels{
+			.nav-arrows{
+				top: 110px;
+			}
+		}
+	    .item{
+			padding-bottom: 0;
+			article{
+				position: static;
+				padding-left: 0;
+				padding-right: 0;
+			}
+	    }
+	}
 }
 @media (max-width: 991px) {
 	.banner-top-country-tour{

@@ -1118,7 +1118,7 @@ select:focus {
             opacity: 1;
         }
         &>span{
-            box-shadow: none;
+            //box-shadow: none;
             background-color: $higlight-color;
             color: #fff;
             font{
@@ -1804,6 +1804,24 @@ select:focus {
 }
 .col-xlg-3{
     width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+.col-xlg-9{
+    width: 75%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+.col-xlg-10{
+    width: 83.333%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+.col-xlg-2{
+    width: 16.66666%;
     padding-left: 15px;
     padding-right: 15px;
     text-align: center;
