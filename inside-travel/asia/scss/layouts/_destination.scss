@@ -153,12 +153,32 @@
 		margin-bottom: 5px;
 	}
 }
+@media (max-width: 991px) {
+	.wrap-title-banner-des{
+		width: 100%;
+	}
+}
 @media (max-width: 767px) {
 	.describe-wrap{
 		.row{
 			h4{
 				margin-top: 15px;
 			}
+		}
+	}
+	.wrap-title-banner-des{
+		bottom: 100px;
+		.subtitle{
+			margin-bottom: 10px;
+			margin-top: 10px;
+			font-size: 16px;
+		}
+		&>h1, &>h2{
+			margin-bottom: 10px;
+			font-size: 24px;
+		}
+		.btn-st2{
+			font-size: 12px;
 		}
 	}
 }
