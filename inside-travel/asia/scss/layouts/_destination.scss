@@ -33,8 +33,25 @@
 	    }
 	}
 }
+.intro-box{
+	width: 100%;
+	.paragraph-hide{
+		max-height: 95px;
+    	width: 80%;
+    	.paragraph{
+    		padding-right: 0;
+    		padding-left: 0;
+    	}
+	}
+	.read-more-st1{
+		margin-top: 15px;
+	}
+}
 .container-des-vid{
 	align-items: stretch;
+	.intro-box{
+		margin-bottom: 30px;
+	}
 	.col-xlg-6{
 		&>a{
 			width: 100%;
