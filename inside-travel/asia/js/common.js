@@ -413,6 +413,10 @@ $(document).ready(function() {
     		}
     	});
     }
+    $('.box-table>a').click(function(){
+		$(this).parent('.box-table').children('div').animate({ scrollLeft: '+=100' }, 100);
+		return false; 
+	});
     $('.special-offer-box').click(function(){
     	$(this).parent('.foot-cruise-st3').nextAll('.hidden-offer-box').slideToggle(500);
     });
