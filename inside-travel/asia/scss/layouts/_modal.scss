@@ -644,6 +644,7 @@
 			position: relative;
 			img{
 				width: 100%;
+				@include dakkenImg(70%);
 				@include smooth(0.5s);
 			}
 			b{
@@ -661,7 +662,7 @@
 				font-size: 12px;
 				font-weight: 600;
 				color: #fff;
-				background-color: $color-cover-dak;
+				//background-color: $color-cover-dak;
 				padding: 22px;
 			}
 			&:after{
