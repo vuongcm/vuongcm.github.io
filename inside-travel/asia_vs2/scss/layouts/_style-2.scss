@@ -590,9 +590,34 @@
 		}
 	}
 }
+.banner-country-2{
+	height: 580px;
+	.bg-detail{
+		position: relative;
+		img{
+			bottom: unset;
+			top: 0;
+			left: 50%;
+			@include translateX(-50%);
+			@include dakkenImg(60%);
+		}
+	}
+	.wrap-title-banner-top-line{
+		position: absolute;
+		left: 0;
+		bottom: 100px;
+		padding: 15px 15px 25px 15px;
+		top: unset;
+		justify-content: flex-end;
+		background-color: transparent;
+	}
+}
 @media (max-width: 1351px) {
 	.tooltip-handpick{
 		padding: 5px;
+	}
+	.banner-country-2{
+		height: 600px;
 	}
 }
 @media (max-width: 1199px) {
@@ -627,6 +652,9 @@
 	}
 }
 @media (max-width: 991px) {
+	.banner-country-2{
+		height: 500px;
+	}
 	.video-top-container{
 		padding: 50px 0;
 		&>img{
@@ -719,6 +747,9 @@
 	}
 }
 @media (max-width: 767px) {
+	.banner-country-2{
+		height: 310px;
+	}
 	.search-container-st2{
 		&>.btn-st3{
 			display: block;
