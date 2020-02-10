@@ -1,6 +1,9 @@
 .banner-small-st2{
 	height: 406px;
-	background-color: rgba(0,0,0,0.5);
+	//background-color: rgba(0,0,0,0.5);
+	.bg-parallax{
+		@include dakkenImg(65%);
+	}
 }
 .experience-container{
 	.wrap-filter{
@@ -273,7 +276,7 @@
 }
 @media (max-width: 767px) {
 	.banner-small-st2{
-		height: 265px;
+		height: 230px;
 	}
 	.experience-container{
 		.blogs-tab{
