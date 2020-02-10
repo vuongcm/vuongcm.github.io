@@ -560,8 +560,8 @@
 				}
 
 				&:hover{
-					.icon-font:first-child{
-						color: $main-color;
+					b{
+						color: $higlight-color;
 					}
 				}
 			}
@@ -574,13 +574,6 @@
 					font-size: 22px;
 					&:before{
 						color: $higlight-color;
-					}
-				}
-				&:hover{
-					.icon-font:first-child{
-						&:before{
-							color: $main-color;
-						}
 					}
 				}
 			}

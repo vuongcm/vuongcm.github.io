@@ -107,11 +107,8 @@
 						font-size: 15px;
 					}
 					&:hover{
-						.icon-font:first-child{
-							color: $main-color;
-							&:before{
-								color: $main-color;
-							}
+						b{
+							color: $higlight-color;
 						}
 					}
 				}
