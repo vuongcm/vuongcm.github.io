@@ -688,7 +688,8 @@
 }
 @media (max-width: 991px) {
 	.banner-country-2{
-		height: 500px;
+		height: 470px;
+		
 	}
 	.video-top-container{
 		padding: 50px 0;
@@ -784,6 +785,10 @@
 @media (max-width: 767px) {
 	.banner-country-2{
 		height: 310px;
+		.wrap-title-banner-top-line{
+			bottom: 60px;
+			padding-bottom: 15px;
+		}
 	}
 	.search-container-st2{
 		&>.btn-st3{
