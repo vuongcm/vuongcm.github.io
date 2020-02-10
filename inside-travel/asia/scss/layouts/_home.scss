@@ -103,6 +103,9 @@
 							color: $higlight-color;
 						}
 					}
+					.couple-honeymoon:first-child{
+						font-size: 15px;
+					}
 					&:hover{
 						.icon-font:first-child{
 							color: $main-color;

@@ -721,11 +721,11 @@ $(document).ready(function() {
 		$('#creat-trip-modal .btn-close').click(function(){
 			$('.wrap-slide-modal .gallery').slick('unslick');
 		});
-		$('body').click(function(e){
-			if (!$('#creat-trip-modal,.btn-create-trip').is(e.target) && $('#creat-trip-modal,.btn-create-trip').has(e.target).length === 0) {
+		/*$('body').click(function(e){
+			if (!$('#creat-trip-modal').is(e.target) && $('#creat-trip-modal').has(e.target).length === 0) {
 	            $('.wrap-slide-modal .gallery').slick('unslick');
 	        }
-	    });
+	    });*/
 	}
 	//gallery-img
 	/*if ($('.wrap-gallery-img').length > 0) {
@@ -917,6 +917,9 @@ $(document).ready(function() {
 	    		'visibility':'hidden'
 	    	});
 	    }
+	    if($('.wrap-slide-modal').length){
+	    	$('.wrap-slide-modal .gallery').slick('unslick');
+	    }
 	});
 	$('.btn-close').click(function(){
 		$(this).closest('.modal, .modal-2, .video-modal').addClass('close-display');
@@ -1045,7 +1048,7 @@ $(document).ready(function() {
 		$(this).next('.value-2').toggleClass('open-block');
 	});
 	$('body').click(function(e){
-		if (!$('.booking-step-where').is(e.target) && $('.booking-step-where').has(e.target).length === 0) {
+		if (!$('.booking-step-where,.booking-step-where .value').is(e.target) && $('.booking-step-where,.booking-step-where .value').has(e.target).length === 0) {
             $('.booking-step-where .value').removeClass('open-block');
         }
         if(!$('.booking-step-when .text,.booking-step-when .value').is(e.target) && $('.booking-step-when .text,.booking-step-when .value').has(e.target).length === 0){
