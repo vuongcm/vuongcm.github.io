@@ -253,8 +253,10 @@
 		</div>
 	</nav>
 </header>
-<section class="banner-top banner-top-country-tour">
-	<div class="bg-parallax bg-country"></div>
+<section class="banner-top banner-country-2">
+	<div class="bg-detail">
+		<img src="images/background/bg-country.jpg" alt="">
+	</div>
 	<div class="wrap-title-banner-top-line">
 		<h1 class="line">Vietnam tours</h1>
 		<p>All Vietnam Tours can be tailored & designed for you</p>
@@ -262,9 +264,6 @@
 	<div id="booking-widget-homepage">
 		<div class="form-banner-top">
 			<div class="booking-step-where select-st1">
-				<select id="states" name="" multiple>
-					<option value=""></option>
-				</select>
 				<span class="text">
 					<b>Where do you want to go?</b>
 					<i class="icon-font select-arrow-thin"></i></span>
@@ -501,9 +500,6 @@
 				</ul>
 			</div>
 			<div class="booking-step-when select-st1">
-				<select name="" multiple>
-					<option value=""></option>
-				</select>
 				<span class="text">
 					<b>Your Interests?</b>
 					<i class="icon-font select-arrow-thin"></i>
@@ -550,7 +546,7 @@
 				<span class="text">
 					<b>
 						<i class="icon-font icon-users"></i>&nbsp;
-						<strong class="adult-number">2</strong>&nbsp;Adult(s),&nbsp;<strong class="child-number">0</strong>&nbsp;Children&nbsp;<strong class="room-number">1</strong>Infant
+						<strong class="adult-number">2</strong>&nbsp;Adult(s),&nbsp;<strong class="child-number">0</strong>&nbsp;Children,&nbsp;<strong class="infant-number">0</strong>&nbsp;Infant
 					</b>
 					<i class="icon-font select-arrow-thin"></i>
 				</span>
@@ -567,18 +563,15 @@
 						<button class="btn-up">+</button>
 						<input type="text" name="" value="0">
 					</div>
-					<div class="wrap-room-number">
-						<button class="btn-down">-</button>
-						<span><strong class="room-number">1</strong>&nbsp;Infant(<3)</span>
+					<div class="wrap-infant-number">
+						<button class="btn-down btn-disabled">-</button>
+						<span><strong class="infant-number">0</strong>&nbsp;Infant(<3)</span>
 						<button class="btn-up">+</button>
-						<input type="text" name="" value="1">
+						<input type="text" name="" value="0">
 					</div>
 				</div>
 			</div>
 			<div class="booking-step-promo select-st2">
-				<select name="">
-					<option value="" selected></option>
-				</select>
 				<span class="text">
 					<b>Budget Per Person</b>
 					<i class="icon-font select-arrow-thin"></i>
@@ -765,546 +758,592 @@
 		<h2 class="title-h2-line">All Vietnam Tours Intineraries Recommended For You</h2>
 		<p class="paragraph">All of the tours we create are completely tailor-made to you. The sample intineraries below are intended to give you flavour of what we can do.</p>
 	</div>
-	<div class="wrap-filter">
-		<div class="col-xlg-4 col-xsm-12">
-			<div class="filter-box filter-des">
-				<a href="javascript:">
-					<span class="text-2">Destinations</span>
-					<div class="icon-dropdown"><i class="icon-font select-arrow-thin"></i></div>
-				</a>
-				<ul class="value">
-					<li><a href="javascript:" class="btn-value"><span>Albania</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Anguilla</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Antigua</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Argentina</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Australia</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Barbados</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Belize</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Bhutan</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Bolivia</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Cambodia</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Canada</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Colombia</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Denmark</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Finland</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Georgia</span></a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-xlg-4 col-xsm-12">
-			<div class="filter-box filter-who">
-				<a href="javascript:">
-					<span class="text-2">Who</span>
-					<div class="icon-dropdown"><i class="icon-font select-arrow-thin"></i></div>
-				</a>
-				<ul class="value">
-					<li><a href="javascript:" class="btn-value"><span>Couples</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Families</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Groups</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Honeymoons</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Sabbatical Goers</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Solo Travellers</span></a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-xlg-4 col-xsm-12">
-			<div class="filter-box filter-price">
-				<a href="javascript:">
-					<span class="text-2">Price</span>
-					<div class="icon-dropdown"><i class="icon-font select-arrow-thin"></i></div>
-				</a>
-				<ul class="value">
-					<li><a href="javascript:" class="btn-value"><span>Up to $2,000pp</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Up to $4,000pp</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Up to $6,000pp</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Up to $8,000pp</span></a></li>
-					<li><a href="javascript:" class="btn-value"><span>Over $8,000pp</span></a></li>
-				</ul>
-			</div>
+	<div class="container">
+		<div class="wrap-filter-st2">
+			<form action="">
+				<div class="row">
+					<div class="select-st1 filter-desti-2">
+						<select name="" multiple></select>
+						<span class="text">
+							<i class="icon-font map-marker"></i>
+							<b>Destinations</b>
+							<div class="icon-dropdown"><i class="icon-font select-arrow-thin"></i></div>
+						</span>
+						<ul class="value">
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font map-marker"></i>
+									<b>Albania</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font map-marker"></i>
+									<b>Anguilla</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font map-marker"></i>
+									<b>Antigua</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font map-marker"></i>
+									<b>Argentina</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font map-marker"></i>
+									<b>Australia</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font map-marker"></i>
+									<b>Barbados</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font map-marker"></i>
+									<b>Belize</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font map-marker"></i>
+									<b>Bhutan</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font map-marker"></i>
+									<b>Bolivia</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font map-marker"></i>
+									<b>Cambodia</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font map-marker"></i>
+									<b>Canada</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font map-marker"></i>
+									<b>Colombia</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font map-marker"></i>
+									<b>Denmark</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font map-marker"></i>
+									<b>Finland</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font map-marker"></i>
+									<b>Georgia</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="select-st1 filter-who-2">
+						<select name=""></select>
+						<span class="text">
+							<i class="icon-font image"></i>
+							<b>Experiences</b>
+							<div class="icon-dropdown"><i class="icon-font select-arrow-thin"></i></div>
+						</span>
+						<ul class="value">
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font icon-swimming"></i>
+									<b>Swimming</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font icon-cruises"></i>
+									<b>Cruising</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font icon-boating"></i>
+									<b>Boating</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font icon-15"></i>
+									<b>Ethnic</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font icon-cultural"></i>
+									<b>Cultural</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font icon-heritage"></i>
+									<b>Heritage</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font icon-nature"></i>
+									<b>Nature</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font icon-cuisine"></i>
+									<b>Cuisine</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font icon-kayaking"></i>
+									<b>Kayaking</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font icon-mountain"></i>
+									<b>Adventure</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font icon-beach"></i>
+									<b>Beach</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font icon-wellness"></i>
+									<b>Wellness</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font icon-wildlife"></i>
+									<b>Wildlife</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font icon-history"></i>
+									<b>History</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font icon-festival"></i>
+									<b>Festival</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="select-st1 filter-price-2">
+						<input name="" type="hidden">
+						<span class="text">
+							<i class="icon-font clock-o"></i>
+							<b>Durration</b>
+							<div class="icon-dropdown"><i class="icon-font select-arrow-thin"></i></div>
+						</span>
+						<ul class="value">
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font clock-o"></i>
+									<b>1 Day Tours</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font clock-o"></i>
+									<b>2 - 5 Day Tours</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font clock-o"></i>
+									<b>6 - 10 Day Tours</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font clock-o"></i>
+									<b>11 - 16 Day Tours</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="btn-value">
+									<i class="icon-font clock-o"></i>
+									<b> >16 Day Tours</b>
+									<i class="icon-font checkmark"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="filter-submit-2">
+						<button class="btn-st3" type="submit">View Tours<font>&rarr;</font></button>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
-	<div class="container">
-		<div class="wrap-trip-st4">
-			<article class="trip-st4">
-				<div class="head-trip">
-					<div class="day-trip">
-						<img src="images/icon/wrap-img_optimized.png" alt="">
-						<span><b>16</b>Days</span>
-					</div>
-					<div class="title-info">
-						<h3 class="title-h2"><a href="#">Peru and the Galapagos Luxury Tour</a></h3>
-						<address class="address">
-							<a href="#" title="" target="_blank">Hanoi</a> → <a href="#" title="" target="_blank">Halong Bay</a> → <a href="#" title="" target="_blank">Quang Binh</a> → <a href="#" title="" target="_blank">Demilitarized zone</a> → <a href="#" title="" target="_blank">Hue</a> → <a href="#" title="" target="_blank">Hoi An</a> → <a href="#" title="" target="_blank">Ho Chi Minh</a> → <a href="#" title="" target="_blank">Mekong</a> → <a href="#" title="" target="_blank">Ho Chi Minh</a>
-						</address>
-					</div>
-					<a href="javascript:;" class="view-map">
-						<i class="icon-font icon-itine"></i>
-						<font>View Map</font>
+	<div class="container tarpaulin-container">
+		<div class="tarpaulin"></div>
+		<div class="col-xlg-4 col-lg-6 col-md-12">
+			<article class="trip trip-itine">
+				<a href="#"><img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-tour/discover-the-gems-of-indochina92-820-440.jpg" alt=""></a>
+				<div class="heart-tour"><i class="icon-font heart-empty"></i></div>
+				<div class="content-trip">
+					<h3 class="title-h2-line"><a href="#">Peru and the Galapagos Luxury Tour</a></h3>
+					<span>16 day from <strong>$8,950</strong> pp</span>
+					<p class="paragraph">Remained as one of the most enchanting regions in Asia, Indochina will be an inspiring destination for your next holiday. Our 16 day trip will take you through the best of Vietnam, Cambodia and Laos, starting from the sedate Hanoi Capital, to spend time on the narrow shopping streets, quiet lake before cruising to spectacular Halong Bay. Further to the central and south of Vietnam, it is time for a refresh for rural biking trip and beach relaxation in the ancient Hoi An, followed by a memorable excursion in floating Mekong Delta. You should not miss a trip to Angkor Wat - a fantastic complex reflecting the unbelievable structures and workmanship in Cambodia. On the final days of the trip, the pleasant rest and relaxation is on the cards in Luang Prabang - the perfect blend of traditional, historical and religious values in Laos. Give us a chance, and our enchanting region will definitely blow you away.</p>
+				</div>
+				<div class="tooltip">
+					<i class="icon-font icon-itine"></i>
+					<span>Ho Chi Minh &rarr; Mekong &rarr; Hoi An &rarr; Hue &rarr; Hanoi &rarr; Ninh Binh &rarr; Halong Bay</span>
+				</div>
+				<div class="wrap-tooltip">
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-kayaking"></i>
+						<span><font>Kayaking</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cuisine"></i>
+						<span><font>Cuisine</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-nature"></i>
+						<span><font>Nature</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span><font>Heritage</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cultural"></i>
+						<span><font>Cultural</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span><font>Heritage</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-mountain"></i>
+						<span><font>Mountain</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-swimming"></i>
+						<span><font>Swimming</font></span>
 					</a>
 				</div>
-				<div class="left-trip-st4">
-					<div class="box-hidden">
-						<p><i class="icon-font heart-empty"></i>Style: Modern luxurious style</p>
-						<p><i class="icon-font heart-empty"></i>One of the newest and most luxurious cruises in Halong Bay</p>
-						<p><i class="icon-font heart-empty"></i>One of the biggest in Halong Bay</p>
-						<p><i class="icon-font heart-empty"></i>Guarantee no rolling of the boat at all for sea-sick passengers</p>
-						<p><i class="icon-font heart-empty"></i>Private balcony guaranteed in each cabin</p>
-						<p><i class="icon-font heart-empty"></i>Perfect care-service: cater customers 24/24 any time throughout the cruise</p>
-						<p><i class="icon-font heart-empty"></i>Short transfer - ONLY 2.5 hours through the new highway roads</p>
-						<p><i class="icon-font heart-empty"></i>Operated by Paradise Group: TripAdvisor Certificate of Excellence 2015, 2016 and 2017</p>
-						<p><i class="icon-font heart-empty"></i>Not only visiting Titov Island - with  amazing panoramic view of the Bay but also exploring Halong Bay's largest cave: Sung Sot Cave</p>
-						<p><i class="icon-font heart-empty"></i>Spectacular facilities: the most spacious spa facilities with a varied list of unparalleled spa therapies</p>
-					</div>
-					<div class="read-more-st2"><a href="javascript:" class="link-st3">... More</a></div>
-					<div class="tooltip show-mobi">
-						<i class="icon-font icon-itine"></i>
-						<span>Hanoi → Halong Bay → Quang Binh → Demilitarized zone → Hue → Hoi An → Ho Chi Minh → Mekong → Ho Chi Minh</span>
-					</div>
-					<div class="wrap-tooltip">
-						<span>Experiences:</span>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-kayaking"></i>
-							<span>Kayaking</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-cuisine"></i>
-							<span>Cuisine</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-nature"></i>
-							<span>Nature</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-heritage"></i>
-							<span>Heritage</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-cultural"></i>
-							<span>Cultural</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-heritage"></i>
-							<span>Heritage</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-mountain"></i>
-							<span>Mountain</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-swimming"></i>
-							<span>Swimming</span>
-						</a>
-					</div>
-				</div>
-				<div class="right-trip-st4">
-					<div class="wrap-slide-st9">
-						<div class="synch-carousels" id="slide-st9-0">
-							<div class="gallery">
-								<div class="item">
-									<a href="#">
-										<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-tour/discover-the-gems-of-indochina92-820-440.jpg" alt="">
-									</a>
-								</div>
-								<div class="item">
-									<a href="#">
-										<img src="#" data-img="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-tour/vietnam-rural-landscape-and-ch852-820-440.jpg" alt="">
-									</a>
-								</div>
-								<div class="item">
-									<a href="#">
-										<img src="#" data-img="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-tour/best-of-vietnam-myanmar6-820-440.jpg" alt="">
-									</a>
-								</div>
-								<div class="item">
-									<a href="#">
-										<img src="#" data-img="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-tour/discover-treasure-of-vietnam-c444-820-440.jpg" alt="">
-									</a>
-								</div>
-								<div class="item">
-									<a href="#">
-										<img src="#" data-img="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-tour/vietnam-highlight-family-vacat305-820-440.jpg" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="nav-arrows">
-								<button class="arrow-left slick-arrow" style="">
-									<i class="icon-font select-arrow-thin"></i>
-								</button>
-								<button class="arrow-right slick-arrow" style="">
-									<i class="icon-font select-arrow-thin"></i>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="foot-trip">
-					<div class="hand-picked">
-						<span>Handpicked:</span>
-						<div>
-							<a href="javascript:" class="tooltip tooltip-handpick">
-								<div>
-									<i class="icon-font bed"></i>
-									<font>Hotels</font>
-								</div>
-								<span>Mountain</span>
-							</a>
-							<a href="javascript:" class="tooltip tooltip-handpick">
-								<div>
-									<i class="icon-font exchange"></i>
-									<i class="icon-font icon-plane"></i>
-									<font>Transfer</font>
-								</div>
-								<span>Swimming</span>
-							</a>
-							<a href="javascript:" class="tooltip tooltip-handpick">
-								<div>
-									<i class="icon-font spoon-knife"></i>
-									<font>Meals</font>
-								</div>
-								<span>Swimming</span>
-							</a>
-							<a href="javascript:" class="tooltip tooltip-handpick">
-								<div>
-									<i class="icon-font checkmark"></i>
-									<font>Services</font>
-								</div>
-								<span>Swimming</span>
-							</a>
-							<a href="javascript:" class="tooltip tooltip-handpick">
-								<div>
-									<i class="icon-font icon-users"></i>
-									<font>Experts</font>
-								</div>
-								<span>Swimming</span>
-							</a>
-						</div>
-					</div>
-					<span>Only from <strong>$8,950</strong> pp</span>
-					<a class="btn-st2" href="#">explore this trip</a>
-					<div class="heart-tour"><i class="icon-font heart-empty"></i></div>
-				</div>
+				<a class="btn-st2" href="#">explore this trip</a>
 			</article>
 		</div>
-		<div class="wrap-trip-st4">
-			<article class="trip-st4">
-				<div class="head-trip">
-					<div class="day-trip">
-						<img src="images/icon/wrap-img_optimized.png" alt="">
-						<span><b>10</b>Days</span>
-					</div>
-					<div class="title-info">
-						<h3 class="title-h2"><a href="#">Total Patagonia Vacation</a></h3>
-						<address class="address">
-							<a href="#" title="" target="_blank">Hanoi</a> → <a href="#" title="" target="_blank">Halong Bay</a> → <a href="#" title="" target="_blank">Quang Binh</a> → <a href="#" title="" target="_blank">Demilitarized zone</a> → <a href="#" title="" target="_blank">Hue</a> → <a href="#" title="" target="_blank">Hoi An</a> → <a href="#" title="" target="_blank">Ho Chi Minh</a> → <a href="#" title="" target="_blank">Mekong</a> → <a href="#" title="" target="_blank">Ho Chi Minh</a>
-						</address>
-					</div>
-					<a href="javascript:;" class="view-map">
-						<i class="icon-font icon-itine"></i>
-						<font>View Map</font>
+		<div class="col-xlg-4 col-lg-6 col-md-12">
+			<article class="trip trip-itine">
+				<a href="#"><img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-tour/discover-hidden-wonders-of-vie746-820-440.jpg" alt=""></a>
+				<div class="heart-tour"><i class="icon-font heart-empty"></i></div>
+				<div class="content-trip">
+					<h3 class="title-h2-line"><a href="#">Total Patagonia Vacation</a></h3>
+					<span>10 day from <strong>$9,950</strong> pp</span>
+					<p class="paragraph">On this discovery, the traditions and nature beauty are calling you: explore the hustle and bustle Hanoi traffic by funny cyclo trip, biking to rural village and boating to Water Coconut Forest in Hoi An and have an exceptional discover the beauty of Halong Bay by kayaking, visiting caves, swimming. etc. Additionally, the precise tour will take you to the must-see sites you cannot miss when in Cambodia and Vietnam: Incredible Angkor Wat, exciting Water Puppet Show, quaint Hoi An town or stunning Sihanoukville beaches. From the cultural landmarks to the splendid nature, this tour will give you the once of a life time discovery in the charming Indochina Region with an affordable price you cannot miss!</p>
+				</div>
+				<div class="tooltip">
+					<i class="icon-font icon-itine"></i>
+					<span>Ho Chi Minh &rarr; Mekong &rarr; Hoi An &rarr; Hue &rarr; Hanoi</span>
+				</div>
+				<div class="wrap-tooltip">
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-kayaking"></i>
+						<span><font>Kayaking</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cuisine"></i>
+						<span><font>Cuisine</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-nature"></i>
+						<span><font>Nature</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span><font>Heritage</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cultural"></i>
+						<span><font>Cultural</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span><font>Heritage</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-mountain"></i>
+						<span><font>Mountain</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-swimming"></i>
+						<span><font>Swimming</font></span>
 					</a>
 				</div>
-				<div class="left-trip-st4">
-					<div class="box-hidden">
-						<p><i class="icon-font heart-empty"></i>Style: Modern luxurious style</p>
-						<p><i class="icon-font heart-empty"></i>One of the newest and most luxurious cruises in Halong Bay</p>
-						<p><i class="icon-font heart-empty"></i>One of the biggest in Halong Bay</p>
-						<p><i class="icon-font heart-empty"></i>Guarantee no rolling of the boat at all for sea-sick passengers</p>
-						<p><i class="icon-font heart-empty"></i>Private balcony guaranteed in each cabin</p>
-						<p><i class="icon-font heart-empty"></i>Perfect care-service: cater customers 24/24 any time throughout the cruise</p>
-						<p><i class="icon-font heart-empty"></i>Short transfer - ONLY 2.5 hours through the new highway roads</p>
-						<p><i class="icon-font heart-empty"></i>Operated by Paradise Group: TripAdvisor Certificate of Excellence 2015, 2016 and 2017</p>
-						<p><i class="icon-font heart-empty"></i>Not only visiting Titov Island - with  amazing panoramic view of the Bay but also exploring Halong Bay's largest cave: Sung Sot Cave</p>
-						<p><i class="icon-font heart-empty"></i>Spectacular facilities: the most spacious spa facilities with a varied list of unparalleled spa therapies</p>
-					</div>
-					<div class="read-more-st2"><a href="javascript:" class="link-st3">... More</a></div>
-					<div class="tooltip show-mobi">
-						<i class="icon-font icon-itine"></i>
-						<span>Hanoi → Halong Bay → Quang Binh → Demilitarized zone → Hue → Hoi An → Ho Chi Minh → Mekong → Ho Chi Minh</span>
-					</div>
-					<div class="wrap-tooltip">
-						<span>Experiences:</span>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-kayaking"></i>
-							<span>Kayaking</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-cuisine"></i>
-							<span>Cuisine</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-nature"></i>
-							<span>Nature</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-heritage"></i>
-							<span>Heritage</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-cultural"></i>
-							<span>Cultural</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-heritage"></i>
-							<span>Heritage</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-mountain"></i>
-							<span>Mountain</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-swimming"></i>
-							<span>Swimming</span>
-						</a>
-					</div>
-				</div>
-				<div class="right-trip-st4">
-					<div class="wrap-slide-st9">
-						<div class="synch-carousels" id="slide-st9-1">
-							<div class="gallery">
-								<div class="item">
-									<a href="#">
-										<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/experience/water-puppet/water-puppet-show (4)650-388.jpg" alt="">
-									</a>
-								</div>
-								<div class="item">
-									<a href="#">
-										<img src="#" data-img="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/experience/water-puppet/water-puppet-show (8)650-388.jpg" alt="">
-									</a>
-								</div>
-								<div class="item">
-									<a href="#">
-										<img src="#" data-img="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/experience/water-puppet/water-puppet-show (6)650-388.jpg" alt="">
-									</a>
-								</div>
-								<div class="item">
-									<a href="#">
-										<img src="#" data-img="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/experience/water-puppet/water-puppet-show650-388.jpg" alt="">
-									</a>
-								</div>
-								<div class="item">
-									<a href="#">
-										<img src="#" data-img="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/experience/water-puppet/water-puppet-show (9)650-388.jpg" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="nav-arrows">
-								<button class="arrow-left slick-arrow" style="">
-									<i class="icon-font select-arrow-thin"></i>
-								</button>
-								<button class="arrow-right slick-arrow" style="">
-									<i class="icon-font select-arrow-thin"></i>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="foot-trip">
-					<div class="hand-picked">
-						<span>Handpicked:</span>
-						<div>
-							<a href="javascript:" class="tooltip tooltip-handpick">
-								<div>
-									<i class="icon-font bed"></i>
-									<font>Hotels</font>
-								</div>
-								<span>Mountain</span>
-							</a>
-							<a href="javascript:" class="tooltip tooltip-handpick">
-								<div>
-									<i class="icon-font exchange"></i>
-									<i class="icon-font icon-plane"></i>
-									<font>Transfer</font>
-								</div>
-								<span>Swimming</span>
-							</a>
-							<a href="javascript:" class="tooltip tooltip-handpick">
-								<div>
-									<i class="icon-font spoon-knife"></i>
-									<font>Meals</font>
-								</div>
-								<span>Swimming</span>
-							</a>
-							<a href="javascript:" class="tooltip tooltip-handpick">
-								<div>
-									<i class="icon-font checkmark"></i>
-									<font>Services</font>
-								</div>
-								<span>Swimming</span>
-							</a>
-							<a href="javascript:" class="tooltip tooltip-handpick">
-								<div>
-									<i class="icon-font icon-users"></i>
-									<font>Experts</font>
-								</div>
-								<span>Swimming</span>
-							</a>
-						</div>
-					</div>
-					<span>Only from <strong>$8,950</strong> pp</span>
-					<a class="btn-st2" href="#">explore this trip</a>
-					<div class="heart-tour"><i class="icon-font heart-empty"></i></div>
-				</div>
+				<a class="btn-st2" href="#">explore this trip</a>
 			</article>
 		</div>
-		<div class="wrap-trip-st4">
-			<article class="trip-st4">
-				<div class="head-trip">
-					<div class="day-trip">
-						<img src="images/icon/wrap-img_optimized.png" alt="">
-						<span><b>16</b>Days</span>
-					</div>
-					<div class="title-info">
-						<h3 class="title-h2"><a href="#">Best of Vietnam & Myanmar</a></h3>
-						<address class="address">
-							<a href="#" title="" target="_blank">Hanoi</a> → <a href="#" title="" target="_blank">Halong Bay</a> → <a href="#" title="" target="_blank">Quang Binh</a> → <a href="#" title="" target="_blank">Demilitarized zone</a> → <a href="#" title="" target="_blank">Hue</a> → <a href="#" title="" target="_blank">Hoi An</a> → <a href="#" title="" target="_blank">Ho Chi Minh</a> → <a href="#" title="" target="_blank">Mekong</a> → <a href="#" title="" target="_blank">Ho Chi Minh</a>
-						</address>
-					</div>
-					<a href="javascript:;" class="view-map">
-						<i class="icon-font icon-itine"></i>
-						<font>View Map</font>
+		<div class="col-xlg-4 col-lg-6 col-md-12">
+			<article class="trip trip-itine">
+				<a href="#"><img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-tour/best-of-vietnam-myanmar6-820-440.jpg" alt=""></a>
+				<div class="heart-tour"><i class="icon-font heart-empty"></i></div>
+				<div class="content-trip">
+					<h3 class="title-h2-line"><a href="#">Luxury Adventure in Costa Rica</a></h3>
+					<span>8 day from <strong>$10,750</strong> pp</span>
+					<p class="paragraph">If you believe in fantasy, then leave your happy foot in the most mysterious countries of the world including Vietnam and Myanmar, in a very excellent journey created to experience the best of well-blended beauty in bustling cities such as Ho Chi Minh City, Mekong Delta, Hoian, Hue, Hanoi, Halong Bay, Yangon, Bagan and Inle Lake. Let get packed and hit the go!</p>
+				</div>
+				<div class="tooltip">
+					<i class="icon-font icon-itine"></i>
+					<span>Ho Chi Minh &rarr; Mekong &rarr; Hoi An</span>
+				</div>
+				<div class="wrap-tooltip">
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-kayaking"></i>
+						<span><font>Kayaking</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cuisine"></i>
+						<span><font>Cuisine</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-nature"></i>
+						<span><font>Nature</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span><font>Heritage</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cultural"></i>
+						<span><font>Cultural</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span><font>Heritage</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-mountain"></i>
+						<span><font>Mountain</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-swimming"></i>
+						<span><font>Swimming</font></span>
 					</a>
 				</div>
-				<div class="left-trip-st4">
-					<div class="box-hidden">
-						<p><i class="icon-font heart-empty"></i>Style: Modern luxurious style</p>
-						<p><i class="icon-font heart-empty"></i>One of the newest and most luxurious cruises in Halong Bay</p>
-						<p><i class="icon-font heart-empty"></i>One of the biggest in Halong Bay</p>
-						<p><i class="icon-font heart-empty"></i>Guarantee no rolling of the boat at all for sea-sick passengers</p>
-						<p><i class="icon-font heart-empty"></i>Private balcony guaranteed in each cabin</p>
-						<p><i class="icon-font heart-empty"></i>Perfect care-service: cater customers 24/24 any time throughout the cruise</p>
-						<p><i class="icon-font heart-empty"></i>Short transfer - ONLY 2.5 hours through the new highway roads</p>
-						<p><i class="icon-font heart-empty"></i>Operated by Paradise Group: TripAdvisor Certificate of Excellence 2015, 2016 and 2017</p>
-						<p><i class="icon-font heart-empty"></i>Not only visiting Titov Island - with  amazing panoramic view of the Bay but also exploring Halong Bay's largest cave: Sung Sot Cave</p>
-						<p><i class="icon-font heart-empty"></i>Spectacular facilities: the most spacious spa facilities with a varied list of unparalleled spa therapies</p>
-					</div>
-					<div class="read-more-st2"><a href="javascript:" class="link-st3">... More</a></div>
-					<div class="tooltip show-mobi">
-						<i class="icon-font icon-itine"></i>
-						<span>Hanoi → Halong Bay → Quang Binh → Demilitarized zone → Hue → Hoi An → Ho Chi Minh → Mekong → Ho Chi Minh</span>
-					</div>
-					<div class="wrap-tooltip">
-						<span>Experiences:</span>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-kayaking"></i>
-							<span>Kayaking</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-cuisine"></i>
-							<span>Cuisine</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-nature"></i>
-							<span>Nature</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-heritage"></i>
-							<span>Heritage</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-cultural"></i>
-							<span>Cultural</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-heritage"></i>
-							<span>Heritage</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-mountain"></i>
-							<span>Mountain</span>
-						</a>
-						<a href="javascript:" class="tooltip">
-							<i class="icon-font icon-swimming"></i>
-							<span>Swimming</span>
-						</a>
-					</div>
+				<a class="btn-st2" href="#">explore this trip</a>
+			</article>
+		</div>
+		<div class="col-xlg-4 col-lg-6 col-md-12">
+			<article class="trip trip-itine">
+				<a href="#"><img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-tour/discover-treasure-of-vietnam-c444-820-440.jpg" alt=""></a>
+				<div class="heart-tour"><i class="icon-font heart-empty"></i></div>
+				<div class="content-trip">
+					<h3 class="title-h2-line"><a href="#">Luxury Galapagos Vacation</a></h3>
+					<span>16 day from <strong>$12,750</strong> pp</span>
+					<p class="paragraph">Great outdoor activities, numerous interactive culture, diverse traditional value and excellent accommodation - Vietnam and Siem Reap have everything a family could hope for a memorable vacation. Along the World Heritages route: Halong Bay – The natural beauty, Hoi An Ancient Town – The Cultural Sight, And Angkor Wat – The Religious Ruin, your children will have get in touch with the spiritual side of Buddhism, the local farmer experience, the delicious meals, the bustle and hustle of modern cities in cyclo and motorbike tour with lots of great fun. With local guidance and 24/7 support for your private trip, it will be a hassle-free and joyful holiday for all members of your family.</p>
 				</div>
-				<div class="right-trip-st4">
-					<div class="wrap-slide-st9">
-						<div class="synch-carousels" id="slide-st9-2">
-							<div class="gallery">
-								<div class="item">
-									<a href="#">
-										<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/slide/1-1550476301.jpg" alt="">
-									</a>
-								</div>
-								<div class="item">
-									<a href="#">
-										<img src="#" data-img="https://d1k2oi80tv211b.cloudfront.net/uploads/slide/2-1500610511.jpg" alt="">
-									</a>
-								</div>
-								<div class="item">
-									<a href="#">
-										<img src="#" data-img="https://d1k2oi80tv211b.cloudfront.net/uploads/slide/3-1500610511.jpg" alt="">
-									</a>
-								</div>
-								<div class="item">
-									<a href="#">
-										<img src="#" data-img="https://d1k2oi80tv211b.cloudfront.net/uploads/slide/4-1500610511.jpg" alt="">
-									</a>
-								</div>
-								<div class="item">
-									<a href="#">
-										<img src="#" data-img="https://d1k2oi80tv211b.cloudfront.net/uploads/slide/5-1500610511.jpg" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="nav-arrows">
-								<button class="arrow-left slick-arrow" style="">
-									<i class="icon-font select-arrow-thin"></i>
-								</button>
-								<button class="arrow-right slick-arrow" style="">
-									<i class="icon-font select-arrow-thin"></i>
-								</button>
-							</div>
-						</div>
-					</div>
+				<div class="tooltip">
+					<i class="icon-font icon-itine"></i>
+					<span>Ho Chi Minh &rarr; Mekong &rarr; Hoi An</span>
 				</div>
-				<div class="foot-trip">
-					<div class="hand-picked">
-						<span>Handpicked:</span>
-						<div>
-							<a href="javascript:" class="tooltip tooltip-handpick">
-								<div>
-									<i class="icon-font bed"></i>
-									<font>Hotels</font>
-								</div>
-								<span>Mountain</span>
-							</a>
-							<a href="javascript:" class="tooltip tooltip-handpick">
-								<div>
-									<i class="icon-font exchange"></i>
-									<i class="icon-font icon-plane"></i>
-									<font>Transfer</font>
-								</div>
-								<span>Swimming</span>
-							</a>
-							<a href="javascript:" class="tooltip tooltip-handpick">
-								<div>
-									<i class="icon-font spoon-knife"></i>
-									<font>Meals</font>
-								</div>
-								<span>Swimming</span>
-							</a>
-							<a href="javascript:" class="tooltip tooltip-handpick">
-								<div>
-									<i class="icon-font checkmark"></i>
-									<font>Services</font>
-								</div>
-								<span>Swimming</span>
-							</a>
-							<a href="javascript:" class="tooltip tooltip-handpick">
-								<div>
-									<i class="icon-font icon-users"></i>
-									<font>Experts</font>
-								</div>
-								<span>Swimming</span>
-							</a>
-						</div>
-					</div>
-					<span>Only from <strong>$8,950</strong> pp</span>
-					<a class="btn-st2" href="#">explore this trip</a>
-					<div class="heart-tour"><i class="icon-font heart-empty"></i></div>
+				<div class="wrap-tooltip">
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-kayaking"></i>
+						<span><font>Kayaking</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cuisine"></i>
+						<span><font>Cuisine</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-nature"></i>
+						<span><font>Nature</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span><font>Heritage</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cultural"></i>
+						<span><font>Cultural</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span><font>Heritage</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-mountain"></i>
+						<span><font>Mountain</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-swimming"></i>
+						<span><font>Swimming</font></span>
+					</a>
 				</div>
+				<a class="btn-st2" href="#">explore this trip</a>
+			</article>
+		</div>
+		<div class="col-xlg-4 col-lg-6 col-md-12">
+			<article class="trip trip-itine">
+				<a href="#"><img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-tour/vietnam-rural-landscape-and-ch852-820-440.jpg" alt=""></a>
+				<div class="heart-tour"><i class="icon-font heart-empty"></i></div>
+				<div class="content-trip">
+					<h3 class="title-h2-line"><a href="#">Brazilian and Argentinian Adventure</a></h3>
+					<span>8 day from <strong>$10,750</strong> pp</span>
+					<p class="paragraph">Come visit Vietnam, a diverse tropical environment in the Indochinese peninsula, which is blessed with awe inspiring landscapes, intriguing culture and ancient history. Hugely popular with travellers, the country offers a warm welcome into the local life and natural beauty of South East Asia, coupled with an exciting insight into countryside, amidst dominating mountains and caves in Phong Nha National Park, dense forest lies the exciting coastal village of Hoi An - the World Heritage Site known to the locals as ‘the peaceful meeting place’. You can get a local perspective on Vietnam War and its historical values when visiting top historical sites of the former DMZ as well as immerse yourself in tranquil atmosphere of poetic Hue City. Get a taste of rural river life at the Mekong Delta after visiting the young and morden Ho Chi Minh city...</p>
+				</div>
+				<div class="tooltip">
+					<i class="icon-font icon-itine"></i>
+					<span>Ho Chi Minh &rarr; Mekong &rarr; Hoi An</span>
+				</div>
+				<div class="wrap-tooltip">
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-kayaking"></i>
+						<span><font>Kayaking</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cuisine"></i>
+						<span><font>Cuisine</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-nature"></i>
+						<span><font>Nature</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span><font>Heritage</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cultural"></i>
+						<span><font>Cultural</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span><font>Heritage</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-mountain"></i>
+						<span><font>Mountain</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-swimming"></i>
+						<span><font>Swimming</font></span>
+					</a>
+				</div>
+				<a class="btn-st2" href="#">explore this trip</a>
+			</article>
+		</div>
+		<div class="col-xlg-4 col-lg-6 col-md-12">
+			<article class="trip trip-itine">
+				<a href="#"><img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-tour/discover-the-gems-of-indochina92-820-440.jpg" alt=""></a>
+				<div class="heart-tour"><i class="icon-font heart-empty"></i></div>
+				<div class="content-trip">
+					<h3 class="title-h2-line"><a href="#">Northern Chile Explorer</a></h3>
+					<span>8 day from <strong>$10,750</strong> pp</span>
+					<p class="paragraph">Though small, Vietnam and Cambodia, nestled in the South East Asia Region, may be the next ideal destination for your holiday, with the famous World Heritages: Halong Bay – The natural beauty, Hoi An Ancient Town – The Cultural Sight, And Angkor Wat – The Religious Ruin. In addition to immersing yourself in the local friendliness, you will have chance to taste a wide range of delicious cuisine, to join many exciting outdoor activities and to experience the deep insights of cultural and natural sightseeing.</p>
+				</div>
+				<div class="tooltip">
+					<i class="icon-font icon-itine"></i>
+					<span>Ho Chi Minh &rarr; Mekong &rarr; Hoi An</span>
+				</div>
+				<div class="wrap-tooltip">
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-kayaking"></i>
+						<span><font>Kayaking</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cuisine"></i>
+						<span><font>Cuisine</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-nature"></i>
+						<span><font>Nature</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span><font>Heritage</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-cultural"></i>
+						<span><font>Cultural</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-heritage"></i>
+						<span><font>Heritage</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-mountain"></i>
+						<span><font>Mountain</font></span>
+					</a>
+					<a href="javascript:" class="tooltip">
+						<i class="icon-font icon-swimming"></i>
+						<span><font>Swimming</font></span>
+					</a>
+				</div>
+				<a class="btn-st2" href="#">explore this trip</a>
 			</article>
 		</div>
 		<div class="view-more-wrap">
@@ -1335,7 +1374,7 @@
 					</div>
 					<div class="item">
 						<a href="#">
-							<img src="#" data-img="images/demo-slider-2.jpg" alt="">
+							<img data-lazy="images/demo-slider-2.jpg" alt="">
 							<div class="box-text">
 								<h3>Family Tours</h3>
 							</div>
@@ -1345,7 +1384,7 @@
 					</div>
 					<div class="item">
 						<a href="#">
-							<img src="#" data-img="images/demo-slider-3.jpg" alt="">
+							<img data-lazy="images/demo-slider-3.jpg" alt="">
 							<div class="box-text">
 								<h3>Luxury Tours</h3>
 							</div>
@@ -1355,7 +1394,7 @@
 					</div>
 					<div class="item">
 						<a href="#">
-							<img src="#" data-img="images/demo-slider-4.jpg" alt="">
+							<img data-lazy="images/demo-slider-4.jpg" alt="">
 							<div class="box-text">
 								<h3>Honeymoon Holidays</h3>
 							</div>
@@ -1365,7 +1404,7 @@
 					</div>
 					<div class="item">
 						<a href="#">
-							<img src="#" data-img="images/demo-slider-5.jpg" alt="">
+							<img data-lazy="images/demo-slider-5.jpg" alt="">
 							<div class="box-text">
 								<h3>Adventure & Special Interest</h3>
 							</div>
@@ -1385,14 +1424,64 @@
 			</div>
 		</div>
 	</div>
-
+</section>
+<section class="wrap-guide">
+	<div class="wrap-mini-intro">
+		<h2 class="title-h2-line">Guide how to choose your ideal Vietnam Tour</h2>
+		<p class="paragraph">According to our travellers in the processing of choosing their ideal Vietnam Tours with us, there are six basic steps which they are usually following:</p>
+	</div>
+	<div class="container paragraph-hide">
+		<div class="col-xlg-4 col-md-6 col-xsm-12 wrap-guide-step">
+			<div class="wrap-icon-guide"><img src="images/icon/icon-01.svg" alt=""></div>
+			<article>
+				<h3>Step 1: The most important thing is deciding the length of your Vietnam Tours</h3>
+				<p class="paragraph">Since each Vietnam Tour has a different duration, you would need to decide how many days are you going to spend exploring Vietnam.</p>
+			</article>
+		</div>
+		<div class="col-xlg-4 col-md-6 col-xsm-12 wrap-guide-step">
+			<div class="wrap-icon-guide"><img src="images/icon/icon-02.svg" alt=""></div>
+			<article>
+				<h3>Step 2: Choose your Vietnam Tour Style</h3>
+				<p class="paragraph">After deciding the length of your Vietnam Tour, you might want to consider which tour style will suit you best. If you are travelling with your children, Vietnam Family Tours will be the perfect theme; or if you want to look for a romantic Vietnam Tour with your partner, Honeymoon Holidays collection shouldn't be missed.</p>
+			</article>
+		</div>
+		<div class="col-xlg-4 col-md-6 col-xsm-12 wrap-guide-step">
+			<div class="wrap-icon-guide"><img src="images/icon/icon-03.svg" alt=""></div>
+			<article>
+				<h3>Step 3: Find out which are your favourite destinations in Vietnam</h3>
+				<p class="paragraph">Some travellers are keen on gaining an insight into the culture and customs of ethnic minorities in Northern Vietnam, Ha Giang, Sapa and Mai Chau are the ideal places. While others are the fan of discovering the mysterious caves, Phong Nha Ke Bang is definitely the best option. One important thing that you should notice the best time to visit those destinations. For instance, the ideal time to visit Ha Giang is between October and April while the perfect time to witness the terraced rice fields in Mu Cang Chai is from September to October.</p>
+			</article>
+		</div>
+		<div class="col-xlg-4 col-md-6 col-xsm-12 wrap-guide-step">
+			<div class="wrap-icon-guide"><img src="images/icon/icon-04.svg" alt=""></div>
+			<article>
+				<h3>Step 4: What are the activities you would like to take in your Vietnam Tour?</h3>
+				<p class="paragraph">Since there are numerous amazing activities in each destination, our experts have chosen some different activities for each Vietnam Tour. In case you don't know which tour to choose, you should spend a short time to look at the highlights and tour summaries to find out which activities attract you more.</p>
+			</article>
+		</div>
+		<div class="col-xlg-4 col-md-6 col-xsm-12 wrap-guide-step">
+			<div class="wrap-icon-guide"><img src="images/icon/icon-05.svg" alt=""></div>
+			<article>
+				<h3>Step 5: Read the detailed itinerary</h3>
+				<p class="paragraph">After finding out some favourite Vietnam Tours itineraries, spending time to read the detailed itinerary to know which experiences you will have in each day, where you will stay and what are the inclusions and exclusions.</p>
+			</article>
+		</div>
+		<div class="col-xlg-4 col-md-6 col-xsm-12 wrap-guide-step">
+			<div class="wrap-icon-guide"><img src="images/icon/icon-06.svg" alt=""></div>
+			<article>
+				<h3>Step 6: Send us an enquiry</h3>
+				<p class="paragraph">Whether you find out your ideal Vietnam Tour or not, feel free to send us an enquiry since our experts are always ready to start working on your tailor-made itinerary based on your requirements and taste & help you organize your insider journey to Vietnam.</p>
+			</article>
+		</div>
+	</div>
+	<div class="read-more-st1"><a href="javascript:" class="link-st3">Read More ...</a></div>
 </section>
 <section class="background-st1">
 	<div class="container">
 		<div class="team-quote">
-			<img src="images/demo-team-1.png" alt="">
-			<img src="images/demo-team-2.png" alt="">
-			<img src="images/demo-team-3.png" alt="">
+			<img src="images/a3.png" alt="">
+			<img src="images/a5.png" alt="">
+			<img src="images/a8.png" alt="">
 			<div class="team-name">Being the locals, We know our homeland the best!</div>
 		</div>
 		<div class="team-mess">
@@ -1406,7 +1495,7 @@
 		</div>
 	</div>
 </section>
-<section class="mg-top">
+<section>
 	<div class="wrap-mini-intro">
 		<h2 class="title-h2-line">Enjoy exceptional savings with our exclusive offers</h2>
 		<p class="paragraph">With Belmond’s exclusive selection of inspiring activities, you’ll find endless things to do in Asia. Browse through our top recommendations below</p>
@@ -1424,6 +1513,9 @@
 							<a href="#">Myanmar</a>
 							<h3><a href="#">Immerse in the wonderful floating life in Inle Lake</a></h3>
 							<p>With Belmond’s exclusive selection of inspiring activities, you’ll find endless things to do in Asia. Browse through our top recommendations</p>
+							<div class="box-button">
+								<a href="#" class="link-st3">View itineraries</a>
+							</div>
 						</div>
 					</div>
 					<div class="item">
@@ -1435,6 +1527,9 @@
 							<a href="#">Vietnam</a>
 							<h3><a href="#">Enchanted by the regional experiences and sympathetic locals in Mekong Delta</a></h3>
 							<p>With Belmond’s exclusive selection of inspiring activities, you’ll find endless things to do in Asia. Browse through our top recommendations</p>
+							<div class="box-button">
+								<a href="#" class="link-st3">View itineraries</a>
+							</div>
 						</div>
 					</div>
 					<div class="item">
@@ -1446,6 +1541,9 @@
 							<a href="#">Myanmar</a>
 							<h3><a href="#">Uncover the diverse history and culture of Yangon</a></h3>
 							<p>With Belmond’s exclusive selection of inspiring activities, you’ll find endless things to do in Asia. Browse through our top recommendations</p>
+							<div class="box-button">
+								<a href="#" class="link-st3">View itineraries</a>
+							</div>
 						</div>
 					</div>
 					<div class="item">
@@ -1457,6 +1555,9 @@
 							<a href="#">Cambodia</a>
 							<h3><a href="#">Splendor Trip to  Religious Angkor Wat</a></h3>
 							<p>With Belmond’s exclusive selection of inspiring activities, you’ll find endless things to do in Asia. Browse through our top recommendations</p>
+							<div class="box-button">
+								<a href="#" class="link-st3">View itineraries</a>
+							</div>
 						</div>
 					</div>
 					<div class="item">
@@ -1468,6 +1569,9 @@
 							<a href="#">Laos</a>
 							<h3><a href="#">Impressive city tour around Luang Prabang - the blend of cultural diversity</a></h3>
 							<p>With Belmond’s exclusive selection of inspiring activities, you’ll find endless things to do in Asia. Browse through our top recommendations</p>
+							<div class="box-button">
+								<a href="#" class="link-st3">View itineraries</a>
+							</div>
 						</div>
 					</div>
 					<div class="item">
@@ -1479,6 +1583,9 @@
 							<a href="#">Vietnam</a>
 							<h3><a href="#">Experiencing kayaking in beautiful Halong Bay.</a></h3>
 							<p>With Belmond’s exclusive selection of inspiring activities, you’ll find endless things to do in Asia. Browse through our top recommendations</p>
+							<div class="box-button">
+								<a href="#" class="link-st3">View itineraries</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1494,6 +1601,147 @@
 		</div>
 	</div>
 </section>
+<section class="list-faq">
+	<div class="wrap-mini-intro">
+		<h2 class="title-h2-line">Vietnam Travel Tours FAQs</h2>
+	</div>
+	<div class="container">
+		<div class="wrap-faq">
+			<div class="order-day">
+				<a href="javascript:;">
+					<img src="images/icon/icon_faq.svg" alt="">
+					<h3>Where should I visit in Vietnam on my 1st-time tour routes?</h3>
+					<button>
+						<i class="icon-font select-arrow-thin"></i>
+					</button>
+				</a>
+				<div class="panel">
+					<p class="paragraph">If this is your first time travelling to Vietnam, stick to the classic destinations is the great option. Hanoi, Halong Bay, Sapa, Hoi An, Nha Trang, Ho Chi Minh and Mekong Delta are the most popular places.</p>
+				</div>
+			</div>
+			<div class="order-day">
+				<a href="javascript:;">
+					<img src="images/icon/icon_faq.svg" alt="">
+					<h3>How long do I need to explore Vietnam?</h3>
+					<button>
+						<i class="icon-font select-arrow-thin"></i>
+					</button>
+				</a>
+				<div class="panel">
+					<p class="paragraph">The recommended length of stay is between 10 to 14 days for the classic Vietnam route which stretches from North to South. Within the 14-day tour, you will have enough time to explore Vietnam, gain an insight into the culture, language exchange, admire the beauty of nature and relax at the same time.</p>
+				</div>
+			</div>
+			<div class="order-day">
+				<a href="javascript:;">
+					<img src="images/icon/icon_faq.svg" alt="">
+					<h3>Where should I start?</h3>
+					<button>
+						<i class="icon-font select-arrow-thin"></i>
+					</button>
+				</a>
+				<div class="panel">
+					<p class="paragraph">Most tours start from either Hanoi - the capital of Vietnam or Ho Chi Minh City (also known as Saigon), but please do not worry that our Vietnam Tours can start from any city. All you need to do is choose the best Vietnam Tours which suite your needs and taste or contact our experts and they are happy to help you design a customized tour which fits you just right.</p>
+				</div>
+			</div>
+			<div class="order-day">
+				<a href="javascript:;">
+					<img src="images/icon/icon_faq.svg" alt="">
+					<h3>Which destinations should I visit in Vietnam?</h3>
+					<button>
+						<i class="icon-font select-arrow-thin"></i>
+					</button>
+				</a>
+				<div class="panel">
+					<p class="paragraph">Since Vietnam is a cultural richness and diverse geography, it can be overwhelming amongst many unique and beautiful destinations such as Hoi An, Halong Bay, Ha Giang, Nha Trang, Ho Chi Minh City or Mekong Delta. Starting from what you love to explore, listed all of them into the note then check out the list of top best destinations in Vietnam to find out which places attract you most. You can also chat and work with one of our experts to find out more about Vietnam.</p>
+				</div>
+			</div>
+			<div class="order-day">
+				<a href="javascript:;">
+					<img src="images/icon/icon_faq.svg" alt="">
+					<h3>When is the best time to visit Vietnam?</h3>
+					<button>
+						<i class="icon-font select-arrow-thin"></i>
+					</button>
+				</a>
+				<div class="panel">
+					<p class="paragraph">Vietnam is a country that you can travel all year round since the weather varies from North to South. If you are not a fan of hot and humid weather, you shouldn't visit Vietnam during the summer season which lasts from May to September, the average temperatures can rise up to 38 degrees Celsius.</p>
+				</div>
+			</div>
+			<div class="order-day">
+				<a href="javascript:;">
+					<img src="images/icon/icon_faq.svg" alt="">
+					<h3>Is tipping mandatory in Vietnam?</h3>
+					<button>
+						<i class="icon-font select-arrow-thin"></i>
+					</button>
+				</a>
+				<div class="panel">
+					<p class="paragraph">Tipping isn't customary or mandatory in Vietnam. However, waiter/waitress, drivers and other service workers appreciate a tip of spare change or another small amount when their services have been done particularly good.</p>
+				</div>
+			</div>
+			<div class="order-day">
+				<a href="javascript:;">
+					<img src="images/icon/icon_faq.svg" alt="">
+					<h3>What power plugs should be brought with you in Vietnam Tours?</h3>
+					<button>
+						<i class="icon-font select-arrow-thin"></i>
+					</button>
+				</a>
+				<div class="panel">
+					<p class="paragraph">There are three types of plugs can be used in Vietnam: Plugs type A - Two flat vertical pins, Type C and Type F - Two round pins. The power plug 3 pins can be used in some places in Vietnam but it less common, you might need an adapter in this case. Please be noted that Vietnam's electricity voltage is 220 Volt at 50 Hz. If your power adapter says "100-240, 50-60Hz", it is totally fine to use them as long as you have the right plug. Otherwise, a transformer to convert the voltage from 110 to 220 volts might be needed.</p>
+				</div>
+			</div>
+			<div class="order-day">
+				<a href="javascript:;">
+					<img src="images/icon/icon_faq.svg" alt="">
+					<h3>Where is the official source to check information about E-Visa Vietnam?</h3>
+					<button>
+						<i class="icon-font select-arrow-thin"></i>
+					</button>
+				</a>
+				<div class="panel">
+					<p class="paragraph">Please do not confuse E-visa and VOA (Visa on Arrival) since these are two different processes. The official site to check information about E-Visa Vietnam is at National Web Portal on <a href="https://evisa.xuatnhapcanh.gov.vn/web/guest/trang-chu-ttdt">Immigration E-Visa Page</a>. On this website, you can also find information about the list of countries that allowed E-visa issuing and list of ports that allowed foreigners to enter and exit Vietnam by E-visa.</p>
+				</div>
+			</div>
+			<div class="order-day">
+				<a href="javascript:;">
+					<img src="images/icon/icon_faq.svg" alt="">
+					<h3>How to Avoid Food Poisoning in Vietnam?</h3>
+					<button>
+						<i class="icon-font select-arrow-thin"></i>
+					</button>
+				</a>
+				<div class="panel">
+					<p class="paragraph">Though Vietnam is famous for being the paradise for culinary adventures, as a traveller, you might feel a bit nervous regarding the possibility of food poisoning. To avoid this worst nightmare that can happen during your trip, there are some tips you should consider: Avoid any place that is empty and dirty; remember to drink bottled water since the tap water in Vietnam is not drinkable; choose a place that looks clean and hygiene; maybe you can ask for hot water to dip your utensils; should buy uncut fruit from a clean stall and wash first; raw meat and seafood are not recommended unless in a high-end restaurant.</p>
+				</div>
+			</div>
+			<div class="order-day">
+				<a href="javascript:;">
+					<img src="images/icon/icon_faq.svg" alt="">
+					<h3>Where should buy the SIM card for your Vietnam Tours?</h3>
+					<button>
+						<i class="icon-font select-arrow-thin"></i>
+					</button>
+				</a>
+				<div class="panel">
+					<p class="paragraph">There are four cell networks in Vietnam: Viettel, Mobifone, Vinaphone and Vietnamobile. The recommended one is Viettel since this is the most popular and largest network in Vietnam, closely followed by Vinaphone while the cheapest brands are Mobifone and Vietnamobile but they have the poor data service outside the large cities. You could see numerous stalls selling SIM cards at international airports & tiny stores on city streets. However, most cards purchased from these places aren't registered. It is ok if you just stay for a short time and stick to big cities such as Hanoi, Hoi An, Hue, etc. However, if you are plan heading off the beaten track in mountainous regions such as Ha Giang or Mu Cang Chai, buying a SIM card from an official store for registration is a great choice. For Viettel, you can check their reliable stores at <a href="https://vietteltelecom.vn/">Viettel website</a>. After buying a SIM card, to check who your SIM is registered to, texting TTTB to 1414. To check the balance for the calls and texts, type *101# and press Call. To check the data usage balance, text KTTK and send to 191. To top up, you can buy vouchers at any store on the streets, next type *100*(code on the top-up card)# and press Call.</p>
+				</div>
+			</div>
+			<div class="order-day">
+				<a href="javascript:;">
+					<img src="images/icon/icon_faq.svg" alt="">
+					<h3>Which are the best websites to check the exchange rate?</h3>
+					<button>
+						<i class="icon-font select-arrow-thin"></i>
+					</button>
+				</a>
+				<div class="panel">
+					<p class="paragraph">There are several websites you can check the exchange rate. However, according to the travellers, you can check the exchange rate at <a href="https://www.xe.com/">Xe website</a> or <a href="https://portal.vietcombank.com.vn/en-Us/Personal/TG/Pages/exchange-rate.aspx?devicechannel=default">Vietcombank Bank Website</a>. Vietcombank is one of the most prestigious and biggest bank companies in Vietnam.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 <section>
 	<div class="container">
 		<div class="water-mask">the experience</div>
@@ -1502,7 +1750,7 @@
 				<div class="gallery">
 					<div class="item">
 						<div>
-							<img src="images/icon/wrap-img_optimized.png" alt="">
+							<img src="images/icon/icon_a.svg" alt="">
 							<img src="images/demo-custom.jpg" alt="">
 						</div>
 						<div>
@@ -1513,33 +1761,11 @@
 									<img src="images/icon/tripadvisor-logo.svg" alt="">
 								</a>
 								<a href="#" class="wrap-tripadvisor">
-									<span class="icontripadvisor2 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-									</span>
-									<span class="icontripadvisor2 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-									</span>
-									<span class="icontripadvisor2 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-									</span>
-									<span class="icontripadvisor2 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-									</span>
-									<span class="icontripadvisor3 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-										<i class="icon-font path4"></i>
-										<i class="icon-font path5"></i>
-									</span>
+									<img src="images/icontripadvisor2.svg" alt="">
+									<img src="images/icontripadvisor2.svg" alt="">
+									<img src="images/icontripadvisor2.svg" alt="">
+									<img src="images/icontripadvisor2.svg" alt="">
+									<img src="images/icontripadvisor3.svg" alt="">
 									<strong>5/5</strong>
 								</a>
 								<a href="#" class="link-st3">View all &raquo;</a>
@@ -1548,7 +1774,7 @@
 					</div>
 					<div class="item">
 						<div>
-							<img src="images/icon/wrap-img_optimized.png" alt="">
+							<img src="images/icon/icon_a.svg" alt="">
 							<img src="images/demo-custom-2.jpg" alt="">
 						</div>
 						<div>
@@ -1559,33 +1785,11 @@
 									<img src="images/icon/tripadvisor-logo.svg" alt="">
 								</a>
 								<a href="#" class="wrap-tripadvisor">
-									<span class="icontripadvisor2 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-									</span>
-									<span class="icontripadvisor2 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-									</span>
-									<span class="icontripadvisor2 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-									</span>
-									<span class="icontripadvisor2 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-									</span>
-									<span class="icontripadvisor3 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-										<i class="icon-font path4"></i>
-										<i class="icon-font path5"></i>
-									</span>
+									<img src="images/icontripadvisor2.svg" alt="">
+									<img src="images/icontripadvisor2.svg" alt="">
+									<img src="images/icontripadvisor2.svg" alt="">
+									<img src="images/icontripadvisor2.svg" alt="">
+									<img src="images/icontripadvisor3.svg" alt="">
 									<strong>5/5</strong>
 								</a>
 								<a href="#" class="link-st3">View all &raquo;</a>
@@ -1594,7 +1798,7 @@
 					</div>
 					<div class="item">
 						<div>
-							<img src="images/icon/wrap-img_optimized.png" alt="">
+							<img src="images/icon/icon_a.svg" alt="">
 							<img src="images/demo-custom-3.jpg" alt="">
 						</div>
 						<div>
@@ -1605,33 +1809,11 @@
 									<img src="images/icon/tripadvisor-logo.svg" alt="">
 								</a>
 								<a href="#" class="wrap-tripadvisor">
-									<span class="icontripadvisor2 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-									</span>
-									<span class="icontripadvisor2 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-									</span>
-									<span class="icontripadvisor2 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-									</span>
-									<span class="icontripadvisor2 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-									</span>
-									<span class="icontripadvisor3 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-										<i class="icon-font path4"></i>
-										<i class="icon-font path5"></i>
-									</span>
+									<img src="images/icontripadvisor2.svg" alt="">
+									<img src="images/icontripadvisor2.svg" alt="">
+									<img src="images/icontripadvisor2.svg" alt="">
+									<img src="images/icontripadvisor2.svg" alt="">
+									<img src="images/icontripadvisor3.svg" alt="">
 									<strong>5/5</strong>
 								</a>
 								<a href="#" class="link-st3">View all &raquo;</a>
@@ -1640,7 +1822,7 @@
 					</div>
 					<div class="item">
 						<div>
-							<img src="images/icon/wrap-img_optimized.png" alt="">
+							<img src="images/icon/icon_a.svg" alt="">
 							<img src="images/demo-custom-4.jpg" alt="">
 						</div>
 						<div>
@@ -1651,33 +1833,11 @@
 									<img src="images/icon/tripadvisor-logo.svg" alt="">
 								</a>
 								<a href="#" class="wrap-tripadvisor">
-									<span class="icontripadvisor2 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-									</span>
-									<span class="icontripadvisor2 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-									</span>
-									<span class="icontripadvisor2 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-									</span>
-									<span class="icontripadvisor2 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-									</span>
-									<span class="icontripadvisor3 tripadvisor">
-										<i class="icon-font path1"></i>
-										<i class="icon-font path2"></i>
-										<i class="icon-font path3"></i>
-										<i class="icon-font path4"></i>
-										<i class="icon-font path5"></i>
-									</span>
+									<img src="images/icontripadvisor2.svg" alt="">
+									<img src="images/icontripadvisor2.svg" alt="">
+									<img src="images/icontripadvisor2.svg" alt="">
+									<img src="images/icontripadvisor2.svg" alt="">
+									<img src="images/icontripadvisor3.svg" alt="">
 									<strong>5/5</strong>
 								</a>
 								<a href="#" class="link-st3">View all &raquo;</a>
@@ -1754,7 +1914,7 @@
 </footer>
 <div class="modal-container close-display"></div>
 <div id="contact-modal" class="modal close-display">
-    <button class="btn-close">&times;</button>
+    <button class="btn-close" aria-label="close modal">&times;</button>
     <h3>Contact Us</h3>
     <p>Our team of experts can help answer any questions you might have. Please fill out the form below and a consultant will respond shortly.</p>
     <div class="form-box">
@@ -1796,7 +1956,7 @@
     </div>
 </div>
 <div id="creat-trip-modal" class="modal close-display">
-    <button class="btn-close">&times;</button>
+    <button class="btn-close" aria-label="close modal">&times;</button>
     <h3>Almost There!</h3>
     <p>We need a bit more info to create your itinerary:</p>
     <div class="form-box">
@@ -2096,28 +2256,28 @@
 						<span class="text">
 							<b>
 								<i class="icon-font icon-users"></i>&nbsp;
-								<strong class="adult-number">2</strong>&nbsp;Adult(s),&nbsp;<strong class="child-number">0</strong>&nbsp;Children&nbsp;<strong class="room-number">1</strong>Infant
+								<strong class="adult-number">2</strong>&nbsp;Adult(s),&nbsp;<strong class="child-number">0</strong>&nbsp;Children&nbsp;<strong class="infant-number">0</strong>Infant
 							</b>
 							<i class="icon-font select-arrow-thin"></i>
 						</span>
 						<div class="value-2">
 							<div class="wrap-adult-number">
 								<button class="btn-down" type="button">-</button>
-								<span><strong class="adult-number">2</strong>&nbsp;Adult(>12)</span>
+								<span><strong class="adult-number">2</strong>&nbsp;Adult (>12)</span>
 								<button class="btn-up" type="button">+</button>
 								<input type="text" name="" value="2">
 							</div>
 							<div class="wrap-child-number">
 								<button class="btn-down btn-disabled" type="button">-</button>
-								<span><strong class="child-number">0</strong>&nbsp;Child(4-12)</span>
+								<span><strong class="child-number">0</strong>&nbsp;Child (4-12)</span>
 								<button class="btn-up" type="button">+</button>
 								<input type="text" name="" value="0">
 							</div>
-							<div class="wrap-room-number">
-								<button class="btn-down" type="button">-</button>
-								<span><strong class="room-number">1</strong>&nbsp;Infant(<3)</span>
+							<div class="wrap-infant-number">
+								<button class="btn-down btn-disabled" type="button">-</button>
+								<span><strong class="infant-number">0</strong>&nbsp;Infant (<3)</span>
 								<button class="btn-up" type="button">+</button>
-								<input type="text" name="" value="1">
+								<input type="text" name="" value="0">
 							</div>
 						</div>
 					</div>

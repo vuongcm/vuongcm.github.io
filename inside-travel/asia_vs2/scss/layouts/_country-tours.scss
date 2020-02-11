@@ -16,7 +16,7 @@
 	z-index: 2;
 	background-color: rgba(0, 0, 0, .3);
 	padding: 15px;
-	padding-top: 6%;
+	bottom: 100px;
 	.line{
 		margin-bottom: 0;
 	}
@@ -416,9 +416,6 @@
 	.banner-top-country-tour{
 		height: 600px;
 	}
-	.wrap-title-banner-top-line{
-		padding-top: 8%;
-	}
 }
 @media (max-width: 1199px) {
 	.wrap-faq{
@@ -445,9 +442,6 @@
 @media (max-width: 991px) {
 	.banner-top-country-tour{
 		height: 500px;
-	}
-	.wrap-title-banner-top-line{
-		padding-top: 13%;
 	}
 	.wrap-slide-sp{
 		.synch-carousels{
@@ -498,8 +492,6 @@
 		height: 310px;
 	}
 	.wrap-title-banner-top-line{
-		padding-top: 0;
-		padding-bottom: 40px;
 		h1,h2{
 			font-size: 35px;
 		}
@@ -613,7 +605,6 @@
 }
 @media (max-width: 375px) {
 	.wrap-title-banner-top-line{
-		padding-bottom: 0;
 		h1,h2{
 			font-size: 25px;
 		}

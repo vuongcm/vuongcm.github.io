@@ -69,7 +69,7 @@
 			position: relative;
 			width: 21%;
 			.value{
-				bottom: calc(100% + 15px);
+				top: calc(100% + 15px);
 				.btn-value{
 					.map-marker{
 						margin-right: 8px;
@@ -89,7 +89,7 @@
 			position: relative;
 			width: 21%;
 			.value{
-				bottom: calc(100% + 15px);
+				top: calc(100% + 15px);
 				.btn-value{
 					padding-left: 15px;
 					.icon-font:first-child{
@@ -118,7 +118,7 @@
 			position: relative;
 			width: 18%;
 			.value-2{
-				bottom: calc(100% + 15px);
+				top: calc(100% + 15px);
 			}
 		}
 		.booking-step-promo{
@@ -126,7 +126,7 @@
 			width: 22%;
 			border-right: none;
 			.value{
-				bottom: calc(100% + 15px);
+				top: calc(100% + 15px);
 				.btn-value{
 					padding-left: 15px;
 				}
