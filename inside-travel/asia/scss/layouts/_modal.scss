@@ -1027,6 +1027,21 @@
 				@include translateX(calc(100% + 10px));
 			}
 		}
+		.item{
+			&>p{
+				width: 100%;
+				padding: 5px 10px;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				color: #fff;
+				background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.01)), to(rgba(0,0,0,0.85)));
+			    background: -webkit-linear-gradient(top, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.85) 90%);
+			    background: -moz-linear-gradient(top, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.85) 90%);
+			    background: -ms-linear-gradient(top, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.85) 90%);
+			    background: -o-linear-gradient(top, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.85) 90%);
+			}
+		}
 	}
 	#carousel-img-cr{
 		z-index: unset;
