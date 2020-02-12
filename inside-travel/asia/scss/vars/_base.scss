@@ -1898,6 +1898,12 @@ select:focus {
     .wrap-filter{
         width: 90%;
     }
+    .trip{
+        .btn-st2{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
 }
 @media (max-width: 1024px) {
     .bg-parallax{

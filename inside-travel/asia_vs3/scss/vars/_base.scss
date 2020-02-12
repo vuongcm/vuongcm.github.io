@@ -71,8 +71,9 @@ input[type="text"],input[type="email"],input[type="password"]{padding-left:5px;p
 select{padding-left:8px; cursor: pointer;}
 input[type="number"]{padding-left:5px}
 textarea{padding:8px 5px 8px 5px}
-input,textarea,select,button,a,button:hover,button:active,button:focus{outline:none}
+input,textarea,select,button,a,button:hover,button:active,button:focus{outline:none;border-radius: 0;box-shadow: none;}
 button{border:none;background:none;}
+input[type="text"],textarea{appearance: none;-moz-appearance: none;-webkit-appearance: none;-ms-appearance: none;-o-appearance: none;}
 img{max-width: 100%;vertical-align: middle;object-fit: cover;}
 @import "var";
 body {
@@ -1769,6 +1770,9 @@ select:focus {
 .mg-top-30{
     margin-top: 30px;
 }
+.mg-bot-0{
+    margin-bottom: 0!important;
+}
 /*.a-hover{
     position: absolute;
     top: 0;
@@ -1891,6 +1895,12 @@ select:focus {
     }
     .wrap-filter{
         width: 90%;
+    }
+    .trip{
+        .btn-st2{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
 }
 @media (max-width: 1024px) {

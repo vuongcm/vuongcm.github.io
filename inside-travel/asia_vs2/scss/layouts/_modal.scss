@@ -999,6 +999,11 @@
 	.modal-include-2,.modal-cr-like{
 		top: 3%;
 	}
+	.form-field{
+		textarea{
+			height: 120px;
+		}
+	}
 }
 @media (max-width: 479px) {
 	.modal{
