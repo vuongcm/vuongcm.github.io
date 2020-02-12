@@ -531,11 +531,13 @@
 .panel{
 	width: 100%;
 	display: none;
+	padding-left: 5px;
 	&>div{
 		display: flex;
 		flex-wrap: wrap;
-		padding: 15px 0;
-		border-bottom: 1px dotted #dcdcdc;
+		//padding: 15px 0;
+		//border-bottom: 1px dotted #dcdcdc;
+		padding: 10px 0;
 		.paragraph{
 			margin-right: 0;
 			margin-left: 0;
