@@ -87,9 +87,10 @@
 	        background: $background-color url(../images/background/footer-bg.jpg) repeat;
 	        padding-right: 15px;
 			padding-left: 15px;
-			max-height: 85px;
+			max-height: 92px;
             overflow-y: hidden;
             @include smooth(1.5s);
+            cursor: pointer;
 			h3{
 				font-size: 14px;
 				font-weight: 600;

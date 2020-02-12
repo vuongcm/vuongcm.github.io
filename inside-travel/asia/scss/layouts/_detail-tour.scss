@@ -7,8 +7,11 @@
     overflow: hidden;
     position: absolute;
     bottom: 0;
+    //background-position-y: 90px!important;
+    @include dakkenImg(65%);
+    //background-size: contain;
     img{
-    	@include dakkenImg(65%);
+    	//@include dakkenImg(65%);
     	position: absolute;
     	bottom: 0;
     }
