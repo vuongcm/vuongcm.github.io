@@ -73,7 +73,7 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 	&>a{
 		display: inline-flex;
 		justify-content: center;
@@ -90,7 +90,7 @@
 		}
 	}
 	&>div{
-		font-size: 18px;
+		font-size: 20px;
 		color: $higlight-color;
 	}
 }
@@ -1372,6 +1372,7 @@
 	}
 	.location-list{
 		flex-wrap: wrap;
+		align-items: flex-start;
 		&>a{
 			margin-bottom: 10px;
 		}

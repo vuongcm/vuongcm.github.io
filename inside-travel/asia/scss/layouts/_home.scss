@@ -71,14 +71,14 @@
 			.value{
 				top: calc(100% + 15px);
 				.btn-value{
-					.map-marker{
+					.icon-destination{
 						margin-right: 8px;
 						font-size: 15px;
 						color: $higlight-color;
 						@include smooth(.25s);
 					}
 					&:hover{
-						.map-marker{
+						.icon-destination{
 							color: $main-color;
 						}
 					}
@@ -267,7 +267,7 @@
 	}
 	&>li{
 		.btn-value{
-			padding: 10px 20px 10px 30px;
+			padding: 10px 20px 10px 20px;
 			width: 100%;
 			display: flex;
 			align-items: center;

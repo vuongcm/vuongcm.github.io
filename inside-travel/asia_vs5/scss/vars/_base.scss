@@ -151,6 +151,9 @@ select:focus {
 	outline-style: dotted;
 	outline-width: 1px;
 }
+.icon-destination:before {
+  color: inherit;
+}
 .icon-font-cr{
     font-size: 22px;
 }
