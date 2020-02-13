@@ -97,6 +97,8 @@
 	background-size: 250px;
 	background-position: top;
 	.wrap-mini-intro{
+		position: relative;
+		z-index: 5;
 		.desti{
 			text-transform: uppercase;
 			font-size: 14px;
@@ -125,6 +127,20 @@
 				left: 17px;
 			}
 		}
+	}
+}
+.opacity-background{
+	position: relative;
+	&:after{
+		display: block;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(255,255,255,.5);
+		z-index: 1;
 	}
 }
 .wrap-media{
