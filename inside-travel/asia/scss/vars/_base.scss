@@ -1326,35 +1326,41 @@ select:focus {
     .content-trip{
         bottom: 160px;
     }
-    &>.tooltip{
-        display: inline-block;
+    .wrap-tooltip-itine{
+        display: block;
         position: absolute;
         bottom: 125px;
-        cursor: pointer;
-        .icon-itine{
-            font-size: 32px;
-            &:before{
-                color: $higlight-color;
+        width: 100%;
+        .tooltip{
+            display: inline-block;
+            position: static;
+            cursor: pointer;
+            .icon-itine{
+                font-size: 32px;
+                &:before{
+                    color: $higlight-color;
+                }
+                &:hover{
+                    opacity: .6;
+                }
             }
-            &:hover{
-                opacity: .6;
-            }
-        }
-        span{
-            left: 50%;
-            //box-shadow: none;
-            background-color: $higlight-color;
-            color: #fff;
-            width: 300px;
-            max-width: 90vw;
-
-             @include translateX(-50%);
-            &:after{
+            span{
+                left: 50%;
+                //box-shadow: none;
                 background-color: $higlight-color;
-                box-shadow: none;
+                color: #fff;
+                //width: 100%;
+                max-width: 310px;
+
+                 @include translateX(-50%);
+                &:after{
+                    background-color: $higlight-color;
+                    box-shadow: none;
+                }
             }
         }
     }
+
 }
 .wrap-trip-st2{
     width: 100%;
