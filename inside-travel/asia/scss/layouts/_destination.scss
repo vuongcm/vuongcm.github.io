@@ -74,6 +74,13 @@
 					text-transform: uppercase;
 					font-size: 14px;
 				}
+				.icon-font:first-child{
+					width: 30px;
+				    display: inline-block;
+				    margin-right: 10px;
+				    font-size: 30px;
+				    color: $higlight-color;
+				}
 			}
 			.panel{
 				.box-table{
@@ -168,6 +175,18 @@
 		justify-content: center;
 		margin-bottom: 15px;
 		margin-top: 15px;
+		.col-xlg-4{
+			position: relative;
+			cursor: pointer;
+			.count-img{
+				top: 20px;
+				right: 38px;
+			}
+			.enlarge{
+				top: 20px;
+				right: 20px;
+			}
+		}
 		&:last-child{
 			margin-bottom: 0;
 		}
@@ -177,6 +196,9 @@
 			font-weight: 500;
 			text-align: left;
 			margin-top: 0;
+		}
+		img{
+			margin-top: 12px;
 		}
 	}
 }
@@ -203,6 +225,9 @@
 		.row{
 			h4{
 				margin-top: 15px;
+			}
+			img{
+				margin-top: 0;
 			}
 		}
 	}
