@@ -48,7 +48,7 @@
 	.synch-carousels{
         box-shadow: none;
         .nav-arrows{
-            top: 40%;
+            top: 100px;
             z-index: inherit;
             .arrow-left{
                 margin-left: 20px;
@@ -70,7 +70,6 @@
     }
     .item{
     	position: relative;
-		padding-bottom: 95px;
 		padding-right: 15px;
 		padding-left: 15px;
 		&>img{
@@ -80,13 +79,7 @@
 			margin-right: auto;
 		}
 		article{
-			position: absolute;
-	        bottom: 10px;
-	        left: 0;
-	        z-index: 2;
 	        background-color: $background-color;
-	        padding-right: 15px;
-			padding-left: 15px;
 			max-height: 92px;
             overflow-y: hidden;
             @include smooth(1.5s);
