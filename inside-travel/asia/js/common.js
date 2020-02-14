@@ -257,10 +257,12 @@ $(document).ready(function() {
 			if(boxHide.css('max-height') == 'none'){
 				$(this).parent('.togg-wrap').children('.arrow-radius').addClass('rotage180');
 				$(this).parent('.togg-wrap').children('.link-st3').text('Less');
+				$(this).parent('.togg-wrap').css('z-index','0');
 			} else{
 				$(this).parent('.togg-wrap').children('.arrow-radius').removeClass('rotage180');
 				$(this).parent('.togg-wrap').children('.link-st3.btn-more-ex').text('Click to view more experiences');
 				$(this).parent('.togg-wrap').children('.link-st3.btn-more-food').text('Click to view more Vietnamese Foods');
+				$(this).parent('.togg-wrap').css('z-index','3');
 			}
 		});
 	}
