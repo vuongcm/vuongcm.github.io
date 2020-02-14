@@ -120,6 +120,7 @@
 			width: 100%;
 			padding: 0 1px;
 			overflow: hidden;
+			cursor: pointer;
 			img{
 				@include smooth(.5s);
 				-webkit-filter: grayscale(100%);
@@ -213,7 +214,7 @@
 }
 @media (max-width: 767px) {
 	.banner-small{
-		height: 265px;
+		height: 315px;
 	}
 	.wrap-slide-team{
 		.item{
