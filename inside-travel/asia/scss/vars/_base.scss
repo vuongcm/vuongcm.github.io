@@ -1352,8 +1352,8 @@ select:focus {
                 //box-shadow: none;
                 background-color: $higlight-color;
                 color: #fff;
-                //width: 100%;
-                max-width: 310px;
+                width: max-content;
+                max-width: 90%;
 
                  @include translateX(-50%);
                 &:after{
