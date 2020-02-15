@@ -291,12 +291,6 @@
     		}
 		}
 	}
-	.tooltip{
-		span{
-			@include translateX(-50%);
-			left: 20px;
-		}
-	}
 }
 .cruise-container-st3{
 	.trip{
@@ -380,12 +374,6 @@
 		padding-right: 0;
 		padding-left: 0;
 		justify-content: flex-start;
-		.tooltip{
-			span{
-				left: 16px;
-				@include translateX(-50%);
-			}
-		}
 	}
 }
 .price-box{

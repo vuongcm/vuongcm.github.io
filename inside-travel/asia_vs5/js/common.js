@@ -94,7 +94,7 @@ $(document).ready(function() {
 	});
 	if(bodyWidth < 1025){
     	$('.best-support article').hover(function(){
-	    	$(this).children('.paragraph').css('max-height','132px');
+	    	$(this).children('.paragraph').css('max-height','200px');
 	    },function(){
 	    	$(this).children('.paragraph').removeAttr('style');
 	    });

@@ -1,7 +1,7 @@
 .section-grid-dt3{
 	.container{
 		display: grid;
-		grid-template-columns: 72% 28%;
+		grid-template-columns: 70% 30%;
     	grid-auto-rows: auto max-content max-content auto auto 1fr;
     	align-content: start;
     	align-items: start;
@@ -23,20 +23,35 @@
 		&>div{
 			background-color: #fff;
 			margin-top: 30px;
+			padding-top: 15px;
+			padding-bottom: 15px;
 		}
 		.group-ct1-1{
 			.head-trip{
+				padding-left: 15px;
+				padding-right: 15px;
 				.title-info{
 					flex-grow: 1;
 					width: auto;
+					.title-h2{
+						margin: 0;
+					}
+					.wrap-tooltip{
+						padding-left: 0;
+						padding-right: 0;
+						margin: 0;
+						justify-content: flex-start;
+					}
 				}
 				.heart-tour{
-					padding-right: 10px;
     				.icon-font{
     					font-size: 36px;
     					color: #AEAEAE;
     				}
 				}
+			}
+			.body-trip{
+				margin-top: 15px;
 			}
 		}
 	}

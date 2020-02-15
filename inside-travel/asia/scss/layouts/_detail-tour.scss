@@ -106,10 +106,6 @@
 			&>.icon-font{
 				font-size: 40px;
 			}
-			&>span{
-				@include translateX(-50%);
-				left: 19px;
-			}
 		}
 	}
 	.paragraph{

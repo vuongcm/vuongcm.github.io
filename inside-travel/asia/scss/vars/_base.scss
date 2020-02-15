@@ -1128,6 +1128,8 @@ select:focus {
             //box-shadow: none;
             background-color: $higlight-color;
             color: #fff;
+            left: 50%;
+            @include translateX(-50%);
             font{
                 margin-bottom: 0;
             }
@@ -1298,12 +1300,6 @@ select:focus {
         flex-wrap: nowrap;
         position: absolute;
         bottom: 80px;
-        .tooltip{
-            &>span{
-                @include translateX(-50%);
-                left: 17px;
-            }
-        }
     }
     .btn-st2{
         color: $btn-text-color-st1;
@@ -1445,8 +1441,6 @@ select:focus {
                             font-size: 35px;
                         }
                         &>span{
-                            @include translateX(-50%);
-                            left: 20px;
                             bottom: calc(100% + 10px);
                         }
                     }
@@ -1617,12 +1611,6 @@ select:focus {
         padding-left: 0;
         margin-bottom: 0;
         margin-top: 0;
-        .tooltip{
-            &>span{
-                left: 15px;
-                @include translateX(-50%);
-            }
-        }
     }
     &>span{
         font-size: 12px;
