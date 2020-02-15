@@ -24,6 +24,21 @@
 			background-color: #fff;
 			margin-top: 30px;
 		}
+		.group-ct1-1{
+			.head-trip{
+				.title-info{
+					flex-grow: 1;
+					width: auto;
+				}
+				.heart-tour{
+					padding-right: 10px;
+    				.icon-font{
+    					font-size: 36px;
+    					color: #AEAEAE;
+    				}
+				}
+			}
+		}
 	}
 	.grid-ct2{
 		grid-column: 1 / 2;
