@@ -52,6 +52,140 @@
 			}
 			.body-trip{
 				margin-top: 15px;
+				padding-bottom: 15px;
+				border-bottom: 1px dotted #dcdcdc;
+			}
+			.foot-trip-st5{
+				padding-top: 15px;
+				.div-hidden{
+					padding-left: 15px;
+					padding-right: 15px;
+					p{
+					    line-height: 1.5;
+					    margin-bottom: 15px;
+					    display: flex;
+					    .checkmark{
+					    	color: $higlight-color;
+						    font-size: 14px;
+						    margin-right: 10px;
+					    }
+					    &:last-child{
+					    	margin-top: 20px;
+					    	margin-bottom: 20px;
+					    }
+					}
+				}
+			}
+		}
+		.address-box{
+			margin-top: 10px;
+			margin-bottom: 15px;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+		.wrap-slide-st4{
+			padding-right: 15px;
+			padding-left: 15px;
+			.synch-carousels{
+				.gallery{
+					width: 100%;
+					.item{
+						padding-left: 5px;
+						padding-right: 5px;
+					}
+				}
+				.nav-arrows{
+					position: static;
+					height: unset;
+					button{
+						width: 30px;
+						height: 100%;
+						top: 0;
+						z-index: 8;
+						i{
+							font-size: 9px;
+							color: #111;
+						}
+					}
+					.arrow-right{
+						background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), to(rgba(255,255,255,0.45)));
+						background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 60%);
+					    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 60%);
+					    background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 60%);
+					    background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 60%);
+					}
+					.arrow-left{
+						background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), to(rgba(255,255,255,0.45)));
+						background: -webkit-linear-gradient(right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 60%);
+					    background: -moz-linear-gradient(right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 60%);
+					    background: -ms-linear-gradient(right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 60%);
+					    background: -o-linear-gradient(right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 60%);
+					}
+				}
+			}
+		}
+		.map-box{
+			margin: 15px auto 10px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.group-ct1-2{
+			.box-ct1-itine{
+				padding-left: 15px;
+				padding-right: 15px;
+				.head-ct1-itine{
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					h2{
+						flex-grow: 1;
+					}
+					.toggle-day{
+						width: max-content;
+						margin-bottom: 20px;
+						margin-top: 15px;
+					}
+				}
+			}
+		}
+		.group-ct1-3{
+			.box-inc-exc{
+				padding-left: 15px;
+				padding-right: 15px;
+				.include-box{
+					padding-left: 0;
+					padding-right: 0;
+					margin-left: -10px;
+					margin-right: -10px;
+					.group-head{
+						padding-left: 10px;
+						padding-right: 10px;
+					}
+				}
+				.exclude-box{
+					p{
+						line-height: 1.5;
+					}
+					article{
+						h4{
+							margin-top: 20px;
+						    margin-bottom: 10px;
+						    color: $higlight-color;
+						    .icon-font{
+						    	font-size: 14px;
+    							margin-right: 5px;
+						    }
+						}
+						p{
+							margin-bottom: 10px;
+							.icon-font{
+						    	//font-size: 14px;
+    							margin-right: 5px;
+    							color: $higlight-color;
+						    }
+						}
+					}
+				}
 			}
 		}
 	}
@@ -61,6 +195,38 @@
 		background-color: green;
 		padding-left: 15px;
 		padding-right: 10px;
+		&>div{
+			background-color: #fff;
+		    margin-top: 30px;
+		    padding-top: 15px;
+		    padding-bottom: 15px;
+		    &>div{
+		    	padding-left: 15px;
+		    	padding-right: 15px;
+		    }
+		}
+		.group-ct2-1{
+			.box-experiences{
+				.hide-exp-wrap{
+					margin-left: -15px;
+					margin-right: -15px;
+				}
+				.view-more-wrap{
+					margin-top: 30px;
+					margin-bottom: 0;
+				    box-shadow: 0px -150px 145px #fff;
+				    position: relative;
+				    z-index: 3;
+				}
+			}
+		}
+		.group-ct2-2{
+			.faq-box{
+				.wrap-faq{
+					width: 100%;
+				}
+			}
+		}
 	}
 	.grid-ct3{
 		grid-column: 2 / 3;
@@ -136,6 +302,100 @@
 						@include translateX(-50%);
 						left: 15px;
 					}
+				}
+			}
+		}
+	}
+	h2{
+		font-size: 18px;
+		text-transform: uppercase;
+		font-weight: 500;
+		margin-bottom: 20px;
+	}
+	.group-head{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		color: $main-color;
+		opacity: 1;
+		cursor: auto;
+		h2{
+			flex-grow: 1;
+		}
+		button{
+			font-size: 10px;
+			//display: none;
+		}
+	}
+}
+.address-box{
+	display: flex;
+	.address-avt{
+		width: 50px;
+	}
+	.address{
+		font-size: 14px;
+		line-height: 1.5;
+		flex-grow: 1;
+		padding-left: 10px;
+	}
+}
+.list-tour-day{
+	&>li{
+		width: 100%;
+		padding-left: 40px;
+		position: relative;
+		&:before{
+			position: absolute;
+		    content: "";
+		    display: block;
+		    border-left: 1px dashed #c7d0d9;
+		    width: 0;
+		    height: 100%;
+		    z-index: 3;
+		    left: 19px;
+		    top: 41px;
+		}
+		.wrap-icon-des{
+			position: absolute;
+			left: -20px;
+			background-color: #fff;
+			@include translateX(-50%);
+			.icon-font{
+				//font-size: 20px;
+				color: $higlight-color;
+			}
+			.icon-destination{
+				font-size: 24px;
+			}
+		}
+		.order-day{
+			&>a:first-child{
+				position: relative;
+				z-index: 6;
+				background-color: transparent;
+				margin-top: 0;
+				border-bottom: 1px solid #dcdcdc;
+				padding-left: 0;
+				padding-right: 0;
+				opacity: 1;
+				&>button{
+					.select-arrow-thin{
+						font-size: 8px;
+					}
+				}
+			}
+			.panel{
+				padding-left: 0;
+			}
+		}
+		&:last-child{
+			&:before{
+				display: none;
+			}
+			.order-day{
+				&>a:first-child{
+					border-bottom: none;
 				}
 			}
 		}
