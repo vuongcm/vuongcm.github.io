@@ -1003,13 +1003,9 @@
 	}
 	.synch-carousels{
 		box-shadow: none;
-		z-index: -5;
-		visibility: hidden;
-		position: absolute;
-		top: 0;
-		left: 0;
 		width: 100%;
 		height: 100%;
+		display: none;
 		.nav-arrows{
 			top: 50%;
 			@include translateY(-50%);

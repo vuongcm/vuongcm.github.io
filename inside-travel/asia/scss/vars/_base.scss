@@ -1220,8 +1220,8 @@ select:focus {
     }
 }
 .map-coo{
-    width: 25px;
-    height: 30px;
+    width: 30px;
+    height: 35px;
     position: absolute;
     background-repeat-x: no-repeat;
     background-repeat-y: no-repeat;
@@ -1229,8 +1229,8 @@ select:focus {
     cursor: pointer;
 }
 .map-coo:hover{
-    width: 27px;
-    height: 33px;
+    width: 32px;
+    height: 38px;
     opacity: 1;
 }
 .trip{
@@ -1750,6 +1750,9 @@ select:focus {
 }
 .mg-top-30{
     margin-top: 30px;
+}
+.border-bot-0{
+    border-bottom: none!important;
 }
 /*.a-hover{
     position: absolute;
