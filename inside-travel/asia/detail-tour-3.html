@@ -624,7 +624,7 @@
 		</div>
 	</nav>
 </header>
-<section class="section-grid-dt3 background-st1 mg-bot-0">
+<section class="section-grid-dt3 background-st1 mg-bot-0 mg-top-0">
 	<div class="container">
 		<div class="grid-ct0">
 			<nav aria-label="breadcrumb">
@@ -844,7 +844,13 @@
 						</div>
 					</div>
 					<div class="map-box">
-						<div style="width: 100%;height: 250px;background-color: #dcdcdc"></div>
+						<div class="map-box-img">
+							<img src="images/map-1.jpg" alt="">
+						</div>
+						<button type="button">
+							<i class="icon-font icon-itine"></i>
+							<font>View map</font>
+						</button>
 					</div>
 				</div>
 				<div class="foot-trip-st5">
@@ -1631,80 +1637,85 @@
 								<i class="icon-font select-arrow-thin"></i>
 							</button>
 						</a>
-						<div class="col-xlg-6 col-sm-12">
-							<div id="btn-accommodation" class="btn-include-1">
-								<div>
-									<i class="icon-font bed"></i><br>
-									<h3>Accommodation</h3>
+						<div class="hidden-tablet">
+							<div>
+								<div class="col-xlg-6 col-sm-12">
+									<div id="btn-accommodation" class="btn-include-1">
+										<div>
+											<i class="icon-font bed"></i><br>
+											<h3>Accommodation</h3>
+										</div>
+										<div>
+											<p>Hotel (13 night), Cruise (1 night)</p>
+											<div class="read-more-st1"><a href="javascript:" class="link-st3">Read More</a></div>
+										</div>
+									</div>
 								</div>
-								<div>
-									<p>Hotel (13 night), Cruise (1 night)</p>
-									<div class="read-more-st1"><a href="javascript:" class="link-st3">Read More</a></div>
+								<div class="col-xlg-6 col-sm-12">
+									<div id="btn-transport" class="btn-include-2">
+										<div>
+											<i class="icon-font exchange"></i>
+											<i class="icon-font icon-plane"></i><br>
+											<h3>Transport</h3>
+										</div>
+										<div>
+											<p>Private car, Walking, Cruise,<br>4 FLIGHTS ...</p>
+											<div class="read-more-st1"><a href="javascript:" class="link-st3">Read More</a></div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="col-xlg-6 col-sm-12">
+									<div id="btn-team" class="btn-include-2">
+										<div>
+											<i class="icon-font icon-users"></i><br>
+											<h3>Team</h3>
+										</div>
+										<div>
+											<p>Private Guide, Driver, Trip Manager Managing Experts</p>
+											<div class="read-more-st1"><a href="javascript:" id="btn-team" class="link-st3">Read More</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xlg-6 col-sm-12">
+									<div id="btn-meal" class="btn-include-2">
+										<div>
+											<i class="icon-font spoon-knife"></i><br>
+											<h3>Meals</h3>
+										</div>
+										<div>
+											<p>4 Dinner, 12 Breakfast</p>
+											<div class="read-more-st1"><a href="javascript:" class="link-st3">Read More</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xlg-6 col-sm-12">
+									<div id="btn-experience" class="btn-include-1">
+										<div>
+											<i class="icon-font image"></i><br>
+											<h3>Experiences</h3>
+										</div>
+										<div>
+											<p>12 Unique experiences...</p>
+											<div class="read-more-st1"><a href="javascript:" class="link-st3">Read More</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xlg-6 col-sm-12">
+									<div id="btn-service" class="btn-include-2">
+										<div>
+											<i class="icon-font checkmark"></i><br>
+											<h3>Services</h3>
+										</div>
+										<div>
+											<p>Entrance fees, excursions, visa...</p>
+											<div class="read-more-st1"><a href="javascript:" class="link-st3">Read More</a></div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-xlg-6 col-sm-12">
-							<div id="btn-transport" class="btn-include-2">
-								<div>
-									<i class="icon-font exchange"></i>
-									<i class="icon-font icon-plane"></i><br>
-									<h3>Transport</h3>
-								</div>
-								<div>
-									<p>Private car, Walking, Cruise,<br>4 FLIGHTS ...</p>
-									<div class="read-more-st1"><a href="javascript:" class="link-st3">Read More</a></div>
-								</div>
-							</div>
-							
-						</div>
-						<div class="col-xlg-6 col-sm-12">
-							<div id="btn-team" class="btn-include-2">
-								<div>
-									<i class="icon-font icon-users"></i><br>
-									<h3>Team</h3>
-								</div>
-								<div>
-									<p>Private Guide, Driver, Trip Manager Managing Experts</p>
-									<div class="read-more-st1"><a href="javascript:" id="btn-team" class="link-st3">Read More</a></div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xlg-6 col-sm-12">
-							<div id="btn-meal" class="btn-include-2">
-								<div>
-									<i class="icon-font spoon-knife"></i><br>
-									<h3>Meals</h3>
-								</div>
-								<div>
-									<p>4 Dinner, 12 Breakfast</p>
-									<div class="read-more-st1"><a href="javascript:" class="link-st3">Read More</a></div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xlg-6 col-sm-12">
-							<div id="btn-experience" class="btn-include-1">
-								<div>
-									<i class="icon-font image"></i><br>
-									<h3>Experiences</h3>
-								</div>
-								<div>
-									<p>12 Unique experiences...</p>
-									<div class="read-more-st1"><a href="javascript:" class="link-st3">Read More</a></div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xlg-6 col-sm-12">
-							<div id="btn-service" class="btn-include-2">
-								<div>
-									<i class="icon-font checkmark"></i><br>
-									<h3>Services</h3>
-								</div>
-								<div>
-									<p>Entrance fees, excursions, visa...</p>
-									<div class="read-more-st1"><a href="javascript:" class="link-st3">Read More</a></div>
-								</div>
-							</div>
-						</div>
+
 					</div>
 					<div class="exclude-box">
 						<div class="group-head">
@@ -1713,38 +1724,40 @@
 								<i class="icon-font select-arrow-thin"></i>
 							</button>
 						</div>
-						<p>*Note: This program combines the hidden charm of North Vietnam and the mystical experience the natural beauty and traditional lifestyle throughout your journey.</p>
-                        <article>
-                           <h4><i class="icon-font spoon-knife"></i>Meals</h4>
-                           <p>14 Breakfasts 7 Lunchs 3 Dinner</p>
-                        </article>
-                        <article>
-                           <h4><i class="icon-font bed"></i>Accommodation</h4>
-                           <p>Hotel (13 night), Cruise (1 night)</p>
-                        </article>
-                        <article>
-                           <h4><i class="icon-font exchange"></i>Transport</h4>
-                           <p>Car, Walking, Cruise</p>
-                        </article>
-                        <article>
-                           <h4><i class="icon-font icon-plane"></i>Flight</h4>
-                           <p>1. Fly from Hanoi to Danang (1 hour 20 minutes)</p>
-                           <p>2. Fly from Danang to Ho Chi Minh City (01 hour 20 minutes)</p>
-                           <p>3. Fly from Ho Chi Minh City to Siem Reap (01 hour)</p>
-                           <p>4. Fly from Siem Reap to Sihanoukville (1 hour 5 minutes)</p>
-                        </article>
-                        <article>
-                           <h4><i class="icon-font university"></i>Included Services</h4>
-                           <p><i class="icon-font checkmark"></i>Vietnam visa approval letter (Not applied for nationalities in the special nations list of Vietnam Immigration Department. Check on request for details)</p>
-                           <p><i class="icon-font checkmark"></i>Accommodations with daily breakfast as mentioned</p>
-                           <p><i class="icon-font checkmark"></i>Transfer in air-conditioned vehicles</p>
-                           <p><i class="icon-font checkmark"></i>Local English-speaking guides</p>
-                           <p><i class="icon-font checkmark"></i>Meals as mentioned in the itinerary</p>
-                           <p><i class="icon-font checkmark"></i>Mineral water/ tour days</p>
-                           <p><i class="icon-font checkmark"></i>Kayaking in Halong Bay</p>
-                           <p><i class="icon-font checkmark"></i>Entrance fees, performances, boat trips &amp; excursions</p>
-                           <p><i class="icon-font checkmark"></i>Internal flights</p>
-                        </article>
+						<div class="hidden-tablet">
+							<p>*Note: This program combines the hidden charm of North Vietnam and the mystical experience the natural beauty and traditional lifestyle throughout your journey.</p>
+	                        <article>
+	                           <h4><i class="icon-font spoon-knife"></i>Meals</h4>
+	                           <p>14 Breakfasts 7 Lunchs 3 Dinner</p>
+	                        </article>
+	                        <article>
+	                           <h4><i class="icon-font bed"></i>Accommodation</h4>
+	                           <p>Hotel (13 night), Cruise (1 night)</p>
+	                        </article>
+	                        <article>
+	                           <h4><i class="icon-font exchange"></i>Transport</h4>
+	                           <p>Car, Walking, Cruise</p>
+	                        </article>
+	                        <article>
+	                           <h4><i class="icon-font icon-plane"></i>Flight</h4>
+	                           <p>1. Fly from Hanoi to Danang (1 hour 20 minutes)</p>
+	                           <p>2. Fly from Danang to Ho Chi Minh City (01 hour 20 minutes)</p>
+	                           <p>3. Fly from Ho Chi Minh City to Siem Reap (01 hour)</p>
+	                           <p>4. Fly from Siem Reap to Sihanoukville (1 hour 5 minutes)</p>
+	                        </article>
+	                        <article>
+	                           <h4><i class="icon-font university"></i>Included Services</h4>
+	                           <p><i class="icon-font checkmark"></i>Vietnam visa approval letter (Not applied for nationalities in the special nations list of Vietnam Immigration Department. Check on request for details)</p>
+	                           <p><i class="icon-font checkmark"></i>Accommodations with daily breakfast as mentioned</p>
+	                           <p><i class="icon-font checkmark"></i>Transfer in air-conditioned vehicles</p>
+	                           <p><i class="icon-font checkmark"></i>Local English-speaking guides</p>
+	                           <p><i class="icon-font checkmark"></i>Meals as mentioned in the itinerary</p>
+	                           <p><i class="icon-font checkmark"></i>Mineral water/ tour days</p>
+	                           <p><i class="icon-font checkmark"></i>Kayaking in Halong Bay</p>
+	                           <p><i class="icon-font checkmark"></i>Entrance fees, performances, boat trips &amp; excursions</p>
+	                           <p><i class="icon-font checkmark"></i>Internal flights</p>
+	                        </article>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -1758,230 +1771,232 @@
 							<i class="icon-font select-arrow-thin"></i>
 						</button>
 					</div>
-					<div class="hide-exp-wrap">
-						<div class="col-xlg-6 col-md-12">
-							<a href="#">
-								<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/destinations/ho-chi-minh/namcattien (6)650-388.jpg" alt="">
-								<div class="wrap-text-abso">
-									<div class="desti">Nam Cat Tien National Park</div>
-								</div>
-							</a>
-							<article>
-								<h3><a href="#">Trek and explore Wildlife at Cat Tien National Park</a></h3>
-								<div class="wrap-tooltip">
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-kayaking"></i>
-										<span><font>Kayaking</font></span>
-									</a>
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-cuisine"></i>
-										<span><font>Cuisine</font></span>
-									</a>
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-nature"></i>
-										<span><font>Nature</font></span>
-									</a>
-								</div>
-								<p class="paragraph">Located approximately 150 km north of Ho Chi Minh City, Cat Tien National Park is a perfect choice for nature lovers with an intrepid excursion or camping trip. This treasure trove of biodiversity protect a large area...</p>
-								<a class="btn-st2" href="#">view more</a>
-							</article>
-						</div>
-						<div class="col-xlg-6 col-md-12">
-							<a href="#">
-								<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/experience/Southern-Chef/1_2650-388.jpg" alt="">
-								<div class="wrap-text-abso">
-									<div class="desti">Ho Chi Minh</div>
-								</div>
-							</a>
-							<article>
-								<h3><a href="#">Cooking class in Southern Vietnam with a great chef</a></h3>
-								<div class="wrap-tooltip">
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-kayaking"></i>
-										<span><font>Kayaking</font></span>
-									</a>
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-cuisine"></i>
-										<span><font>Cuisine</font></span>
-									</a>
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-nature"></i>
-										<span><font>Nature</font></span>
-									</a>
-								</div>
-								<p class="paragraph">Our Chef with 15-year experience in cooking field. He would like to share his knowledge to anyone who wish to get Vietnamese traditional cooking way. Coming to our cooking class, you will be learned from him...</p>
-								<a class="btn-st2" href="#">view more</a>
-							</article>
-						</div>
-						<div class="col-xlg-6 col-md-12">
-							<a href="#">
-								<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/experience/hanoi-cooking-class/Hanoi-Cooking-Class-with-Local650-388.jpg" alt="">
-								<div class="wrap-text-abso">
-									<div class="desti">Hanoi</div>
-								</div>
-							</a>
-							<article>
-								<h3><a href="#">A great insight into the foods of Hanoi through a private cooking class</a></h3>
-								<div class="wrap-tooltip">
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-kayaking"></i>
-										<span><font>Kayaking</font></span>
-									</a>
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-cuisine"></i>
-										<span><font>Cuisine</font></span>
-									</a>
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-nature"></i>
-										<span><font>Nature</font></span>
-									</a>
-								</div>
-								<p class="paragraph">One of the best things to do in Hanoi is to participate in a cooking class where you will learn about valuable ingredients and techniques involved in Vietnamese cuisine. After the pickup from your hotel,...</p>
-								<a class="btn-st2" href="#">view more</a>
-							</article>
-						</div>
-						<div class="col-xlg-6 col-md-12">
-							<a href="#">
-								<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/experience/Teh-Dar-Show/Edit-3650-388.jpg" alt="">
-								<div class="wrap-text-abso">
-									<div class="desti">Hoi An</div>
-								</div>
-							</a>
-							<article>
-								<h3><a href="#">Get a great Vietnamese cultural experience enjoying the unique and amazing Teh Dar show</a></h3>
-								<div class="wrap-tooltip">
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-kayaking"></i>
-										<span><font>Kayaking</font></span>
-									</a>
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-cuisine"></i>
-										<span><font>Cuisine</font></span>
-									</a>
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-nature"></i>
-										<span><font>Nature</font></span>
-									</a>
-								</div>
-								<p class="paragraph">Directed by the same group making the famous A O Show and My Village Show, Teh Dar is a theatrical performance version of the Central Highlands featuring Vietnamese bamboo circus,...</p>
-								<a class="btn-st2" href="#">view more</a>
-							</article>
-						</div>
-						<div class="col-xlg-6 col-md-12">
-							<a href="#">
-								<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/destinations/phu-quoc/phuquoc2 (4)650-388.jpg" alt="">
-								<div class="wrap-text-abso">
-									<div class="desti">Phu Quoc</div>
-								</div>
-							</a>
-							<article>
-								<h3><a href="#">Enjoy diversity activities at Phu Quoc Island</a></h3>
-								<div class="wrap-tooltip">
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-kayaking"></i>
-										<span><font>Kayaking</font></span>
-									</a>
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-cuisine"></i>
-										<span><font>Cuisine</font></span>
-									</a>
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-nature"></i>
-										<span><font>Nature</font></span>
-									</a>
-								</div>
-								<p class="paragraph">This section of Phu Quoc Island tours and activities is ideal if you’re looking to explore this tropical destination and its surrounding islets. There are plenty of things to do on Phu Quoc Island besides lounging...</p>
-								<a class="btn-st2" href="#">view more</a>
-							</article>
-						</div>
-						<div class="col-xlg-6 col-md-12">
-							<a href="#">
-								<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/destinations/sapa/topas-ecolodge (5)650-388.jpg" alt="">
-								<div class="wrap-text-abso">
-									<div class="desti">Sapa</div>
-								</div>
-							</a>
-							<article>
-								<h3><a href="#">One night relaxation at Topas Ecolodge</a></h3>
-								<div class="wrap-tooltip">
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-kayaking"></i>
-										<span><font>Kayaking</font></span>
-									</a>
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-cuisine"></i>
-										<span><font>Cuisine</font></span>
-									</a>
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-nature"></i>
-										<span><font>Nature</font></span>
-									</a>
-								</div>
-								<p class="paragraph">Topas Ecolodge is located within Ban Lech Village overlooking Hoang Lien Mountain Range. It is 18km from Sa Pa Town and 53km from Lao Cai Train Station. Topas Ecolodge is a quaint and charming...</p>
-								<a class="btn-st2" href="#">view more</a>
-							</article>
-						</div>
+					<div class="hidden-tablet">
+						<div class="hide-exp-wrap">
+							<div class="col-xlg-6 col-md-12">
+								<a href="#">
+									<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/destinations/ho-chi-minh/namcattien (6)650-388.jpg" alt="">
+									<div class="wrap-text-abso">
+										<div class="desti">Nam Cat Tien National Park</div>
+									</div>
+								</a>
+								<article>
+									<h3><a href="#">Trek and explore Wildlife at Cat Tien National Park</a></h3>
+									<div class="wrap-tooltip">
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-kayaking"></i>
+											<span><font>Kayaking</font></span>
+										</a>
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-cuisine"></i>
+											<span><font>Cuisine</font></span>
+										</a>
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-nature"></i>
+											<span><font>Nature</font></span>
+										</a>
+									</div>
+									<p class="paragraph">Located approximately 150 km north of Ho Chi Minh City, Cat Tien National Park is a perfect choice for nature lovers with an intrepid excursion or camping trip. This treasure trove of biodiversity protect a large area...</p>
+									<a class="btn-st2" href="#">view more</a>
+								</article>
+							</div>
+							<div class="col-xlg-6 col-md-12">
+								<a href="#">
+									<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/experience/Southern-Chef/1_2650-388.jpg" alt="">
+									<div class="wrap-text-abso">
+										<div class="desti">Ho Chi Minh</div>
+									</div>
+								</a>
+								<article>
+									<h3><a href="#">Cooking class in Southern Vietnam with a great chef</a></h3>
+									<div class="wrap-tooltip">
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-kayaking"></i>
+											<span><font>Kayaking</font></span>
+										</a>
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-cuisine"></i>
+											<span><font>Cuisine</font></span>
+										</a>
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-nature"></i>
+											<span><font>Nature</font></span>
+										</a>
+									</div>
+									<p class="paragraph">Our Chef with 15-year experience in cooking field. He would like to share his knowledge to anyone who wish to get Vietnamese traditional cooking way. Coming to our cooking class, you will be learned from him...</p>
+									<a class="btn-st2" href="#">view more</a>
+								</article>
+							</div>
+							<div class="col-xlg-6 col-md-12">
+								<a href="#">
+									<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/experience/hanoi-cooking-class/Hanoi-Cooking-Class-with-Local650-388.jpg" alt="">
+									<div class="wrap-text-abso">
+										<div class="desti">Hanoi</div>
+									</div>
+								</a>
+								<article>
+									<h3><a href="#">A great insight into the foods of Hanoi through a private cooking class</a></h3>
+									<div class="wrap-tooltip">
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-kayaking"></i>
+											<span><font>Kayaking</font></span>
+										</a>
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-cuisine"></i>
+											<span><font>Cuisine</font></span>
+										</a>
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-nature"></i>
+											<span><font>Nature</font></span>
+										</a>
+									</div>
+									<p class="paragraph">One of the best things to do in Hanoi is to participate in a cooking class where you will learn about valuable ingredients and techniques involved in Vietnamese cuisine. After the pickup from your hotel,...</p>
+									<a class="btn-st2" href="#">view more</a>
+								</article>
+							</div>
+							<div class="col-xlg-6 col-md-12">
+								<a href="#">
+									<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/experience/Teh-Dar-Show/Edit-3650-388.jpg" alt="">
+									<div class="wrap-text-abso">
+										<div class="desti">Hoi An</div>
+									</div>
+								</a>
+								<article>
+									<h3><a href="#">Get a great Vietnamese cultural experience enjoying the unique and amazing Teh Dar show</a></h3>
+									<div class="wrap-tooltip">
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-kayaking"></i>
+											<span><font>Kayaking</font></span>
+										</a>
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-cuisine"></i>
+											<span><font>Cuisine</font></span>
+										</a>
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-nature"></i>
+											<span><font>Nature</font></span>
+										</a>
+									</div>
+									<p class="paragraph">Directed by the same group making the famous A O Show and My Village Show, Teh Dar is a theatrical performance version of the Central Highlands featuring Vietnamese bamboo circus,...</p>
+									<a class="btn-st2" href="#">view more</a>
+								</article>
+							</div>
+							<div class="col-xlg-6 col-md-12">
+								<a href="#">
+									<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/destinations/phu-quoc/phuquoc2 (4)650-388.jpg" alt="">
+									<div class="wrap-text-abso">
+										<div class="desti">Phu Quoc</div>
+									</div>
+								</a>
+								<article>
+									<h3><a href="#">Enjoy diversity activities at Phu Quoc Island</a></h3>
+									<div class="wrap-tooltip">
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-kayaking"></i>
+											<span><font>Kayaking</font></span>
+										</a>
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-cuisine"></i>
+											<span><font>Cuisine</font></span>
+										</a>
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-nature"></i>
+											<span><font>Nature</font></span>
+										</a>
+									</div>
+									<p class="paragraph">This section of Phu Quoc Island tours and activities is ideal if you’re looking to explore this tropical destination and its surrounding islets. There are plenty of things to do on Phu Quoc Island besides lounging...</p>
+									<a class="btn-st2" href="#">view more</a>
+								</article>
+							</div>
+							<div class="col-xlg-6 col-md-12">
+								<a href="#">
+									<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/destinations/sapa/topas-ecolodge (5)650-388.jpg" alt="">
+									<div class="wrap-text-abso">
+										<div class="desti">Sapa</div>
+									</div>
+								</a>
+								<article>
+									<h3><a href="#">One night relaxation at Topas Ecolodge</a></h3>
+									<div class="wrap-tooltip">
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-kayaking"></i>
+											<span><font>Kayaking</font></span>
+										</a>
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-cuisine"></i>
+											<span><font>Cuisine</font></span>
+										</a>
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-nature"></i>
+											<span><font>Nature</font></span>
+										</a>
+									</div>
+									<p class="paragraph">Topas Ecolodge is located within Ban Lech Village overlooking Hoang Lien Mountain Range. It is 18km from Sa Pa Town and 53km from Lao Cai Train Station. Topas Ecolodge is a quaint and charming...</p>
+									<a class="btn-st2" href="#">view more</a>
+								</article>
+							</div>
 
-						<div class="col-xlg-6 col-md-12">
-							<a href="#">
-								<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/destinations/ho-chi-minh/namcattien (6)650-388.jpg" alt="">
-								<div class="wrap-text-abso">
-									<div class="desti">Nam Cat Tien National Park</div>
-								</div>
-							</a>
-							<article>
-								<h3><a href="#">Trek and explore Wildlife at Cat Tien National Park</a></h3>
-								<div class="wrap-tooltip">
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-kayaking"></i>
-										<span><font>Kayaking</font></span>
-									</a>
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-cuisine"></i>
-										<span><font>Cuisine</font></span>
-									</a>
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-nature"></i>
-										<span><font>Nature</font></span>
-									</a>
-								</div>
-								<p class="paragraph">Located approximately 150 km north of Ho Chi Minh City, Cat Tien National Park is a perfect choice for nature lovers with an intrepid excursion or camping trip. This treasure trove of biodiversity protect a large area...</p>
-								<a class="btn-st2" href="#">view more</a>
-							</article>
+							<div class="col-xlg-6 col-md-12">
+								<a href="#">
+									<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/destinations/ho-chi-minh/namcattien (6)650-388.jpg" alt="">
+									<div class="wrap-text-abso">
+										<div class="desti">Nam Cat Tien National Park</div>
+									</div>
+								</a>
+								<article>
+									<h3><a href="#">Trek and explore Wildlife at Cat Tien National Park</a></h3>
+									<div class="wrap-tooltip">
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-kayaking"></i>
+											<span><font>Kayaking</font></span>
+										</a>
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-cuisine"></i>
+											<span><font>Cuisine</font></span>
+										</a>
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-nature"></i>
+											<span><font>Nature</font></span>
+										</a>
+									</div>
+									<p class="paragraph">Located approximately 150 km north of Ho Chi Minh City, Cat Tien National Park is a perfect choice for nature lovers with an intrepid excursion or camping trip. This treasure trove of biodiversity protect a large area...</p>
+									<a class="btn-st2" href="#">view more</a>
+								</article>
+							</div>
+							<div class="col-xlg-6 col-md-12">
+								<a href="#">
+									<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/experience/Southern-Chef/1_2650-388.jpg" alt="">
+									<div class="wrap-text-abso">
+										<div class="desti">Ho Chi Minh</div>
+									</div>
+								</a>
+								<article>
+									<h3><a href="#">Cooking class in Southern Vietnam with a great chef</a></h3>
+									<div class="wrap-tooltip">
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-kayaking"></i>
+											<span><font>Kayaking</font></span>
+										</a>
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-cuisine"></i>
+											<span><font>Cuisine</font></span>
+										</a>
+										<a href="javascript:" class="tooltip">
+											<i class="icon-font icon-nature"></i>
+											<span><font>Nature</font></span>
+										</a>
+									</div>
+									<p class="paragraph">Our Chef with 15-year experience in cooking field. He would like to share his knowledge to anyone who wish to get Vietnamese traditional cooking way. Coming to our cooking class, you will be learned from him...</p>
+									<a class="btn-st2" href="#">view more</a>
+								</article>
+							</div>
 						</div>
-						<div class="col-xlg-6 col-md-12">
-							<a href="#">
-								<img src="https://d1k2oi80tv211b.cloudfront.net/uploads/photo-e/experience/Southern-Chef/1_2650-388.jpg" alt="">
-								<div class="wrap-text-abso">
-									<div class="desti">Ho Chi Minh</div>
-								</div>
+						<div class="view-more-wrap togg-wrap">
+							<a href="javascript:;" class="arrow-radius">
+								<i class="icon-font select-arrow-thin"></i>
 							</a>
-							<article>
-								<h3><a href="#">Cooking class in Southern Vietnam with a great chef</a></h3>
-								<div class="wrap-tooltip">
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-kayaking"></i>
-										<span><font>Kayaking</font></span>
-									</a>
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-cuisine"></i>
-										<span><font>Cuisine</font></span>
-									</a>
-									<a href="javascript:" class="tooltip">
-										<i class="icon-font icon-nature"></i>
-										<span><font>Nature</font></span>
-									</a>
-								</div>
-								<p class="paragraph">Our Chef with 15-year experience in cooking field. He would like to share his knowledge to anyone who wish to get Vietnamese traditional cooking way. Coming to our cooking class, you will be learned from him...</p>
-								<a class="btn-st2" href="#">view more</a>
-							</article>
+							<a href="javascript:;" class="link-st3 btn-more-ex">Click to view more experiences</a>
 						</div>
-					</div>
-					<div class="view-more-wrap togg-wrap">
-						<a href="javascript:;" class="arrow-radius">
-							<i class="icon-font select-arrow-thin"></i>
-						</a>
-						<a href="javascript:;" class="link-st3 btn-more-ex">Click to view more experiences</a>
 					</div>
 				</div>
 			</div>
@@ -1993,7 +2008,7 @@
 							<i class="icon-font select-arrow-thin"></i>
 						</button>
 					</div>
-					<div class="wrap-faq">
+					<div class="wrap-faq hidden-tablet">
 						<div class="order-day">
 							<a href="javascript:;">
 								<i class="icon-font icon-faq"></i>
@@ -2137,7 +2152,7 @@
 							<i class="icon-font select-arrow-thin"></i>
 						</button>
 					</div>
-					<div class="group-body">
+					<div class="group-body hidden-tablet">
 						<div class="hide-exp-wrap">
 							<div class="evaluate-rank">
 								<div class="star-box">

@@ -109,6 +109,12 @@ $(document).ready(function() {
 		}
 	});
 	if (bodyWidth <= 991) {
+		if($('.section-grid-dt3').length){
+			$('.group-head').click(function(){
+				$(this).next('.hidden-tablet').slideToggle(300);
+				$(this).toggleClass('active');
+			});
+		}
 		$('.search-nav .btn-collep-mobi').click(function(){
 			$('.main-menu').toggleClass('open-flex');
 		});

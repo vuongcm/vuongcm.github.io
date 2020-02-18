@@ -2038,6 +2038,9 @@ select:focus {
             }
         }
     }
+    .hidden-tablet{
+        display: none;
+    }
 }
 @media (max-width: 767px) {
     .title-h1{

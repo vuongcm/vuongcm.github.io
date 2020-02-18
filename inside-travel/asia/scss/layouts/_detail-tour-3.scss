@@ -15,6 +15,7 @@
 		padding-right: 15px;
 		.breadcrumb{
 			padding-bottom: 0;
+			margin-top: 15px;
 		}
 	}
 	.grid-ct1{
@@ -131,6 +132,34 @@
 			margin: 15px auto 10px;
 			padding-left: 15px;
 			padding-right: 15px;
+			position: relative;
+			.map-box-img{
+				width: 100%;
+			}
+			button{
+				position: absolute;
+				top: 20px;
+				right: 40px;
+				padding: 10px 20px;
+				border-radius: 999px;
+				background-color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				
+				font{
+					text-transform: uppercase;
+				}
+				.icon-font{
+					font-size: 22px;
+					margin-right: 5px;
+					color: $higlight-color;
+				}
+				&:hover{
+					box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+					opacity: 1;
+				}
+			}
 		}
 		.group-ct1-2{
 			.box-ct1-itine{
@@ -158,11 +187,16 @@
 				.include-box{
 					padding-left: 0;
 					padding-right: 0;
-					margin-left: -10px;
-					margin-right: -10px;
-					.group-head{
-						padding-left: 10px;
-						padding-right: 10px;
+					
+					.hidden-tablet{
+						&>div{
+							margin-left: -10px;
+							margin-right: -10px;
+							display: flex;
+	    					flex-wrap: wrap;
+						}
+						//width: 100%;
+						
 					}
 				}
 				.exclude-box{
@@ -311,6 +345,11 @@
 						margin-top: 0;
 					}
 				}
+				.form-field{
+					textarea{
+						height: 120px;
+					}
+				} 
 				.btn-st3{
 					width: 100%;
 					height: 40px;
@@ -807,6 +846,18 @@
 		}
 	}
 }
+@media (min-width: 1350px) {
+	.grid-ct4{
+		position: sticky;
+		top: 475px;
+		z-index: 99;
+	}
+	.grid-ct3{
+		position: sticky;
+		top: 30px;
+		z-index: 99;
+	}
+}
 @media (max-width: 1199px) {
 	.order-save{
 		display: inline-block;
@@ -846,6 +897,10 @@
 	    	align-content: start;
 	    	align-items: start;
 	    	justify-content: start;
+	    	&>div{
+	    		padding-right: 15px;
+	    		padding-left: 15px;
+	    	}
 		}
 		.grid-ct0{
 			grid-column: 1 / 2;
@@ -875,6 +930,17 @@
 				display: block;
 			}
 		}
+		.group-head{
+			button{
+				display: block;
+			}
+		}
+		.group-head.active{
+			button{
+				@include rotage(180deg);
+			}
+		}
+
 	}
 	.order-save{
 		display: flex;
@@ -963,6 +1029,7 @@
 }
 @media (max-width: 375px) {
 	.section-grid-dt3{
+
 		h2{
 			font-size: 16px;
 		}
