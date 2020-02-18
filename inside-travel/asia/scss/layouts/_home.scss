@@ -79,7 +79,7 @@
 					}
 					&:hover{
 						.icon-destination{
-							color: $main-color;
+							//color: $main-color;
 						}
 					}
 				}
@@ -286,6 +286,9 @@
 			}
 			&:hover{
 				background-color: #ececec;
+				.icon-font,b{
+					color: $higlight-color;
+				}
 			}
 		}
 		.btn-value.checked{
