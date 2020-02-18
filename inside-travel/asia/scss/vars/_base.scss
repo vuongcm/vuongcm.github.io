@@ -1276,7 +1276,7 @@ select:focus {
     .content-trip{
         position: absolute;
         bottom: 125px;
-        z-index: 1;
+        z-index: 5;
         background-color: $background-color;
         &>p{
              padding-left: 15px;
