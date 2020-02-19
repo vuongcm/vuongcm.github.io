@@ -979,7 +979,7 @@ select:focus {
                 border-radius: 10px;
                 flex-direction: column;
                 h3{
-                    font-size: 14px;
+                    font-size: 11px;
                     margin-bottom: 0;
                     margin-top: 0;
                     font-weight: 600;
@@ -987,10 +987,11 @@ select:focus {
                         margin: 5px auto;
                         width: 100%;
                         max-width: 150px;
+                        opacity: .6;
                     }
                 }
                 p{
-                    font-size: 12px;
+                    font-size: 11px;
                 }
             }
             &:hover{
@@ -1597,7 +1598,7 @@ select:focus {
     align-items: flex-start;
     flex-wrap: wrap;
     .title-info{
-        width: calc(100% - 60px);
+        width: calc(100% - 52px);
         padding-left: 15px;
     }
 }
@@ -1614,6 +1615,9 @@ select:focus {
     color: $light-color-3;
     a{
         color: $light-color-3;
+        &:hover{
+            color: $higlight-color;
+        }
     }
 }
 .price-trip-box{
@@ -1655,14 +1659,14 @@ select:focus {
 }
 .day-trip{
     position: relative;
-    width: 60px;
+    width: 52px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     span{
         position: absolute;
         text-align: center;
-        font-size: 9px;
+        font-size: 8px;
         text-transform: uppercase;
         color: $higlight-color;
         font-weight: 500;
