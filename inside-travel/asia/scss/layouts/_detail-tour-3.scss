@@ -38,15 +38,16 @@
 		}
 		.group-ct1-1{
 			.head-trip{
-				padding-left: 15px;
-				padding-right: 15px;
+				padding-left: 20px;
+				padding-right: 20px;
 				.title-info{
 					width: calc(100% - 89px);
 					padding-right: 10px;
 					.title-h2{
 						margin: 0;
-						font-size: 20px;
+						font-size: 24px;
 						font-weight: 600;
+						color: #333;
 						letter-spacing: 0;
 						text-transform: none;
 					}
@@ -87,13 +88,14 @@
 			.foot-trip-st5{
 				padding-top: 15px;
 				.div-hidden{
-					padding-left: 15px;
-					padding-right: 15px;
+					padding-left: 20px;
+					padding-right: 20px;
 					p{
 					    line-height: 1.8;
 					    margin-bottom: 15px;
 					    display: flex;
 					    align-items: baseline;
+					    font-size: 13px;
 					    .checkmark{
 					    	color: $higlight-color;
 						    font-size: 14px;
@@ -110,18 +112,23 @@
 		.address-box{
 			margin-top: 10px;
 			margin-bottom: 15px;
-			padding-right: 15px;
-			padding-left: 15px;
+			padding-right: 20px;
+			padding-left: 20px;
 		}
 		.wrap-slide-st4{
-			padding-right: 15px;
-			padding-left: 15px;
+			padding-right: 20px;
+			padding-left: 20px;
 			.synch-carousels{
 				.gallery{
 					width: 100%;
 					.item{
 						padding-left: 5px;
 						padding-right: 5px;
+						&>a{
+							.box-text,img{
+								border-radius: 0;
+							}
+						}
 					}
 				}
 				.nav-arrows{
@@ -156,8 +163,8 @@
 		}
 		.map-box{
 			margin: 15px auto 10px;
-			padding-left: 15px;
-			padding-right: 15px;
+			padding-left: 20px;
+			padding-right: 20px;
 			position: relative;
 			.map-box-img{
 				width: 100%;
@@ -189,8 +196,8 @@
 		}
 		.group-ct1-2{
 			.box-ct1-itine{
-				padding-left: 15px;
-				padding-right: 15px;
+				padding-left: 20px;
+				padding-right: 20px;
 				.head-ct1-itine{
 					display: flex;
 					justify-content: space-between;
@@ -208,8 +215,8 @@
 		}
 		.group-ct1-3{
 			.box-inc-exc{
-				padding-left: 15px;
-				padding-right: 15px;
+				padding-left: 20px;
+				padding-right: 20px;
 				.include-box{
 					padding-left: 0;
 					padding-right: 0;
@@ -264,8 +271,8 @@
 		    padding-top: 15px;
 		    padding-bottom: 15px;
 		    &>div{
-		    	padding-left: 15px;
-		    	padding-right: 15px;
+		    	padding-left: 20px;
+		    	padding-right: 20px;
 		    }
 		}
 		.group-ct2-1{
@@ -508,7 +515,11 @@
 		}
 		button{
 			font-size: 10px;
-			display: none;
+		}
+	}
+	.group-head.active{
+		button{
+			@include rotage(180deg);
 		}
 	}
 }
@@ -519,7 +530,7 @@
 		flex-shrink: 0;
 	}
 	.address{
-		font-size: 14px;
+		font-size: 13px;
 		line-height: 1.5;
 		flex-grow: 1;
 		padding-left: 10px;
@@ -572,6 +583,26 @@
 			}
 			.panel{
 				padding-left: 0;
+				.head-pn{
+					span{
+						font-size: 13px;
+					}
+					&>p{
+						font-size: 13px;
+					}
+				}
+				&>div{
+					.paragraph{
+						font-size: 13px;
+					}
+				}
+				.experience-suplier{
+					.experience-content{
+						h4,h5{
+							font-size: 13px;
+						}
+					}
+				}
 			}
 		}
 		&:last-child{
@@ -896,33 +927,10 @@
 		}
 	}
 }
+.hidden-tablet{
+    display: none;
+}
 @media (min-width: 1350px) {
-	.section-grid-dt3{
-		.grid-ct3{
-			.group-ct3-1{
-				padding-left: 20px;
-				padding-right: 20px;
-			}
-		}
-		.grid-ct4{
-			.group-ct4-1{
-				.box-contact{
-					.col-xlg-12{
-						padding-left: 20px;
-						padding-right: 20px;
-					}
-				}
-			}
-		}
-		.grid-ct5{
-			.group-ct5-1{
-				.box-how-pri{
-					padding-left: 20px;
-					padding-right: 20px;
-				}
-			}
-		}
-	}
 	.grid-ct3,.grid-ct4{
 		position: sticky;
 		//top: -500px;
@@ -986,10 +994,42 @@
 		.grid-ct1{
 			grid-column: 1 / 2;
 			grid-row: 2 / 3;
+
+			
+			.group-ct1-1{
+				.head-trip,.address-box,.wrap-slide-st4,.map-box{
+					padding-right: 15px;
+					padding-left: 15px;
+				}
+				.foot-trip-st5{
+					.div-hidden{
+						padding-right: 15px;
+						padding-left: 15px;
+					}
+				}
+			}
+			.group-ct1-2{
+				.box-ct1-itine{
+					padding-right: 15px;
+					padding-left: 15px;
+				}
+			}
+			.group-ct1-3{
+				.box-inc-exc{
+					padding-right: 15px;
+					padding-left: 15px;
+				}
+			}
 		}
 		.grid-ct2{
 			grid-column: 1 / 2;
 			grid-row: 4 / 5;
+			&>div{
+				&>div{
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+			}
 		}
 		.grid-ct3{
 			grid-column: 1 / 2;
@@ -1003,21 +1043,7 @@
 			grid-column: 1 / 2;
 			grid-row: 6 / 7;
 		}
-		.group-head{
-			button{
-				display: block;
-			}
-		}
-		.group-head{
-			button{
-				display: block;
-			}
-		}
-		.group-head.active{
-			button{
-				@include rotage(180deg);
-			}
-		}
+		
 
 	}
 	.order-save{

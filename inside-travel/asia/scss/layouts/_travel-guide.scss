@@ -101,14 +101,14 @@
 			margin-left: 5px;
 			margin-right: 5px;
 			display: inline-block;
-			color: $light-color-4;
+			color: #868686;
 		}
 		&:last-child:after{
 			display: none;
 			content: '';
 		}
 		a{
-			color: $light-color-4;
+			color: #868686;
 			display: inline;
 			&:hover{
 				color: $higlight-color;
