@@ -1783,6 +1783,16 @@ $(document).ready(function() {
 			$(this).next('label').removeClass('active');
 		}
 	});
+	/*============detail-grid===============*/
+	if($('.order-box').length){
+		$('.service-check-2').click(function(){
+			if (this.checked){
+				$(this).closest('.row-choose').addClass('choosed');
+			} else{
+				$(this).closest('.row-choose').removeClass('choosed');
+			}
+		});
+	}
 	/*======booking=======*/
 	if($('.room-booking-wrap').length){
 		$('.room-booking-wrap').delegate(`.select-cabin input[type="radio"]`,'click',function(){

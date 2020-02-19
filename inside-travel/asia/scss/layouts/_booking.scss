@@ -643,11 +643,15 @@
 		}
 	}
 	label.active{
+		&:before{
+			background-color: $higlight-color;
+    		border: 1px solid $higlight-color;
+		}
 		&:after{
 			content: '\ea10';
 			display: block;
 			position: absolute;
-			color: $higlight-color;
+			color: #fff;
 			font-family: 'insideTravel';
 		    speak: none;
 		    line-height: 1;

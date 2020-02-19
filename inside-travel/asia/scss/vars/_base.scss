@@ -149,7 +149,7 @@ select:focus {
 	outline-width: 1px;
 }
 .icon-font{
-    font-size: 12px;
+    font-size: inherit;
 }
 .icon-font-cr{
     font-size: 22px;
@@ -519,6 +519,9 @@ select:focus {
     justify-content: center;
     .paragraph{
         margin-top: 0;
+    }
+    .team-name{
+        font-weight: normal;
     }
 }
 .view-more-wrap{

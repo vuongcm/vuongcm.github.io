@@ -168,6 +168,7 @@
 			position: relative;
 			.map-box-img{
 				width: 100%;
+				display: block;
 			}
 			button{
 				position: absolute;
@@ -509,7 +510,7 @@
 		justify-content: space-between;
 		color: $main-color;
 		opacity: 1;
-		cursor: auto;
+		cursor: pointer;
 		h2{
 			flex-grow: 1;
 		}
@@ -739,6 +740,12 @@
 	.order-choose{
 		.row-choose{
 			border-bottom: 1px solid #dcdcdc;
+			&:hover{
+				background-color: #f6f4f0;
+			}
+		}
+		.row-choose.choosed{
+			background-color: #f6f4f0;
 		}
 	}
 	.order-best{
@@ -926,9 +933,6 @@
 			}
 		}
 	}
-}
-.hidden-tablet{
-    display: none;
 }
 @media (min-width: 1350px) {
 	.grid-ct3,.grid-ct4{
