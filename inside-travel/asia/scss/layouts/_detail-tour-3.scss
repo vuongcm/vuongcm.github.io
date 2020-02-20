@@ -685,7 +685,7 @@
 	img:last-child{
 		width: 70%;
 		position: absolute;
-		display: block;
+		//display: block;
 		border-radius: 50%;
 	}
 }
@@ -740,12 +740,7 @@
 	.order-choose{
 		.row-choose{
 			border-bottom: 1px solid #dcdcdc;
-			&:hover{
-				background-color: #f6f4f0;
-			}
-		}
-		.row-choose.choosed{
-			background-color: #f6f4f0;
+
 		}
 	}
 	.order-best{
@@ -783,15 +778,16 @@
 		align-items: center;
 		padding-top: 15px;
 		padding-bottom: 15px;
+		cursor: pointer;
 		&>span{
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			font-weight: 600;
 			color: #fff;
-			font-size: 16px;
-			width: 30px;
-			height: 30px;
+			//font-size: 16px;
+			width: 26px;
+			height: 26px;
 			border-radius: 50%;
 			background-color: #96a089;
 			flex-shrink: 0;
@@ -810,6 +806,7 @@
 			&>div:last-child{
 				text-transform: uppercase;
 				color: $higlight-color;
+				font-size: 10px;
 				font{
 					font-weight: 600;
 					font-size: 16px;
@@ -819,6 +816,28 @@
 		.input-checkbox-st1{
 			margin-left: auto;
 			padding-right: 5px;
+		}
+		&:hover{
+			background-color: #f6f4f0;
+			.order-choose-info{
+				&>div:first-child{
+					color: $higlight-color;
+				}
+			}
+			&>span{
+				background-color: $higlight-color;
+			}
+		}
+	}
+	.row-choose.choosed{
+		background-color: #f6f4f0;
+		.order-choose-info{
+			&>div:first-child{
+				color: $higlight-color;
+			}
+		}
+		&>span{
+			background-color: $higlight-color;
 		}
 	}
 }
@@ -1130,6 +1149,15 @@
 	.address-box{
 		.address{
 			font-size: 12px;
+		}
+	}
+}
+@media (max-width: 479px) {
+	.evaluate-rank{
+		flex-wrap: wrap;
+		justify-content: center;
+		span{
+			margin-top: 10px;
 		}
 	}
 }

@@ -1795,6 +1795,16 @@ $(document).ready(function() {
 			} else{
 				$(this).closest('.row-choose').removeClass('choosed');
 			}
+			let valSend = $(this).closest('.row-choose').find('.order-choose-info>div:first-child').text().toLowerCase();
+			let thisBtn = $('#creat-detail-modal .booking-step-class .btn-value');
+			for(let i=0; i<thisBtn.length; i++){
+				if(thisBtn.eq(i).children('b').text().toLowerCase() == valSend){
+					thisBtn.eq(i).click();
+				}
+			}
+		});
+		$('.row-choose').click(function(){
+			$(this).find('.service-check-2').click();
 		});
 	}
 	/*======booking=======*/
