@@ -675,20 +675,18 @@
 	}
 }
 .avt-review{
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: relative;
+	img{
+		display: block;
+	}
 	img:last-child{
-		width: 66%;
+		width: 70%;
 		position: absolute;
-		top: 50%;
-		left: 50%;
 		display: block;
 		border-radius: 50%;
-		transform: translate(-50%,-50%);
-	    -moz-transform: translate(-50%,-50%);
-	    -webkit-transform: translate(-50%,-50%);
-	    -o-transform: translate(-50%,-50%);
-	    -ms-transform: translate(-50%,-50%);
 	}
 }
 .avt-info{
