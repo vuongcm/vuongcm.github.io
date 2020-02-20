@@ -1046,7 +1046,7 @@ select:focus {
 .tooltip{
     position: relative;
     &>.icon-font{
-        font-size: 30px;
+        font-size: 26px;
         &:before{
             color: #c3bdbd;
         }
@@ -1602,7 +1602,7 @@ select:focus {
     flex-wrap: wrap;
     .title-info{
         width: calc(100% - 52px);
-        padding-left: 15px;
+        padding-left: 10px;
     }
 }
 .title-info{
