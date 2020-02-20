@@ -650,6 +650,7 @@
 		background-color: #419453;
 		position: absolute;
 		left: -4px;
+		top: calc(50% - 4px);
 		@include rotage(45deg);
 	}
 }
@@ -681,6 +682,7 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
+		display: block;
 		border-radius: 50%;
 		transform: translate(-50%,-50%);
 	    -moz-transform: translate(-50%,-50%);
@@ -1096,9 +1098,6 @@
     						font-size: 18px;
     						min-height: 53px;
     						padding-top: 10px;
-    						span{
-    							display: inline;
-    						}
     					}
     					.wrap-tooltip{
     						margin-top: 10px;

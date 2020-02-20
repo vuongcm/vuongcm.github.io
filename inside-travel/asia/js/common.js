@@ -968,6 +968,10 @@ $(document).ready(function() {
 		$('.modal-container').removeClass('close-display');
 		$('.modal-tour').removeClass('close-display');
 	});
+	$('.btn-modal-tour-2').click(function(){
+		$('.modal-container').removeClass('close-display');
+		$('.modal-tour-st2').removeClass('close-display');
+	});
 	$('.btn-close').click(function(){
 		$(this).closest('.modal, .modal-2, .video-modal').addClass('close-display');
 		$(this).closest('.modal').removeAttr('style');
