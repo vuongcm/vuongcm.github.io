@@ -597,8 +597,6 @@
 	display: inline-flex;
 	justify-content: flex-start;
 	align-items: center;
-	margin-right: 15px;
-	padding-right: 10px;
 	padding-left: 10px;
 	.icon-font{
 		font-size: 18px;
@@ -620,7 +618,7 @@
 	.tooltip{
 		opacity: 1;
 		.icon-font{
-			font-size: 18px;
+			font-size: 14px;
 		}
 		&>span{
 			width: max-content;
@@ -666,7 +664,7 @@
 	}
 	.experience-img{
 		display: block;
-		width: 15%;
+		width: 30%;
 		padding-right: 15px;
 		position: relative;
 		img{
@@ -694,8 +692,7 @@
 		}
 	}
 	.experience-content{
-		width: 85%;
-		padding-left: 15px;
+		width: 70%;
 		h4,h5{
 			margin-top: 0;
 			color: #555;

@@ -19,10 +19,6 @@
 		grid-row: 1 / 2;
 		padding-left: 15px;
 		padding-right: 15px;
-		.breadcrumb{
-			padding-bottom: 0;
-			margin-top: 15px;
-		}
 	}
 	.grid-ct1{
 		grid-column: 1 / 2;
@@ -37,6 +33,7 @@
 			padding-bottom: 15px;
 		}
 		.group-ct1-1{
+			margin-top: 0;
 			.head-trip{
 				padding-left: 20px;
 				padding-right: 20px;
@@ -63,6 +60,7 @@
 				}
 				.heart-tour{
 					width: 37px;
+					margin-top: 8px;
     				.icon-font{
     					font-size: 36px;
     					color: #AEAEAE;
@@ -116,8 +114,8 @@
 			padding-left: 20px;
 		}
 		.wrap-slide-st4{
-			padding-right: 20px;
-			padding-left: 20px;
+			padding-right: 17px;
+			padding-left: 16px;
 			.synch-carousels{
 				.gallery{
 					width: 100%;
@@ -354,6 +352,7 @@
 		.group-ct3-1{
 			padding-left: 15px;
 			padding-right: 15px;
+			margin-top: 0;
 		}
 	}
 	.grid-ct4{
@@ -778,6 +777,7 @@
 		align-items: center;
 		padding-top: 15px;
 		padding-bottom: 15px;
+		padding-left: 3px;
 		cursor: pointer;
 		&>span{
 			display: flex;
@@ -1057,6 +1057,9 @@
 		.grid-ct3{
 			grid-column: 1 / 2;
 			grid-row: 3 / 4;
+			.group-ct3-1{
+				margin-top: 30px;
+			}
 		}
 		.grid-ct4{
 			grid-column: 1 / 2;

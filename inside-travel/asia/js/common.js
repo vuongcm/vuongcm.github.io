@@ -1422,32 +1422,36 @@ $(document).ready(function() {
 		});
 	}
 	if($('.booking-step-class').length){
-		let number5 = $('.booking-step-class .btn-value').length;
-		for (let i=0; i<number5; i++){
-			$('.booking-step-class .btn-value').eq(i).click(function(){
-				if($(this).attr('class').search('checked') != -1){
-					$('.booking-step-class .btn-value').removeClass('checked');
-				} else{
-					$('.booking-step-class .btn-value').removeClass('checked');
-					$(this).addClass('checked');
-					if($('.booking-step-class').length == 2){
-						if(i<(number5/2)){
-							$('.booking-step-class .btn-value').eq(number5/2 + i).addClass('checked');
+		$('.booking-step-class .btn-value').click(function(){
+			$(this).toggleClass('checked');
+			if($('.order-choose').length){
+				let valueActive = $(this).children('b').text().toLowerCase();
+				let getBtn = $('.order-choose .row-choose');
+				for(let i=0; i < getBtn.length; i++){
+					if(getBtn.eq(i).find('.order-choose-info>div:first-child').text().toLowerCase() == valueActive){
+						if(getBtn.eq(i).find('.service-check-2')[0].checked){
+							getBtn.eq(i).removeClass('choosed');
+							getBtn.eq(i).find('.service-check-2')[0].checked = false;
+							getBtn.eq(i).find('label').removeClass('active');
 						} else{
-							$('.booking-step-class .btn-value').eq(i - number5/2).addClass('checked');
+							getBtn.eq(i).addClass('choosed');
+							getBtn.eq(i).find('.service-check-2')[0].checked = true;
+							getBtn.eq(i).find('label').addClass('active');
 						}
 					}
 				}
-				if($(this).closest('.value').find('.checked').length == 0){
-					$('.booking-step-class').find('.text b').html(`Approx Start Date`);
-					$('#creat-detail-modal .booking-step-class').find('select option').val('');
-				} else{
-					$('.booking-step-class').find('.text b').html($(this).children('b').text());
-					$('#creat-detail-modal .booking-step-class').find('select option').val($(this).children('b').text());
-				}
-				$(this).closest('.value').removeClass('open-block');
-			});
-		}
+			}
+			$('.booking-step-class select').html('');
+			let btnActive = $('.booking-step-class .btn-value.checked');
+			for(let i=0; i < btnActive.length; i++){
+				$('.booking-step-class select').append(`<option value="${btnActive.children('b').eq(i).text()}" selected></option>`);
+			}
+			if(btnActive.length == 0){
+				$('.booking-step-class .text b').html(`Tour Class`);
+			} else{
+				$('.booking-step-class .text b').html(`${btnActive.length} selected`);
+			}
+		});
 	}
 	/*===search cruise=====*/
 	if($('.booking-step-cruise').length){
@@ -1789,22 +1793,14 @@ $(document).ready(function() {
 	});
 	/*============detail-grid===============*/
 	if($('.order-box').length){
-		$('.service-check-2').click(function(){
-			if (this.checked){
-				$(this).closest('.row-choose').addClass('choosed');
-			} else{
-				$(this).closest('.row-choose').removeClass('choosed');
-			}
-			let valSend = $(this).closest('.row-choose').find('.order-choose-info>div:first-child').text().toLowerCase();
-			let thisBtn = $('#creat-detail-modal .booking-step-class .btn-value');
-			for(let i=0; i<thisBtn.length; i++){
-				if(thisBtn.eq(i).children('b').text().toLowerCase() == valSend){
-					thisBtn.eq(i).click();
+		$('.row-choose').click(function(){
+			let btnValue = $(this).find('.order-choose-info>div:first-child').text().toLowerCase();
+			let getBtn = $('.booking-step-class .btn-value');
+			for(let i=0; i<getBtn.length; i++){
+				if(getBtn.eq(i).children('b').text().toLowerCase() == btnValue){
+					getBtn.eq(i).click();
 				}
 			}
-		});
-		$('.row-choose').click(function(){
-			$(this).find('.service-check-2').click();
 		});
 	}
 	/*======booking=======*/
