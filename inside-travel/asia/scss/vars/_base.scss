@@ -1617,7 +1617,7 @@ select:focus {
     text-align: left;
     color: $light-color-3;
     a{
-        color: $light-color-3;
+        color: #333;
         &:hover{
             color: $higlight-color;
         }
@@ -2060,8 +2060,8 @@ select:focus {
         width: 100%;
     }
     .mg-left, .mg-right{
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
     .col-sm-12{
         width: 100%;

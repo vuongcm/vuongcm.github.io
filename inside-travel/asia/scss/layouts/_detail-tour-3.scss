@@ -731,10 +731,10 @@
 		&>div{
 			text-align: center;
 			text-transform: uppercase;
-			font-size: 14px;
 			font-weight: 500;
 			color: #888;
-			font-size: 12px;
+			font-size: 10px;
+			text-align: left;
 			font{
 				font-size: 22px;
 				color: $higlight-color;
@@ -978,7 +978,7 @@
 		top: -1000px;
 	}
 	.grid-ct4{
-		top: -534px;
+		top: -600px;
 	}
 }
 @media (max-width: 1199px) {
