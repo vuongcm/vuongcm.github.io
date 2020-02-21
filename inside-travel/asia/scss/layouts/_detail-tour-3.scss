@@ -102,6 +102,9 @@
 						    font-size: 14px;
 						    margin-right: 10px;
 					    }
+					    .checkmark.un-checkmark{
+							color: #888;
+					    }
 					    &:last-child{
 					    	margin-top: 20px;
 					    	margin-bottom: 20px;
@@ -574,8 +577,11 @@
 				//font-size: 20px;
 				color: $higlight-color;
 			}
-			.icon-destination{
+			.icon-des-1{
 				font-size: 24px;
+			}
+			.icon-des-2,.icon-des-3, .icon-des-4{
+				font-size: 20px;
 			}
 		}
 		.order-day{
@@ -588,10 +594,24 @@
 				padding-left: 0;
 				padding-right: 0;
 				opacity: 1;
+				h3{
+					margin-top: 10px;
+				}
 				&>button{
 					.select-arrow-thin{
 						font-size: 8px;
 					}
+				}
+				&:hover{
+					.icon-des-2:before{
+						content: "\e963";
+					}
+				}
+				
+			}
+			&>.active:first-child{
+				.icon-des-2:before{
+					content: "\e963";
 				}
 			}
 			.panel{

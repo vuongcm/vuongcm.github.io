@@ -1024,6 +1024,12 @@ $(document).ready(function() {
 			$('.modal-container').removeClass('open-block');
 		});
 	}
+	if($('.modal-map').length){
+		$('.open-map-box').click(function(){
+			$('.modal-container').removeClass('close-display');
+			$('.modal-map').removeClass('close-display');
+		});
+	}
 	for(let i=1; i<=$('.phone-wrap').length; i++){
 		$(`#cb-p-${i}`).click(function(){
 			if (this.checked){

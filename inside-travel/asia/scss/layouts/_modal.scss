@@ -1,8 +1,8 @@
 .btn-close{
     font-size: 40px;
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: -5px;
+    right: 5px;
 }
 .modal-container{
 	position: absolute;
@@ -1226,15 +1226,16 @@
 	}
 }
 .modal-map{
+	padding: 30px 15px;
 	.map-content{
 		display: flex;
 		flex-wrap: wrap;
 		.map-box-st3{
-			width: 65%;
+			width: 70%;
 			background-color: #555;
 		}
 		.info-map-box{
-			width: 35%;
+			width: 30%;
 			padding-left: 10px;
 			.info-map-head{
 				padding-bottom: 15px;
@@ -1280,8 +1281,11 @@
 						}
 						.wrap-icon-des{
 							left: -13px;
-							.icon-destination{
-								font-size: 18px;
+							.icon-des-1{
+								font-size: 16px;
+							}
+							.icon-des-2,.icon-des-3,.icon-des-4{
+								font-size: 14px;
 							}
 						}
 					}
