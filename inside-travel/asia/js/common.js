@@ -879,12 +879,35 @@ $(document).ready(function() {
 			'z-index':'-5',
 			'visibility':'hidden'
 		});
+		$(this).addClass('close-display');
 		$(`.synch-desti .gallery .slick-track`).closest('.gallery').slick('unslick');
 
 	});
 	if ($('.wrap-gallery-img #carousel-img-cr').length > 0) {
 		$('.open-img').click(function(){
 			$('.modal-container').removeClass('close-display');
+			$('.wrap-gallery-img').css({
+				'z-index':'210',
+				'visibility':'visible'
+			});
+			$(`.wrap-gallery-img .synch-carousels`).removeClass('open-block');
+			$(`#carousel-img-cr`).addClass('open-block');
+			//$(`#carousel-img-cr .gallery`).slick("slickGoTo", 0);
+			$(`#carousel-img-cr .gallery`).slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+	            fade: true,
+				lazyLoad: 'ondemand',
+				infinite: true,
+				adaptiveHeight: true,
+				useTransform: false,
+		        prevArrow: `#carousel-img-cr .arrow-left`,
+		        nextArrow: `#carousel-img-cr .arrow-right`
+		    });
+		});
+		$('.open-img-modal').click(function(){
+			$('.modal-container').removeClass('close-display');
+			$('.wrap-gallery-img .btn-close').removeClass('close-display');
 			$('.wrap-gallery-img').css({
 				'z-index':'210',
 				'visibility':'visible'

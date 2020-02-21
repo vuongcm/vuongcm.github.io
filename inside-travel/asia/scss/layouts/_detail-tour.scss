@@ -482,6 +482,24 @@
 	.order-day:last-child{
 		margin-top: 40px;
 	}
+	.list-tour-day{
+		&>li{
+			.order-day{
+				margin-top: 0;
+
+				&>a:first-child{
+					padding-right: 3px;
+					padding-left: 3px;
+					&:hover{
+						background-color: $background-color-st1;
+					}
+				}
+				&>.active:first-child{
+					background-color: $background-color-st1;
+				}
+			}
+		}
+	}
 	.order-day{
 		&>a:first-child{
 			h3{

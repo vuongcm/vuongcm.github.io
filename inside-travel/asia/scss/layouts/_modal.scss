@@ -1284,8 +1284,11 @@
 							.icon-des-1{
 								font-size: 16px;
 							}
-							.icon-des-2,.icon-des-3,.icon-des-4{
+							.icon-des-4{
 								font-size: 14px;
+							}
+							.icon-des-2,.icon-des-3{
+								font-size: 12px;
 							}
 						}
 					}
@@ -1300,6 +1303,16 @@
 								margin-top: 0;
 								margin-bottom: 0;
 								line-height: 1.5;
+							}
+							&:hover{
+								h3{
+									color: $higlight-color;
+								}
+							}
+						}
+						&>.active:first-child{
+							h3{
+								color: $higlight-color;
 							}
 						}
 					}
