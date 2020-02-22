@@ -555,7 +555,7 @@
 .list-tour-day{
 	&>li{
 		width: 100%;
-		padding-left: 40px;
+		padding-left: 30px;
 		position: relative;
 		&:before{
 			position: absolute;
@@ -565,14 +565,13 @@
 		    width: 0;
 		    height: 100%;
 		    z-index: 3;
-		    left: 19px;
-		    top: 41px;
+		    left: 8px;
+		    top: 36px;
 		}
 		.wrap-icon-des{
 			position: absolute;
-			left: -20px;
+			left: -30px;
 			background-color: #fff;
-			@include translateX(-50%);
 			.icon-font{
 				//font-size: 20px;
 				color: $higlight-color;

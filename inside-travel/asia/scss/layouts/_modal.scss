@@ -1274,13 +1274,13 @@
 				}
 				.list-tour-day{
 					&>li{
-						padding-left: 22px;
+						padding-left: 20px;
 						&:before{
-							left: 8px;
+							left: 6px;
 							top: 15px;
 						}
 						.wrap-icon-des{
-							left: -13px;
+							left: -20px;
 							.icon-des-1{
 								font-size: 16px;
 							}
@@ -1456,7 +1456,7 @@
 		.map-content{
 			.map-box-st3{
 				width: 100%;
-				min-height: 100px;
+				min-height: 265px;
 			}
 			.info-map-box{
 				width: 100%;
@@ -1465,6 +1465,9 @@
 					.map-day{
 						margin-top: 10px;
 					}
+				}
+				.info-map-body{
+					max-height: 200px;
 				}
 			}
 		}
