@@ -226,6 +226,7 @@
 						margin-top: 15px;
 					}
 				}
+
 			}
 		}
 		.group-ct1-3{
@@ -944,6 +945,23 @@
 	.grid-ct4{
 		top: -600px;
 	}
+	.grid-ct1{
+		.group-ct1-2{
+			.box-ct1-itine{
+				.body-ct1-itine{
+					.list-tour-day{
+						.experience-img{
+							width: 30%;
+						}
+						.experience-content{
+							width: 70%;
+						}
+					}
+				}
+			}
+		}
+	}
+	
 }
 @media (max-width: 1199px) {
 	.order-save{

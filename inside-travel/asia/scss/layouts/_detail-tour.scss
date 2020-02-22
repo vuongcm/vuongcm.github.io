@@ -511,6 +511,21 @@
 		}
 	}
 }
+.detail-day-2{
+	.order-day:last-child{
+		
+		&>a:first-child{
+			border-bottom: 1px solid #dcdcdc;
+			background-color: transparent;
+			&:hover{
+				background-color: $background-color-st1;
+			}
+		}
+		&>.active:first-child{
+			background-color: $background-color-st1;
+		}
+	}
+}
 .order-day{
 	width: 100%;
 	@include smooth(.5s);
@@ -682,7 +697,7 @@
 	}
 	.experience-img{
 		display: block;
-		width: 30%;
+		width: 15%;
 		padding-right: 15px;
 		position: relative;
 		img{
@@ -710,7 +725,7 @@
 		}
 	}
 	.experience-content{
-		width: 70%;
+		width: 85%;
 		h4,h5{
 			margin-top: 0;
 			color: #555;
