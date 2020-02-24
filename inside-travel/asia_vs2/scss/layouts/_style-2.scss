@@ -174,12 +174,6 @@
 		padding-right: 0;
 		padding-left: 0;
 		justify-content: flex-start;
-		.tooltip{
-			span{
-				left: 16px;
-				@include translateX(-50%);
-			}
-		}
 	}
 }
 .price-box{

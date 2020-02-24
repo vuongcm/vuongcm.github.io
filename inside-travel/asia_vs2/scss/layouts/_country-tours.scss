@@ -282,6 +282,16 @@
 				width: 30px;
 				margin-right: 10px;
 			}
+			.icon-faq,.icon-info{
+				width: 30px;
+				display: inline-block;
+				margin-right: 10px;
+				font-size: 30px;
+				color: #ECECEC;
+			}
+			.icon-info{
+				color: #ccc;
+			}
 			.night-img-cr{
 				flex-shrink: 0;
 				img{
@@ -301,7 +311,7 @@
 				margin-top: 0;
 				margin-bottom: 0;
 				padding: 10px;
-				text-align: justify;
+				text-align: left;
 				a{
 					display: inline;
 					color: $higlight-color;

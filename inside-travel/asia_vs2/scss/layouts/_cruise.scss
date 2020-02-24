@@ -280,12 +280,6 @@
 			width: unset;
 		}
 	}
-	.tooltip{
-		span{
-			@include translateX(-50%);
-			left: 15px;
-		}
-	}
 }
 .cruise-container-st3{
 	.trip{
