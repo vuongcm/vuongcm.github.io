@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	//$('body').css('--bodyWidth',`${bodyWidth}px`);
 	let bodyWidth = $('body').width();
+	if($('.lazyload').length>0){jQuery(".lazyload").lazyload({effect:"fadeIn"});}
 	//===========header===================
 	if(bodyWidth > 991){
 		$('#menu-lv1-1').hover(function(){
@@ -565,7 +566,7 @@ $(document).ready(function() {
 	//carousel-st4
 	if ($('.wrap-slide-st4').length > 0) {
 		$(`.wrap-slide-st4 .gallery`).slick({
-			//lazyLoad: 'ondemand',
+			lazyLoad: 'ondemand',
 			slidesToShow: 5,
 			slidesToScroll: 1,
 			infinite: true,
