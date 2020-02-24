@@ -1,6 +1,6 @@
 .banner-small{
 	height: 536px;
-	background-color: rgba(0,0,0,0.5);
+	//background-color: rgba(0,0,0,0.5);
 	.wrap-title-banner-top{
 		padding: 15px 15px 100px;
 	}
@@ -9,6 +9,7 @@
 	background-image: url(../images/background/bg-about.jpg);
     height: 100%;
     background-position-y: 37px;
+    @include dakkenImg(60%);
 }
 .about-container{
 	//margin-top: 50px;

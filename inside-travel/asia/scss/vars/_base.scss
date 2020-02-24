@@ -522,6 +522,8 @@ select:focus {
     }
     .team-name{
         font-weight: normal;
+        font-family: inherit;
+        font-size: 26px;
     }
 }
 .view-more-wrap{
@@ -1696,12 +1698,12 @@ select:focus {
     align-items: flex-start;
     p{
         font-size: 12px;
-        letter-spacing: 2px;
+        //letter-spacing: 2px;
         text-align: center;
         padding-right: 15px;
         padding-left: 15px;
         font-weight: 500;
-        line-height: 1.5;
+        line-height: 1.8;
         color: $light-color-3;
     }
     .link-st3{
