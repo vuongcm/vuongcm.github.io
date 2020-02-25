@@ -23,6 +23,9 @@ class EditPostTable extends Migration
             //$table->text('content2')->after('keywords');
             //$table->dropColumn('keywords');
             //$table->renameColumn('content2', 'keywords');
+            //$table->double('view', 10, 0)->after('admin')->default(0);
+            //$table->dropColumn('view');
+            //$table->string('big_group')->after('view');;
         });
     }
 

@@ -155,29 +155,17 @@ select:focus {
 	outline-style: dotted;
 	outline-width: 1px;
 }
+.icon-font{
+    font-size: inherit;
+}
 .icon-font-cr{
     font-size: 22px;
 }
-.icon-cr-baybycot{
-    background: url(../images/icon/babycot.svg) no-repeat;
-    background-size: contain;
-    width: 24px;
-    height: 20px;
-    display: inline-block;
+.icon-destination:before{
+    color: inherit;
 }
-.icon-cr-mini-golf{
-    background: url(../images/icon/mini-golf.svg) no-repeat;
-    background-size: contain;
-    width: 20px;
-    height: 22px;
-    display: inline-block;
-}
-.icon-cr-taichiclass.hover{
-    &:hover{
-        ellipse,path{
-            stroke: $higlight-color;
-        }
-    }
+.icon-cuisine:before,.icon-des-1:before,.icon-des-2:before,.icon-des-3:before,.icon-des-4:before{
+    color: inherit;
 }
 .input-st1{
     border: none;
@@ -972,7 +960,7 @@ select:focus {
                 border-radius: 10px;
                 flex-direction: column;
                 h3{
-                    font-size: 14px;
+                    font-size: 11px;
                     margin-bottom: 0;
                     margin-top: 0;
                     font-weight: 600;
@@ -983,7 +971,7 @@ select:focus {
                     }
                 }
                 p{
-                    font-size: 12px;
+                    font-size: 11px;
                 }
             }
             &:hover{
@@ -1087,7 +1075,11 @@ select:focus {
         opacity: 0;
         @include smooth(.2s);
         bottom: 135%;
+        left: 50%;
+        @include translateX(-50%);
         box-shadow: 0px 1px 3px 2px rgba(0,0,0,.13);
+        width: max-content;
+        max-width: 320px;
         b{
             display: inline-block;
             width: 100%;
@@ -1322,12 +1314,6 @@ select:focus {
         flex-wrap: nowrap;
         position: absolute;
         bottom: 80px;
-        .tooltip{
-            &>span{
-                @include translateX(-50%);
-                left: 15px;
-            }
-        }
     }
     .btn-st2{
         border-color: $higlight-red-2;
@@ -1360,27 +1346,52 @@ select:focus {
         .icon-itine{
             font-size: 32px;
             &:before{
-                color: $higlight-red-1;
+                color: $higlight-color;
             }
             &:hover{
                 opacity: .6;
             }
         }
         span{
-            left: 50%;
-            box-shadow: none;
-            background-color: $title-3;
+            //box-shadow: none;
+            background-color: $higlight-color;
             color: #fff;
-            width: 300px;
-            max-width: 90vw;
-
-             @include translateX(-50%);
             &:after{
-                background-color: $title-3;
+                background-color: $higlight-color;
                 box-shadow: none;
             }
         }
     }
+    .wrap-tooltip-itine{
+        display: block;
+        position: absolute;
+        bottom: 125px;
+        width: 100%;
+        .tooltip{
+            display: inline-block;
+            position: static;
+            cursor: pointer;
+            .icon-itine{
+                font-size: 32px;
+                &:before{
+                    color: $higlight-color;
+                }
+                &:hover{
+                    opacity: .6;
+                }
+            }
+            span{
+                //box-shadow: none;
+                background-color: $higlight-color;
+                color: #fff;
+                &:after{
+                    background-color: $higlight-color;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
 }
 .wrap-trip-st2{
     width: 100%;
@@ -1660,14 +1671,14 @@ select:focus {
 }
 .day-trip{
     position: relative;
-    width: 60px;
+    width: 52px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     span{
         position: absolute;
         text-align: center;
-        font-size: 9px;
+        font-size: 8px;
         text-transform: uppercase;
         color: $higlight-color;
         font-weight: 500;

@@ -15,6 +15,22 @@
             @csrf
             <div class="row">
                 <div class="col-lg-3">
+                    <h3>Big group:</h3>
+                </div>
+                <div class="col-lg-9">
+                    <div class="big-gr-box">
+                        <input type="hidden" name="big_group" value="1-6-tuoi">
+                        <span>1-6 tuổi</span>
+                        <ul>
+                            <li><a href="javascript:;" data-value="1-6-tuoi">1-6 tuổi</a></li>
+                            <li><a href="javascript:;" data-value="0-1-tuoi">0-1 tuổi</a></li>
+                            <li><a href="javascript:;" data-value="thai-giao">Thai giáo</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
                     <h3>Group:</h3>
                 </div>
                 <div class="col-lg-9">
@@ -22,8 +38,8 @@
                         <option value="ngon-ngu-nhan-thuc">Ngôn ngữ & Nhận thức</option>
                         <option value="logic-toan-hoc">Logic & Toán học</option>
                         <option value="van-dong">Vận động</option>
-                        <option value="am-nhac-nghe-thuat">Âm nhạc & Nghệ thuật</option>
-                        <option value="ky-nang-song">Kỹ năng sống</option>
+                        <option value="nghe-thuat">Nghệ thuật</option>
+                        <option value="ky-nang">Kỹ năng</option>
                         <option value="khoa-hoc">Khoa học</option>
                     </select>
                 </div>
@@ -99,6 +115,52 @@
     $(document).ready(function() {
         
         // Tạo ứng dụng chèn nội dung
+        $('.big-gr-box>span').click(function(){
+            $(this).next('ul').toggle();
+        });
+        $('body').click(function(e){
+            if (!$('.big-gr-box').is(e.target) && $('.big-gr-box').has(e.target).length === 0) {
+                $('.big-gr-box>ul').hide();
+            }
+        });
+        $('.big-gr-box>ul a').click(function(){
+            let thisVal = $(this).attr('data-value');
+            $('.big-gr-box>input').val(thisVal);
+            $('.big-gr-box>span').text($(this).text());
+            if(thisVal == '1-6-tuoi'){
+                $(`select[name="group"]`).html(`
+                    <option value="ngon-ngu-nhan-thuc">Ngôn ngữ & Nhận thức</option>
+                    <option value="logic-toan-hoc">Logic & Toán học</option>
+                    <option value="van-dong">Vận động</option>
+                    <option value="nghe-thuat">Nghệ thuật</option>
+                    <option value="ky-nang">Kỹ năng</option>
+                    <option value="khoa-hoc">Khoa học</option>
+                    `);
+            }else if(thisVal == '0-1-tuoi'){
+                $(`select[name="group"]`).html(`
+                    <option value="van-dong">Vận động</option>
+                    <option value="giac-quan">Giác quan</option>
+                    <option value="ngon-ngu">Ngôn ngữ</option>
+                    <option value="nhan-thuc">Nhận thức</option>
+                    <option value="tinh-cam-xa-hoi">Tình cảm xã hội</option>
+                    <option value="nghe-thuat">Nghệ thuật</option>
+                    `);
+            } else{
+                $(`select[name="group"]`).html(`
+                    <option value="cam-xuc">TG cảm xúc</option>
+                    <option value="am-nhac">TG âm nhạc</option>
+                    <option value="ngon-ngu">TG ngôn ngữ</option>
+                    <option value="dinh-duong">TG dinh dưỡng</option>
+                    <option value="van-dong">TG vận động</option>
+                    <option value="voi-bo">TG với bố</option>
+                    <option value="my-hoc">TG mỹ học</option>
+                    <option value="anh-sang">TG ánh sáng</option>
+                    <option value="y-niem">TG bằng ý niệm</option>
+                    <option value="tri-thuc">TG tri thức</option>
+                    `);
+            }
+            $('.big-gr-box>ul').hide();
+        });
         $('#add-content').click(function(){
             let addTypeVal = $('.add-type select').val();
             if(addTypeVal == 'para'){

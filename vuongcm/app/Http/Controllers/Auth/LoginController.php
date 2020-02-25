@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Routing\UrlGenerator;
+use Illuminate\Support\Facades\URL;
 
 class LoginController extends Controller
 {
@@ -26,8 +28,9 @@ class LoginController extends Controller
      *
      * @var string
      */
-    //protected $redirectTo = RouteServiceProvider::HOME;
-
+    //protected $redirectTo = "http://" . $_SERVER['SERVER_NAME'] . ":81/".$_SERVER['REQUEST_URI'];
+    // protected $redirectTo = URL::current();
+    //protected $redirectTo = $_SERVER['REMOTE_ADDR'];
     /**
      * Create a new controller instance.
      *
@@ -39,6 +42,7 @@ class LoginController extends Controller
     }
     public function showLoginForm()
     {
+        //dd(URL::current());
         return view('home')->with('openLogin', '1');
     }
 

@@ -30,7 +30,15 @@ Route::get('/chinh-sua-tai-khoan', function () {
 Route::post('/chinh-sua-tai-khoan', 'user\userProfileContraller@update');
 Route::get('/admin/create-post', 'admin\AdminPostController@create')->name('create-post');
 Route::post('/admin/create-post', 'admin\AdminPostController@store');
-Route::get('/admin/list-post', 'admin\AdminPostController@index')->name('list-post');
+Route::get('/admin/list-post/{big_group}', 'admin\AdminPostController@index')->name('list-post');
 Route::DELETE('/admin/post/delete/{id}', 'admin\AdminPostController@destroy');
 Route::get('/admin/edit-post/{id}', 'admin\AdminPostController@edit');
 Route::PATCH('/admin/update-post/{id}', 'admin\AdminPostController@update');
+Route::get('bai-hoc/{big_group}/{group}/{link}', 'admin\AdminPostController@show')->name('detail.post');
+
+Route::post('/post/comment-create', 'comment\CommentPostController@store')->name('post-comment-create');
+Route::post('/post/comment-delete', 'comment\CommentPostController@destroy');
+
+Route::get('/gioi-thieu', function () {
+    return view('about');
+});

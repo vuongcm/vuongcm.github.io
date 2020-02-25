@@ -20,6 +20,7 @@ class EditUsersTable extends Migration
             //$table->string('gender')->after('username');
             //$table->string('lastname')->after('username');
             //$table->string('firstname')->after('lastname');
+            //$table->string('avatar')->nullable()->after('email');
         });
     }
 

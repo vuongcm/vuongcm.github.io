@@ -151,11 +151,17 @@ select:focus {
 	outline-style: dotted;
 	outline-width: 1px;
 }
-.icon-destination:before {
-  color: inherit;
+.icon-font{
+    font-size: inherit;
 }
 .icon-font-cr{
     font-size: 22px;
+}
+.icon-destination:before{
+    color: inherit;
+}
+.icon-cuisine:before,.icon-des-1:before,.icon-des-2:before,.icon-des-3:before,.icon-des-4:before{
+    color: inherit;
 }
 .input-st1{
     border: none;
@@ -977,7 +983,7 @@ select:focus {
                 border-radius: 10px;
                 flex-direction: column;
                 h3{
-                    font-size: 14px;
+                    font-size: 11px;
                     margin-bottom: 0;
                     margin-top: 0;
                     font-weight: 600;
@@ -988,7 +994,7 @@ select:focus {
                     }
                 }
                 p{
-                    font-size: 12px;
+                    font-size: 11px;
                 }
             }
             &:hover{
@@ -1080,6 +1086,10 @@ select:focus {
         opacity: 0;
         @include smooth(.2s);
         bottom: 135%;
+        left: 50%;
+        @include translateX(-50%);
+        width: max-content;
+        max-width: 320px;
         box-shadow: 0px 1px 3px 2px rgba(0,0,0,.13);
         b{
             display: inline-block;
@@ -1313,12 +1323,6 @@ select:focus {
         flex-wrap: nowrap;
         position: absolute;
         bottom: 80px;
-        .tooltip{
-            &>span{
-                @include translateX(-50%);
-                left: 17px;
-            }
-        }
     }
     .btn-st2{
         color: $btn-text-color-st1;
@@ -1359,14 +1363,8 @@ select:focus {
             }
         }
         span{
-            left: 50%;
-            //box-shadow: none;
             background-color: $higlight-color;
             color: #fff;
-            width: 300px;
-            max-width: 90vw;
-
-             @include translateX(-50%);
             &:after{
                 background-color: $higlight-color;
                 box-shadow: none;
@@ -1392,14 +1390,8 @@ select:focus {
                 }
             }
             span{
-                left: 50%;
-                //box-shadow: none;
                 background-color: $higlight-color;
                 color: #fff;
-                //width: 100%;
-                max-width: 310px;
-
-                 @include translateX(-50%);
                 &:after{
                     background-color: $higlight-color;
                     box-shadow: none;
@@ -1488,8 +1480,6 @@ select:focus {
                             font-size: 35px;
                         }
                         &>span{
-                            @include translateX(-50%);
-                            left: 20px;
                             bottom: calc(100% + 10px);
                         }
                     }
@@ -1687,14 +1677,14 @@ select:focus {
 }
 .day-trip{
     position: relative;
-    width: 60px;
+    width: 52px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     span{
         position: absolute;
         text-align: center;
-        font-size: 9px;
+        font-size: 8px;
         text-transform: uppercase;
         color: $higlight-color;
         font-weight: 500;

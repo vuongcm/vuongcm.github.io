@@ -103,10 +103,6 @@
 			&>.icon-font{
 				font-size: 40px;
 			}
-			&>span{
-				@include translateX(-50%);
-				left: 19px;
-			}
 		}
 	}
 	.paragraph{
@@ -444,36 +440,37 @@
 	flex-wrap: wrap;
 	padding-left: 15px;
 	padding-right: 15px;
-	.toggle-day{
-		&>div{
-			display: inline-flex;
-			padding-left: 25px;
-			padding-right: 25px;
-			justify-content: space-between;
-			align-items: center;
+	
+	.detail-day{
+		margin-top: 30px;
+	}
+}
+.toggle-day{
+	&>div{
+		display: inline-flex;
+		padding-left: 25px;
+		padding-right: 25px;
+		justify-content: space-between;
+		align-items: center;
+		.icon-font{
+			margin-right: 10px;
+			font-size: 12px;
+			color: $higlight-color;
+		}
+		.link-st3{
+			font-size: 14px;
+		}
+		&:hover{
 			.icon-font{
-				margin-right: 10px;
-				font-size: 12px;
 				color: $higlight-color;
 			}
 			.link-st3{
-				font-size: 14px;
-			}
-			&:hover{
-				.icon-font{
-					color: $higlight-color;
-				}
-				.link-st3{
-					color: $higlight-color;
-					&:after{
-						background-color: $higlight-color;
-					}
+				color: $higlight-color;
+				&:after{
+					background-color: $higlight-color;
 				}
 			}
 		}
-	}
-	.detail-day{
-		margin-top: 30px;
 	}
 }
 .detail-day{
@@ -594,9 +591,6 @@
 	display: inline-flex;
 	justify-content: flex-start;
 	align-items: center;
-	margin-right: 15px;
-	padding-right: 10px;
-	padding-left: 10px;
 	.icon-font{
 		font-size: 18px;
 		margin-right: 5px;
@@ -617,11 +611,9 @@
 	.tooltip{
 		opacity: 1;
 		.icon-font{
-			font-size: 18px;
+			font-size: 14px;
 		}
 		&>span{
-			width: 200px;
-			left: calc(-100px + 50%);
 			bottom: 150%;
 		}
 	}
@@ -885,7 +877,7 @@
 	//align-items: flex-start;
 	padding-left: 5px;
 	padding-right: 5px;
-	.col-xlg-4{
+	.col-xlg-4, .col-xlg-6{
 		padding: 10px;
 		&>div{
 			display: flex;
@@ -1158,12 +1150,6 @@
 					color: $higlight-color;
 					border-color: $higlight-color;
 				}
-			}
-		}
-		.tooltip{
-			span{
-				@include translateX(-50%);
-				left: 15px;
 			}
 		}
 	}

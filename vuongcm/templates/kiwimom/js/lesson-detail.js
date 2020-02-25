@@ -1,16 +1,4 @@
 $(document).ready(function() {
-	$('.comment-container form .avatar').height($('.comment-container form .avatar').width());
-	$('.comment-container .comment .avatar').height($('.comment-container .comment .avatar').width());
-	$('.comment-container #inputCmt').outerHeight($('.comment-container form .avatar').height());
-	$(window).bind('resize', function(){
-        heightDetails = $('.content .preview').height() - $('.content .product-title').height();
-		$('.comment-container .avatar').height($('.comment-container .avatar').width());
-		$('.comment-container #inputCmt').outerHeight($('.comment-container .avatar').height());
-		$('.comment-container .comment .avatar').height($('.comment-container .comment .avatar').width());
-    });
-
-
-
 // Hiệu ứng + - slide
 	$('#detail-lesson').css('min-height','25vh');
 	if ($('.togg').closest('.about').children('.content').css('display') == 'none') {

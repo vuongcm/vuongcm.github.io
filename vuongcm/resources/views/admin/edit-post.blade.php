@@ -17,16 +17,60 @@
             <input type="hidden" name="id" value="{{ $post->id }}">
             <div class="row">
                 <div class="col-lg-3">
+                    <h3>Big group:</h3>
+                </div>
+                <div class="col-lg-9">
+                    <div class="big-gr-box">
+                    @if($post->big_group == '1-6-tuoi')
+                        <input type="hidden" name="big_group" value="1-6-tuoi">
+                        <span>1-6 tuổi</span>
+                    @elseif($post->big_group == '0-1-tuoi')
+                        <input type="hidden" name="big_group" value="0-1-tuoi">
+                        <span>0-1 tuổi</span>
+                    @else
+                        <input type="hidden" name="big_group" value="thai-giao">
+                        <span>Thai giáo</span>
+                    @endif
+                        <ul>
+                            <li><a href="javascript:;" data-value="1-6-tuoi">1-6 tuổi</a></li>
+                            <li><a href="javascript:;" data-value="0-1-tuoi">0-1 tuổi</a></li>
+                            <li><a href="javascript:;" data-value="thai-giao">Thai giáo</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
                     <h3>Group:</h3>
                 </div>
                 <div class="col-lg-9">
                     <select name="group" required>
+                    @if($post->big_group == '1-6-tuoi')
                         <option value="ngon-ngu-nhan-thuc" @if($post->group == 'ngon-ngu-nhan-thuc') {{'selected'}} @endif>Ngôn ngữ & Nhận thức</option>
                         <option value="logic-toan-hoc" @if($post->group == 'logic-toan-hoc') {{'selected'}} @endif>Logic & Toán học</option>
                         <option value="van-dong" @if($post->group == 'van-dong') {{'selected'}} @endif>Vận động</option>
-                        <option value="am-nhac-nghe-thuat" @if($post->group == 'am-nhac-nghe-thuat') {{'selected'}} @endif>Âm nhạc & Nghệ thuật</option>
-                        <option value="ky-nang-song" @if($post->group == 'ky-nang-song') {{'selected'}} @endif>Kỹ năng sống</option>
+                        <option value="nghe-thuat" @if($post->group == 'nghe-thuat') {{'selected'}} @endif>Nghệ thuật</option>
+                        <option value="ky-nang" @if($post->group == 'ky-nang') {{'selected'}} @endif>Kỹ năng</option>
                         <option value="khoa-hoc" @if($post->group == 'khoa-hoc') {{'selected'}} @endif>Khoa học</option>
+                    @elseif($post->big_group == '0-1-tuoi')
+                        <option value="van-dong" @if($post->group == 'van-dong') {{'selected'}} @endif>Vận động</option>
+                        <option value="giac-quan" @if($post->group == 'giac-quan') {{'selected'}} @endif>Giác quan</option>
+                        <option value="ngon-ngu" @if($post->group == 'ngon-ngu') {{'selected'}} @endif>Ngôn ngữ</option>
+                        <option value="nhan-thuc" @if($post->group == 'nhan-thuc') {{'selected'}} @endif>Nhận thức</option>
+                        <option value="tinh-cam-xa-hoi" @if($post->group == 'tinh-cam-xa-hoi') {{'selected'}} @endif>Tình cảm xã hội</option>
+                        <option value="nghe-thuat" @if($post->group == 'nghe-thuat') {{'selected'}} @endif>Nghệ thuật</option>
+                    @else
+                        <option value="cam-xuc" @if($post->group == 'cam-xuc') {{'selected'}} @endif>TG cảm xúc</option>
+                        <option value="am-nhac" @if($post->group == 'am-nhac') {{'selected'}} @endif>TG âm nhạc</option>
+                        <option value="ngon-ngu" @if($post->group == 'ngon-ngu') {{'selected'}} @endif>TG ngôn ngữ</option>
+                        <option value="dinh-duong" @if($post->group == 'dinh-duong') {{'selected'}} @endif>TG dinh dưỡng</option>
+                        <option value="van-dong" @if($post->group == 'van-dong') {{'selected'}} @endif>TG vận động</option>
+                        <option value="voi-bo" @if($post->group == 'voi-bo') {{'selected'}} @endif>TG với bố</option>
+                        <option value="my-hoc" @if($post->group == 'my-hoc') {{'selected'}} @endif>TG mỹ học</option>
+                        <option value="anh-sang" @if($post->group == 'anh-sang') {{'selected'}} @endif>TG ánh sáng</option>
+                        <option value="y-niem" @if($post->group == 'y-niem') {{'selected'}} @endif>TG bằng ý niệm</option>
+                        <option value="tri-thuc" @if($post->group == 'tri-thuc') {{'selected'}} @endif>TG tri thức</option>
+                    @endif
                     </select>
                 </div>
             </div>
@@ -203,6 +247,52 @@
             }
         });
         // Tạo ứng dụng chèn nội dung
+                $('.big-gr-box>span').click(function(){
+            $(this).next('ul').toggle();
+        });
+        $('body').click(function(e){
+            if (!$('.big-gr-box').is(e.target) && $('.big-gr-box').has(e.target).length === 0) {
+                $('.big-gr-box>ul').hide();
+            }
+        });
+        $('.big-gr-box>ul a').click(function(){
+            let thisVal = $(this).attr('data-value');
+            $('.big-gr-box>input').val(thisVal);
+            $('.big-gr-box>span').text($(this).text());
+            if(thisVal == '1-6-tuoi'){
+                $(`select[name="group"]`).html(`
+                    <option value="ngon-ngu-nhan-thuc">Ngôn ngữ & Nhận thức</option>
+                    <option value="logic-toan-hoc">Logic & Toán học</option>
+                    <option value="van-dong">Vận động</option>
+                    <option value="nghe-thuat">Nghệ thuật</option>
+                    <option value="ky-nang">Kỹ năng</option>
+                    <option value="khoa-hoc">Khoa học</option>
+                    `);
+            }else if(thisVal == '0-1-tuoi'){
+                $(`select[name="group"]`).html(`
+                    <option value="van-dong">Vận động</option>
+                    <option value="giac-quan">Giác quan</option>
+                    <option value="ngon-ngu">Ngôn ngữ</option>
+                    <option value="nhan-thuc">Nhận thức</option>
+                    <option value="tinh-cam-xa-hoi">Tình cảm xã hội</option>
+                    <option value="nghe-thuat">Nghệ thuật</option>
+                    `);
+            } else{
+                $(`select[name="group"]`).html(`
+                    <option value="cam-xuc">TG cảm xúc</option>
+                    <option value="am-nhac">TG âm nhạc</option>
+                    <option value="ngon-ngu">TG ngôn ngữ</option>
+                    <option value="dinh-duong">TG dinh dưỡng</option>
+                    <option value="van-dong">TG vận động</option>
+                    <option value="voi-bo">TG với bố</option>
+                    <option value="my-hoc">TG mỹ học</option>
+                    <option value="anh-sang">TG ánh sáng</option>
+                    <option value="y-niem">TG bằng ý niệm</option>
+                    <option value="tri-thuc">TG tri thức</option>
+                    `);
+            }
+            $('.big-gr-box>ul').hide();
+        });
         $('#add-content').click(function(){
             let addTypeVal = $('.add-type select').val();
             if(addTypeVal == 'para'){

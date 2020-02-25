@@ -195,12 +195,6 @@
 		padding-right: 0;
 		padding-left: 0;
 		justify-content: flex-start;
-		.tooltip{
-			span{
-				left: 16px;
-				@include translateX(-50%);
-			}
-		}
 	}
 }
 .price-box{
@@ -468,12 +462,6 @@
 			margin-right: 15px;
 			color: #888;
 		}
-		.tooltip{
-			&>span{
-				left: 50%;
-				@include translateX(-50%);
-			}
-		}
 	}
 }
 .right-trip-st4{
@@ -579,8 +567,6 @@
 		color: #c3bdbd;
 	}
 	&>span{
-		left: 50%;
-		@include translateX(-50%);
 		color: #fff;
 		background-color: $higlight-color;
 		&:after{
@@ -780,10 +766,6 @@
 				}
 			}
 			span{
-				left: 50%;
-				@include translateX(-50%);
-				width: 100%;
-				max-width: 380px;
 				color: #fff;
 				background-color: $higlight-color;
 				&:after{

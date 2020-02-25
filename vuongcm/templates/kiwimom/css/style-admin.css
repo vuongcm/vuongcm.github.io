@@ -1,9 +1,25 @@
 .container-admin .col-lg-6{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	margin-top: 15px;
 	margin-bottom: 15px;
+}
+.list-to-list .col-lg-12{
+	text-align: center;
+}
+.list-to-list h3{
+	font-size: 20px;
+	margin-bottom: 15px;
+	margin-top: 30px;
+}
+.list-to-list .col-lg-12 ul{
+	padding-left: 0;
+
+}
+.list-to-list .col-lg-12 ul li{
+	margin-bottom: 10px;
 }
 .container-admin .col-lg-6 .btn-warning{
 	color: #fff;
@@ -143,6 +159,12 @@
 	padding: 10px;
 
 }
+.admin-list-post table td>a{
+	color: inherit;
+}
+.admin-list-post table td>a:hover{
+	opacity: .8;
+}
 .admin-list-post .container h2{
 	font-size: 20px;
 	margin-top: 30px;
@@ -227,5 +249,57 @@
 	color: #fff;
 }
 #add-content:hover{
+	opacity: .8;
+}
+.big-gr-box{
+	width: 100%;
+	border: 1px solid rgb(169, 169, 169);
+	position: relative;
+	height: 32px;
+}
+.big-gr-box:after{
+	display: inline-block;
+	position: absolute;
+	top: 14px;
+	right: 5px;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+.big-gr-box>span{
+	padding-left: 10px;
+	padding-right: 10px;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.big-gr-box ul{
+	position: absolute;
+	top: 100%;
+	left: -1px;
+	width: calc(100% + 2px);
+	z-index: 10;
+	margin-bottom: 0;
+	padding-left: 0;
+	background-color: #fff;
+	border: 1px solid #007bff;
+	display: none;
+}
+.big-gr-box ul>li a{
+	height: 35px;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	color: inherit;
+}
+.big-gr-box ul>li a:hover{
 	opacity: .8;
 }

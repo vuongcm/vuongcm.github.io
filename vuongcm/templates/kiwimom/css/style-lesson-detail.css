@@ -7,10 +7,33 @@
 #detail-lesson .content .container #text {
 	width: 100%;
 }
-#detail-lesson .content .container #text h3 {
-	font-size: calc(var(--fontSize) * 2.5);
-	text-align: center;
-	font-weight: bold;
+.lesson-title{
+  font-size: calc(var(--fontSize) * 2.5);
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+#detail-lesson .content .container #text h3,#detail-lesson .content .container #text h4,#detail-lesson .content .container #text h5,#detail-lesson .content .container #text h6{
+  font-size: calc(var(--fontSize) * 2);
+  text-align: left;
+  font-weight: 500;
+}
+#detail-lesson .content .container #text h3{
+  font-size: calc(var(--fontSize) * 2);
+}
+#detail-lesson .content .container #text h4{
+  font-size: calc(var(--fontSize) * 1.8);
+}
+#detail-lesson .content .container #text h5{
+  font-size: calc(var(--fontSize) * 1.6);
+}
+#detail-lesson .content .container #text h6{
+  font-size: calc(var(--fontSize) * 1.4);
+}
+#detail-lesson .content .container #text img{
+  width: 70%;
+  display: block;
+  margin: 15px auto;
 }
 .search-container-mini {
   display: flex;
@@ -156,7 +179,7 @@
   .content .view p {
 	  font-size: 9px;
 	}
-	#detail-lesson .content .container #text h3 {
+	.lesson-title {
 		font-size: 18px;
 	}
 }
@@ -169,34 +192,44 @@
   border: 1px solid #f3e8e8;
   position: relative;
 }
-.comment-container .avatar {
-  width: 12%;
-  background: green url(../img/avatar.jpg) no-repeat center;
-  background-size: cover;
-  margin-bottom: .5rem;
-  border: 1px solid #47c3cf;
+.comment-container form{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
-.comment-container #inputCmt {
-  width: 85%;
-  padding: .5rem;
-  display: inline-block;
-  position: absolute;
-  top: .5rem;
-  left: 14%;
-  outline: none;
-  border-color: #f3e8e8;
-  font-size: calc(var(--fontSize) * 1.5);
+.avatar>div {
+  width: 100%;
+  height: 100%;
+  background-color: #775c29;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #062c52;
+}
+.avatar>img{
+  width: 100%;
+  height: 100%;
+}
+.comment-container form .avatar{
+  width: 80px;
+  height: 80px;
 }
 .comment-container h4 {
   display: inline-block;
   font-size: calc(var(--fontSize) * 1.5);
-  margin-left: 14%;
+  margin-left: 5px;
 }
-.comment-container form h4 a {
+.comment-container>h4{
+  margin-top: 15px;
+}
+.comment-container> h4 a {
   color: #fc840e !important;
   cursor: pointer;
 }
-.comment-container form h4 a:hover {
+.comment-container>h4 a:hover {
   opacity: .8;
 }
 #ratingCmt {
@@ -208,11 +241,12 @@
   display: flex;
   align-items: center;
   margin-bottom: .5rem;
+  margin-top: .5rem;
 }
 .comment-container .evaluate h4 {
   padding: 0;
   margin: 0;
-  margin-left: 14%;
+  margin-left: 95px;
 }
 #ratingCmt>input {
   display:none;
@@ -240,10 +274,10 @@
   color: #FFED85;
 }
 .comment-list {
-  margin: 2.2rem 0 .5rem;
+  margin: 1.6rem 0 .5rem;
 }
 .comment-list h4 {
-  margin-left: 0;
+  margin-left: 5px;
   font-weight: bold;
 }
 .comment-list .comment {
@@ -252,19 +286,19 @@
   justify-content: space-between;
 }
 .comment-list .comment>div:first-child {
-  width: 15%;
+  width: 100px;
   display: inline-block;
 }
 .comment-list .comment>div:first-child>.avatar {
-  width: 50%;
+  width: 60px;
+  height: 60px;
   margin: 0 auto;
-  display: block;
 }
 .comment-list .comment>div:first-child>.nickName {
   width: 100%;
   text-align: center;
   font-size: calc(var(--fontSize) * 1.6);
-  font-weight: bold;
+  font-weight: 600;
   margin: .2rem 0;
 }
 .comment-list .comment>div:first-child>.dateAgo {
@@ -274,7 +308,7 @@
   opacity: .7;
 }
 .comment-list .comment>div:last-child {
-  width: 83%;
+  width: calc(100% - 115px);
   height: 100%;
   display: inline-block;
 }
@@ -292,7 +326,34 @@
 .checked {
 	color: #fc840e;
 }
+.inputCmt {
+  flex-grow: 1;
+  padding: .5rem;
+  display: block;
+  outline: none!important;
+  margin-left: 15px;
+  border: 1px solid #aaa;
+  font-size: calc(var(--fontSize) * 1.5);
+  color: #333;
+}
+.comment-list>.wrap-comments>.wrap-comments{
+  display: none;
+}
+.comment-list .comment.reply,.reply-cmt{
+  margin-left: 60px;
+}
+.reply-cmt{
+  display: none;
+}
 @media only screen and (max-width: 992px) {
+  #detail-lesson .content .container #text h3,#detail-lesson .content .container #text h4{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  #detail-lesson .content .container #text h5,#detail-lesson .content .container #text h6{
+    font-size: 14px;
+    font-weight: 600;
+  }
 	.comment-container {
     float: none;
     width: 100%;
@@ -309,7 +370,7 @@
 	.comment-list .comment>div:first-child>.nickName {
     font-size: 11px;
   }
-  .comment-container #inputCmt {
+  .inputCmt {
     font-size: 11px;
   }
   .comment-container h4 {
@@ -320,5 +381,21 @@
   }
   .comment-list .comment>div:first-child>.dateAgo {
     font-size: 9px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #detail-lesson .content .container #text img{
+    width: 100%;
+  }
+  .comment-list .comment.reply,.reply-cmt{
+    margin-left: 30px;
+  }
+}
+@media only screen and (max-width: 479px){
+  .comment-list .comment>div:first-child {
+      width: 70px;
+  }
+  .comment-list .comment>div:last-child {
+      width: calc(100% - 80px);
   }
 }

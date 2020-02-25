@@ -13,10 +13,10 @@ body{
     min-height: 100vh;
 }
 input:focus {
-    outline: none !important;
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    box-shadow: none !important;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
     border-color: #ced4da !important;
 }
 ul, li {
@@ -56,12 +56,40 @@ article h2 {
     font-family: "Times New Roman", Times, serif;
     font-weight: bold;
 }
-
+input, textarea{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+}
 /* END DEMO */
 .error-notification{
     color: #f50e0e;
     padding-bottom: 5px;
     padding-top: 5px;
+}
+.btn-st1{
+    border-radius: 999px;
+    color: #fff;
+    background-color: #1e7e34;
+    border-color: #1c7430;
+    min-width: 100px;
+}
+.btn-st1:hover{
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+.btn-st2{
+    border-radius: 999px;
+    color: #FFFFFF;
+    background-color: #FC840E;
+    border-color: transparent;
+    min-width: 100px;
+}
+.btn-st2:hover{
+    background-color: #f59a40;
 }
 /* style menu 1 */
 .loginBar {
@@ -247,7 +275,7 @@ article h2 {
     display: none;
     position: absolute;
     top: 100%;
-    left: -250%;
+    left: -188%;
     margin: 0;
     padding: 0;
     z-index: 2;
@@ -425,7 +453,25 @@ article h2 {
     width: 100%;
     display: none;
 }
+.modal-true .modal-body .btn{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.modal-true .modal-body .row{
+    text-align: center;
+    justify-content: center;
+}
+.modal-true .modal-body h4{
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.hidden-open-modal{
+    display: none;
+}
 @media only screen and (max-width: 767px) {
+    .mg-top-mobile-0{
+        margin-top: 0!important;
+    }
     #nav-2 {
         position: fixed;
         top: 0;
@@ -481,7 +527,7 @@ article h2 {
         display: none;
         position: fixed;
         top: 0;
-        z-index: 2;
+        z-index: 15;
     }
     #test {
         background-color: #fff;

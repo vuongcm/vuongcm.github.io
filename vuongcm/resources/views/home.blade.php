@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-<article id="article-1"> <!--Slide-->
+<article id="article-1" class="mg-top-mobile-0"> <!--Slide-->
         <div id="mycarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#mycarousel" data-slide-to="0" class="active"></li>

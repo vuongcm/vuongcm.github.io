@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	//$('body').css('--bodyWidth',`${bodyWidth}px`);
 	let bodyWidth = $('body').width();
+	if($('.lazyload').length>0){jQuery(".lazyload").lazyload({effect:"fadeIn"});}
 	//===========header===================
 	$('.promo-close').click(function(){
 		$(this).parent('.promo-crisis').addClass('close-display');
@@ -13,7 +14,23 @@ $(document).ready(function() {
 	$('header').next('section').css('padding-top',`${headerHeight}px`);
 	$('.bg-parallax').css('background-position-y',`${headerHeight}px`);
 	let pageScroll =0;
+	let gridCt4 = 460;
 	$(window).bind('scroll', function(){
+		if(bodyWidth >= 1350){
+	        if($('.section-grid-dt3').length){
+	        	if($(this).scrollTop() > ($('.grid-ct5').offset().top + 30)){
+	        		$('.grid-ct3').css({
+	        			'top':'60px'
+	        		});
+	        		$('.grid-ct4').css({
+	        			'top':`${gridCt4}px`
+	        		}).addClass('scroll-active');
+	        	} else{
+	        		$('.grid-ct3').removeAttr('style');
+	        		$('.grid-ct4').removeAttr('style').removeClass('scroll-active');
+	        	}
+	        }
+		}
 		if (bodyWidth > 991) {
 			if($(this).scrollTop() > 250){
 				$('.promo-crisis').slideUp(250);
@@ -162,10 +179,12 @@ $(document).ready(function() {
 			if(boxHide.css('max-height') == 'none'){
 				$(this).parent('.togg-wrap').children('.arrow-radius').addClass('rotage180');
 				$(this).parent('.togg-wrap').children('.link-st3').text('Less');
+				$(this).parent('.togg-wrap').css('z-index','0');
 			} else{
 				$(this).parent('.togg-wrap').children('.arrow-radius').removeClass('rotage180');
 				$(this).parent('.togg-wrap').children('.link-st3.btn-more-ex').text('Click to view more experiences');
 				$(this).parent('.togg-wrap').children('.link-st3.btn-more-food').text('Click to view more Vietnamese Foods');
+				$(this).parent('.togg-wrap').css('z-index','3');
 			}
 		});
 	}
@@ -349,7 +368,6 @@ $(document).ready(function() {
 	//carousel-st1
 	if ($('.wrap-slide-st1').length > 0) {
 		$(`.wrap-slide-st1 .gallery`).slick({
-			lazyLoad: 'ondemand',
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			infinite: true,
@@ -359,6 +377,22 @@ $(document).ready(function() {
 	        nextArrow: `.wrap-slide-st1 .arrow-right`
 	    });
 	    $('.wrap-slide-st1 .item>a:first-child').height($('.wrap-slide-st1 .img-origin').height());
+	    $(`.wrap-slide-st1 .synch-carousels`).one('mousedown',function(){
+		    $(`.wrap-slide-st1 .item img`).each(function(){
+		    	if($(this).attr('src') == '#'){
+		    		$(this).attr('src',$(this).attr('data-img'));
+		    	}
+		    });
+		});
+		if(bodyWidth <= 1199){
+            $(`.wrap-slide-st1 .synch-carousels`).one("swipe", function(e) {
+                $(`.wrap-slide-st1 .item img`).each(function(){
+			    	if($(this).attr('src') == '#'){
+			    		$(this).attr('src',$(this).attr('data-img'));
+			    	}
+			    });
+            });
+        }
 	}
 	//carousel-st2
 	if ($('.wrap-slide-st2').length > 0) {
@@ -562,35 +596,87 @@ $(document).ready(function() {
 		  ]
 		});
 	}
-	//gallery-img
-	if ($('.wrap-gallery-img').length > 0) {
+//gallery-img
+	if($('.wrap-gallery-img').length){
+		for(let i=0; i<$('.synch-desti').length; i++){
+			$(`.open-gallery-des-${i}`).click(function(){
+				$('.modal-container').removeClass('close-display');
+				$('.wrap-gallery-img').css({
+					'z-index':'210',
+					'visibility':'visible'
+				});
+				$(`.wrap-gallery-img .synch-carousels`).removeClass('open-block');
+				$(`#synch-desti-${i}`).addClass('open-block');
+				//$(`#synch-desti-${i} .gallery`).slick("slickGoTo", 0);
+				$(`#synch-desti-${i} .gallery`).slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+		            fade: true,
+					lazyLoad: 'ondemand',
+					infinite: true,
+					adaptiveHeight: true,
+					useTransform: false,
+			        prevArrow: `#synch-desti-${i} .arrow-left`,
+			        nextArrow: `#synch-desti-${i} .arrow-right`
+				});
+			});
+		}
+		
+	}
+	$('.wrap-gallery-img .btn-close').click(function(){
+		$('.wrap-gallery-img').css({
+			'z-index':'-5',
+			'visibility':'hidden'
+		});
+		$(this).addClass('close-display');
+		$(`.synch-desti .gallery .slick-track`).closest('.gallery').slick('unslick');
+
+	});
+	if ($('.wrap-gallery-img #carousel-img-cr').length > 0) {
 		$('.open-img').click(function(){
 			$('.modal-container').removeClass('close-display');
 			$('.wrap-gallery-img').css({
 				'z-index':'210',
 				'visibility':'visible'
 			});
-			$(`.wrap-gallery-img .gallery`).slick("slickGoTo", 0);
+			$(`.wrap-gallery-img .synch-carousels`).removeClass('open-block');
+			$(`#carousel-img-cr`).addClass('open-block');
+			//$(`#carousel-img-cr .gallery`).slick("slickGoTo", 0);
+			$(`#carousel-img-cr .gallery`).slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+	            fade: true,
+				lazyLoad: 'ondemand',
+				infinite: true,
+				adaptiveHeight: true,
+				useTransform: false,
+		        prevArrow: `#carousel-img-cr .arrow-left`,
+		        nextArrow: `#carousel-img-cr .arrow-right`
+		    });
 		});
-		$('.wrap-gallery-img .btn-close').click(function(){
+		$('.open-img-modal').click(function(){
+			$('.modal-container').removeClass('close-display');
+			$('.wrap-gallery-img .btn-close').removeClass('close-display');
 			$('.wrap-gallery-img').css({
-				'z-index':'-5',
-				'visibility':'hidden'
+				'z-index':'210',
+				'visibility':'visible'
 			});
+			$(`.wrap-gallery-img .synch-carousels`).removeClass('open-block');
+			$(`#carousel-img-cr`).addClass('open-block');
+			//$(`#carousel-img-cr .gallery`).slick("slickGoTo", 0);
+			$(`#carousel-img-cr .gallery`).slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+	            fade: true,
+				lazyLoad: 'ondemand',
+				infinite: true,
+				adaptiveHeight: true,
+				useTransform: false,
+		        prevArrow: `#carousel-img-cr .arrow-left`,
+		        nextArrow: `#carousel-img-cr .arrow-right`
+		    });
 		});
-		$(`.wrap-gallery-img .gallery`).slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-            fade: true,
-			lazyLoad: 'ondemand',
-			infinite: true,
-			adaptiveHeight: true,
-			useTransform: false,
-	        prevArrow: `.wrap-gallery-img .arrow-left`,
-	        nextArrow: `.wrap-gallery-img .arrow-right`
-	    });
 	}
-
 	if ($('.wrap-slide-team').length > 0) {
 		if(bodyWidth >479){
 			$(`.wrap-slide-team .gallery`).slick({
@@ -658,10 +744,16 @@ $(document).ready(function() {
 		$('.modal-container').removeClass('close-display');
 		$('.modal-tour').removeClass('close-display');
 	});
+	$('.btn-modal-tour-2').click(function(){
+		$('.modal-container').removeClass('close-display');
+		$('.modal-tour-st2').removeClass('close-display');
+	});
 	$('.btn-close').click(function(){
 		$(this).closest('.modal, .modal-2, .video-modal').addClass('close-display');
 		$(this).closest('.modal').removeAttr('style');
-		$('.modal-container').addClass('close-display');
+		if(!$(this).parent('.wrap-gallery-img,.video-modal').length){
+			$('.modal-container').addClass('close-display');
+		}
 		if($('.video-modal').length){
 			$('#playvideo').attr('src', $('#playvideo').attr('src').replace('autoplay=1', 'autoplay=0'));
 	    }
@@ -1035,32 +1127,36 @@ $(document).ready(function() {
 		});
 	}
 	if($('.booking-step-class').length){
-		let number5 = $('.booking-step-class .btn-value').length;
-		for (let i=0; i<number5; i++){
-			$('.booking-step-class .btn-value').eq(i).click(function(){
-				if($(this).attr('class').search('checked') != -1){
-					$('.booking-step-class .btn-value').removeClass('checked');
-				} else{
-					$('.booking-step-class .btn-value').removeClass('checked');
-					$(this).addClass('checked');
-					if($('.booking-step-class').length == 2){
-						if(i<(number5/2)){
-							$('.booking-step-class .btn-value').eq(number5/2 + i).addClass('checked');
+		$('.booking-step-class .btn-value').click(function(){
+			$(this).toggleClass('checked');
+			if($('.order-choose').length){
+				let valueActive = $(this).children('b').text().toLowerCase();
+				let getBtn = $('.order-choose .row-choose');
+				for(let i=0; i < getBtn.length; i++){
+					if(getBtn.eq(i).find('.order-choose-info>div:first-child').text().toLowerCase() == valueActive){
+						if(getBtn.eq(i).find('.service-check-2')[0].checked){
+							getBtn.eq(i).removeClass('choosed');
+							getBtn.eq(i).find('.service-check-2')[0].checked = false;
+							getBtn.eq(i).find('label').removeClass('active');
 						} else{
-							$('.booking-step-class .btn-value').eq(i - number5/2).addClass('checked');
+							getBtn.eq(i).addClass('choosed');
+							getBtn.eq(i).find('.service-check-2')[0].checked = true;
+							getBtn.eq(i).find('label').addClass('active');
 						}
 					}
 				}
-				if($(this).closest('.value').find('.checked').length == 0){
-					$('.booking-step-class').find('.text b').html(`Approx Start Date`);
-					$('#creat-detail-modal .booking-step-class').find('select option').val('');
-				} else{
-					$('.booking-step-class').find('.text b').html($(this).children('b').text());
-					$('#creat-detail-modal .booking-step-class').find('select option').val($(this).children('b').text());
-				}
-				$(this).closest('.value').removeClass('open-block');
-			});
-		}
+			}
+			$('.booking-step-class select').html('');
+			let btnActive = $('.booking-step-class .btn-value.checked');
+			for(let i=0; i < btnActive.length; i++){
+				$('.booking-step-class select').append(`<option value="${btnActive.children('b').eq(i).text()}" selected></option>`);
+			}
+			if(btnActive.length == 0){
+				$('.booking-step-class .text b').html(`Tour Class`);
+			} else{
+				$('.booking-step-class .text b').html(`${btnActive.length} selected`);
+			}
+		});
 	}
 	/*===search cruise=====*/
 	if($('.booking-step-cruise').length){
@@ -1486,6 +1582,46 @@ $(document).ready(function() {
 		});
 		$('.facilities>a').click(function(){
 			$(this).next('ul').toggleClass('open-flex');
+		});
+	}
+
+	if($('.section-grid-dt3').length){
+		$('.group-head').click(function(){
+			$(this).next('.hidden-tablet').slideToggle(300);
+			$(this).toggleClass('active');
+		});
+		$('.group-ct1-1 .read-more-st3>.link-st3').click(function(){
+			let boxHide = $(this).parent('.read-more-st3').prev('.div-hidden');
+			boxHide.toggleClass('paragraph-show');
+			if(boxHide.css('max-height') == 'none'){
+				$(this).text('Less ...');
+				$(this).parent('.read-more-st3').css('z-index','0');
+			} else{
+				$(this).text('Read More ...');
+				$(this).parent('.read-more-st3').css('z-index','5');
+			}
+		});
+	}
+	if($('.modal-map').length){
+		$('.open-map-box').click(function(){
+			$('.modal-container').removeClass('close-display');
+			$('.modal-map').removeClass('close-display');
+		});
+	}
+	$('.btn-modal-tour-2').click(function(){
+		$('.modal-container').removeClass('close-display');
+		$('.modal-tour-st2').removeClass('close-display');
+	});
+	/*============detail-grid===============*/
+	if($('.order-box').length){
+		$('.row-choose').click(function(){
+			let btnValue = $(this).find('.order-choose-info>div:first-child').text().toLowerCase();
+			let getBtn = $('.booking-step-class .btn-value');
+			for(let i=0; i<getBtn.length; i++){
+				if(getBtn.eq(i).children('b').text().toLowerCase() == btnValue){
+					getBtn.eq(i).click();
+				}
+			}
 		});
 	}
 });

@@ -291,12 +291,6 @@
     		}
 		}
 	}
-	.tooltip{
-		span{
-			@include translateX(-50%);
-			left: 20px;
-		}
-	}
 }
 .cruise-container-st3{
 	.trip{

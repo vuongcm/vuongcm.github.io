@@ -23,19 +23,33 @@
     </div>
     <div class="container container-admin">
         <div class="row">
-            <div class="col-lg-6">
-            <a class="btn btn-warning" href="{{ route('list-post') }}">Danh sách bài viết</a>
+            <div class="col-lg-6 col-sm-12 list-to-list">
+                <h2>Bài viết</h2>
+                <div class="col-lg-12">
+                    <h3>Danh sách bài viết</h3>
+                    <ul>
+                        <li><a class="btn btn-info" href="{{ route('list-post', ['big_group' => 'thai-giao']) }}">Thai giáo</a></li>
+                        <li><a class="btn btn-info" href="{{ route('list-post', ['big_group' => '0-1-tuoi']) }}">0-1 tuổi</a></li>
+                        <li><a class="btn btn-info" href="{{ route('list-post', ['big_group' => '1-6-tuoi']) }}">1-6 tuổi</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <a class="btn btn-warning" href="{{ route('create-post') }}">Tạo bài viết mới</a>
+                </div>
             </div>
-            <div class="col-lg-6">
-                <a class="btn btn-warning" href="#">Danh sách video</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-            <a class="btn btn-warning" href="{{ route('create-post') }}">Tạo bài viết mới</a>
-            </div>
-            <div class="col-lg-6">
-                <a class="btn btn-warning" href="#">Upload video mới</a>
+            <div class="col-lg-6 col-sm-12 list-to-list">
+                <h2>Videos</h2>
+                <div class="col-lg-12">
+                    <h3>Danh sách videos</h3>
+                    <ul>
+                        <li><a class="btn btn-info" href="#">Thai giáo</a></li>
+                        <li><a class="btn btn-info" href="#">0-1 tuổi</a></li>
+                        <li><a class="btn btn-info" href="#">1-6 tuổi</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <a class="btn btn-warning" href="#">Upload video mới</a>
+                </div>
             </div>
         </div>
     </div>

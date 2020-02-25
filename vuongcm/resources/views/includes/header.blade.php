@@ -50,12 +50,9 @@
                         </div>
                     </a>
                     <ul class="sub-menu sub-menu-1">
-                        <li><a href="lesson.html#banner-lesson-1">NGÔN NGỮ <br>&<br> NHẬN THỨC</a></li>
-                        <li><a href="lesson.html#banner-lesson-2">LOGIC <br>&<br> TOÁN HỌC</a></li>
-                        <li><a href="lesson.html#banner-lesson-3">VẬN ĐỘNG</a></li>
-                        <li><a href="lesson.html#banner-lesson-4">ÂM NHẠC <br>&<br> NGHỆ THUẬT</a></li>
-                        <li><a href="lesson.html#banner-lesson-5">KỸ NĂNG<br> SỐNG</a></li>
-                        <li><a href="lesson.html#banner-lesson-6">KHOA HỌC</a></li>
+                        <li><a href="#">THAI GIÁO</a></li>
+                        <li><a href="#">0-1 TUỔI</a></li>
+                        <li><a href="#">1-6 TUỔI</a></li>
                     </ul>
                 </li>
                 <li>
@@ -66,12 +63,9 @@
                         </div>
                     </a>
                     <ul class="sub-menu sub-menu-2">
-                        <li><a href="videos.html#videos-1">NGÔN NGỮ <br>&<br> NHẬN THỨC</a></li>
-                        <li><a href="videos.html#videos-2">LOGIC <br>&<br> TOÁN HỌC</a></li>
-                        <li><a href="videos.html#videos-3">VẬN ĐỘNG</a></li>
-                        <li><a href="videos.html#videos-4">ÂM NHẠC <br>&<br> NGHỆ THUẬT</a></li>
-                        <li><a href="videos.html#videos-5">KỸ NĂNG<br> SỐNG</a></li>
-                        <li><a href="videos.html#videos-6">KHOA HỌC</a></li>
+                        <li><a href="#">THAI GIÁO</a></li>
+                        <li><a href="#">0-1 TUỔI</a></li>
+                        <li><a href="#">1-6 TUỔI</a></li>
                     </ul>
                 </li>
                 <li>
@@ -127,23 +121,17 @@
                     <li class="dropdown nav-item">
                         <a class="nav-link">BÀI HỌC</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="lesson.html#banner-lesson-1">NGÔN NGỮ & NHẬN THỨC</a>
-                            <a class="dropdown-item" href="lesson.html#banner-lesson-2">LOGIC & TOÁN HỌC</a>
-                            <a class="dropdown-item" href="lesson.html#banner-lesson-3">VẬN ĐỘNG</a>
-                            <a class="dropdown-item" href="lesson.html#banner-lesson-4">ÂM NHẠC & NGHỆ THUẬT</a>
-                            <a class="dropdown-item" href="lesson.html#banner-lesson-5">KỸ NĂNG SỐNG</a>
-                            <a class="dropdown-item" href="lesson.html#banner-lesson-6">KHOA HỌC</a>
+                            <a class="dropdown-item" href="#">THAI GIÁO</a>
+                            <a class="dropdown-item" href="#">0-1 TUỔI</a>
+                            <a class="dropdown-item" href="#">1-6 TUỔI</a>
                         </div>
                     </li>
                     <li class="dropdown nav-item">
                         <a class="nav-link">VIDEOS</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="videos.html#videos-1">NGÔN NGỮ & NHẬN THỨC</a>
-                            <a class="dropdown-item" href="videos.html#videos-2">LOGIC & TOÁN HỌC</a>
-                            <a class="dropdown-item" href="videos.html#videos-3">VẬN ĐỘNG</a>
-                            <a class="dropdown-item" href="videos.html#videos-4">ÂM NHẠC & NGHỆ THUẬT</a>
-                            <a class="dropdown-item" href="videos.html#videos-5">KỸ NĂNG SỐNG</a>
-                            <a class="dropdown-item" href="videos.html#videos-6">KHOA HỌC</a>
+                            <a class="dropdown-item" href="#">THAI GIÁO</a>
+                            <a class="dropdown-item" href="#">0-1 TUỔI</a>
+                            <a class="dropdown-item" href="#">1-6 TUỔI</a>
                         </div>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="shop.html">CỬA HÀNG</a></li>
