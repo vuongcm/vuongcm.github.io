@@ -133,6 +133,7 @@
 		font-size: 18px;
 		font-weight: 500;
 		margin-top: 0;
+		margin-bottom: 5px;
 	}
 	.cr-content{
 		span{
@@ -207,6 +208,26 @@
 		    .value, .value-2{
 		    	top: 100%;
 		    }
+		    .value{
+		    	.btn-value{
+		    		padding-left: 15px;
+		    		.ship{
+		    			margin-right: 5px;
+					    font-size: 12px;
+					    color: #d0b316;
+					    -webkit-transition: all .25s linear;
+					    -moz-transition: all .25s linear;
+					    -o-transition: all .25s linear;
+					    -ms-transition: all .25s linear;
+					    transition: all .25s linear;
+		    		}
+		    	}
+		    }
+		    .value-2{
+		    	max-height: 245px;
+    			overflow-y: scroll;
+    			overflow-x: hidden;
+		    }
 		}
 		.booking-st2{
 			border: 1px solid #aaa;
@@ -223,6 +244,61 @@
 		&:last-child{
 			color: #ff5722;
 			font-size: 11px;
+		}
+	}
+}
+@media (max-width: 991px) {
+	.section-grid-dt3.section-grid-cruise{
+		.grid-ct4{
+			grid-row: 4 / 5;
+			z-index: unset;
+			.box-check-rates{
+				padding-right: 15px;
+				padding-left: 15px;
+				.value-2, .value{
+					z-index: 10;
+				}
+			}
+		}
+		.grid-ct2{
+			grid-row: 5 / 6;
+
+		}
+	}
+}
+@media (max-width: 767px) {
+	.section-grid-dt3.section-grid-cruise{
+		.grid-ct1{
+			.group-ct1-1{
+				.head-trip{
+					.title-info{
+						width: 100%;
+						.title-h2{
+							min-height: unset;
+						}
+						.short-info-cruise{
+							flex-wrap: wrap;
+							.star-box{
+								margin-top: 5px;
+							}
+							.hotel-news{
+								width: 100%;
+								padding-left: 0;
+								padding-right: 0;
+								margin-top: 0;
+								span{
+									margin-top: 5px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.cr-content{
+		span{
+			margin-top: 5px;
 		}
 	}
 }

@@ -314,8 +314,27 @@ $(document).ready(function() {
 	}
 	if($('.section-grid-dt3').length){
 		$('.group-head').click(function(){
-			$(this).next('.hidden-tablet').slideToggle(300);
+			let thisHidden = $(this).next('.hidden-tablet');
+			thisHidden.slideToggle(300);
 			$(this).toggleClass('active');
+			if(thisHidden.find('.wrap-slide-st9').length){
+				thisHidden.find('.wrap-slide-st9 .gallery').slick('unslick');
+				if($(this).attr('class').search('active') != -1){
+					for(let i=1; i<=thisHidden.find('.wrap-slide-st9').length; i++){
+						thisHidden.find('.wrap-slide-st9 .gallery').slick({
+							dots: true,
+							dotsClass: 'wrap-dots',
+							infinite: false,
+							slidesToShow: 1,
+							useTransform: false,
+							//adaptiveHeight: true,
+							prevArrow: `#slide-st9-${i} .arrow-left`,
+					        nextArrow: `#slide-st9-${i} .arrow-right`
+						});
+					}
+					
+				}
+			}
 		});
 		$('.group-ct1-1 .read-more-st3>.link-st3').click(function(){
 			let boxHide = $(this).parent('.read-more-st3').prev('.div-hidden');
