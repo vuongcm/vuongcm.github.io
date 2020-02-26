@@ -176,6 +176,19 @@
 			.col-xlg-12{
 				padding-left: 0;
 				padding-right: 0;
+				&>a{
+					span{
+						letter-spacing: 0.8px;
+						font-size: 10px;
+					}
+				}
+			}
+			.panel-st2{
+				&>div{
+					font-size: 11px;
+					letter-spacing: 0;
+					line-height: 1.5;
+				}
 			}
 		}
 	}
@@ -266,32 +279,19 @@
 					h3{
 						margin-top: 10px;
 						margin-bottom: 10px;
+						text-transform: uppercase;
 					}
 					.price-trip-box{
 						width: max-content;
 					}
 				}
-			}
-			.panel{
-				&>article{
-					&>h4,h3{
-						font-size: 14px;
-						padding-right: 0;
-						padding-left: 0;
-					}
+				button{
+					font-size: 34px;
+					color: #555;
+					font-weight: 100;
 				}
-				.head-pn{
-					span{
-						font-size: 12px;
-					}
-					&>p{
-						font-size: 12px;
-					}
-				}
-				.paragraph{
-					padding-right: 0;
-					padding-left: 0;
-					font-size: 12px;
+				&:hover{
+					background-color: transparent;
 				}
 			}
 			&:last-child{
@@ -299,27 +299,19 @@
 					border-bottom: none;
 				}
 			}
+			&>a.active{
+				button{
+					ms-transform: unset;
+			    	-webkit-transform: unset;
+			    	transform: unset;
+				}
+				
+			}
 		}
 	}
 }
 @media (min-width: 1350px) {
-	.iti-routes-box{
-		.wrap-faq{
-			width: 100%;
-			.order-day{
-				.panel{
-					.experience-suplier{
-						.experience-img{
-							width: 30%;
-						}
-						.experience-content{
-							width: 70%;
-						}
-					}
-				}
-			}
-		}
-	}
+
 }
 @media (max-width: 991px) {
 	.section-grid-dt3.section-grid-cruise{
@@ -334,7 +326,20 @@
 		}
 		.grid-ct2{
 			grid-row: 5 / 6;
-
+			.group-ct2-1{
+				.box-infomation-cabins{
+					.hidden-tablet{
+						display: block;
+					}
+				}
+			}
+			.group-ct2-4{
+				.iti-routes-box{
+					.hidden-tablet{
+						display: block;
+					}
+				}
+			}
 		}
 	}
 }

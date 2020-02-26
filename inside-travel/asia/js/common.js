@@ -361,12 +361,14 @@ $(document).ready(function() {
 		$(this).toggleClass('active');
 	});
 	$('#open-all-1').click(function(){
-		$('.order-day>a:first-child').addClass('active');
-		$('.panel').slideDown(500);
+		let thistogg = $(this).closest('.wrap-detail-day,.box-ct1-itine,.box-modal-intine');
+		thistogg.find('.order-day>a:first-child').addClass('active');
+		thistogg.find('.panel').slideDown(500);
 	});
 	$('#close-all-1').click(function(){
-		$('.order-day>a:first-child').removeClass('active');
-		$('.panel').slideUp(500);
+		let thistogg = $(this).closest('.wrap-detail-day,.box-ct1-itine,.box-modal-intine');
+		thistogg.find('.order-day>a:first-child').removeClass('active');
+		thistogg.find('.panel').slideUp(500);
 	});
 	if(bodyWidth < 1200 && bodyWidth > 991){
 		$('.pull-up').height($('.foreground').outerHeight()-190);
@@ -1858,6 +1860,10 @@ $(document).ready(function() {
 			}
 		});
 	}
+	$('.open-cruise-itine').click(function(){
+		$('.modal-container').removeClass('close-display');
+		$('.modal-cruise-st2').removeClass('close-display');
+	});
 	/*======booking=======*/
 	if($('.room-booking-wrap').length){
 		$('.room-booking-wrap').delegate(`.select-cabin input[type="radio"]`,'click',function(){
@@ -2003,7 +2009,7 @@ let goToOffset = function(id){
 	$('html, body').animate({ scrollTop:$(id).offset().top - 120}, 'slow');
 }
 /*======================LOAD JSON============================*/
-let loadJson = function(a,x,y) {
+/*let loadJson = function(a,x,y) {
     $.ajax({
         dataType: 'json',
         url: `data/include-${a}.json`})
@@ -2033,5 +2039,5 @@ $('#btn-meal').click(function(){
 });
 $('#btn-service').click(function(){
 	loadJson(2,'.modal-include-2 .modal-content','services');
-});
+});*/
 /*======================END JSON============================*/

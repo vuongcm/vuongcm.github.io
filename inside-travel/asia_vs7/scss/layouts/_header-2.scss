@@ -1,0 +1,25 @@
+body.body-st2{
+	display: flex;
+	align-items: flex-start;
+	.nav-side-menu{
+	    position: sticky;
+	    top: 0px;
+	    z-index: 201;
+	    width: 200px;
+	    height: 100%;
+	    .wrap-main-menu{
+	    	position: static;
+	    	.main-menu{
+	    		overflow-x: visible;
+	    		max-width: unset;
+	    		width: 100%;
+	    	}
+	    }
+	}
+	&>.content-st2{
+		width: calc(100% - 200px);
+	}
+	header{
+		position: sticky;
+	}
+}
