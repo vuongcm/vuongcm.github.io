@@ -70,7 +70,7 @@ input[type="number"]{padding-left:5px}
 textarea{padding:8px 5px 8px 5px}
 input,textarea,select,button,a,button:hover,button:active,button:focus{outline:none;}
 button{border:none;background:none;}
-input[type="text"],textarea{border-radius: 0;box-shadow: none;appearance: none;-moz-appearance: none;-webkit-appearance: none;-ms-appearance: none;-o-appearance: none;}
+input[type="password"],input[type="email"],input[type="text"],textarea{border-radius: 0;box-shadow: none;appearance: none;-moz-appearance: none;-webkit-appearance: none;-ms-appearance: none;-o-appearance: none;}
 img{max-width: 100%;vertical-align: middle;object-fit: cover;}
 @import "var";
 body {

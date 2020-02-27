@@ -715,7 +715,7 @@ header{
 					display: flex;
 					align-items: center;
 					i{
-						padding: 10px 8px;
+						padding: 10px 8px 10px 0;
 					}
 					.menu{
 						font-size: 23px;
@@ -1017,26 +1017,31 @@ header{
 			display: block;
 			position: relative;
 			line-height: 1;
+			height: 130px;
+			overflow-y: hidden;
 			button{
-				padding: 5px 10px;
+				padding: 0 10px;
 				position: absolute;
 				top: 0;
 				left: 0;
-				background-image: radial-gradient(rgba(0,0,0,0.65) 10%, rgba(0,0,0,0) 80%);
-				background-image: -webkit-radial-gradient(rgba(0,0,0,0.65) 10%, rgba(0,0,0,0) 80%);
-				background-image: -moz-radial-gradient(rgba(0,0,0,0.65) 10%, rgba(0,0,0,0) 80%);
-				background-image: -o-radial-gradient(center center,rgba(0,0,0,0.65) 10%, rgba(0,0,0,0) 80%);
-				background-image: -ms-radial-gradient(center center,rgba(0,0,0,0.65) 10%, rgba(0,0,0,0) 80%);
+				z-index: 5;
+				// background-image: radial-gradient(rgba(0,0,0,0.65) 10%, rgba(0,0,0,0) 80%);
+				// background-image: -webkit-radial-gradient(rgba(0,0,0,0.65) 10%, rgba(0,0,0,0) 80%);
+				// background-image: -moz-radial-gradient(rgba(0,0,0,0.65) 10%, rgba(0,0,0,0) 80%);
+				// background-image: -o-radial-gradient(center center,rgba(0,0,0,0.65) 10%, rgba(0,0,0,0) 80%);
+				// background-image: -ms-radial-gradient(center center,rgba(0,0,0,0.65) 10%, rgba(0,0,0,0) 80%);
 				i{
 					font-size: 30px;
 					font-style: normal;
 					font-weight: 800;
 					color: #fff;
+					line-height: 1;
 				}
 			}
 			span{
 				position: absolute;
-				bottom: 0;
+				z-index: 3;
+				top: 0;
 				left: 0;
 				width: 100%;
 				color: #fff;
@@ -1045,7 +1050,7 @@ header{
 				font-weight: 500;
 				text-align: center;
 				padding: 10px 0;
-				@include gradient3();
+				@include gradient4();
 			}
 		}
 	}
