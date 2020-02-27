@@ -1666,6 +1666,7 @@ select:focus {
     position: relative;
     width: 52px;
     display: inline-flex;
+    flex-shrink: 0;
     justify-content: center;
     align-items: center;
     span{
