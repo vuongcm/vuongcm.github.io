@@ -1626,6 +1626,29 @@
 			}
 		}
 	}
+	.include-box{
+		.col-xlg-4, .col-xlg-6{
+			&>div{
+				&>div:first-child{
+					padding-right: 0;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				    .icon-font{
+				    }
+				    br{
+				    	display: none;
+				    }
+				    h3{
+						margin-left: 15px;
+				    }
+				}
+				&>div:last-child{
+					display: none;
+				}
+			}
+		}
+	}
 }
 @media (max-width: 375px) {
 	.wrap-tailor-made-btn{

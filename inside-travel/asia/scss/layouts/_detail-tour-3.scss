@@ -81,7 +81,7 @@
 			.body-trip{
 				margin-top: 15px;
 				padding-bottom: 15px;
-				border-bottom: 1px dotted #dcdcdc;
+				border-bottom: 1px solid #dcdcdc;
 			}
 			.foot-trip-st5{
 				padding-top: 15px;
@@ -268,6 +268,9 @@
 						    	//font-size: 14px;
     							margin-right: 5px;
     							color: $higlight-color;
+						    }
+						    .checkmark.un-checkmark{
+						    	color: #888;
 						    }
 						}
 					}
@@ -1101,16 +1104,22 @@
 					.day-trip{
 						float: left;
 					    margin-right: 10px;
-					    width: 52px;
+					    width: 40px;
+					    span{
+					    	font-size: 7px;
+					    	b{
+					    		font-size: 14px;
+					    	}
+					    }
 					}
 					.title-info{
 						width: 100%;
     					padding-left: 0;
     					padding-right: 0;
     					.title-h2{
-    						font-size: 18px;
-    						min-height: 53px;
-    						padding-top: 10px;
+    						font-size: 20px;
+    						min-height: 40px;
+    						padding-top: 0;
     					}
     					.wrap-tooltip{
     						margin-top: 10px;

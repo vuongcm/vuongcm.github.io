@@ -1362,6 +1362,21 @@
 		&>.order-day{
 			&>a:first-child{
 				background-color: transparent;
+				padding-left: 0;
+				padding-right: 0;
+				&>button{
+					.select-arrow-thin{
+						font-size: 8px;
+					}
+				}
+			}
+			.wrap-inclusion{
+				&>div{
+					h3{
+						font-size: 12px;
+						font-weight: 400;
+					}
+				}
 			}
 		}
 	}
@@ -1388,7 +1403,29 @@
 					&>a:first-child{
 						h3{
 							text-transform: none;
-							font-size: 12px;
+							font-size: 13px;
+						}
+					}
+					.panel{
+						.head-pn{
+							span{
+								font-size: 12px;
+							}
+							&>p{
+								font-size: 12px;
+							}
+						}
+						&>div{
+							.paragraph{
+								font-size: 12px;
+							}
+						}
+						.experience-suplier{
+							.experience-content{
+								h4,h5{
+									font-size: 12px;
+								}
+							}
 						}
 					}
 				}

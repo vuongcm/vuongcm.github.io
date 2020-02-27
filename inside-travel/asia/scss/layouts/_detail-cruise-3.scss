@@ -40,14 +40,48 @@
 	.grid-ct2{
 		.group-ct2-1{
 			.box-infomation-cabins{
+				padding-left: 0;
+				padding-right: 0;
+				.group-head{
+					padding-right: 20px;
+					padding-left: 20px;
+				}
 				.box-cabin{
 					padding-bottom: 15px;
 					margin-bottom: 15px;
-					border-bottom: 1px dotted #dcdcdc;
+					border-bottom: 1px solid #dcdcdc;
+					&>div{
+						padding-left: 20px;
+						padding-right: 20px;
+					}
 					&:last-child{
 						padding-bottom: 0;
 						//margin-bottom: 15px;
 						border-bottom: none;
+					}
+					.wrap-slide-st9{
+						.synch-carousels{
+							.nav-arrows{
+								top: 0;
+								display: flex;
+								button{
+									background-image: none;
+									width: auto;
+									height: 60px;
+									z-index: 6;
+									visibility: visible;
+									top: 50%;
+									@include translateY(-50%);
+								}
+								button.arrow-left{
+									left: 5px;
+								}
+								button.arrow-right{
+									right: 5px;
+								}
+							}
+						}
+
 					}
 				}
 			}
@@ -102,6 +136,7 @@
 			text-align: left;
 			padding-right: 0;
 			padding-left: 0;
+			font-size: 11px;
 		}
 		.cr-info-room{
 			.row{
@@ -112,9 +147,10 @@
 				.col-xlg-3{
 					text-align: left;
 					margin-bottom: 10px;
+					font-size: 11px;
 					.icon-font-cr{
 						margin-right: 5px;
-
+						font-size: 16px;
 					}
 				}
 			}
@@ -279,7 +315,6 @@
 					h3{
 						margin-top: 10px;
 						margin-bottom: 10px;
-						text-transform: uppercase;
 					}
 					.price-trip-box{
 						width: max-content;
@@ -289,9 +324,6 @@
 					font-size: 34px;
 					color: #555;
 					font-weight: 100;
-				}
-				&:hover{
-					background-color: transparent;
 				}
 			}
 			&:last-child{
@@ -328,6 +360,16 @@
 			grid-row: 5 / 6;
 			.group-ct2-1{
 				.box-infomation-cabins{
+					.group-head{
+						padding-right: 15px;
+						padding-left: 15px;
+					}
+					.box-cabin{
+						&>div{
+							padding-right: 15px;
+							padding-left: 15px;
+						}
+					}
 					.hidden-tablet{
 						display: block;
 					}
@@ -365,10 +407,30 @@
 								margin-top: 0;
 								span{
 									margin-top: 5px;
+									font-size: 10px;
+									.icon-font{
+										font-size: 11px;
+									}
 								}
 							}
 						}
 					}
+				}
+			}
+		}
+		.grid-ct2{
+			.group-ct2-1{
+				position: relative;
+				&:before{
+					content: '';
+					display: block;
+					position: absolute;
+					top: -12px;
+					left: calc(50% - 12px);
+					width: 25px;
+					height: 25px;
+					background-color: #fff;
+					@include rotage(45deg);
 				}
 			}
 		}
@@ -377,5 +439,25 @@
 		span{
 			margin-top: 5px;
 		}
+	}
+	.cabin-name-box{
+		padding-right: 5px;
+		padding-left: 5px;
+		h3{
+			font-size: 14px;
+		}
+		.cr-content{
+			span{
+				font-size: 7px;
+				.icon-font{
+					font-size: 8px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 479px) {
+	.price-trip-box{
+		display: none;
 	}
 }
