@@ -1631,17 +1631,9 @@
 			&>div{
 				&>div:first-child{
 					padding-right: 0;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-				    .icon-font{
-				    }
-				    br{
-				    	display: none;
-				    }
-				    h3{
-						margin-left: 15px;
-				    }
+					// display: flex;
+					// justify-content: center;
+					// align-items: center;
 				}
 				&>div:last-child{
 					display: none;
