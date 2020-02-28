@@ -516,8 +516,8 @@
 		
 		&>a:first-child{
 			border-bottom: 1px solid #dcdcdc;
-			padding-left: 0;
-			padding-right: 0;
+			padding-left: 3px;
+			padding-right: 3px;
 			background-color: transparent;
 			&:hover{
 				background-color: $background-color-st1;

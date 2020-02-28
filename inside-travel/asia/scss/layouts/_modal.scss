@@ -1366,8 +1366,8 @@
 		&>.order-day{
 			&>a:first-child{
 				background-color: transparent;
-				padding-left: 0;
-				padding-right: 0;
+				padding-left: 3px;
+				padding-right: 3px;
 				&>button{
 					.select-arrow-thin{
 						font-size: 8px;

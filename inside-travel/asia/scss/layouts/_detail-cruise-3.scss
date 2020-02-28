@@ -100,6 +100,9 @@
 				}
 			}
 		}
+		.wrap-facilities,.wrap-cruise-desti,.wrap-cruise-article{
+			display: none;
+		}
 	}
 	.grid-ct3{
 		.group-ct3-1{
@@ -115,7 +118,7 @@
 			}
 		}
 	}
-	.grid-ct4{
+	.grid-ct3{
 		z-index: 1;
 	}
 }
@@ -258,7 +261,7 @@
 		.select-st1,.booking-st1{
 			width: 100%;
 		    height: auto;
-		    border: 1px solid #aaa;
+		    border: 1px solid $higlight-color;
 		    font-size: 12px;
 		    vertical-align: middle;
 		    line-height: 1.5;
@@ -273,6 +276,12 @@
 		    position: relative;
 		    text-align: left;
 		    cursor: pointer;
+		    .text{
+		    	b{
+		    		color: $higlight-color;
+		    		font-weight: 600;
+		    	}
+		    }
 		    .value, .value-2{
 		    	top: 100%;
 		    }
@@ -290,19 +299,34 @@
 					    transition: all .25s linear;
 		    		}
 		    	}
+		    	&>li{
+		    		.btn-value{
+		    			&>b{
+		    				color: $higlight-color;
+		    				font-weight: 600;
+		    			}
+		    		}
+		    	}
 		    }
 		    .value-2{
 		    	max-height: 245px;
     			overflow-y: scroll;
     			overflow-x: hidden;
+    			.room-cruise{
+    				background-color: $background-color-st1;
+    			}
 		    }
 		}
 		.booking-st2{
-			border: 1px solid #aaa;
+			border: 1px solid $higlight-color;
     		position: relative;
     		.text{
     			padding-left: 8px;
     			padding-right: 8px;
+    			b{
+    				color: $higlight-color;
+		    		font-weight: 600;
+    			}
     		}
 		}
 		.btn-st3{
@@ -419,7 +443,7 @@
 }
 .wrap-facilities{
 	article{
-		margin-top: 20px;
+		//margin-top: 20px;
 		
 		h4{
 			width: 100%;
