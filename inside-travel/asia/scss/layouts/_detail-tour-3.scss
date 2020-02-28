@@ -38,7 +38,7 @@
 				padding-left: 20px;
 				padding-right: 20px;
 				.title-info{
-					width: calc(100% - 37px);
+					width: calc(100% - 34px);
 					padding-right: 10px;
 					padding-left: 0;
 					.title-h2{
@@ -60,10 +60,10 @@
 					}
 				}
 				.heart-tour{
-					width: 37px;
+					width: 34px;
 					margin-top: 8px;
     				.icon-font{
-    					font-size: 36px;
+    					font-size: 33px;
     					color: #AEAEAE;
     				}
     				&:hover{
@@ -80,9 +80,9 @@
 				}
 			}
 			.body-trip{
-				margin-top: 15px;
-				padding-bottom: 15px;
-				border-bottom: 1px solid #dcdcdc;
+				margin-top: 20px;
+				padding-bottom: 20px;
+				border-bottom: 1px dotted #dcdcdc;
 			}
 			.foot-trip-st5{
 				padding-top: 15px;
@@ -207,6 +207,11 @@
 				&:hover{
 					box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 					opacity: 1;
+					background-color: $higlight-color;
+					color: #fff;
+					.icon-font{
+						color: #fff;
+					}
 				}
 			}
 		}
@@ -517,6 +522,7 @@
 		text-transform: uppercase;
 		font-weight: 500;
 		margin-bottom: 20px;
+		margin-top: 0;
 	}
 	.group-head{
 		width: 100%;
@@ -549,6 +555,7 @@
 		line-height: 1.5;
 		flex-grow: 1;
 		padding-left: 10px;
+		padding-top: 10px;
 	}
 }
 .list-tour-day{
@@ -604,6 +611,10 @@
 					}
 				}
 				&:hover{
+					background-color: #fbfaf9;
+					h3{
+						color: $higlight-color;
+					}
 					.icon-des-2:before{
 						content: "\e963";
 					}
@@ -612,8 +623,12 @@
 				
 			}
 			&>.active:first-child{
+				background-color: #fbfaf9;
 				.icon-des-2:before{
 					content: "\e963";
+				}
+				h3{
+					color: $higlight-color;
 				}
 			}
 			.panel{
@@ -761,7 +776,7 @@
 				color: $higlight-color;
 			}
 			span{
-				font-size: 20px;
+				font-size: 16px;
 				font-weight: 600;
 				color: #e87055;
 			}
@@ -790,7 +805,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 14px;
+	//font-size: 14px;
 	width: 100%;
 	padding-bottom: 15px;
 	padding-top: 15px;

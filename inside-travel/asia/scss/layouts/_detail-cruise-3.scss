@@ -97,7 +97,7 @@
 				.order-price{
 					&>div{
 						b{
-							font-size: 20px;
+							font-size: 18px;
 						    color: $higlight-color;
 						}
 					}
@@ -171,7 +171,7 @@
 	padding: 10px 15px;
 	h3,h4{
 		font-size: 18px;
-		font-weight: 500;
+		font-weight: 600;
 		margin-top: 0;
 		margin-bottom: 5px;
 	}
@@ -457,29 +457,45 @@
 		.grid-ct1{
 			.group-ct1-1{
 				.head-trip{
+					position: relative;
 					.title-info{
 						width: 100%;
 						.title-h2{
 							min-height: unset;
+							text-align: left;
+							width: calc(100% - 21px);
 						}
 						.short-info-cruise{
 							flex-wrap: wrap;
 							.star-box{
 								margin-top: 5px;
+								margin-right: 5px;
+								font-size: 10px;
 							}
 							.hotel-news{
-								width: 100%;
+								//width: 100%;
 								padding-left: 0;
 								padding-right: 0;
 								margin-top: 0;
 								span{
 									margin-top: 5px;
-									font-size: 10px;
+									font-size: 9px;
 									.icon-font{
 										font-size: 11px;
 									}
 								}
 							}
+						}
+					}
+					.heart-tour{
+						display: block;
+						position: absolute;
+						top: 0;
+						right: 15px;
+						margin-top: 0;
+						width: 21px;
+						.icon-font{
+							font-size: 20px;
 						}
 					}
 				}

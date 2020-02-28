@@ -1311,8 +1311,8 @@
 							}
 						}
 						&>.active:first-child{
-							h3{
-								color: $higlight-color;
+							.icon-des-2:before{
+								content: "\e962";
 							}
 						}
 					}
@@ -1533,18 +1533,21 @@
 		.map-content{
 			.map-box-st3{
 				width: 100%;
-				min-height: 265px;
+				min-height: 310px;
 			}
 			.info-map-box{
 				width: 100%;
 				padding-left: 0;
 				.info-map-head{
 					.map-day{
-						margin-top: 10px;
+						margin-top: 15px;
+					}
+					h2{
+						margin-top: 5px;
 					}
 				}
 				.info-map-body{
-					max-height: 200px;
+					max-height: 136px;
 				}
 			}
 		}
