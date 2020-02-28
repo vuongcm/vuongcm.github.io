@@ -1311,6 +1311,9 @@
 							}
 						}
 						&>.active:first-child{
+							h3{
+								color: #111;
+							}
 							.icon-des-2:before{
 								content: "\e962";
 							}
