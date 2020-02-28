@@ -1306,8 +1306,8 @@ select:focus {
             text-transform: uppercase;
             color: $higlight-color;
             &>strong{
-                font-size: 20px;
-                font-weight: 600;
+                font-size: 16px;
+                font-weight: 500;
             }
         }
         
@@ -1681,6 +1681,7 @@ select:focus {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
     span{
         position: absolute;
         text-align: center;
