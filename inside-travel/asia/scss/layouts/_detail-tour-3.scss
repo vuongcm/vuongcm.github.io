@@ -80,7 +80,7 @@
 				}
 			}
 			.body-trip{
-				margin-top: 20px;
+				margin-top:15px;
 				padding-bottom: 20px;
 				border-bottom: 1px dotted #dcdcdc;
 			}
@@ -92,6 +92,11 @@
 					max-height: 460px;
 					position: relative;
 					z-index: 2;
+					/* h2{
+						border-bottom: 1px dotted #dcdcdc;
+						padding-bottom: 15px;
+						margin-bottom: 15px;
+					} */
 					p{
 					    line-height: 1.8;
 					    margin-bottom: 15px;
@@ -256,7 +261,7 @@
 				}
 				.exclude-box{
 					p{
-						line-height: 1.5;
+						line-height: 1.8;
 					}
 					article{
 						h4{
@@ -522,7 +527,7 @@
 		text-transform: uppercase;
 		font-weight: 500;
 		margin-bottom: 20px;
-		margin-top: 0;
+		//margin-top: 0;
 	}
 	.group-head{
 		width: 100%;
@@ -611,7 +616,7 @@
 					}
 				}
 				&:hover{
-					background-color: #fbfaf9;
+					background-color: #f6f4f0;
 					h3{
 						color: $higlight-color;
 					}
@@ -623,7 +628,7 @@
 				
 			}
 			&>.active:first-child{
-				background-color: #fbfaf9;
+				background-color: #f6f4f0;
 				.icon-des-2:before{
 					content: "\e963";
 				}
@@ -1147,6 +1152,9 @@
 					.heart-tour{
 						display: none;
 					}
+				}
+				.body-trip{
+					margin-top: 5px;
 				}
 			}
 			.group-ct1-2{

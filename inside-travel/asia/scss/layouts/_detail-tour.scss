@@ -516,9 +516,16 @@
 		
 		&>a:first-child{
 			border-bottom: 1px solid #dcdcdc;
+			padding-left: 0;
+			padding-right: 0;
 			background-color: transparent;
 			&:hover{
 				background-color: $background-color-st1;
+			}
+			&>button{
+				.select-arrow-thin{
+					font-size: 8px;
+				}
 			}
 		}
 		&>.active:first-child{
