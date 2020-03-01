@@ -29,14 +29,14 @@
 }
 #booking-widget-homepage{
 	position: absolute;
-	bottom: 30px;
+	bottom: 40px;
 	width: calc(100% - 51px);
 	z-index: 8;
 	.form-banner-top{
 		display: flex;
 		justify-content: space-between;
 		align-items: stretch;
-		width: 100%;
+		width: 85%;
 		max-width: 1264px;
 		margin: 0 auto;
 		background-color: $background-color;
@@ -68,7 +68,7 @@
 		}
 		.booking-step-where{
 			position: relative;
-			width: 21%;
+			width: 23%;
 			.value{
 				top: calc(100% + 15px);
 				.btn-value{
@@ -88,7 +88,7 @@
 		}
 		.booking-step-when{
 			position: relative;
-			width: 21%;
+			width: 19%;
 			.value{
 				top: calc(100% + 15px);
 				.btn-value{
@@ -135,6 +135,7 @@
 			border-right: none;
 			padding: 0;
 			margin: 0;
+			flex-grow: 1;
 			button{
 				width: 100%;
 				height: 100%;
