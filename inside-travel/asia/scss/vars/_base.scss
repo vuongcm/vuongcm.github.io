@@ -1794,8 +1794,15 @@ select:focus {
 }*/
 .heart-tour{
     cursor: pointer;
+    &>a{
+        display: block;
+        width: 100%;
+        color: inherit;
+        font-size: inherit;
+    }
     &:hover{
         .heart-empty{
+            font-size: inherit;
             &:before{
                 content: "\e915";
             }
