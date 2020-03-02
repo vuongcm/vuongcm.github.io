@@ -1480,7 +1480,12 @@ $(document).ready(function() {
 	}
 	if($('.booking-step-class').length){
 		$('.booking-step-class .btn-value').click(function(){
-			$(this).toggleClass('checked');
+			if($(this).attr('class').search('checked') != -1){
+				$(this).closest('.select-st2').find('.btn-value').removeClass('checked');
+			} else {
+				$(this).closest('.select-st2').find('.btn-value').removeClass('checked');
+				$(this).addClass('checked');
+			}
 			if($('.order-choose').length){
 				let valueActive = $(this).children('b').text().toLowerCase();
 				let getBtn = $('.order-choose .row-choose');
@@ -1495,19 +1500,22 @@ $(document).ready(function() {
 							getBtn.eq(i).find('.service-check-2')[0].checked = true;
 							getBtn.eq(i).find('label').addClass('active');
 						}
+					} else{
+						getBtn.eq(i).removeClass('choosed');
+						getBtn.eq(i).find('.service-check-2')[0].checked = false;
+						getBtn.eq(i).find('label').removeClass('active');
 					}
 				}
 			}
-			$('.booking-step-class select').html('');
 			let btnActive = $('.booking-step-class .btn-value.checked');
-			for(let i=0; i < btnActive.length; i++){
-				$('.booking-step-class select').append(`<option value="${btnActive.children('b').eq(i).text()}" selected></option>`);
-			}
 			if(btnActive.length == 0){
 				$('.booking-step-class .text b').html(`Tour Class`);
+				$('.booking-step-class select').html('');
 			} else{
-				$('.booking-step-class .text b').html(`${btnActive.length} selected`);
+				$('.booking-step-class .text b').html($(this).children('b').text());
+				$('.booking-step-class select').html(`<option value="${$(this).children('b').text()}" selected></option>`);
 			}
+			$(this).closest('.value').removeClass('open-block');
 		});
 	}
 	/*===search cruise=====*/

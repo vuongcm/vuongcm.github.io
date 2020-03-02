@@ -36,7 +36,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: stretch;
-		width: 85%;
+		width: 84%;
 		max-width: 1264px;
 		margin: 0 auto;
 		background-color: $background-color;
@@ -88,7 +88,7 @@
 		}
 		.booking-step-when{
 			position: relative;
-			width: 19%;
+			width: 23%;
 			.value{
 				top: calc(100% + 15px);
 				.btn-value{
@@ -121,7 +121,7 @@
 		}
 		.booking-step-promo{
 			position: relative;
-			width: 22%;
+			width: 18%;
 			border-right: none;
 			.value{
 				top: calc(100% + 15px);
