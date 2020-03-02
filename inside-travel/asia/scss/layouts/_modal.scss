@@ -144,10 +144,11 @@
 }
 .ava-detail-modal{
 	position: relative;
-	max-height: 233px;
+	max-height: 205px;
 	overflow: hidden;
 	&>div{
 		width: 100%;
+		max-width: 390px;
 		position: absolute;
 		z-index: 4;
 		color: #fff;
@@ -160,16 +161,19 @@
 	    -o-transform: translate(-50%,-50%);
 	    -ms-transform: translate(-50%,-50%);
 	    h4{
-	    	font-size: 20px;
+	    	font-size: 18px;
 	    	text-transform: uppercase;
-	    	font-weight: 400;
+	    	font-weight: 600;
+    		text-shadow: 0 0 2px #000;
 	    }
 	    span{
-	    	font-size: 14px;
+	    	font-size: 16px;
+	    	text-transform: uppercase;
 	    }
 	}
 	img{
 		@include dakkenImg(60%);
+		@include translateY(-24px);
 	}
 }
 .modal-include-1{

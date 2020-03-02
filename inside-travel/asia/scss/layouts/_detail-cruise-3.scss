@@ -362,13 +362,14 @@
 }
 .value-3{
 	max-height: 245px;
-	width: 100%;
+	width: calc(100% + 2px);
 	position: absolute;
-	left: 0;
+	left: -1px;
 	top: 100%;
 	overflow-y: scroll;
 	background-color: #fff;
 	border: 1px solid #dcdcdc;
+	box-shadow: 0 6px 40px -4px #9c9991;
 	display: none;
 	z-index: 8;
 	span{
@@ -406,16 +407,21 @@
 			}
 		}
 		.btn-value{
+			font-size: 13px;
+			padding: 0 3px;
+			border-radius: 5px;
 			&:hover{
+				background-color: $higlight-color;
 				b{
-					color: $higlight-color;
+					color: #fff;
 				}
 				
 			}
 		}
 		.btn-value.active{
+			background-color: $higlight-color;
 			b{
-				color: $higlight-color;
+				color: #fff;
 			}
 		}
 	}
