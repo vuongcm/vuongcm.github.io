@@ -1572,6 +1572,23 @@ $(document).ready(function() {
 			$('#search-cruise-modal .booking-step-depature input').val($(this).val());
 		});
 	}
+	if($('.booking-step-depa').length){
+		$('.booking-step-depa .text').click(function(){
+			$(this).nextAll('.value-3').toggleClass('open-block');
+		});
+		$('.booking-step-depa .value-3 .btn-value').click(function(){
+			$('.booking-step-depa .value-3 .btn-value').removeClass('active');
+			$(this).addClass('active');
+			$('.booking-step-depa>input').val($(this).attr('data-value'));
+			$('.booking-step-depa .text b').text($(this).attr('data-value'));
+			$('.booking-step-depa .value-3').removeClass('open-block');
+			$('body').click(function(e){
+				if (!$('.booking-step-depa').is(e.target) && $('.booking-step-depa').has(e.target).length === 0) {
+		            $('.booking-step-depa .value-3').removeClass('open-block');
+		        }
+			});
+		});
+	}
 	if($('.booking-step-room-cruise').length){
 		$('.wrap-room-number .btn-down').click(function(){
 			let number1 = Number($(this).nextAll('input').val());

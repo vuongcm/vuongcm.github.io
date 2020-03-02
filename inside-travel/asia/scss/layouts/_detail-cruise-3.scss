@@ -318,17 +318,9 @@
     			}
 		    }
 		}
-		.booking-st2{
-			border: 1px solid $higlight-color;
-    		position: relative;
-    		.text{
-    			padding-left: 8px;
-    			padding-right: 8px;
-    			b{
-    				color: $higlight-color;
-		    		font-weight: 600;
-    			}
-    		}
+		.booking-st4{
+		    border: 1px solid $higlight-color;
+    		
 		}
 		.btn-st3{
 			width: 100%;
@@ -337,6 +329,94 @@
 		&:last-child{
 			color: #ff5722;
 			font-size: 11px;
+		}
+	}
+}
+.booking-st4{
+	width: 100%;
+	height: auto;
+	position: relative;
+	vertical-align: middle;
+    line-height: 1.5;
+    padding: 10px 8px;
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    transition: all .25s linear;
+    background-color: #fff;
+	&>input{
+		display: none;
+	}
+	.text{
+		cursor: pointer;
+		b{
+			color: $higlight-color;
+    		font-weight: 600;
+    		text-align: left;
+		}
+		.icon-font{
+			color: #888;
+		}
+	}
+}
+.value-3{
+	max-height: 245px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	overflow-y: scroll;
+	background-color: #fff;
+	border: 1px solid #dcdcdc;
+	display: none;
+	z-index: 8;
+	span{
+		display: block;
+		padding-top: 12px;
+		padding-bottom: 6px;
+		padding-left: 15px;
+		color: $light-color-2;
+	}
+	&>div{
+		width: 100%;
+		overflow-x: auto;
+		webkit-overflow-scrolling: touch;
+
+	}
+	table{
+		min-width: 280px;
+		//border: 1px solid #efede6;
+		thead{
+			tr{
+				background-color: $higlight-color;
+			}
+			th{
+				padding-bottom: 10px;
+    			padding-top: 10px;
+    			color: #fff;
+    			border: 1px solid #efede6;
+			}
+		}
+		tbody{
+			th,td{
+				padding-bottom: 10px;
+    			padding-top: 10px;
+    			border: 1px solid #efede6;
+			}
+		}
+		.btn-value{
+			&:hover{
+				b{
+					color: $higlight-color;
+				}
+				
+			}
+		}
+		.btn-value.active{
+			b{
+				color: $higlight-color;
+			}
 		}
 	}
 }

@@ -688,6 +688,9 @@ select:focus {
             }
             .arrow-left{
                 margin-left: 20px;
+                .icon-next-back{
+                    @include rotage(180deg);
+                }
             }
             .arrow-right{
                 margin-right: 20px;
