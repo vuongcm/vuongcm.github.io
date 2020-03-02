@@ -234,7 +234,7 @@ select:focus {
 }
 .btn-st3{
     color: #fff;
-    background-color: #3e361e;
+    background-color: #111;
     
     text-transform: uppercase;
     //font-size: 12px;
@@ -679,7 +679,7 @@ select:focus {
             top: 213px;
             button{
                 i{
-                    font-size: 40px;
+                    font-size: 58px;
                     color: #d4d4d4;
                 }
                 &:hover i{
@@ -1804,8 +1804,15 @@ select:focus {
 }*/
 .heart-tour{
     cursor: pointer;
+    &>a{
+        display: block;
+        width: 100%;
+        color: inherit;
+        font-size: inherit;
+    }
     &:hover{
         .heart-empty{
+            font-size: inherit;
             &:before{
                 content: "\e915";
             }

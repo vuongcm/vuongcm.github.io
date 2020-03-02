@@ -22,7 +22,7 @@
 	left: 50%;
 	@include translateX(-50%);
 	@include smooth(.5s);
-	background-color: $background-color-st1;
+	background-color: #fff;
 	padding: 30px 15px;
 	text-align: center;
 	//max-height: calc(100vh - 6%);
