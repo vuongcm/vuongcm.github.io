@@ -113,7 +113,9 @@
 }
 .bacground-box{
 	position: absolute;
-	width: 100%;
+	width: calc(100% - 50px);
+	top: 0;
+	left: 50px;
 	height: 100%;
 	&>div{
 		position: absolute;
