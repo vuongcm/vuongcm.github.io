@@ -146,7 +146,7 @@
 }
 .ava-detail-modal{
 	position: relative;
-	max-height: 205px;
+	max-height: 188px;
 	overflow: hidden;
 	&>div{
 		width: 100%;
@@ -175,7 +175,7 @@
 	}
 	img{
 		@include dakkenImg(60%);
-		@include translateY(-24px);
+		@include translateY(-27px);
 	}
 }
 .modal-include-1{
