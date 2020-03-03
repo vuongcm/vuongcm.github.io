@@ -627,6 +627,38 @@
 		}
 	}
 }
+.wrap-list-buttons{
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+.list-buttons{
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 5px auto;
+	button{
+		width: 42%;
+		background-color: #d0b316;
+		margin-top: 5px;
+		padding: 5px 0;
+		color: #fff;
+		border-radius: 8px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font{
+			text-transform: uppercase;
+		}
+		.icon-font{
+			font-size: 12px;
+			margin-right: 5px;
+		}
+		&:hover{
+			color: #fff;
+		}
+	}
+}
 @media (min-width: 1350px) {
 
 }
