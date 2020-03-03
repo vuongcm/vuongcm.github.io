@@ -1128,6 +1128,9 @@ select:focus {
         }
 
     }
+    .box-tooltip-map{
+        padding: 10px 20px 20px;
+    }
     &:hover span{
         visibility:visible;
         opacity: 1;
@@ -1258,6 +1261,25 @@ select:focus {
     width: 32px;
     height: 38px;
     opacity: 1;
+}
+.box-tooltip-map{
+    width: max-content;
+    max-width: 300px;
+    left: 50%;
+    @include translateX(-50%);
+    h3,h4{
+        margin-top: 0;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+    p{
+        font-family: 'Reenie Beanie', cursive;
+        font-weight: 500;
+        font-size: 26px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 .trip{
     width: 100%;
