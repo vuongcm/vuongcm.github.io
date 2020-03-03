@@ -93,14 +93,41 @@
 	}
 }
 .section-bg{
-	background: url(https://www.blacktomato.com/wp-content/uploads/2019/11/Homepage-banner-WAH-1.jpg);
+	/* background: url(https://www.blacktomato.com/wp-content/uploads/2019/11/Homepage-banner-WAH-1.jpg);
 	-o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center;
-    object-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 46%;
+	    object-fit: cover;
+	    -o-object-position: center;
+	    object-position: center;
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: 48%; */
+	background-color: #e5e5e5;
+	position: relative;
+	.bacground-box{
+		z-index: 1;
+	}
+	&>.container{
+		position: relative;
+		z-index: 3;
+	}
+}
+.bacground-box{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	&>div{
+		position: absolute;
+		width: 45%;
+		max-width: calc(50% - 315px);
+	}
+	.bg-left{
+		bottom: 0;
+		left: 0;
+	}
+	.bg-right{
+		bottom: 0;
+		right: 0;
+	}
 }
 .team-contact{
 	width: 80%;
@@ -708,6 +735,11 @@
 	}
 	.foot-trip{
 		.hand-picked{
+			display: none;
+		}
+	}
+	.section-bg{
+		.bacground-box{
 			display: none;
 		}
 	}
