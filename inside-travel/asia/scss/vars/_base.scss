@@ -1137,6 +1137,10 @@ select:focus {
         visibility:visible;
         opacity: 1;
     }
+    &:hover>.box-tooltip-map{
+        visibility: hidden;
+        opacity: 0;
+    }
 }
 .wrap-tooltip{
     width: 100%;
