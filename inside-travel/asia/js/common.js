@@ -519,6 +519,11 @@ $(document).ready(function() {
 			$('.map-home .map-coo').removeClass('map-coo-active');
 			$(this).addClass('map-coo-active');
 		});
+		$('body').click(function(e){
+			if (!$('.map-coo').is(e.target) && $('.map-coo').has(e.target).length === 0) {
+	            $('.map-coo').removeClass('map-coo-active');
+	        }
+	    });
 	}
 	//carousel-st1
 	if ($('.wrap-slide-st1').length > 0) {
