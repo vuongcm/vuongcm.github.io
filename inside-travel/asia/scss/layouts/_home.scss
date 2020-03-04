@@ -350,6 +350,9 @@
 			.map-coo{
 				background-image: url('../images/icon/icon-des-yellow.svg');
 				//opacity: .5;
+				&:hover{
+					background-image: url('../images/icon/icon-des-black.svg')!important;
+				}
 			}
 			.map-coo-active{
 				background-image: url('../images/icon/icon-des-black.svg')!important;
