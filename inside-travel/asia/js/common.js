@@ -524,12 +524,12 @@ $(document).ready(function() {
 	            $('.map-coo').removeClass('map-coo-active');
 	        }
 	    });
-	    $('.map-home-mobile .col-sm-6').bind('tap',function(){
+	    $('.map-home-mobile .col-sm-6').on('touchstart',function(){
 	    	$(this).addClass('active-hover');
 	    });
-	   /* $('.map-home-mobile .col-sm-6').mouseleave(function(){
+	   	$('.map-home-mobile .col-sm-6').on('touchend',function(){
 	    	$(this).removeClass('active-hover');
-	    });*/
+	    });
 	}
 	//carousel-st1
 	if ($('.wrap-slide-st1').length > 0) {
