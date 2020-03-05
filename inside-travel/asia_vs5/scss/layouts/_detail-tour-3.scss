@@ -954,13 +954,15 @@
 	padding-right: 15px;
 	padding-left: 15px;
 	margin-bottom: 40px;
-	padding-bottom: 40px;
 	.head-box{
 		
 		width: 100%;
 		position: relative;
 		.img-box-st2{
 			display: block;
+			&:hover{
+				opacity: .9
+			}
 		}
 		.count-day{
 		    top: 12px;
@@ -995,7 +997,7 @@
 				color: #fff;
 				max-width: calc(100% - 180px);
 
-				font-size: 20px;
+				font-size: 22px;
 			    letter-spacing: 2px;
 			    font-weight: 500;
 			}
@@ -1009,7 +1011,7 @@
 	}
 	.body-box{
 		background-color: #fff;
-		padding: 20px;
+		padding: 20px 20px 40px 20px;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -1052,7 +1054,7 @@
 
 			.paragraph{
 				width: 100%;
-				margin-top: 15px;
+				margin-top: 20px;
 				text-align: left;
 				padding: 0;
 			}
