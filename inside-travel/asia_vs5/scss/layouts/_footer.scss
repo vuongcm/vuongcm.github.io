@@ -32,6 +32,14 @@ footer{
 			}
 			.col-xlg-4:nth-child(3){
 				text-align: left;
+				.img-box-st2{
+					display: block;
+				}
+				.paragraph{
+					text-align: left;
+					padding-right: 0;
+					padding-left: 0;
+				}
 				form{
 					display: flex;
 					flex-wrap: wrap;

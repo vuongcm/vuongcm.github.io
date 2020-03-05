@@ -712,6 +712,9 @@
 				font-size: 22px;
 			    letter-spacing: 2px;
 			    font-weight: 500;
+			    &:hover{
+			    	color: $higlight-color;
+			    }
 			}
 		}
 		.expert-box{
