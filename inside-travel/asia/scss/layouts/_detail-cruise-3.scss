@@ -955,6 +955,7 @@
 			.count-day{
 				top: 5px;
 			    left: 5px;
+			    font-size: 10px;
 			}
 			.heart-tour{
 			    top: 5px;
@@ -964,10 +965,12 @@
 			h2{
 				padding-top: 10px;
 				padding-bottom: 10px;
+
 				a{
 					font-size: 16px;
 					text-align: center;
 					max-width: unset;
+					font-weight: 600;
 				}
 			}
 			.expert-box{
