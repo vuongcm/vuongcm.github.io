@@ -4,7 +4,9 @@ $(document).ready(function() {
 	if($('.lazyload').length>0){jQuery(".lazyload").lazyload({effect:"fadeIn"});}
 	//===========header===================
 	let headerHeight = $('header').height();
-	$('header').next('section').css('padding-top',`${headerHeight}px`);
+	if($('body').attr('class').search('body-st2') == -1){
+		$('header').next('section').css('padding-top',`${headerHeight}px`);
+	}
 	let activeParallax = $('.bg-parallax').length ? $('.bg-parallax').attr('class').search('bg-about') == -1 : false;
 	if(activeParallax){
 		$('.bg-parallax').css('background-position-y',`${headerHeight}px`);
@@ -28,7 +30,7 @@ $(document).ready(function() {
 		});
 	} else{
 		if(bodyWidth > 479){
-			$('.btn-bar-toggle').click(function(){
+			$('.btn-bar-toggle').bind('click',function(){
 				let mainMenuWidth = $('.main-menu').outerWidth() == 0 ?  '500px' : '0';
 				$('.sub-menu').slideUp(300);
 				$('.sub-menu-lv2').slideUp(300);
@@ -43,7 +45,7 @@ $(document).ready(function() {
 		        }
 		    });
 		} else{
-			$('.btn-bar-toggle').click(function(){
+			$('.btn-bar-toggle').bind('click',function(){
 				let mainMenuWidth = $('.wrap-main-menu').width() == 0 ?  '100%' : '0';
 				$('.sub-menu').slideUp(300);
 				$('.sub-menu-lv2').slideUp(300);
@@ -61,6 +63,26 @@ $(document).ready(function() {
 		$(this).parent('.sub-menu-title-lv2').siblings('.sub-menu-title-lv2').children('.sub-menu-lv2').slideUp(300);
 		$(this).next('.sub-menu-lv2').slideToggle(300);
 	});
+	if($('body.body-st2').length){
+		if(bodyWidth > 479){
+			$('.btn-bar-toggle').unbind('click').bind('click',function(){
+				let mainMenuWidth = $('.nav-side-menu').width() == 0 ?  '500px' : '0';
+				$('.sub-menu').slideUp(300);
+				$('.sub-menu-lv2').slideUp(300);
+				$('.nav-side-menu').css('max-width', mainMenuWidth);
+				$('.follow-top').fadeToggle(300);
+			});
+		} else{
+			$('.btn-bar-toggle').unbind('click').bind('click',function(){
+				let mainMenuWidth = $('.nav-side-menu').width() == 0 ?  '100%' : '0';
+				$('.sub-menu').slideUp(300);
+				$('.sub-menu-lv2').slideUp(300);
+				$('.nav-side-menu').css('width', mainMenuWidth);
+				$('.follow-top').fadeToggle(300);
+			});
+		}
+		
+	}
 	let pageScroll = 0;
 	let gridCt4 = 460;
 	$(window).bind('scroll', function(){

@@ -18,8 +18,91 @@ body.body-st2{
 	}
 	&>.content-st2{
 		width: calc(100% - 200px);
+		.btn-bar-toggle{
+    		display: none;
+    	}
 	}
 	header{
 		position: sticky;
+	}
+	#search-nav-top{
+		left: 50%;
+		width: calc(100% - 30px);
+	}
+	#booking-widget-homepage{
+		width: 100%;
+		.form-banner-top{
+			width: 85%;
+		}
+	}
+	.container{
+		width: 95%;
+	}
+	.wrap-title-banner-top-line{
+		width: 100%;
+		height: auto;
+	}
+}
+@media (max-width: 1199px) {
+	.banner-small{
+		height: 365px;
+	}
+	.bg-about{
+		background-position-y: 0;
+	}
+}
+@media (max-width: 1024px) {
+	body.body-st2{
+		.nav-side-menu{
+			position: fixed;
+			max-width: 0;
+			@include smooth(.25s);
+		    .wrap-main-menu{
+		    	border-right: none;
+		    	.main-menu{
+					//display: none;
+		    	}
+		    }
+		}
+		&>.content-st2{
+			width: 100%;
+			.btn-bar-toggle{
+	    		display: block;
+	    		position: relative;
+	    		//z-index: 207;
+	    		text-align: left;
+	    		//margin-left: 10px;
+	    	}
+	    	header{
+	    		z-index: 208;
+	    	}
+		}
+	}
+}
+@media (max-width: 767px) {
+	body.body-st2{
+		&>.content-st2{
+			.btn-bar-toggle{
+	    		text-align: center;
+	    	}
+		}
+		header{
+			.menu-wrap{
+				.search-nav{
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 479px) {
+	body.body-st2{
+		.nav-side-menu{
+			max-width: unset;
+			width: 0;
+			.wrap-main-menu{
+				width: 100%;
+			}
+		}
 	}
 }
