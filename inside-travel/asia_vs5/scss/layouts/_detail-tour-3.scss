@@ -953,14 +953,21 @@
 	width: 100%;
 	padding-right: 15px;
 	padding-left: 15px;
+	margin-bottom: 40px;
+	padding-bottom: 40px;
 	.head-box{
 		
 		width: 100%;
 		position: relative;
+		.img-box-st2{
+			display: block;
+		}
 		.count-day{
-			background-color: $higlight-color;
-			top: 10px;
-		    left: 10px;
+		    top: 12px;
+		    left: 12px;
+		    background: rgba(208, 179, 22, 0.9);
+		    text-transform: capitalize;
+		    font-size: 14px;
 		}
 		.heart-tour{
 			position: absolute;
@@ -977,18 +984,20 @@
 			left: 0;
 			font-weight: 500;
 			width: 100%;
-			padding: 20px 15px;
+			padding: 25px 15px 25px 20px;
 			background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,0.65)));
-		    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 90%);
-		    background: -moz-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 90%);
-		    background: -ms-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 90%);
-		    background: -o-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 90%);
+		    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%);
+		    background: -moz-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%);
+		    background: -ms-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%);
+		    background: -o-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%);
 			margin: 0;
 			a{
 				color: #fff;
-				font-size: 18px;
-				text-transform: uppercase;
 				max-width: calc(100% - 180px);
+
+				font-size: 20px;
+			    letter-spacing: 2px;
+			    font-weight: 500;
 			}
 		}
 		.expert-box{
@@ -1008,13 +1017,13 @@
 
 			.address-box{
 				flex-grow: 1;
-				padding-right: 10px;
+				padding-right: 30px;
 				max-width: calc(100% - 247px);
 			}
 			.btn-st2{
 				width: 247px;
 				border-radius: 999px;
-				border-color: #888;
+				border-color: #bbb;
 				//line-height: 1;
 				padding-top: 5px;
 				padding-bottom: 5px;
@@ -1330,6 +1339,7 @@
 				a{
 					font-size: 16px;
 					max-width: unset;
+					text-align: center;
 				}
 			}
 			.expert-box{
@@ -1355,6 +1365,7 @@
 
 				.paragraph{
 					order: 2;
+					text-align: center;
 				}
 
 		}
