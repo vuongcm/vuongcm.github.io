@@ -4,7 +4,7 @@ body.body-st2{
 	.nav-side-menu{
 	    position: sticky;
 	    top: 0px;
-	    z-index: 201;
+	    z-index: 180;
 	    width: 200px;
 	    height: 100%;
 	    .wrap-main-menu{
@@ -25,9 +25,7 @@ body.body-st2{
     		display: none;
     	}
 	}
-	header{
-		position: sticky;
-	}
+	
 	#search-nav-top{
 		left: 50%;
 		width: calc(100% - 30px);
@@ -65,6 +63,8 @@ body.body-st2{
 		    }
 		}
 		header{
+			position: sticky;
+
 			.menu-wrap{
 				.brand{
 					display: none;
@@ -133,7 +133,7 @@ body.body-st2{
 	    		//margin-left: 10px;
 	    	}
 	    	header{
-	    		z-index: 208;
+	    		z-index: 185;
 	    	}
 		}
 	}
