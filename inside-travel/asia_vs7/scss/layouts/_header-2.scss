@@ -9,6 +9,9 @@ body.body-st2{
 	    height: 100%;
 	    .wrap-main-menu{
 	    	position: static;
+	    	.brand{
+	    		display: none;
+	    	}
 	    	.main-menu{
 	    		overflow-x: visible;
 	    		max-width: unset;
@@ -41,6 +44,42 @@ body.body-st2{
 	.wrap-title-banner-top-line{
 		width: 100%;
 		height: auto;
+	}
+}
+@media (min-width: 1024px) {
+	body.body-st2{
+		.nav-side-menu{
+		    .wrap-main-menu{
+		    	&:before{
+		    		display: none;
+		    	}
+		    	.brand{
+		    		display: block;
+		    		background-color: $background-color-st1;
+		    		padding: 15px;
+		    	}
+		    }
+		}
+		header{
+			.menu-wrap{
+				.brand{
+					display: none;
+				}
+				.search-nav{
+					height: 100%;
+					flex-grow: 1;
+					//width: 60%;
+					max-width: unset;
+					.open-search-top{
+						height: 40px;
+						flex-grow: 1;
+						padding-left: 10px;
+						padding-right: 10px;
+						border: 1px dotted #888;
+					}
+				}
+			}
+		}
 	}
 }
 @media (max-width: 1199px) {

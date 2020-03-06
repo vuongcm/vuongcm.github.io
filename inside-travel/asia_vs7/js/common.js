@@ -4,7 +4,7 @@ $(document).ready(function() {
 	if($('.lazyload').length>0){jQuery(".lazyload").lazyload({effect:"fadeIn"});}
 	//===========header===================
 	let headerHeight = $('header').height();
-	if($('body').attr('class').search('body-st2') == -1){
+	if(!$('body.body-st2').length){
 		$('header').next('section').css('padding-top',`${headerHeight}px`);
 	}
 	let activeParallax = $('.bg-parallax').length ? $('.bg-parallax').attr('class').search('bg-about') == -1 : false;
