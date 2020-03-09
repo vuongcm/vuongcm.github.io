@@ -529,24 +529,25 @@
 		margin-bottom: 20px;
 		//margin-top: 0;
 	}
-	.group-head{
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		color: $main-color;
-		opacity: 1;
-		cursor: pointer;
-		h2{
-			flex-grow: 1;
-		}
-		button{
-			font-size: 10px;
-		}
+	
+}
+.group-head{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	color: $main-color;
+	opacity: 1;
+	cursor: pointer;
+	h2{
+		flex-grow: 1;
 	}
-	.group-head.active{
-		button{
-			@include rotage(180deg);
-		}
+	button{
+		font-size: 10px;
+	}
+}
+.group-head.active{
+	button{
+		@include rotage(180deg);
 	}
 }
 .address-box{
