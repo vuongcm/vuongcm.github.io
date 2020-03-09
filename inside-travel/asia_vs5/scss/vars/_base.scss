@@ -929,7 +929,10 @@ select:focus {
                     }
                 }
             }
-            .paragraph-hide{
+            .link-st3{
+                font-size: 12px;
+            }
+            /* .paragraph-hide{
                 margin-bottom: 0;
                 margin-top: 0;
             }
@@ -942,7 +945,7 @@ select:focus {
                 position: relative;
                 z-index: 5;
                 box-shadow: 0px -44px 50px 0px #ffffff;
-            }
+            } */
             &>div:last-child{
                 display: flex;
                 justify-content: flex-start;
@@ -2017,9 +2020,6 @@ select:focus {
         }
         .item{
             &>div:last-child{
-                &>p{
-                    font-size: 15px;
-                }
                 &>div{
                     &>span{
                         font-size: 12px;
