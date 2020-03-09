@@ -465,10 +465,16 @@ $(document).ready(function() {
     context.beginPath();
 	context.arc(450,382,58,Math.PI/2,Math.PI/1.04);
     context.stroke();*/
+    if($('.fab-box-tablet').length){
+    	$('.fab-box-tablet .enqui-tablet').click(function(){
+    		goToOffset('#enquiry-offset');
+    	});
+    }
     for(let i=0; i<$('.box-hidden-st3').length; i++){
     	let paraText = $('.box-hidden-st3 .paragraph span').eq(i).text();
     	$('.box-hidden-st3').eq(i).append(`<p class="text-hidden">${paraText}</p>`);
-    	$('.box-hidden-st3 .paragraph span').eq(i).text(paraText.substr(0, 200));
+    	$('.cruise-box-st3 .box-hidden-st3 .paragraph span').eq(i).text(paraText.substr(0, 200));
+    	$('.wrap-slide-st3 .box-hidden-st3 .paragraph span').eq(i).text(paraText.substr(0, 480));
     	$('.box-hidden-st3 .link-st3').eq(i).click(function(){
     		let temText = $('.box-hidden-st3 .paragraph span').eq(i).text();
     		$('.box-hidden-st3 .paragraph span').eq(i).text($('.text-hidden').eq(i).text());
