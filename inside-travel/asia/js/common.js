@@ -1922,6 +1922,10 @@ $(document).ready(function() {
 		$('.modal-container').removeClass('close-display');
 		$('.modal-cruise-st2').removeClass('close-display');
 	});
+	$('.open-mess').click(function(){
+		$('.modal-container').removeClass('close-display');
+		$('.modal-messenger').removeClass('close-display');
+	});
 	/*======booking=======*/
 	if($('.room-booking-wrap').length){
 		$('.room-booking-wrap').delegate(`.select-cabin input[type="radio"]`,'click',function(){

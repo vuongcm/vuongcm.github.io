@@ -556,9 +556,28 @@
 		}
 	}
 	.text-input{
+		display: flex;
+		flex-wrap: wrap;
 		textarea{
 			width: 100%;
 			height: 89px;
+		}
+		.btn-st2{
+			margin-left: auto;
+			margin-top: 10px;
+			border-radius: 999px;
+			color: #fff;
+		    background-color: $higlight-color;
+		    border-color: $higlight-color;
+		    padding-left: 0;
+		    padding-right: 0;
+		    min-width: 120px;
+		    .icon-font{
+		    	margin-left: 5px;
+		    }
+		    &:hover{
+		    	
+		    }
 		}
 	}
 	.box-message.active{
