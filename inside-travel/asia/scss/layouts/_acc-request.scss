@@ -285,9 +285,11 @@
 				padding-left: 5px;
 				display: inline-flex;
 				align-items: center;
+				color: #888;
 				.icon-font{
 					margin-right: 5px;
 					font-size: 14px;
+					color: inherit;
 				}
 				strong{
 					display: flex;
@@ -301,6 +303,12 @@
 					background-color: #e87055;
 					color: #fff;
 					font-weight: normal;
+				}
+				b{
+					color: inherit;
+				}
+				&:hover{
+					color: $higlight-color;
 				}
 			}
 		}
@@ -382,16 +390,21 @@
 			text-align: center;
 			display: block;
 			margin-bottom: 15px;
+			color: #888;
 			.icon-font{
 				font-size: 14px;
+				color: inherit;
 
 			}
 			.icon-mail{
 				font-size: 12px;
 			}
 			font{
-				color: #888;
+				color: inherit;
 				font-weight: 500;
+			}
+			&:hover{
+				color: $higlight-color;
 			}
 		}
 	}
@@ -407,17 +420,18 @@
 			text-align: center;
 			display: block;
 			margin-bottom: 15px;
+			color: #888;
 			.icon-font{
 				font-size: 14px;
-				color: #888;
+				color: inherit;
 
 			}
-			.icon-mail{
-				font-size: 12px;
-			}
 			font{
-				color: #888;
+				color: inherit;
 				font-weight: 500;
+			}
+			&:hover{
+				color: $higlight-color;
 			}
 		}
 	}
