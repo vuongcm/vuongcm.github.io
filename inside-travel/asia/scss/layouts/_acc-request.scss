@@ -74,16 +74,18 @@
 }
 .titile-request-box{
 	display: flex;
-	align-items: center;
+	align-items: baseline;
 	color: #333;
 	.icon-font{
 		font-size: 24px;
 		margin-right: 5px;
+		line-height: 1;
 	}
 	font{
-		font-size: 14px;
+		font-size: 18px;
 		font-weight: 600;
 		text-transform: uppercase;
+		line-height: 1;
 	}
 }
 .trip-request-box{
@@ -290,30 +292,35 @@
 				padding-left: 5px;
 				display: inline-flex;
 				align-items: center;
-				color: #888;
+				color: #555;
+				height: 100%;
 				.icon-font{
 					margin-right: 5px;
 					font-size: 14px;
-					color: inherit;
+					color: #888;
 				}
 				strong{
 					display: flex;
-					padding-left: 1px;
-					width: 12px;
-					height: 12px;
-					justify-content: center;
-					align-items: center;
-					font-size: 8px;
-					border-radius: 50%;
-					background-color: #e87055;
-					color: #fff;
-					font-weight: normal;
+				    padding-left: 1px;
+				    width: 16px;
+				    height: 16px;
+				    justify-content: center;
+				    align-items: center;
+				    font-size: 11px;
+				    border-radius: 50%;
+				    background-color: red;
+				    color: #fff;
+				    font-weight: 600;
 				}
 				b{
 					color: inherit;
+					padding-right: 2px;
 				}
 				&:hover{
 					color: $higlight-color;
+					.icon-font{
+						color: $higlight-color;
+					}
 				}
 			}
 		}
@@ -402,7 +409,7 @@
 
 			}
 			.icon-mail{
-				font-size: 11px;
+				font-size: 10px;
 			}
 			.icon-trip-01{
 				font-size: 12px;
@@ -433,7 +440,7 @@
 			margin-bottom: 15px;
 			color: #888;
 			.icon-font{
-				font-size: 14px;
+				font-size: 13px;
 				color: inherit;
 
 			}
@@ -619,10 +626,25 @@
 			text-transform: uppercase;
 			font-weight: 600;
 		}
+		.select-st1{
+			position: relative;
+			span.text{
+				background-color: #fff;
+				height: 43px;
+				padding-left: 10px;
+				cursor: pointer;
+				border: 1px solid #aaa;
+			    vertical-align: middle;
+			    line-height: 1.5;
+			    color: #555;
+			    padding: 10px 8px;
+			}
+			
+		}
 	}
 }
 .form-upload{
-	max-width: 400px;
+	max-width: 450px;
 	text-align: left;
 	margin-top: 15px;
 	&>div{
@@ -639,20 +661,24 @@
 	.name-upload{
 	    height: 43px;
 	    border: 1px solid #aaa;
-	    font-size: 14px;
+	    font-size: 12px;
 	    vertical-align: middle;
 	    line-height: 1.5;
 	    color: #555;
 	    padding: 10px 8px;
 	    flex-grow: 1;
-	    -webkit-transition: all .25s linear;
-	    -moz-transition: all .25s linear;
-	    -o-transition: all .25s linear;
-	    -ms-transition: all .25s linear;
-	    transition: all .25s linear;
+		overflow-x: hidden;
+		background: #e0ddcb;
+		span{
+			width: 100%;
+			display: block;
+			white-space: nowrap; 
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
 	}
 	label{
-		min-width: 120px;
+		min-width: 140px;
 		width: max-content;
 		flex-shrink: 0;
 		font-weight: 600;
@@ -667,6 +693,16 @@
 		}
 	}
 }
+.wrap-filter-st2{
+	.filter-submit-2 {
+		.btn-st3{
+			.icon-font{
+				font-size: 14px;
+				margin-left: 5px;
+			}
+		}
+	}
+} 
 @media (min-width: 1350px) {
 	.section-grid-dt4{
 		.grid-ct2{

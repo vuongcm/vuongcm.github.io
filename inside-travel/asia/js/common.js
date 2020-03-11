@@ -1787,7 +1787,7 @@ $(document).ready(function() {
     });
     /*===end search-top =====*/
 	/*===filter 2=====*/
-	if($('.wrap-filter-st2').length){
+	if($('.wrap-filter-st2, .trip-request-box').length){
 		$('.filter-desti-2 .btn-value').click(function(){
 			$(this).toggleClass('checked');
 			let numberValue = $('.filter-desti-2 .checked').length;
@@ -1831,7 +1831,11 @@ $(document).ready(function() {
 		$('.filter-price-2 .btn-value').click(function(){
 			if($(this).attr('class').search('checked') != -1){
 				$('.filter-price-2 .btn-value').removeClass('checked');
-				$('.filter-price-2 .text b').html(`Price`);
+				if($(this).closest('.trip-request-box').length){
+					$('.filter-price-2 .text b').html(`Country *`);
+				} else{
+					$('.filter-price-2 .text b').html(`Price`);
+				}
 				$('.filter-price-2>input').val('');
 			} else{
 				let thisValue = $(this).children('b').text();
@@ -1925,6 +1929,9 @@ $(document).ready(function() {
 	$('.open-mess').click(function(){
 		$('.modal-container').removeClass('close-display');
 		$('.modal-messenger').removeClass('close-display');
+	});
+	$('#upload-img').change(function(){
+		$(this).next('.fake-upload').find('.name-upload span').text($(this).prop('files')[0].name);
 	});
 	/*======booking=======*/
 	if($('.room-booking-wrap').length){
