@@ -34,7 +34,7 @@
 		//background-color: #a12345;
 		&>div{
 			background-color: #fff;
-			padding: 20px 15px 40px 15px;
+			padding: 15px 15px 40px 15px;
 			margin-bottom: 30px;
 			border-radius: 6px;
 			border: 1px solid #EEE;
@@ -89,8 +89,23 @@
 	}
 }
 .trip-request-box{
-	.hidden-tablet{
-		
+	.trip-st4{
+		margin-bottom: 0;
+		padding: 0;
+		.foot-trip{
+			.wrap-tooltip{
+				padding-left: 0;
+				width: max-content;
+				margin: 0;
+			}
+		}
+		.heart-tour-st2{
+			display: block;
+		    margin-bottom: 10px;
+		    margin-left: 15px;
+		    font-size: 36px;
+		    color: $higlight-color;
+		}
 	}
 }
 .request-trip{
@@ -377,12 +392,19 @@
 		&:nth-child(2){
 			padding-left: 15px;
 		}
+		&:last-child{
+			padding-left: 15px;
+			color: green;
+			b{
+				color: inherit;
+			}
+		}
 	}
 	&>a{
 		margin-left: auto;
 		color: #e87055;
 		b{
-			color: #e87055;
+			color: red;
 		}
 	}
 }
@@ -729,7 +751,76 @@
 			}
 		}
 	}
-} 
+}
+.heart-tour-st2{
+    cursor: pointer;
+    &>a{
+        display: block;
+        width: 100%;
+        color: inherit;
+        font-size: inherit;
+    }
+    &:hover{
+        .heart-full{
+            font-size: inherit;
+            &:before{
+                content: "\e914";
+            }
+        }
+    }
+}
+.booking-status-box{
+	&>span{
+		color: #555;
+		font-weight: 600;
+	}
+	ul{
+		li{
+			margin-top: 10px;
+			margin-bottom: 15px;
+			.tooltip{
+				color: #555;
+				font-weight: 600;
+				opacity: 1;
+				&>div{
+					display: flex;
+					align-items: center;
+				}
+				.icon-font{
+					&:first-child, &:nth-child(2){
+						color: #888;
+						font-size: 18px;
+						margin-right: 5px;
+					}
+					&:last-child{
+						color: green;
+						margin-left: 5px;
+					}
+				}
+				&>span{
+					left: 50%;
+					@include translateX(-50%);
+					color: #fff;
+					background-color: $higlight-color;
+					&:after{
+						background-color: $higlight-color;
+					}
+				}
+			}
+			.tooltip.un-book{
+				cursor: auto;
+				.icon-font{
+					&:last-child{
+						color: #888;
+					}
+				}
+				&>span{
+					display: none;
+				}
+			}
+		}
+	}
+}
 @media (min-width: 1350px) {
 	.section-grid-dt4{
 		.grid-ct2{
@@ -828,6 +919,12 @@
 				padding-left: 10px;
 				border-right: 1px solid #dcdcdc;
 			}
+			&:last-child{
+				padding-left: 10px;
+				b{
+					display: none;
+				}
+			}
 		}
 		&>a{
 			padding-left: 10px;
@@ -873,6 +970,13 @@
 					width: 9px;
 					height: 9px;
 				}
+			}
+		}
+	}
+	.trip-request-box{
+		.trip-st4{
+			.heart-tour-st2{
+			    margin-bottom: 0;
 			}
 		}
 	}
