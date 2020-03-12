@@ -844,7 +844,34 @@
 	    	text-align: center;
 	    }
 	}
-} 
+}
+.booking-complete-box{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #eae3e3;
+	border: 1px dotted #555;
+	height: 100%;
+	&>.checkmark{
+		font-size: 30px;
+		color: green;
+		margin-bottom: 10px;
+	}
+	strong{
+		text-transform: uppercase;
+		font-size: 28px;
+		color: green;
+		font-weight: 400;
+		margin-bottom: 30px;
+	}
+	.btn-st2{
+		border-radius: 999px;
+		background-color: green;
+		color: #fff;
+		border-color: green;
+	}
+}
 @media (min-width: 1350px) {
 	.section-grid-dt4{
 		.grid-ct2{
@@ -913,6 +940,10 @@
 			grid-row: 5 / 6;
 			padding-left: 15px;
 		}
+	}
+	.booking-complete-box{
+		margin-bottom: 15px;
+		min-height: 210px;
 	}
 }
 @media (max-width: 767px) {
