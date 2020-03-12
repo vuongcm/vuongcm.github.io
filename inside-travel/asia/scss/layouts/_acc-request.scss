@@ -397,7 +397,7 @@
 		}
 		&:last-child{
 			padding-left: 15px;
-			color: green;
+			color: #07b307;
 			b{
 				color: inherit;
 			}
@@ -531,6 +531,19 @@
 		justify-content: space-between;
 		align-items: flex-end;
 		margin-bottom: 30px;
+		/* &>.tooltip{
+			width: max-content;
+			opacity: 1;
+			span{
+				width: max-content;
+				left: 50%;
+				background-color: $higlight-color;
+				@include translateX(-50%);
+				&:after{
+					background-color: $higlight-color;
+				}
+			}
+		} */
 		.avatar{
 			width: 60px;
 			padding: 2px;
@@ -790,7 +803,7 @@
 			margin-top: 10px;
 			margin-bottom: 15px;
 			.tooltip{
-				color: #555;
+				color: #888;
 				font-weight: 600;
 				opacity: 1;
 				&>div{
@@ -799,12 +812,12 @@
 				}
 				.icon-font{
 					&:first-child, &:nth-child(2){
-						color: #888;
+						color: #aaa;
 						font-size: 18px;
 						margin-right: 5px;
 					}
 					&:last-child{
-						color: green;
+						color: #07b307;
 						margin-left: 5px;
 					}
 				}
@@ -822,7 +835,7 @@
 				cursor: auto;
 				.icon-font{
 					&:last-child{
-						color: #888;
+						color: #aaa;
 					}
 				}
 				&>span{
@@ -850,26 +863,26 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #eae3e3;
-	border: 1px dotted #555;
+	background-color: #f7fffb;
+	border: 2px dashed #eee;
 	height: 100%;
 	&>.checkmark{
 		font-size: 30px;
-		color: green;
+		color: #07b307;
 		margin-bottom: 10px;
 	}
 	strong{
 		text-transform: uppercase;
 		font-size: 28px;
-		color: green;
+		color: #07b307;
 		font-weight: 400;
 		margin-bottom: 30px;
 	}
 	.btn-st2{
 		border-radius: 999px;
-		background-color: green;
+		background-color: #07b307;
 		color: #fff;
-		border-color: green;
+		border-color: #07b307;
 	}
 }
 @media (min-width: 1350px) {
