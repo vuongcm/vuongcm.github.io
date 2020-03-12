@@ -1679,9 +1679,12 @@ select:focus {
 .address{
     font-style: normal;
     text-align: left;
-    color: $light-color-3;
+    color: #888;
     a{
-        color: $light-color-3;
+        color: #888;
+        &:hover{
+            color: $higlight-color;
+        }
     }
 }
 .price-trip-box{
