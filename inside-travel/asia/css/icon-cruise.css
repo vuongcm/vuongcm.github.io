@@ -67,7 +67,7 @@
 .ficon-bbq-facilities:before {
   content: "\f125";
 }
-.ficon-cycling:before {
+.ficon-cycling:before, .ficon-bicycle-rental:before {
   content: "\f129";
 }
 .ficon-boats:before {
@@ -94,7 +94,7 @@
 .ficon-bottled-water:before {
   content: "\f14e";
 }
-.ficon-concierge:before {
+.ficon-concierge:before, .ficon-butler:before {
   content: "\f151";
 }
 .ficon-currency-exchange:before {
@@ -112,7 +112,7 @@
 .ficon-elevator:before {
   content: "\f16a";
 }
-.ficon-private-check-in-check-out:before {
+.ficon-private-check-in-check-out:before, .ficon-express-check-in-check-out:before {
   content: "\f16f";
 }
 .ficon-facilities-for-disabled-guests:before {
@@ -181,10 +181,10 @@
 .ficon-massage:before {
   content: "\f1c5";
 }
-.ficon-meeting-facilities:before {
+.ficon-meeting-facilities:before, .ficon-seating-area:before {
   content: "\f1c9";
 }
-.ficon-bar:before {
+.ficon-bar:before, .ficon-mini-bar:before {
   content: "\f1cc";
 }
 .ficon-non-smoking-rooms:before {
@@ -214,13 +214,13 @@
 .ficon-refrigerator:before {
   content: "\f1fe";
 }
-.ficon-restaurant:before {
+.ficon-restaurant:before, .ficon-breakfast-included:before, .ficon-all-meals-included:before {
   content: "\f200";
 }
-.ficon-room-service:before {
+.ficon-room-service:before, .ficon-cave-dinner:before, .ficon-dinner-on-top-deck:before {
   content: "\f208";
 }
-.ficon-safety-deposit-boxes:before {
+.ficon-safety-deposit-boxes:before, .ficon-in-room-safe:before {
   content: "\f209";
 }
 .ficon-salon:before {
@@ -244,7 +244,7 @@
 .ficon-smoking-area:before {
   content: "\f223";
 }
-.ficon-spa:before {
+.ficon-spa:before, .ficon-sauna:before {
   content: "\f228";
 }
 .ficon-steamroom:before {
@@ -280,7 +280,7 @@
 .ficon-valet-parking:before {
   content: "\f256";
 }
-.ficon-kayaking:before {
+.ficon-kayaking:before, .ficon-water-sports-motorized:before {
   content: "\f260";
 }
 .ficon-water-sports-non-motorized:before {
@@ -292,7 +292,7 @@
 .ficon-wheelchair-accessible:before {
   content: "\f263";
 }
-.ficon-wi-fi-in-public-areas:before {
+.ficon-wi-fi-in-public-areas:before, .ficon-connecting:before {
   content: "\f264";
 }
 .ficon-internet-access:before {
