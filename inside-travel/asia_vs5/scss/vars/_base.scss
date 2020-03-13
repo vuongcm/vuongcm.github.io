@@ -1180,6 +1180,8 @@ select:focus {
             //box-shadow: none;
             background-color: $higlight-color;
             color: #fff;
+            width: auto;
+            white-space: nowrap;
             font{
                 margin-bottom: 0;
             }
