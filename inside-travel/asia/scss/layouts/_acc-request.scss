@@ -276,6 +276,12 @@
     			color: #aaa;
 			}
 		}
+		.tooltip{
+			&>span{
+				width: auto;
+				white-space: nowrap;
+			}
+		}
 		&:first-child{
 			span{
 				display: inline-flex;
@@ -296,8 +302,7 @@
 							color: #fff;
 							bottom: calc(100% + 10px);
 							background-color: $higlight-color;
-							width: auto;
-							white-space: nowrap;
+							
 							&:after{
 								background-color: $higlight-color;
 							}
@@ -357,8 +362,6 @@
 						}
 					}
 					&>span{
-						left: 50%;
-						@include translateX(-50%);
 						color: #fff;
 						bottom: calc(100% + 10px);
 						background-color: $higlight-color;
