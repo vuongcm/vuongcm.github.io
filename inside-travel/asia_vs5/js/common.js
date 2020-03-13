@@ -1820,6 +1820,13 @@ $(document).ready(function() {
 			}
 		});
 	}
+	$('.open-mess').click(function(){
+		$('.modal-container').removeClass('close-display');
+		$('.modal-messenger').removeClass('close-display');
+	});
+	$('#upload-img').change(function(){
+		$(this).next('.fake-upload').find('.name-upload span').text($(this).prop('files')[0].name);
+	});
 });
 window.onload = function() {
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());

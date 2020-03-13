@@ -822,8 +822,6 @@
 					}
 				}
 				&>span{
-					left: 50%;
-					@include translateX(-50%);
 					color: #fff;
 					background-color: $higlight-color;
 					&:after{
