@@ -100,6 +100,15 @@ $(document).ready(function() {
 	        		$('.grid-ct4').removeAttr('style').removeClass('scroll-active');
 	        	}
 	        }
+	        if($('.section-grid-dt4').length){
+	        	if($(this).scrollTop() > $('.grid-ct3').offset().top){
+	        		$('.grid-ct2').css({
+	        			'top':'60px'
+	        		});
+	        	} else{
+	        		$('.grid-ct2').removeAttr('style');
+	        	}
+	        }
 		}
 		if (bodyWidth > 991) {
 			if($(this).scrollTop() > 250){
