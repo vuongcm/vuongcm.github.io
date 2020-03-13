@@ -293,11 +293,11 @@
 							}
 						}
 						&>span{
-							left: 50%;
-							@include translateX(-50%);
 							color: #fff;
 							bottom: calc(100% + 10px);
 							background-color: $higlight-color;
+							width: auto;
+							white-space: nowrap;
 							&:after{
 								background-color: $higlight-color;
 							}
