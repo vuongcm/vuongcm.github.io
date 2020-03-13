@@ -321,6 +321,22 @@ $(document).ready(function() {
 			});
 		}
 	}
+	/*=======cruise-4=========*/
+	if($('.trip-cruise').length){
+		$('.box-schedule').outerWidth($('.trip-cruise').outerWidth());
+		$('.open-schedule-1').click(function(){
+			$(this).toggleClass('active');
+			$(this).closest('.left-trip').children('.box-schedule-1').slideToggle(500);
+		});
+		$('.open-schedule-2').click(function(){
+			$(this).toggleClass('active');
+			$(this).closest('.left-trip').children('.box-schedule-2').slideToggle(500);
+		});
+		$('.facilities>a').click(function(){
+			$(this).next('ul').toggleClass('open-flex');
+		});
+	}
+	/*============end cruise -4=====*/
 	if($('.section-grid-dt3, .section-grid-dt4').length){
 		$('.group-head').click(function(){
 			let thisHidden = $(this).next('.hidden-tablet');
