@@ -640,6 +640,8 @@
 		}
 		&>span{
 			bottom: 150%;
+			white-space: normal;
+			width: max-content;
 		}
 	}
 }
