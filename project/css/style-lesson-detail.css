@@ -292,6 +292,31 @@
 .checked {
 	color: #fc840e;
 }
+.wrap-table{
+  width: 100%;
+  position: relative;
+}
+.wrap-table table{
+  width: 100%;
+  border: 1px solid #aaa;
+}
+.wrap-table table td, .wrap-table table th{
+  border: 1px solid #aaa;
+  vertical-align: middle;
+  padding: 10px;
+  font-size: 13px;
+}
+.wrap-table table th{
+  text-align: center;
+  font-size: 12px;
+}
+.wrap-table table thead th:first-child{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.wrap-table table td p{
+  font-size: inherit;
+}
 @media only screen and (max-width: 992px) {
 	.comment-container {
     float: none;
