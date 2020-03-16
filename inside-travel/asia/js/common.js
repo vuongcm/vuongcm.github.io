@@ -1666,7 +1666,7 @@ $(document).ready(function() {
 				$('.booking-step-room-cruise .value-2').append(`<div class="room-cruise room-cruise-${number1+1}">
 							<b>Room ${number1+1}:</b>
 							<div class="room-type">
-								<select name="typecab${number1+1}" class="select-st9" onchange="selectChange(this,'.room-cruise-${number1+1}')">
+								<select id="typecab${number1+1}" name="typecab${number1+1}" class="select-st9" onchange="selectChange(this,'.room-cruise-${number1+1}')">
 									<option value="0" selected>Double</option>
 									<option value="1">Twin</option>
 									<option value="2">Single</option>
@@ -1677,19 +1677,19 @@ $(document).ready(function() {
 									<button class="btn-down" type="button" onclick="btnDownClick(this,'.adult-number-sum','.room-cruise-${number1+1}')">-</button>
 									<span><strong class="adult-number">2</strong>&nbsp;Adult(>12)</span>
 									<button class="btn-up" type="button" onclick="btnUpClick(this,'.adult-number-sum','.room-cruise-${number1+1}',4)">+</button>
-									<input type="text" name="adult${number1+1}" value="2">
+									<input type="text" id="adult${number1+1}" name="adult${number1+1}" value="2">
 								</div>
 								<div class="wrap-child-number">
 									<button class="btn-down btn-disabled" type="button" onclick="btnDownClick(this,'.child-number-sum','.room-cruise-${number1+1}')">-</button>
 									<span><strong class="child-number">0</strong>&nbsp;Child(4-12)</span>
 									<button class="btn-up" type="button" onclick="btnUpClick(this,'.child-number-sum','.room-cruise-${number1+1}',2)">+</button>
-									<input type="text" name="child${number1+1}" value="0">
+									<input type="text" id="child${number1+1}" name="child${number1+1}" value="0">
 								</div>
 								<div class="wrap-infant-number">
 									<button class="btn-down btn-disabled" type="button" onclick="btnDownClick(this,'.infant-number-sum','.room-cruise-${number1+1}')">-</button>
 									<span><strong class="infant-number">0</strong>&nbsp;Infant(<3)</span>
 									<button class="btn-up" type="button" onclick="btnUpClick(this,'.infant-number-sum','.room-cruise-${number1+1}',2)">+</button>
-									<input type="text" name="infant${number1+1}" value="0">
+									<input type="text" id="infant${number1+1}" name="infant${number1+1}" value="0">
 								</div>
 							</div>
 						</div>`);
@@ -2057,16 +2057,16 @@ window.onload = function() {
 	}, 800);*/
 };
 let btnUpClick = function(a,b,c,d){
-	let number1 = Number($(a).nextAll('input').val());
+	let number13 = Number($(a).nextAll('input').val());
 	let numberSum = Number($(b).html());
 	let wrap = $(a).parent('div').attr('class');
-	if(number1 < d){
-		$(c).find(`.${wrap} input`).val(`${number1+1}`);
+	if(number13 < d){
+		$(a).nextAll('input').val(`${number13 +1 }`);
 		$(b).html(`${numberSum+1}`);
-		$(c).find(`.${wrap} span>strong`).html(`${number1+1}`);
+		$(c).find(`.${wrap} span>strong`).html(`${number13 + 1}`);
 		$(c).find(`.${wrap} .btn-down`).removeClass('btn-disabled');
 	}
-	if((number1+1) == d){
+	if((number13 + 1) == d){
 		$(c).find(`.${wrap} .btn-up`).addClass('btn-disabled');
 	}
 	//alert(`.${wrap} input`);
