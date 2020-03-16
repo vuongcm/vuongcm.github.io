@@ -1092,6 +1092,39 @@
 				margin: 0;
 			}
 		}
+		.wrap-faq{
+			width: 100%;
+			.order-day{
+				margin-top: 0;
+				//background-color: transparent;
+				&>div:first-child{
+					margin-top: 0;
+					background-color: transparent;
+					.flex-box{
+						flex-grow: 1;
+						padding-right: 10px;
+						position: relative;
+						h3{
+							width: auto;
+							display: inline;
+							flex-grow: unset;
+							margin: 0;
+						}
+						.price-trip-box{
+							width: auto;
+						}
+						.box-schedule{
+							width: 100%;
+						}
+					}
+					&>button{
+						ms-transform: rotate(-90deg);
+					    -webkit-transform: rotate(-90deg);
+					    transform: rotate(-90deg);
+					}
+				}
+			}
+		}
 	}
 }  
     

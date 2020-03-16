@@ -725,7 +725,7 @@
 		}
 	}
 	.body-box{
-		background-color: #fff;
+		background-color: #e6ddcc;
 		padding: 20px 20px 40px 20px;
 		display: flex;
 		flex-wrap: wrap;
@@ -737,10 +737,10 @@
 				padding-right: 30px;
 				max-width: calc(100% - 247px);
 			}
-			.btn-st2{
+			&>.btn-st2{
 				width: 247px;
 				border-radius: 999px;
-				border-color: #bbb;
+				border-color: #cab1a6;
 				//line-height: 1;
 				padding-top: 5px;
 				padding-bottom: 5px;

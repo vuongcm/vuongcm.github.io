@@ -489,7 +489,7 @@
 .order-day{
 	width: 100%;
 	@include smooth(.5s);
-	&>a:first-child{
+	&>a:first-child, &>div:first-child{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;

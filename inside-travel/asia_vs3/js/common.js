@@ -1224,6 +1224,24 @@ $(document).ready(function() {
 			$('#search-cruise-modal .booking-step-depature input').val($(this).val());
 		});
 	}
+	if($('.booking-step-depa').length){
+		$('.booking-step-depa .text').click(function(){
+			$(this).nextAll('.value-3').toggleClass('open-block');
+		});
+		$('.booking-step-depa .value-3 .btn-value').click(function(){
+			$('.booking-step-depa .value-3 .btn-value').removeClass('active');
+			$(this).addClass('active');
+			$('.booking-step-depa>input').val($(this).attr('data-value'));
+			$('.booking-step-depa .text b').text($(this).attr('data-value'));
+			$('.booking-step-depa .value-3').removeClass('open-block');
+			
+		});
+		$('body').click(function(e){
+			if (!$('.booking-step-depa').is(e.target) && $('.booking-step-depa').has(e.target).length === 0) {
+	            $('.booking-step-depa .value-3').removeClass('open-block');
+	        }
+		});
+	}
 	if($('.booking-step-room-cruise').length){
 		$('.wrap-room-number .btn-down').click(function(){
 			let number1 = Number($(this).nextAll('input').val());
@@ -1582,15 +1600,15 @@ $(document).ready(function() {
 		});
 	}
 	/*=======cruise-2=========*/
-	if($('.trip-cruise').length){
+	if($('.trip-cruise, .big-first-tour-box').length){
 		$('.box-schedule').outerWidth($('.trip-cruise').outerWidth());
 		$('.open-schedule-1').click(function(){
 			$(this).toggleClass('active');
-			$(this).closest('.left-trip').children('.box-schedule-1').slideToggle(500);
+			$(this).closest('.left-trip, .flex-box').children('.box-schedule-1').slideToggle(500);
 		});
 		$('.open-schedule-2').click(function(){
 			$(this).toggleClass('active');
-			$(this).closest('.left-trip').children('.box-schedule-2').slideToggle(500);
+			$(this).closest('.left-trip, .flex-box').children('.box-schedule-2').slideToggle(500);
 		});
 		$('.facilities>a').click(function(){
 			$(this).next('ul').toggleClass('open-flex');
@@ -1655,6 +1673,17 @@ $(document).ready(function() {
 			}
 		});
 	}
+	$('.open-cruise-itine').click(function(){
+		$('.modal-container').removeClass('close-display');
+		$('.modal-cruise-st2').removeClass('close-display');
+	});
+	$('.open-mess').click(function(){
+		$('.modal-container').removeClass('close-display');
+		$('.modal-messenger').removeClass('close-display');
+	});
+	$('#upload-img').change(function(){
+		$(this).next('.fake-upload').find('.name-upload span').text($(this).prop('files')[0].name);
+	});
 });
 window.onload = function() {
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());

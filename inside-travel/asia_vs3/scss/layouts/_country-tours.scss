@@ -280,11 +280,11 @@
 	.order-day{
 		background-color: #fff;
 		margin-top: 15px;
-		&>a:first-child{
+		&>a:first-child, &>div:first-child{
 			background-color: #eee7db;
 		    border-bottom: 1px solid #d5cab6;
 
-			img{
+			&>img{
 				width: 30px;
 				margin-right: 10px;
 			}
