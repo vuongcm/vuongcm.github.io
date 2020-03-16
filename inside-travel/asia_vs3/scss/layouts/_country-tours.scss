@@ -281,8 +281,9 @@
 		background-color: #fff;
 		margin-top: 15px;
 		&>a:first-child{
-			background-color: #fff;
-			border-bottom: 1px solid #dcdcdc;
+			background-color: #eee7db;
+		    border-bottom: 1px solid #d5cab6;
+
 			img{
 				width: 30px;
 				margin-right: 10px;
@@ -308,7 +309,7 @@
 				line-height: 1.4;
 			}
 			&:hover{
-				background-color: #fbfaf9;
+				background-color: #f7f3ed;
 			}
 		}
 		.panel{

@@ -1173,6 +1173,20 @@ select:focus {
         }
     }
 }
+.count-day {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    line-height: 1;
+    font-weight: 600;
+    color: #fff;
+    padding: 8px 10px;
+    z-index: 3;
+    border-radius: 999px;
+    background-color: rgba(16,15,15,0.5);
+    text-transform: uppercase;
+    font-size: 10px;
+}
 .synch-carousels {
     position: relative;
     box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.05);

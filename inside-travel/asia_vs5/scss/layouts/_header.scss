@@ -124,6 +124,9 @@ header{
 				align-items: center;
 				flex-shrink: 0;
 			}
+			&>.icon-font.image{
+				font-size: 24px;
+			}
 			&>.icon-font.icon-menu-1, &>.icon-font.icon-menu-3{
 				font-size: 30px;
 			}

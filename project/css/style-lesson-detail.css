@@ -294,7 +294,8 @@
 }
 .wrap-table{
   width: 100%;
-  position: relative;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 .wrap-table table{
   width: 100%;

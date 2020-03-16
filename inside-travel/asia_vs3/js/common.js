@@ -534,6 +534,18 @@ $(document).ready(function() {
 		  ]
 		});
 	}
+	//carousel-st8
+	if ($('.wrap-slide-st8').length > 0 && bodyWidth < 992) {
+		$(`.wrap-slide-st8 .gallery`).slick({
+			dots: true,
+			dotsClass: 'wrap-dots',
+			infinite: false,
+			slidesToShow: 1,
+			infinite: true,
+			arrows: false
+		});
+	}
+
 	//carousel-st9
 	if ($('.wrap-slide-st9').length > 0) {
 		for(let i=0; i<$('.wrap-slide-st9 .synch-carousels').length; i++){
