@@ -192,11 +192,14 @@ $(document).ready(function() {
 	    },function(){
 	    	$(this).children('.paragraph').removeAttr('style');
 	    });
-	    $('body').delegate('.trip .content-trip','hover',function(){
+	    $('body').delegate('.trip .content-trip','click',function(){
 	    	$(this).children('.paragraph').css('max-height','400px');
-	    },function(){
-	    	$(this).children('.paragraph').removeAttr('style');
 	    });
+	    $('body').click(function(e){
+			if (!$('.trip .content-trip').is(e.target) && $('.trip .content-trip').has(e.target).length === 0) {
+	            $('.trip .content-trip .paragraph').removeAttr('style');
+	        }
+		});
 	    if($('.experience-container').length){
 	    	$('.experience-container .col-xlg-4 article').hover(function(){
 		    	$(this).css('max-height','400px');
@@ -253,7 +256,7 @@ $(document).ready(function() {
 			$(this).height(heightTrip2);
 			$(this).children('.content-trip').css('bottom',priceTripheight + 'px');
 		});
-		$('.trip-st2 .content-trip').hover(function(){
+		$('.trip-st2 .content-trip').click(function(){
 	    	$(this).children('.paragraph').css('max-height','210px');
 	    },function(){
 	    	//$(this).parent('.right-trip').outerHeight() - $(this).prev('.head-trip').outerHeight() - $(this).next('.price-trip-box').outerHeight() - 22 + 'px';
@@ -1631,11 +1634,12 @@ $(document).ready(function() {
 			$('.booking-step-depa>input').val($(this).attr('data-value'));
 			$('.booking-step-depa .text b').text($(this).attr('data-value'));
 			$('.booking-step-depa .value-3').removeClass('open-block');
-			$('body').click(function(e){
-				if (!$('.booking-step-depa').is(e.target) && $('.booking-step-depa').has(e.target).length === 0) {
-		            $('.booking-step-depa .value-3').removeClass('open-block');
-		        }
-			});
+			
+		});
+		$('body').click(function(e){
+			if (!$('.booking-step-depa').is(e.target) && $('.booking-step-depa').has(e.target).length === 0) {
+	            $('.booking-step-depa .value-3').removeClass('open-block');
+	        }
 		});
 	}
 	if($('.booking-step-room-cruise').length){
@@ -1951,7 +1955,7 @@ $(document).ready(function() {
 	});
 	/*======booking=======*/
 	if($('.room-booking-wrap').length){
-		$('.room-booking-wrap').delegate(`.select-cabin input[type="radio"]`,'click',function(){
+		/*$('.room-booking-wrap').delegate(`.select-cabin input[type="radio"]`,'click',function(){
 			if (this.checked){
 				let valueR = $(this).val().split(';');
 				let roomNumber = valueR[0].slice(5);
@@ -1969,7 +1973,7 @@ $(document).ready(function() {
 				$(this).closest('tr').addClass('active');
 	            goToOffset('#room-option');
 	        }
-		});
+		});*/
 		$('.room-booking-wrap').delegate('.service-check','click',function(){
 			let valueS = $(this).val();
 			if (this.checked){
