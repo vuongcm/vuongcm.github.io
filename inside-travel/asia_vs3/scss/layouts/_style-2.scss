@@ -1202,6 +1202,29 @@
 			margin-left: 15px;
 		}
 	}
+	.big-first-tour-box{
+		.body-box{
+			.wrap-faq{
+				padding-right: 0;
+				padding-left: 0;
+				.order-day{
+					&>div:first-child{
+						padding-right: 0;
+						padding-left: 0;
+						.flex-box{
+							padding-right: 0;
+							.price-trip-box{
+								display: none;
+							}
+						}
+						&>button{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}  
 }
 @media (max-width: 991px) {
 	.video-top-container{
@@ -1487,6 +1510,14 @@
 					width: auto;
 					margin: 0;
 				}
+			}
+		}
+	}
+	.big-first-tour-box{
+		.body-box{
+			.wrap-faq{
+				order: 4;
+				margin-top: 15px;
 			}
 		}
 	} 

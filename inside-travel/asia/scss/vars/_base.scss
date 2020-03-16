@@ -1360,12 +1360,6 @@ select:focus {
                 font-weight: 500;
             }
         }
-        
-        &:hover{
-            &>p{
-                max-height: 400px;
-            }
-        }
     }
     .wrap-tooltip{
         margin-top: auto;
@@ -1960,6 +1954,17 @@ select:focus {
     }
     .special-width-destop{
         width: 70%;
+    }
+}
+@media (min-width: 1025px){
+    .trip{
+        .content-trip{
+            .paragraph{
+                &:hover{
+                    max-height: 400px;
+                }
+            }
+        }
     }
 }
 @media (max-width: 1199px) {
