@@ -502,7 +502,11 @@ $(document).ready(function() {
     	let paraText = $('.box-hidden-st3 .paragraph span').eq(i).text();
     	$('.box-hidden-st3').eq(i).append(`<p class="text-hidden">${paraText}</p>`);
     	$('.cruise-box-st3 .box-hidden-st3 .paragraph span').eq(i).text(paraText.substr(0, 200));
-    	$('.wrap-slide-st3 .box-hidden-st3 .paragraph span').eq(i).text(paraText.substr(0, 480));
+    	if(bodyWidth < 991){
+    		$('.wrap-slide-st3 .box-hidden-st3 .paragraph span').eq(i).text(paraText.substr(0, 240));
+    	} else{
+    		$('.wrap-slide-st3 .box-hidden-st3 .paragraph span').eq(i).text(paraText.substr(0, 480));
+    	}
     	$('.box-hidden-st3 .link-st3').eq(i).click(function(){
     		let temText = $('.box-hidden-st3 .paragraph span').eq(i).text();
     		$('.box-hidden-st3 .paragraph span').eq(i).text($('.text-hidden').eq(i).text());
