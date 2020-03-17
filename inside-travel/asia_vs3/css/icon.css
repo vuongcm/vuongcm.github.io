@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'insideTravel';
-  src:  url('../fonts/insidetravel/insideTravel.eot?urz2ln');
-  src:  url('../fonts/insidetravel/insideTravel.eot?urz2ln#iefix') format('embedded-opentype'),
-    url('../fonts/insidetravel/insideTravel.ttf?urz2ln') format('truetype'),
-    url('../fonts/insidetravel/insideTravel.woff?urz2ln') format('woff'),
-    url('../fonts/insidetravel/insideTravel.svg?urz2ln#insideTravel') format('svg');
+  src:  url('../fonts/insidetravel/insideTravel.eot?bjglqt');
+  src:  url('../fonts/insidetravel/insideTravel.eot?bjglqt#iefix') format('embedded-opentype'),
+    url('../fonts/insidetravel/insideTravel.ttf?bjglqt') format('truetype'),
+    url('../fonts/insidetravel/insideTravel.woff?bjglqt') format('woff'),
+    url('../fonts/insidetravel/insideTravel.svg?bjglqt#insideTravel') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,43 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-loading:before {
+  content: "\e975";
+}
+.icon-personal-01:before {
+  content: "\e971";
+}
+.icon-trip-01:before {
+  content: "\e974";
+}
+.icon-password:before {
+  content: "\e973";
+}
+.icon-invoice:before {
+  content: "\e96f";
+}
+.icon-logout:before {
+  content: "\e970";
+}
+.icon-departure-01:before {
+  content: "\e96e";
+}
+.icon-menu-1:before {
+  content: "\e96a";
+}
+.icon-menu-2:before {
+  content: "\e96b";
+}
+.icon-menu-3:before {
+  content: "\e96c";
+}
+.icon-menu-4:before {
+  content: "\e96d";
+}
+.icon-next-back:before {
+  content: "\e969";
+  color: #d3d4d4;
+}
 .icon-build:before {
   content: "\e966";
 }
@@ -101,7 +138,6 @@
 }
 .speed-boat:before {
   content: "\e933";
-  color: #606161;
 }
 .icon-user-2:before {
   content: "\e932";

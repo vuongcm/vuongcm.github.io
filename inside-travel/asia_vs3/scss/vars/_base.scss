@@ -3,25 +3,25 @@
     margin: 0;
     padding: 0;
     &::-webkit-input-placeholder{
-        color: #555;
+        color: #b3350a;
         letter-spacing: 1px;
         font-size: 12px;
         font-family: 'Montserrat', Arial, sans-serif;
     }
     &:-moz-placeholder{
-        color: #555;
+        color: #b3350a;
         letter-spacing: 1px;
         font-size: 12px;
         font-family: 'Montserrat', Arial, sans-serif;
     }
     &::-moz-placeholder{
-        color: #555;
+        color: #b3350a;
         letter-spacing: 1px;
         font-size: 12px;
         font-family: 'Montserrat', Arial, sans-serif;
     }
     &:-ms-input-placeholder{
-        color: #555;
+        color: #b3350a;
         letter-spacing: 1px;
         font-size: 12px;
         font-family: 'Montserrat', Arial, sans-serif;
@@ -1833,6 +1833,12 @@ select:focus {
 }
 .col-xlg-12{
     width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+.col-xlg-8{
+    width: 66.666%;
     padding-left: 15px;
     padding-right: 15px;
     text-align: center;

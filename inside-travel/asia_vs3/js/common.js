@@ -1443,6 +1443,11 @@ $(document).ready(function() {
 	}
 	
 	/*===end filter 2=====*/
+	//============inquery-cruise-3=============
+	if($('.booking-step-itinerary').length){
+		
+	}
+	/*============end-inquery-cruise-3=============*/
 	$('body').delegate('.filter-box>a','click',function(){
 		$(this).next('.value').toggleClass('open-block');
 	});
