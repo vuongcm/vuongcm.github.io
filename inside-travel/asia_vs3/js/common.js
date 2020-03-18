@@ -1516,7 +1516,7 @@ $(document).ready(function() {
 					<div class="box-cabin">
 		            	<div class="col-xlg-12">Cabin ${thisVal + 1}:</div>
 		            	<div class="half">
-		            		<div class="form-field col-xlg-6">
+		            		<div class="form-field col-xlg-6 col-xsm-12">
 								<div class="booking-step-cabin-name select-st1">
 				            		<select name="">
 				            			<option value="Superior Stateroom" selected>Superior Stateroom</option>
@@ -1559,7 +1559,7 @@ $(document).ready(function() {
 									</ul>
 								</div>
 			            	</div>
-			            	<div class="form-field col-xlg-6">
+			            	<div class="form-field col-xlg-6 col-xsm-12">
 			            		<div class="booking-step-cabin booking-st1">
 									<span class="text">
 										<b>
