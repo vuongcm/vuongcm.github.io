@@ -809,6 +809,18 @@
 		}
 	}
 }
+.box-cabin{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 15px;
+	&>.col-xlg-12{
+		text-align: left;
+		font-weight: 600;
+	}
+	.form-field{
+		margin-top: 5px;
+	}
+}
 #modal-inquery-cruise{
 	h3{
 		text-transform: uppercase;
@@ -828,18 +840,8 @@
 		width: 45%;
 		min-width: 95px;
 	}
-	.box-cabin{
-		flex-wrap: wrap;
-		margin-top: 15px;
-		&>.col-xlg-12{
-			text-align: left;
-			font-weight: 600;
-		}
-		.form-field{
-			margin-top: 5px;
-		}
-	}
-	.select-st1,.select-st2, .booking-st1, .booking-st4,.select-st9{
+	
+	.select-st1,.select-st2, .booking-st1, .booking-st4{
 		width: 100%;
 		height: auto;
 		border: 1px solid #aaa;

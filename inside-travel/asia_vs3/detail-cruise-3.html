@@ -1506,55 +1506,20 @@
 							</div>
 						</div>
 						<div class="form-field col-xlg-12">
-							<div class="booking-step-room-cruise booking-st1">
-								<span class="text">
-									<b>
-										<i class="icon-font key"></i>&nbsp;
-										<strong class="room-number">1</strong>&nbsp;Room(s)&nbsp;
-										<i class="icon-font icon-users"></i>&nbsp;
-										<strong class="adult-number-sum">2</strong>&nbsp;Adult(s),&nbsp;<strong class="child-number-sum">0</strong>&nbsp;Children,&nbsp;<strong class="infant-number-sum">0</strong>&nbsp;Infant
-									</b>
-									<i class="icon-font select-arrow-thin"></i>
+							<div class="booking-step-nocabin booking-st1">
+		            			<span class="text">
+									<b>Select No.of cabins</b>
+									<i class="icon-font bed"></i>
 								</span>
 								<div class="value-2">
-									<div class="wrap-room-number">
+									<div class="wrap-cabins-number">
 										<button class="btn-down btn-disabled" type="button">-</button>
-										<span><strong class="room-number">1</strong>&nbsp;Room(s)</span>
+										<span><strong class="cabins-number">1</strong>&nbsp;Cabin(s)</span>
 										<button class="btn-up" type="button">+</button>
 										<input type="text" name="" value="1">
 									</div>
-									<div class="room-cruise room-cruise-1">
-										<b>Room 1:</b>
-										<div class="room-type">
-											<select class="select-st9" onchange="selectChange(this,'.room-cruise-1')">
-												<option value="1" selected="">Double</option>
-												<option value="2">Twin</option>
-												<option value="3">Single</option>
-											</select>
-										</div>
-										<div class="room-element">
-											<div class="wrap-adult-number">
-												<button class="btn-down" onclick="btnDownClick(this,'.adult-number-sum','.room-cruise-1')" type="button">-</button>
-												<span><strong class="adult-number">2</strong>&nbsp;Adult(&gt;12)</span>
-												<button class="btn-up" onclick="btnUpClick(this,'.adult-number-sum','.room-cruise-1',4)" type="button">+</button>
-												<input type="text" name="" value="2">
-											</div>
-											<div class="wrap-child-number">
-												<button class="btn-down btn-disabled" onclick="btnDownClick(this,'.child-number-sum','.room-cruise-1')" type="button">-</button>
-												<span><strong class="child-number">0</strong>&nbsp;Child(4-12)</span>
-												<button class="btn-up" onclick="btnUpClick(this,'.child-number-sum','.room-cruise-1',2)" type="button">+</button>
-												<input type="text" name="" value="0">
-											</div>
-											<div class="wrap-infant-number">
-												<button class="btn-down btn-disabled" onclick="btnDownClick(this,'.infant-number-sum','.room-cruise-1')" type="button">-</button>
-												<span><strong class="infant-number">0</strong>&nbsp;Infant(&lt;3)</span>
-												<button class="btn-up" onclick="btnUpClick(this,'.infant-number-sum','.room-cruise-1',2)" type="button">+</button>
-												<input type="text" name="" value="0">
-											</div>
-										</div>
-									</div>
 								</div>
-							</div>
+		            		</div>
 						</div>
 						
 						<div class="form-field col-xlg-12">
@@ -3352,8 +3317,8 @@
 						</span>
 						<div class="value-2">
 							<div class="wrap-cabins-number">
-								<button class="btn-down" type="button">-</button>
-								<span><strong class="cabins-number">1</strong>&nbsp;Adult(>12)</span>
+								<button class="btn-down btn-disabled" type="button">-</button>
+								<span><strong class="cabins-number">1</strong>&nbsp;Cabin(s)</span>
 								<button class="btn-up" type="button">+</button>
 								<input type="text" name="" value="1">
 							</div>
@@ -3361,93 +3326,97 @@
             		</div>
             	</div>
             </div>
-            <div class="half box-cabin">
-            	<div class="col-xlg-12">Cabin 1:</div>
-            	<div class="form-field col-xlg-6">
-					<div class="booking-step-cabin-name select-st1">
-	            		<select name="">
-	            			<option value="Superior Stateroom" selected>Superior Stateroom</option>
-	            		</select>
-						<span class="text">
-							<b>Superior Stateroom</b>
-							<i class="icon-font map-marker"></i>
-						</span>
-						<ul class="value">
-							<li>
-								<a href="javascript:" class="btn-value checked">
+            <div class="wrap-list-cabins">
+            	<div class="box-cabin">
+	            	<div class="col-xlg-12">Cabin 1:</div>
+	            	<div class="half">
+	            		<div class="form-field col-xlg-6">
+							<div class="booking-step-cabin-name select-st1">
+			            		<select name="">
+			            			<option value="Superior Stateroom" selected></option>
+			            		</select>
+								<span class="text">
 									<b>Superior Stateroom</b>
-									<i class="icon-font checkmark"></i>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:" class="btn-value">
-									<b>Deluxe Stateroom</b>
-									<i class="icon-font checkmark"></i>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:" class="btn-value">
-									<b>Signature Suite</b>
-									<i class="icon-font checkmark"></i>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:" class="btn-value">
-									<b>The Taj Suite</b>
-									<i class="icon-font checkmark"></i>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:" class="btn-value">
-									<b>Lord Byrons Suite</b>
-									<i class="icon-font checkmark"></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-            	</div>
-            	<div class="form-field col-xlg-6">
-            		<div class="booking-step-cabin booking-st1">
-						<span class="text">
-							<b>
-								<i class="icon-font icon-users"></i>&nbsp;
-								<strong class="adult-number">2</strong>&nbsp;Adult(s),&nbsp;<strong class="child-number">0</strong>&nbsp;Children,&nbsp;<strong class="infant-number">0</strong>&nbsp;Infant
-							</b>
-							<i class="icon-font select-arrow-thin"></i>
-						</span>
-						<div class="value-2">
-							<div class="room-cruise">
-								<div class="room-type">
-									<select class="select-st9" onchange="selectChange(this,'.room-cruise-1')">
-										<option value="1" selected="">Double</option>
-										<option value="2">Twin</option>
-										<option value="3">Single</option>
-									</select>
-								</div>
-								<div class="room-element">
-									<div class="wrap-adult-number">
-										<button class="btn-down" onclick="btnDownClick(this,'.adult-number-sum','.room-cruise-1')" type="button">-</button>
-										<span><strong class="adult-number">2</strong>&nbsp;Adult(&gt;12)</span>
-										<button class="btn-up" onclick="btnUpClick(this,'.adult-number-sum','.room-cruise-1',4)" type="button">+</button>
-										<input type="text" name="" value="2">
-									</div>
-									<div class="wrap-child-number">
-										<button class="btn-down btn-disabled" onclick="btnDownClick(this,'.child-number-sum','.room-cruise-1')" type="button">-</button>
-										<span><strong class="child-number">0</strong>&nbsp;Child(4-12)</span>
-										<button class="btn-up" onclick="btnUpClick(this,'.child-number-sum','.room-cruise-1',2)" type="button">+</button>
-										<input type="text" name="" value="0">
-									</div>
-									<div class="wrap-infant-number">
-										<button class="btn-down btn-disabled" onclick="btnDownClick(this,'.infant-number-sum','.room-cruise-1')" type="button">-</button>
-										<span><strong class="infant-number">0</strong>&nbsp;Infant(&lt;3)</span>
-										<button class="btn-up" onclick="btnUpClick(this,'.infant-number-sum','.room-cruise-1',2)" type="button">+</button>
-										<input type="text" name="" value="0">
+									<i class="icon-font map-marker"></i>
+								</span>
+								<ul class="value">
+									<li>
+										<a href="javascript:" class="btn-value checked">
+											<b>Superior Stateroom</b>
+											<i class="icon-font checkmark"></i>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:" class="btn-value">
+											<b>Deluxe Stateroom</b>
+											<i class="icon-font checkmark"></i>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:" class="btn-value">
+											<b>Signature Suite</b>
+											<i class="icon-font checkmark"></i>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:" class="btn-value">
+											<b>The Taj Suite</b>
+											<i class="icon-font checkmark"></i>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:" class="btn-value">
+											<b>Lord Byrons Suite</b>
+											<i class="icon-font checkmark"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+		            	</div>
+		            	<div class="form-field col-xlg-6">
+		            		<div class="booking-step-cabin booking-st1">
+								<span class="text">
+									<b>
+										<i class="icon-font icon-users"></i>&nbsp;
+										<strong class="adult-number">2</strong>&nbsp;Adult(s),&nbsp;<strong class="child-number">0</strong>&nbsp;Children,&nbsp;<strong class="infant-number">0</strong>&nbsp;Infant
+									</b>
+									<i class="icon-font select-arrow-thin"></i>
+								</span>
+								<div class="value-2">
+									<div class="room-cruise">
+										<div class="room-type">
+											<select class="select-st9">
+												<option value="1" selected="">Double</option>
+												<option value="2">Twin</option>
+												<option value="3">Single</option>
+											</select>
+										</div>
+										<div class="room-element">
+											<div class="wrap-adult-number">
+												<button class="btn-down" type="button">-</button>
+												<span><strong class="adult-number">2</strong>&nbsp;Adult(&gt;12)</span>
+												<button class="btn-up" type="button">+</button>
+												<input type="text" name="" value="2">
+											</div>
+											<div class="wrap-child-number">
+												<button class="btn-down btn-disabled" type="button">-</button>
+												<span><strong class="child-number">0</strong>&nbsp;Child(4-12)</span>
+												<button class="btn-up" type="button">+</button>
+												<input type="text" name="" value="0">
+											</div>
+											<div class="wrap-infant-number">
+												<button class="btn-down btn-disabled" type="button">-</button>
+												<span><strong class="infant-number">0</strong>&nbsp;Infant(&lt;3)</span>
+												<button class="btn-up" type="button">+</button>
+												<input type="text" name="" value="0">
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-            	</div>
+		            	</div>
+	            	</div>
+	            </div>
             </div>
             <div class="form-field col-xlg-12">
                 <input type="text" name="" placeholder="Full Name *" required>
