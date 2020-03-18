@@ -3,7 +3,7 @@
 		display: grid;
 		grid-template-columns: 68% 32%;
 		color: #895a36;
-    	grid-auto-rows: auto max-content max-content auto auto 1fr;
+    	grid-auto-rows: auto max-content max-content auto max-content 1fr;
     	align-content: start;
     	align-items: start;
     	justify-content: start;
@@ -466,6 +466,44 @@
 			.box-how-pri{
 				padding-left: 15px;
 				padding-right: 15px;
+			}
+			.box-contact{
+				.form-field{
+					&:first-child{
+						//margin-top: 0;
+					}
+				}
+				.team-quote{
+					width: 100%;
+					padding-left: 15px;
+					padding-right: 15px;
+					&>img{
+						width: 70px;
+					}
+					.team-name{
+						margin-top: 0;
+					}
+				}
+				.form-field{
+					textarea{
+						height: 120px;
+					}
+				} 
+				.form-field.show-scroll{
+					display: none;
+				}
+				.btn-st3{
+					width: 100%;
+					height: 40px;
+				}
+				.res-time-box{
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+					font{
+						color: #419453;
+					}
+				}
 			}
 		}
 		.group-ct5-2{
@@ -1002,6 +1040,19 @@
 	.section-grid-dt3{
 		.grid-ct4{
 			.group-ct4-1{
+				.box-contact{
+					.res-time-box{
+						flex-wrap: wrap;
+						span{
+							display: block;
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+		.grid-ct5{
+			.group-ct5-1{
 				.box-contact{
 					.res-time-box{
 						flex-wrap: wrap;
