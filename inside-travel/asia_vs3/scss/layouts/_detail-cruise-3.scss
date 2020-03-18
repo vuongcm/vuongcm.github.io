@@ -262,7 +262,7 @@
 		.select-st1,.booking-st1{
 			width: 100%;
 		    height: auto;
-		    border: 1px solid $higlight-color;
+		    border: 1px solid #aaa;
 		    font-size: 12px;
 		    vertical-align: middle;
 		    line-height: 1.5;
@@ -277,12 +277,12 @@
 		    position: relative;
 		    text-align: left;
 		    cursor: pointer;
-		    .text{
+		    /* .text{
 		    	b{
 		    		color: $higlight-color;
 		    		font-weight: 600;
 		    	}
-		    }
+		    } */
 		    .value, .value-2{
 		    	top: 100%;
 		    }
@@ -320,7 +320,7 @@
 		    }
 		}
 		.booking-st4{
-		    border: 1px solid $higlight-color;
+		    border: 1px solid #aaa;
     		
 		}
 		.btn-st3{
@@ -388,10 +388,11 @@
 	}
 	table{
 		min-width: 280px;
+		text-align: center;
 		//border: 1px solid #efede6;
 		thead{
 			tr{
-				background-color: $higlight-color;
+				background-color: #b3350a;
 			}
 			th{
 				padding-bottom: 10px;
@@ -406,13 +407,16 @@
     			padding-top: 10px;
     			border: 1px solid #efede6;
 			}
+			th{
+				color: #895a36;
+			}
 		}
 		.btn-value{
 			font-size: 13px;
 			padding: 0 3px;
 			border-radius: 5px;
 			&:hover{
-				background-color: $higlight-color;
+				background-color: #b3350a;
 				b{
 					color: #fff;
 				}
@@ -420,7 +424,7 @@
 			}
 		}
 		.btn-value.active{
-			background-color: $higlight-color;
+			background-color: #b3350a;
 			b{
 				color: #fff;
 			}

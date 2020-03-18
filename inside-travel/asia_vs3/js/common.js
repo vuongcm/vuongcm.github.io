@@ -1444,6 +1444,11 @@ $(document).ready(function() {
 	
 	/*===end filter 2=====*/
 	//============inquery-cruise-3=============
+	$('.open-cruise-inquiry').on('click',function(){
+		$('.modal-container').removeClass('close-display');
+		$('#modal-inquery-cruise').removeClass('close-display');
+		$('#modal-inquery-cruise').css('top',`${$(window).scrollTop()+15}px`);
+	});
 	if($('.booking-step-itinerary').length){
 		$('#modal-inquery-cruise .booking-step-itinerary .btn-value').click(function(){
 			let thisVal = $(this).children('b').text();
