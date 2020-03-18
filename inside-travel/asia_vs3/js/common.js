@@ -1454,19 +1454,10 @@ $(document).ready(function() {
 			let thisVal = $(this).children('b').text();
 			let parentItine = $(this).closest('.booking-step-itinerary');
 			parentItine.children('select').html(`<option value="${thisVal}" selected></option>`);
-			parentItine.find('.btn-value').removeClass('checked');
 			parentItine.find('.text b').text(thisVal);
-			$(this).addClass('checked');
 			parentItine.children('.value').removeClass('open-block');
 			if($('.box-check-rates .booking-step-itinerary').length){
-				let btnValue = $('.box-check-rates .booking-step-itinerary .btn-value');
-				btnValue.removeClass('checked');
-				for(let i=0; i<btnValue.length; i++){
-					if(btnValue.eq(i).children('b').text() == thisVal){
-						btnValue.eq(i).addClass('checked');
-						$('.box-check-rates .booking-step-itinerary .text b').text(thisVal);
-					}
-				}
+				$('.box-check-rates .booking-step-itinerary .text b').text(thisVal);
 			}
 		});
 		$('.box-check-rates .booking-step-itinerary .btn-value').click(function(){
@@ -1488,33 +1479,23 @@ $(document).ready(function() {
 	if($('.booking-step-nocabin').length){
 		$('body').click(function(e){
 			if (!$('.booking-step-nocabin').is(e.target) && $('.booking-step-nocabin').has(e.target).length === 0) {
-	            $('.booking-step-nocabin .value-2').removeClass('open-block');
+	            $('.booking-step-nocabin .value').removeClass('open-block');
 	        }
 	    });
-		$('.wrap-cabins-number .btn-down').click(function(){
-			let thisVal = Number($('.wrap-cabins-number>input').val());
-			$('.wrap-cabins-number .btn-up').removeClass('btn-disabled');
-			if(thisVal > 1){
-				$('.cabins-number').text(thisVal - 1);
-				$('.wrap-cabins-number>input').val(thisVal - 1);
-				if(thisVal == 2){
-					$('.wrap-cabins-number .btn-down').addClass('btn-disabled');
-				}
-				$('#modal-inquery-cruise .wrap-list-cabins .box-cabin').eq(thisVal - 1).remove();
+	    $('#modal-inquery-cruise .booking-step-nocabin .btn-value').click(function(){
+	    	let thisVal = $(this).children('b').text();
+	    	let parentItine = $(this).closest('.booking-step-nocabin');
+	    	parentItine.children('select').html(`<option value="${thisVal}" selected></option>`);
+			parentItine.find('.text b').text(`No.of cabin(s): ${thisVal}`);
+			if($('.box-check-rates .booking-step-nocabin').length){
+				$('.box-check-rates .booking-step-nocabin .text b').text(`No.of cabin(s): ${thisVal}`);
 			}
-		});
-		$('.wrap-cabins-number .btn-up').click(function(){
-			let thisVal = Number($('.wrap-cabins-number>input').val());
-			$('.wrap-cabins-number .btn-down').removeClass('btn-disabled');
-			if(thisVal < 5){
-				$('.cabins-number').text(thisVal + 1);
-				$('.wrap-cabins-number>input').val(thisVal + 1);
-				if(thisVal == 4){
-					$('.wrap-cabins-number .btn-up').addClass('btn-disabled');
-				}
+			$('.booking-step-nocabin .value').removeClass('open-block');
+			$('#modal-inquery-cruise .wrap-list-cabins').html('');
+			for(let i=0; i<thisVal; i++){
 				$('#modal-inquery-cruise .wrap-list-cabins').append(`
 					<div class="box-cabin">
-		            	<div class="col-xlg-12">Cabin ${thisVal + 1}:</div>
+		            	<div class="col-xlg-12">Cabin ${i + 1}:</div>
 		            	<div class="half">
 		            		<div class="form-field col-xlg-6 col-xsm-12">
 								<div class="booking-step-cabin-name select-st1">
@@ -1523,7 +1504,7 @@ $(document).ready(function() {
 				            		</select>
 									<span class="text">
 										<b>Superior Stateroom</b>
-										<i class="icon-font map-marker"></i>
+										<i class="icon-font bed"></i>
 									</span>
 									<ul class="value">
 										<li>
@@ -1603,6 +1584,15 @@ $(document).ready(function() {
 			            	</div>
 		            	</div>
 		            </div>`);
+			}
+	    });
+		$('.box-check-rates .booking-step-nocabin .btn-value').click(function(){
+			let thisVal = $(this).children('b').text();
+			let btnValue = $('#modal-inquery-cruise .booking-step-nocabin .btn-value');
+			for(let i=0; i<btnValue.length; i++){
+				if(btnValue.eq(i).children('b').text() == thisVal){
+					btnValue.eq(i).click();
+				}
 			}
 		});
 	}

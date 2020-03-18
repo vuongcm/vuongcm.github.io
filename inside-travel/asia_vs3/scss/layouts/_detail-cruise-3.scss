@@ -256,6 +256,16 @@
 		padding-bottom: 10px;
 		border-bottom: 1px solid #d8cdb9;
 	}
+	.text{
+		cursor: pointer;
+		.calendar-regular, .map-marker{
+			font-size: 16px;
+			color: #888;
+		}
+		.bed{
+			font-size: 14px;
+		}
+	}
 	.form-field{
 		padding-right: 0;
 		padding-left: 0;
@@ -304,7 +314,6 @@
 		    	&>li{
 		    		.btn-value{
 		    			&>b{
-		    				color: $higlight-color;
 		    				font-weight: 600;
 		    			}
 		    		}
@@ -318,6 +327,18 @@
     				background-color: $background-color-st1;
     			}
 		    }
+		}
+		.select-st1{
+			.value{
+				&>li{
+					.btn-value{
+						&>b{
+							width: 100%;
+							white-space: normal;
+						}
+					}
+				}
+			}
 		}
 		.booking-st4{
 		    border: 1px solid #aaa;
@@ -813,10 +834,17 @@
 		}
 	}
 }
+.wrap-list-cabins{
+	padding-right: 15px;
+	padding-left: 15px;
+}
 .box-cabin{
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 15px;
+	background-color: #ece5db;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	&>.col-xlg-12{
 		text-align: left;
 		font-weight: 600;
@@ -844,7 +872,9 @@
 		width: 45%;
 		min-width: 95px;
 	}
-	
+	.room-type{
+		margin-right: auto;
+	}
 	.select-st1,.select-st2, .booking-st1, .booking-st4{
 		width: 100%;
 		height: auto;
