@@ -146,6 +146,65 @@ footer{
     padding-left: 15px;
     padding-right: 15px;
 }
+.footer-brand-container{
+	.brand-footer{
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		flex-wrap: wrap;
+		max-width: 900px;
+		&>a{
+			height: 0px;
+		    margin: 15px 20px 45px;
+		    color: #967856;
+		    text-align: center;
+		    padding-top: 80px;
+		    background-image: url(../images/brand.png);
+		    background-repeat: no-repeat;
+		    flex-grow: 0;
+		}
+		.footer-logo1{
+			width: 135px;
+		    background-position: 0 0;
+		}
+		.footer-logo2{
+			width: 111px;
+			background-position: -189px 0;
+		}
+		.footer-logo3{
+			width: 83px;
+			background-position: -363px 0;
+		}
+		.footer-logo4{
+			width: 148px;
+		    background-position: -486px 0;
+		}
+		.footer-logo5{
+			width: 91px;
+		    background-position: -686px 0;
+		}
+		.footer-logo6{
+			width: 73px;
+		    background-position: -865px 0;
+		}
+		.footer-logo7{
+			width: 200px;
+		    background-position: -995px 0;
+		}
+		.footer-logo8{
+			width: 172px;
+		    background-position: -1213px 0;
+		}
+		.footer-logo9{
+			width: 174px;
+		    background-position: -1444px 0;
+		}
+	}
+}
 @media (max-width: 767px) {
 	.footer-banner-container{
 		padding: 60px 0;

@@ -125,6 +125,11 @@ $(document).ready(function() {
 		    });
 	    }
     }
+    if(bodyWidth < 479){
+    	$('.lang-top option').each(function(){
+    		$(this).text($(this).text().slice(0,2).toUpperCase());
+    	});
+    }
 //==============end header==============
 	if($('.trip-st2').length){
 		/*$('.trip-st2').each(function(){
