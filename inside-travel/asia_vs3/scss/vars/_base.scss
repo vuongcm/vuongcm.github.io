@@ -1759,6 +1759,13 @@ select:focus {
         font-weight: normal;
     }
 }
+.border-fat{
+    box-sizing: content-box;
+    border: 10px solid #d8c8ab;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
 .call-info{
     display: flex;
     flex-wrap: wrap;
