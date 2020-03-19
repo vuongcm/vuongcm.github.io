@@ -940,6 +940,7 @@
 					&>b{
 						text-overflow: clip;
     					white-space: normal;
+    					font-weight: 600;
 					}
 				}
 			}
@@ -1048,7 +1049,7 @@
 								span{
 									margin-top: 5px;
 									font-size: 9px;
-									
+
 									.icon-font{
 										font-size: 11px;
 									}
@@ -1188,11 +1189,35 @@
 	.box-infomation-cabins{
 		.connecting-r{
 			justify-content: center;
+			span{
+				&:first-child{
+					margin-left: auto;
+				}
+				&:nth-child(2){
+					margin-right: auto;
+				}			}
 			.btn-st2{
 				margin-right: auto;
 				margin-top: 10px;
+				padding-left: 15px;
+				padding-right: 15px;
 			}
 		}
+		
+		.box-cabin{
+			.paragraph{
+				text-align: center;
+			}
+			.cr-info-room{
+				text-align: center;
+				.row{
+					.col-xlg-3{
+						text-align: center;
+					}
+				}
+			}
+		}
+		
 	}
 }
 @media (max-width: 479px) {
