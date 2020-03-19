@@ -203,7 +203,7 @@ select:focus {
 }
 .select-st9 {
     padding-right: 15px;
-    color: $title-3;
+    color: #b3350a;
 }
 .btn-st1 {
 	background-color: $btn-bg-color-st1;
@@ -242,7 +242,7 @@ select:focus {
 }
 .btn-st3{
     color: #fff;
-    background-color: #333;
+    background-color: #b3350a;
     text-transform: uppercase;
     //font-size: 12px;
     letter-spacing: 3px;
@@ -253,8 +253,8 @@ select:focus {
     }
 }
 .btn-disabled{
-    color: $color-cover-dak!important;
-    border-color: $color-cover-dak!important;
+    border: 1px solid #dcd1bd!important;
+    color: #bb7c66!important;
     opacity: 1!important;
 }
 .link-st1 {

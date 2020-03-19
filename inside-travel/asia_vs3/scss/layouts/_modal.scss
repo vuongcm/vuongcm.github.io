@@ -464,6 +464,7 @@
 		color: $higlight-red-1;
 		padding: 10px 8px;
 		@include smooth(.25s);
+		background-color: #f9f6f1;
 	}
 	textarea{
 		height: 210px;

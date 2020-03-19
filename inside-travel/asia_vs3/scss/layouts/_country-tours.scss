@@ -278,10 +278,10 @@
 	margin-left: auto;
 	margin-right: auto;
 	.order-day{
-		background-color: #fff;
+		background-color: #e6ddcc;
 		margin-top: 15px;
 		&>a:first-child, &>div:first-child{
-			background-color: #eee7db;
+			background-color: #e6ddcc;
 		    border-bottom: 1px solid #d5cab6;
 
 			&>img{
@@ -309,7 +309,7 @@
 				line-height: 1.4;
 			}
 			&:hover{
-				background-color: #f7f3ed;
+				background-color: #e6ddcc;
 			}
 		}
 		.panel{

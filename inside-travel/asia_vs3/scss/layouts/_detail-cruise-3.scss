@@ -306,7 +306,7 @@
 		    -o-transition: all .25s linear;
 		    -ms-transition: all .25s linear;
 		    transition: all .25s linear;
-		    background-color: #fff;
+		    background-color: #f9f6f1;
 		    position: relative;
 		    text-align: left;
 		    cursor: pointer;
@@ -392,7 +392,7 @@
     -o-transition: all .25s linear;
     -ms-transition: all .25s linear;
     transition: all .25s linear;
-    background-color: #fff;
+    background-color: #f9f6f1;
 	&>input{
 		display: none;
 	}
@@ -412,8 +412,8 @@
 	left: -1px;
 	top: 100%;
 	overflow-y: scroll;
-	background-color: #fff;
-	border: 1px solid #dcdcdc;
+	background-color: #f9f6f1;
+	border: 1px solid #d2c5ae;
 	box-shadow: 0 6px 40px -4px #9c9991;
 	display: none;
 	z-index: 8;
@@ -546,6 +546,7 @@
 			bottom: 0;
 			max-height: 152px;
 			overflow-y: hidden;
+			background-color: #e6ddcc;
 			@include smooth(1s);
 			z-index: 3;
 			.paragraph{
@@ -865,7 +866,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 15px;
-	background-color: #ece5db;
+	background-color: #e6ddcc;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	&>.col-xlg-12{
