@@ -529,7 +529,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		padding: 15px 0;
-		border-bottom: 1px dotted #dcdcdc;
+		border-bottom: 1px dotted #e2d8bf;
 		.paragraph{
 			margin-right: 0;
 			margin-left: 0;
@@ -574,7 +574,7 @@
 			&>p{
 				display: inline;
 				line-height: 2;
-				color: #555;
+				color: #885916;
 				font-size: 14px;
 				font-weight: 600;
 			}
@@ -582,6 +582,9 @@
 	}
 	.accordion{
 		padding-top: 0;
+	}
+	b{
+		color: #885916;
 	}
 }
 .head-pn{

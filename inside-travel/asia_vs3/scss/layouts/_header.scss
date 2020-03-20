@@ -337,20 +337,35 @@ header{
 		align-items: center;
 		margin-right: 10px;
 		font{
-			font-weight: 600;
+			font-weight: 400;
+    		font-size: 16px;
 		}
 		.heart-tour{
 			margin-left: 5px;
 			.heart-empty{
 				font-size: 26px;
+				&:hover{
+					color: green;
+				}
+			}
+		}
+		.heart-tour.active{
+			.heart-empty{
+				color: green;
 			}
 		}
 	}
 	.book-top{
 		margin-right: 10px;
 		.btn-st1{
-			background-color: $higlight-color;
-			color: #fff;
+			background-color: inherit;
+			border: 1px solid #caae99;
+			color: #895a36;
+			border-radius: 999px;
+			&:hover{
+				background-color: #bdb316;
+				color: #fff;
+			}
 		}
 	}
 }
@@ -410,6 +425,8 @@ header{
 		}
 		.menu-wrap-st2{
 			border-bottom: 1px solid $border-color;
+			padding-bottom: 5px;
+			padding-top: 5px;
 		}
 	}
 	.btn-menu{
@@ -438,7 +455,7 @@ header{
 	    background-color: $background-color;
 		width: 300px;
 		height: 100vh;
-		overflow: hidden;
+		overflow: auto;
 		&>li{
 			width: 100%;
 			border: none;
@@ -484,11 +501,11 @@ header{
 		}
 	}
 	.main-menu-transform-1{
-		transform: translateX(-100%);
-		-moz-transform: translateX(-100%);
-		-webkit-transform: translateX(-100%);
-		-o-transform: translateX(-100%);
-		-ms-transform: translateX(-100%);
+		transform: translateX(-100%)!important;
+		-moz-transform: translateX(-100%)!important;
+		-webkit-transform: translateX(-100%)!important;
+		-o-transform: translateX(-100%)!important;
+		-ms-transform: translateX(-100%)!important;
 	}
 	.sub-menu-lv1{
 		width: 100%;
@@ -513,6 +530,39 @@ header{
 				padding-right: 10px;
 				//font-weight: normal;
 			}
+		}
+	}
+	.title-sub-daparture{
+		.sub-menu-lv1{
+			transform: none;
+		    -moz-transform: none;
+		    -webkit-transform: none;
+		    -o-transform: none;
+		    -ms-transform: none;
+		    .box-mon-time{
+		    	flex-wrap: wrap;
+		    	min-width: unset;
+		    	padding: 0 15px;
+				&>div{
+					width: 100%;
+					span{
+						padding-top: 0;
+						padding-bottom: 0;
+					}
+					&:first-child{
+						border-right: none;
+    					padding-right: 0;
+					}
+					&:last-child{
+						padding-left: 0;
+						margin-top: 15px;
+					}
+				}
+				ul{
+					margin-left: 0;
+					margin-right: 0;
+				}
+		    }
 		}
 	}
 	.sub-menu-lv2{

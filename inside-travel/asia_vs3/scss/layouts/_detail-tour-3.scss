@@ -624,7 +624,7 @@
 		.wrap-icon-des{
 			position: absolute;
 			left: -30px;
-			background-color: #fff;
+			background-color: #f6f4f0;
 			.icon-font{
 				//font-size: 20px;
 				color: $higlight-color;
@@ -645,7 +645,7 @@
 				z-index: 6;
 				background-color: transparent;
 				margin-top: 0;
-				border-bottom: 1px solid #dcdcdc;
+				border-bottom: 1px solid #e2d8bf;
 				padding-left: 3px;
 				padding-right: 3px;
 				opacity: 1;
@@ -675,7 +675,7 @@
 					content: "\e963";
 				}
 				h3{
-					color: #333;
+					color: #b53c13;
 				}
 			}
 			.panel{
@@ -718,7 +718,7 @@
 	display: flex;
 	align-items: center;
 	.star-box{
-		font-size: 24px;
+		font-size: 22px;
 	}
 	span{
 		margin-left: 10px;
