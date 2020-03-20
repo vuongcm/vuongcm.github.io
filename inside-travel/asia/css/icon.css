@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'insideTravel';
-  src:  url('../fonts/insidetravel/insideTravel.eot?bjglqt');
-  src:  url('../fonts/insidetravel/insideTravel.eot?bjglqt#iefix') format('embedded-opentype'),
-    url('../fonts/insidetravel/insideTravel.ttf?bjglqt') format('truetype'),
-    url('../fonts/insidetravel/insideTravel.woff?bjglqt') format('woff'),
-    url('../fonts/insidetravel/insideTravel.svg?bjglqt#insideTravel') format('svg');
+  src:  url('../fonts/insidetravel/insideTravel.eot?wcy47g');
+  src:  url('../fonts/insidetravel/insideTravel.eot?wcy47g#iefix') format('embedded-opentype'),
+    url('../fonts/insidetravel/insideTravel.ttf?wcy47g') format('truetype'),
+    url('../fonts/insidetravel/insideTravel.woff?wcy47g') format('woff'),
+    url('../fonts/insidetravel/insideTravel.svg?wcy47g#insideTravel') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.date-01:before {
+  content: "\e976";
+}
 .icon-loading:before {
   content: "\e975";
 }

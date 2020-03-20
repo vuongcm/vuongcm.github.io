@@ -1141,6 +1141,8 @@ select:focus {
             box-shadow: none;
             background-color: $title-3;
             color: #fff;
+            width: unset;
+            white-space: nowrap;
             font{
                 margin-bottom: 0;
             }

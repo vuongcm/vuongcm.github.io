@@ -1388,6 +1388,83 @@
 	font-size: 10px;
 	text-transform: uppercase;
 }
+.modal-cruise-st2{
+	.modal-content{
+		&>.order-day{
+			&>a:first-child{
+				background-color: transparent;
+				padding-left: 3px;
+				padding-right: 3px;
+				&>button{
+					.select-arrow-thin{
+						font-size: 8px;
+					}
+				}
+			}
+			.wrap-inclusion{
+				&>div{
+					h3{
+						font-size: 12px;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
+	.head-modal-itine{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		border-bottom: 1px dotted #dcdcdc;
+		padding-bottom: 15px;
+		h2{
+			flex-grow: 1;
+			font-size: 16px;
+			//margin-bottom: 0;
+			text-transform: uppercase;
+		}
+	}
+	.body-modal-itine{
+		.list-tour-day{
+			margin-top: 15px;
+			margin-bottom: 15px;
+			li{
+				.order-day{
+					&>a:first-child{
+						h3{
+							text-transform: none;
+							font-size: 13px;
+						}
+					}
+					.panel{
+						.head-pn{
+							span{
+								font-size: 12px;
+							}
+							&>p{
+								font-size: 12px;
+							}
+						}
+						&>div{
+							.paragraph{
+								font-size: 12px;
+							}
+						}
+						.experience-suplier{
+							.experience-content{
+								h4,h5{
+									font-size: 12px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+}
 /*#preloader{
 	width: 100%;
 	height: 100%;

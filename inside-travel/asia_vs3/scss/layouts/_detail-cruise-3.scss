@@ -71,6 +71,7 @@
 						border-bottom: none;
 					}
 					.wrap-slide-st9{
+						width: 100%;
 						.synch-carousels{
 							.nav-arrows{
 								top: 0;
@@ -987,6 +988,7 @@
 				background-color: transparent;
 				padding-left: 3px;
 				padding-right: 3px;
+				border-bottom: 1px solid #e2d8bf;
 				&>button{
 					.select-arrow-thin{
 						font-size: 8px;
@@ -1005,7 +1007,7 @@
 	}
 	.head-modal-itine{
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
 		border-bottom: 1px dotted #e2d8bf;

@@ -18,19 +18,23 @@
 <header>
 	<nav>
 		<div class="menu-wrap">
+			<button type="button" class="btn-bar-toggle">
+				<i class="icon-font menu"></i>
+				<i class="icon-font search"></i>
+			</button>
 			<div class="search-nav mg-left">
-				<button class="btn-collep-mobi">
-					<i class="icon-font menu"></i>
-				</button>
 				<a href="#" class="phone-box">
 					<i class="icon-font phone"></i>
 					<strong>+84 96 564 257</strong>
 				</a>
-				<button type="button" class="btn-collep-search open-search-top"><i class="icon-font search"></i><font>Search</font></button>
+				<button type="button" class="open-search-top">
+					<i class="icon-font search"></i>
+					<font>Search</font>
+				</button>
 				<div id="search-nav-top">
 					<form class="form-search-nav">
 						<div class="search-nav-where select-st1">
-							<select name="" multiple=""></select>
+							<select name="" multiple></select>
 				            <span class="text">
 				               <i class="icon-font map-marker"></i>
 				               <b>Where do you want to go?</b>
@@ -160,7 +164,7 @@
 				            </ul>
 				        </div>
 				        <div class="search-nav-exp select-st1">
-				        	<select name="" multiple=""></select>
+				        	<select name="" multiple></select>
 				            <span class="text">
 				               <i class="icon-font image"></i>
 				               <b>Experiences</b>
@@ -380,7 +384,7 @@
 				            </ul>
 						</div>
 						<div class="booking-step-submit">
-				            <button class="btn-st1 btn-create-trip">search my trip<i>→</i></button>
+				            <button class="btn-st3 btn-create-trip">search my trip<i>&rarr;</i></button>
 				        </div>
 					</form>
 				</div>
@@ -422,206 +426,191 @@
 							<a href="javascript:;">Log in</a>
 						</li>
 						<li>
-							<a href="javascript:;">Sign up</a>
+							<a href="#">Sign up</a>
 						</li>
 						<li>
-							<a href="javascript:;">Contact us</a>
+							<a href="#">Contact us</a>
 						</li>
 					</ul>
 				</li>
 				<li class="book-top"><button class="btn-st1 btn-contact">enquire</button></li>
 			</ul>
-			<ul class="main-menu">
-				<li class="sub-menu-title" id="menu-lv1-1">
-					<a href="#" class="">Destinations<i>&raquo;</i></a>
-				</li>
-				<li class="sub-menu-title" id="menu-lv1-2">
-					<a href="#" class="">Travel themes<i>&raquo;</i></a>
-				</li>
-				<li class="sub-menu-title" id="menu-lv1-3">
-					<a href="#" class="">Cruises<i>&raquo;</i></a>
-				</li>
-				<li class="">
-					<a href="#" class="">Experiences</a>
-				</li>
-				<li class="">
-					<a href="#" class="">Pre-Departure</a>
-				</li>
-				<li class="">
-					<a href="#" class="">About</a>
-				</li>
-				<ul class="sub-menu sub-menu-destinations">
-					<div class="menu-mobile-back">
-						<img src="images/demo-mobile-menu.jpg" alt="">
-						<button><i>&larr;</i></button>
-						<span>Destinations</span>
-					</div>
-					<li class="mg-left">
-						<a href="#">
-							<img src="images/vietnam.jpg" alt="Vietnam">
-							<span>Vietnam<i>&raquo;</i></span>
+			<div class="wrap-main-menu">
+				<ul class="main-menu">
+					<li class="sub-menu-title">
+						<a href="#" class="">
+							<i class="icon-font icon-menu-4"></i>
+							<font>Destinations<i class="icon-font select-arrow-thin"></i></font>
 						</a>
-						<a href="#">
-							<span class="bg-map-menu bg-map-vi"></span>
-						</a>
-						<div class="menu-lv-3">
-							<a href="#">Best Tours</a>
-							<a href="#">Preferred Hotels</a>
-							<a href="#">Experiences</a>
-							<a href="#">Pre-departure</a>
-						</div>
-						<a class="btn-st2" href="#">explore Vietnam</a>
+						<ul class="sub-menu">
+							<li class="sub-menu-title-lv2">
+								<a href="#">
+									<font>Vietnam<i class="icon-font select-arrow-thin"></i></font>
+								</a>
+								<ul class="sub-menu-lv2">
+									<li><a href="#">Best Tours</a></li>
+									<li><a href="#">Preferred Hotels</a></li>
+									<li><a href="#">Experiences</a></li>
+									<li><a href="#">Pre-departure</a></li>
+								</ul>
+							</li>
+							<li class="sub-menu-title-lv2">
+								<a href="#">
+									<font>Cambodia<i class="icon-font select-arrow-thin"></i></font>
+								</a>
+								<ul class="sub-menu-lv2">
+									<li><a href="#">Best Tours</a></li>
+									<li><a href="#">Preferred Hotels</a></li>
+									<li><a href="#">Experiences</a></li>
+									<li><a href="#">Pre-departure</a></li>
+								</ul>
+							</li>
+							<li class="sub-menu-title-lv2">
+								<a href="#">
+									<font>Laos<i class="icon-font select-arrow-thin"></i></font>
+								</a>
+								<ul class="sub-menu-lv2">
+									<li><a href="#">Best Tours</a></li>
+									<li><a href="#">Preferred Hotels</a></li>
+									<li><a href="#">Experiences</a></li>
+									<li><a href="#">Pre-departure</a></li>
+								</ul>
+							</li>
+							<li class="sub-menu-title-lv2">
+								<a href="#">
+									<font>Myanmar<i class="icon-font select-arrow-thin"></i></font>
+								</a>
+								<ul class="sub-menu-lv2">
+									<li><a href="#">Best Tours</a></li>
+									<li><a href="#">Preferred Hotels</a></li>
+									<li><a href="#">Experiences</a></li>
+									<li><a href="#">Pre-departure</a></li>
+								</ul>
+							</li>
+							<li class="sub-menu-title-lv2">
+								<a href="#">
+									<font>Thailand<i class="icon-font select-arrow-thin"></i></font>
+								</a>
+								<ul class="sub-menu-lv2">
+									<li><a href="#">Best Tours</a></li>
+									<li><a href="#">Preferred Hotels</a></li>
+									<li><a href="#">Experiences</a></li>
+									<li><a href="#">Pre-departure</a></li>
+								</ul>
+							</li>
+						</ul>
 					</li>
-					<li>
-						<a href="#">
-							<img src="images/cambodia.jpg" alt="Cambodia">
-							<span>Cambodia<i>&raquo;</i></span>
+					<li class="sub-menu-title">
+						<a href="#" class="">
+							<i class="icon-font image"></i>
+							<font>Travel themes<i class="icon-font select-arrow-thin"></i></font>
 						</a>
-						<a href="#">
-							<span class="bg-map-menu bg-map-ca"></span>
-						</a>
-						<div class="menu-lv-3">
-							<a href="#">Best Tours</a>
-							<a href="#">Preferred Hotels</a>
-							<a href="#">Experiences</a>
-							<a href="#">Pre-departure</a>
-						</div>
-						<a class="btn-st2" href="#">explore Cambodia</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="#">
+									<font>Best tours</font>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<font>Classic Highlights</font>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<font>Family Tours</font>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<font>Honeymoon Holidays</font>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<font>Honeymoon Holidays</font>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<font>Luxury Tours</font>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<font>Cruise Packages</font>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<font>Adventure & Special Interest</font>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<font>Day Trips & Short Breaks</font>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<font>Day Trips & Short Breaks</font>
+								</a>
+							</li>
+						</ul>
 					</li>
-					<li>
-						<a href="#">
-							<img src="images/laos.jpg" alt="Laos">
-							<span>Laos<i>&raquo;</i></span>
+					<li class="sub-menu-title">
+						<a href="#" class="">
+							<i class="icon-font icon-menu-1"></i>
+							<font>Cruises<i class="icon-font select-arrow-thin"></i></font>
 						</a>
-						<a href="#">
-							<span class="bg-map-menu bg-map-la"></span>
-						</a>
-						<div class="menu-lv-3">
-							<a href="#">Best Tours</a>
-							<a href="#">Preferred Hotels</a>
-							<a href="#">Experiences</a>
-							<a href="#">Pre-departure</a>
-						</div>
-						<a class="btn-st2" href="#">explore Laos</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="#"><font>Halong bay</font></a>
+							</li>
+							<li>
+								<a href="#"><font>Mekong River</font></a>
+							</li>
+							<li>
+								<a href="#"><font>Myanmar(Burma)</font></a>
+							</li>
+						</ul>
 					</li>
-					<li>
-						<a href="#">
-							<img src="images/myanmar.jpg" alt="Myanmar">
-							<span>Myanmar<i>&raquo;</i></span>
+					<li class="sub-menu-title line-top">
+						<a href="#" class="">
+							<i class="icon-font hiking"></i>
+							<font>Experiences</font>
 						</a>
-						<a href="#">
-							<span class="bg-map-menu bg-map-my"></span>
-						</a>
-						<div class="menu-lv-3">
-							<a href="#">Best Tours</a>
-							<a href="#">Preferred Hotels</a>
-							<a href="#">Experiences</a>
-							<a href="#">Pre-departure</a>
-						</div>
-						<a class="btn-st2" href="#">explore Myanmar</a>
 					</li>
-					<li class="mg-right">
-						<a href="#">
-							<img src="images/thailand.jpg" alt="Thailand">
-							<span>Thailand<i>&raquo;</i></span>
+					<li class="sub-menu-title">
+						<a href="#" class="">
+							<i class="icon-font icon-menu-2"></i>
+							<font>Experiences</font>
 						</a>
-						<a href="#">
-							<span class="bg-map-menu bg-map-th"></span>
+					</li>
+					<li class="sub-menu-title">
+						<a href="#" class="">
+							<i class="icon-font icon-departure-01"></i>
+							<font>Pre-Departure</font>
 						</a>
-						<div class="menu-lv-3">
-							<a href="#">Best Tours</a>
-							<a href="#">Preferred Hotels</a>
-							<a href="#">Experiences</a>
-							<a href="#">Pre-departure</a>
+					</li>
+					<li class="sub-menu-title line-top">
+						<a href="#" class="">
+							<i class="icon-font icon-menu-3"></i>
+							<font>About</font>
+						</a>
+					</li>
+					<li class="sub-menu-title">
+						<div class="follow-top">
+							<font>Follow Us</font>
+							<ul>
+								<li><a href="#"><i class="icon-font twitter-brands"></i></a></li>
+								<li><a href="#"><i class="icon-font facebook-square-brands"></i></a></li>
+								<li><a href="#"><i class="icon-font instagram-brands"></i></a></li>
+							</ul>
 						</div>
-						<a class="btn-st2" href="#">explore Thailand</a>
 					</li>
 				</ul>
-				<ul class="sub-menu sub-menu-travel">
-					<div class="menu-mobile-back">
-						<img src="images/demo-mobile-menu-2.jpg" alt="">
-						<button><i>&larr;</i></button>
-						<span>Travel themes</span>
-					</div>
-					<li>
-						<a href="#">
-							<img src="images/demo-travel-1.jpg" alt="">
-							<span>Best tours</span>
-							<!--<canvas id="canvas" class="a-hover" width="500" height="500"></canvas>-->
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="images/demo-travel-2.jpg" alt="">
-							<span>Classic Highlights</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="images/demo-travel-3.jpg" alt="">
-							<span>Family Tours</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="images/demo-travel-4.jpg" alt="">
-							<span>Honeymoon Holidays</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="images/demo-travel-4.jpg" alt="">
-							<span>Honeymoon Holidays</span>
-						</a>
-					</li>
-					<li class="mg-top-30">
-						<a href="#">
-							<img src="images/demo-travel-5.jpg" alt="">
-							<span>Luxury Tours</span>
-						</a>
-					</li>
-					<li class="mg-top-30">
-						<a href="#">
-							<img src="images/demo-travel-6.jpg" alt="">
-							<span>Cruise Packages</span>
-						</a>
-					</li>
-					<li class="mg-top-30">
-						<a href="#">
-							<img src="images/demo-travel-7.jpg" alt="">
-							<span>Adventure & Special Interest</span>
-						</a>
-					</li>
-					<li class="mg-top-30">
-						<a href="#">
-							<img src="images/demo-travel-8.jpg" alt="">
-							<span>Day Trips & Short Breaks</span>
-						</a>
-					</li>
-					<li class="mg-top-30">
-						<a href="#">
-							<img src="images/demo-travel-8.jpg" alt="">
-							<span>Day Trips & Short Breaks</span>
-						</a>
-					</li>
-				</ul>
-				<ul class="sub-menu sub-menu-cruises">
-					<div class="menu-mobile-back">
-						<img src="images/demo-mobile-menu-3.jpg" alt="">
-						<button><i>&larr;</i></button>
-						<span>Cruises</span>
-					</div>
-					<li>
-						<a href="#">halong bay</a>
-					</li>
-					<li>
-						<a href="#">Mekong River</a>
-					</li>
-					<li>
-						<a href="#">Myanmar(Burma)</a>
-					</li>
-				</ul>
-			</ul>
+			</div>
 		</div>
 	</nav>
 </header>
@@ -2435,7 +2424,11 @@
 			<div class="col-xlg-4 col-md-12">
 				<article>
 					<h3>WE ARE HERE TO TAKE THE STRESS OUT OF THE TOUR PLANNING. LET US HELP YOU!</h3>
-					<form action="">
+					<a href="#" class="img-box-st2">
+						<img src="images/doc.jpg" alt="">
+					</a>
+					<p class="paragraph">Being the locals, we know the tre value of our land. We always listen and arrange everything as your desire. We will send you best offers quickly.</p>
+					<!-- <form action="">
 						<div class="col-xlg-6 col-md-12">
 							<input class="input-st1" type="text" placeholder="Name" name="name">
 						</div>
@@ -2447,7 +2440,7 @@
 						</div>
 						<p>Being the locals, we know the true value of our land. We always listen and arrange everything as your desire. We will send you best offers quickly.</p>
 						<button class="btn-st2">ASK INSIDE TRAVEL EXPERT</button>
-					</form>
+					</form> -->
 				</article>
 			</div>
 			<div class="brand-footer">

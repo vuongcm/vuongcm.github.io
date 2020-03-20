@@ -262,6 +262,36 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	&>div{
+		display: flex;
+		align-items: center;
+		.date-01{
+			font-size: 16px;
+		}
+		.select-arrow-thin{
+			font-size: 8px;
+		}
+		.link-st3{
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+	.info-cruise-month{
+		align-items: baseline;
+		b{
+			color: #895a36;
+		}
+		a{
+			font-weight: 600;
+			color: red;
+			&:hover{
+				color: #bdb316;
+			}
+		}
+		.date-01{
+			margin-right: 5px;
+		}
+	}
 	.link-st3{
 		padding: 15px;
 		position: relative;
