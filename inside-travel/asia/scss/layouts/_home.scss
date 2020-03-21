@@ -323,11 +323,11 @@
 			line-height: 1.6;
 			max-height: 31px;
             overflow-y: hidden;
-            @include smooth(.8s);
+            @include smooth(1.2s);
 		}
 		&:hover{
 			.paragraph{
-				max-height: 200px;
+				max-height: 400px;
 			}
 		}
 	}

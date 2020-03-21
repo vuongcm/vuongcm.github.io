@@ -183,7 +183,7 @@ $(document).ready(function() {
 	}
 	if(bodyWidth < 1025){
     	$('.best-support article').hover(function(){
-	    	$(this).children('.paragraph').css('max-height','200px');
+	    	$(this).children('.paragraph').css('max-height','400px');
 	    },function(){
 	    	$(this).children('.paragraph').removeAttr('style');
 	    });
