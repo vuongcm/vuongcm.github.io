@@ -278,6 +278,8 @@
 	}
 	.info-cruise-month{
 		align-items: baseline;
+		max-width: 200px;
+		line-height: 1.5;
 		b{
 			color: #895a36;
 		}
@@ -1158,7 +1160,14 @@
 		}
 	}
 }  
-    
+.box-schedule-2{
+	.btn-schedule-2{
+		display: none;
+	}
+	.wrap-table{
+		width: 100%;
+	}
+} 
 
 @media (max-width: 1351px) {
 	.tooltip-handpick{
@@ -1255,7 +1264,20 @@
 				}
 			}
 		}
-	}  
+	} 
+	.info-cruise{
+		margin-top: 10px;
+		width: 100%;
+		justify-content: flex-start;
+		.link-st3{
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		.info-cruise-month{
+			max-width: unset;
+			width: 100%;
+		}
+	}
 }
 @media (max-width: 991px) {
 	.video-top-container{
@@ -1305,10 +1327,37 @@
 		}
 	}
 	.box-schedule-2{
-		overflow-x: auto;
-		webkit-overflow-scrolling: touch;
+		
+		//position: relative;
+		.wrap-table{
+			overflow-x: auto;
+			webkit-overflow-scrolling: touch;
+		}
 		table{
 			min-width: 863px;
+		}
+		.btn-schedule-2{
+			display: block;
+			position: absolute;
+			width: 50px;
+		    height: 100%;
+		    top: 0;
+		}
+		.btn-schedule-2-up{
+			left: 0;
+		    bottom: auto;
+		    background: -webkit-linear-gradient(left, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 40%);
+		    background: -moz-linear-gradient(left, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 40%);
+		    background: -ms-linear-gradient(left, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 40%);
+		    background: -o-linear-gradient(left, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 40%);
+		}
+		.btn-schedule-2-down{
+		
+			right: 0;
+		    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 40%);
+		    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 40%);
+		    background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 40%);
+		    background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 40%);
 		}
 	}
 	.cruise-box-st3{
@@ -1551,7 +1600,13 @@
 				margin-top: 15px;
 			}
 		}
-	} 
+	}
+	.info-cruise{
+		flex-grow: 1;
+		.info-cruise-month{
+			max-width: unset;
+		}
+	}
 }
 @media (max-width: 479px) {
 	.video-top-container{

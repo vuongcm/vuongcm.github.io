@@ -444,6 +444,10 @@
     			padding-top: 10px;
     			color: #fff;
     			border: 1px solid #efede6;
+    			&:first-child{
+    				padding-right: 10px;
+    				padding-left: 10px;
+    			}
 			}
 		}
 		tbody{
@@ -454,6 +458,15 @@
 			}
 			th{
 				color: #895a36;
+			}
+			td{
+				div{
+					display: flex;
+					margin: 0 auto;
+					justify-content: center;
+					flex-wrap: wrap;
+					max-width: 90%;
+				}
 			}
 		}
 		.btn-value{

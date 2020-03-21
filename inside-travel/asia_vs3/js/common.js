@@ -1947,20 +1947,6 @@ window.onload = function() {
 			    	}
 			    });
 			});
-			$(`#slide-st9-${i} .arrow-left`).on('click',function(){
-				let slideActive = $(`#slide-st9-${i}`).find('.slick-active');
-				let lastSlide = $(`#slide-st9-${i} .item`).length - 1;
-				if(slideActive.attr('data-slick-index') == '0'){
-					$(`#slide-st9-${i} .wrap-dots>li button`).eq(lastSlide).click();
-				}
-			});
-			$(`#slide-st9-${i} .arrow-right`).on('click',function(){
-				let slideActive = $(`#slide-st9-${i}`).find('.slick-active');
-				let lastSlide = $(`#slide-st9-${i} .item`).length - 1;
-				if(slideActive.attr('data-slick-index') == lastSlide){
-					$(`#slide-st9-${i} .wrap-dots>li button`).eq(0).click();
-				}
-			});
 			if($('body').width() <= 1199){
 	            $(`#slide-st9-${i}`).one("swipe", function(e) {
 	                $(`#slide-st9-${i} .item img`).each(function(){
