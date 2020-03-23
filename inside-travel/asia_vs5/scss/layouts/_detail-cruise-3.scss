@@ -364,6 +364,17 @@
 		    border: 1px solid $higlight-color;
     		
 		}
+		.booking-st2{
+			border: 1px solid $higlight-color;
+			position: relative;
+			.text{
+				padding: 10px 8px;
+				b{
+					color: #d0b316;
+    				font-weight: 600;
+				}
+			}
+		}
 		.btn-st3{
 			width: 100%;
     		height: 40px;
