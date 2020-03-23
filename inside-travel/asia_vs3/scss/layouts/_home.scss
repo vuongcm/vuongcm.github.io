@@ -286,7 +286,7 @@
 	.container{
 		.col-xlg-3, .col-xlg-4{
 			position: relative;
-			padding-bottom: 84px;
+			padding-bottom: 120px;
 		}
 	}
 	
@@ -306,11 +306,11 @@
 			line-height: 1.6;
 			max-height: 31px;
             overflow-y: hidden;
-            @include smooth(.5s);
+            @include smooth(1.5s);
 		}
 		&:hover{
 			.paragraph{
-				max-height: 132px;
+				max-height: 500px;
 			}
 		}
 	}

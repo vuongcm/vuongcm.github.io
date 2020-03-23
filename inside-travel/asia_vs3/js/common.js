@@ -96,7 +96,7 @@ $(document).ready(function() {
 	}
 	if(bodyWidth < 1025){
     	$('.best-support article').hover(function(){
-	    	$(this).children('.paragraph').css('max-height','132px');
+	    	$(this).children('.paragraph').css('max-height','500px');
 	    },function(){
 	    	$(this).children('.paragraph').removeAttr('style');
 	    });
@@ -381,7 +381,6 @@ $(document).ready(function() {
 	        prevArrow: `.wrap-slide-st1 .arrow-left`,
 	        nextArrow: `.wrap-slide-st1 .arrow-right`
 	    });
-	    $('.wrap-slide-st1 .item>a:first-child').height($('.wrap-slide-st1 .img-origin').height());
 	    $(`.wrap-slide-st1 .synch-carousels`).one('mousedown',function(){
 		    $(`.wrap-slide-st1 .item img`).each(function(){
 		    	if($(this).attr('src') == '#'){
@@ -1915,6 +1914,28 @@ $(document).ready(function() {
 	$('#upload-img').change(function(){
 		$(this).next('.fake-upload').find('.name-upload span').text($(this).prop('files')[0].name);
 	});
+	if($('.box-schedule-2').length){
+		$('.box-schedule-2 .wrap-table').bind('scroll', function(){
+			if($(this).scrollLeft() > 1){
+				$('.btn-schedule-2-up').css('display','block');
+			} else{
+				$('.btn-schedule-2-up').css('display','none');
+			}
+			if($(this).scrollLeft() >= ($('.box-schedule-2 .wrap-table').width() + 30)){
+				$('.btn-schedule-2-down').css('display','none');
+			} else{
+				$('.btn-schedule-2-down').css('display','block');
+			}
+		});
+		$('.btn-schedule-2-up').click(function(){
+			$('.box-schedule-2 .wrap-table').animate({ scrollLeft: '-=250' }, 300);
+    		return false; 
+		});
+		$('.btn-schedule-2-down').click(function(){
+			$('.box-schedule-2 .wrap-table').animate({ scrollLeft: '+=250' }, 300);
+    		return false; 
+		});
+	}
 });
 window.onload = function() {
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());
@@ -1927,6 +1948,9 @@ window.onload = function() {
 	    $('body').removeClass('preloading-bd');
 	}, 800);*/
 	//carousel-st9
+	if($('.wrap-slide-st1').length){
+		$('.wrap-slide-st1 .item>a:first-child').height($('.wrap-slide-st1 .img-origin').height());
+	}
 	if ($('.wrap-slide-st9').length > 0) {
 		for(let i=0; i<$('.wrap-slide-st9 .synch-carousels').length; i++){
 			$(`#slide-st9-${i} .gallery`).slick({

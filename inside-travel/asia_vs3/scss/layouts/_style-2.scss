@@ -1337,7 +1337,7 @@
 			min-width: 863px;
 		}
 		.btn-schedule-2{
-			display: block;
+			
 			position: absolute;
 			width: 50px;
 		    height: 100%;
@@ -1352,7 +1352,7 @@
 		    background: -o-linear-gradient(left, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 40%);
 		}
 		.btn-schedule-2-down{
-		
+			display: block;
 			right: 0;
 		    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 40%);
 		    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 40%);
