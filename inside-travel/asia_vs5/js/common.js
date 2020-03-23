@@ -1600,6 +1600,263 @@ $(document).ready(function() {
 	}
 	
 	/*===end filter 2=====*/
+	//============inquery-cruise-3=============
+	$('.open-cruise-inquiry').on('click',function(){
+		$('.modal-container').removeClass('close-display');
+		$('#modal-inquery-cruise').removeClass('close-display');
+		$('#modal-inquery-cruise').css('top',`${$(window).scrollTop()+15}px`);
+	});
+	if($('.booking-step-itinerary').length){
+		$('#modal-inquery-cruise .booking-step-itinerary .btn-value').click(function(){
+			let thisVal = $(this).children('b').text();
+			let parentItine = $(this).closest('.booking-step-itinerary');
+			parentItine.children('select').html(`<option value="${thisVal}" selected></option>`);
+			parentItine.find('.text b').text(thisVal);
+			parentItine.children('.value').removeClass('open-block');
+			if($('.box-check-rates .booking-step-itinerary').length){
+				$('.box-check-rates .booking-step-itinerary .text b').text(thisVal);
+			}
+		});
+		$('.box-check-rates .booking-step-itinerary .btn-value').click(function(){
+			let thisVal = $(this).children('b').text();
+			let btnValue = $('#modal-inquery-cruise .booking-step-itinerary .btn-value');
+			$(this).closest('.value').removeClass('open-block');
+			for(let i=0; i<btnValue.length; i++){
+				if(btnValue.eq(i).children('b').text() == thisVal){
+					btnValue.eq(i).click();
+				}
+			}
+		});
+		$('body').click(function(e){
+			if (!$('.booking-step-itinerary').is(e.target) && $('.booking-step-itinerary').has(e.target).length === 0) {
+	            $('.booking-step-itinerary .value').removeClass('open-block');
+	        }
+	    });
+	}
+	if($('.booking-step-nocabin').length){
+		$('body').click(function(e){
+			if (!$('.booking-step-nocabin').is(e.target) && $('.booking-step-nocabin').has(e.target).length === 0) {
+	            $('.booking-step-nocabin .value').removeClass('open-block');
+	        }
+	    });
+	    $('#modal-inquery-cruise .booking-step-nocabin .btn-value').click(function(){
+	    	let thisVal = $(this).children('b').text();
+	    	let parentItine = $(this).closest('.booking-step-nocabin');
+	    	parentItine.children('select').html(`<option value="${thisVal}" selected></option>`);
+			parentItine.find('.text b').text(`No.of cabin(s): ${thisVal}`);
+			if($('.box-check-rates .booking-step-nocabin').length){
+				$('.box-check-rates .booking-step-nocabin .text b').text(`No.of cabin(s): ${thisVal}`);
+			}
+			$('.booking-step-nocabin .value').removeClass('open-block');
+			$('#modal-inquery-cruise .wrap-list-cabins').html('');
+			for(let i=0; i<thisVal; i++){
+				$('#modal-inquery-cruise .wrap-list-cabins').append(`
+					<div class="box-cabin-st2">
+		            	<div class="col-xlg-12">Cabin ${i + 1}:</div>
+		            	<div class="half">
+		            		<div class="form-field col-xlg-6 col-xsm-12">
+								<div class="booking-step-cabin-name select-st1">
+				            		<select name="">
+				            			<option value="Superior Stateroom" selected>Superior Stateroom</option>
+				            		</select>
+									<span class="text">
+										<b>Superior Stateroom</b>
+										<i class="icon-font bed"></i>
+									</span>
+									<ul class="value">
+										<li>
+											<a href="javascript:" class="btn-value checked">
+												<b>Superior Stateroom</b>
+												<i class="icon-font checkmark"></i>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:" class="btn-value">
+												<b>Deluxe Stateroom</b>
+												<i class="icon-font checkmark"></i>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:" class="btn-value">
+												<b>Signature Suite</b>
+												<i class="icon-font checkmark"></i>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:" class="btn-value">
+												<b>The Taj Suite</b>
+												<i class="icon-font checkmark"></i>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:" class="btn-value">
+												<b>Lord Byrons Suite</b>
+												<i class="icon-font checkmark"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+			            	</div>
+			            	<div class="form-field col-xlg-6 col-xsm-12">
+			            		<div class="booking-step-cabin booking-st1">
+									<span class="text">
+										<b>
+											<i class="icon-font icon-users"></i>&nbsp;
+											<strong class="adult-number">2</strong>&nbsp;Adult(s),&nbsp;<strong class="child-number">0</strong>&nbsp;Children,&nbsp;<strong class="infant-number">0</strong>&nbsp;Infant
+										</b>
+										<i class="icon-font select-arrow-thin"></i>
+									</span>
+									<div class="value-2">
+										<div class="room-cruise">
+											<div class="room-type">
+												<select class="select-st9">
+													<option value="1" selected="">Double</option>
+													<option value="2">Twin</option>
+													<option value="3">Single</option>
+												</select>
+											</div>
+											<div class="room-element">
+												<div class="wrap-adult-number">
+													<button class="btn-down" type="button">-</button>
+													<span><strong class="adult-number">2</strong>&nbsp;Adult(&gt;12)</span>
+													<button class="btn-up" type="button">+</button>
+													<input type="text" name="" value="2">
+												</div>
+												<div class="wrap-child-number">
+													<button class="btn-down btn-disabled" type="button">-</button>
+													<span><strong class="child-number">0</strong>&nbsp;Child(4-12)</span>
+													<button class="btn-up" type="button">+</button>
+													<input type="text" name="" value="0">
+												</div>
+												<div class="wrap-infant-number">
+													<button class="btn-down btn-disabled" type="button">-</button>
+													<span><strong class="infant-number">0</strong>&nbsp;Infant(&lt;3)</span>
+													<button class="btn-up" type="button">+</button>
+													<input type="text" name="" value="0">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+			            	</div>
+		            	</div>
+		            </div>`);
+			}
+	    });
+		$('.box-check-rates .booking-step-nocabin .btn-value').click(function(){
+			let thisVal = $(this).children('b').text();
+			let btnValue = $('#modal-inquery-cruise .booking-step-nocabin .btn-value');
+			for(let i=0; i<btnValue.length; i++){
+				if(btnValue.eq(i).children('b').text() == thisVal){
+					btnValue.eq(i).click();
+				}
+			}
+		});
+	}
+	if($('.booking-step-cabin-name').length){
+		$('.booking-step-cabin-name .text').off('click');
+		$('.wrap-list-cabins').delegate('.booking-step-cabin-name','click',function(){
+			$(this).children('.value').toggleClass('open-block');
+		});
+		$('body').click(function(e){
+			if (!$('.booking-step-cabin-name').is(e.target) && $('.booking-step-cabin-name').has(e.target).length === 0) {
+	            $('.booking-step-cabin-name .value').removeClass('open-block');
+	        }
+	    });
+	    $('.wrap-list-cabins').delegate('.booking-step-cabin-name .btn-value','click',function(){
+	    	let thisVal = $(this).children('b').text();
+	    	let parentCabin = $(this).closest('.booking-step-cabin-name');
+	    	parentCabin.find('.btn-value').removeClass('checked');
+	    	$(this).addClass('checked');
+	    	parentCabin.children('select').html(`<option value="${thisVal}" selected></option>`);
+	    	parentCabin.find('.text b').text(thisVal);
+	    });
+	}
+	if($('.booking-step-cabin').length){
+		$('.booking-step-cabin .text').off('click');
+		$('.wrap-list-cabins').delegate('.booking-step-cabin .text','click',function(){
+			$(this).next('.value-2').toggleClass('open-block');
+		});
+		$('body').click(function(e){
+			if (!$('.booking-step-cabin').is(e.target) && $('.booking-step-cabin').has(e.target).length === 0) {
+	            $('.booking-step-cabin .value-2').removeClass('open-block');
+	        }
+	    });
+	    $('.wrap-list-cabins').delegate('.wrap-adult-number .btn-down','click',function(){
+	    	let thisVal = Number($(this).nextAll('input').val());
+	    	let thisWrap = $(this).closest('.booking-step-cabin');
+	    	$(this).nextAll('.btn-up').removeClass('btn-disabled');
+	    	if(thisVal > 0){
+	    		thisWrap.find('.adult-number').text(thisVal - 1);
+	    		$(this).nextAll('input').val(thisVal - 1);
+	    		if(thisVal == 1){
+	    			$(this).addClass('btn-disabled');
+	    		}
+	    	}
+	    });
+	    $('.wrap-list-cabins').delegate('.wrap-adult-number .btn-up','click',function(){
+	    	let thisVal = Number($(this).nextAll('input').val());
+	    	let thisWrap = $(this).closest('.booking-step-cabin');
+	    	$(this).prevAll('.btn-down').removeClass('btn-disabled');
+	    	if(thisVal < 4){
+	    		thisWrap.find('.adult-number').text(thisVal + 1);
+	    		$(this).nextAll('input').val(thisVal + 1);
+	    		if(thisVal == 4){
+	    			$(this).addClass('btn-disabled');
+	    		}
+	    	}
+	    });
+	    $('.wrap-list-cabins').delegate('.wrap-child-number .btn-down','click',function(){
+	    	let thisVal = Number($(this).nextAll('input').val());
+	    	let thisWrap = $(this).closest('.booking-step-cabin');
+	    	$(this).nextAll('.btn-up').removeClass('btn-disabled');
+	    	if(thisVal > 0){
+	    		thisWrap.find('.child-number').text(thisVal - 1);
+	    		$(this).nextAll('input').val(thisVal - 1);
+	    		if(thisVal == 1){
+	    			$(this).addClass('btn-disabled');
+	    		}
+	    	}
+	    });
+	    $('.wrap-list-cabins').delegate('.wrap-child-number .btn-up','click',function(){
+	    	let thisVal = Number($(this).nextAll('input').val());
+	    	let thisWrap = $(this).closest('.booking-step-cabin');
+	    	$(this).prevAll('.btn-down').removeClass('btn-disabled');
+	    	if(thisVal < 4){
+	    		thisWrap.find('.child-number').text(thisVal + 1);
+	    		$(this).nextAll('input').val(thisVal + 1);
+	    		if(thisVal == 4){
+	    			$(this).addClass('btn-disabled');
+	    		}
+	    	}
+	    });
+	    $('.wrap-list-cabins').delegate('.wrap-infant-number .btn-down','click',function(){
+	    	let thisVal = Number($(this).nextAll('input').val());
+	    	let thisWrap = $(this).closest('.booking-step-cabin');
+	    	$(this).nextAll('.btn-up').removeClass('btn-disabled');
+	    	if(thisVal > 0){
+	    		thisWrap.find('.infant-number').text(thisVal - 1);
+	    		$(this).nextAll('input').val(thisVal - 1);
+	    		if(thisVal == 1){
+	    			$(this).addClass('btn-disabled');
+	    		}
+	    	}
+	    });
+	    $('.wrap-list-cabins').delegate('.wrap-infant-number .btn-up','click',function(){
+	    	let thisVal = Number($(this).nextAll('input').val());
+	    	let thisWrap = $(this).closest('.booking-step-cabin');
+	    	$(this).prevAll('.btn-down').removeClass('btn-disabled');
+	    	if(thisVal < 4){
+	    		thisWrap.find('.infant-number').text(thisVal + 1);
+	    		$(this).nextAll('input').val(thisVal + 1);
+	    		if(thisVal == 4){
+	    			$(this).addClass('btn-disabled');
+	    		}
+	    	}
+	    });
+	}
+	
+	/*============end-inquery-cruise-3=============*/
 	$('body').delegate('.filter-box>a','click',function(){
 		$(this).next('.value').toggleClass('open-block');
 	});

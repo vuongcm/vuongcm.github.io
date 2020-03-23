@@ -1467,7 +1467,7 @@ $(document).ready(function() {
 			$('#modal-inquery-cruise .wrap-list-cabins').html('');
 			for(let i=0; i<thisVal; i++){
 				$('#modal-inquery-cruise .wrap-list-cabins').append(`
-					<div class="box-cabin">
+					<div class="box-cabin-st2">
 		            	<div class="col-xlg-12">Cabin ${i + 1}:</div>
 		            	<div class="half">
 		            		<div class="form-field col-xlg-6 col-xsm-12">
