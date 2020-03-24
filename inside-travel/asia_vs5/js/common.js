@@ -2081,6 +2081,9 @@ $(document).ready(function() {
 	$('#upload-img').change(function(){
 		$(this).next('.fake-upload').find('.name-upload span').text($(this).prop('files')[0].name);
 	});
+	$('.btn-close-st2').click(function(){
+		$(this).parent().hide(0);
+	});
 });
 window.onload = function() {
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());

@@ -1005,6 +1005,31 @@
 		}
 	}
 }
+.pop-up-foot{
+	position: fixed;
+	z-index: 219;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(10,10,10,.8);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	.paragraph{
+		color: #fff;
+		padding-left: 15px;
+		padding-right: 15px;
+		text-align: left;
+	}
+	.btn-close-st2{
+		position: absolute;
+		top: 0;
+		right: 20px;
+		z-index: 8;
+	}
+}
+.btn-close-st2{
+	font-size: 32px;
+	color: #fff;
+}
 @media (min-width: 1350px) {
 
 }
