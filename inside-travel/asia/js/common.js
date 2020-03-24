@@ -2286,7 +2286,7 @@ $(document).ready(function() {
 			if(bodyWidth >= 1350){
 				if($(this).scrollTop() > ($('.banner-posts').offset().top)){
 					$('.sticky-box').css({
-		        			'top':'60px'
+		        			'top':'70px'
 		        		});
 				} else{
 					$('.sticky-box').removeAttr('style');
