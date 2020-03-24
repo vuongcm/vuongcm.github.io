@@ -794,7 +794,7 @@
 	}
 	.body-box{
 		background-color: #fff;
-		padding: 20px 20px 40px 20px;
+		padding: 20px 20px 0 20px;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -806,10 +806,11 @@
 				max-width: calc(100% - 247px);
 			}
 			.btn-st2{
-				width: 247px;
-				border-radius: 999px;
-				border-color: #bbb;
+				//width: 247px;
 				//line-height: 1;
+				border: none;
+				padding-left: 0;
+				padding-right: 0;
 				padding-top: 5px;
 				padding-bottom: 5px;
 				margin-left: auto;
@@ -840,8 +841,27 @@
 				margin-top: 20px;
 				text-align: left;
 				padding: 0;
+				margin-bottom: 0;
+				padding-bottom: 15px;
+				border-bottom: 1px dotted #dcdcdc;
 			}
 
+	}
+	.foot-trip{
+		border-top: none;
+		margin-top: 0;
+		background-color: #fff;
+		padding: 15px 20px 40px 20px;
+		.btn-st2{
+			border-color: #bbb;
+			font{
+				font-style: normal;
+				font-size: 20px;
+			}
+			&:hover{
+				border-color: $higlight-color;
+			}
+	}
 	}
 }
 .expert-box{
@@ -1140,6 +1160,7 @@
 		}
 	}
 	.cr-content{
+		justify-content: center;
 		span{
 			margin-top: 5px;
 		}
@@ -1228,6 +1249,7 @@
 				.btn-st2{
 					order: 3;
 					margin-left: unset;
+					margin-top: 15px;
 				}
 
 
@@ -1236,6 +1258,12 @@
 					text-align: center;
 				}
 
+		}
+		.foot-trip{
+			.btn-st2{
+				padding-left: 15px;
+				padding-right: 15px;
+			}
 		}
 	}
 	.box-infomation-cabins{
