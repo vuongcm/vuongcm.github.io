@@ -366,6 +366,7 @@
 		}
 		.wrap-blog-item-1{
 			padding-right: 15px;
+			grid-row: 2 / 3;
 			.breadcrumb{
 				border-bottom: 1px solid #eee;
 				padding-top: 0;
@@ -377,7 +378,7 @@
 		}
 		.wrap-blog-item-3{
 			grid-column: 1 / 2;
-			grid-row: 2 / 3;
+			grid-row: 1 / 2;
 			padding-left: 15px;
 		}
 		.wrap-blog-item-4{
@@ -392,13 +393,12 @@
 		}
 	}
 	.blog-des-list{
-		border-top: none;
 		width: 100%;
 		//max-width: 300px;
 		margin-left: auto;
 		margin-right: auto;
 		position: relative;
-		&>a{
+		/* &>a{
 			border-bottom: none;
 			//@include translateY(1px);
 			//background-color: #fff;
@@ -417,6 +417,17 @@
 			border: 1px solid #eee;
 			border-top: none;
 			background-color: #fff;
+		} */
+	}
+	.detail-travel-guide-container.travel-guide-container{
+		.wrap-blog-item-1{
+			grid-row: 1 / 2;
+		}
+		.wrap-blog-item-2{
+			grid-row: 2 / 3;
+		}
+		.wrap-blog-item-3{
+			grid-row: 3 / 4;
 		}
 	}
 	.blog-social-list{

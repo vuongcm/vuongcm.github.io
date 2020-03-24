@@ -1050,6 +1050,14 @@
 	font-size: 32px;
 	color: #fff;
 }
+.sticky-box{
+	position: sticky;
+	position: -webkit-sticky;
+	z-index: 99;
+	@include smooth(1.5s);
+	top: -1000px;
+	background-color: #fff;
+}
 @media (min-width: 1350px) {
 
 }

@@ -996,6 +996,7 @@
 @media (min-width: 1350px) {
 	.grid-ct3,.grid-ct4{
 		position: sticky;
+		position: -webkit-sticky;
 		//top: -500px;
 		z-index: 99;
 		@include smooth(1.5s);

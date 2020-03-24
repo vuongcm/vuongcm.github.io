@@ -2084,6 +2084,22 @@ $(document).ready(function() {
 	$('.btn-close-st2').click(function(){
 		$(this).parent().hide(0);
 	});
+	/* ====== travel guide========*/
+	if($('.travel-guide-container').length){
+		$(window).bind('scroll', function(){
+			if(bodyWidth >= 1350){
+				if($(this).scrollTop() > ($('.banner-posts').offset().top)){
+					$('.sticky-box').css({
+		        			'top':'60px'
+		        		});
+				} else{
+					$('.sticky-box').removeAttr('style');
+				}
+			}
+		});
+	}
+	
+	/* ====== end travel guide========*/
 });
 window.onload = function() {
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());
