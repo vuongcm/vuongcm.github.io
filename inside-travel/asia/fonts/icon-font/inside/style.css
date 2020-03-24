@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'insideTravel';
-  src:  url('fonts/insideTravel.eot?wcy47g');
-  src:  url('fonts/insideTravel.eot?wcy47g#iefix') format('embedded-opentype'),
-    url('fonts/insideTravel.ttf?wcy47g') format('truetype'),
-    url('fonts/insideTravel.woff?wcy47g') format('woff'),
-    url('fonts/insideTravel.svg?wcy47g#insideTravel') format('svg');
+  src:  url('fonts/insideTravel.eot?jxa5pf');
+  src:  url('fonts/insideTravel.eot?jxa5pf#iefix') format('embedded-opentype'),
+    url('fonts/insideTravel.ttf?jxa5pf') format('truetype'),
+    url('fonts/insideTravel.woff?jxa5pf') format('woff'),
+    url('fonts/insideTravel.svg?jxa5pf#insideTravel') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.asiatours-black:before {
+  content: "\e977";
+}
 .date-01:before {
   content: "\e976";
 }
