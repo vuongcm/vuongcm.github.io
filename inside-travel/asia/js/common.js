@@ -2277,6 +2277,9 @@ $(document).ready(function() {
 			}
 		});
 	}
+	$('.btn-close-st2').click(function(){
+		$(this).parent().hide(0);
+	});
 });
 window.onload = function() {
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());
