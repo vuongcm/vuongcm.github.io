@@ -854,6 +854,7 @@
 		padding: 15px 20px 40px 20px;
 		.btn-st2{
 			border-color: #bbb;
+			padding: 5px 25px;
 			font{
 				font-style: normal;
 				font-size: 20px;
@@ -1075,7 +1076,7 @@
     		width: 100%;
     		text-align: center;
     		color: $higlight-color;
-    		font-size: 26px;
+    		font-size: 36px;
     	}
     	span{
     		text-transform: uppercase;
@@ -1150,6 +1151,16 @@
 				}
 			}
 		}
+	}
+}
+.link-st4{
+	margin-top: 20px;
+	text-transform: uppercase;
+	display: inline-flex;
+	align-items: center;
+	.icon-font{
+		font-size: 7px;
+		margin-left: 5px;
 	}
 }
 @media (max-width: 1350px) {

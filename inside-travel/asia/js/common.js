@@ -2359,7 +2359,7 @@ $(document).ready(function() {
 				}
 			}
 		}
-		$('.crowd-container .view-more-wrap .link-st3').click(function(){
+		$('.crowd-container .view-more-wrap .link-st4').click(function(){
 			$('.row-crowd').addClass('open-flex');
 			$(this).remove();
 		});

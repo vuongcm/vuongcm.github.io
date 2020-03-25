@@ -854,6 +854,7 @@
 		padding: 15px 20px 40px 20px;
 		.btn-st2{
 			border-color: #bbb;
+			padding: 5px 25px;
 			font{
 				font-style: normal;
 				font-size: 20px;
@@ -1029,8 +1030,8 @@
 	position: fixed;
 	z-index: 219;
 	bottom: 0;
-	left: 50px;
-	width: calc(100% - 50px);
+	left: 0;
+	width: 100%;
 	background-color: rgba(10,10,10,.8);
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -1060,10 +1061,132 @@
 	top: -1000px;
 	background-color: #fff;
 }
-@media (min-width: 1350px) {
+.parameter-box{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    &>div{
+    	display: flex;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	padding-right: 15px;
+    	padding-left: 15px;
+    	b{
+    		width: 100%;
+    		text-align: center;
+    		color: $higlight-color;
+    		font-size: 36px;
+    	}
+    	span{
+    		text-transform: uppercase;
+    		font-size: 11px;
+    		text-align: center;
+    	}
+    }
+}
+.crowd-container{
+	width: 100%;
+	margin-bottom: 30px;
+}
+.row-crowd{
+	display: flex;
+	display: none;
+	&:first-child, &:nth-child(2){
+		display: flex;
+	}
+	.crowd-box{
+		flex-grow: 1;
+		padding-left: 1px;
+		padding-right: 1px;
+		margin-top: 2px;
+		max-height: 180px;
+		overflow: hidden;
+		position: relative;
+		opacity: 1;
+		display: inline-flex;
+		align-items: center;
+		//@include smooth(.25s);
 
+		.box-img{
+			width: 100%;
+			@include smooth(.3s);
+		}
+		.external-link{
+			position: absolute;
+			z-index: 5;
+			color: #fff;
+			top: 5px;
+			right: 5px;
+			font-size: 16px;
+			display: none;
+		}
+		&>div:last-child{
+			position: absolute;
+			z-index: 5;
+			color: #fff;
+			bottom: 5px;
+			left: 5px;
+			
+			.asiatours-black{
+				font-size: 16px;
+			}
+			font{
+				display: none;
+			}
+		}
+		&:hover{
+			.box-img{
+				@include scale(1.1);
+				
+				@include dakkenImg(70%);
+			}
+			.external-link{
+				display: block;
+			}
+			&>div:last-child{
+				font{
+					display: inline;
+
+				}
+			}
+		}
+	}
+}
+.link-st4{
+	margin-top: 20px;
+	text-transform: uppercase;
+	display: inline-flex;
+	align-items: center;
+	.icon-font{
+		font-size: 7px;
+		margin-left: 5px;
+	}
+}
+@media (max-width: 1350px) {
+	.row-crowd{
+		.crowd-box{
+			max-height: 160px;
+		}
+	}
+}
+@media (max-width: 1199px) {
+	.row-crowd{
+		.crowd-box{
+			max-height: 170px;
+		}
+	}
 }
 @media (max-width: 991px) {
+	.row-crowd{
+		//flex-wrap: wrap;
+		&:nth-child(3){
+			display: flex;
+		}
+		.crowd-box{
+			max-height: 250px;
+		}
+	}
 	.section-grid-dt3.section-grid-cruise{
 		.grid-ct4{
 			grid-row: 4 / 5;
@@ -1104,6 +1227,19 @@
 	}
 }
 @media (max-width: 767px) {
+	.parameter-box{
+		flex-wrap: wrap;
+		&>div{
+			width: 50%;
+			margin-bottom: 15px;
+		}
+	}
+	.row-crowd{
+		//flex-wrap: wrap;
+		.crowd-box{
+			max-height: 190px;
+		}
+	}
 	.section-grid-dt3.section-grid-cruise{
 		.grid-ct1{
 			.group-ct1-1{
@@ -1313,5 +1449,19 @@
 @media (max-width: 479px) {
 	.price-trip-box{
 		display: none;
+	}
+	.row-crowd{
+		//flex-wrap: wrap;
+		.crowd-box{
+			max-height: 170px;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.row-crowd{
+		//flex-wrap: wrap;
+		.crowd-box{
+			max-height: 110px;
+		}
 	}
 }
