@@ -1086,6 +1086,7 @@
 }
 .crowd-container{
 	width: 100%;
+	margin-bottom: 30px;
 }
 .row-crowd{
 	display: flex;
@@ -1168,6 +1169,9 @@
 @media (max-width: 991px) {
 	.row-crowd{
 		//flex-wrap: wrap;
+		&:nth-child(3){
+			display: flex;
+		}
 		.crowd-box{
 			max-height: 250px;
 		}
