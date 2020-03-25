@@ -1815,7 +1815,7 @@ $(document).ready(function() {
 				$('.filter-who-2>select').append(`<option value="${$(this).closest('.value').find('.checked b').eq(j).text()}" selected></option>`);
 			}
 			if(numberValue == 0){
-				$('.filter-who-2 .text b').html(`Destinations`);
+				$('.filter-who-2 .text b').html(`Experiences`);
 			} else{
 				$('.filter-who-2 .text b').html(`${numberValue} selected`);
 			}
@@ -1826,7 +1826,7 @@ $(document).ready(function() {
 				if($(this).closest('.trip-request-box').length){
 					$('.filter-price-2 .text b').html(`Country *`);
 				} else{
-					$('.filter-price-2 .text b').html(`Price`);
+					$('.filter-price-2 .text b').html(`Durration`);
 				}
 				$('.filter-price-2>input').val('');
 			} else{
@@ -2359,6 +2359,10 @@ $(document).ready(function() {
 				}
 			}
 		}
+		$('.crowd-container .view-more-wrap .link-st3').click(function(){
+			$('.row-crowd').addClass('open-flex');
+			$(this).remove();
+		});
 	}
 });
 window.onload = function() {
