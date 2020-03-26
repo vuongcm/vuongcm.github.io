@@ -1826,7 +1826,7 @@ $(document).ready(function() {
 				if($(this).closest('.trip-request-box').length){
 					$('.filter-price-2 .text b').html(`Country *`);
 				} else{
-					$('.filter-price-2 .text b').html(`Durration`);
+					$('.filter-price-2 .text b').html(`Duration`);
 				}
 				$('.filter-price-2>input').val('');
 			} else{
