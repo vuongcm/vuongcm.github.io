@@ -1076,7 +1076,7 @@
     		width: 100%;
     		text-align: center;
     		color: $higlight-color;
-    		font-size: 36px;
+    		font-size: 40px;
     	}
     	span{
     		text-transform: uppercase;
@@ -1171,11 +1171,7 @@
 	}
 }
 @media (max-width: 1199px) {
-	.row-crowd{
-		.crowd-box{
-			max-height: 170px;
-		}
-	}
+
 }
 @media (max-width: 991px) {
 	.row-crowd{
@@ -1184,7 +1180,7 @@
 			display: flex;
 		}
 		.crowd-box{
-			max-height: 250px;
+			max-height: 230px;
 		}
 	}
 	.section-grid-dt3.section-grid-cruise{
@@ -1237,7 +1233,7 @@
 	.row-crowd{
 		//flex-wrap: wrap;
 		.crowd-box{
-			max-height: 190px;
+			max-height: 140px;
 		}
 	}
 	.section-grid-dt3.section-grid-cruise{
@@ -1453,15 +1449,15 @@
 	.row-crowd{
 		//flex-wrap: wrap;
 		.crowd-box{
-			max-height: 170px;
+			max-height: 120px;
 		}
 	}
 }
-@media (max-width: 767px) {
+@media (max-width: 375px) {
 	.row-crowd{
 		//flex-wrap: wrap;
 		.crowd-box{
-			max-height: 110px;
+			max-height: 90px;
 		}
 	}
 }

@@ -2302,10 +2302,10 @@ $(document).ready(function() {
 			for(let i=0; i<8; i++){
 				$('.crowd-box').eq(i).addClass('crowd-row-1');
 			}
-			for(let i=8; i<17; i++){
+			for(let i=8; i<16; i++){
 				$('.crowd-box').eq(i).addClass('crowd-row-2');
 			}
-			for(let i=17; i<$('.crowd-box').length; i++){
+			for(let i=16; i<$('.crowd-box').length; i++){
 				$('.crowd-box').eq(i).addClass('crowd-row-3');
 			}
 			$('.crowd-row-1').wrapAll('<div class="row-crowd"></div>');
