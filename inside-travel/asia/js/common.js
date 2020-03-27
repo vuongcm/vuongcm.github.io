@@ -528,7 +528,7 @@ $(document).ready(function() {
     });
 	// slick map home
 	if ($('#slick-slider-map').length > 0) {
-		/*$(`#slick-slider-map .gallery`).slick({
+		$(`#slick-slider-map .gallery`).slick({
 	        slidesToShow: 1,
 	        slidesToScroll: 1,
 	        fade: true,
@@ -549,7 +549,7 @@ $(document).ready(function() {
 			$(`#slick-slider-map .nav-arrows strong`).text(`${slick.currentSlide + 1}`);
 			$('.map-home .map-coo').removeClass('map-coo-active');
 			$('.map-home .map-coo').eq(slick.currentSlide).addClass('map-coo-active');
-		});*/
+		});
 		
 	}
 	if($('.wrap-map').length){

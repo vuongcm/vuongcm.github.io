@@ -1188,8 +1188,8 @@
 			left: 50%;
 			margin: 0;
 			@include translate2d(-50%,-50%);
-			display: inline;
 			z-index: 5;
+			width: 100%;
 			color: #fff;
 			font-size: 26px;
 			text-transform: uppercase;

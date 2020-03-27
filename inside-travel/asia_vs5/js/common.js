@@ -421,7 +421,7 @@ $(document).ready(function() {
     	$(this).parent('.foot-cruise-st3').nextAll('.hidden-offer-box').slideToggle(500);
     });
 	// slick map home
-	/*if ($('#slick-slider-map').length > 0) {
+	if ($('#slick-slider-map').length > 0) {
 		$(`#slick-slider-map .gallery`).slick({
 	        slidesToShow: 1,
 	        slidesToScroll: 1,
@@ -444,7 +444,7 @@ $(document).ready(function() {
 			$('.map-home .map-coo').removeClass('map-coo-active');
 			$('.map-home .map-coo').eq(slick.currentSlide).addClass('map-coo-active');
 		});
-	}*/
+	}
 	if($('.wrap-map').length){
 		$('.map-home .map-coo').click(function(){
 			$('.map-home .map-coo').removeClass('map-coo-active');
