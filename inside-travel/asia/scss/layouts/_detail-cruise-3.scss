@@ -1172,9 +1172,10 @@
 }
 .big-box-experience{
 	width: 100%;
-	
+	padding-right: 15px;
+	padding-left: 15px;
 	padding-bottom: 30px;
-	border-bottom: 1px solid #dcdcdc;
+	border-bottom: 1px dotted #dcdcdc;
 	&:last-child{
 		margin-top: 30px;
 		border-bottom: none;
@@ -1185,6 +1186,7 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
+			margin: 0;
 			@include translate2d(-50%,-50%);
 			display: inline;
 			z-index: 5;
@@ -1204,12 +1206,12 @@
 			width: 100%;
 			display: block;
 			img{
-				@include dakkenImg(70%);
+				@include dakkenImg(50%);
 			}
 			&:hover{
 				opacity: 1;
 				img{
-					@include dakkenImg(100%);
+					@include dakkenImg(70%);
 				}
 			}		
 		}
@@ -1217,6 +1219,11 @@
 	.paragraph{
 		margin-top: 15px;
 		margin-bottom: 0;
+	}
+	.wrap-btn{
+		width: 100%;
+		text-align: center;
+		margin-top: 15px;
 	}
 }
 @media (max-width: 1350px) {
@@ -1499,6 +1506,13 @@
 			}
 		}
 		
+	}
+	.big-box-experience{
+		.head-box{
+			h2,h3{
+				font-size: 16px;
+			}
+		}
 	}
 }
 @media (max-width: 479px) {
