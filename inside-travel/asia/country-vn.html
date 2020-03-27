@@ -17,45 +17,419 @@
 	<nav>
 		<div class="menu-wrap">
 			<div class="search-nav mg-left">
-				<button>
+				<button class="btn-collep-mobi">
 					<i class="icon-font menu"></i>
-					<i class="icon-font search"></i>
 				</button>
 				<a href="#" class="phone-box">
 					<i class="icon-font phone"></i>
 					<strong>+84 96 564 257</strong>
 				</a>
-				<i class="icon-font search"></i>
-				<input class="input-st1" type="search" name="search-nav" placeholder="Search">
+				<button type="button" class="btn-collep-search open-search-top"><i class="icon-font search"></i><font>Search</font></button>
+				<div id="search-nav-top">
+					<form class="form-search-nav">
+						<div class="search-nav-where select-st1">
+							<select name="" multiple=""></select>
+				            <span class="text">
+				               <i class="icon-font map-marker"></i>
+				               <b>Where do you want to go?</b>
+				               <i class="icon-font select-arrow-thin"></i>
+				            </span>
+				            <ul class="value">
+				               <li>
+				                  <span>Alaskan/Hawaiian Time Zone</span>
+				                  <ul>
+				                     <li>
+				                        <a href="javascript:" class="btn-value">
+				                           <i class="icon-font map-marker"></i>
+				                           <b>Vietnam</b>
+				                           <i class="icon-font checkmark"></i>
+				                        </a>
+				                     </li>
+				                     <li>
+				                        <a href="javascript:" class="btn-value">
+				                           <i class="icon-font map-marker"></i>
+				                           <b>Hawaii</b>
+				                           <i class="icon-font checkmark"></i>
+				                        </a>
+				                     </li>
+				                  </ul>
+				               </li>
+				               <li>
+				                  <span>Pacific Time Zone</span>
+				                  <ul>
+				                     <li>
+				                        <a href="javascript:" class="btn-value">
+				                           <i class="icon-font map-marker"></i>
+				                           <b>California</b>
+				                           <i class="icon-font checkmark"></i>
+				                        </a>
+				                     </li>
+				                     <li>
+				                        <a href="javascript:" class="btn-value">
+				                           <i class="icon-font map-marker"></i>
+				                           <b>Nevada</b>
+				                           <i class="icon-font checkmark"></i>
+				                        </a>
+				                     </li>
+				                     <li>
+				                        <a href="javascript:" class="btn-value">
+				                           <i class="icon-font map-marker"></i>
+				                           <b>Oregon</b>
+				                           <i class="icon-font checkmark"></i>
+				                        </a>
+				                     </li>
+				                     <li>
+				                        <a href="javascript:" class="btn-value">
+				                           <i class="icon-font map-marker"></i>
+				                           <b>Washington</b>
+				                           <i class="icon-font checkmark"></i>
+				                        </a>
+				                     </li>
+				                  </ul>
+				               </li>
+				               <li>
+				                  <span>Mountain Time Zone</span>
+				                  <ul>
+				                     <li>
+				                        <a href="javascript:" class="btn-value">
+				                           <i class="icon-font map-marker"></i>
+				                           <b>Arizona</b>
+				                           <i class="icon-font checkmark"></i>
+				                        </a>
+				                     </li>
+				                     <li>
+				                        <a href="javascript:" class="btn-value">
+				                           <i class="icon-font map-marker"></i>
+				                           <b>Colorado</b>
+				                           <i class="icon-font checkmark"></i>
+				                        </a>
+				                     </li>
+				                     <li>
+				                        <a href="javascript:" class="btn-value">
+				                           <i class="icon-font map-marker"></i>
+				                           <b>Idaho</b>
+				                           <i class="icon-font checkmark"></i>
+				                        </a>
+				                     </li>
+				                     <li>
+				                        <a href="javascript:" class="btn-value">
+				                           <i class="icon-font map-marker"></i>
+				                           <b>Montana</b>
+				                           <i class="icon-font checkmark"></i>
+				                        </a>
+				                     </li>
+				                     <li>
+				                        <a href="javascript:" class="btn-value">
+				                           <i class="icon-font map-marker"></i>
+				                           <b>Nebraska</b>
+				                           <i class="icon-font checkmark"></i>
+				                        </a>
+				                     </li>
+				                     <li>
+				                        <a href="javascript:" class="btn-value">
+				                           <i class="icon-font map-marker"></i>
+				                           <b>New Mexico</b>
+				                           <i class="icon-font checkmark"></i>
+				                        </a>
+				                     </li>
+				                     <li>
+				                        <a href="javascript:" class="btn-value">
+				                           <i class="icon-font map-marker"></i>
+				                           <b>North Dakota</b>
+				                           <i class="icon-font checkmark"></i>
+				                        </a>
+				                     </li>
+				                     <li>
+				                        <a href="javascript:" class="btn-value">
+				                           <i class="icon-font map-marker"></i>
+				                           <b>Utah</b>
+				                           <i class="icon-font checkmark"></i>
+				                        </a>
+				                     </li>
+				                     <li>
+				                        <a href="javascript:" class="btn-value">
+				                           <i class="icon-font map-marker"></i>
+				                           <b>Wyoming</b>
+				                           <i class="icon-font checkmark"></i>
+				                        </a>
+				                     </li>
+				                  </ul>
+				               </li>
+				            </ul>
+				        </div>
+				        <div class="search-nav-exp select-st1">
+				        	<select name="" multiple=""></select>
+				            <span class="text">
+				               <i class="icon-font image"></i>
+				               <b>Experiences</b>
+				               <i class="icon-font select-arrow-thin"></i>
+				            </span>
+				            <ul class="value">
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <i class="icon-font icon-swimming"></i>
+				                     <b>Swimming</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <i class="icon-font icon-cruises"></i>
+				                     <b>Cruising</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <i class="icon-font icon-boating"></i>
+				                     <b>Boating</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <i class="icon-font icon-15"></i>
+				                     <b>Ethnic</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <i class="icon-font icon-cultural"></i>
+				                     <b>Cultural</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <i class="icon-font icon-heritage"></i>
+				                     <b>Heritage</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <i class="icon-font icon-nature"></i>
+				                     <b>Nature</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <i class="icon-font icon-cuisine"></i>
+				                     <b>Cuisine</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <i class="icon-font icon-kayaking"></i>
+				                     <b>Kayaking</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <i class="icon-font icon-mountain"></i>
+				                     <b>Adventure</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <i class="icon-font icon-beach"></i>
+				                     <b>Beach</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <i class="icon-font icon-wellness"></i>
+				                     <b>Wellness</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <i class="icon-font icon-wildlife"></i>
+				                     <b>Wildlife</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <i class="icon-font icon-history"></i>
+				                     <b>History</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <i class="icon-font icon-festival"></i>
+				                     <b>Festival</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				            </ul>
+				        </div>
+				        <div class="search-nav-days select-st2">
+				        	<input type="text" value="">
+							<span class="text">
+								<i class="icon-font clock-o"></i>
+								<b>Departure</b>
+								<i class="icon-font select-arrow-thin"></i>
+							</span>
+							<ul class="value">
+								<li>
+									<a href="javascript:" class="btn-value">
+										<b>1 Day</b>
+										<i class="icon-font checkmark"></i>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:" class="btn-value">
+										<b>2 Days</b>
+										<i class="icon-font checkmark"></i>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:" class="btn-value">
+										<b>3 Days</b>
+										<i class="icon-font checkmark"></i>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:" class="btn-value">
+										<b>4 Days</b>
+										<i class="icon-font checkmark"></i>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:" class="btn-value">
+										<b>5 Days</b>
+										<i class="icon-font checkmark"></i>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:" class="btn-value">
+										<b>6 Days</b>
+										<i class="icon-font checkmark"></i>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:" class="btn-value">
+										<b>7 Days</b>
+										<i class="icon-font checkmark"></i>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:" class="btn-value">
+										<b>8 Days</b>
+										<i class="icon-font checkmark"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="search-nav-price select-st2">
+							<input type="text" name="" value="">
+				            <span class="text">
+				               <i class="icon-font price-tag"></i>
+				               <b>Budget Per Person</b>
+				               <i class="icon-font select-arrow-thin"></i>
+				            </span>
+				            <ul class="value">
+				               <span>Excluding international flights</span>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <b>$2,000 to $3,000</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <b>$3,000 to $4,000</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <b>$4,000 to $6,000</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <b>$6,000 to $8,000</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <b>$8,000 to $10,000</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				               <li>
+				                  <a href="javascript:" class="btn-value">
+				                     <b>$10,000+</b>
+				                     <i class="icon-font checkmark"></i>
+				                  </a>
+				               </li>
+				            </ul>
+						</div>
+						<div class="booking-step-submit">
+				            <button class="btn-st3 btn-create-trip">search my trip<i>→</i></button>
+				        </div>
+					</form>
+				</div>
 			</div>
 			<div class="brand">
-			<a href="#">
-				<img src="images/asiatours_logo.svg" alt="Logo">
-	        </a>
+				<a href="#">
+					<img src="images/asiatours_logo.svg" alt="Logo">
+		        </a>
 			</div>
 			<ul class="global-menu mg-right">
 				<li class="lang-top">
-					<select class="select-st9" name="header-language">
-						<option selected value="/" lang="en" class="en">English</option>
-						<option  value="/fr/" lang="fr" class="fr">Français</option>
-						<option  value="/de/" lang="de" class="de">Deutsch</option>
-						<option  value="/it/" lang="it" class="it">Italiano</option>
-						<option  value="/ja/" lang="ja" class="ja">日本語</option>
-						<option  value="/ru/" lang="ru" class="ru">Pусский</option>
-						<option  value="/es/" lang="es" class="es">Español</option>
-						<option  value="/pt-br/" lang="pt" class="pt-br">Português</option>
-					</select>
+					<a href="javascript:;" class="">
+						<font>English</font>
+						<i class="icon-font select-arrow-thin"></i>
+					</a>
+					<ul class="lang-menu">
+						<li>
+							<a href="javascript:;">English</a>
+						</li>
+						<li>
+							<a href="javascript:;">Français</a>
+						</li>
+						<li>
+							<a href="javascript:;">Deutsch</a>
+						</li>
+						<li>
+							<a href="javascript:;">Español</a>
+						</li>
+					</ul>
 				</li>
-				<li class="login-top">
-					<a href="#"><i class="icon-font user-regular"></i><font>Account</font></a>
+				<li class="login-top" id="account-top">
+					<a href="javascript:;" class="">
+						<i class="icon-font user-regular"></i>
+						<font>Account</font>
+						<i class="icon-font select-arrow-thin"></i>
+					</a>
+					<ul class="login-menu">
+						<li>
+							<a href="javascript:;">Log in</a>
+						</li>
+						<li>
+							<a href="javascript:;">Sign up</a>
+						</li>
+						<li>
+							<a href="javascript:;">Contact us</a>
+						</li>
+					</ul>
 				</li>
 				<li class="book-top"><button class="btn-st1 btn-contact">enquire</button></li>
 			</ul>
 			<ul class="main-menu">
-				<div class="search-menu-tablet">
-					<i class="icon-font search"></i>
-					<input class="input-st1" type="search" name="search-nav" placeholder="Search">
-				</div>
 				<li class="sub-menu-title" id="menu-lv1-1">
 					<a href="#" class="">Destinations<i>&raquo;</i></a>
 				</li>
@@ -645,139 +1019,116 @@
 	<div class="wrap-map">
 		<div class="map-home">
 			<img src="images/map-vietnam.jpg" alt="map-sea">
-			<div class="synch-carousels" id="slick-slider-map">
-				<div class="gallery">
-					<div class="item">
-						<a href="#"><img data-lazy="images/thailand-slider.jpg" alt="Thailand" title="Thailand"></a>
-						<article>
-							<h3><a href="#">thailand</a></h3>
-							<h4>Eastern & Oriental Express</h4>
-							<p class="paragraph">Set off from Bangkok and cross the emerald jungles of Southeast Asia in style on one of the world’s most luxurious trains.</p>
-						</article>
-						<a href="#" class="link-st3">Discover more</a>
-					</div>
-					<div class="item">
-						<a href="#"><img data-lazy="images/singapore-slider.jpg" alt="Singapore" title="Singapore"></a>
-						<article>
-							<h3><a href="#">Singapore</a></h3>
-							<h4>Eastern & Oriental Express</h4>
-							<p class="paragraph">Depart from Singapore and settle into your luxurious cabin as the train begins a breathtaking, rolling journey through the southern Malaysian countryside.</p>
-						</article>
-						<a href="#" class="link-st3">Discover more</a>
-					</div>
-					<div class="item">
-						<a href="#"><img data-lazy="images/Siem-Reap-slider.jpg" alt="Siem Reap" title="Siem Reap"></a>
-						<article>
-							<h3><a href="#">Siem Reap</a></h3>
-							<h4>Belmond La Résidence d'Angkor</h4>
-							<p class="paragraph">An oasis of calm, discover a gateway to Cambodia’s old and new worlds: the temples of Angkor Wat and the thriving town of Siem Reap.</p>
-						</article>
-						<a href="#" class="link-st3">Discover more</a>
-					</div>
-					<div class="item">
-						<a href="#"><img data-lazy="images/bali-slider.jpg" alt="Bali" title="Bali"></a>
-						<article>
-							<h3><a href="#">Bali</a></h3>
-							<h4>Belmond Jimbaran Puri</h4>
-							<p class="paragraph">Experience true serenity on the golden sands of Jimbaran Bay, hemmed by jungle and lapped by the waves of the Indian Ocean.</p>
-						</article>
-						<a href="#" class="link-st3">Discover more</a>
-					</div>
-					<div class="item">
-						<a href="#"><img data-lazy="images/Luang-Prabang-slider.jpg" alt="Luang Prabang" title="Luang Prabang"></a>
-						<article>
-							<h3><a href="#">Luang Prabang</a></h3>
-							<h4>Belmond La Résidence Phou Vao</h4>
-							<p class="paragraph">Once the country’s royal capital, Luang Prabang now stands as a UNESCO World Heritage site. Ancient temples and nostalgic architecture whisk you into Laos’ past.</p>
-						</article>
-						<a href="#" class="link-st3">Discover more</a>
-					</div>
-					<div class="item">
-						<a href="#"><img data-lazy="images/Luang-Prabang-slider.jpg" alt="Luang Prabang" title="Luang Prabang"></a>
-						<article>
-							<h3><a href="#">Koh Samui</a></h3>
-							<h4>Belmond Napasai</h4>
-							<p class="paragraph">Located in the sparkling waters of the Gulf of Thailand, Koh Samui channels the spiritual sense of the mainland mixed with the tropical charm of an island paradise.</p>
-						</article>
-						<a href="#" class="link-st2">Discover more</a>
-					</div>
-					<div class="item">
-						<a href="#"><img data-lazy="images/Yangon-slider.jpg" alt="Yangon" title="Yangon"></a>
-						<article>
-							<h3><a href="#">Yangon</a></h3>
-							<h4>Belmond Governor's Residence</h4>
-							<p class="paragraph">Make your base in the leafy embassy quarter of Yangon, Myanmar’s largest city —a region that’s simultaneously steeped in history and humming with promise.</p>
-						</article>
-						<a href="#" class="link-st3">Discover more</a>
-					</div>
-					<div class="item">
-						<a href="#"><img data-lazy="images/Bagan-slider.jpg" alt="Bagan" title="Bagan"></a>
-						<article>
-							<h3><a href="#">Bagan</a></h3>
-							<h4>Belmond Road to Mandalay</h4>
-							<p class="paragraph">Bagan is the ancient capital of the Kingdom of Pagan, and home to over two thousand ancient pagodas. The countryside surrounding the city is just as stunning,</p>
-						</article>
-						<a href="#" class="link-st3">Discover more</a>
-					</div>
-					<div class="item">
-						<a href="#"><img data-lazy="images/Mandalay-slider.jpg" alt="Mandalay" title="Mandalay"></a>
-						<article>
-							<h3><a href="#">Mandalay</a></h3>
-							<h4>Belmond Road to Mandalay</h4>
-							<p class="paragraph">Steeped in mystique and immortalised in Rudyard Kipling’s famous poem, Mandalay is a city that more than lives up to its romantic reputation as Myanmar’s last royal city.</p>
-						</article>
-						<a href="#" class="link-st3">Discover more</a>
-					</div>
-					<div class="item">
-						<a href="#"><img data-lazy="images/vietnam-slider.jpg" alt="Vietnam" title="Vietnam"></a>
-						<article>
-							<h3><a href="#">Vietnam</a></h3>
-							<h4>The timeless Charm</h4>
-							<p class="paragraph">Set off from Bangkok and cross the emerald jungles of Southeast Asia in style on one of the world’s most luxurious trains.</p>
-						</article>
-						<a href="#" class="link-st3">Discover more</a>
-					</div>
-				</div>
-				<div class="nav-arrows">
-					<button class="arrow-left">
-						<i class="icon-font select-arrow-thin"></i>
-					</button>
-					<span><strong>1</strong> of 10 Destinations</span>
-					<button class="arrow-right">
-						<i class="icon-font select-arrow-thin"></i>
-					</button>
-				</div>
-			</div>
 			<div class="wrap-coo">
-				<div class="map-coo tooltip map-coo-active" id="map-coo-1">
-					<a href="#"><span><b>thailand</b><font>Eastern & Oriental Express</font><i></i></span></a>
+				<div class="map-coo tooltip" id="map-coo-1">
+					<i class="icon-font icon-den-vang"></i>
+					<span class="box-tooltip-map">
+						<h3>thailand</h3>
+						<div>
+							<img src="images/thailand-slider.jpg" alt="">
+						</div>
+						<p>The land of smile</p>
+						<a class="btn-st2" href="#">explore thailand</a>
+					</span>
 				</div>
 				<div class="map-coo tooltip" id="map-coo-2">
-					<a href="#"><span><b>singapore</b><font>Eastern & Oriental Express</font><i></i></span></a>
+					<i class="icon-font icon-den-vang"></i>
+					<span class="box-tooltip-map">
+						<h3>singapore</h3>
+						<div>
+							<img src="images/thailand-slider.jpg" alt="">
+						</div>
+						<p>The land of smile</p>
+						<a class="btn-st2" href="#">explore singapore</a>
+					</span>
 				</div>
-				<div href="javascript:" class="map-coo tooltip" id="map-coo-3">
-					<a href="#"><span><b>siem reap</b><font>Belmond La Résidence d'Angkor</font><i></i></span></a>
+				<div class="map-coo tooltip" id="map-coo-3">
+					<i class="icon-font icon-den-vang"></i>
+					<span class="box-tooltip-map">
+						<h3>siem reap</h3>
+						<div>
+							<img src="images/thailand-slider.jpg" alt="">
+						</div>
+						<p>Belmond La Résidence d'Angkor</p>
+						<a class="btn-st2" href="#">explore siem reap</a>
+					</span>
 				</div>
-				<div href="javascript:" class="map-coo tooltip" id="map-coo-4">
-					<a href="#"><span><b>bali</b><font>Belmond Jimbaran Puri</font><i></i></span></a>
+				<div class="map-coo tooltip" id="map-coo-4">
+					<i class="icon-font icon-den-vang"></i>
+					<span class="box-tooltip-map">
+						<h3>bali</h3>
+						<div>
+							<img src="images/thailand-slider.jpg" alt="">
+						</div>
+						<p>Belmond Jimbaran Puri</p>
+						<a class="btn-st2" href="#">explore bali</a>
+					</span>
 				</div>
-				<div href="javascript:" class="map-coo tooltip" id="map-coo-5">
-					<a href="#"><span><b>Luang prabang</b><font>Belmond La Résidence Phou Vao</font><i></i></span></a>
+				<div class="map-coo tooltip" id="map-coo-5">
+					<i class="icon-font icon-den-vang"></i>
+					<span class="box-tooltip-map">
+						<h3>Luang prabang</h3>
+						<div>
+							<img src="images/thailand-slider.jpg" alt="">
+						</div>
+						<p>Belmond La Résidence Phou Vao</p>
+						<a class="btn-st2" href="#">explore Luang prabang</a>
+					</span>
 				</div>
-				<div href="javascript:" class="map-coo tooltip" id="map-coo-6">
-					<a href="#"><span><b>koh samui</b><font>Belmond Napasai</font><i></i></span></a>
+				<div class="map-coo tooltip" id="map-coo-6">
+					<i class="icon-font icon-den-vang"></i>
+					<span class="box-tooltip-map">
+						<h3>bagan</h3>
+						<div>
+							<img src="images/thailand-slider.jpg" alt="">
+						</div>
+						<p>Belmond Road to Mandalay</p>
+						<a class="btn-st2" href="#">explore bagan</a>
+					</span>
 				</div>
-				<div href="javascript:" class="map-coo tooltip" id="map-coo-7">
-					<a href="#"><span><b>yangon</b><font>Belmond Governor's Residence</font><i></i></span></a>
+				<div class="map-coo tooltip" id="map-coo-7">
+					<i class="icon-font icon-den-vang"></i>
+					<span class="box-tooltip-map">
+						<h3>yangon</h3>
+						<div>
+							<img src="images/thailand-slider.jpg" alt="">
+						</div>
+						<p>Belmond Governor's Residence</p>
+						<a class="btn-st2" href="#">explore yangon</a>
+					</span>
 				</div>
-				<div href="javascript:" class="map-coo tooltip" id="map-coo-8">
-					<a href="#"><span><b>bagan</b><font>Belmond Road to Mandalay</font><i></i></span></a>
+				<div class="map-coo tooltip" id="map-coo-8">
+					<i class="icon-font icon-den-vang"></i>
+					<span class="box-tooltip-map">
+						<h3>bagan</h3>
+						<div>
+							<img src="images/thailand-slider.jpg" alt="">
+						</div>
+						<p>Belmond Road to Mandalay</p>
+						<a class="btn-st2" href="#">explore bagan</a>
+					</span>
 				</div>
-				<div href="javascript:" class="map-coo tooltip" id="map-coo-9">
-					<a href="#"><span><b>Mandalay</b><font>Belmond Road to Mandalay</font><i></i></span></a>
+				<div class="map-coo tooltip" id="map-coo-9">
+					<i class="icon-font icon-den-vang"></i>
+					<span class="box-tooltip-map">
+						<h3>Mandalay</h3>
+						<div>
+							<img src="images/thailand-slider.jpg" alt="">
+						</div>
+						<p>Belmond Road to Mandalay</p>
+						<a class="btn-st2" href="#">explore Mandalay</a>
+					</span>
 				</div>
-				<div href="javascript:" class="map-coo tooltip" id="map-coo-10">
-					<a href="#"><span><b>vietnam</b><font>The timeless Charm</font><i></i></span></a>
+				<div class="map-coo tooltip" id="map-coo-10">
+					<i class="icon-font icon-den-vang"></i>
+					<span class="box-tooltip-map">
+						<h3>vietnam</h3>
+						<div>
+							<img src="images/thailand-slider.jpg" alt="">
+						</div>
+						<p>The timeless Charm</p>
+						<a class="btn-st2" href="#">explore vietnam</a>
+					</span>
 				</div>
 			</div>
 		</div>
