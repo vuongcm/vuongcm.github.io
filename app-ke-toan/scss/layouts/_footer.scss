@@ -1,0 +1,28 @@
+footer{
+	position: fixed;
+	left: 50px;
+	bottom: 0;
+	background-color: #fff;
+	width: calc(100% - 50px);
+	z-index: 180;
+	background-color: #1F3C45;
+	p{
+		width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+		text-align: center;
+		color: #fff;
+		font-size: 11px;
+		b{
+			font-weight: normal;
+			color: $hight-light;
+		}
+		&:first-child{
+			padding-top: 15px;
+			padding-bottom: 10px;
+		}
+		&:last-child{
+			padding-bottom: 15px;
+		}
+	}
+}

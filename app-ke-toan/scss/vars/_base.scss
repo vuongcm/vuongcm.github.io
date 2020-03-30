@@ -69,7 +69,10 @@ body {
 	font-size: 12px;
 	color: $main-color;
     letter-spacing: 1px;
+    line-height: 1;
     overflow-x: hidden;
+    background: #13AAF0 url(../images/bg.jpg) repeat;
+    //position: relative;
 }
 input{
     white-space: nowrap;
