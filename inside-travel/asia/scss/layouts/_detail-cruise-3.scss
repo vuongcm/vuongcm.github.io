@@ -1270,6 +1270,26 @@
 		}
 	}
 }
+.form-search-nav .input-st3 input{
+	display: inline-block;
+}
+.input-st3{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	.icon-font{
+		font-size: 16px;
+		width: 21px;
+		flex-shrink: 0;
+		color: #888;
+	}
+	input{
+		border: none;
+		flex-grow: 1;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
 @media (max-width: 1350px) {
 	.row-crowd{
 		.crowd-box{
