@@ -1633,6 +1633,24 @@
 			}
 		}
 	}
+	.wrap-destination-st2{
+		flex-wrap: wrap;
+	    &>div{
+	    	width: 100%;
+	    }
+	    .item-box-img{
+	    	order: 1;
+	    }
+	    .item-box-text{
+	    	order: 2;
+	    }
+	    .item-box-text.box-left{
+			padding-right: 0;
+	    }
+	    .item-box-text.box-right{
+			padding-left: 0;
+	    }
+	}
 }
 @media (max-width: 479px) {
 	.price-trip-box{
