@@ -369,6 +369,24 @@ $(document).ready(function() {
 			$('.map-home .map-coo').removeClass('map-coo-active');
 			$('.map-home .map-coo').eq(slick.currentSlide).addClass('map-coo-active');
 		});
+		
+	}
+	if($('.wrap-map').length){
+		$('.map-home .map-coo').click(function(){
+			$('.map-home .map-coo').removeClass('map-coo-active');
+			$(this).addClass('map-coo-active');
+		});
+		$('body').click(function(e){
+			if (!$('.map-coo').is(e.target) && $('.map-coo').has(e.target).length === 0) {
+	            $('.map-coo').removeClass('map-coo-active');
+	        }
+	    });
+	    $('.map-home-mobile .col-sm-6').on('touchstart',function(){
+	    	$(this).addClass('active-hover');
+	    });
+	   	$('.map-home-mobile .col-sm-6').on('touchend',function(){
+	    	$(this).removeClass('active-hover');
+	    });
 	}
 	//carousel-st1
 	if ($('.wrap-slide-st1').length > 0) {

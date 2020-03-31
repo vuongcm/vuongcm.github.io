@@ -164,7 +164,7 @@ select:focus {
 .icon-destination:before{
     color: inherit;
 }
-.icon-cuisine:before,.icon-des-1:before,.icon-des-2:before,.icon-des-3:before,.icon-des-4:before{
+.icon-cuisine:before,.icon-des-1:before,.icon-des-2:before,.icon-des-3:before,.icon-des-4:before, .icon-map-mekong:before{
     color: inherit;
 }
 .input-st1{
@@ -1113,6 +1113,9 @@ select:focus {
         }
 
     }
+    .box-tooltip-map{
+        padding: 10px 20px 20px;
+    }
     &:hover span{
         visibility:visible;
         opacity: 1;
@@ -1120,6 +1123,10 @@ select:focus {
     &:hover>span{
         visibility:visible;
         opacity: 1;
+    }
+    &:hover>.box-tooltip-map{
+        visibility: hidden;
+        opacity: 0;
     }
 }
 .wrap-tooltip{
@@ -1247,18 +1254,30 @@ select:focus {
     }
 }
 .map-coo{
-    width: 25px;
-    height: 26px;
     position: absolute;
-    background-repeat-x: no-repeat;
-    background-repeat-y: no-repeat;
-    background-size: 99%;
     cursor: pointer;
 }
 .map-coo:hover{
-    width: 27px;
-    height: 28px;
     opacity: 1;
+}
+.box-tooltip-map{
+    width: max-content;
+    max-width: 300px;
+    left: 50%;
+    @include translateX(-50%);
+    h3,h4{
+        margin-top: 0;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+    p{
+        font-family: 'Reenie Beanie', cursive;
+        font-weight: 500;
+        font-size: 26px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 .trip{
     width: 100%;
