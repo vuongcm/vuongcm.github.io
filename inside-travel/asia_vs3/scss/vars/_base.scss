@@ -638,6 +638,9 @@ select:focus {
         padding: 2px;
     }
 }
+.border-bot-0{
+    border-bottom: none!important;
+}
 .wrap-filter{
     display: flex;
     flex-wrap: wrap;
@@ -2477,5 +2480,45 @@ select:focus {
     }
     to {
         -ms-transform: translateY(-600px);
+    }
+}
+@keyframes moveToUp {
+    from {
+        transform: translateY(0);
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0);
+        -ms-transform: translateY(0);
+    }
+    to {
+        transform: translateY(-3px);
+        -moz-transform: translateY(-3px);
+        -webkit-transform: translateY(-3px);
+        -o-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+    }
+}
+@-webkit-keyframes moveToUp {
+    from {
+        -webkit-transform: translateY(0);
+    }
+    to {
+        -webkit-transform: translateY(-3px);
+    }
+}
+@-moz-keyframes moveToUp {
+    from {
+        -moz-transform: translateY(0);
+    }
+    to {
+        -moz-transform: translateY(-3px);
+    }
+}
+@-ms-keyframes moveToUp {
+    from {
+        -ms-transform: translateY(0);
+    }
+    to {
+        -ms-transform: translateY(-3px);
     }
 }

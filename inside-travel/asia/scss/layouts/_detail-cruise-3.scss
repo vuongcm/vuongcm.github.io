@@ -1657,6 +1657,16 @@
 	    }
 	    .item-box-text{
 	    	order: 2;
+	    	justify-content: center;
+	    	h4,h3, .paragraph{
+	    		text-align: center;
+	    	}
+	    	h3{
+	    		&:after{
+	    			margin-left: auto;
+	    			margin-right: auto;
+	    		}
+	    	}
 	    }
 	    .item-box-text.box-left{
 			padding-right: 0;

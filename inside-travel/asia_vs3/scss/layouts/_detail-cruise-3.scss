@@ -1087,10 +1087,194 @@
 
 	}
 }
-@media (min-width: 1350px) {
+.parameter-box{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    &>div{
+    	display: flex;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	padding-right: 15px;
+    	padding-left: 15px;
+    	b{
+    		width: 100%;
+    		text-align: center;
+    		color: $higlight-color;
+    		font-size: 40px;
+    	}
+    	span{
+    		text-transform: uppercase;
+    		font-size: 11px;
+    		text-align: center;
+    	}
+    }
+}
+.crowd-container{
+	width: 100%;
+	margin-bottom: 30px;
+}
+.row-crowd{
+	display: flex;
+	display: none;
+	&:first-child, &:nth-child(2){
+		display: flex;
+	}
+	.crowd-box{
+		flex-grow: 1;
+		padding-left: 1px;
+		padding-right: 1px;
+		margin-top: 2px;
+		max-height: 180px;
+		overflow: hidden;
+		position: relative;
+		opacity: 1;
+		display: inline-flex;
+		align-items: center;
+		//@include smooth(.25s);
 
+		.box-img{
+			width: 100%;
+			@include smooth(.3s);
+		}
+		.external-link{
+			position: absolute;
+			z-index: 5;
+			color: #fff;
+			top: 5px;
+			right: 5px;
+			font-size: 16px;
+			display: none;
+		}
+		&>div:last-child{
+			position: absolute;
+			z-index: 5;
+			color: #fff;
+			bottom: 5px;
+			left: 5px;
+			
+			.asiatours-black{
+				font-size: 16px;
+			}
+			font{
+				display: none;
+			}
+		}
+		&:hover{
+			.box-img{
+				@include scale(1.1);
+				
+				@include dakkenImg(70%);
+			}
+			.external-link{
+				display: block;
+			}
+			&>div:last-child{
+				font{
+					display: inline;
+
+				}
+			}
+		}
+	}
+}
+.link-st4{
+	margin-top: 20px;
+	text-transform: uppercase;
+	display: inline-flex;
+	align-items: center;
+	.icon-font{
+		font-size: 7px;
+		margin-left: 5px;
+	}
+}
+.wrap-destination-st2{
+	display: flex;
+	justify-content: flex-start;
+    align-items: stretch;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px dotted #DCDCDC;
+    &>div{
+    	width: 50%;
+    }
+    .box-left{
+    	order: 1;
+    }
+    .box-right{
+    	order: 2;
+    }
+    .item-box-text.box-left{
+		padding-right: 12%;
+    }
+    .item-box-text.box-right{
+		padding-left: 12%;
+    }
+	.item-box-text{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		align-content: center;
+		flex-wrap: wrap;
+		h3{
+			font-size: 45px;
+			width: 100%;
+			text-align: left;
+			font-weight: 600;
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-left: -3px;
+			&:after{
+				content: '';
+				display: block;
+				width: 28px;
+				height: 2px;
+				background-color: $higlight-color;
+				margin-top: 15px;
+				margin-left: 3px;
+			}
+		}
+		h4{
+			text-transform: uppercase;
+			width: 100%;
+			text-align: left;
+			font-weight: 600;
+			&:before{
+				background-color: $higlight-color;
+			    content: "";
+			    display: inline-block;
+			    height: 10px;
+			    width: 10px;
+			    margin-right: 5px;
+			    border-radius: 50% 50% 0 50%;
+			}
+		}
+		.paragraph{
+			text-align: left;
+			padding: 0;
+			margin-bottom: 30px;
+			margin-top: 30px;
+		}
+	}
+}
+@media (min-width: 1350px) {
+	.row-crowd{
+		.crowd-box{
+			max-height: 160px;
+		}
+	}
 }
 @media (max-width: 991px) {
+	.row-crowd{
+		//flex-wrap: wrap;
+		&:nth-child(3){
+			display: flex;
+		}
+		.crowd-box{
+			max-height: 230px;
+		}
+	}
 	.section-grid-dt3.section-grid-cruise{
 		.grid-ct4{
 			grid-row: 4 / 5;
@@ -1131,6 +1315,19 @@
 	}
 }
 @media (max-width: 767px) {
+	.parameter-box{
+		flex-wrap: wrap;
+		&>div{
+			width: 50%;
+			margin-bottom: 15px;
+		}
+	}
+	.row-crowd{
+		//flex-wrap: wrap;
+		.crowd-box{
+			max-height: 140px;
+		}
+	}
 	.section-grid-dt3.section-grid-cruise{
 		.grid-ct1{
 			.group-ct1-1{
@@ -1330,9 +1527,51 @@
 		}
 		
 	}
+	.wrap-destination-st2{
+		flex-wrap: wrap;
+	    &>div{
+	    	width: 100%;
+	    }
+	    .item-box-img{
+	    	order: 1;
+	    }
+	    .item-box-text{
+	    	order: 2;
+	    	justify-content: center;
+	    	h4,h3, .paragraph{
+	    		text-align: center;
+	    	}
+	    	h3{
+	    		&:after{
+	    			margin-left: auto;
+	    			margin-right: auto;
+	    		}
+	    	}
+	    }
+	    .item-box-text.box-left{
+			padding-right: 0;
+	    }
+	    .item-box-text.box-right{
+			padding-left: 0;
+	    }
+	}
 }
 @media (max-width: 479px) {
 	.price-trip-box{
 		display: none;
+	}
+	.row-crowd{
+		//flex-wrap: wrap;
+		.crowd-box{
+			max-height: 120px;
+		}
+	}
+}
+@media (max-width: 375px) {
+	.row-crowd{
+		//flex-wrap: wrap;
+		.crowd-box{
+			max-height: 90px;
+		}
 	}
 }

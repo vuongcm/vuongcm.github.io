@@ -486,9 +486,9 @@
 		.synch-carousels{
 			width: 30%;
 			height: 70%;
-			min-height: 480px;
+			min-height: 550px;
 			position: absolute;
-			top: 10%;
+			top: 15px;
 			left: 5%;
 			z-index: 4;
 			background-color: $background-color;
@@ -516,6 +516,9 @@
 						font-family: 'Reenie Beanie', cursive;
 						font-weight: 400;
 					}
+				}
+				.link-st3{
+					margin-top: 15px;
 				}
 			}
 			.nav-arrows{
