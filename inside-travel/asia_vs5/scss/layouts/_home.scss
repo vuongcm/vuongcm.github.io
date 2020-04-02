@@ -474,7 +474,7 @@
 		.synch-carousels{
 			width: 30%;
 			height: 70%;
-			min-height: 480px;
+			min-height: 550px;
 			position: absolute;
 			top: 15px;
 			left: 5%;
@@ -500,10 +500,13 @@
 						color: $title-color;
 					}
 					h4{
-						font-size: 24px;
+						font-size: 28px;
 						font-family: 'Reenie Beanie', cursive;
 						font-weight: 400;
 					}
+				}
+				.link-st3{
+					margin-top: 15px;
 				}
 			}
 			.nav-arrows{
