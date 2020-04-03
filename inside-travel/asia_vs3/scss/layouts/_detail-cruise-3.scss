@@ -838,6 +838,65 @@
 			}
 
 	}
+	.trip-st4{
+		background-color: #e6ddcc;
+		.head-trip{
+			border-color: #d5cab6;
+			.title-info{
+				width: calc(100% - 110px);
+				padding-left: 10px;
+				flex-grow: 1;
+				.rank{
+					.star-box{
+						margin-right: 15px;
+					}
+					.hotel-news{
+						margin-top: 0;
+						margin-bottom: 0;
+					}
+				}
+			}
+			.heart-tour{
+				font-size: 36px;
+			}
+		}
+		.foot-trip{
+			border-color: #d5cab6;
+			.wrap-faq{
+				width: 100%;
+				.order-day{
+					margin-top: 0;
+					background-color: transparent;
+					&>div:first-child{
+						margin-top: 0;
+						background-color: transparent;
+						.flex-box{
+							flex-grow: 1;
+							padding-right: 10px;
+							position: relative;
+							h3{
+								width: auto;
+								display: inline;
+								flex-grow: unset;
+								margin: 0;
+							}
+							.price-trip-box{
+								width: auto;
+							}
+							.box-schedule{
+								width: 100%;
+							}
+						}
+						&>button{
+							ms-transform: rotate(-90deg);
+						    -webkit-transform: rotate(-90deg);
+						    transform: rotate(-90deg);
+						}
+					}
+				}
+			}
+		}
+	}
 }
 .expert-box{
 	display: flex;
