@@ -742,7 +742,7 @@
 		.count-day{
 		    top: 12px;
 		    left: 12px;
-		    background: rgba(208, 179, 22, 0.9);
+		    background: rgba(199, 185, 12, 0.8);
 		    text-transform: capitalize;
 		    font-size: 14px;
 		}
@@ -803,7 +803,7 @@
 			&>.btn-st2{
 				width: 247px;
 				border-radius: 999px;
-				border-color: #cab1a6;
+				border-color: #c9baa8;
 				//line-height: 1;
 				padding-top: 5px;
 				padding-bottom: 5px;
@@ -849,6 +849,7 @@
 				.rank{
 					.star-box{
 						margin-right: 15px;
+						//font-size: 12px;
 					}
 					.hotel-news{
 						margin-top: 0;
@@ -858,6 +859,7 @@
 			}
 			.heart-tour{
 				font-size: 36px;
+				color: #bdb316;
 			}
 		}
 		.foot-trip{
@@ -930,6 +932,9 @@
 			}
 		}
 	}
+}
+.padding-top-0{
+	padding-top: 0!important;
 }
 .wrap-list-cabins{
 	padding-right: 15px;
@@ -1592,11 +1597,20 @@
 					width: 100%;
 					padding-left: 0;
 					padding-right: 0;
+					.title-h2{
+						text-align: center;
+					}
 					.rank{
+						.star-box{
+							font-size: 12px;
+						}
 						.hotel-news{
 							margin-right: 0;
 							span{
-								font-size: 10px;
+								font-size: 8px;
+								.icon-font{
+									font-size: 10px;
+								}
 							}
 						}
 					}

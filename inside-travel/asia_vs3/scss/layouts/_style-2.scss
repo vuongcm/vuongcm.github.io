@@ -14,6 +14,7 @@
 		top: 50%;
 		left: 0;
 		@include translateY(-50%);
+		@include dakkenImg(70%);
 	}
 	.search-container-st2{
 		z-index: 2;
@@ -57,7 +58,7 @@
 .banner-top-logo{
 	width: 100%;
 	max-width: 368px;
-	margin: 0 auto 30px;
+	margin: 38px auto 30px;
 }
 .box-input-st2{
 	flex-grow: 1;
@@ -517,7 +518,7 @@
 	    }
 	    .booking-step-where{
 	    	position: relative;
-    		width: 24%;
+    		width: 22%;
     		border-left: 1px solid #cecece;
     		.value{
     			.btn-value{
@@ -531,12 +532,12 @@
 	    }
 	    .booking-step-night{
 	    	position: relative;
-	    	width: 16%;
+	    	width: 19%;
 	    	border-right: none;
 	    }
 	    .booking-step-m-time{
 	    	position: relative;
-		    width: 18%;
+		    width: 19%;
 		    margin-top: 0;
 		    margin-bottom: 0;
 		    border-right: none;
@@ -549,7 +550,7 @@
 	    }
 	    .booking-step-cruise{
 	    	position: relative;
-		    width: 24%;
+		    width: 22%;
 		    //border-right: none;
 		    //border-left: 1px solid #cecece;
 		    .value{
@@ -897,7 +898,7 @@
 		p{
 			line-height: 1.8;
 			letter-spacing: 0.7px;
-			color: #666;
+			color: #895a36;
 			.heart-empty{
 				margin-right: 5px;
 				color: $higlight-color;
@@ -923,7 +924,7 @@
 		justify-content: flex-start;
 		&>span{
 			margin-right: 15px;
-			color: #888;
+			color: #895a36;
 		}
 	}
 }
@@ -1174,6 +1175,18 @@
 	}
 	.wrap-table{
 		width: 100%;
+		table{
+			td{
+				a{
+					&:hover{
+						background: #b3350a;
+					    border-radius: 20px;
+					    padding: 3px;
+					    color: #FFF;
+					}
+				}
+			}
+		}
 	}
 } 
 .section-blog-st2{

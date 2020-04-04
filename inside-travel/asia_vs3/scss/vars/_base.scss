@@ -117,8 +117,7 @@ button{
 }
 button:hover,a:hover {
 	text-decoration: none;
-	opacity: .8;
-    color: $higlight-color;
+    color: #969e02;
 }
 section {
 	margin: 30px 0;
@@ -231,7 +230,7 @@ select:focus {
     line-height: 1.5;
     text-align: center;
     letter-spacing: 1px;
-    border: 1px solid $higlight-red-2;
+    border: 1px solid #c9baa8;
     //color: $title-3;
     @include smooth(.2s);
     font-size: 12px;
@@ -306,9 +305,9 @@ select:focus {
 .read-more-st2{
     width: 100%;
     a{
-        color: $light-color-4;
+        color: #895a36;
         &:after{
-            background-color: $light-color-4;
+            background-color: #895a36;
         }
     }
 }
@@ -1149,7 +1148,7 @@ select:focus {
         }
         &>span{
             box-shadow: none;
-            background-color: $title-3;
+            background-color: #895a36;
             color: #fff;
             width: unset;
             white-space: nowrap;

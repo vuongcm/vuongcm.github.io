@@ -232,7 +232,7 @@
 		margin-right: 5px;
 	}
 	.icon-font:last-child{
-		color: #d2c5ae;
+		color: #895a36;
 	}
 }
 .value{
@@ -370,6 +370,13 @@
 							display: inline-block;
 							margin-left: 5px;
 							@include rotage(-90deg);
+							color: inherit;
+						}
+						a{
+							color: inherit;
+						}
+						&:hover{
+							color: #969e02;
 						}
 					}
 				}

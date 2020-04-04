@@ -1075,7 +1075,7 @@ $(document).ready(function() {
 					$('.booking-step-where').children('select').append(`<option value="${$(this).closest('.value').find('.checked b').eq(j).text()}" selected></option>`);
 				}
 				if(numberValue == 0){
-					$('.booking-step-where').find('.text b').html(`Where do you want to go?`);
+					$('.booking-step-where').find('.text b').html(`Destinations`);
 				} else{
 					$('.booking-step-where').find('.text b').html(`${numberValue} selected`);
 				}
