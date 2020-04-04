@@ -149,24 +149,24 @@ header{
 		z-index: 1;
 		@include translateX(-50%);
 		.box-mon-time{
-			background-color: #e6ddcc;
+			//background-color: #e6ddcc;
 			position: static;
-			&>div{
+			/* &>div{
 				&:first-child{
-					border-color: #d2c5ae;
+					//border-color: #d2c5ae;
 				}
 			}
 			ul{
 				li{
 					a{
-						border-color: #d2c5ae;
+						//border-color: #d2c5ae;
 						&:hover{
 							background-color: #b3350a;
 							color: #fff;
 						}
 					}
 				}
-			}
+			} */
 		}
 	}
 	&:hover{
@@ -549,6 +549,7 @@ header{
 		    	flex-wrap: wrap;
 		    	min-width: unset;
 		    	padding: 0 15px;
+		    	display: block;
 				&>div{
 					width: 100%;
 					span{
@@ -651,7 +652,17 @@ header{
 			}
 		}
 	}
-	
+	.title-sub-daparture{
+		.sub-menu-lv1{
+		    .box-mon-time{
+				ul{
+					li{
+						width: 25%;
+					}
+				}
+		    }
+		}
+	}
 }
 @media (max-width: 767px) {
 	.global-menu-st2{

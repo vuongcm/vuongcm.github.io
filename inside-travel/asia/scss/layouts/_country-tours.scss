@@ -618,12 +618,15 @@
 		.icon-font{
 			font-size: 36px;
 			color: #AEAEAE;
+			&:before{
+                content: "\e915";
+            }
 		}
 		&:hover{
-			.icon-font{
-				color: $higlight-color;
-			}
-		}
+	        .heart-empty{
+	            color: $higlight-color;
+	        }
+	    }
 	}
 }
 .hand-picked{
