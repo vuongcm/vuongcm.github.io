@@ -1327,7 +1327,7 @@ $(document).ready(function() {
 	}
 	/*===end search cruise =====*/
 	/*====== search box st2 =======*/
-	if($('.search-container-st2').length){
+	if($('.search-container-st2 .box-input-st2').length){
 		let inputWhere = $('#where-auto');
 		let valueWhere = inputWhere.nextAll('.value').html();
 		let widthWhere = Math.floor(inputWhere.outerWidth());
