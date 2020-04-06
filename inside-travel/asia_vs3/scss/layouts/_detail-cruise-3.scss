@@ -1329,12 +1329,16 @@
 .intro-box-mon{
 	margin-top: 15px;
 	margin-bottom: 30px;
+	width: 100%;
 	.box-mon-time{
 		display: flex;
 		position: relative;
 		top: 0;
 		left: 0;
 		max-width: 630px;
+		min-width: unset;
+		border-radius: 10px;
+    	border: 1px solid #d2c5ae;
 		&:after{
 			content: '';
 			display: block;
@@ -1628,15 +1632,19 @@
 						text-align: center;
 					}
 					.rank{
+						flex-wrap: wrap;
 						.star-box{
-							font-size: 12px;
+							margin-right: 0;
+							width: 100%;
+							margin-bottom: 10px;
 						}
 						.hotel-news{
 							margin-right: 0;
+							text-align: center;
 							span{
-								font-size: 8px;
+								font-size: 10px;
 								.icon-font{
-									font-size: 10px;
+									font-size: 12px;
 								}
 							}
 						}

@@ -1,6 +1,7 @@
 .bg-cruise{
 	background-image: url('../images/background/bg-cruise.jpg');
     height: 100%;
+    @include dakkenImg(70%);
 }
 .best-offer{
 	display: flex;
