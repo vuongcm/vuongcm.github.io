@@ -105,10 +105,10 @@ $(document).ready(function() {
 	    },function(){
 	    	$(this).children('.paragraph').removeAttr('style');
 	    });
-	    $('body').delegate('.trip .content-trip','hover',function(){
-	    	$(this).children('.paragraph').css('max-height','400px');
+	    $('body').delegate('.trip .content-trip>p','hover',function(){
+	    	$(this).css('max-height','500px');
 	    },function(){
-	    	$(this).children('.paragraph').removeAttr('style');
+	    	$(this).removeAttr('style');
 	    });
 	    if($('.experience-container').length){
 	    	$('.experience-container .col-xlg-4 article').hover(function(){
@@ -142,11 +142,11 @@ $(document).ready(function() {
 			$(this).height(heightTrip2);
 			$(this).children('.content-trip').css('bottom',priceTripheight + 'px');
 		});
-		$('.trip-st2 .content-trip').hover(function(){
-	    	$(this).children('.paragraph').css('max-height','210px');
+		$('.trip-st2 .content-trip .paragraph').hover(function(){
+	    	$(this).css('max-height','400px');
 	    },function(){
 	    	//$(this).parent('.right-trip').outerHeight() - $(this).prev('.head-trip').outerHeight() - $(this).next('.price-trip-box').outerHeight() - 22 + 'px';
-	    	$(this).children('.paragraph').removeAttr('style');
+	    	$(this).removeAttr('style');
 	    });
 	}
 	$('body').delegate('.read-more-st1>a','click',function(){

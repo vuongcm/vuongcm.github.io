@@ -656,7 +656,7 @@
 	.select-st1,.select-st2, .booking-st1{
 		width: 100%;
 		height: auto;
-		border: 1px solid #aaa;
+		border: 1px solid #d2c5ae;
 		font-size: 12px;
 		vertical-align: middle;
 		line-height: 1.5;
@@ -709,7 +709,7 @@
 		}
 	}
 	.booking-st2, .booking-st3{
-		border: 1px solid #aaa;
+		border: 1px solid #d2c5ae;
 		position: relative;
 		input{
 		width: 100%;
@@ -847,6 +847,8 @@
 	input{
 		z-index: 5;
 		opacity: 0;
+		cursor: pointer;
+		width: 100%;
 	}
 	.text{
 		position: absolute;

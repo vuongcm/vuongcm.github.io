@@ -204,6 +204,9 @@ select:focus {
     padding-right: 15px;
     color: #b3350a;
 }
+.box-img-st2{
+    display: block;
+}
 .btn-st1 {
 	background-color: $btn-bg-color-st1;
 	color: $btn-text-color-st1;
@@ -1148,7 +1151,7 @@ select:focus {
         }
         &>span{
             box-shadow: none;
-            background-color: #895a36;
+            background-color: #bdb316;
             color: #fff;
             width: unset;
             white-space: nowrap;
@@ -1156,7 +1159,7 @@ select:focus {
                 margin-bottom: 0;
             }
             &:after{
-                background-color: $title-3;
+                background-color: #bdb316;
                 box-shadow: none;
             }
         }
@@ -1322,6 +1325,9 @@ select:focus {
             overflow-y: hidden;
             //color: $text-3;
             @include smooth(1.5s);
+            &:hover{
+                max-height: 500px;
+            }
         }
         &>span{
             display: block;
@@ -1336,11 +1342,6 @@ select:focus {
             &>strong{
                 font-size: 20px;
                 font-weight: 600;
-            }
-        }
-        &:hover{
-            &>p{
-                max-height: 400px;
             }
         }
     }
