@@ -882,6 +882,9 @@
 								display: inline;
 								flex-grow: unset;
 								margin: 0;
+								a{
+									max-width: 630px;
+								}
 							}
 							.price-trip-box{
 								width: auto;
@@ -1327,6 +1330,7 @@
 	margin-top: 15px;
 	margin-bottom: 30px;
 	.box-mon-time{
+		display: flex;
 		position: relative;
 		top: 0;
 		left: 0;

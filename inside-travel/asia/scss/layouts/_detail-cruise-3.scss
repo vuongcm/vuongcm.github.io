@@ -1359,6 +1359,19 @@
 		}
 	}
 }
+.wrap-slide-sp2{
+	.item{
+		outline: none;
+	}
+}
+.navbar-cruise.navbar-tour{
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: -100px;
+	//display: none;
+	@include smooth(.85s);
+}
 @media (max-width: 1350px) {
 	.row-crowd{
 		.crowd-box{
@@ -1370,6 +1383,9 @@
 
 }
 @media (max-width: 991px) {
+	.navbar-cruise.navbar-tour{
+		display: none;
+	}
 	.row-crowd{
 		//flex-wrap: wrap;
 		&:nth-child(3){
