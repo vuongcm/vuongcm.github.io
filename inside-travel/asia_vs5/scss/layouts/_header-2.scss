@@ -43,7 +43,9 @@ body.body-st2{
 		width: 100%;
 		height: auto;
 	}
-	
+	.experience-dt-container {
+		background-position-x: 50%;
+	}
 }
 @media (min-width: 1025px) {
 	body.body-st2{
@@ -99,6 +101,9 @@ body.body-st2{
 		.bacground-box{
 			left: 0;
 			width: 100%;
+		}
+		.bg-parallax{
+			background-position-x: 100px;
 		}
 	}
 }

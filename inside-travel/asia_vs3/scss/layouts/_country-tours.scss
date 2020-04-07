@@ -519,8 +519,8 @@
 	.wrap-title-banner-top-line{
 		bottom: 80px;
 		h1,h2{
-			font-size: 20px;
-			font-weight: 600;
+			font-size: 22px;
+			font-weight: 500;
 		}
 		p{
 			font-size: 14px;
@@ -581,9 +581,6 @@
 @media (max-width: 479px) {
 	.wrap-title-banner-top-line{
 		bottom: 70px;
-		h1,h2{
-			font-size: 35px;
-		}
 		p{
 			font-size: 12px;
 		}
