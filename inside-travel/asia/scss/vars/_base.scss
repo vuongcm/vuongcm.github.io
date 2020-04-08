@@ -27,14 +27,14 @@
         font-family: 'Montserrat', Arial, sans-serif;
     }
 }
-/*@font-face{ 
-	font-family: 'Theano Didot';
-	src: url('../fonts/theano-didot/TheanoDidot.eot');
-	src: url('../fonts/theano-didot/TheanoDidot.eot?iefix') format('eot'),
-	     url('../fonts/theano-didot/TheanoDidot.woff') format('woff'),
-	     url('../fonts/theano-didot/TheanoDidot.ttf') format('truetype'),
-	     url('../fonts/theano-didot/TheanoDidot.svg#webfont') format('svg');
-}*/
+@font-face{ 
+	font-family: 'Italianno';
+	src: url('../fonts/italianno/Italianno.eot');
+	src: url('../fonts/italianno/Italianno.eot?iefix') format('eot'),
+	     url('../fonts/italianno/Italianno.woff') format('woff'),
+	     url('../fonts/italianno/Italianno.ttf') format('truetype'),
+	     url('../fonts/italianno/Italianno.svg#webfont') format('svg');
+}
 object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, 
 ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, 
@@ -1730,7 +1730,8 @@ select:focus {
 }
 .team-name{
     text-align: center;
-    font-family: 'Reenie Beanie', cursive;
+    //font-family: 'Reenie Beanie', cursive;
+    font-family: 'Italianno', cursive;
     font-size: 35px;
 }
 .team-mess{
