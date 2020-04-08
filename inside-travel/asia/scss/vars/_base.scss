@@ -82,7 +82,12 @@ body {
     position: relative;
     --bodyWidth: 1583px;
     overflow-x: hidden;
+}
+.app{
+    width: 100%;
     max-width: 100vw;
+    overflow: hidden;
+    position: relative;
 }
 input{
     white-space: nowrap;
