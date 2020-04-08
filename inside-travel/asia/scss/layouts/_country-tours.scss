@@ -48,6 +48,7 @@
 	margin-top: 30px;
 	.synch-carousels{
         box-shadow: none;
+        width: 100%;
         .nav-arrows{
             // top: 40%;
             top: 110px;
@@ -62,6 +63,7 @@
             }
         }
         .slick-list{
+        	width: 100%;
         	//overflow-y: visible;
         	//overflow-x: hidden;
         }
