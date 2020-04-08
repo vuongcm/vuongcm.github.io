@@ -26,15 +26,18 @@
         font-size: 12px;
         font-family: 'Montserrat', Arial, sans-serif;
     }
+    &:focus{
+        outline: none;
+    }
 }
-@font-face{ 
-	font-family: 'Italianno';
-	src: url('../fonts/italianno/Italianno.eot');
-	src: url('../fonts/italianno/Italianno.eot?iefix') format('eot'),
-	     url('../fonts/italianno/Italianno.woff') format('woff'),
-	     url('../fonts/italianno/Italianno.ttf') format('truetype'),
-	     url('../fonts/italianno/Italianno.svg#webfont') format('svg');
-}
+/*@font-face{ 
+	font-family: 'Theano Didot';
+	src: url('../fonts/theano-didot/TheanoDidot.eot');
+	src: url('../fonts/theano-didot/TheanoDidot.eot?iefix') format('eot'),
+	     url('../fonts/theano-didot/TheanoDidot.woff') format('woff'),
+	     url('../fonts/theano-didot/TheanoDidot.ttf') format('truetype'),
+	     url('../fonts/theano-didot/TheanoDidot.svg#webfont') format('svg');
+}*/
 object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, 
 ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, 
@@ -157,7 +160,7 @@ select:focus {
 .icon-destination:before{
     color: inherit;
 }
-.icon-cuisine:before,.icon-des-1:before,.icon-des-2:before,.icon-des-3:before,.icon-des-4:before,.icon-next-back:before{
+.icon-cuisine:before,.icon-des-1:before,.icon-des-2:before,.icon-des-3:before,.icon-des-4:before{
     color: inherit;
 }
 .input-st1{
@@ -231,7 +234,8 @@ select:focus {
 }
 .btn-st3{
     color: #fff;
-    background-color: #333;
+    background-color: #111;
+    
     text-transform: uppercase;
     //font-size: 12px;
     letter-spacing: 3px;
@@ -488,11 +492,12 @@ select:focus {
     font-size: 14px;
 }
 .pre-title{
-    font-size: 18px;
+    font-size: 20px;
     width: 100%;
     display: block;
     font-weight: 400;
     text-align: center;
+    //font-family: 'Theano Didot','Times New Roman', serif;
 }
 .bg-parallax{
     position: absolute;
@@ -518,11 +523,6 @@ select:focus {
     justify-content: center;
     .paragraph{
         margin-top: 0;
-    }
-    .team-name{
-        font-weight: normal;
-        font-family: inherit;
-        font-size: 26px;
     }
 }
 .view-more-wrap{
@@ -1011,7 +1011,6 @@ select:focus {
                         margin: 5px auto;
                         width: 100%;
                         max-width: 150px;
-                        opacity: .6;
                     }
                 }
                 p{
@@ -1181,7 +1180,7 @@ select:focus {
             //box-shadow: none;
             background-color: $higlight-color;
             color: #fff;
-            width: unset;
+            width: auto;
             white-space: nowrap;
             font{
                 margin-bottom: 0;
@@ -1391,6 +1390,29 @@ select:focus {
     .content-trip{
         bottom: 160px;
     }
+    &>.tooltip{
+        display: inline-block;
+        position: absolute;
+        bottom: 125px;
+        cursor: pointer;
+        .icon-itine{
+            font-size: 32px;
+            &:before{
+                color: $higlight-color;
+            }
+            &:hover{
+                opacity: .6;
+            }
+        }
+        span{
+            background-color: $higlight-color;
+            color: #fff;
+            &:after{
+                background-color: $higlight-color;
+                box-shadow: none;
+            }
+        }
+    }
     .wrap-tooltip-itine{
         display: block;
         position: absolute;
@@ -1410,14 +1432,8 @@ select:focus {
                 }
             }
             span{
-                left: 50%;
-                //box-shadow: none;
                 background-color: $higlight-color;
                 color: #fff;
-                width: max-content;
-                max-width: 90%;
-
-                 @include translateX(-50%);
                 &:after{
                     background-color: $higlight-color;
                     box-shadow: none;
@@ -1481,7 +1497,6 @@ select:focus {
         .head-trip{
             padding-bottom: 10px;
             border-bottom: 1px dotted #dcdcdc;
-            margin-bottom: 10px;
         }
         h3{
             font-size: 14px;
@@ -1597,6 +1612,9 @@ select:focus {
         }
     }
 }
+.border-bot-0{
+    border-bottom: none!important;
+}
 .flex-box{
     display: flex;
     justify-content: space-between;
@@ -1646,8 +1664,8 @@ select:focus {
     align-items: flex-start;
     flex-wrap: wrap;
     .title-info{
-        width: calc(100% - 52px);
-        padding-left: 10px;
+        width: calc(100% - 60px);
+        padding-left: 15px;
     }
 }
 .title-info{
@@ -1660,7 +1678,7 @@ select:focus {
 .address{
     font-style: normal;
     text-align: left;
-    color: $light-color-3;
+    color: #888;
     a{
         color: #888;
         &:hover{
@@ -1682,7 +1700,7 @@ select:focus {
         margin-top: 0;
     }
     &>span{
-        font-size: 9px;
+        font-size: 12px;
         text-transform: uppercase;
         color: #d0b316;
         margin-left: auto;
@@ -1709,9 +1727,9 @@ select:focus {
     position: relative;
     width: 52px;
     display: inline-flex;
-    flex-shrink: 0;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
     span{
         position: absolute;
         text-align: center;
@@ -1731,7 +1749,6 @@ select:focus {
 .team-name{
     text-align: center;
     font-family: 'Reenie Beanie', cursive;
-    // font-family: 'Italianno', cursive;
     font-size: 35px;
 }
 .team-mess{
@@ -1743,12 +1760,11 @@ select:focus {
     align-items: flex-start;
     p{
         font-size: 12px;
-        //letter-spacing: 2px;
         text-align: center;
         padding-right: 15px;
         padding-left: 15px;
         font-weight: 500;
-        line-height: 1.8;
+        line-height: 1.5;
         color: $light-color-3;
     }
     .link-st3{
@@ -1828,9 +1844,6 @@ select:focus {
 .mg-top-30{
     margin-top: 30px;
 }
-.border-bot-0{
-    border-bottom: none!important;
-}
 /*.a-hover{
     position: absolute;
     top: 0;
@@ -1853,6 +1866,13 @@ select:focus {
             &:before{
                 content: "\e915";
             }
+        }
+    }
+}
+.heart-tour.active{
+    .heart-empty{
+        &:before{
+            content: "\e915";
         }
     }
 }
@@ -1890,32 +1910,14 @@ select:focus {
     padding-right: 15px;
     text-align: center;
 }
-.col-xlg-3{
-    width: 25%;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-}
-.col-xlg-9{
-    width: 75%;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-}
-.col-xlg-10{
-    width: 83.333%;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-}
-.col-xlg-2{
-    width: 16.66666%;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-}
 .col-xlg-8{
     width: 66.66666%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+.col-xlg-3{
+    width: 25%;
     padding-left: 15px;
     padding-right: 15px;
     text-align: center;
@@ -1975,7 +1977,7 @@ select:focus {
 }
 @media (max-width: 1199px) {
     .btn-st2{
-        padding: 10px;
+        padding: 10px 5px;
         font-size: 11px;
     }
     .container{
@@ -2056,7 +2058,7 @@ select:focus {
     }
     .map-coo:hover{
         width: 17px;
-        height: 21px;
+        height: 19px;
     }
     .wrap-slide-st1{
         .synch-carousels{
@@ -2095,6 +2097,9 @@ select:focus {
             font-size: 18px;
             padding: 10px 8px;
         }
+        strong{
+            display: none;
+        }
     }
     .banner-top{
         height: 500px;
@@ -2116,9 +2121,6 @@ select:focus {
             }
         }
     }
-    .hidden-tablet{
-        display: none;
-    }
 }
 @media (max-width: 767px) {
     .title-h1{
@@ -2131,8 +2133,8 @@ select:focus {
         width: 100%;
     }
     .mg-left, .mg-right{
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .col-sm-12{
         width: 100%;
@@ -2269,6 +2271,7 @@ select:focus {
         .synch-carousels{
              .nav-arrows{
                 top: 50px;
+
             }
         }
         .gallery{
