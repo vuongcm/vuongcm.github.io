@@ -59,6 +59,7 @@ $(document).ready(function() {
 	}
 	let headerHeight = $('header').height();
 	$('header').next('section').css('padding-top',`${headerHeight}px`);
+	$('.banner-top').css('padding-top',`${headerHeight}px`);
 	let activeParallax = $('.bg-parallax').length ? $('.bg-parallax').attr('class').search('bg-about') == -1 : false;
 	if(activeParallax){
 		$('.bg-parallax').css('background-position-y',`${headerHeight}px`);
