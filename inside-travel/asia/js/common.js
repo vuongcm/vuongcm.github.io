@@ -2131,7 +2131,7 @@ $(document).ready(function() {
 		});
 	}
 	/*====setting to offset=======*/
-	if($('.navbar-cruise').length){
+	/*if($('.navbar-cruise').length){
 		$('.to-offset-desti').click(function(){
 			goToOffset('#cruise-desti');
 		});
@@ -2153,7 +2153,7 @@ $(document).ready(function() {
 		$('.to-offset-overview').click(function(){
 			goToOffset('#cruise-overview');
 		});
-	}
+	}*/
 	if($('.navbar-booking').length){
 		$('.to-offset-check').click(function(){
 			goToOffset('#booking-widget-cruisepage');

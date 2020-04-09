@@ -48,6 +48,7 @@ header{
 				display: block;
 				flex-grow: 1;
 				max-width: 200px;
+				min-width: 100px;
 				margin-right: 10px;
 			}
 			.brand-sub-menu{
@@ -64,7 +65,7 @@ header{
 						//justify-content: center;
 						height: 100%;
 						width: 100%;
-						color: #10a8b9;
+						color: $happy;
 						opacity: 1;
 						.icon-font:first-child{
 							font-size: 26px;
@@ -133,25 +134,56 @@ header{
 			}
 		}
 		.global-menu {
-			width: 40%;
+			// width: 40%;
 			height: 100%;
 			//max-width: 400px;
 			display: flex;
-			justify-content: space-between;
 			align-items: stretch;
-			padding-left: 20px;
-			.lang-top{
+			&>li{
+				padding-left: 20px;
+			}
+			.like-top{
 				display: flex;
 				align-items: center;
-				max-width: 33.33%;
+				.heart-tour{
+					font-size: 22px;
+					color: $happy;
+					position: relative;
+					line-height: 0;
+					span{
+						position: absolute;
+						top: -5px;
+						right: -5px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						font-size: 8px;
+						width: 12px;
+						height: 12px;
+						border-radius: 50%;
+						background-color: orange;
+						color: #fff;
+					}
+				}
+			}
+			.phone-box{
+				margin-right: 0;
+				color: $happy;
+				&:hover{
+					color: $higlight-color;
+				}
 			}
 			.login-top{
-				max-width: 33.33%;
+				a{
+					color: $happy;
+					&:hover{
+						color: $higlight-color;
+					}
+				}
 			}
 			.book-top{
 				display: flex;
 				align-items: center;
-				max-width: 33.33%;
 			}
 		}
 
@@ -170,7 +202,7 @@ header{
 		display: block;
 		height: 60px;
 		width: 100%;
-		background-color: #10a8b9;
+		background-color: $happy;
 	}
 	.main-menu{
 		height: calc(100% - 60px);
@@ -196,7 +228,7 @@ header{
 	flex-direction: column;
 	width: unset;
 	max-width: 50px;
-	background-color: #10a8b9;
+	background-color: $happy;
 	@include smooth(.5s);
 	&>li{
 		a {
@@ -315,9 +347,11 @@ header{
 	    align-items: center;
 	    height: 100%;
 	    width: 100%;
-		.user-regular{
+	    color: $happy;
+	    text-transform: uppercase;
+		.icon-user-2{
 			margin-right: 5px;
-			font-size: 12px;
+			font-size: 20px;
 		}
 		&:hover{
 			color: $higlight-color;
@@ -325,7 +359,7 @@ header{
 		.select-arrow-thin{
 			font-size: 7px;
 			padding-top: 3px;
-			margin-left: 15px;
+			margin-left: 5px;
 		}
 	}
 }
@@ -545,17 +579,26 @@ header{
 			height: 40px;
 		}
 	}
+	header{
+		.menu-wrap{
+			.brand{
+				.brand-sub-menu{
+					display: none;
+				}
+			}
+		}
+	}
 }
 @media (max-width: 991px) {
 	header{
 		.menu-wrap{
 			justify-content: flex-start;
-			.brand{
+			/* .brand{
 				position: absolute;
 				left: 50%;
 				z-index: 21;
 				@include translateX(-50%);
-			}
+			} */
 			.search-nav{
 				width: unset;
 			}
@@ -596,7 +639,11 @@ header{
 	}
 }
 @media (max-width: 767px) {
+	.btn-bar-toggle{
+		color: $main-color;
+	}
 	.wrap-main-menu{
+
 
 		.main-menu{
 			max-width: 0;
@@ -609,6 +656,13 @@ header{
 	}
 	header{
 		.menu-wrap{
+			border-bottom: none;
+			.brand{
+				margin-left: 0;
+				&>a{
+					margin-right: 0;
+				}
+			}
 			.search-nav{
 				margin-left: 0;
 				margin-right: 0;
@@ -621,19 +675,37 @@ header{
 					}
 				}
 			}
+			.global-menu{
+				&>li{
+					padding-left: 15px;
+					.phone-box{
+						padding-left: 0;
+						padding-right: 0;
+						font,strong{
+							display: none;
+						}
+					}
+					a{
+						padding-left: 0;
+						padding-right: 0;
+					}
+				}
+			}
 		}
+		
 	}
 	.login-top{
 		position: static;
 		text-transform: uppercase;
 		&>a{
-			font{
+			font,.select-arrow-thin{
 				display: none;
 			}
-			.user-regular{
-				font-size: 18px;
+			.icon-user-2{
+				margin-right: 0;
 			}
 		}
+
 		.login-menu{
 			left: unset;
 			right: 0;

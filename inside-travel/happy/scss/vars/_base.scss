@@ -160,7 +160,7 @@ select:focus {
 .icon-destination:before{
     color: inherit;
 }
-.icon-cuisine:before,.icon-des-1:before,.icon-des-2:before,.icon-des-3:before,.icon-des-4:before{
+.icon-user-2:before,.icon-cuisine:before,.icon-des-1:before,.icon-des-2:before,.icon-des-3:before,.icon-des-4:before{
     color: inherit;
 }
 .input-st1{
@@ -243,6 +243,31 @@ select:focus {
     font-weight: 600;
     &:hover{
         color: #fff;
+    }
+}
+.btn-st4{
+    color: #fff;
+    background-color: $happy;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    @include smooth(.2s);
+    font-size: 12px;
+    border-radius: 999px;
+    div{
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        img{
+            border-radius: 50%;
+        }
+    }
+    &:hover{
+        color: $higlight-color;
     }
 }
 .btn-disabled{
