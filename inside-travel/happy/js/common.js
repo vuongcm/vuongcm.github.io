@@ -2196,7 +2196,11 @@ $(document).ready(function() {
 	if($('.search-box-st2').length){
 		$('.box-step-where input').focus(function(){
 			$(this).closest('.box-step-where').find('.value-st4').addClass('open-block');
-			$(this).closest('.box-step-where').find('label').css('bottom','28px');
+			if(bodyWidth < 768){
+				$(this).closest('.box-step-where').find('label').css('bottom','22px');
+			} else{
+				$(this).closest('.box-step-where').find('label').css('bottom','28px');
+			}
 		});
 		$('body').click(function(e){
 			if (!$('.box-step-where').is(e.target) && $('.box-step-where').has(e.target).length === 0) {
@@ -2218,7 +2222,15 @@ $(document).ready(function() {
 		});
 		$('.box-step-when input').focus(function(){
 			$(this).closest('.box-step-when').find('.box-mon-time').css('display','flex');
-			$(this).closest('.box-step-when').find('label').css('bottom','28px');
+			if(bodyWidth < 768){
+				$(this).closest('.box-step-when').find('label').css('bottom','22px');
+			} else{
+				$(this).closest('.box-step-when').find('label').css('bottom','28px');
+			}
+		});
+		$('.box-step-when .box-mon-time button').click(function(){
+			$(this).closest('.box-step-when').find('input').val($(this).text());
+			$(this).closest('.box-mon-time').removeAttr('style');
 		});
 	}
 });
