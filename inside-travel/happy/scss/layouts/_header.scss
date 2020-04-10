@@ -47,7 +47,7 @@ header{
 			&>a{
 				display: block;
 				flex-grow: 1;
-				max-width: 200px;
+				max-width: 186px;
 				min-width: 100px;
 				margin-right: 10px;
 			}
@@ -91,7 +91,7 @@ header{
 				.brand-sub-menu-lv2{
 					position: absolute;
 					width: 100%;
-					top: calc(100% + 1px);
+					top: 100%;
 					left: 0;
 					display: none;
 					justify-content: flex-start;
@@ -106,7 +106,7 @@ header{
 						//width: 16.66666%;
 						&>a{
 							margin-bottom: 10px;
-							text-transform: uppercase;
+							//text-transform: uppercase;
 							font-weight: 600;
 						}
 						a{
@@ -351,7 +351,7 @@ header{
 	    text-transform: uppercase;
 		.icon-user-2{
 			margin-right: 5px;
-			font-size: 20px;
+			font-size: 22px;
 		}
 		&:hover{
 			color: $higlight-color;
@@ -640,7 +640,10 @@ header{
 }
 @media (max-width: 767px) {
 	.btn-bar-toggle{
-		color: $main-color;
+		color: $happy;
+		&:hover{
+			color: #fff;
+		}
 	}
 	.wrap-main-menu{
 
@@ -685,7 +688,7 @@ header{
 							display: none;
 						}
 					}
-					a{
+					&>a{
 						padding-left: 0;
 						padding-right: 0;
 					}

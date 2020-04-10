@@ -35,16 +35,16 @@
 					background-size: cover;
     				background-repeat: no-repeat;
     				background-position: center;
-    				webkit-transform-origin: 100% 50%;
-				    -moz-transform-origin: 100% 50%;
-				    -o-transform-origin: 100% 50%;
-				    -ms-transform-origin: 100% 50%;
-				    transform-origin: 100% 50%;
-				    webkit-animation: imageAnimation 30s ease-in-out infinite 0s;
-					-moz-animation: imageAnimation 30s ease-in-out infinite 0s;
-					-o-animation: imageAnimation 30s ease-in-out infinite 0s;
-					-ms-animation: imageAnimation 30s ease-in-out infinite 0s;
-					animation: imageAnimation 30s ease-in-out infinite 0s;
+    				/* webkit-transform-origin: 100% 50%;
+    								    -moz-transform-origin: 100% 50%;
+    								    -o-transform-origin: 100% 50%;
+    								    -ms-transform-origin: 100% 50%;
+    								    transform-origin: 100% 50%;
+    								    webkit-animation: imageAnimation 30s ease-in-out infinite 0s;
+    									-moz-animation: imageAnimation 30s ease-in-out infinite 0s;
+    									-o-animation: imageAnimation 30s ease-in-out infinite 0s;
+    									-ms-animation: imageAnimation 30s ease-in-out infinite 0s;
+    									animation: imageAnimation 30s ease-in-out infinite 0s; */
 					@include bfhide();
 					@include dakkenImg(85%);
 				}
@@ -752,13 +752,14 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-		    padding: 3px 0;
+		    padding: 6px 0;
+		    font-size: 12px;
 		    width: 100%;
 		    height: 100%;
-		    color: #0699ab;
-		    text-transform: uppercase;
-		    border-radius: 8px;
-    		border: 1px solid #c7d0d9;
+		    color: #11a2a2;
+		    //text-transform: uppercase;
+		    border-radius: 5px;
+    		border: 1px solid #1dc5c5;
     		&:hover{
     			background-color: $happy;
     			color: #fff;
