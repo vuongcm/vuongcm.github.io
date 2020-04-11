@@ -214,7 +214,7 @@ select:focus {
 .icon-destination:before {
   color: inherit; }
 
-.happy-01:before, .icon-cuisine:before, .icon-des-1:before, .icon-des-2:before, .icon-des-3:before, .icon-des-4:before, .icon-next-back:before {
+.icon-user-2:before, .happy-01:before, .icon-cuisine:before, .icon-des-1:before, .icon-des-2:before, .icon-des-3:before, .icon-des-4:before, .icon-next-back:before {
   color: inherit; }
 
 .input-st1 {
@@ -3704,7 +3704,7 @@ footer {
   min-width: 500px;
   background-color: #fff;
   z-index: 3;
-  border: 1px solid #dcdcdc;
+  border: 1px solid #d2efef;
   display: none;
   justify-content: center;
   align-items: center;
@@ -9147,16 +9147,16 @@ footer {
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
-          /* webkit-transform-origin: 100% 50%;
-          				    -moz-transform-origin: 100% 50%;
-          				    -o-transform-origin: 100% 50%;
-          				    -ms-transform-origin: 100% 50%;
-          				    transform-origin: 100% 50%;
-          				    webkit-animation: imageAnimation 30s ease-in-out infinite 0s;
-          					-moz-animation: imageAnimation 30s ease-in-out infinite 0s;
-          					-o-animation: imageAnimation 30s ease-in-out infinite 0s;
-          					-ms-animation: imageAnimation 30s ease-in-out infinite 0s;
-          					animation: imageAnimation 30s ease-in-out infinite 0s; */
+          webkit-transform-origin: 100% 50%;
+          -moz-transform-origin: 100% 50%;
+          -o-transform-origin: 100% 50%;
+          -ms-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+          webkit-animation: imageAnimation 30s ease-in-out infinite 0s;
+          -moz-animation: imageAnimation 30s ease-in-out infinite 0s;
+          -o-animation: imageAnimation 30s ease-in-out infinite 0s;
+          -ms-animation: imageAnimation 30s ease-in-out infinite 0s;
+          animation: imageAnimation 30s ease-in-out infinite 0s;
           -webkit-backface-visibility: hidden;
           -moz-backface-visibility: hidden;
           backface-visibility: hidden; }
@@ -9676,7 +9676,7 @@ footer {
   .box-input-st2 > div label {
     position: absolute;
     left: 56px;
-    bottom: 20px;
+    bottom: 18px;
     font-size: 16px;
     color: #18b3b3;
     font-weight: 600;
@@ -9685,7 +9685,6 @@ footer {
     -o-transition: all .25s linear;
     -ms-transition: all .25s linear;
     transition: all .25s linear;
-    color: #b9b9b9;
     pointer-events: none; }
   .box-input-st2 > div .icon-font:first-child {
     position: absolute;
@@ -9706,14 +9705,11 @@ footer {
     right: 10px;
     top: 50%;
     z-index: 5;
-    transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -ms-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg); }
+    transform: translate(0, -50%) rotate(90deg);
+    -moz-transform: translate(0, -50%) rotate(90deg);
+    -webkit-transform: translate(0, -50%) rotate(90deg);
+    -o-transform: trtranslate(0, -50%) rotate(90deg);
+    -ms-transform: translate(0, -50%) rotate(90deg); }
   .box-input-st2 > div input {
     padding: 28px 48px 12px 56px;
     width: 100%;
@@ -9857,7 +9853,8 @@ footer {
     font-size: 18px; }
   .box-input-st2 > div label {
     left: 35px;
-    bottom: 15px; }
+    bottom: 11px;
+    font-size: 14px; }
   .box-input-st2 > div input {
     height: 40px;
     padding: 18px 30px 5px 35px; }

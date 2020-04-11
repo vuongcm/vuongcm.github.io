@@ -35,16 +35,16 @@
 					background-size: cover;
     				background-repeat: no-repeat;
     				background-position: center;
-    				/* webkit-transform-origin: 100% 50%;
-    								    -moz-transform-origin: 100% 50%;
-    								    -o-transform-origin: 100% 50%;
-    								    -ms-transform-origin: 100% 50%;
-    								    transform-origin: 100% 50%;
-    								    webkit-animation: imageAnimation 30s ease-in-out infinite 0s;
-    									-moz-animation: imageAnimation 30s ease-in-out infinite 0s;
-    									-o-animation: imageAnimation 30s ease-in-out infinite 0s;
-    									-ms-animation: imageAnimation 30s ease-in-out infinite 0s;
-    									animation: imageAnimation 30s ease-in-out infinite 0s; */
+    				webkit-transform-origin: 100% 50%;
+				    -moz-transform-origin: 100% 50%;
+				    -o-transform-origin: 100% 50%;
+				    -ms-transform-origin: 100% 50%;
+				    transform-origin: 100% 50%;
+				    webkit-animation: imageAnimation 30s ease-in-out infinite 0s;
+					-moz-animation: imageAnimation 30s ease-in-out infinite 0s;
+					-o-animation: imageAnimation 30s ease-in-out infinite 0s;
+					-ms-animation: imageAnimation 30s ease-in-out infinite 0s;
+					animation: imageAnimation 30s ease-in-out infinite 0s;
 					@include bfhide();
 					//@include dakkenImg(85%);
 				}
@@ -698,7 +698,7 @@
     	label{
     		position: absolute;
 		    left: 56px;
-		    bottom: 20px;
+		    bottom: 18px;
 		    font-size: 16px;
 		    color: $happy;
 		    font-weight: 600;
@@ -707,7 +707,7 @@
 		    -o-transition: all .25s linear;
 		    -ms-transition: all .25s linear;
 		    transition: all .25s linear;
-		    color: #b9b9b9;
+		    //color: #b9b9b9;
 		    pointer-events: none;
     	}
     	.icon-font{
@@ -732,12 +732,12 @@
     		right: 10px;
 		    top: 50%;
 		    z-index: 5;
-		    transform: translateY(-50%);
-		    -moz-transform: translateY(-50%);
-		    -webkit-transform: translateY(-50%);
-		    -o-transform: translateY(-50%);
-		    -ms-transform: translateY(-50%);
-		    @include rotage(90deg);
+		    transform: translate(0, -50%) rotate(90deg);
+		    -moz-transform: translate(0, -50%) rotate(90deg);
+		    -webkit-transform: translate(0, -50%) rotate(90deg);
+		    -o-transform: trtranslate(0, -50%) rotate(90deg);
+		    -ms-transform: translate(0, -50%) rotate(90deg);
+		    //@include rotage(90deg);
     	}
     	input{
     		padding: 28px 48px 12px 56px;
@@ -952,7 +952,8 @@
 			}
 			label{
 				left: 35px;
-				bottom: 15px;
+				bottom: 11px;
+				font-size: 14px;
 			}
 			input{
 				height: 40px;

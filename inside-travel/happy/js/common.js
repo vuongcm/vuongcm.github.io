@@ -662,7 +662,7 @@ $(document).ready(function() {
 			dots: true,
 			//dotsClass: 'wrap-dots',
 			autoplay: true,
-			autoplaySpeed: 5000,
+			autoplaySpeed: 7500,
 			arrows: false
 		});
 	}
@@ -2208,9 +2208,17 @@ $(document).ready(function() {
 		$('.box-step-where input').focus(function(){
 			$(this).closest('.box-step-where').find('.value-st4').addClass('open-block');
 			if(bodyWidth < 768){
-				$(this).closest('.box-step-where').find('label').css('bottom','22px');
+				$(this).closest('.box-step-where').find('label').css({
+					'bottom':'22px',
+					'font-size':'12px',
+					'color':'#b9b9b9'
+				});
 			} else{
-				$(this).closest('.box-step-where').find('label').css('bottom','28px');
+				$(this).closest('.box-step-where').find('label').css({
+					'bottom':'28px',
+					'font-size':'12px',
+					'color':'#b9b9b9'
+				});
 			}
 		});
 		$('body').click(function(e){
@@ -2234,9 +2242,17 @@ $(document).ready(function() {
 		$('.box-step-when input').focus(function(){
 			$(this).closest('.box-step-when').find('.box-mon-time').css('display','flex');
 			if(bodyWidth < 768){
-				$(this).closest('.box-step-when').find('label').css('bottom','22px');
+				$(this).closest('.box-step-when').find('label').css({
+					'bottom':'22px',
+					'font-size':'12px',
+					'color':'#b9b9b9'
+				});
 			} else{
-				$(this).closest('.box-step-when').find('label').css('bottom','28px');
+				$(this).closest('.box-step-when').find('label').css({
+					'bottom':'28px',
+					'font-size':'12px',
+					'color':'#b9b9b9'
+				});
 			}
 		});
 		$('.box-step-when .box-mon-time button').click(function(){
