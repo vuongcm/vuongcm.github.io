@@ -12,15 +12,17 @@
 	padding-top: 11%;
 	h1,h2{
 		//font-family: 'Reenie Beanie', cursive;
-		font-size: 40px;
+		font-size: 26px;
+		font-weight: 600;
 		margin-top: 0;
 		margin-bottom: 0;
 		line-height: 1;
 		font-weight: normal;
 		text-align: center;
 		z-index: 1;
-		text-transform: uppercase;
+		//text-transform: uppercase;
 		margin-bottom: 15px;
+		text-shadow: 0 1px 1px rgba(0,0,0,.6);
 	}
 	p{
 		font-size: 14px;
@@ -787,10 +789,10 @@
 @media (max-width: 767px) {
 	.wrap-title-banner-top{
 		padding-top: 22%;
-		h1,h2{
+		/* h1,h2{
 			font-size: 30px;
 			font-weight: 600;
-		}
+		} */
 		p{
 			font-size: 14px;
 		}
@@ -940,9 +942,9 @@
 @media (max-width: 479px) {
 	.wrap-title-banner-top{
 		padding-top: 29%;
-		h1,h2{
+		/* h1,h2{
 			font-size: 28px;
-		}
+		} */
 	}
 	.best-support{
 		.col-xlg-3{

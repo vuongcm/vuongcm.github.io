@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'insideTravel';
-  src:  url('fonts/insideTravel.eot?aso0o9');
-  src:  url('fonts/insideTravel.eot?aso0o9#iefix') format('embedded-opentype'),
-    url('fonts/insideTravel.ttf?aso0o9') format('truetype'),
-    url('fonts/insideTravel.woff?aso0o9') format('woff'),
-    url('fonts/insideTravel.svg?aso0o9#insideTravel') format('svg');
+  src:  url('fonts/insideTravel.eot?8e28fx');
+  src:  url('fonts/insideTravel.eot?8e28fx#iefix') format('embedded-opentype'),
+    url('fonts/insideTravel.ttf?8e28fx') format('truetype'),
+    url('fonts/insideTravel.woff?8e28fx') format('woff'),
+    url('fonts/insideTravel.svg?8e28fx#insideTravel') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.happy-01:before {
+  content: "\e979";
+  color: #37c1d3;
+}
 .icon-map-mekong:before {
   content: "\e978";
   color: #962d1f;

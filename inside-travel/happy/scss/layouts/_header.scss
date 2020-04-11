@@ -366,17 +366,18 @@ header{
 .login-menu{
 	position: absolute;
 	top: 100%;
-	left: 0;
+	// left: 0;
+	right: 0;
 	background-color: #fff;
 	min-width: 130px;
 	font-size: 11px;
 	li{
-		border-bottom: 1px solid #eee;
+		border-bottom: 1px solid #d2efef;
 		a{
 			padding: 10px 15px;
 			width: 100%;
 			&:hover{
-				background-color: #ececec;
+				 background-color: #ecf8f8;
 				color: #555;
 			}
 		}
@@ -642,7 +643,7 @@ header{
 	.btn-bar-toggle{
 		color: $happy;
 		&:hover{
-			color: #fff;
+			color: $happy;
 		}
 	}
 	.wrap-main-menu{
@@ -684,6 +685,10 @@ header{
 					.phone-box{
 						padding-left: 0;
 						padding-right: 0;
+						.icon-font{
+							margin-right: 0;
+							padding-right: 0;
+						}
 						font,strong{
 							display: none;
 						}
@@ -707,11 +712,6 @@ header{
 			.icon-user-2{
 				margin-right: 0;
 			}
-		}
-
-		.login-menu{
-			left: unset;
-			right: 0;
 		}
 	}
 	.lang-top{
@@ -746,12 +746,6 @@ header{
 		.main-menu{
 			max-width: unset;
 			width: 100%;
-		}
-	}
-	.login-top{
-		.login-menu{
-			left: unset;
-			right: 0;
 		}
 	}
 }
