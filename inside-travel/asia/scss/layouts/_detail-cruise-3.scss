@@ -1435,10 +1435,13 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	position: relative;
+	z-index: 9;
 	h1,h2{
 		color: #fff;
 		font-size: 36px;
 		font-weight: 500;
+		text-align: center;
 	}
 	.star-box{
 		font-size: 22px;
@@ -1456,6 +1459,29 @@
 	margin-top: 0;
 	&:before{
 		display: none;
+	}
+}
+.check-r-container{
+	#booking-widget-cruisepage{
+		.form-banner-top{
+			.booking-step-cruise{
+				.text{
+					.icon-font{
+						color: #888;
+						font-size: 14px;
+					}
+				}
+				.value{
+					&>li{
+						.btn-value{
+							&>b{
+								white-space: normal;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 @media (min-width: 992px) {
@@ -1783,6 +1809,20 @@
 	    .item-box-text.box-right{
 			padding-left: 0;
 	    }
+	}
+	.wrap-title-banner-cruise{
+		h1,h2{
+			font-size: 20px;
+			font-weight: 600;
+		}
+		.star-box{
+			font-size: 14px;
+		}
+		.hotel-news{
+			span{
+				font-size: 12px;
+			}
+		}
 	}
 }
 @media (max-width: 479px) {

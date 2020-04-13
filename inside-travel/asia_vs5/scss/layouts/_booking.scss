@@ -102,10 +102,12 @@
 							justify-content: center;
 						}
 						.adult-pe{
-							font-size: 12px;
+							font-size: 13px;
+							color: $higlight-color;
 						}
 						.child-pe{
-							font-size: 10px;
+							font-size: 11px;
+							color: $higlight-color;
 						}
 					}
 				}
@@ -212,6 +214,8 @@
 		padding: 30px 10px;
 		background-color: #fff;
 		margin-top: 30px;
+		box-shadow: 0px 3px 6px #DDD;
+    	border-radius: 10px;
 	}
 	h2{
 		font-size: 16px;
@@ -238,7 +242,7 @@
 			font-size: 12px;
 			display: inline-flex;
 			align-items: flex-end;
-			color: $light-color-4;
+			color: $higlight-color;
 			.icon-font{
 				font-size: 14px;
 			}
@@ -256,6 +260,8 @@
 	padding: 10px 10px 30px;
 	background-color: #fff;
 	position: relative;
+	box-shadow: 0px 3px 6px #DDD;
+    border-radius: 10px;
 	&:after{
 		display: block;
 	    width: 30px;
@@ -499,6 +505,8 @@
 	padding: 10px 10px 40px 10px;
 	margin-top: 30px;
 	margin-bottom: 30px;
+	box-shadow: 0px 3px 6px #DDD;
+    border-radius: 10px;
 	h2{
 		font-size: 22px;
 		text-align: center;
@@ -725,8 +733,10 @@
 					    box-shadow: none;
 					    border: 1px solid $higlight-color;
 					    color: $higlight-color;
+					    left: 50%;
 					    top: 90%;
 					    bottom: unset;
+					    @include translateX(-50%);
 					    width: 80%;
 					    &>i{
 					    	background-color: $higlight-color;

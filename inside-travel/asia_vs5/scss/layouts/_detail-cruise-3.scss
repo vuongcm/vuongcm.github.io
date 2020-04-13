@@ -293,11 +293,11 @@
 		cursor: pointer;
 		.calendar-regular, .map-marker{
 			font-size: 16px;
-			color: #888;
+			color: $higlight-color;
 		}
 		.bed{
 			font-size: 14px;
-			color: #888;
+			color: $higlight-color;
 		}
 		b{
 			font-weight: 600;
@@ -309,7 +309,7 @@
 		.select-st1,.booking-st1{
 			width: 100%;
 		    height: auto;
-		    border: 1px solid $higlight-color;
+		    border: 1px solid #e6e2cd;
 		    font-size: 12px;
 		    vertical-align: middle;
 		    line-height: 1.5;
@@ -320,7 +320,7 @@
 		    -o-transition: all .25s linear;
 		    -ms-transition: all .25s linear;
 		    transition: all .25s linear;
-		    background-color: #fff;
+		    background-color: #f6f5f1;
 		    position: relative;
 		    text-align: left;
 		    cursor: pointer;
@@ -330,6 +330,9 @@
 		    		color: $higlight-color;
 		    		font-weight: 600;
 		    	}
+		    	.icon-font{
+		    		color: $higlight-color;
+		    	}
 		    }
 		    .value, .value-2{
 		    	top: 100%;
@@ -338,6 +341,7 @@
 		    	z-index: 8;
 		    	.btn-value{
 		    		padding-left: 15px;
+		    		padding-right: 15px;
 		    		.ship{
 		    			margin-right: 5px;
 					    font-size: 12px;
@@ -354,6 +358,8 @@
 		    			&>b{
 		    				color: $higlight-color;
 		    				font-weight: 600;
+		    				//width: 100%;
+    						white-space: normal;
 		    			}
 		    		}
 		    	}
@@ -368,11 +374,17 @@
 		    }
 		}
 		.booking-st4{
-		    border: 1px solid $higlight-color;
-    		
+		    border: 1px solid #e6e2cd;
+    		background-color: #f6f5f1;
+    		.text{
+		    	.icon-font{
+		    		color: $higlight-color;
+		    	}
+		    }
 		}
 		.booking-st2{
-			border: 1px solid $higlight-color;
+			border: 1px solid #e6e2cd;
+			background-color: #f6f5f1;
 			position: relative;
 			.text{
 				padding: 10px 8px;
@@ -913,7 +925,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 15px;
-	background-color: #e6ddcc;
+	background-color: #f5f2ec;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	&>.col-xlg-12{
@@ -1372,6 +1384,113 @@
 	//display: none;
 	@include smooth(.85s);
 }
+.check-r-container{
+	position: relative;
+	&:before{
+		display: block;
+	    width: 30px;
+	    height: 30px;
+	    content: '';
+	    background-color: #fff;
+	    position: absolute;
+	    left: calc(50% - 15px);
+	    top: -15px;
+	    transform: rotate(45deg);
+	    -moz-transform: rotate(45deg);
+	    -webkit-transform: rotate(45deg);
+	    -o-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	}
+}
+.booking-room{
+	&>div{
+		position: relative;
+		&:before{
+			display: block;
+		    width: 30px;
+		    height: 30px;
+		    content: '';
+		    background-color: #fff;
+		    position: absolute;
+		    left: calc(50% - 15px);
+		    top: -15px;
+		    transform: rotate(45deg);
+		    -moz-transform: rotate(45deg);
+		    -webkit-transform: rotate(45deg);
+		    -o-transform: rotate(45deg);
+		    -ms-transform: rotate(45deg);
+		}
+	}
+}
+.bg-book-cruise{
+	background-image: url(https://d1k2oi80tv211b.cloudfront.net/chl/images/slide/halong-bay-1.jpg);
+    height: 100%;
+    background-position-y: top!important;
+    background-size: unset;
+}
+.wrap-title-banner-cruise{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	z-index: 9;
+	h1,h2{
+		color: #fff;
+		font-size: 36px;
+		font-weight: 500;
+		text-align: center;
+	}
+	.star-box{
+		font-size: 22px;
+	}
+	.hotel-news{
+		text-align: center;
+		span{
+			color: #fff;
+			font-size: 14px;
+		}
+	}
+}
+.booking-section-mg-top-0{
+	padding-top: 0;
+	margin-top: 0;
+	&:before{
+		display: none;
+	}
+}
+.check-r-container{
+	#booking-widget-cruisepage{
+		.form-banner-top{
+			.booking-step-cruise{
+				.text{
+					.icon-font{
+						color: #888;
+						font-size: 14px;
+					}
+				}
+				.value{
+					&>li{
+						.btn-value{
+							&>b{
+								white-space: normal;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.section-grid-dt3.section-grid-cruise{
+		.container{
+			grid-template-columns: 68% 32%;
+		}
+	}
+}
 @media (max-width: 1350px) {
 	.row-crowd{
 		.crowd-box{
@@ -1690,6 +1809,20 @@
 	    .item-box-text.box-right{
 			padding-left: 0;
 	    }
+	}
+	.wrap-title-banner-cruise{
+		h1,h2{
+			font-size: 20px;
+			font-weight: 600;
+		}
+		.star-box{
+			font-size: 14px;
+		}
+		.hotel-news{
+			span{
+				font-size: 12px;
+			}
+		}
 	}
 }
 @media (max-width: 479px) {
