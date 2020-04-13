@@ -102,10 +102,12 @@
 							justify-content: center;
 						}
 						.adult-pe{
-							font-size: 12px;
+							font-size: 13px;
+							color: $higlight-color;
 						}
 						.child-pe{
-							font-size: 10px;
+							font-size: 11px;
+							color: $higlight-color;
 						}
 					}
 				}
@@ -240,7 +242,7 @@
 			font-size: 12px;
 			display: inline-flex;
 			align-items: flex-end;
-			color: $light-color-4;
+			color: $higlight-color;
 			.icon-font{
 				font-size: 14px;
 			}
