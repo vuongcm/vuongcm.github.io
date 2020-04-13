@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'insideTravel';
-  src:  url('fonts/insideTravel.eot?8e28fx');
-  src:  url('fonts/insideTravel.eot?8e28fx#iefix') format('embedded-opentype'),
-    url('fonts/insideTravel.ttf?8e28fx') format('truetype'),
-    url('fonts/insideTravel.woff?8e28fx') format('woff'),
-    url('fonts/insideTravel.svg?8e28fx#insideTravel') format('svg');
+  src:  url('fonts/insideTravel.eot?ielff4');
+  src:  url('fonts/insideTravel.eot?ielff4#iefix') format('embedded-opentype'),
+    url('fonts/insideTravel.ttf?ielff4') format('truetype'),
+    url('fonts/insideTravel.woff?ielff4') format('woff'),
+    url('fonts/insideTravel.svg?ielff4#insideTravel') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.facebook-messenger:before {
+  content: "\e97a";
+}
 .happy-01:before {
   content: "\e979";
   color: #37c1d3;
@@ -304,6 +307,9 @@
 .heart-full:before {
   content: "\e915";
 }
+.zalo:before {
+  content: "\e97b";
+}
 .menu:before {
   content: "\e91d";
 }
@@ -453,6 +459,9 @@
 }
 .icon-plane:before {
   content: "\f072";
+}
+.calendar:before {
+  content: "\f073";
 }
 .retweet:before {
   content: "\f079";

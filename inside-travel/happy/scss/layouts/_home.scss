@@ -17,7 +17,7 @@
 		margin-top: 0;
 		margin-bottom: 0;
 		line-height: 1;
-		font-weight: normal;
+		//font-weight: normal;
 		text-align: center;
 		z-index: 1;
 		//text-transform: uppercase;
@@ -25,10 +25,11 @@
 		text-shadow: 0 1px 1px rgba(0,0,0,.6);
 	}
 	p{
-		font-size: 14px;
+		font-size: 16px;
 		font-weight: 600;
 		text-align: center;
 		z-index: 1;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
 	}
 }
 #booking-widget-homepage{
@@ -556,17 +557,20 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		text-transform: uppercase;
+		//text-transform: uppercase;
 		color: #fff;
-		background-color: #111;
+		background-color: rgba(0, 107, 107, 0.7);
 		span{
 			font-size: 10px;
-			font-weight: 600;
+			//font-weight: 600;
 			letter-spacing: 0;
 		}
 		.icon-font{
 			font-size: 24px;
 			margin-bottom: 5px;
+		}
+		.icon-font.zalo{
+			font-size: 26px;
 		}
 	}
 }
@@ -727,14 +731,17 @@
 	    -o-transition: bottom .3s linear;
 	    -ms-transition: bottom .3s linear;
 		a{
-			width: 33.333%;
+			width: 25%;
 			height: 50px;
 			border-right: 1px solid rgba(255,255,255,.8);
 			&:last-child{
 				border-right: none;
 			}
 			.icon-font{
-				font-size: 18px;
+				font-size: 16px;
+			}
+			.icon-font.zalo{
+				font-size: 17px;
 			}
 		}
 	}

@@ -706,8 +706,11 @@ header{
 		position: static;
 		text-transform: uppercase;
 		&>a{
-			font,.select-arrow-thin{
+			font{
 				display: none;
+			}
+			.select-arrow-thin{
+				font-size: 5px;
 			}
 			.icon-user-2{
 				margin-right: 0;
