@@ -1484,6 +1484,17 @@
 		}
 	}
 }
+.open-nation, .open-more-info, .open-plane{
+	color: $higlight-color;
+	text-decoration: underline;
+	&:hover{
+		text-decoration: underline;
+		opacity: .6;
+	}
+	b{
+		color: $higlight-color;
+	}
+}
 .modal-nation,.modal-more-info, .modal-plane{
 	max-width: 690px;
 	.modal-content{
