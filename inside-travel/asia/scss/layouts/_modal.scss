@@ -1043,25 +1043,39 @@
 }
 .wrap-gallery-img{
 	position: fixed;
-    top: 50%;
-    width: 95%;
-    max-width: 800px;
-	z-index: -5;
-	left: 50%;
-	@include translate2d(-50%,-50%);
-	visibility: hidden;
-	.btn-close{
-		color: #fff;
-		z-index: 211;
-		&:hover{
-			color: $higlight-color;
-		}
-	}
-	.synch-carousels{
-		box-shadow: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	z-index: 230;
+	display: none;
+	.back-drop{
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
 		height: 100%;
+		background-color: rgba(0,0,0,0.5);
+		z-index: 80;
+	}
+	.synch-carousels{
+		position: relative;
+		box-shadow: none;
+		width: 100%;
+		//height: 100%;
 		display: none;
+		max-width: 800px;
+		z-index: 90;
+		margin-top: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		.btn-close{
+			color: #fff;
+			z-index: 100;
+			&:hover{
+				color: $higlight-color;
+			}
+		}
 		.nav-arrows{
 			top: 50%;
 			@include translateY(-50%);
@@ -1096,32 +1110,50 @@
 			}
 		}
 	}
-	#carousel-img-cr{
+	/* #carousel-img-cr{
 		z-index: unset;
 		visibility: unset;
 		position: relative;
 		.slick-list{
 			height: unset !important;
 		}
-	}
+	} */
 }
 .video-modal{
-	width: 95%;
-	max-width: 700px;
+	//display: none;
 	position: fixed;
-	top: 10%;
-	left: 50%;
-	padding: 30px 15px 0 15px;
-	@include translateX(-50%);
-	z-index: 202;
-	background-color: #000;
-	.btn-close{
-		top: 0;
-		right: 5px;
-		color: #fff;
+	z-index: 230;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	.back-drop{
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    background-color: rgba(0,0,0,0.5);
+	    z-index: 80;
 	}
-	iframe{
-		width: 100%;
+	.dialog{
+		position: relative;
+		z-index: 90;
+		width: 95%;
+		max-width: 700px;
+		padding: 30px 15px 0 15px;
+		background-color: #000;
+		margin-top: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		.btn-close{
+			top: 0;
+			right: 5px;
+			color: #fff;
+		}
+		iframe{
+			width: 100%;
+		}
 	}
 }
 .modal-cr-desti{
@@ -1520,7 +1552,6 @@
 }
 @media (max-width: 991px) {
 	.wrap-gallery-img{
-		top: 40%;
 		.synch-carousels{
 			.nav-arrows{
 				top: calc(100% + 5px);
