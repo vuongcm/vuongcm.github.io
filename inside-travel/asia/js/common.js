@@ -1153,6 +1153,12 @@ $(document).ready(function() {
 			$('.modal-container').removeClass('close-display');
 		});
 	}
+	if($('.modal-plane').length){
+		$('.open-plane').click(function(){
+			$('.modal-plane').removeClass('close-display');
+			$('.modal-container').removeClass('close-display');
+		});
+	}
 	// modal-team
 	if($('.modal-info-team').length){
 		$('.open-info-modal').click(function(){

@@ -1970,6 +1970,9 @@
 			}
 		}
 	}
+	.modal-nation,.modal-more-info, .modal-plane{
+		padding: 25px 15px;
+	}
 }
 @media (max-width: 479px) {
 	.price-trip-box{
@@ -1987,6 +1990,17 @@
 		//flex-wrap: wrap;
 		.crowd-box{
 			max-height: 90px;
+		}
+	}
+	.modal-plane{
+		.modal-body{
+			article{
+				max-width: 100%;
+				overflow-x: auto;
+				.activities{
+					min-width: 243px;
+				}
+			}
 		}
 	}
 }
