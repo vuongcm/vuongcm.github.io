@@ -8,6 +8,7 @@
 	<link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700|Reenie+Beanie&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="css/slick.css">
 	<link rel="stylesheet" type="text/css" href="css/intlTelInput.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -467,31 +468,31 @@
                 	<i class="icon-font search"></i>
                    	<label for="where-autocomplete-1">Du lịch đến:</label>
                    	<i class="icon-font happy-01"></i>
-                   <input type="text" id="where-autocomplete-1" name="" value=""/>
-                   <ul class="value-st4">
-                      <li>
-                         <span>Du lịch trong nước</span>
-                         <ul>
-                            <li><a href="javascript:;" class="btn-value xxx">Hạ Long</a></li>
-                            <li><a href="javascript:;" class="btn-value">Đà Nẵng</a></li>
-                            <li><a href="javascript:;" class="btn-value">Quan Lạn</a></li>
-                            <li><a href="javascript:;" class="btn-value">Phú Quốc</a></li>
-                            <li><a href="javascript:;" class="btn-value">Cô Tô</a></li>
-                            <li><a href="javascript:;" class="btn-value">Quy Nhơn</a></li>
-                            <li><a href="javascript:;" class="btn-value">Cát Bà</a></li>
-                         </ul>
-                      </li>
-                      <li>
-                         <span>Du lịch nước ngoài</span>
-                         <ul>
-                            <li><a href="javascript:;" class="btn-value">Lào</a></li>
-                            <li><a href="javascript:;" class="btn-value">Thái Lan</a></li>
-                            <li><a href="javascript:;" class="btn-value">Campuchia</a></li>
-                            <li><a href="javascript:;" class="btn-value">Hàn Quốc</a></li>
-                            <li><a href="javascript:;" class="btn-value">Nhật Bản</a></li>
-                         </ul>
-                      </li>
-                   </ul>
+                   	<input type="text" id="where-autocomplete-1"/>
+						<ul class="value-st4">
+						   <li>
+						      <span>Du lịch trong nước</span>
+						      <ul>
+						         <li><a href="javascript:;" class="btn-value xxx">Hạ Long</a></li>
+						         <li><a href="javascript:;" class="btn-value">Đà Nẵng</a></li>
+						         <li><a href="javascript:;" class="btn-value">Quan Lạn</a></li>
+						         <li><a href="javascript:;" class="btn-value">Phú Quốc</a></li>
+						         <li><a href="javascript:;" class="btn-value">Cô Tô</a></li>
+						         <li><a href="javascript:;" class="btn-value">Quy Nhơn</a></li>
+						         <li><a href="javascript:;" class="btn-value">Cát Bà</a></li>
+						      </ul>
+						   </li>
+						   <li>
+						      <span>Du lịch nước ngoài</span>
+						      <ul>
+						         <li><a href="javascript:;" class="btn-value">Lào</a></li>
+						         <li><a href="javascript:;" class="btn-value">Thái Lan</a></li>
+						         <li><a href="javascript:;" class="btn-value">Campuchia</a></li>
+						         <li><a href="javascript:;" class="btn-value">Hàn Quốc</a></li>
+						         <li><a href="javascript:;" class="btn-value">Nhật Bản</a></li>
+						      </ul>
+						   </li>
+						</ul>
                 </div>
              </div>
              <div class="box-step-when box-input-st2">
@@ -500,19 +501,20 @@
                    <label for="where-autocomplete-2">Đi trong tháng:</label>
                    
                    <i class="icon-font happy-01"></i>
-                   <input type="text" name="">
+                   <input class="close-display" type="text" name="">
+                   <span class="text"></span>
                    <div class="box-mon-time">
 						<div>
 							<span>2020</span>
 							<ul>
 								<li>
-									<button type="button">Tháng<br/> 1</button>
+									<button disabled="disabled" type="button">Tháng<br/> 1</button>
 								</li>
 								<li>
-									<button type="button">Tháng<br/> 2</button>
+									<button disabled="disabled" type="button">Tháng<br/> 2</button>
 								</li>
 								<li>
-									<button type="button">Tháng<br/> 3</button>
+									<button disabled="disabled" type="button">Tháng<br/> 3</button>
 								</li>
 								<li>
 									<button type="button">Tháng<br/> 4</button>
@@ -2506,6 +2508,7 @@
 	</a>
 </div>
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js" defer></script>
 <script type="text/javascript" src="js/slick.min.js" defer></script>
 <script type="text/javascript" src="js/intlTelInput.min.js" defer></script>
 <script type="text/javascript" src="js/jquery.lazyload.mini.js" defer></script>

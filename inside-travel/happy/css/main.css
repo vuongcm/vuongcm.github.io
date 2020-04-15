@@ -3753,10 +3753,11 @@ footer {
           background-color: #e3ba10;
           color: #111; }
       .box-mon-time ul li button[disabled="disabled"] {
-        background-color: transparent;
-        color: rgba(0, 0, 0, 0.4);
+        background-color: transparent !important;
+        color: rgba(0, 0, 0, 0.4) !important;
         opacity: 1;
-        cursor: auto; }
+        cursor: auto;
+        border-color: #aaa !important; }
       .box-mon-time ul li button.active {
         background-color: #e3ba10; }
 
@@ -9654,7 +9655,8 @@ footer {
       width: 100%;
       display: flex; }
       .search-container-st2 .search-box-st2 form .box-input-st2 {
-        flex-grow: 1; }
+        flex-grow: 1;
+        width: 100%; }
       .search-container-st2 .search-box-st2 form .box-step-where {
         border-right: 1px solid #d2efef; }
       .search-container-st2 .search-box-st2 form .box-step-submit {
@@ -9723,7 +9725,8 @@ footer {
     font-weight: 600;
     z-index: 2;
     font-size: 16px;
-    color: #18b3b3; }
+    color: #18b3b3;
+    background-color: #fff; }
 .box-input-st2 .box-mon-time button {
   display: flex;
   justify-content: center;
@@ -9740,11 +9743,21 @@ footer {
     color: #fff;
     border-color: #18b3b3; }
 
+.box-step-when > div > .text {
+  padding: 28px 48px 12px 56px;
+  width: 100%;
+  height: 55px;
+  line-height: 1.2;
+  font-weight: 600;
+  font-size: 16px;
+  color: #18b3b3;
+  background-color: #fff;
+  cursor: pointer; }
+
 .value-st4 {
   display: none;
   position: absolute;
   z-index: 20;
-  background-color: #fff;
   left: 0;
   top: 100%;
   width: 100%;
@@ -9767,6 +9780,32 @@ footer {
     height: 100%;
     color: #18b3b3; }
     .value-st4 li .btn-value:hover {
+      background-color: #18b3b3;
+      color: #fff; }
+
+.ui-autocomplete {
+  height: unset;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); }
+  .ui-autocomplete .ui-menu-item .ui-menu-item-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    width: 100%;
+    height: 25px;
+    color: #18b3b3;
+    border: none;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+    margin: 0; }
+    .ui-autocomplete .ui-menu-item .ui-menu-item-wrapper:hover {
       background-color: #18b3b3;
       color: #fff; }
 
@@ -9859,7 +9898,6 @@ footer {
     font-size: 18px; }
   .box-input-st2 > div label {
     left: 35px;
-    bottom: 11px;
     font-size: 14px; }
   .box-input-st2 > div input {
     padding: 18px 30px 5px 35px; }
@@ -9874,6 +9912,9 @@ footer {
         margin-bottom: 15px; }
       .box-input-st2 .box-mon-time > div:last-child {
         padding-left: 0; }
+
+  .box-step-when > div > .text {
+    padding: 18px 30px 5px 35px; }
 
   .banner-top-slider .wrap-title-banner-top {
     left: 50%;

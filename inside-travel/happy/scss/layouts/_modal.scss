@@ -1030,10 +1030,11 @@
 				}
 			}
 			button[disabled="disabled"]{
-				background-color: transparent;
-				color: rgba(0,0,0,0.4);
+				background-color: transparent!important;
+				color: rgba(0,0,0,0.4)!important;
 				opacity: 1;
 				cursor: auto;
+				border-color: #aaa!important;
 			}
 			button.active{
 				background-color: $higlight-color;

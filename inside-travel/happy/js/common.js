@@ -2244,7 +2244,7 @@ $(document).ready(function() {
 			$(this).closest('.box-input-st2').find('input').val($(this).text());
 			$(this).closest('.value-st4').removeClass('open-block');
 		});
-		$('.box-step-when input').focus(function(){
+		$('.box-step-when .text').click(function(){
 			$(this).closest('.box-step-when').find('.box-mon-time').css('display','flex');
 			$(this).closest('.box-step-when').find('label').css({
 				'bottom':'28px',
@@ -2266,9 +2266,18 @@ $(document).ready(function() {
 			}*/
 		});
 		$('.box-step-when .box-mon-time button').click(function(){
+			$(this).closest('.box-step-when').find('.text').text($(this).text());
 			$(this).closest('.box-step-when').find('input').val($(this).text());
 			$(this).closest('.box-mon-time').removeAttr('style');
 		});
+		let autocompleteList = ['Hạ Long', 'Đà Nẵng', 'Quan Lạn','Phú Quốc','Cô Tô','Quy Nhơn','Cát Bà','Lào','Thái Lan','Campuchia','Hàn Quốc','Nhật Bản'];
+	    $('#where-autocomplete-1').autocomplete({
+	        source: autocompleteList,
+	        search: ""
+	    });
+	    $('.box-step-where input').keyup(function(){
+	        $(this).nextAll('.value-st4').removeClass('open-block');
+	    });
 	}
 });
 window.onload = function() {

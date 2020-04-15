@@ -711,6 +711,7 @@ $(document).ready(function() {
 	$('.btn-close').click(function(){
 		$(this).closest('.modal, .modal-2').addClass('close-display');
 		$(this).closest('.modal').removeAttr('style');
+		$('.modal-container').addClass('close-display');
 /*		if(!$(this).parent('.wrap-gallery-img,.video-modal').length){
 			$('.modal-container').addClass('close-display');
 		}

@@ -1919,7 +1919,7 @@ $(document).ready(function() {
 				$('.box-check-rates .booking-step-nocabin .text b').text(`No.of cabin(s): ${thisVal}`);
 			}
 			$('.booking-step-nocabin .value').removeClass('open-block');
-			$('#modal-inquery-cruise .wrap-list-cabins').html('');
+			/*$('#modal-inquery-cruise .wrap-list-cabins').html('');
 			for(let i=0; i<thisVal; i++){
 				$('#modal-inquery-cruise .wrap-list-cabins').append(`
 					<div class="box-cabin-st2">
@@ -2012,7 +2012,7 @@ $(document).ready(function() {
 			            	</div>
 		            	</div>
 		            </div>`);
-			}
+			}*/
 	    });
 		$('.box-check-rates .booking-step-nocabin .btn-value').click(function(){
 			let thisVal = $(this).children('b').text();
