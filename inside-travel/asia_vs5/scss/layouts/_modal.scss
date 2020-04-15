@@ -959,6 +959,7 @@
 	input{
 		z-index: 5;
 		opacity: 0;
+		width: 100%;
 	}
 	.text{
 		position: absolute;
@@ -1014,7 +1015,7 @@
 			padding-right: 5px;
 			width: 33.3333%;
 			margin-top: 10px;
-			button{
+			button,a{
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -1028,13 +1029,13 @@
 					color: $main-color;
 				}
 			}
-			button[disabled="disabled"]{
-				background-color: transparent;
-				color: rgba(0,0,0,0.4);
+			button[disabled="disabled"], a[disabled="disabled"]{
+				background-color: transparent!important;
+				color: rgba(0,0,0,0.4)!important;
 				opacity: 1;
-				cursor: auto;
+				cursor: auto!important;
 			}
-			button.active{
+			button.active, a.active{
 				background-color: $higlight-color;
 				//color: $main-color;
 			}

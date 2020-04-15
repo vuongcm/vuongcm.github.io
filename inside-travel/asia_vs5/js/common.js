@@ -2187,6 +2187,21 @@ $(document).ready(function() {
 			$(this).remove();
 		});
 	}
+	//======cruise-2
+	if($('.trip-cruise, .big-first-tour-box').length){
+		$('.box-schedule').outerWidth($('.trip-cruise').outerWidth());
+		$('.open-schedule-1').click(function(){
+			$(this).toggleClass('active');
+			$(this).closest('.left-trip, .flex-box').children('.box-schedule-1').slideToggle(500);
+		});
+		$('.open-schedule-2').click(function(){
+			$(this).toggleClass('active');
+			$(this).closest('.left-trip, .flex-box').children('.box-schedule-2').slideToggle(500);
+		});
+		$('.facilities>a').click(function(){
+			$(this).next('ul').toggleClass('open-flex');
+		});
+	}
 });
 window.onload = function() {
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());

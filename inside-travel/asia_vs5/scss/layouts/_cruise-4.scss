@@ -1,3 +1,7 @@
+.bg-cruise{
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%);
+}
 .trip-cruise{
 	display: flex;
 	align-items: stretch;
@@ -107,6 +111,35 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	&>div{
+		display: flex;
+		align-items: center;
+		.date-01{
+			font-size: 16px;
+		}
+		.select-arrow-thin{
+			font-size: 8px;
+		}
+		.link-st3{
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+	.info-cruise-month{
+		align-items: baseline;
+		max-width: 200px;
+		line-height: 1.5;
+		a{
+			font-weight: 600;
+			//color: red;
+			&:hover{
+				color: $higlight-color;
+			}
+		}
+		.date-01{
+			margin-right: 5px;
+		}
+	}
 	.link-st3{
 		padding: 15px;
 		position: relative;
@@ -120,7 +153,9 @@
 			position: absolute;
 			bottom: 0;
 			left: 50%;
-			background-color: #c8bca6;
+			z-index: 30;
+			box-shadow: -2px -2px 3px 0px #eee;
+			background-color: #fff;
 			transform: translate(-50%,50%) rotate(45deg);
 		    -moz-transform: translate(-50%,50%) rotate(45deg);
 		    -webkit-transform: translate(-50%,50%) rotate(45deg);
@@ -135,13 +170,14 @@
 	left: -20px;
 	width: 700px;
 	z-index: 5;
-	background-color: #e0ddcb;
+	background-color: #fff;
+	box-shadow: 3px 2px 5px 2px #eee;
 	padding: 20px;
 	display: none;
 	.list-cabins{
 		padding-bottom: 15px;
 		padding-top: 15px;
-		border-bottom: 1px dotted #967856;
+		border-bottom: 1px dotted #aaa;
 		&:first-child{
 			padding-top: 0;
 		}
@@ -151,14 +187,14 @@
 		}
 	}
 	table{
-		border: 1px solid #b09e7e;
+		border: 1px solid #dcdcdc;
 		th{
-			border: 1px solid #b09e7e;
+			border: 1px solid #dcdcdc;
 			padding-top: 10px;
 			padding-bottom: 10px;
 		}
 		td{
-			border: 1px solid #b09e7e;
+			border: 1px solid #dcdcdc;
 			text-align: center;
 			padding-top: 10px;
 			padding-bottom: 10px;

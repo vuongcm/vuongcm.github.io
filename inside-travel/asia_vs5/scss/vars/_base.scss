@@ -160,7 +160,7 @@ select:focus {
 .icon-destination:before{
     color: inherit;
 }
-.icon-cuisine:before,.icon-des-1:before,.icon-des-2:before,.icon-des-3:before,.icon-des-4:before{
+.asiatours-black:before, .icon-cuisine:before,.icon-des-1:before,.icon-des-2:before,.icon-des-3:before,.icon-des-4:before{
     color: inherit;
 }
 .input-st1{
@@ -1284,6 +1284,9 @@ select:focus {
     width: 30px;
     height: 35px;
     opacity: 1;
+}
+.padding-top-0{
+    padding-top: 0!important;
 }
 .box-tooltip-map{
     width: max-content;

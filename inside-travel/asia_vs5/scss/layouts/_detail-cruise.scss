@@ -493,6 +493,10 @@
 	width: 30px;
 	margin-right: 10px;
 	position: relative;
+	&>.icon-font{
+		font-size: 30px;
+		color: #888;
+	}
 	&>div{
 		position: absolute;
 		top: 0;

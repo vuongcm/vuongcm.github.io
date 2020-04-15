@@ -2205,7 +2205,7 @@ $(document).ready(function() {
 	}
 	/* search-container-happy */
 	if($('.search-box-st2').length){
-		$('.box-step-where input').focus(function(){
+		$('.box-step-where .text').click(function(){
 			$(this).closest('.box-step-where').find('.value-st4').addClass('open-block');
 			$(this).closest('.box-step-where').find('label').css({
 				'bottom':'28px',
@@ -2242,6 +2242,7 @@ $(document).ready(function() {
 	    });
 		$('.value-st4 .btn-value').click(function(){
 			$(this).closest('.box-input-st2').find('input').val($(this).text());
+			$(this).closest('.box-input-st2').find('.text').text($(this).text());
 			$(this).closest('.value-st4').removeClass('open-block');
 		});
 		$('.box-step-when .text').click(function(){
@@ -2270,14 +2271,14 @@ $(document).ready(function() {
 			$(this).closest('.box-step-when').find('input').val($(this).text());
 			$(this).closest('.box-mon-time').removeAttr('style');
 		});
-		let autocompleteList = ['Hạ Long', 'Đà Nẵng', 'Quan Lạn','Phú Quốc','Cô Tô','Quy Nhơn','Cát Bà','Lào','Thái Lan','Campuchia','Hàn Quốc','Nhật Bản'];
+		/*let autocompleteList = ['Hạ Long', 'Đà Nẵng', 'Quan Lạn','Phú Quốc','Cô Tô','Quy Nhơn','Cát Bà','Lào','Thái Lan','Campuchia','Hàn Quốc','Nhật Bản'];
 	    $('#where-autocomplete-1').autocomplete({
 	        source: autocompleteList,
 	        search: ""
 	    });
 	    $('.box-step-where input').keyup(function(){
 	        $(this).nextAll('.value-st4').removeClass('open-block');
-	    });
+	    });*/
 	}
 });
 window.onload = function() {
