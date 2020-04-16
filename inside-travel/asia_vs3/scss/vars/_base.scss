@@ -254,6 +254,38 @@ select:focus {
         color: #fff;
     }
 }
+.btn-st4{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    height: 40px;
+    @include smooth(.25s);
+    .icon-itine{
+        font-size: 24px;
+        color: $higlight-color;
+        margin-right: 5px;
+    }
+    .select-arrow-thin{
+        font-size: 8px;
+        display: inline-block;
+        @include rotage(-90deg);
+        margin-left: 5px;
+    }
+    b{
+        text-transform: uppercase;
+        color: #895a36;
+    }
+    &:hover{
+        b{
+            color: $higlight-color;
+        }
+        .select-arrow-thin{
+            color: $higlight-color;
+        }
+    }
+}
 .btn-disabled{
     border: 1px solid #dcd1bd!important;
     color: #bb7c66!important;
@@ -504,7 +536,7 @@ select:focus {
     background-size: cover;
 }
 .bg-home{
-    background-image: url('https://vuongcm.github.io/inside-travel/asia/images/background/bg-home.jpg');
+    background-image: url('../images/background/bg-home.jpg');
     height: 100%;
 }
 .wrap-mini-intro{

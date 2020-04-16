@@ -12,11 +12,21 @@ $(document).ready(function() {
 	});
 	let headerHeight = $('header').height();
 	$('header').next('section').css('padding-top',`${headerHeight}px`);
+	$('.navbar-tour-next').css('padding-top',`${headerHeight}px`);
 	$('.bg-parallax').css('background-position-y',`${headerHeight}px`);
 	let pageScroll =0;
 	let gridCt4 = 460;
 	$(window).bind('scroll', function(){
 		if(bodyWidth >= 1350){
+			if($(this).scrollTop() > 250){
+	        	if($('.navbar-tour').length){
+	        		$('.navbar-tour').css('top','0');
+	        	}
+	        } else{
+	            if($('.navbar-tour').length){
+	        		$('.navbar-tour').css('top','-100px');
+	        	}
+	        }
 	        if($('.section-grid-dt3').length){
 	        	if($(this).scrollTop() > ($('.grid-ct5').offset().top + 30)){
 	        		$('.grid-ct3').css({
@@ -1464,6 +1474,18 @@ $(document).ready(function() {
 					btnValue.eq(i).click();
 				}
 			}
+		});
+		$('.open-special-inquiry').click(function(){
+			let thisVal = $(this).attr('data-value');
+			let btnValue = $('#modal-inquery-cruise .booking-step-itinerary .btn-value');
+			for(let i=0; i<btnValue.length; i++){
+				if(btnValue.eq(i).children('b').text() == thisVal){
+					btnValue.eq(i).click();
+				}
+			}
+			$('.modal-cruise-st2').addClass('close-display');
+			$('#modal-inquery-cruise').removeClass('close-display');
+			$('#modal-inquery-cruise').css('top',`${$(window).scrollTop()+15}px`);
 		});
 		$('body').click(function(e){
 			if (!$('.booking-step-itinerary').is(e.target) && $('.booking-step-itinerary').has(e.target).length === 0) {

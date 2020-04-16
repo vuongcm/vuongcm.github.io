@@ -836,7 +836,11 @@
 				text-align: left;
 				padding: 0;
 			}
-
+		.wrap-foot-link{
+			margin-top: 15px;
+			width: 100%;
+			text-align: center;
+		}
 	}
 	.trip-st4{
 		background-color: #e6ddcc;
@@ -1155,6 +1159,14 @@
 
 	}
 }
+.navbar-cruise.navbar-tour{
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: -100px;
+	//display: none;
+	@include smooth(.85s);
+}
 .parameter-box{
 	display: flex;
     justify-content: center;
@@ -1355,6 +1367,75 @@
 		}
 	}
 }
+.modal-cruise-st2{
+	.modal-content{
+		&>.order-day{
+			&>a:first-child{
+				border-bottom: 1px solid #dcdcdc;
+			}
+		}
+		.team-quote{
+			width: 100%;
+			&>div{
+				margin-top: 15px;
+				width: 100%;
+				.btn-st3{
+					display: flex;
+					padding: 0 15px;
+					justify-content: center;
+					align-items: center;
+					height: 40px;
+					width: 100%;
+					max-width: 500px;
+					margin-right: auto;
+					margin-left: auto;
+					background-color: $higlight-color;
+					.icon-font{
+						color: #fff;
+						margin-right: 5px;
+					}
+					b{
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+.btn-close{
+	z-index: 50;
+}
+.loading-input{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,.8);
+	z-index: 100;
+	text-align: left;
+	padding: 5px 10px;
+	img{
+		height: 100%;
+		width: auto;
+	}
+}
+.loading-modal{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,.8);
+	z-index: 101;
+	padding: 30px;
+	img{
+		max-height: 100%;
+		margin-top: 50px;
+	}
+}
 @media (min-width: 1350px) {
 	.row-crowd{
 		.crowd-box{
@@ -1390,6 +1471,9 @@
 	} 
 }
 @media (max-width: 991px) {
+	.navbar-cruise.navbar-tour{
+		display: none;
+	}
 	.row-crowd{
 		//flex-wrap: wrap;
 		&:nth-child(3){
@@ -1732,6 +1816,25 @@
 				}
 			}
 		}
+	}
+	.modal-cruise-st2{
+		.modal-content{
+			.team-quote{
+				&>div{
+					.btn-st3{
+						.icon-font{
+							font-size: 14px;
+						}
+						b{
+							font-size: 11px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.modal-2{
+		padding: 20px 15px;
 	}
 }
 @media (max-width: 479px) {

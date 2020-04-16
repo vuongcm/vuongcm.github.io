@@ -785,8 +785,8 @@
 	max-height: 200px;
     overflow-y: auto;
     background-color: #fff;
-    border: 1px solid #e6e6e6;
-    box-shadow: 0 8px 24px rgba(0,0,0,.1);
+    border: 1px solid #d2efef;
+    //box-shadow: 0 8px 24px rgba(0,0,0,.1);
     padding: 10px 0;
     //font-size: 16px;
     li{
@@ -805,6 +805,7 @@
 		    height: 100%;
 		    font-weight: 500;
     		color: #18b3b3;
+    		font-size: 16px;
 		    &:hover{
 		    	background-color: $happy;
 		    	color: #fff;

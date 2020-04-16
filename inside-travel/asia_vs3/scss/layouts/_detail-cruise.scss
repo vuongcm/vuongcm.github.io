@@ -1,9 +1,10 @@
 .navbar-cruise{
 	position: sticky;
 	z-index: 102;
-	background-color: #fff;
+	background-image: url(../images/background/bg-header.png);
+    background-color: #e6ddcc;
 	top: 0;
-	border-bottom: 1px solid #eee;
+	//border-bottom: 1px solid #eee;
 	ul{
 		display: flex;
 		flex-wrap: wrap;
