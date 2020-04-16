@@ -789,7 +789,7 @@
 	}
 	.body-box{
 		background-color: #e6ddcc;
-		padding: 20px 20px 40px 20px;
+		padding: 20px;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -904,6 +904,11 @@
 						}
 					}
 				}
+			}
+			.wrap-foot-link{
+				width: 100%;
+				margin-top: 15px;
+				text-align: center;
 			}
 		}
 	}
