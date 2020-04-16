@@ -1384,6 +1384,11 @@
 			&>div{
 				margin-top: 15px;
 				width: 100%;
+				&>.mini-tit{
+					width: 100%;
+					text-align: center;
+					margin-top: 15px;
+				}
 				.btn-st3{
 					display: flex;
 					padding: 0 15px;
