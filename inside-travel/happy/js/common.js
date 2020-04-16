@@ -2206,25 +2206,20 @@ $(document).ready(function() {
 	/* search-container-happy */
 	if($('.search-box-st2').length){
 		$('.box-step-where .text').click(function(){
-			$(this).closest('.box-step-where').find('.value-st4').addClass('open-block');
-			$(this).closest('.box-step-where').find('label').css({
-				'bottom':'28px',
-				'font-size':'12px',
-				'color':'#b9b9b9'
-			});
-			/*if(bodyWidth < 768){
-				$(this).closest('.box-step-where').find('label').css({
-					'bottom':'22px',
-					'font-size':'12px',
-					'color':'#b9b9b9'
-				});
-			} else{
+			if($(this).closest('.box-step-where').find('.value-st4').css('display') == 'none'){
+				$(this).closest('.box-step-where').find('.value-st4').addClass('open-block');
 				$(this).closest('.box-step-where').find('label').css({
 					'bottom':'28px',
 					'font-size':'12px',
 					'color':'#b9b9b9'
 				});
-			}*/
+			}else{
+				$('.box-step-where .value-st4').removeClass('open-block');
+	            if($(".box-step-where input").val() == ''){
+					$('.box-step-where label').removeAttr('style');
+				}
+			}
+			
 		});
 		$('body').click(function(e){
 			if (!$('.box-step-where').is(e.target) && $('.box-step-where').has(e.target).length === 0) {
@@ -2246,25 +2241,20 @@ $(document).ready(function() {
 			$(this).closest('.value-st4').removeClass('open-block');
 		});
 		$('.box-step-when .text').click(function(){
-			$(this).closest('.box-step-when').find('.box-mon-time').css('display','flex');
-			$(this).closest('.box-step-when').find('label').css({
-				'bottom':'28px',
-				'font-size':'12px',
-				'color':'#b9b9b9'
-			});
-			/*if(bodyWidth < 768){
-				$(this).closest('.box-step-when').find('label').css({
-					'bottom':'22px',
-					'font-size':'12px',
-					'color':'#b9b9b9'
-				});
-			} else{
+			if($(this).closest('.box-step-when').find('.box-mon-time').css('display') == 'none'){
+				$(this).closest('.box-step-when').find('.box-mon-time').css('display','flex');
 				$(this).closest('.box-step-when').find('label').css({
 					'bottom':'28px',
 					'font-size':'12px',
 					'color':'#b9b9b9'
 				});
-			}*/
+			} else{
+				$('.box-step-when .box-mon-time').removeAttr('style');
+	            if($(".box-step-when input").val() == ''){
+					$('.box-step-when label').removeAttr('style');
+				}
+			}
+
 		});
 		$('.box-step-when .box-mon-time button').click(function(){
 			$(this).closest('.box-step-when').find('.text').text($(this).text());

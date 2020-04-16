@@ -2119,6 +2119,39 @@ $(document).ready(function() {
 	}
 	
 	/* ====== end travel guide========*/
+	$('.open-cruise-itine').click(function(){
+		$('.modal-container').removeClass('close-display');
+		$('.modal-cruise-st2').removeClass('close-display');
+	});
+	$('.open-mess').click(function(){
+		$('.modal-container').removeClass('close-display');
+		$('.modal-messenger').removeClass('close-display');
+	});
+	$('#upload-img').change(function(){
+		$(this).next('.fake-upload').find('.name-upload span').text($(this).prop('files')[0].name);
+	});
+	if($('.box-schedule-2').length){
+		$('.box-schedule-2 .wrap-table').bind('scroll', function(){
+			if($(this).scrollLeft() > 1){
+				$('.btn-schedule-2-up').css('display','block');
+			} else{
+				$('.btn-schedule-2-up').css('display','none');
+			}
+			if($(this).scrollLeft() >= ($('.box-schedule-2 .wrap-table').width() + 30)){
+				$('.btn-schedule-2-down').css('display','none');
+			} else{
+				$('.btn-schedule-2-down').css('display','block');
+			}
+		});
+		$('.btn-schedule-2-up').click(function(){
+			$('.box-schedule-2 .wrap-table').animate({ scrollLeft: '-=650' }, 300);
+    		return false; 
+		});
+		$('.btn-schedule-2-down').click(function(){
+			$('.box-schedule-2 .wrap-table').animate({ scrollLeft: '+=650' }, 300);
+    		return false; 
+		});
+	}
 		/*====== hiệu ứng load more img =======*/
 	if($('.crowd-container').length){
 		if(bodyWidth >= 1351){

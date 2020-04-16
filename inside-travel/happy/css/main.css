@@ -3757,7 +3757,7 @@ footer {
         color: rgba(0, 0, 0, 0.4) !important;
         opacity: 1;
         cursor: auto;
-        border-color: #aaa !important; }
+        border-color: #e8e8e8 !important; }
       .box-mon-time ul li button.active {
         background-color: #e3ba10; }
 
@@ -9760,12 +9760,14 @@ footer {
     color: #18b3b3;
     padding-left: 10px;
     padding-right: 10px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-size: 14px; }
   .value-st4 li .btn-value {
     display: flex;
     padding: 5px 20px;
     width: 100%;
     height: 100%;
+    font-weight: 500;
     color: #18b3b3; }
     .value-st4 li .btn-value:hover {
       background-color: #18b3b3;
@@ -10022,32 +10024,32 @@ footer {
     height: 225px; } }
 @keyframes imageAnimation {
   0% {
-    transform: scale(1.2); }
+    transform: scale(1.1); }
   50% {
     transform: scale(1); }
   100% {
-    transform: scale(1.2); } }
+    transform: scale(1.1); } }
 @-webkit-keyframes imageAnimation {
   0% {
-    -webkit-transform: scale(1.2); }
+    -webkit-transform: scale(1.1); }
   50% {
     -webkit-transform: scale(1); }
   100% {
-    -webkit-transform: scale(1.2); } }
+    -webkit-transform: scale(1.1); } }
 @-moz-keyframes imageAnimation {
   0% {
-    -moz-transform: scale(1.2); }
+    -moz-transform: scale(1.1); }
   50% {
     -moz-transform: scale(1); }
   100% {
-    -moz-transform: scale(1.2); } }
+    -moz-transform: scale(1.1); } }
 @-ms-keyframes imageAnimation {
   0% {
-    -ms-transform: scale(1.2); }
+    -ms-transform: scale(1.1); }
   50% {
     -ms-transform: scale(1); }
   100% {
-    -ms-transform: scale(1.2); } }
+    -ms-transform: scale(1.1); } }
 .wrap-title-banner-des {
   position: absolute;
   bottom: 130px;
