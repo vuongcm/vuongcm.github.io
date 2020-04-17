@@ -684,6 +684,7 @@
 	width: 80%;
     margin: 30px auto 0;
     form{
+    	position: relative;
     	display: flex;
     	justify-content: center;
     	flex-wrap: wrap;
@@ -692,6 +693,11 @@
     	padding: 30px 40px;
     	//border: 1px solid #cecece;
     	background-color: #fff;
+    	.loading-modal{
+    		img{
+    			margin-top: 0;
+    		}
+    	}
     	.btn-st3{
     		margin-top: 15px;
 		    padding-left: 30px;

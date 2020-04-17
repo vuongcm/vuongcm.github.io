@@ -1923,7 +1923,7 @@ $(document).ready(function() {
 		});
 	}
 	/*====setting to offset=======*/
-	if($('.navbar-cruise').length){
+	/*if($('.navbar-cruise').length){
 		$('.to-offset-desti').click(function(){
 			goToOffset('#cruise-desti');
 		});
@@ -1956,7 +1956,7 @@ $(document).ready(function() {
 		$('.to-offset-submit').click(function(){
 			goToOffset('#confirm-submit');
 		});
-	}
+	}*/
 	$('body').delegate('.input-radio-st1 label','click',function(){
 		let inputName = $(this).prev('input').attr('name');
 		$(`input[name=${inputName}]`).next('label').removeClass('active');

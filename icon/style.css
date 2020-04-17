@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'kiwi-font';
-  src:  url('fonts/kiwi-font.eot?k5svdt');
-  src:  url('fonts/kiwi-font.eot?k5svdt#iefix') format('embedded-opentype'),
-    url('fonts/kiwi-font.ttf?k5svdt') format('truetype'),
-    url('fonts/kiwi-font.woff?k5svdt') format('woff'),
-    url('fonts/kiwi-font.svg?k5svdt#kiwi-font') format('svg');
+  src:  url('fonts/kiwi-font.eot?1m7ngv');
+  src:  url('fonts/kiwi-font.eot?1m7ngv#iefix') format('embedded-opentype'),
+    url('fonts/kiwi-font.ttf?1m7ngv') format('truetype'),
+    url('fonts/kiwi-font.woff?1m7ngv') format('woff'),
+    url('fonts/kiwi-font.svg?1m7ngv#kiwi-font') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.kw-youtube:before {
+  content: "\e901";
+}
 .kw-zalo:before {
   content: "\e97b";
 }
@@ -33,6 +36,9 @@
 }
 .kw-checklist:before {
   content: "\e918";
+}
+.kw-facebook:before {
+  content: "\e900";
 }
 .kw-select-arrow-thin:before {
   content: "\e912";
