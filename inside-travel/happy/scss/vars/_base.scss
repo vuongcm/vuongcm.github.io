@@ -224,7 +224,7 @@ select:focus {
     text-align: center;
     letter-spacing: 1px;
     border: 1px solid #000;
-    color: #000;
+    color: $happy;
     @include smooth(.2s);
     font-size: 12px;
     &:hover{
@@ -365,13 +365,16 @@ select:focus {
     width: 100%;
     font-size: 22px;
     letter-spacing: 2px;
-    color: #000;
+    color: $happy;
     line-height: 1.3;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 10px;
     font-weight: 400;
     text-transform: uppercase;
+    a{
+        color: $happy;
+    }
 }
 .title-h2-line:after, .line:after{
     max-width: 200px;
@@ -903,7 +906,7 @@ select:focus {
         overflow: hidden;
     }
     .slick-active{
-        background-color: #686868;
+        background-color: $happy;
     }
 }
 .wrap-slide-st3{
@@ -1365,7 +1368,7 @@ select:focus {
             padding-right: 15px;
             max-height: 39px;
             overflow-y: hidden;
-            color: $btn-text-color-st1;
+            color: $happy;
             @include smooth(1.5s);
         }
         &>span{
@@ -1381,6 +1384,7 @@ select:focus {
             &>strong{
                 font-size: 16px;
                 font-weight: 500;
+                color: red;
             }
         }
     }
@@ -1392,10 +1396,10 @@ select:focus {
         bottom: 80px;
     }
     .btn-st2{
-        color: $btn-text-color-st1;
-        border-color: #bbb;
+        border-color: $happy;
         position: absolute;
         bottom: 20px;
+        border-radius: 999px;
         &:hover{
             color: #ccaf3d;
             border-color: #ccaf3d;
@@ -1703,9 +1707,10 @@ select:focus {
 .address{
     font-style: normal;
     text-align: left;
-    color: #888;
+    color: $happy;
     a{
-        color: #888;
+        color: $happy;
+        font-weight: 600;
         &:hover{
             color: $higlight-color;
         }
@@ -1749,26 +1754,29 @@ select:focus {
     }
 }
 .day-trip{
-    position: relative;
     width: 52px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
     span{
-        position: absolute;
         text-align: center;
         font-size: 8px;
         text-transform: uppercase;
-        color: $higlight-color;
+        color: $happy;
         font-weight: 500;
         line-height: 1;
         b{
             display: block;
             width: 100%;
             font-size: 20px;
-            color: $higlight-color;
+            color: $happy;
         }
+    }
+    .happy-01{
+        font-size: 16px;
+        color: $happy;
+        margin-left: 5px;
     }
 }
 .team-name{

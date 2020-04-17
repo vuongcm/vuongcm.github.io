@@ -742,6 +742,7 @@
 	padding-right: 15px;
 	padding-left: 15px;
 	margin-bottom: 40px;
+	margin-top: 15px;
 	.head-box{
 		.img-box-st2{
 			display: block;
@@ -858,9 +859,9 @@
 		border-top: none;
 		margin-top: 0;
 		background-color: #fff;
-		padding: 15px 20px 40px 20px;
+		padding: 15px 20px;
 		.btn-st2{
-			border-color: #bbb;
+			border-color: $happy;
 			padding: 5px 25px;
 			font{
 				font-style: normal;

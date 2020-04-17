@@ -677,7 +677,21 @@ $(document).ready(function() {
 			arrows: false
 		});
 	}
-	
+	//carousel-st11
+	if ($('.wrap-slide-st11').length) {
+		$(`.wrap-slide-st11 .gallery`).slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			infinite: true,
+			useTransform: false,
+			autoplay: true,
+			autoplaySpeed: 7000,
+			dots: true,
+			dotsClass: 'wrap-dots',
+	        prevArrow: `.wrap-slide-st11 .arrow-left`,
+	        nextArrow: `.wrap-slide-st11 .arrow-right`
+		});
+	}
 	//carousel-sp
 	if ($('.wrap-slide-sp').length > 0) {
 		$(`.wrap-slide-sp .gallery`).slick({

@@ -1,0 +1,177 @@
+.why-book-us{
+
+}
+.content-why-book{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	.three-reasons{
+		position: relative;
+	    margin-top: 24px;
+	    padding: 31px 18px 16px;
+	    border: 2px solid;
+	    border-radius: 6px;
+	    text-align: center;
+	    .wrap-icon{
+	    	position: absolute;
+	    	width: 50px;
+	    	left: calc(50% - 25px);
+	    	top: -25px;
+	    }
+	    .wrap-icon-2{
+	    	position: absolute;
+	    	height: 70px;
+	    	top: -35px;
+	    	left: 50%;
+	    	@include translateX(-50%);
+	    	img{
+	    		height: 100%;
+	    		width: auto;
+	    	}
+	    }
+	}
+	.three-reasons-1{
+		border-color: #bbe6dd;
+	}
+	.three-reasons-2{
+		border-color: $happy;
+	}
+	.three-reasons-3{
+		border-color: green;
+	}
+}
+.wrap-slide-st11{
+	width: 100%;
+	margin-top: 30px;
+	.synch-carousels{
+		box-shadow: none;
+		.item{
+			padding-right: 5px;
+			padding-left: 5px;
+			&>a{
+				display: block;
+				width: 100%;
+				border-radius: 6px;
+				img{
+					border-radius: 6px;
+				}
+			}
+		}
+		.nav-arrows{
+            top: 50%;
+            button{
+            	width: unset;
+            	height: unset;
+                i{
+                    font-size: 45px;
+                    color: #d4d4d4;
+                }
+                &:hover i{
+                    color: $higlight-color;
+                }
+            }
+            .arrow-left{
+            	@include translate2d(-40px,-50%);
+                .icon-next-back{
+                    @include rotage(180deg);
+                }
+            }
+            .arrow-right{
+            	@include translate2d(40px,-50%);
+            }
+        }
+		.wrap-dots{
+	        margin: 15px 0;
+	        button{
+	            color: rgba(255,255,255,0);
+	        }
+	    }  
+	}
+}
+.big-first-tour-box{
+	.body-box{
+		.wrap-tooltip{
+			display: inline-flex;
+			padding-right: 0;
+			padding-left: 0;
+			width: unset;
+		}
+		.row{
+			display: flex;
+			align-items: center;
+			.address-box{
+				max-width: calc(100% - 315px);
+			}
+		}
+	}
+}
+.info-cruise-month{
+	align-items: baseline;
+	line-height: 1.5;
+	display: flex;
+
+	&>span{
+		color: $happy;
+		.date-01{
+			color: $happy;
+			font-size: 20px;
+			margin-right: 5px;
+		}
+		b{
+			color: $happy;
+		}
+	}
+	&>div{
+		b{
+			color: $happy;
+		}
+	}
+	a{
+		font-weight: 600;
+		color: $happy;
+		&:hover{
+			color: $higlight-color;
+		}
+	}
+}
+.box-price{
+	text-align: right;
+	margin-right: 10px;
+	margin-left: auto;
+    span{
+    	display: block;
+    	width: 100%;
+    	font-size: 14px;
+	    text-transform: uppercase;
+	    color: red;
+    }
+}
+.cam_ket{
+	color: $happy;
+	.checkmark{
+		margin-right: 5px;
+		color: $happy;
+		font-size: 16px;
+	}
+}
+.wrap-foot-link{
+	width: 100%;
+	.btn-st4{
+		border-radius: 0;
+		justify-content: space-between;
+		width: 100%;
+		height: 40px;
+		color: #fff;
+		padding: 5px;
+		b{
+			color: inherit;
+		}
+		.happy-01{
+			&:first-child{
+				@include rotage(180deg);
+			}
+		}
+	}
+}

@@ -517,7 +517,7 @@
 	&>span{
 		font-size: 12px;
 	    text-transform: uppercase;
-	    color: $higlight-color;
+	    color: red;
 	    margin-left: auto;
 	    margin-right: 15px;
 	    margin-bottom: 10px;
@@ -527,8 +527,7 @@
 	    }
 	}
 	.btn-st2{
-		color: #888;
-        border-color: #bbb;
+		color: $happy;
         border-radius: 999px;
         margin-bottom: 10px;
         &:hover{
