@@ -1,3 +1,8 @@
+.bg-travel-guide{
+    background-image: url('../images/background/bg-travel-guide.jpg');
+    height: 100%;
+    @include dakkenImg(60%);
+}
 .travel-guide-container{
 	.container{
 		display: grid;
