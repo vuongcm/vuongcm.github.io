@@ -653,7 +653,7 @@ $(document).ready(function() {
 			dots: true,
 			//dotsClass: 'wrap-dots',
 			autoplay: true,
-			autoplaySpeed: 7500,
+			autoplaySpeed: 5000,
 			arrows: false
 		});
 	}

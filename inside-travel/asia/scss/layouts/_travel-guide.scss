@@ -2,6 +2,7 @@
     background-image: url('../images/background/bg-travel-guide.jpg');
     height: 100%;
     @include dakkenImg(60%);
+    //background-size: 100% auto;
 }
 .travel-guide-container{
 	.container{
@@ -157,6 +158,12 @@
 		text-align: left;
 		margin-bottom: 15px;
 		margin-top: 15px;
+		a{
+			text-decoration: underline;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
 	}
 }
 .caption{
@@ -366,6 +373,11 @@
 			opacity: 1;
 			background-color: rgba(200,200,200,0.2);
 		}
+	}
+}
+@media (min-width: 1200px){
+	.bg-travel-guide{
+	    background-size: 100% auto;
 	}
 }
 @media (max-width: 991px) {

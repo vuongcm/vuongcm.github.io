@@ -9,6 +9,7 @@
 	background-image: url(../images/background/bg-about.jpg);
     height: 100%;
     background-position-y: 37px;
+    @include dakkenImg(60%);
 }
 .about-container{
 	//margin-top: 50px;
