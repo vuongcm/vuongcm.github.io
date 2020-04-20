@@ -175,3 +175,31 @@
 		}
 	}
 }
+@media (max-width: 991px) {
+	.big-first-tour-box{
+		.body-box{
+			.row{
+				flex-wrap: wrap;
+				.address-box{
+					padding-right: 0;
+					width: 100%;
+					max-width: unset;
+					order: unset;
+				}
+			}
+		}
+		.foot-trip{
+			.btn-st2{
+				margin-bottom: 0;
+				margin-top: 10px;
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+	.content-why-book{
+		.three-reasons{
+			margin-top: 40px;
+		}
+	} 
+}

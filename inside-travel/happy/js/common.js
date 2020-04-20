@@ -689,7 +689,15 @@ $(document).ready(function() {
 			dots: true,
 			dotsClass: 'wrap-dots',
 	        prevArrow: `.wrap-slide-st11 .arrow-left`,
-	        nextArrow: `.wrap-slide-st11 .arrow-right`
+	        nextArrow: `.wrap-slide-st11 .arrow-right`,
+	        responsive: [
+		    {
+		      breakpoint: 768,
+		      settings: {
+		      	slidesToShow: 2,
+		      }
+		    }
+		  ]
 		});
 	}
 	//carousel-sp

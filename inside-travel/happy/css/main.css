@@ -138,6 +138,12 @@ body {
   --bodyWidth: 1583px;
   overflow-x: hidden; }
 
+.app {
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  position: relative; }
+
 input {
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -13965,5 +13971,20 @@ body.body-st2 {
       -ms-transform: rotate(180deg);
       -webkit-transform: rotate(180deg);
       transform: rotate(180deg); }
+
+@media (max-width: 991px) {
+  .big-first-tour-box .body-box .row {
+    flex-wrap: wrap; }
+    .big-first-tour-box .body-box .row .address-box {
+      padding-right: 0;
+      width: 100%;
+      max-width: unset;
+      order: unset; }
+  .big-first-tour-box .foot-trip .btn-st2 {
+    margin-bottom: 0;
+    margin-top: 10px; } }
+@media (max-width: 767px) {
+  .content-why-book .three-reasons {
+    margin-top: 40px; } }
 
 /*# sourceMappingURL=main.css.map */

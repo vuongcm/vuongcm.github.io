@@ -8,7 +8,7 @@
 .bg-about{
 	background-image: url(../images/background/bg-about.jpg);
     height: 100%;
-    background-position-y: 37px;
+    //background-position-y: 37px;
     @include dakkenImg(60%);
 }
 .about-container{
@@ -195,6 +195,11 @@
 	max-width: 170px;
 	margin-left: auto;
 	margin-right: auto;
+}
+@media (min-width: 1351px) {
+	.bg-about{
+		background-size: 100% auto;
+	}
 }
 @media (max-width: 991px) {
 	.banner-small{
