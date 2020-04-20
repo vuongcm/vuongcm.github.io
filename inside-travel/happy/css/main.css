@@ -13939,10 +13939,8 @@ body.body-st2 {
   line-height: 1.5;
   display: flex; }
   .info-cruise-month > span {
-    color: #18b3b3;
-    display: inline-flex;
-    align-items: center; }
-    .info-cruise-month > span .calendar-regular {
+    color: #18b3b3; }
+    .info-cruise-month > span .date-01 {
       color: #18b3b3;
       font-size: 20px;
       margin-right: 5px; }
@@ -14011,6 +14009,26 @@ body.body-st2 {
   .box-price {
     width: 100%;
     margin: 10px auto 0;
-    text-align: center; } }
+    text-align: center; }
+
+  .info-cruise-month {
+    flex-wrap: wrap; }
+    .info-cruise-month > span {
+      display: block;
+      width: 100%;
+      text-align: center; }
+      .info-cruise-month > span b {
+        color: #18b3b3;
+        font-weight: 800; }
+    .info-cruise-month > div {
+      width: 100%;
+      text-align: center; }
+      .info-cruise-month > div b {
+        color: #18b3b3; }
+    .info-cruise-month a {
+      font-weight: 600;
+      color: #18b3b3; }
+      .info-cruise-month a:hover {
+        color: #e3ba10; } }
 
 /*# sourceMappingURL=main.css.map */

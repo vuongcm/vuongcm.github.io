@@ -685,7 +685,7 @@ $(document).ready(function() {
 			infinite: true,
 			useTransform: false,
 			autoplay: true,
-			autoplaySpeed: 7000,
+			autoplaySpeed: 4000,
 			dots: true,
 			dotsClass: 'wrap-dots',
 	        prevArrow: `.wrap-slide-st11 .arrow-left`,

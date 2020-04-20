@@ -123,9 +123,7 @@
 
 	&>span{
 		color: $happy;
-		display: inline-flex;
-		align-items: center;
-		.calendar-regular{
+		.date-01{
 			color: $happy;
 			font-size: 20px;
 			margin-right: 5px;
@@ -225,5 +223,31 @@
 		width: 100%;
 		margin: 10px auto 0;
 		text-align: center;
+	}
+	.info-cruise-month{
+		flex-wrap: wrap;
+		&>span{
+			display: block;
+			width: 100%;
+			text-align: center;
+			b{
+				color: $happy;
+				font-weight: 800;
+			}
+		}
+		&>div{
+			width: 100%;
+			text-align: center;
+			b{
+				color: $happy;
+			}
+		}
+		a{
+			font-weight: 600;
+			color: $happy;
+			&:hover{
+				color: $higlight-color;
+			}
+		}
 	}
 }
