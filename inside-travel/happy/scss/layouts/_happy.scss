@@ -33,13 +33,22 @@
 	    }
 	}
 	.three-reasons-1{
-		border-color: #bbe6dd;
+		border-color: rgba(36,185,191,1);
+		h3,p,b{
+			color: rgba(36,185,191,1);
+		}
 	}
 	.three-reasons-2{
 		border-color: $happy;
+		h3,p,b{
+			color: $happy;
+		}
 	}
 	.three-reasons-3{
-		border-color: green;
+		border-color: rgba(221,81,126,1);
+		h3,p,b{
+			color: rgba(221,81,126,1);
+		}
 	}
 }
 .wrap-slide-st11{
@@ -114,13 +123,16 @@
 
 	&>span{
 		color: $happy;
-		.date-01{
+		display: inline-flex;
+		align-items: center;
+		.calendar-regular{
 			color: $happy;
 			font-size: 20px;
 			margin-right: 5px;
 		}
 		b{
 			color: $happy;
+			font-weight: 800;
 		}
 	}
 	&>div{
@@ -144,7 +156,7 @@
     	display: block;
     	width: 100%;
     	font-size: 14px;
-	    text-transform: uppercase;
+	    //text-transform: uppercase;
 	    color: red;
     }
 }
@@ -201,5 +213,17 @@
 		.three-reasons{
 			margin-top: 40px;
 		}
-	} 
+	}
+	.big-first-tour-box{
+		.foot-trip{
+			.btn-st2{
+				width: 100%;
+			}
+		}
+	}
+	.box-price{
+		width: 100%;
+		margin: 10px auto 0;
+		text-align: center;
+	}
 }

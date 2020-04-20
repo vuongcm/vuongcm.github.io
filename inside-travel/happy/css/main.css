@@ -2254,6 +2254,9 @@ select:focus {
 body > section, body > header, body > footer {
   padding-left: 50px; }
 
+.app > section, .app > header, .app > footer {
+  padding-left: 50px; }
+
 header {
   width: 100%;
   z-index: 101;
@@ -2758,6 +2761,9 @@ header {
     max-width: 0; }
 
   body > section, body > footer {
+    padding-left: 0; }
+
+  .app > section, .app > footer {
     padding-left: 0; }
 
   header .menu-wrap {
@@ -9684,7 +9690,7 @@ footer {
           .search-container-st2 .search-box-st2 form .box-step-submit button .icon-font {
             padding-bottom: 3px;
             margin-left: 15px;
-            font-size: 16px; }
+            font-size: 12px; }
 
 .box-input-st2 > div {
   background-color: #fff;
@@ -9730,7 +9736,7 @@ footer {
   .box-input-st2 > div > .text {
     padding: 28px 48px 12px 56px;
     width: 100%;
-    height: 55px;
+    height: 60px;
     line-height: 1.2;
     font-weight: 600;
     font-size: 16px;
@@ -9807,6 +9813,12 @@ footer {
     .search-container-st2 .search-box-st2 form .box-step-submit {
       height: 55px;
       max-width: unset; }
+      .search-container-st2 .search-box-st2 form .box-step-submit button {
+        position: relative; }
+        .search-container-st2 .search-box-st2 form .box-step-submit button .icon-font {
+          position: absolute;
+          top: 14px;
+          right: 5px; }
 
   .banner-top-slider .wrap-title-banner-top {
     bottom: 210px; }
@@ -9870,13 +9882,11 @@ footer {
       height: 40px; }
 
   .box-input-st2 > div .icon-font:first-child {
-    font-size: 18px; }
+    font-size: 22px; }
   .box-input-st2 > div label {
-    left: 35px;
-    font-size: 14px; }
+    left: 40px; }
   .box-input-st2 > div .text {
-    padding: 18px 30px 5px 35px;
-    font-size: 14px; }
+    padding: 18px 30px 5px 40px; }
   .box-input-st2 .box-mon-time {
     flex-wrap: wrap;
     min-width: unset; }
@@ -13856,11 +13866,17 @@ body.body-st2 {
         height: 100%;
         width: auto; }
   .content-why-book .three-reasons-1 {
-    border-color: #bbe6dd; }
+    border-color: #24b9bf; }
+    .content-why-book .three-reasons-1 h3, .content-why-book .three-reasons-1 p, .content-why-book .three-reasons-1 b {
+      color: #24b9bf; }
   .content-why-book .three-reasons-2 {
     border-color: #18b3b3; }
+    .content-why-book .three-reasons-2 h3, .content-why-book .three-reasons-2 p, .content-why-book .three-reasons-2 b {
+      color: #18b3b3; }
   .content-why-book .three-reasons-3 {
-    border-color: green; }
+    border-color: #dd517e; }
+    .content-why-book .three-reasons-3 h3, .content-why-book .three-reasons-3 p, .content-why-book .three-reasons-3 b {
+      color: #dd517e; }
 
 .wrap-slide-st11 {
   width: 100%;
@@ -13923,13 +13939,16 @@ body.body-st2 {
   line-height: 1.5;
   display: flex; }
   .info-cruise-month > span {
-    color: #18b3b3; }
-    .info-cruise-month > span .date-01 {
+    color: #18b3b3;
+    display: inline-flex;
+    align-items: center; }
+    .info-cruise-month > span .calendar-regular {
       color: #18b3b3;
       font-size: 20px;
       margin-right: 5px; }
     .info-cruise-month > span b {
-      color: #18b3b3; }
+      color: #18b3b3;
+      font-weight: 800; }
   .info-cruise-month > div b {
     color: #18b3b3; }
   .info-cruise-month a {
@@ -13946,7 +13965,6 @@ body.body-st2 {
     display: block;
     width: 100%;
     font-size: 14px;
-    text-transform: uppercase;
     color: red; }
 
 .cam_ket {
@@ -13985,6 +14003,14 @@ body.body-st2 {
     margin-top: 10px; } }
 @media (max-width: 767px) {
   .content-why-book .three-reasons {
-    margin-top: 40px; } }
+    margin-top: 40px; }
+
+  .big-first-tour-box .foot-trip .btn-st2 {
+    width: 100%; }
+
+  .box-price {
+    width: 100%;
+    margin: 10px auto 0;
+    text-align: center; } }
 
 /*# sourceMappingURL=main.css.map */

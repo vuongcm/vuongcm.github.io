@@ -3,6 +3,11 @@ body{
 		padding-left: 50px;
 	}
 }
+.app{
+	&>section,&>header,&>footer{
+		padding-left: 50px;
+	}
+}
 header{
 	width: 100%;
 	z-index: 101;
@@ -642,6 +647,7 @@ header{
 @media (max-width: 767px) {
 	.btn-bar-toggle{
 		color: $happy;
+		//position: static;
 		&:hover{
 			color: $happy;
 		}
@@ -654,6 +660,11 @@ header{
 		}
 	}
 	body{
+		&>section,&>footer{
+			padding-left: 0;
+		}
+	}
+	.app{
 		&>section,&>footer{
 			padding-left: 0;
 		}
