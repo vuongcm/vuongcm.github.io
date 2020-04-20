@@ -1577,7 +1577,7 @@ $(document).ready(function() {
     });
     /*===end search-top =====*/
 	/*===filter 2=====*/
-	if($('.wrap-filter-st2').length){
+	if($('.wrap-filter-st2,.trip-request-box').length){
 		$('.filter-desti-2 .btn-value').click(function(){
 			$(this).toggleClass('checked');
 			let numberValue = $('.filter-desti-2 .checked').length;
