@@ -12429,7 +12429,8 @@ footer {
     font-size: 26px; }
   .big-first-tour-box .head-box h2 {
     padding-top: 10px;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    text-transform: uppercase; }
     .big-first-tour-box .head-box h2 a {
       font-size: 16px;
       text-align: center;
@@ -13942,11 +13943,12 @@ body.body-st2 {
     color: #18b3b3; }
     .info-cruise-month > span .date-01 {
       color: #18b3b3;
-      font-size: 20px;
+      font-size: 12px;
       margin-right: 5px; }
     .info-cruise-month > span b {
       color: #18b3b3;
-      font-weight: 800; }
+      font-weight: 800;
+      font-size: 14px; }
   .info-cruise-month > div b {
     color: #18b3b3; }
   .info-cruise-month a {
@@ -14003,6 +14005,10 @@ body.body-st2 {
   .content-why-book .three-reasons {
     margin-top: 40px; }
 
+  .big-first-tour-box .body-box > .row {
+    border-bottom: 1px dotted #dcdcdc; }
+  .big-first-tour-box .body-box > .paragraph {
+    display: none; }
   .big-first-tour-box .foot-trip .btn-st2 {
     width: 100%; }
 

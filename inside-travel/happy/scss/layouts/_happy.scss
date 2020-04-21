@@ -125,12 +125,13 @@
 		color: $happy;
 		.date-01{
 			color: $happy;
-			font-size: 20px;
+			font-size: 12px;
 			margin-right: 5px;
 		}
 		b{
 			color: $happy;
 			font-weight: 800;
+			font-size: 14px;
 		}
 	}
 	&>div{
@@ -213,6 +214,14 @@
 		}
 	}
 	.big-first-tour-box{
+		.body-box{
+			&>.row{
+				border-bottom: 1px dotted #dcdcdc;
+			}
+			&>.paragraph{
+				display: none;
+			}
+		}
 		.foot-trip{
 			.btn-st2{
 				width: 100%;
