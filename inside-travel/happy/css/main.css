@@ -12295,9 +12295,60 @@ footer {
     max-height: 100%;
     margin-top: 50px; }
 
+.section-login {
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .section-login > img {
+    position: absolute;
+    z-index: 9;
+    bottom: 0;
+    left: 0; }
+  .section-login .wrap-login-box-st2 {
+    margin: 60px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: calc(100% - 30px);
+    padding: 25px;
+    position: relative;
+    z-index: 15;
+    border-radius: 0;
+    max-width: 500px; }
+    .section-login .wrap-login-box-st2 h2 {
+      font-size: 30px;
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 30px; }
+    .section-login .wrap-login-box-st2 .form-box {
+      margin-left: -15px;
+      margin-right: -15px; }
+      .section-login .wrap-login-box-st2 .form-box .form-field span {
+        text-align: left;
+        font-weight: 600;
+        width: 100%;
+        display: block;
+        margin-bottom: 10px; }
+      .section-login .wrap-login-box-st2 .form-box .form-field > a {
+        color: #e3ba10;
+        width: 100%;
+        text-align: left; }
+      .section-login .wrap-login-box-st2 .form-box .form-field .btn-st3 {
+        width: 100%;
+        height: 40px; }
+    .section-login .wrap-login-box-st2 .call-us {
+      text-align: center;
+      background-color: transparent;
+      border: 1px solid #dcdcdc; }
+      .section-login .wrap-login-box-st2 .call-us p {
+        color: #e3ba10;
+        font-weight: 600; }
+
 @media (max-width: 1350px) {
   .row-crowd .crowd-box {
     max-height: 160px; } }
+@media (max-width: 1199px) {
+  .section-login > img {
+    height: 100%;
+    width: auto; } }
 @media (max-width: 991px) {
   .navbar-cruise.navbar-tour {
     display: none; }

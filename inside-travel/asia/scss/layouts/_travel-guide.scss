@@ -229,6 +229,12 @@
 		text-align: left;
 		margin-bottom: 15px;
 		margin-top: 15px;
+		a{
+			text-decoration: underline;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
 	}
 	.desti{
 		margin-top: 20px;
