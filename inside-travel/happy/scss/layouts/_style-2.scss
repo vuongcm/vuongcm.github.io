@@ -993,7 +993,10 @@
 		.wrap-title-banner-top{
 			left: 50%;
 			width: 100%;
-			bottom: 170px;
+			bottom: 160px;
+			h1{
+				font-size: 18px;
+			}
 		}
 		#booking-widget-homepage{
 			bottom: 45px;

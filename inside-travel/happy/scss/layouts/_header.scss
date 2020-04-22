@@ -24,10 +24,10 @@ header{
 		height: 60px;
 		margin-left: auto;
 		margin-right: auto;
-		border-bottom: 1px solid rgba(255,255,255,0);
-		&:hover{
+		//border-bottom: 1px solid rgba(255,255,255,0);
+		/* &:hover{
 			border-color: #ddd;
-		}
+		} */
 		.search-nav {
 			width: 40%;
 			max-width: 400px;
@@ -135,6 +135,15 @@ header{
 				}
 				.title-brand-cruise{
 					position: relative;
+				}
+				.title-brand-o{
+					min-width: 80px;
+					&>a{
+						justify-content: center;
+						&>font{
+							font-size: 8px;
+						}
+					}
 				}
 			}
 		}
@@ -571,6 +580,11 @@ header{
 				margin-left: 10px;
 			}
 		}
+	}
+}
+@media (max-width: 1350px) {
+	.title-brand-o{
+		display: none;
 	}
 }
 @media (max-width: 1199px) {

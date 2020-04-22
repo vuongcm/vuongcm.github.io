@@ -14,6 +14,12 @@
 	    border: 2px solid;
 	    border-radius: 6px;
 	    text-align: center;
+	    h4{
+			font-size: 14px;
+	    }
+	    p{
+	    	font-size: 13px;
+	    }
 	    .wrap-icon{
 	    	position: absolute;
 	    	width: 50px;
@@ -34,19 +40,19 @@
 	}
 	.three-reasons-1{
 		border-color: rgba(36,185,191,1);
-		h3,p,b{
+		h4,p,b{
 			color: rgba(36,185,191,1);
 		}
 	}
 	.three-reasons-2{
 		border-color: $happy;
-		h3,p,b{
+		h4,p,b{
 			color: $happy;
 		}
 	}
 	.three-reasons-3{
 		border-color: rgba(221,81,126,1);
-		h3,p,b{
+		h4,p,b{
 			color: rgba(221,81,126,1);
 		}
 	}

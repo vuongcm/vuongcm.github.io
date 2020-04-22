@@ -47,11 +47,25 @@
     	text-align: center;
 	}
 }
+.team-name-2{
+	text-align: center;
+	font-size: 26px;
+	color: $main-color;
+	margin-top: 15px;
+	width: 100%;
+}
 .foreground{
 	.title-h2{
 		font-size: 36px;
 	}
 	article{
+		
+		p,h3{
+			color: $main-color;
+		}
+		.team-name-2{
+			font-size: 18px;
+		}
 		.box-link{
 			margin-right: -15px;
 			margin-left: -15px;

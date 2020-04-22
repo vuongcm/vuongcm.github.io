@@ -131,8 +131,8 @@ img {
 body {
   width: 100%;
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 12px;
-  color: #111;
+  font-size: 13px;
+  color: #059298;
   letter-spacing: 1px;
   position: relative;
   --bodyWidth: 1583px;
@@ -441,7 +441,7 @@ select:focus {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 10px;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase; }
   .title-h2-line a {
     color: #18b3b3; }
@@ -459,7 +459,7 @@ select:focus {
   margin: 10px auto;
   line-height: 2;
   text-align: center;
-  color: #333;
+  color: #059ea6;
   width: 100%; }
 
 .paragraph-hide {
@@ -2273,9 +2273,9 @@ header {
     height: 60px;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: 1px solid rgba(255, 255, 255, 0); }
-    header .menu-wrap:hover {
-      border-color: #ddd; }
+    /* &:hover{
+    	border-color: #ddd;
+    } */ }
     header .menu-wrap .search-nav {
       width: 40%;
       max-width: 400px;
@@ -2356,6 +2356,12 @@ header {
             width: 100%; }
         header .menu-wrap .brand .brand-sub-menu .title-brand-cruise {
           position: relative; }
+        header .menu-wrap .brand .brand-sub-menu .title-brand-o {
+          min-width: 80px; }
+          header .menu-wrap .brand .brand-sub-menu .title-brand-o > a {
+            justify-content: center; }
+            header .menu-wrap .brand .brand-sub-menu .title-brand-o > a > font {
+              font-size: 8px; }
     header .menu-wrap .global-menu {
       height: 100%;
       display: flex;
@@ -2711,6 +2717,9 @@ header {
         font-style: normal;
         margin-left: 10px; }
 
+@media (max-width: 1350px) {
+  .title-brand-o {
+    display: none; } }
 @media (max-width: 1199px) {
   .form-search-nav {
     flex-wrap: wrap;
@@ -4669,7 +4678,7 @@ footer {
     justify-content: center;
     align-items: center;
     color: #fff;
-    background-color: rgba(0, 107, 107, 0.7); }
+    background-color: rgba(228, 178, 16, 0.9); }
     .fab-box a span {
       font-size: 10px;
       letter-spacing: 0; }
@@ -9902,7 +9911,9 @@ footer {
   .banner-top-slider .wrap-title-banner-top {
     left: 50%;
     width: 100%;
-    bottom: 170px; }
+    bottom: 160px; }
+    .banner-top-slider .wrap-title-banner-top h1 {
+      font-size: 18px; }
   .banner-top-slider #booking-widget-homepage {
     bottom: 45px; }
 
@@ -11756,7 +11767,7 @@ footer {
     .big-first-tour-box .head-box .count-day {
       top: 12px;
       left: 12px;
-      background: rgba(208, 179, 22, 0.9);
+      background: #e2ba10;
       text-transform: capitalize;
       font-size: 14px; }
     .big-first-tour-box .head-box .heart-tour {
@@ -13825,8 +13836,19 @@ body.body-st2 {
     font-weight: 400;
     text-align: center; }
 
+.team-name-2 {
+  text-align: center;
+  font-size: 26px;
+  color: #111;
+  margin-top: 15px;
+  width: 100%; }
+
 .foreground .title-h2 {
   font-size: 36px; }
+.foreground article p, .foreground article h3 {
+  color: #111; }
+.foreground article .team-name-2 {
+  font-size: 18px; }
 .foreground article .box-link {
   margin-right: -15px;
   margin-left: -15px;
@@ -13899,6 +13921,10 @@ body.body-st2 {
     border: 2px solid;
     border-radius: 6px;
     text-align: center; }
+    .content-why-book .three-reasons h4 {
+      font-size: 14px; }
+    .content-why-book .three-reasons p {
+      font-size: 13px; }
     .content-why-book .three-reasons .wrap-icon {
       position: absolute;
       width: 50px;
@@ -13919,15 +13945,15 @@ body.body-st2 {
         width: auto; }
   .content-why-book .three-reasons-1 {
     border-color: #24b9bf; }
-    .content-why-book .three-reasons-1 h3, .content-why-book .three-reasons-1 p, .content-why-book .three-reasons-1 b {
+    .content-why-book .three-reasons-1 h4, .content-why-book .three-reasons-1 p, .content-why-book .three-reasons-1 b {
       color: #24b9bf; }
   .content-why-book .three-reasons-2 {
     border-color: #18b3b3; }
-    .content-why-book .three-reasons-2 h3, .content-why-book .three-reasons-2 p, .content-why-book .three-reasons-2 b {
+    .content-why-book .three-reasons-2 h4, .content-why-book .three-reasons-2 p, .content-why-book .three-reasons-2 b {
       color: #18b3b3; }
   .content-why-book .three-reasons-3 {
     border-color: #dd517e; }
-    .content-why-book .three-reasons-3 h3, .content-why-book .three-reasons-3 p, .content-why-book .three-reasons-3 b {
+    .content-why-book .three-reasons-3 h4, .content-why-book .three-reasons-3 p, .content-why-book .three-reasons-3 b {
       color: #dd517e; }
 
 .wrap-slide-st11 {
