@@ -966,7 +966,20 @@
         }
     }
 }
-
+.section-login{
+	.wrap-slide-st7{
+		position: absolute;
+		left: 50px;
+		bottom: 0;
+		z-index: 9;
+		width: calc(100% - 50px);
+		.synch-carousels{
+			.item{
+				height: 650px;
+			}
+		}
+	}
+}
 @media (min-width: 1351px) {
 	.row-crowd{
 		.crowd-box{
@@ -1327,6 +1340,12 @@
 					padding-left: 0;
 				}
 			}
+		}
+	}
+	.section-login{
+		.wrap-slide-st7{
+			left: 0;
+			width: 100%;
 		}
 	}
 }
