@@ -160,7 +160,7 @@ a {
   letter-spacing: inherit;
   display: inline-block;
   line-height: inherit;
-  color: #111;
+  color: #059ea6;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -357,22 +357,22 @@ select:focus {
   opacity: .8; }
 
 .link-st2 {
-  color: #111;
+  color: #059ea6;
   line-height: 1.5;
-  border-bottom: 1px solid #111; }
+  border-bottom: 1px solid #059ea6; }
   .link-st2:hover {
     opacity: .8;
     color: #e3ba10; }
 
 .link-st3 {
-  color: #111;
+  color: #18b3b3;
   line-height: 1.5;
   font-weight: 500; }
   .link-st3:after {
     content: "";
     display: block;
     height: 1px;
-    background-color: #111;
+    background-color: #18b3b3;
     animation: lineAnimatedOut 0.5s;
     -moz-animation: lineAnimatedOut 0.5s;
     -webkit-animation: lineAnimatedOut 0.5s;
@@ -420,7 +420,7 @@ select:focus {
   font-weight: 600;
   line-height: 1;
   text-align: center;
-  color: #111; }
+  color: #059ea6; }
 
 .title-h2 {
   font-size: 24px;
@@ -428,7 +428,7 @@ select:focus {
   letter-spacing: 2px;
   line-height: 1.3;
   text-align: center;
-  color: #111;
+  color: #059ea6;
   width: 100%;
   text-transform: uppercase; }
 
@@ -641,10 +641,11 @@ select:focus {
     transition: all 0.2s linear; }
     .view-more-wrap .arrow-radius .select-arrow-thin {
       font-size: 10px;
-      color: #111; }
+      color: #18b3b3; }
   .view-more-wrap .link-st3 {
     margin-top: 25px;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    text-transform: uppercase; }
 
 .water-mask {
   width: 100%;
@@ -826,7 +827,7 @@ select:focus {
       text-transform: none; }
   .theme-slide-text p {
     line-height: 2;
-    color: #333; }
+    color: #059ea6; }
 
 .rotage180 {
   -ms-transform: rotate(180deg);
@@ -1079,7 +1080,7 @@ select:focus {
   .tooltip > .icon-font {
     font-size: 30px; }
     .tooltip > .icon-font:before {
-      color: #c3bdbd; }
+      color: #93bbbb; }
     .tooltip > .icon-font:hover:before {
       color: #e3ba10; }
   .tooltip > .icon-font-cr {
@@ -1100,7 +1101,7 @@ select:focus {
     position: absolute;
     display: block;
     background-color: #fff;
-    color: #111;
+    color: #059ea6;
     text-align: center;
     padding: 5px 10px;
     border-radius: 6px;
@@ -1188,7 +1189,7 @@ select:focus {
         box-shadow: none; }
 
 .arrow-radius {
-  border: 1px solid #111;
+  border: 1px solid #18b3b3;
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
@@ -1198,7 +1199,7 @@ select:focus {
   background-color: transparent; }
   .arrow-radius .select-arrow-thin {
     font-size: 9px;
-    color: #111;
+    color: #18b3b3;
     -webkit-transition: all 0.25s linear;
     -moz-transition: all 0.25s linear;
     -o-transition: all 0.25s linear;
@@ -1243,9 +1244,9 @@ select:focus {
       transition: all 0.2s linear; }
       .synch-carousels .nav-arrows button i {
         font-size: 30px;
-        color: #111; }
+        color: #059ea6; }
     .synch-carousels .nav-arrows .arrow-radius {
-      border: 1px solid #111; }
+      border: 1px solid #059ea6; }
       .synch-carousels .nav-arrows .arrow-radius .select-arrow-thin {
         font-size: 9px; }
       .synch-carousels .nav-arrows .arrow-radius:hover {
@@ -2357,11 +2358,10 @@ header {
         header .menu-wrap .brand .brand-sub-menu .title-brand-cruise {
           position: relative; }
         header .menu-wrap .brand .brand-sub-menu .title-brand-o {
-          min-width: 80px; }
-          header .menu-wrap .brand .brand-sub-menu .title-brand-o > a {
-            justify-content: center; }
-            header .menu-wrap .brand .brand-sub-menu .title-brand-o > a > font {
-              font-size: 8px; }
+          min-width: 50px; }
+          header .menu-wrap .brand .brand-sub-menu .title-brand-o > a > font {
+            font-size: 8px;
+            font-weight: bold; }
     header .menu-wrap .global-menu {
       height: 100%;
       display: flex;
@@ -2661,7 +2661,7 @@ header {
         -ms-transition: all 0.25s linear;
         transition: all 0.25s linear; }
       .form-search-nav .search-nav-where .value .btn-value:hover .map-marker {
-        color: #111; }
+        color: #059ea6; }
   .form-search-nav .search-nav-exp {
     position: relative;
     width: 26%; }
@@ -2682,9 +2682,9 @@ header {
           .form-search-nav .search-nav-exp .value .btn-value .icon-font:first-child:before {
             color: #e3ba10; }
         .form-search-nav .search-nav-exp .value .btn-value:hover .icon-font:first-child {
-          color: #111; }
+          color: #059ea6; }
           .form-search-nav .search-nav-exp .value .btn-value:hover .icon-font:first-child:before {
-            color: #111; }
+            color: #059ea6; }
   .form-search-nav .search-nav-days {
     position: relative;
     width: 14%; }
@@ -2844,7 +2844,7 @@ header {
       max-width: unset;
       width: 100%; } }
 footer {
-  background-color: #111; }
+  background-color: #0a8392; }
   footer > div:first-child {
     padding-top: 50px;
     padding-bottom: 30px;
@@ -2910,7 +2910,7 @@ footer {
     padding: 20px 0 15px;
     font-size: 11px;
     line-height: 1.5;
-    color: #aaa; }
+    color: #18b3b3; }
   footer .brand-section {
     width: 100%;
     text-align: center; }
@@ -2931,7 +2931,7 @@ footer {
       font-weight: 300;
       padding-top: 15px;
       padding-bottom: 15px;
-      color: #aaa; }
+      color: #18b3b3; }
 
 .btn-close {
   font-size: 40px;
@@ -3605,7 +3605,7 @@ footer {
     #search-cruise-modal .select-st1 .value .btn-value .icon-font.map-marker, #search-cruise-modal .select-st2 .value .btn-value .icon-font.map-marker, #search-cruise-modal .booking-st1 .value .btn-value .icon-font.map-marker {
       width: auto; }
     #search-cruise-modal .select-st1 .value .btn-value:hover .icon-font:first-child, #search-cruise-modal .select-st2 .value .btn-value:hover .icon-font:first-child, #search-cruise-modal .booking-st1 .value .btn-value:hover .icon-font:first-child {
-      color: #111; }
+      color: #059ea6; }
 #search-cruise-modal .booking-st2, #search-cruise-modal .booking-st3 {
   border: 1px solid #aaa;
   position: relative; }
@@ -3682,7 +3682,7 @@ footer {
     #creat-detail-modal .select-st1 .value .btn-value .icon-font.map-marker, #creat-detail-modal .select-st2 .value .btn-value .icon-font.map-marker, #creat-detail-modal .booking-st1 .value .btn-value .icon-font.map-marker {
       width: auto; }
     #creat-detail-modal .select-st1 .value .btn-value:hover .icon-font:first-child, #creat-detail-modal .select-st2 .value .btn-value:hover .icon-font:first-child, #creat-detail-modal .booking-st1 .value .btn-value:hover .icon-font:first-child {
-      color: #111; }
+      color: #059ea6; }
 #creat-detail-modal .booking-st2 {
   border: 1px solid #aaa;
   position: relative; }
@@ -3778,7 +3778,7 @@ footer {
         padding-top: 10px; }
         .box-mon-time ul li button:hover {
           background-color: #e3ba10;
-          color: #111; }
+          color: #059ea6; }
       .box-mon-time ul li button[disabled="disabled"] {
         background-color: transparent !important;
         color: rgba(0, 0, 0, 0.4) !important;
@@ -4314,7 +4314,7 @@ footer {
           -ms-transition: all 0.25s linear;
           transition: all 0.25s linear; }
         #booking-widget-homepage .form-banner-top .booking-step-where .value .btn-value:hover .map-marker, #booking-widget-homepage .form-banner-top .booking-step-where .value .btn-value:hover .icon-destination {
-          color: #111; }
+          color: #059ea6; }
     #booking-widget-homepage .form-banner-top .booking-step-when {
       position: relative;
       width: 23%; }
@@ -4637,7 +4637,7 @@ footer {
             font-size: 18px;
             text-transform: uppercase;
             font-weight: 500;
-            color: #111; }
+            color: #059ea6; }
           .wrap-map-st2 .map-home .synch-carousels .item article h4 {
             font-size: 28px;
             font-family: 'Reenie Beanie', cursive;
@@ -4745,7 +4745,7 @@ footer {
     font-weight: 600; }
   .section-blog-st2 .col-xlg-4 p {
     line-height: 2;
-    color: #333; }
+    color: #18b3b3; }
 
 @media (min-width: 992px) {
   .fab-box {
@@ -5314,13 +5314,13 @@ footer {
           -ms-transition: all 0.25s linear;
           transition: all 0.25s linear; }
         .wrap-filter-st2 .select-st1 .value > li .btn-value:hover .icon-font:first-child {
-          color: #111; }
+          color: #059ea6; }
   .wrap-filter-st2 .filter-who-2 .value > li .btn-value .icon-font:first-child {
     font-size: 22px; }
     .wrap-filter-st2 .filter-who-2 .value > li .btn-value .icon-font:first-child:before {
       color: #e3ba10; }
   .wrap-filter-st2 .filter-who-2 .value > li .btn-value:hover .icon-font:first-child:before {
-    color: #111; }
+    color: #059ea6; }
   .wrap-filter-st2 .filter-submit-2 {
     max-width: 20%;
     flex-grow: 1;
@@ -5915,7 +5915,7 @@ footer {
   .btn-day .select-arrow-thin {
     font-size: 9px; }
   .btn-day:hover .select-arrow-thin {
-    color: #111; }
+    color: #059ea6; }
 
 .btn-day-up {
   display: none;
@@ -6106,7 +6106,7 @@ footer {
     margin-top: 5px;
     padding: 10px;
     line-height: 1;
-    color: #111; }
+    color: #059ea6; }
     .order-day > a:first-child h3 {
       font-weight: 600;
       font-size: 14px;
@@ -6379,13 +6379,9 @@ footer {
       font-size: 11px;
       text-transform: uppercase; }
 
-.desti:before {
-  background-color: #d0b316;
-  content: " ";
-  display: inline-block;
-  height: 8px;
-  width: 8px;
-  border-radius: 140px 140px 0 140px;
+.desti .happy-01 {
+  color: #e3ba10;
+  font-size: 11px;
   margin-right: 5px; }
 
 .include-box {
@@ -6976,7 +6972,7 @@ footer {
           -ms-transition: all 0.25s linear;
           transition: all 0.25s linear; }
         #booking-widget-cruisepage .form-banner-top .booking-step-cruise .value .btn-value:hover .ship {
-          color: #111; }
+          color: #059ea6; }
         #booking-widget-cruisepage .form-banner-top .booking-step-cruise .value > li .btn-value {
           padding-left: 15px; }
     #booking-widget-cruisepage .form-banner-top .booking-step-night {
@@ -7315,7 +7311,7 @@ footer {
   font-weight: 300;
   line-height: 1.3; }
   .wrap-extra-posts > h2 b {
-    color: #111; }
+    color: #059ea6; }
 .wrap-extra-posts .row {
   margin: 30px -15px;
   display: flex;
@@ -10735,7 +10731,7 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  color: #111;
+  color: #059ea6;
   opacity: 1;
   cursor: pointer; }
   .group-head h2 {
@@ -11966,7 +11962,7 @@ footer {
     #modal-inquery-cruise .select-st1 .value .btn-value .icon-font.map-marker, #modal-inquery-cruise .select-st2 .value .btn-value .icon-font.map-marker, #modal-inquery-cruise .booking-st1 .value .btn-value .icon-font.map-marker, #modal-inquery-cruise .booking-st4 .value .btn-value .icon-font.map-marker {
       width: auto; }
     #modal-inquery-cruise .select-st1 .value .btn-value:hover .icon-font:first-child, #modal-inquery-cruise .select-st2 .value .btn-value:hover .icon-font:first-child, #modal-inquery-cruise .booking-st1 .value .btn-value:hover .icon-font:first-child, #modal-inquery-cruise .booking-st4 .value .btn-value:hover .icon-font:first-child {
-      color: #111; }
+      color: #059ea6; }
 #modal-inquery-cruise .booking-st2 {
   border: 1px solid #aaa;
   position: relative; }
@@ -13839,14 +13835,14 @@ body.body-st2 {
 .team-name-2 {
   text-align: center;
   font-size: 26px;
-  color: #111;
+  color: #059ea6;
   margin-top: 15px;
   width: 100%; }
 
 .foreground .title-h2 {
   font-size: 36px; }
 .foreground article p, .foreground article h3 {
-  color: #111; }
+  color: #059ea6; }
 .foreground article .team-name-2 {
   font-size: 18px; }
 .foreground article .box-link {
@@ -14010,7 +14006,10 @@ body.body-st2 {
   display: flex;
   align-items: center; }
   .big-first-tour-box .body-box .row .address-box {
-    max-width: calc(100% - 315px); }
+    width: calc(100% - 315px);
+    max-width: unset; }
+  .big-first-tour-box .body-box .row .btn-st6 {
+    margin-left: auto; }
 
 .info-cruise-month {
   align-items: baseline;
@@ -14027,10 +14026,10 @@ body.body-st2 {
       font-weight: 800;
       font-size: 14px; }
   .info-cruise-month > div b {
-    color: #18b3b3; }
+    color: #25b48a; }
   .info-cruise-month a {
     font-weight: 600;
-    color: #18b3b3; }
+    color: #25b48a; }
     .info-cruise-month a:hover {
       color: #e3ba10; }
 
@@ -14045,10 +14044,11 @@ body.body-st2 {
     color: red; }
 
 .cam_ket {
-  color: #18b3b3; }
+  color: #25b48a;
+  font-weight: 600; }
   .cam_ket .checkmark {
     margin-right: 5px;
-    color: #18b3b3;
+    color: #25b48a;
     font-size: 16px; }
 
 .wrap-foot-link {
@@ -14067,14 +14067,31 @@ body.body-st2 {
       -webkit-transform: rotate(180deg);
       transform: rotate(180deg); }
 
+.btn-st6 {
+  border: 2px dashed red;
+  border-radius: 999px;
+  padding: 10px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red; }
+  .btn-st6 font {
+    margin-left: 5px;
+    margin-right: 5px; }
+  .btn-st6:hover {
+    border-color: #e3ba10; }
+
 @media (max-width: 991px) {
   .big-first-tour-box .body-box .row {
     flex-wrap: wrap; }
     .big-first-tour-box .body-box .row .address-box {
       padding-right: 0;
       width: 100%;
-      max-width: unset;
       order: unset; }
+    .big-first-tour-box .body-box .row .btn-st6 {
+      margin-right: auto;
+      margin-top: 10px;
+      margin-bottom: 10px; }
   .big-first-tour-box .foot-trip .btn-st2 {
     margin-bottom: 0;
     margin-top: 10px; } }
@@ -14113,5 +14130,23 @@ body.body-st2 {
       color: #18b3b3; }
       .info-cruise-month a:hover {
         color: #e3ba10; } }
+.intro-country-tour .paragraph-hide h4 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0; }
+
+.media-box-st4 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin-top: 30px; }
+  .media-box-st4 .map-box > div {
+    background-color: #dcdcdc;
+    width: 100%;
+    height: 100%; }
+  .media-box-st4 .img-box {
+    left: 15px;
+    width: calc(50% - 30px); }
 
 /*# sourceMappingURL=main.css.map */

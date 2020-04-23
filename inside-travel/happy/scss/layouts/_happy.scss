@@ -117,7 +117,11 @@
 			display: flex;
 			align-items: center;
 			.address-box{
-				max-width: calc(100% - 315px);
+				width: calc(100% - 315px);
+				max-width: unset;
+			}
+			.btn-st6{
+				margin-left: auto;
 			}
 		}
 	}
@@ -142,12 +146,12 @@
 	}
 	&>div{
 		b{
-			color: $happy;
+			color: #25b48a;
 		}
 	}
 	a{
 		font-weight: 600;
-		color: $happy;
+		color: #25b48a;
 		&:hover{
 			color: $higlight-color;
 		}
@@ -166,10 +170,11 @@
     }
 }
 .cam_ket{
-	color: $happy;
+	color: #25b48a;
+	font-weight: 600;
 	.checkmark{
 		margin-right: 5px;
-		color: $happy;
+		color: #25b48a;
 		font-size: 16px;
 	}
 }
@@ -192,6 +197,22 @@
 		}
 	}
 }
+.btn-st6{
+	border: 2px dashed red;
+	border-radius: 999px;
+	padding: 10px 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: red;
+	font{
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	&:hover{
+		border-color: $higlight-color;
+	}
+}
 @media (max-width: 991px) {
 	.big-first-tour-box{
 		.body-box{
@@ -200,8 +221,13 @@
 				.address-box{
 					padding-right: 0;
 					width: 100%;
-					max-width: unset;
+					//max-width: unset;
 					order: unset;
+				}
+				.btn-st6{
+					margin-right: auto;
+					margin-top: 10px;
+					margin-bottom: 10px;
 				}
 			}
 		}
@@ -264,5 +290,33 @@
 				color: $higlight-color;
 			}
 		}
+	}
+}
+.intro-country-tour{
+	.paragraph-hide{
+		h4{
+			width: 100%;
+			text-align: center;
+			margin-top: 0;
+		}
+	}
+}
+.media-box-st4{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	margin-top: 30px;
+	.map-box{
+		&>div{
+			background-color: #dcdcdc;
+			width: 100%;
+			height: 100%;
+		}
+		
+	}
+	.img-box{
+		left: 15px;
+		width: calc(50% - 30px);
 	}
 }

@@ -137,11 +137,11 @@ header{
 					position: relative;
 				}
 				.title-brand-o{
-					min-width: 80px;
+					min-width: 50px;
 					&>a{
-						justify-content: center;
 						&>font{
 							font-size: 8px;
+							font-weight: bold;
 						}
 					}
 				}

@@ -1,5 +1,5 @@
 footer{
-	background-color: #111;
+	background-color: #0a8392;
 	&>div:first-child{
 		padding-top: 50px;
 		padding-bottom: 30px;
@@ -88,7 +88,7 @@ footer{
 		padding: 20px 0 15px;
 		font-size: 11px;
 		line-height: 1.5;
-		color: #aaa;
+		color: $happy;
 	}
 	.brand-section{
 		width: 100%;
@@ -113,7 +113,7 @@ footer{
 			font-weight: 300;
 			padding-top: 15px;
 			padding-bottom: 15px;
-			color: #aaa;
+			color: $happy;
 		}
 	}
 }

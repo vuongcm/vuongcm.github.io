@@ -888,14 +888,10 @@
 	}
 }
 .desti{
-	&:before{
-		background-color: #d0b316;
-	    content: " ";
-	    display: inline-block;
-	    height: 8px;
-	    width: 8px;
-	    border-radius: 140px 140px 0 140px;
-	    margin-right: 5px;
+	.happy-01{
+		color: $higlight-color;
+		font-size: 11px;
+		margin-right: 5px;
 	}
 }
 .include-box{
