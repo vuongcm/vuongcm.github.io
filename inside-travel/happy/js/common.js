@@ -319,7 +319,10 @@ $(document).ready(function() {
 	if(bodyWidth < 1200 && bodyWidth > 991){
 		$('.pull-up').height($('.foreground').outerHeight()-190);
 	} else if(bodyWidth <= 991){
-		$('.pull-up').height($('.foreground').outerHeight()-120);
+		if(!$('.pull-up.un-pull-up').length){
+			$('.pull-up').height($('.foreground').outerHeight()-120);
+		}
+		
 	} else{
 		$('.pull-up').height($('.foreground').outerHeight()-220);
 	}

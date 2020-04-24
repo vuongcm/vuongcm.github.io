@@ -9223,7 +9223,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: center; }
+    justify-content: center;
+    margin-bottom: 15px; }
 
 .section-bg {
   /* background: url(https://www.blacktomato.com/wp-content/uploads/2019/11/Homepage-banner-WAH-1.jpg);
@@ -9771,7 +9772,7 @@ footer {
   left: 0;
   top: 100%;
   width: 100%;
-  max-height: 200px;
+  max-height: 400px;
   overflow-y: auto;
   background-color: #fff;
   border: 1px solid #d2efef;
@@ -9909,7 +9910,8 @@ footer {
     width: 100%;
     bottom: 160px; }
     .banner-top-slider .wrap-title-banner-top h1 {
-      font-size: 18px; }
+      font-size: 24px;
+      margin-bottom: 10px; }
   .banner-top-slider #booking-widget-homepage {
     bottom: 45px; }
 
@@ -13997,6 +13999,13 @@ body.body-st2 {
       .wrap-slide-st11 .synch-carousels .wrap-dots button {
         color: rgba(255, 255, 255, 0); }
 
+.list-trip .big-first-tour-box:nth-child(2) .btn-st4 {
+  background-color: #25b48a; }
+.list-trip .big-first-tour-box:nth-child(3) .btn-st4 {
+  background-color: #31bfd2; }
+.list-trip .big-first-tour-box:nth-child(4) .btn-st4 {
+  background-color: #e8b919; }
+
 .big-first-tour-box .body-box .wrap-tooltip {
   display: inline-flex;
   padding-right: 0;
@@ -14077,9 +14086,34 @@ body.body-st2 {
   color: red; }
   .btn-st6 font {
     margin-left: 5px;
-    margin-right: 5px; }
+    margin-right: 5px;
+    text-transform: uppercase;
+    font-size: 12px; }
   .btn-st6:hover {
     border-color: #e3ba10; }
+
+.banner-top-country .search-container-st2 {
+  bottom: 30%; }
+
+.intro-country-tour .paragraph-hide h4 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0; }
+
+.media-box-st4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin-top: 30px; }
+  .media-box-st4 .map-box > div {
+    background-color: #dcdcdc;
+    width: 100%;
+    height: 100%; }
+  .media-box-st4 .img-box {
+    left: 15px;
+    width: calc(50% - 30px); }
 
 @media (max-width: 991px) {
   .big-first-tour-box .body-box .row {
@@ -14094,10 +14128,27 @@ body.body-st2 {
       margin-bottom: 10px; }
   .big-first-tour-box .foot-trip .btn-st2 {
     margin-bottom: 0;
-    margin-top: 10px; } }
+    margin-top: 10px; }
+
+  .banner-top-country .search-container-st2 {
+    position: static;
+    transform: translateX(0);
+    -moz-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    margin-left: auto;
+    margin-right: auto; }
+
+  .un-pull-up .foreground {
+    transform: translateY(0);
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0); } }
 @media (max-width: 767px) {
   .content-why-book .three-reasons {
-    margin-top: 40px; }
+    margin-top: 55px; }
 
   .big-first-tour-box .body-box > .row {
     border-bottom: 1px dotted #dcdcdc; }
@@ -14129,24 +14180,13 @@ body.body-st2 {
       font-weight: 600;
       color: #18b3b3; }
       .info-cruise-month a:hover {
-        color: #e3ba10; } }
-.intro-country-tour .paragraph-hide h4 {
-  width: 100%;
-  text-align: center;
-  margin-top: 0; }
+        color: #e3ba10; }
 
-.media-box-st4 {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-  margin-top: 30px; }
-  .media-box-st4 .map-box > div {
-    background-color: #dcdcdc;
-    width: 100%;
-    height: 100%; }
+  .media-box-st4 .map-box {
+    margin-top: 15px; }
+    .media-box-st4 .map-box > div {
+      min-height: 150px; }
   .media-box-st4 .img-box {
-    left: 15px;
-    width: calc(50% - 30px); }
+    width: calc(100% - 30px); } }
 
 /*# sourceMappingURL=main.css.map */

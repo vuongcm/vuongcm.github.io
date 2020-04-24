@@ -90,6 +90,7 @@
 	    flex-wrap: wrap;
 	    align-items: flex-start;
 	    justify-content: center;
+	    margin-bottom: 15px;
 	}
 }
 .section-bg{
@@ -781,7 +782,7 @@
 	left: 0;
 	top: 100%;
 	width: 100%;
-	max-height: 200px;
+	max-height: 400px;
     overflow-y: auto;
     background-color: #fff;
     border: 1px solid #d2efef;
@@ -995,7 +996,8 @@
 			width: 100%;
 			bottom: 160px;
 			h1{
-				font-size: 18px;
+				font-size: 24px;
+				margin-bottom: 10px;
 			}
 		}
 		#booking-widget-homepage{
