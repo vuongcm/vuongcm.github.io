@@ -2248,6 +2248,9 @@ $(document).ready(function() {
 			$(this).next('ul').toggleClass('open-flex');
 		});
 	}
+	$('.wrap-push-down button').click(function(){
+		$('html, body').animate({ scrollTop:1000}, 'slow');
+	});
 });
 window.onload = function() {
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());

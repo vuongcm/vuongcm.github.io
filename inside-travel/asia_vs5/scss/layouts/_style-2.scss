@@ -15,6 +15,26 @@
 		@include translateX(-50%);
 	}
 }
+.wrap-mini-intro{
+	.paragraph-hide{
+		max-height: 45px
+	}
+	.read-more-st1{
+		padding-top: 10px;
+	}
+}
+.wrap-push-down{
+	z-index: 5;
+	margin-top: 60px;
+	button{
+		color: #fff;
+		font-size: 20px;
+		opacity: .6;
+		&:hover{
+			opacity: 1;
+		}
+	}
+}
 .wrap-slide-st7{
 	width: 100%;
 	.synch-carousels{
@@ -1007,7 +1027,9 @@
 	}
 }
 @media (max-width: 1199px) {
-	
+	.wrap-push-down{
+		display: none;
+	}
 	.foot-trip{
 		//flex-wrap: wrap;
 		justify-content: center;
