@@ -38,6 +38,9 @@ header{
 			width: 20%;
 			max-height: 100%;
 			max-width: 88px;
+			&>a{
+				display: block;
+			}
 		}
 		.global-menu {
 			width: 40%;
