@@ -1230,10 +1230,10 @@ $(document).ready(function() {
 		}
 	}
 	if($('.booking-step-where').length){
-		$('#creat-trip-modal .booking-step-where .btn-value').click(function(){
+		$('#creat-trip-modal .booking-step-where.select-slide .btn-value').click(function(){
 			$(this).toggleClass('active');
 			let valueActive = $(this).children('b').text();
-			let getBtn = $('#booking-widget-homepage .booking-step-where .btn-value');
+			let getBtn = $('.booking-step-where.select-st1 .btn-value');
 			for(let i=0; i < getBtn.length; i++){
 				if(getBtn.eq(i).children('b').text() == valueActive){
 					getBtn.eq(i).toggleClass('checked');
@@ -1245,14 +1245,14 @@ $(document).ready(function() {
 				$('#creat-trip-modal .booking-step-where>select').append(`<option value="${btnActive.children('b').eq(i).text()}" selected></option>`);
 			}
 			if(btnActive.length == 0){
-				$('#booking-widget-homepage .booking-step-where .text b').html(`Where do you want to go?`);
+				$('.booking-step-where .text b').html(`Where do you want to go?`);
 			} else{
-				$('#booking-widget-homepage .booking-step-where .text b').html(`${btnActive.length} selected`);
+				$('.booking-step-where .text b').html(`${btnActive.length} selected`);
 			}
 		});
-		$('#booking-widget-homepage .booking-step-where .btn-value').click(function(){
+		$('.booking-step-where.select-st1 .btn-value').click(function(){
 			let valueChecked = $(this).children('b').text();
-			let getBtn2 = $('#creat-trip-modal .booking-step-where .btn-value');
+			let getBtn2 = $('#creat-trip-modal .booking-step-where.select-slide .btn-value');
 			for(let i=0; i < getBtn2.length; i++){
 				if(getBtn2.eq(i).children('b').text() == valueChecked){
 					getBtn2.eq(i).click();
@@ -2249,7 +2249,7 @@ $(document).ready(function() {
 		});
 	}
 	$('.wrap-push-down button').click(function(){
-		$('html, body').animate({ scrollTop:1000}, 'slow');
+		$('html, body').animate({ scrollTop:500}, 'slow');
 	});
 });
 window.onload = function() {

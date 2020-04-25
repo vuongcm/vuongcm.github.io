@@ -1933,7 +1933,10 @@ $(document).ready(function() {
 	    	}
 	    });
 	}
-	
+	$('.cam_ket').click(function(){
+		$('.modal-container').removeClass('close-display');
+		$('.modal-cam-ket').removeClass('close-display');
+	});
 	/*============end-inquery-cruise-3=============*/
 	$('body').delegate('.filter-box>a','click',function(){
 		$(this).next('.value').toggleClass('open-block');

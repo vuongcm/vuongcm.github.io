@@ -9910,8 +9910,8 @@ footer {
     width: 100%;
     bottom: 160px; }
     .banner-top-slider .wrap-title-banner-top h1 {
-      font-size: 24px;
-      margin-bottom: 10px; }
+      font-size: 26px;
+      margin-bottom: 0; }
   .banner-top-slider #booking-widget-homepage {
     bottom: 45px; }
 
@@ -14114,6 +14114,19 @@ body.body-st2 {
   .media-box-st4 .img-box {
     left: 15px;
     width: calc(50% - 30px); }
+
+.modal-cam-ket {
+  max-width: 600px; }
+  .modal-cam-ket h3 .checkmark {
+    font-size: 20px;
+    margin-right: 5px; }
+  .modal-cam-ket .modal-body .paragraph {
+    text-align: left;
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #555; }
 
 @media (max-width: 991px) {
   .big-first-tour-box .body-box .row {

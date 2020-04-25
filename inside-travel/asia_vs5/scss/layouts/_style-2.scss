@@ -112,6 +112,12 @@
 	    justify-content: center;
 	}
 }
+.day-trip{
+	.icon-menu-1{
+		font-size: 50px;
+		color: #aaa;
+	}
+}
 .section-bg{
 	/* background: url(https://www.blacktomato.com/wp-content/uploads/2019/11/Homepage-banner-WAH-1.jpg);
 	-o-object-fit: cover;
@@ -431,6 +437,14 @@
 .show-mobi{
 	display: none;
 }
+.info-cr-highlight{
+	display: flex;
+	flex-wrap: wrap;
+	.hotel-news{
+		width: unset;
+		margin-left: auto;
+	}
+}
 .trip-st4{
 	position: relative;
     width: 100%;
@@ -450,6 +464,7 @@
     	.title-info{
     		width: calc(100% - 127px);
     		padding-right: 10px;
+    		flex-grow: 1;
     		.title-h2{
     			margin-bottom: 5px;
     		}
@@ -1104,6 +1119,14 @@
 	} 
 }
 @media (max-width: 991px) {
+	.info-cr-highlight{
+		.rank{
+			width: 100%;
+		}
+		.hotel-news{
+			width: 100%;
+		}
+	}
 	.wrap-slide-st8{
 		margin-bottom: 50px;
 		.gallery{
