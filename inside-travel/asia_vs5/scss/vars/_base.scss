@@ -1255,11 +1255,11 @@ select:focus {
             @include smooth(.2s);
             i{
                 font-size: 30px;
-                color: $main-color;
+                color: #aaa;
             }
         }
         .arrow-radius{
-            border: 1px solid $title-color;
+            border: 1px solid #aaa;
             .select-arrow-thin{
                 font-size: 9px;
             }
