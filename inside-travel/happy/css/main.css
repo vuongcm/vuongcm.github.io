@@ -3699,15 +3699,31 @@ footer {
   width: 100%;
   height: auto;
   background-color: #fff; }
+  .booking-st2 label {
+    position: absolute;
+    left: 10px;
+    bottom: 18px;
+    font-size: 16px;
+    color: #18b3b3;
+    font-weight: 600;
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    transition: all .25s linear;
+    pointer-events: none; }
   .booking-st2 input {
     z-index: 5;
-    opacity: 0; }
+    opacity: 0;
+    height: 100%; }
   .booking-st2 .text {
     position: absolute;
     color: #555;
-    text-align: left; }
+    text-align: left;
+    padding-right: 5px; }
     .booking-st2 .text .icon-font {
-      color: #888; }
+      color: #18b3b3;
+      font-size: 18px; }
 
 .booking-st3 {
   display: flex;
@@ -4430,7 +4446,7 @@ footer {
     font-size: 16px;
     margin-right: 5px; }
   .text b {
-    font-weight: normal;
+    color: #18b3b3;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -8790,6 +8806,8 @@ footer {
     content: '';
     display: block;
     position: absolute;
+    top: 5px;
+    left: 5px;
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -14115,6 +14133,67 @@ body.body-st2 {
     left: 15px;
     width: calc(50% - 30px); }
 
+.search-container-st2 .search-box-st2.search-ticket form .box-step-where {
+  width: 16%; }
+  .search-container-st2 .search-box-st2.search-ticket form .box-step-where > div > .text {
+    padding-left: 10px;
+    padding-right: 25px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+  .search-container-st2 .search-box-st2.search-ticket form .box-step-where > div label {
+    left: 10px; }
+.search-container-st2 .search-box-st2.search-ticket form .booking-step-depature {
+  width: 15%;
+  position: relative;
+  border-right: 1px solid #d2efef; }
+  .search-container-st2 .search-box-st2.search-ticket form .booking-step-depature .text {
+    height: 100%; }
+    .search-container-st2 .search-box-st2.search-ticket form .booking-step-depature .text b {
+      padding: 30px 10px 11px 10px;
+      font-size: 16px; }
+.search-container-st2 .search-box-st2.search-ticket form .booking-step-room {
+  width: 19%;
+  position: relative;
+  background-color: #fff; }
+  .search-container-st2 .search-box-st2.search-ticket form .booking-step-room .text {
+    height: 100%;
+    padding-right: 5px;
+    padding-left: 10px; }
+    .search-container-st2 .search-box-st2.search-ticket form .booking-step-room .text b {
+      padding-right: 5px; }
+    .search-container-st2 .search-box-st2.search-ticket form .booking-step-room .text .icon-font {
+      font-size: 12px;
+      color: #18b3b3;
+      transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      -ms-transform: rotate(90deg); }
+.search-container-st2 .search-box-st2.search-ticket form .box-step-submit {
+  width: 19%;
+  max-width: 300px; }
+.search-container-st2 .search-box-st2.search-ticket form.one-way .box-step-where {
+  width: 20%; }
+.search-container-st2 .search-box-st2.search-ticket form.one-way .booking-step-depature {
+  width: 16%; }
+  .search-container-st2 .search-box-st2.search-ticket form.one-way .booking-step-depature:nth-child(4) {
+    display: none; }
+.search-container-st2 .search-box-st2.search-ticket form.one-way .booking-step-room {
+  width: 25%; }
+
+.type-ticket {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px; }
+  .type-ticket .input-radio-st1 {
+    padding-right: 15px;
+    padding-left: 15px; }
+    .type-ticket .input-radio-st1 label {
+      color: #fff;
+      font-weight: 600;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); }
+
 .modal-cam-ket {
   max-width: 600px; }
   .modal-cam-ket h3 .checkmark {
@@ -14127,6 +14206,91 @@ body.body-st2 {
     margin-top: 5px;
     margin-bottom: 5px;
     color: #555; }
+
+.banner-ticket .wrap-title-banner-top {
+  bottom: 100px; }
+
+.modal-ticket {
+  max-width: 700px; }
+  .modal-ticket .modal-head {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px; }
+    .modal-ticket .modal-head .img-box-st2 {
+      width: 40px; }
+      .modal-ticket .modal-head .img-box-st2 img {
+        border-radius: 50%; }
+    .modal-ticket .modal-head h3 {
+      flex-grow: 1;
+      margin-left: 10px; }
+      .modal-ticket .modal-head h3 a {
+        color: red; }
+  .modal-ticket .modal-body .form-field > div {
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: 600; }
+    .modal-ticket .modal-body .form-field > div label {
+      font-weight: inherit; }
+  .modal-ticket .modal-body .checkbox-inline {
+    text-align: left;
+    width: 100%;
+    margin-top: 15px; }
+    .modal-ticket .modal-body .checkbox-inline input {
+      width: unset; }
+  .modal-ticket .modal-body .btn-st3 {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 100%;
+    max-width: 380px;
+    background-color: #e3ba10; }
+
+.box-st2 {
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px; }
+  .box-st2 .airlines h3 {
+    color: #18b3b3;
+    font-size: 16px; }
+    .box-st2 .airlines h3 strong {
+      width: 30px;
+      height: 30px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      line-height: 30px;
+      border: 1px solid #18b3b3;
+      border-radius: 50%;
+      margin-right: 5px;
+      padding-left: 1px; }
+  .box-st2 .text-over img {
+    max-width: 200px;
+    float: left; }
+
+.box-st3 {
+  display: flex;
+  align-items: flex-end;
+  background-color: #fff;
+  padding-bottom: 20px;
+  padding-top: 20px; }
+  .box-st3 .box-img-st2 {
+    width: 100%;
+    max-width: 61px; }
+  .box-st3 .info {
+    padding-left: 15px; }
+    .box-st3 .info h3 {
+      text-align: left; }
+    .box-st3 .info .paragraph {
+      text-align: left;
+      padding: 0;
+      margin-bottom: 0; }
 
 @media (max-width: 991px) {
   .big-first-tour-box .body-box .row {

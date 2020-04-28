@@ -241,7 +241,8 @@
 		margin-right: 5px;
 	}
 	b{
-		font-weight: normal;
+		//font-weight: normal;
+		color: $happy;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		overflow: hidden;

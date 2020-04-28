@@ -268,6 +268,93 @@
 		width: calc(50% - 30px);
 	}
 }
+.search-container-st2{
+	.search-box-st2.search-ticket{
+		form{
+			.box-step-where{
+				width: 16%;
+				&>div{
+					&>.text{
+						padding-left: 10px;
+						padding-right: 25px;
+						text-overflow: ellipsis;
+					    white-space: nowrap;
+					    overflow: hidden;
+					}
+					label{
+						left: 10px;
+					}
+				}
+			}
+			.booking-step-depature{
+				width: 15%;
+				position: relative;
+				border-right: 1px solid #d2efef;
+				.text{
+					height: 100%;
+					b{
+						padding: 30px 10px 11px 10px;
+						font-size: 16px;
+					}
+				}
+			}
+			.booking-step-room{
+				width: 19%;
+				position: relative;
+				background-color: #fff;
+				.text{
+					height: 100%;
+					padding-right: 5px;
+					padding-left: 10px;
+					b{
+						padding-right: 5px;
+					}
+					.icon-font{
+						font-size: 12px;
+					    color: #18b3b3;
+					    transform: rotate(90deg);
+					    -moz-transform: rotate(90deg);
+					    -webkit-transform: rotate(90deg);
+					    -o-transform: rotate(90deg);
+					    -ms-transform: rotate(90deg);
+					}
+				}
+			}
+			.box-step-submit{
+				width: 19%;
+				max-width: 300px;
+			}
+		}
+		form.one-way{
+			.box-step-where{
+				width: 20%;
+			}
+			.booking-step-depature{
+				width: 16%;
+				&:nth-child(4){
+					display: none;
+				}
+			}
+			.booking-step-room{
+				width: 25%;
+			}
+		}
+	}
+}
+.type-ticket{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
+	.input-radio-st1{
+		padding-right: 15px;
+		padding-left: 15px;
+		label{
+			color: #fff;
+			font-weight: 600;
+			text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+		}
+	}
+}
 .modal-cam-ket{
 	max-width: 600px;
 	h3{
@@ -284,6 +371,120 @@
 			margin-top: 5px;
 			margin-bottom: 5px;
 			color: #555;
+		}
+	}
+}
+.banner-ticket{
+	.wrap-title-banner-top{
+		bottom: 100px;
+	}
+}
+.modal-ticket{
+	max-width: 700px;
+	.modal-head{
+		display: flex;
+		align-items: center;
+		padding-left: 15px;
+		padding-right: 15px;
+		.img-box-st2{
+			width: 40px;
+			img{
+				border-radius: 50%;
+			}
+		}
+		h3{
+			flex-grow: 1;
+			margin-left: 10px;
+			a{
+				color: red;
+			}
+		}
+	}
+	.modal-body{
+		.form-field{
+			&>div{
+				margin-bottom: 5px;
+				text-align: left;
+				font-weight: 600;
+				label{
+					font-weight: inherit;
+				}
+			}
+
+		}
+		.checkbox-inline{
+			text-align: left;
+			width: 100%;
+			margin-top: 15px;
+			input{
+				width: unset;
+			}
+		}
+		.btn-st3{
+			margin-top: 15px;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 45px;
+			width: 100%;
+			max-width: 380px;
+			background-color: $higlight-color;
+		}
+	}
+}
+.box-st2{
+	width: calc(100% - 30px);
+	margin: 0 auto;
+	background-color: #fff;
+    padding: 20px;
+	.airlines{
+		h3{
+			color: $happy;
+			font-size: 16px;
+			strong{
+				width: 30px;
+			    height: 30px;
+			    display: inline-flex;
+			    justify-content: center;
+			    align-items: center;
+			    text-align: center;
+			    line-height: 30px;
+			    border: 1px solid $happy;
+			    border-radius: 50%;
+			    margin-right: 5px;
+			    //font-size: 14px;
+			    padding-left: 1px;
+			}
+		}
+	}
+	.text-over{
+		img{
+			max-width: 200px;
+			float: left;
+		}
+	}
+}
+.box-st3{
+	display: flex;
+	align-items: flex-end;
+	background-color: #fff;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	.box-img-st2{
+		width: 100%;
+		max-width: 61px;
+	}
+	.info{
+		padding-left: 15px;
+		h3{
+			text-align: left;
+		}
+		.paragraph{
+			text-align: left;
+			padding: 0;
+			margin-bottom: 0;
 		}
 	}
 }

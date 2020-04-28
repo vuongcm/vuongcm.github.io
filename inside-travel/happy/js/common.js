@@ -238,9 +238,9 @@ $(document).ready(function() {
 		let paraHide = $(this).parent('.read-more-st1').prev('.paragraph-hide');
 		paraHide.toggleClass('paragraph-show');
 		if(paraHide.css('max-height') == 'none'){
-			$(this).text('Less ...');
+			$(this).text('Thu gọn ...');
 		} else{
-			$(this).text('Read More ...');
+			$(this).text('Xem thêm ...');
 		}
 		if($(this).closest('.pull-up').length > 0){
 			if(bodyWidth < 1200 && bodyWidth > 991){
@@ -1422,17 +1422,7 @@ $(document).ready(function() {
 			});
 		}
 	}
-	if($('.booking-step-depature').length){
-		$('.booking-step-depature input').datepicker({
-			//inline: true,
-			minDate:new Date(),
-			showOtherMonths: true
-		});
-		$('.booking-step-depature input').change(function(){
-			$('.booking-step-depature .text').children('b').text($(this).val());
-			$('#search-cruise-modal .booking-step-depature input').val($(this).val());
-		});
-	}
+	
 	if($('.booking-step-depa').length){
 		$('.booking-step-depa .text').click(function(){
 			$(this).nextAll('.value-3').toggleClass('open-block');
@@ -1999,6 +1989,28 @@ $(document).ready(function() {
 			$(this).next('label').removeClass('active');
 		}
 	});
+	/*======banner-ticket=======*/
+	$('.type-ticket .input-radio-st1 input').click(function(){
+		if($(this).attr('id') == 'radio-1'){
+			$('.search-ticket form').removeClass('one-way');
+		} else{
+			$('.search-ticket form').addClass('one-way');
+		}
+	});
+	$('.open-modal-ticket').click(function(){
+		
+		let diemDi = $('#diem_di').val();
+		let diemDen = $('#diem_den').val();
+		let ngayDi = $('.ngay_di').val();
+		let ngayVe = $('.search-ticket .one-way').length ? '' : $('.ngay_ve').val();
+		let soNguoi = $('.search-ticket .booking-step-room .text b').text().trim();
+		if(diemDi != '' && diemDen != ''){
+			$('.modal-ticket textarea#f_question').val(`${diemDi}\n${diemDen}\n${ngayDi}\n${ngayVe}\n${soNguoi}`);
+			$('.modal-container').removeClass('close-display');
+			$('.modal-ticket').removeClass('close-display');
+		}
+		
+	});
 	/*======booking=======*/
 	if($('.room-booking-wrap').length){
 		$('.room-booking-wrap').delegate(`.select-cabin input[type="radio"]`,'click',function(){
@@ -2232,7 +2244,35 @@ $(document).ready(function() {
 		});
 	}
 	/* search-container-happy */
+	if($('.booking-step-depature').length){
+		$('.booking-step-depature input').datepicker({
+			//inline: true,
+			minDate:new Date(),
+			showOtherMonths: true
+		});
+		$('.booking-step-depature input').change(function(){
+			let thisText = $(this).closest('.booking-step-depature').find('.text b');
+			thisText.text($(this).val());
+			/*$('.booking-step-depature .text').children('b').text($(this).val());
+			$('#search-cruise-modal .booking-step-depature input').val($(this).val());*/
+		});
+		$('.booking-step-depature input').click(function(){
+			$(this).closest('.booking-step-depature').find('label').css({
+				'bottom':'28px',
+				'font-size':'12px',
+				'color':'#b9b9b9'
+			});
+		});
+		$('body').click(function(e){
+			if (!$('.booking-step-depature').is(e.target) && $('.booking-step-depature').has(e.target).length === 0) {
+	            if($(".booking-step-depature input").val() == ''){
+					$('.booking-step-depature label').removeAttr('style');
+				}
+	        }
+	    });
+	}
 	if($('.search-box-st2').length){
+
 		$('.box-step-where .text').click(function(){
 			if($(this).closest('.box-step-where').find('.value-st4').css('display') == 'none'){
 				$(this).closest('.box-step-where').find('.value-st4').addClass('open-block');

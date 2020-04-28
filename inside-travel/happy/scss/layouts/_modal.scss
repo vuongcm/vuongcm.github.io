@@ -937,16 +937,33 @@
 	width: 100%;
 	height: auto;
 	background-color: #fff;
+	label{
+		position: absolute;
+	    left: 10px;
+	    bottom: 18px;
+	    font-size: 16px;
+	    color: #18b3b3;
+	    font-weight: 600;
+	    -webkit-transition: all .25s linear;
+	    -moz-transition: all .25s linear;
+	    -o-transition: all .25s linear;
+	    -ms-transition: all .25s linear;
+	    transition: all .25s linear;
+	    pointer-events: none;
+	}
 	input{
 		z-index: 5;
 		opacity: 0;
+		height: 100%;
 	}
 	.text{
 		position: absolute;
 		color: #555;
 		text-align: left;
+		padding-right: 5px;
 		.icon-font{
-			color: $light-color-2;
+			color: $happy;
+			font-size: 18px;
 		}
 	}
 }
