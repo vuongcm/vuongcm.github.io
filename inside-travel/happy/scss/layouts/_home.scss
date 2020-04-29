@@ -179,7 +179,7 @@
 	position: absolute;
 	left: 0;
 	background-color: #fff;
-	border: 1px solid #dcdcdc;
+	border: 1px solid #18b3b3;
 	display: none;
 	z-index: 2;
 	&>div{
@@ -198,19 +198,19 @@
 	    	padding-left: 3px;
 	    }
 	    button{
+	    	border: 1px solid #b0d6d6;
+			color: #b0d6d6;
 	    	width: 28px;
 	    	height: 28px;
 	    	border-radius: 50%;
-	    	border: 1px solid $light-color-3;
-	    	color: $light-color-3;
 	    	display: flex;
 	    	justify-content: center;
 	    	align-items: center;
 	    	line-height: 1;
 	    	flex-shrink: 0;
 	    	&:hover{
-	    		border-color: #000;
-	    		color: #000;
+	    		border-color: #18b3b3;
+    			color: #18b3b3;
 	    	}
 	    }
 	    .btn-up{

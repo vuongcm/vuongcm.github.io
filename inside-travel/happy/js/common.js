@@ -1999,16 +1999,14 @@ $(document).ready(function() {
 	});
 	$('.open-modal-ticket').click(function(){
 		
-		let diemDi = $('#diem_di').val();
-		let diemDen = $('#diem_den').val();
-		let ngayDi = $('.ngay_di').val();
-		let ngayVe = $('.search-ticket .one-way').length ? '' : $('.ngay_ve').val();
-		let soNguoi = $('.search-ticket .booking-step-room .text b').text().trim();
-		if(diemDi != '' && diemDen != ''){
-			$('.modal-ticket textarea#f_question').val(`${diemDi}\n${diemDen}\n${ngayDi}\n${ngayVe}\n${soNguoi}`);
-			$('.modal-container').removeClass('close-display');
-			$('.modal-ticket').removeClass('close-display');
-		}
+		let diemDi = 'Điểm đi: ' + $('#diem_di').val();
+		let diemDen = 'Điểm đến: ' + $('#diem_den').val();
+		let ngayDi = 'Ngày đi: ' + $('.ngay_di').val();
+		let ngayVe = $('.search-ticket .one-way').length ? '' : 'Ngày về: ' + $('.ngay_ve').val();
+		let soNguoi = 'Số người: ' + $('.search-ticket .booking-step-room .text b').text().trim();
+		$('.modal-ticket textarea#f_question').val(`${diemDi}\n${diemDen}\n${ngayDi}\n${ngayVe}\n${soNguoi}`.trim());
+		$('.modal-container').removeClass('close-display');
+		$('.modal-ticket').removeClass('close-display');
 		
 	});
 	/*======booking=======*/

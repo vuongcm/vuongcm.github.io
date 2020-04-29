@@ -381,6 +381,7 @@
 }
 .modal-ticket{
 	max-width: 700px;
+	border-radius: 15px;
 	.modal-head{
 		display: flex;
 		align-items: center;
@@ -418,6 +419,12 @@
 			margin-top: 15px;
 			input{
 				width: unset;
+			}
+			label{
+				color: #219ea3;
+				b{
+					color: inherit;
+				}
 			}
 		}
 		.btn-st3{

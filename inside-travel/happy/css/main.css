@@ -346,8 +346,8 @@ select:focus {
     color: #e3ba10; }
 
 .btn-disabled {
-  color: rgba(0, 0, 0, 0.4) !important;
-  border-color: rgba(0, 0, 0, 0.4) !important;
+  color: #b0d6d6 !important;
+  border-color: #b0d6d6 !important;
   opacity: 1 !important; }
 
 .link-st1 {
@@ -392,9 +392,9 @@ select:focus {
   width: 100%;
   text-align: center; }
   .read-more-st1 a {
-    color: #aaa; }
+    color: #82afaf; }
     .read-more-st1 a:after {
-      background-color: #ddd; }
+      background-color: #c5dbde; }
 
 .read-more-st2 {
   width: 100%; }
@@ -2937,7 +2937,8 @@ footer {
   font-size: 40px;
   position: absolute;
   top: 10px;
-  right: 15px; }
+  right: 15px;
+  color: #0aa9a9; }
 
 .modal-container {
   position: absolute;
@@ -3317,9 +3318,14 @@ footer {
     -moz-transition: all 0.25s linear;
     -o-transition: all 0.25s linear;
     -ms-transition: all 0.25s linear;
-    transition: all 0.25s linear; }
+    transition: all 0.25s linear;
+    border: 1px solid #a2d2d2;
+    font-size: 20px;
+    font-weight: bold;
+    color: #16b3b3; }
   .form-field textarea {
-    height: 210px; }
+    height: 261px;
+    border-radius: 10px; }
 
 .phone-wrap {
   margin-top: 15px; }
@@ -4395,7 +4401,7 @@ footer {
   position: absolute;
   left: 0;
   background-color: #fff;
-  border: 1px solid #dcdcdc;
+  border: 1px solid #18b3b3;
   display: none;
   z-index: 2; }
   .value-2 > div {
@@ -4412,19 +4418,19 @@ footer {
       padding-right: 3px;
       padding-left: 3px; }
     .value-2 > div button {
+      border: 1px solid #b0d6d6;
+      color: #b0d6d6;
       width: 28px;
       height: 28px;
       border-radius: 50%;
-      border: 1px solid #666;
-      color: #666;
       display: flex;
       justify-content: center;
       align-items: center;
       line-height: 1;
       flex-shrink: 0; }
       .value-2 > div button:hover {
-        border-color: #000;
-        color: #000; }
+        border-color: #18b3b3;
+        color: #18b3b3; }
     .value-2 > div .btn-up {
       font-size: 18px; }
     .value-2 > div .btn-down {
@@ -14211,7 +14217,8 @@ body.body-st2 {
   bottom: 100px; }
 
 .modal-ticket {
-  max-width: 700px; }
+  max-width: 700px;
+  border-radius: 15px; }
   .modal-ticket .modal-head {
     display: flex;
     align-items: center;
@@ -14238,6 +14245,10 @@ body.body-st2 {
     margin-top: 15px; }
     .modal-ticket .modal-body .checkbox-inline input {
       width: unset; }
+    .modal-ticket .modal-body .checkbox-inline label {
+      color: #219ea3; }
+      .modal-ticket .modal-body .checkbox-inline label b {
+        color: inherit; }
   .modal-ticket .modal-body .btn-st3 {
     margin-top: 15px;
     margin-left: auto;

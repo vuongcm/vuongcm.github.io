@@ -277,8 +277,8 @@ select:focus {
     }
 }
 .btn-disabled{
-    color: $color-cover-dak!important;
-    border-color: $color-cover-dak!important;
+    color: #b0d6d6!important;
+    border-color: #b0d6d6!important;
     opacity: 1!important;
 }
 .link-st1 {
@@ -321,9 +321,9 @@ select:focus {
     width: 100%;
     text-align: center;
     a{
-        color: $light-color-4;
+        color: #82afaf;
         &:after{
-            background-color: #ddd;
+            background-color: #c5dbde;
         }
     }
 }
