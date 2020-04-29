@@ -1234,7 +1234,18 @@ $(document).ready(function() {
 		$('.booking-step-calendar input').datepicker({
 			//inline: true,
 			minDate:new Date(),
-			showOtherMonths: true
+			showOtherMonths: true,
+			prevText: "Trước",
+            nextText: "Sau",
+            currentText: "Hôm nay",
+            monthNames: ["Tháng một", "Tháng hai", "Tháng ba", "Tháng tư", "Tháng năm", "Tháng sáu", "Tháng bảy", "Tháng tám", "Tháng chín", "Tháng mười", "Tháng mười một", "Tháng mười hai"],
+            monthNamesShort: ["Một", "Hai", "Ba", "Bốn", "Năm", "Sáu", "Bảy", "Tám", "Chín", "Mười", "Mười một", "Mười hai"],
+            dayNames: ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"],
+            dayNamesShort: ["CN", "Hai", "Ba", "Tư", "Năm", "Sáu", "Bảy"],
+            dayNamesMin: ["CN", "T2", "T3", "T4", "T5", "T6", "T7"],
+            weekHeader: "Tuần",
+            dateFormat: "dd/mm/yy",
+            firstDay: 1
 		});
 		$('.booking-step-calendar input').change(function(){
 			$(this).next('.text').children('b').text($(this).val());
@@ -2246,7 +2257,18 @@ $(document).ready(function() {
 		$('.booking-step-depature input').datepicker({
 			//inline: true,
 			minDate:new Date(),
-			showOtherMonths: true
+			showOtherMonths: true,
+			prevText: "Trước",
+            nextText: "Sau",
+            currentText: "Hôm nay",
+            monthNames: ["Tháng một", "Tháng hai", "Tháng ba", "Tháng tư", "Tháng năm", "Tháng sáu", "Tháng bảy", "Tháng tám", "Tháng chín", "Tháng mười", "Tháng mười một", "Tháng mười hai"],
+            monthNamesShort: ["Một", "Hai", "Ba", "Bốn", "Năm", "Sáu", "Bảy", "Tám", "Chín", "Mười", "Mười một", "Mười hai"],
+            dayNames: ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"],
+            dayNamesShort: ["CN", "Hai", "Ba", "Tư", "Năm", "Sáu", "Bảy"],
+            dayNamesMin: ["CN", "T2", "T3", "T4", "T5", "T6", "T7"],
+            weekHeader: "Tuần",
+            dateFormat: "dd/mm/yy",
+            firstDay: 1
 		});
 		$('.booking-step-depature input').change(function(){
 			let thisText = $(this).closest('.booking-step-depature').find('.text b');
@@ -2261,8 +2283,14 @@ $(document).ready(function() {
 				'color':'#b9b9b9'
 			});
 		});
-		$('body').click(function(e){
-			if (!$('.booking-step-depature').is(e.target) && $('.booking-step-depature').has(e.target).length === 0) {
+		/*if(bodyWidth <= 767){
+			$('.hasDatepicker').click(function(){
+				$('.ui-datepicker').css('width',$(this).outerWidth());
+			});
+		}
+*/		
+		$('html').delegate('body','click',function(e){
+			if (!$('.booking-step-depature,.ui-datepicker').is(e.target) && $('.booking-step-depature,.ui-datepicker').has(e.target).length === 0) {
 	            if($(".booking-step-depature input").val() == ''){
 					$('.booking-step-depature label').removeAttr('style');
 				}

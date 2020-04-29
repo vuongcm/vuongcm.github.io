@@ -3308,17 +3308,15 @@ footer {
   .form-field input, .form-field textarea, .form-field .select-st8 {
     width: 100%;
     height: auto;
-    border: 1px solid #aaa;
-    font-size: 14px;
     vertical-align: middle;
     line-height: 1.5;
-    color: #555;
     padding: 10px 8px;
     -webkit-transition: all 0.25s linear;
     -moz-transition: all 0.25s linear;
     -o-transition: all 0.25s linear;
     -ms-transition: all 0.25s linear;
     transition: all 0.25s linear;
+    border-radius: 10px;
     border: 1px solid #a2d2d2;
     font-size: 20px;
     font-weight: bold;
@@ -14415,6 +14413,10 @@ body.body-st2 {
     .content-price-ticket .col-price .ten {
       font-size: 12px; }
 
+  .type-ticket .input-radio-st1 label {
+    color: #18b3b3;
+    text-shadow: none; }
+
   .big-first-tour-box .body-box .row {
     flex-wrap: wrap; }
     .big-first-tour-box .body-box .row .address-box {
@@ -14449,7 +14451,10 @@ body.body-st2 {
   .banner-ticket .wrap-title-banner-top {
     bottom: 405px; }
   .banner-ticket .search-container-st2 {
-    position: static;
+    position: relative;
+    z-index: 40;
+    left: 0;
+    top: 0;
     transform: translateX(0);
     -moz-transform: translateX(0);
     -webkit-transform: translateX(0);
@@ -14483,6 +14488,9 @@ body.body-st2 {
       display: none; }
   .search-container-st2 .search-box-st2.search-ticket form.one-way .booking-step-room {
     width: 25%; } }
+@media (min-width: 400px) {
+  .ui-datepicker {
+    width: 385px; } }
 @media (max-width: 767px) {
   .box-st2 .text-over img {
     max-width: none; }
@@ -14496,6 +14504,9 @@ body.body-st2 {
         display: none; }
         .content-price-ticket .col-price .item_cost:first-child {
           display: block; }
+
+  .modal-2 {
+    padding: 20px 15px; }
 
   .content-why-book .three-reasons {
     margin-top: 55px; }
@@ -14537,6 +14548,10 @@ body.body-st2 {
     .media-box-st4 .map-box > div {
       min-height: 150px; }
   .media-box-st4 .img-box {
-    width: calc(100% - 30px); } }
+    width: calc(100% - 30px); }
+
+  .modal-ticket .modal-content {
+    padding-right: 0;
+    padding-left: 0; } }
 
 /*# sourceMappingURL=main.css.map */

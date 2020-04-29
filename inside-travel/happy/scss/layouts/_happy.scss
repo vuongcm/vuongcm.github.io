@@ -1,6 +1,7 @@
 .why-book-us{
 
 }
+
 .content-why-book{
 	width: 100%;
 	display: flex;
@@ -631,6 +632,14 @@
 			}
 		}
 	}
+	.type-ticket{
+		.input-radio-st1{
+			label{
+				color: $happy;
+				text-shadow: none;
+			}
+		}
+	}
 	.big-first-tour-box{
 		.body-box{
 			.row{
@@ -673,7 +682,10 @@
 			bottom: 405px;
 		}
 		.search-container-st2{
-			position: static;
+			position: relative;
+			z-index: 40;
+			left: 0;
+			top: 0;
 			@include translateX(0);
 			margin-right: auto;
 			margin-left: auto;
@@ -728,6 +740,11 @@
 		}
 	}
 }
+@media (min-width: 400px) {
+	.ui-datepicker{
+		width: 385px;
+	}
+}
 @media (max-width: 767px) {
 	.box-st2{
 		.text-over{
@@ -748,6 +765,9 @@
 				}
 			}
 		}
+	}
+	.modal-2{
+		padding: 20px 15px;
 	}
 	.content-why-book{
 		.three-reasons{
@@ -810,6 +830,12 @@
 		}
 		.img-box{
 			width: calc(100% - 30px);
+		}
+	}
+	.modal-ticket{
+		.modal-content{
+			padding-right: 0;
+			padding-left: 0;
 		}
 	}
 }
