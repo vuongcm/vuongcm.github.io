@@ -198,7 +198,7 @@ select:focus {
     @include smooth(.25s);
 }
 .background-st1{
-    background-color: $background-color-st1;
+    background-color: $background-color-st1!important;
 }
 .select-st9 {
     padding-right: 15px;
