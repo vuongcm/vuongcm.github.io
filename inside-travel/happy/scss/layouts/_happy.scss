@@ -679,7 +679,8 @@
 	}
 	.banner-ticket{
 		.wrap-title-banner-top{
-			bottom: 405px;
+			bottom: unset;
+			top: 430px;
 		}
 		.search-container-st2{
 			position: relative;
@@ -751,6 +752,12 @@
 			img{
 				max-width: none;
 			}
+		}
+	}
+	.banner-ticket{
+		.wrap-title-banner-top{
+			//bottom: unset;
+			top: 325px;
 		}
 	}
 	.content-price-ticket{
@@ -836,6 +843,14 @@
 		.modal-content{
 			padding-right: 0;
 			padding-left: 0;
+		}
+	}
+}
+@media (max-width: 479px) {
+	.banner-ticket{
+		.wrap-title-banner-top{
+			//bottom: unset;
+			top: 200px;
 		}
 	}
 }

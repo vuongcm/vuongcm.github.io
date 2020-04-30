@@ -84,7 +84,7 @@
 		}
 // end phần khởi tạo zoom ảnh
 // Khởi tạo hàm Load data
-	let loadJson = function(y) {
+	/*let loadJson = function(y) {
         $.ajax({
             dataType: 'json',
             url: `data/product/pr-id${y}.json`})
@@ -202,7 +202,7 @@
             .fail(function() {
                 alert('lỗi load dữ liệu');
             });
-    }
+    }*/
 $(document).ready(function() {
 	let heightDetails = $('.content .preview').height() - $('.content .product-title').height();
 	$('.content .details').css('min-height',heightDetails + 'px');
@@ -248,7 +248,7 @@ $(document).ready(function() {
     });
 
 
-    let idProduct = $(location).attr('hash').slice(1);
-    loadJson(idProduct);
+    /*let idProduct = $(location).attr('hash').slice(1);
+    loadJson(idProduct);*/
 
 });

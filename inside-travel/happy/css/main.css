@@ -4181,7 +4181,7 @@ footer {
     top: 3%; }
 
   .form-field textarea {
-    height: 120px; }
+    height: 150px; }
 
   .modal-info-team {
     padding: 40px 15px; }
@@ -14449,7 +14449,8 @@ body.body-st2 {
     -ms-transform: translateY(0); }
 
   .banner-ticket .wrap-title-banner-top {
-    bottom: 405px; }
+    bottom: unset;
+    top: 430px; }
   .banner-ticket .search-container-st2 {
     position: relative;
     z-index: 40;
@@ -14494,6 +14495,9 @@ body.body-st2 {
 @media (max-width: 767px) {
   .box-st2 .text-over img {
     max-width: none; }
+
+  .banner-ticket .wrap-title-banner-top {
+    top: 325px; }
 
   .content-price-ticket {
     flex-wrap: wrap; }
@@ -14553,5 +14557,8 @@ body.body-st2 {
   .modal-ticket .modal-content {
     padding-right: 0;
     padding-left: 0; } }
+@media (max-width: 479px) {
+  .banner-ticket .wrap-title-banner-top {
+    top: 200px; } }
 
 /*# sourceMappingURL=main.css.map */
