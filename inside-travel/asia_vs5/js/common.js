@@ -9,6 +9,7 @@ $(document).ready(function() {
 		$('.navbar-tour-next').css('padding-top',`${headerHeight}px`);
 	}
 	let activeParallax = $('.bg-parallax').length ? $('.bg-parallax').attr('class').search('bg-about') == -1 : false;
+	activeParallax = $('.bg-parallax.bg-contact').length ? $('.bg-parallax').attr('class').search('bg-contact') == -1 : activeParallax;
 	if(activeParallax){
 		$('.bg-parallax').css('background-position-y',`${headerHeight}px`);
 	}
