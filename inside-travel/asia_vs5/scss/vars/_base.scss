@@ -440,6 +440,9 @@ select:focus {
 .close-opacity:after,.close-opacity:before{
     opacity: 0!important;
 }
+.none-box-shadow{
+    box-shadow: none!important;
+}
 .banner-top {
     position: relative;
     margin-top: 0;
