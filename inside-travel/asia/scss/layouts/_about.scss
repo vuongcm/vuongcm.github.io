@@ -11,6 +11,18 @@
     background-position-y: 37px;
     @include dakkenImg(60%);
 }
+.banner-small-2{
+	height: 456px;
+	//background-color: rgba(0,0,0,0.5);
+	.wrap-title-banner-top{
+		padding: 15px 15px 100px;
+	}
+	.bg-detail{
+		img{
+			height: 100%;
+		}
+	}
+}
 .about-container{
 	//margin-top: 50px;
 	.wrap-mini-intro{
@@ -199,7 +211,7 @@
 	margin-right: auto;
 }
 @media (max-width: 991px) {
-	.banner-small{
+	.banner-small,.banner-small-2{
 		height: 330px;
 	}
 	.wrap-slide-team{
