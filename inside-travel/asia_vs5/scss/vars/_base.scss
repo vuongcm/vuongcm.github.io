@@ -572,6 +572,16 @@ select:focus {
     width: 100%!important;
     padding-right: 15px;
     padding-left: 15px;
+    .team-name{
+        font-weight: normal;
+    }
+    .box-img-st2{
+        width: 90%;
+        max-width: 615px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
 }
 .phone-box{
     display: inline-flex;
