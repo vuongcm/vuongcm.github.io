@@ -583,6 +583,20 @@ select:focus {
         margin-bottom: 30px;
     }
 }
+.box-img-foot{
+    width: 90%;
+    //max-width: 80px;
+    display: block;
+    text-align: center;
+    margin: 15px auto 0;
+    img{
+        width: 100%;
+        max-width: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .phone-box{
     display: inline-flex;
     justify-content: space-between;
@@ -1310,6 +1324,9 @@ select:focus {
 }
 .padding-top-0{
     padding-top: 0!important;
+}
+.padding-bot-0{
+    padding-bottom: 0!important;
 }
 .box-tooltip-map{
     width: max-content;
