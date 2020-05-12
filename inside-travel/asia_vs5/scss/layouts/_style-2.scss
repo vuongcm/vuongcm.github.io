@@ -481,7 +481,7 @@
     	.view-map{
     		display: flex;
     		flex-direction: column;
-    		justify-content: flex-end;
+    		justify-content: flex-start;
     		align-items: center;
     		width: 67px;
 			.icon-font{
@@ -490,12 +490,30 @@
 			}
 			font{
 				color: #888;
+				width: 100%;
+				text-align: center;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
 			}
 			&:hover{
 				font{
 					color: $higlight-color;
 				}
 			}
+    	}
+    	.view-map.tooltip{
+    		&>span{
+    			background-color: #d0b316;
+			    color: #fff;
+			    width: auto;
+			    white-space: nowrap;
+			    bottom: 110%;
+			    &:after{
+			    	background-color: #d0b316;
+			    	box-shadow: none;
+			    }
+    		}
     	}
     }
 }
