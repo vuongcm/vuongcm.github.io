@@ -574,7 +574,7 @@ select:focus {
     padding-left: 15px;
     .team-name{
         font-weight: normal;
-        font-size: 38px;
+        
     }
     .box-img-st2{
         width: 90%;
@@ -582,6 +582,13 @@ select:focus {
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 30px;
+    }
+}
+.detail-location{
+    .wrap-mini-intro-st2{
+        .team-name{
+            font-size: 38px;
+        }
     }
 }
 .box-img-foot{

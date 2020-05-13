@@ -2275,7 +2275,7 @@ window.onload = function() {
 				//infinite: false,
 				slidesToShow: 1,
 				useTransform: false,
-				//adaptiveHeight: true,
+				adaptiveHeight: true,
 				prevArrow: `#slide-st9-${i} .arrow-left`,
 		        nextArrow: `#slide-st9-${i} .arrow-right`
 			});
