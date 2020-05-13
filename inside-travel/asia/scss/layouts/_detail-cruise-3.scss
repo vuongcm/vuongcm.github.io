@@ -822,7 +822,7 @@
 			.address-box{
 				flex-grow: 1;
 				padding-right: 30px;
-				max-width: calc(100% - 247px);
+				max-width: calc(100% - 260px);
 			}
 			.btn-st2{
 				//width: 247px;
@@ -838,12 +838,18 @@
 					font-size: 24px;
     				color: #d0b316;
     				margin-right: 5px;
+    				&:before{
+    					color: inherit;
+    				}
 				}
-				span{
-					width: max-content;
-					display: inline-flex;
-					align-items: center;
+				b{
+					width: 215px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
 					line-height: 1;
+					color: #888;
+					font-weight: normal;
 				}
 				font{
 					font-style: normal;
@@ -851,6 +857,21 @@
 				}
 				&:hover{
 					border-color: $higlight-color;
+					opacity: 1;
+					b{
+						color: inherit;
+					}
+				}
+			}
+			.btn-st2.tooltip{
+				z-index: 17;
+				&>span{
+					background-color: $higlight-color;
+					color: #fff;
+					&:after{
+						background-color: $higlight-color;
+						box-shadow: none;
+					}
 				}
 			}
 

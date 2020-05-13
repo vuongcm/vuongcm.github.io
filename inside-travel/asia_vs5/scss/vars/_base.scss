@@ -226,7 +226,7 @@ select:focus {
     border: 1px solid #000;
     color: #000;
     @include smooth(.2s);
-    font-size: 12px;
+    //font-size: 12px;
     &:hover{
         color: $higlight-color;
         border-color: $higlight-color;
