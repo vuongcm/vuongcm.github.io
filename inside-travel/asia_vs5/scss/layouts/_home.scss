@@ -147,6 +147,23 @@
 		display: none;
 	}
 }
+.wrap-map-slide-st2{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    .wrap-slide-st4 {
+    	.gallery{
+    		.item{
+    			&>a{
+    				.box-text{
+    					h3{
+							font-size: 14px;
+    					}
+    				}
+    			}
+    		}
+    	}
+    }
+}
 .select-st1{
 	select{
 		position: absolute;
@@ -336,7 +353,7 @@
 		//box-shadow: inset 0 0 100px 50px #fff;
 		&>.wrap-coo{
 			position: absolute;
-			z-index: 2;
+			z-index: 20;
 			background-color: transparent;
 			box-shadow: inset 0 0 100px 50px #fff;
 			top: 0;
