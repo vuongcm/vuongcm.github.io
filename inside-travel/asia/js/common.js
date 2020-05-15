@@ -2433,7 +2433,7 @@ window.onload = function() {
 				prevArrow: `#slide-st9-${i} .arrow-left`,
 		        nextArrow: `#slide-st9-${i} .arrow-right`
 			});
-			//$(`#slide-st9-${i} .slick-track`).height($(`#slide-st9-${i} .item`).eq(0).height());
+			setTimeout(function(){$(`#slide-st9-${i} .slick-track`).height($(`#slide-st9-${i} .item`).eq(1).height());},1000);
 			$(`#slide-st9-${i}`).one('mousedown',function(){
 			    $(`#slide-st9-${i} .item img`).each(function(){
 			    	if($(this).attr('src') == '#'){
