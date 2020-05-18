@@ -884,9 +884,12 @@ $(document).ready(function() {
 		$('#search-cruise-modal').removeClass('close-display');
 		$('#search-cruise-modal').css('top',`${$(window).scrollTop()+15}px`);
 	});
-	$('.btn-modal-tour').click(function(){
+	$('.btn-modal-tour').on('click',function(){
 		$('.modal-container').removeClass('close-display');
 		$('.modal-tour').removeClass('close-display');
+	});
+	$('.btn-modal-tour .box-text p>a').click(function(){
+		$('.btn-modal-tour').off('click');
 	});
 	$('.btn-modal-tour-2').click(function(){
 		$('.modal-container').removeClass('close-display');

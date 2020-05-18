@@ -1031,9 +1031,10 @@ select:focus {
     .gallery{
         width: 90%;
         margin: 0 auto;
-        .item>a{
+        .item>a, .item>.btn-modal-tour{
             position: relative;
             width: 100%;
+            cursor: pointer;
             img{
                 border-radius: 10px;
             }
@@ -1060,6 +1061,13 @@ select:focus {
                 }
                 p{
                     font-size: 11px;
+                    //color: inherit;
+                    a{
+                        color: inherit;
+                        &:hover{
+                            color: $higlight-color;
+                        }
+                    }
                 }
             }
             &:hover{
