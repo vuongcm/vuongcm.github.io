@@ -51,17 +51,14 @@
 	.title-h2{
 		font-size: 36px;
 	}
-	article{
-		.box-link{
-			margin-right: -15px;
-			margin-left: -15px;
-			width: calc(100% + 30px);
-			display: flex;
-			justify-content: space-between;
-			.link-st3{
-				margin-right: 15px;
-				margin-left: 15px;
-			}
+	.box-link{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		.link-st3{
+			margin-right: 15px;
+			margin-left: 15px;
+			text-transform: uppercase;
 		}
 	}
 }
@@ -101,15 +98,19 @@
 	display: block;
 	width: 100%;
 }
+@media (max-width: 1199px) {
+	.foreground{
+		.box-link{
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+	}
+}
 @media (max-width: 767px) {
 	.foreground{
-		article{
-			.box-link{
-				justify-content: center;
-				flex-wrap: wrap;
-				.link-st3{
-					margin-top: 15px;
-				}
+		.box-link{
+			.link-st3{
+				margin-top: 15px;
 			}
 		}
 	}
