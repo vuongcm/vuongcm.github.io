@@ -861,25 +861,16 @@
 					}
 				}
 				.nav-arrows{
-					bottom: auto;
-					top: 0;
+					position: relative;
+					bottom: unset;
+					top: unset;
 					z-index: 4;
-					padding-top: 10px;
-					padding-bottom: 10px;
-					@include gradient4();
-					button{
-						.select-arrow-thin{
-							color: #fff;
-						}
-					}
+					margin-top: 15px;
 					.arrow-left{
 						margin-left: 10%;
 					}
 					.arrow-right{
 						margin-right: 10%;
-					}
-					span{
-						color: #fff;
 					}
 				}
 			}
