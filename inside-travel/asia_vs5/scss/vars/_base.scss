@@ -2322,6 +2322,17 @@ select:focus {
             }
         }
     }
+    .wrap-slide-st4{
+        .gallery{
+            .item>a, .item>.btn-modal-tour, .item>.box-tour-st3{
+                .box-text{
+                    h3{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
 }
 @media (max-width: 479px) {
     .col-xsm-12{
