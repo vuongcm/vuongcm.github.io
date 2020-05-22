@@ -1,4 +1,4 @@
-body.body-st2{
+body.body-st2>.app{
 	display: flex;
 	align-items: flex-start;
 	.nav-side-menu{
@@ -48,7 +48,7 @@ body.body-st2{
 	}
 }
 @media (min-width: 1025px) {
-	body.body-st2{
+	body.body-st2>.app{
 		.nav-side-menu{
 		    .wrap-main-menu{
 		    	&:before{
@@ -116,7 +116,7 @@ body.body-st2{
 	}
 }
 @media (max-width: 1024px) {
-	body.body-st2{
+	body.body-st2>.app{
 		.nav-side-menu{
 			position: fixed;
 			max-width: 0;
@@ -144,7 +144,7 @@ body.body-st2{
 	}
 }
 @media (max-width: 767px) {
-	body.body-st2{
+	body.body-st2>.app{
 		&>.content-st2{
 			.btn-bar-toggle{
 	    		text-align: center;
@@ -160,7 +160,7 @@ body.body-st2{
 	}
 }
 @media (max-width: 479px) {
-	body.body-st2{
+	body.body-st2>.app{
 		.nav-side-menu{
 			max-width: unset;
 			width: 0;
