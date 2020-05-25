@@ -7,6 +7,10 @@ $(document).ready(function() {
 	if(!$('body.body-st2').length){
 		$('header').next('section').css('padding-top',`${headerHeight}px`);
 		$('.navbar-tour-next').css('padding-top',`${headerHeight}px`);
+		$('header').next('section.experience-dt-container').css({
+			'padding-top': '20px',
+			'margin-top' : `${headerHeight}px`
+		});
 	}
 	let activeParallax = $('.bg-parallax').length ? $('.bg-parallax').attr('class').search('bg-about') == -1 : false;
 	activeParallax = $('.bg-parallax.bg-contact').length ? $('.bg-parallax').attr('class').search('bg-contact') == -1 : activeParallax;
@@ -644,6 +648,15 @@ $(document).ready(function() {
 	}
 	//carousel-st7
 	if ($('.wrap-slide-st7').length > 0) {
+		setTimeout(function(){
+			let thisSpan = $(`.wrap-slide-st7 .item>div span`);
+			for(let i=0; i<thisSpan.length; i++){
+				if(thisSpan.eq(i).attr('data-style') != '#'){
+					thisSpan.eq(i).attr('style',thisSpan.eq(i).attr('data-style'));
+				}
+			}
+
+		},4000);
 		$(`.wrap-slide-st7 .gallery`).slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,

@@ -13,6 +13,10 @@
     	bottom: 0;
     }
 }
+.dak-img-35{
+	-webkit-filter: brightness(35%)!important;
+    filter: brightness(35%)!important;
+}
 .wrap-title-banner-detail{
 	display: flex;
 	justify-content: center;
@@ -61,6 +65,7 @@
 		color: #fff;
 		border-color: #fff;
 		opacity: .8;
+		border-radius: 20px;
 		&:hover{
 			opacity: 1;
 			background-color: rgba(200, 200, 200, 0.2);

@@ -2,7 +2,8 @@ body.body-st2>.app{
 	display: flex;
 	align-items: flex-start;
 	.nav-side-menu{
-	    position: sticky;
+	    position: fixed;
+	    left: 0;
 	    top: 0px;
 	    z-index: 180;
 	    width: 200px;
@@ -21,6 +22,7 @@ body.body-st2>.app{
 	}
 	&>.content-st2{
 		width: calc(100% - 200px);
+		margin-left: 200px;
 		.btn-bar-toggle{
     		display: none;
     	}
@@ -130,6 +132,7 @@ body.body-st2>.app{
 		}
 		&>.content-st2{
 			width: 100%;
+			margin-left: 0;
 			.btn-bar-toggle{
 	    		display: block;
 	    		position: relative;
