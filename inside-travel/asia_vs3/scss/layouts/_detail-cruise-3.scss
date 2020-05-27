@@ -874,6 +874,7 @@
 				.order-day{
 					margin-top: 0;
 					background-color: transparent;
+
 					&>div:first-child{
 						margin-top: 0;
 						background-color: transparent;
@@ -897,6 +898,26 @@
 								width: 100%;
 							}
 						}
+						.night-img-cr{
+							width: 60px;
+							.icon-des-2{
+								width: 100%;
+								font-size: 60px;
+							}
+							&>div{
+								flex-wrap: wrap;
+								align-content: center;
+								font-size: 18px;
+								&>font{
+									display: block;
+									width: 100%;
+									font-size: 9px;
+									text-align: center;
+									font-weight: normal;
+									text-transform: uppercase;
+								}
+							}
+						}
 						&>button{
 							ms-transform: rotate(-90deg);
 						    -webkit-transform: rotate(-90deg);
@@ -910,6 +931,13 @@
 				margin-top: 15px;
 				text-align: center;
 			}
+		}
+		.foot-trip.foot-trip-top{
+			margin-top: 0;
+			margin-bottom: 15px;
+			border-top: none;
+			position: relative;
+			z-index: 20;
 		}
 	}
 }
@@ -1531,6 +1559,13 @@
 			}
 		}
 	}
+	.big-first-tour-box{
+		.trip-st4{
+			.foot-trip.foot-trip-top{
+				order: 1;
+			}
+		}
+	} 
 }
 @media (max-width: 767px) {
 	.parameter-box{
