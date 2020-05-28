@@ -353,7 +353,7 @@ $(document).ready(function() {
     	});
     }
     $('.special-offer-box').click(function(){
-    	$(this).parent('.foot-cruise-st3').nextAll('.hidden-offer-box').slideToggle(500);
+    	$(this).parent('.foot-cruise-st3, .wrap-special-tooltip').nextAll('.hidden-offer-box').slideToggle(500);
     });
 	// slick map home
 	if ($('#slick-slider-map').length > 0) {
