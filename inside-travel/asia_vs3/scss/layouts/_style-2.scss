@@ -1156,6 +1156,9 @@
 							margin: 0;
 							a{
 								max-width: 500px;
+								text-transform: uppercase;
+							    font-weight: 600;
+							    color: #ad6816;
 							}
 						}
 						.price-trip-box{
@@ -1163,6 +1166,26 @@
 						}
 						.box-schedule{
 							width: 100%;
+						}
+					}
+					.night-img-cr{
+						width: 60px;
+						.icon-des-2{
+							width: 100%;
+							font-size: 60px;
+						}
+						&>div{
+							flex-wrap: wrap;
+							align-content: center;
+							font-size: 18px;
+							&>font{
+								display: block;
+								width: 100%;
+								font-size: 9px;
+								text-align: center;
+								font-weight: normal;
+								text-transform: uppercase;
+							}
 						}
 					}
 					&>button{
@@ -1728,10 +1751,12 @@
 		.special-offer-box{
 			width: 100%;
 			height: 50px;
-			margin-bottom: 15px;
+			order: 2;
 		}
 		.wrap-tooltip{
 			flex-grow: 1;
+			order: 1;
+			margin-bottom: 15px;
 		}
 	}
 	.video-top-container{
