@@ -1,0 +1,181 @@
+section.travel_guide {
+	width: 100%;
+}
+
+.scroll-cruises {
+	position: relative;
+}
+@media (max-width: 479px) {
+		.scroll-cruises {
+		padding: 0 15px;
+	}
+}
+
+.scroll-cruises .owl-item {
+	padding: 0 15px;
+}
+.scroll-cruises .hotel-list-item {
+	position: static;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.scroll-cruises .hotel-list-item .hotel-img {
+	width: 100%;
+	margin: 0;
+}
+
+.scroll-cruises .hotel-list-item .hotel-img h3 {
+	margin: 0;
+	position: absolute;
+	bottom: 0;
+	padding: 10px 0;
+    text-align: left;
+    text-indent: 11px;
+    width: 100%;
+    background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,0.65)));
+    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    background: -moz-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    background: -ms-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    background: -o-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+}
+.scroll-cruises .hotel-list-item .hotel-img h3>a {
+	width: 100%;
+    float: left;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-shadow: 0 0 2px #000;
+}
+.scroll-cruises .hotel-list-item .hotel-img h3>a:hover {
+	color: #0ad2bd;
+}
+.scroll-cruises .hotel-list-item .content-other {
+	background-color: #fff;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.scroll-cruises .hotel-list-item .content-other .star {
+	margin-top: 10px;
+	color: #ffa500;
+}
+.scroll-cruises .hotel-list-item .content-other #show_review {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.scroll-cruises .hotel-list-item .content-other .hotel-star-address {
+	width: 100%;
+	margin-top: 5px;
+}
+.scroll-cruises .hotel-list-item .content-other .hotel-star-address p {
+	margin: 0;
+    color: #888;
+    font-size: 12px;
+}
+.scroll-cruises .hotel-list-item .content-other #price-pro {
+	color: #888;
+    float: left;
+    font-size: 12px;
+}
+.scroll-cruises .hotel-list-item .content-other #price-pro strong {
+	text-decoration: line-through;
+    color: #F90;
+}
+.scroll-cruises .hotel-list-item .content-other #price-pro font {
+	color: #25ab4b;
+    font-size: 18px;
+    font-weight: 700;
+}
+.scroll-cruises .hotel-list-item .content-other .cam_ket_home {
+	margin-left: auto !important;
+	float: none;
+}
+
+.scroll-cruises .customNavigation-cruises {
+	position: absolute;
+	width: 100%;
+	top: 45%;
+}
+@media (max-width: 479px) {
+	.scroll-cruises .customNavigation-cruises {
+		display: none;
+	}
+}
+
+.scroll-cruises .customNavigation-cruises>a {
+	position: absolute;
+	top: 0;
+	cursor: pointer;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,.6);
+	filter: drop-shadow(0 0 24px rgba(0,0,0,.7))
+}
+.scroll-cruises .customNavigation-cruises>a:first-child {
+	margin-left: -10px;
+	left: 0;
+}
+.scroll-cruises .customNavigation-cruises>a:last-child {
+	margin-right: -10px;
+	right: 0
+}
+.scroll-cruises .customNavigation-cruises>a>i.fa {
+	font-size: 25px;
+	color: rgba(85,85,85,.8);
+}
+.scroll-cruises .customNavigation-cruises>a:hover {
+	background-color: rgba(255,255,255,.9);
+}
+.scroll-cruises .customNavigation-cruises>a:hover>i.fa {
+	color: #555;
+}
+@media (max-width: 479px) {
+	body {
+	    --bodyWidth: 479px;
+	}
+	section.travel_guide .guide .scroll-cruises {
+		padding: 0;
+	}
+	.owl-carousel.carousel-mobile {
+		display: flex;
+		justify-content: space-between;
+		width: calc(var(--bodyWidth) * 0.75 * 6);
+	}
+	.owl-carousel.carousel-mobile .item {
+		width: calc(var(--bodyWidth) * 0.75);
+		padding: 3px;
+	}
+	.list-cruises {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		width: 100%;
+	}
+	.list-cruises::-webkit-scrollbar {
+		visibility: hidden;
+		width: 1px;
+		color: rgba(255,255,255,0);
+	}
+	.list-cruises::-webkit-scrollbar-track {
+		background-color: transparent;
+
+	}
+	.list-cruises::-webkit-scrollbar-thumb {
+		background-color: transparent;
+	}
+	.list-cruises {
+		scrollbar-base-color: rgba(255,255,255,0);
+		scrollbar-3dlight-color: rgba(255,255,255,0);
+		scrollbar-highlight-color: rgba(255,255,255,0);
+		scrollbar-track-color: rgba(255,255,255,0);
+		scrollbar-arrow-color: rgba(255,255,255,0);
+		scrollbar-shadow-color: rgba(255,255,255,0);
+		scrollbar-dark-shadow-color: rgba(255,255,255,0);
+	}
+}
