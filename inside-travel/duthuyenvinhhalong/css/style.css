@@ -5464,7 +5464,7 @@ h3.home-sales-name {
 	}
 }
 /*===============banner-mobi-vs2=================*/
-.banner-mobi-vs2 .bg-scroll{
+.banner-mobi-vs2 .bg-happy{
 	display: none;
 }
 @media (max-width: 767px) {
@@ -5506,14 +5506,28 @@ h3.home-sales-name {
 		font-weight: 600;
 	}
 	.banner-mobi-vs2{
-		height: 490px;
+		height: 305px;
+		padding-bottom: 0;
+		padding-top: 40px;
 	}
 	.banner-mobi-vs2 .owl-carousel{
 		display: none!important;
 	}
-	.banner-mobi-vs2 .bg-scroll{
+	.banner-mobi-vs2 .bg-happy{
 		display: block;
-		z-index: 0;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+	}
+	.banner-mobi-vs2 .bg-happy>img{
+		height: 100%;
+		max-width: unset;
+		margin-left: 50%;
+		transform: translateX(-50%);
+	    -moz-transform: translateX(-50%);
+	    -webkit-transform: translateX(-50%);
+	    -o-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
 	}
 	.banner-mobi-vs2 .customNavigation, .banner-mobi-vs2 .container-banner{
 		display: none;
