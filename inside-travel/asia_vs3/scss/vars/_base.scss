@@ -87,6 +87,12 @@ body {
     overflow-x: hidden;
     background: $background-color url(../images/background/footer-bg.jpg) repeat;
 }
+.app{
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
 input{
     white-space: nowrap;
     text-overflow: ellipsis;
