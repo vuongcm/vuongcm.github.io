@@ -609,6 +609,33 @@ $(document).ready(function() {
 		  ]
 		});
 	}
+	//carousel-modal
+	if($('.wrap-slide-modal').length){
+		$('.btn-create-trip').click(function(){
+			$('.wrap-slide-modal .gallery').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				infinite: false,
+				useTransform: false,
+				dots: true,
+				dotsClass: 'wrap-dots',
+				// adaptiveHeight: true,
+		        prevArrow: `.wrap-slide-modal .arrow-left`,
+		        nextArrow: `.wrap-slide-modal .arrow-right`,
+		        responsive: [
+		        	{
+		        		breakpoint: 480,
+					    settings: {
+					      	slidesToShow: 2
+					    }
+		        	}
+		        ]
+			});
+		});
+		$('#creat-trip-modal .btn-close').click(function(){
+			$('.wrap-slide-modal .gallery').slick('unslick');
+		});
+	}
 	//gallery-img
 	if($('.wrap-gallery-img').length){
 		for(let i=0; i<$('.synch-desti').length; i++){
@@ -1111,7 +1138,7 @@ $(document).ready(function() {
 			});
 		}
 	}
-	if($('.booking-step-where').length){
+	/*if($('.booking-step-where').length){
 		let number3 = $('.booking-step-where .btn-value').length;
 		for (let i=0; i<number3; i++){
 			$('.booking-step-where .btn-value').eq(i).click(function(){
@@ -1138,6 +1165,37 @@ $(document).ready(function() {
 				}
 			});
 		}
+	}*/
+	if($('.booking-step-where').length){
+		$('.booking-step-where.select-slide .btn-value').click(function(){
+			$(this).toggleClass('active');
+			let valueActive = $(this).children('b').text();
+			let getBtn = $('.booking-step-where.select-st1 .btn-value');
+			for(let i=0; i < getBtn.length; i++){
+				if(getBtn.eq(i).children('b').text() == valueActive){
+					getBtn.eq(i).toggleClass('checked');
+				}
+			}
+			$('.booking-step-where.select-slide>select').html('');
+			let btnActive = $('.booking-step-where.select-slide .active');
+			for(let i=0; i < btnActive.length; i++){
+				$('.booking-step-where.select-slide>select').append(`<option value="${btnActive.children('b').eq(i).text()}" selected></option>`);
+			}
+			if(btnActive.length == 0){
+				$('.booking-step-where.select-st1 .text b').html(`Where do you want to go?`);
+			} else{
+				$('.booking-step-where.select-st1 .text b').html(`${btnActive.length} selected`);
+			}
+		});
+		$('.booking-step-where.select-st1 .btn-value').click(function(){
+			let valueChecked = $(this).children('b').text();
+			let getBtn2 = $('.booking-step-where.select-slide .btn-value');
+			for(let i=0; i < getBtn2.length; i++){
+				if(getBtn2.eq(i).children('b').text() == valueChecked){
+					getBtn2.eq(i).click();
+				}
+			}
+		});
 	}
 	if($('.booking-step-when').length){
 		let number4 = $('.booking-step-when .btn-value').length;

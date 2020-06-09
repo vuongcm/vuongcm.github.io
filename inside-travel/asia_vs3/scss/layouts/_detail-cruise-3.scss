@@ -84,7 +84,7 @@
 									visibility: visible;
 									top: 50%;
 									@include translateY(-50%);
-									opacity: .5;
+									opacity: .8;
 									&:hover{
 										opacity: 1;
 									}
@@ -791,8 +791,8 @@
 			a{
 				color: #fff;
 				max-width: calc(100% - 180px);
-
-				font-size: 22px;
+				text-transform: uppercase;
+				font-size: 24px;
 			    letter-spacing: 2px;
 			    font-weight: 600;
 			    &:hover{
@@ -821,7 +821,7 @@
 				max-width: calc(100% - 247px);
 			}
 			&>.btn-st2{
-				width: 247px;
+				width: 266px;
 				border-radius: 999px;
 				border-color: #c9baa8;
 				//line-height: 1;
