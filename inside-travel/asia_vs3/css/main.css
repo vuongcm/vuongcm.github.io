@@ -1060,7 +1060,7 @@ select:focus {
     .tooltip > .icon-font-cr:hover:before {
       color: #895a36; }
     .tooltip > .icon-font-cr:hover {
-      border-color: #895a36; }
+      border-color: #bdb316; }
   .tooltip > .icon-cr-taichiclass {
     width: 35px;
     height: 35px;
@@ -9909,7 +9909,7 @@ header {
           .big-first-tour-box .body-box .wrap-faq .order-day > div:first-child .night-img-cr > div > font {
             display: block;
             width: 100%;
-            font-size: 9px;
+            font-size: 8px;
             text-align: center;
             font-weight: normal;
             text-transform: uppercase; }
@@ -10086,6 +10086,58 @@ header {
     border-radius: 50% 50% 0px 50%;
     border: 1px solid rgba(207, 172, 27, 0.8);
     background-color: rgba(207, 172, 27, 0.8); }
+
+.banner-top-st3 {
+  position: relative; }
+  .banner-top-st3 .wrap-title-banner-top-line {
+    z-index: 20; }
+    .banner-top-st3 .wrap-title-banner-top-line h1, .banner-top-st3 .wrap-title-banner-top-line h2 {
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 3px; }
+    .banner-top-st3 .wrap-title-banner-top-line .line:after {
+      margin-bottom: 10px; }
+
+.wrap-slide-st7 {
+  width: 100%; }
+  .wrap-slide-st7 .synch-carousels {
+    box-shadow: none; }
+    .wrap-slide-st7 .synch-carousels .item {
+      height: 480px; }
+      .wrap-slide-st7 .synch-carousels .item > div {
+        width: 100%;
+        height: 100%;
+        position: relative; }
+        .wrap-slide-st7 .synch-carousels .item > div img {
+          height: 100%; }
+    .wrap-slide-st7 .synch-carousels .slick-dots {
+      position: absolute;
+      z-index: 1;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      margin: 0;
+      padding: 0; }
+      .wrap-slide-st7 .synch-carousels .slick-dots li {
+        display: inline-block;
+        padding: 0;
+        margin: 0 5px; }
+        .wrap-slide-st7 .synch-carousels .slick-dots li button {
+          background: rgba(255, 255, 255, 0.6);
+          border: none;
+          padding: 0;
+          margin: 0;
+          font-size: 0;
+          line-height: 100%;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%; }
+      .wrap-slide-st7 .synch-carousels .slick-dots li.slick-active button {
+        background: #bdb316; }
 
 @media (max-width: 1351px) {
   .tooltip-handpick {
@@ -10429,7 +10481,12 @@ header {
   .info-cruise {
     flex-grow: 1; }
     .info-cruise .info-cruise-month {
-      max-width: unset; } }
+      max-width: unset; }
+
+  .wrap-slide-st7 .synch-carousels .item {
+    height: 350px; }
+  .wrap-slide-st7 .synch-carousels .slick-dots {
+    bottom: 15px; } }
 @media (max-width: 479px) {
   .wrap-special-tooltip {
     flex-wrap: wrap; }
@@ -12212,7 +12269,7 @@ header {
     .big-first-tour-box .head-box .count-day {
       top: 12px;
       left: 12px;
-      background: rgba(199, 185, 12, 0.8);
+      background: #ff5722;
       text-transform: capitalize;
       font-size: 14px; }
     .big-first-tour-box .head-box .heart-tour {
@@ -12240,9 +12297,9 @@ header {
         color: #fff;
         max-width: calc(100% - 180px);
         text-transform: uppercase;
-        font-size: 24px;
+        font-size: 22px;
         letter-spacing: 2px;
-        font-weight: 600; }
+        font-weight: 500; }
         .big-first-tour-box .head-box h2 a:hover {
           color: #bdb316; }
     .big-first-tour-box .head-box .expert-box {

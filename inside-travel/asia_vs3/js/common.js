@@ -566,6 +566,21 @@ $(document).ready(function() {
 		  ]
 		});
 	}
+	//carousel-st7
+	if ($('.wrap-slide-st7').length > 0) {
+		$(`.wrap-slide-st7 .gallery`).slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			infinite: true,
+			fade: true,
+			useTransform: false,
+			dots: true,
+			//dotsClass: 'wrap-dots',
+			autoplay: true,
+			autoplaySpeed: 5000,
+			arrows: false
+		});
+	}
 	//carousel-st8
 	if ($('.wrap-slide-st8').length > 0 && bodyWidth < 992) {
 		$(`.wrap-slide-st8 .gallery`).slick({

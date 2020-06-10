@@ -1184,7 +1184,7 @@
 							&>font{
 								display: block;
 								width: 100%;
-								font-size: 9px;
+								font-size: 8px;
 								text-align: center;
 								font-weight: normal;
 								text-transform: uppercase;
@@ -1407,6 +1407,70 @@
 				border: 1px solid rgba(207,172,27,.8);
 				background-color: rgba(207,172,27,.8);
 			}
+		}
+	}
+}
+.banner-top-st3{
+	position: relative;
+	.wrap-title-banner-top-line{
+		z-index: 20;
+		h1,h2{
+			font-size: 20px;
+    		font-weight: 500;
+    		letter-spacing: 3px
+		}
+		.line{
+			&:after{
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+.wrap-slide-st7{
+	width: 100%;
+	.synch-carousels{
+		box-shadow: none;
+		.item{
+			height: 480px;
+			&>div{
+				width: 100%;
+				height: 100%;
+				position: relative;
+				img{
+					height: 100%;
+				}
+			}
+		}
+		.slick-dots{
+			position: absolute;
+			z-index: 1;
+			bottom: 15px;
+			left: 50%;
+			@include translateX(-50%);
+			margin: 0;
+			padding: 0;
+			li{
+				display: inline-block;
+				padding: 0;
+				margin: 0 5px;
+				button{
+					background: rgba(255, 255, 255, 0.6);
+				    border: none;
+				    padding: 0;
+				    margin: 0;
+				    font-size: 0;
+				    line-height: 100%;
+				    width: 12px;
+				    height: 12px;
+				    border-radius: 50%;
+				}
+			}
+			li.slick-active{
+				button{
+					background: $higlight-color;
+				}
+			}
+
 		}
 	}
 }
@@ -1886,6 +1950,16 @@
 		flex-grow: 1;
 		.info-cruise-month{
 			max-width: unset;
+		}
+	}
+	.wrap-slide-st7{
+		.synch-carousels{
+			.item{
+				height: 350px;
+			}
+			.slick-dots{
+				bottom: 15px;
+			}
 		}
 	}
 }
