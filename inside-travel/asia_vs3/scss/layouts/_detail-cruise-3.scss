@@ -912,6 +912,9 @@
 									text-transform: uppercase;
 								    font-weight: 600;
 								    color: #ad6816;
+								    &:hover{
+								    	color: #b3350a
+								    }
 								}
 							}
 							.price-trip-box{
@@ -922,10 +925,10 @@
 							}
 						}
 						.night-img-cr{
-							width: 60px;
+							width: 50px;
 							.icon-des-2{
 								width: 100%;
-								font-size: 60px;
+								font-size: 50px;
 							}
 							&>div{
 								flex-wrap: wrap;
@@ -934,7 +937,7 @@
 								&>font{
 									display: block;
 									width: 100%;
-									font-size: 9px;
+									font-size: 8px;
 									text-align: center;
 									font-weight: normal;
 									text-transform: uppercase;

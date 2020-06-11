@@ -3483,7 +3483,7 @@ header {
   #creat-trip-modal .select-st1 .text, #creat-trip-modal .select-st2 .text, #creat-trip-modal .booking-st1 .text {
     cursor: pointer; }
     #creat-trip-modal .select-st1 .text > .icon-font:first-child, #creat-trip-modal .select-st2 .text > .icon-font:first-child, #creat-trip-modal .booking-st1 .text > .icon-font:first-child {
-      color: #888; }
+      color: #895a36; }
   #creat-trip-modal .select-st1 .value-2, #creat-trip-modal .select-st2 .value-2, #creat-trip-modal .booking-st1 .value-2 {
     top: 100%; }
   #creat-trip-modal .select-st1 .value, #creat-trip-modal .select-st2 .value, #creat-trip-modal .booking-st1 .value {
@@ -9232,7 +9232,11 @@ header {
       border: 1px solid #b09e7e;
       text-align: center;
       padding-top: 10px;
-      padding-bottom: 10px; }
+      padding-bottom: 10px;
+      color: #b39f7b; }
+      .box-schedule table td > a {
+        color: #b3350a;
+        font-weight: 600; }
 
 .list-cabins {
   width: 100%;
@@ -9647,6 +9651,7 @@ header {
     padding-bottom: 15px;
     border-bottom: 1px dotted #dcdcdc;
     margin-bottom: 15px;
+    margin-top: -15px;
     align-items: stretch; }
     .trip-st4 .head-trip .title-info {
       width: calc(100% - 127px);
@@ -9893,6 +9898,8 @@ header {
             text-transform: uppercase;
             font-weight: 600;
             color: #ad6816; }
+            .big-first-tour-box .body-box .wrap-faq .order-day > div:first-child .flex-box h3 a:hover {
+              color: #b3350a; }
         .big-first-tour-box .body-box .wrap-faq .order-day > div:first-child .flex-box .price-trip-box {
           width: auto; }
         .big-first-tour-box .body-box .wrap-faq .order-day > div:first-child .flex-box .box-schedule {
@@ -10093,7 +10100,7 @@ header {
     z-index: 20; }
     .banner-top-st3 .wrap-title-banner-top-line h1, .banner-top-st3 .wrap-title-banner-top-line h2 {
       font-size: 20px;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 3px; }
     .banner-top-st3 .wrap-title-banner-top-line .line:after {
       margin-bottom: 10px; }
@@ -12389,15 +12396,17 @@ header {
                   text-transform: uppercase;
                   font-weight: 600;
                   color: #ad6816; }
+                  .big-first-tour-box .trip-st4 .foot-trip .wrap-faq .order-day > div:first-child .flex-box h3 a:hover {
+                    color: #b3350a; }
               .big-first-tour-box .trip-st4 .foot-trip .wrap-faq .order-day > div:first-child .flex-box .price-trip-box {
                 width: auto; }
               .big-first-tour-box .trip-st4 .foot-trip .wrap-faq .order-day > div:first-child .flex-box .box-schedule {
                 width: 100%; }
             .big-first-tour-box .trip-st4 .foot-trip .wrap-faq .order-day > div:first-child .night-img-cr {
-              width: 60px; }
+              width: 50px; }
               .big-first-tour-box .trip-st4 .foot-trip .wrap-faq .order-day > div:first-child .night-img-cr .icon-des-2 {
                 width: 100%;
-                font-size: 60px; }
+                font-size: 50px; }
               .big-first-tour-box .trip-st4 .foot-trip .wrap-faq .order-day > div:first-child .night-img-cr > div {
                 flex-wrap: wrap;
                 align-content: center;
@@ -12405,7 +12414,7 @@ header {
                 .big-first-tour-box .trip-st4 .foot-trip .wrap-faq .order-day > div:first-child .night-img-cr > div > font {
                   display: block;
                   width: 100%;
-                  font-size: 9px;
+                  font-size: 8px;
                   text-align: center;
                   font-weight: normal;
                   text-transform: uppercase; }

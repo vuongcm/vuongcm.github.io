@@ -350,6 +350,11 @@
 			text-align: center;
 			padding-top: 10px;
 			padding-bottom: 10px;
+			color: #b39f7b;
+			&>a{
+				color: #b3350a;
+				font-weight: 600;
+			}
 		}
 	}
 }
@@ -856,6 +861,7 @@
     	padding-bottom: 15px;
     	border-bottom: 1px dotted #dcdcdc;
     	margin-bottom: 15px;
+    	margin-top: -15px;
     	align-items: stretch; 
     	.title-info{
     		width: calc(100% - 127px);
@@ -1162,6 +1168,9 @@
 								text-transform: uppercase;
 							    font-weight: 600;
 							    color: #ad6816;
+							    &:hover{
+							    	color: #b3350a;
+							    }
 							}
 						}
 						.price-trip-box{
@@ -1416,7 +1425,7 @@
 		z-index: 20;
 		h1,h2{
 			font-size: 20px;
-    		font-weight: 500;
+    		font-weight: 600;
     		letter-spacing: 3px
 		}
 		.line{
