@@ -521,7 +521,7 @@
 	    		font-weight: 600;
 	    	}
 	    }
-	    .booking-step-where{
+	    .booking-step-where,.booking-step-destination{
 	    	position: relative;
     		width: 18%;
     		border-left: 1px solid #cdb39f;
@@ -858,10 +858,10 @@
     margin-bottom: 30px;
     border-radius: 10px;
     .head-trip{
-    	padding-bottom: 15px;
+    	padding-bottom: -15px;
     	border-bottom: 1px dotted #dcdcdc;
     	margin-bottom: 15px;
-    	margin-top: -15px;
+    	margin-top: 0;
     	align-items: stretch; 
     	.title-info{
     		width: calc(100% - 127px);
@@ -1246,7 +1246,7 @@
 		}
 		p{
 			line-height: 2;
-    		color: #333;
+    		color: #885916;
 		}
 	}
 }

@@ -3881,7 +3881,7 @@ header {
     margin: 0 auto;
     padding-bottom: 15px;
     margin-bottom: 15px;
-    border-bottom: 1px dotted #dcdcdc;
+    border-bottom: 1px dotted #e0d6c3;
     position: relative;
     z-index: 5; }
     .modal-info-team .modal-team-title h3, .modal-info-team .modal-team-title h4 {
@@ -7446,7 +7446,7 @@ header {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #f6f4f0;
     z-index: 1; }
 
 .wrap-media {
@@ -9374,11 +9374,11 @@ header {
       border-right: 1px solid #cdb39f; }
     #booking-widget-cruisepage-st2 .form-banner-top .text b {
       font-weight: 600; }
-    #booking-widget-cruisepage-st2 .form-banner-top .booking-step-where {
+    #booking-widget-cruisepage-st2 .form-banner-top .booking-step-where, #booking-widget-cruisepage-st2 .form-banner-top .booking-step-destination {
       position: relative;
       width: 18%;
       border-left: 1px solid #cdb39f; }
-      #booking-widget-cruisepage-st2 .form-banner-top .booking-step-where .value .btn-value .map-marker {
+      #booking-widget-cruisepage-st2 .form-banner-top .booking-step-where .value .btn-value .map-marker, #booking-widget-cruisepage-st2 .form-banner-top .booking-step-destination .value .btn-value .map-marker {
         margin-right: 8px;
         font-size: 15px;
         -webkit-transition: all 0.25s linear;
@@ -9648,10 +9648,10 @@ header {
   margin-bottom: 30px;
   border-radius: 10px; }
   .trip-st4 .head-trip {
-    padding-bottom: 15px;
+    padding-bottom: -15px;
     border-bottom: 1px dotted #dcdcdc;
     margin-bottom: 15px;
-    margin-top: -15px;
+    margin-top: 0;
     align-items: stretch; }
     .trip-st4 .head-trip .title-info {
       width: calc(100% - 127px);
@@ -9948,7 +9948,7 @@ header {
     font-weight: 600; }
   .section-blog-st2 .col-xlg-4 p {
     line-height: 2;
-    color: #333; }
+    color: #885916; }
 
 .banner-video-st2 {
   position: relative; }

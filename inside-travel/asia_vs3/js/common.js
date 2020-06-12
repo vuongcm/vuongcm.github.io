@@ -1011,6 +1011,9 @@ $(document).ready(function() {
 		if (!$('.booking-step-where .text,.booking-step-where .value').is(e.target) && $('.booking-step-where .text,.booking-step-where .value').has(e.target).length === 0) {
             $('.booking-step-where .value').removeClass('open-block');
         }
+        if (!$('.booking-step-destination .text,.booking-step-destination .value').is(e.target) && $('.booking-step-destination .text,.booking-step-destination .value').has(e.target).length === 0) {
+            $('.booking-step-destination .value').removeClass('open-block');
+        }
         if(!$('.booking-step-when .text,.booking-step-when .value').is(e.target) && $('.booking-step-when .text,.booking-step-when .value').has(e.target).length === 0){
         	$('.booking-step-when .value').removeClass('open-block');
         }
@@ -1153,34 +1156,34 @@ $(document).ready(function() {
 			});
 		}
 	}
-	/*if($('.booking-step-where').length){
-		let number3 = $('.booking-step-where .btn-value').length;
+	if($('.booking-step-destination').length){
+		let number3 = $('.booking-step-destination .btn-value').length;
 		for (let i=0; i<number3; i++){
-			$('.booking-step-where .btn-value').eq(i).click(function(){
+			$('.booking-step-destination .btn-value').eq(i).click(function(){
 				$(this).toggleClass('checked');
 				let numberValue;
 				if($('.booking-step-where').length == 1){
-					numberValue = $('.booking-step-where .checked').length;
+					numberValue = $('.booking-step-destination .checked').length;
 				} else{
 					if(i<(number3/2)){
-						$('.booking-step-where .btn-value').eq(number3/2 + i).toggleClass('checked');
+						$('.booking-step-destination .btn-value').eq(number3/2 + i).toggleClass('checked');
 					} else{
-						$('.booking-step-where .btn-value').eq(i - number3/2).toggleClass('checked');
+						$('.booking-step-destination .btn-value').eq(i - number3/2).toggleClass('checked');
 					}
-					numberValue = $('.booking-step-where .checked').length/2;
+					numberValue = $('.booking-step-destination .checked').length/2;
 				}
-				$('.booking-step-where').children('select').html('');
+				$('.booking-step-destination').children('select').html('');
 				for(let j=0; j < numberValue; j++){
-					$('.booking-step-where').children('select').append(`<option value="${$(this).closest('.value').find('.checked b').eq(j).text()}" selected></option>`);
+					$('.booking-step-destination').children('select').append(`<option value="${$(this).closest('.value').find('.checked b').eq(j).text()}" selected></option>`);
 				}
 				if(numberValue == 0){
-					$('.booking-step-where').find('.text b').html(`Destinations`);
+					$('.booking-step-destination').find('.text b').html(`Destinations`);
 				} else{
-					$('.booking-step-where').find('.text b').html(`${numberValue} selected`);
+					$('.booking-step-destination').find('.text b').html(`${numberValue} selected`);
 				}
 			});
 		}
-	}*/
+	}
 	if($('.booking-step-where').length){
 		$('.booking-step-where.select-slide .btn-value').click(function(){
 			$(this).toggleClass('active');
