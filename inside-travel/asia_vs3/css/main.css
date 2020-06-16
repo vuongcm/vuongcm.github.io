@@ -4046,6 +4046,58 @@ header {
           align-items: center;
           margin-top: 10px; }
 
+.modal-map-st2 {
+  padding-left: 15px;
+  padding-right: 15px; }
+  .modal-map-st2 .map-content .map-box-head {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px; }
+    .modal-map-st2 .map-content .map-box-head h3 {
+      flex-grow: 1; }
+    .modal-map-st2 .map-content .map-box-head .btn-st2 {
+      width: 160px;
+      border-radius: 999px;
+      border-color: #c9baa8;
+      padding: 5px 0;
+      margin-left: auto;
+      flex-shrink: 0; }
+      .modal-map-st2 .map-content .map-box-head .btn-st2 .icon-font {
+        font-size: 24px;
+        color: #bdb316;
+        margin-right: 5px; }
+      .modal-map-st2 .map-content .map-box-head .btn-st2 span {
+        width: max-content;
+        display: inline-flex;
+        align-items: center;
+        line-height: 1; }
+      .modal-map-st2 .map-content .map-box-head .btn-st2 font {
+        font-style: normal;
+        font-size: 20px; }
+      .modal-map-st2 .map-content .map-box-head .btn-st2:hover {
+        border-color: #bdb316; }
+    .modal-map-st2 .map-content .map-box-head .night-img-cr {
+      width: 50px; }
+      .modal-map-st2 .map-content .map-box-head .night-img-cr .icon-des-2 {
+        width: 100%;
+        font-size: 50px; }
+      .modal-map-st2 .map-content .map-box-head .night-img-cr > div {
+        flex-wrap: wrap;
+        align-content: center;
+        font-size: 18px; }
+        .modal-map-st2 .map-content .map-box-head .night-img-cr > div > font {
+          display: block;
+          width: 100%;
+          font-size: 8px;
+          text-align: center;
+          font-weight: normal;
+          text-transform: uppercase; }
+  .modal-map-st2 .map-content .map-box-body .map-box-st3 {
+    width: 100%;
+    background-color: #aaa;
+    height: 500px; }
+
 .map-day {
   color: #888;
   font-weight: 600;
@@ -4125,7 +4177,15 @@ header {
     .modal-map .map-content .info-map-box .info-map-head .map-day {
       margin-top: 10px; }
     .modal-map .map-content .info-map-box .info-map-body {
-      max-height: 200px; } }
+      max-height: 200px; }
+
+  .modal-map-st2 .map-content .map-box-head {
+    flex-wrap: wrap; }
+    .modal-map-st2 .map-content .map-box-head h3 {
+      width: calc(100% - 60px);
+      font-size: 14px; }
+    .modal-map-st2 .map-content .map-box-head .btn-st2 {
+      margin-right: auto; } }
 @media (max-width: 479px) {
   .modal {
     top: 20px; }
@@ -9159,10 +9219,29 @@ header {
         padding-right: 20px;
         padding-left: 20px; }
 
-.info-cruise {
-  display: flex;
+.btn-view-map {
+  display: inline-flex;
   justify-content: center;
   align-items: center; }
+  .btn-view-map .icon-font {
+    font-size: 14px; }
+  .btn-view-map .link-st3 {
+    padding-right: 0;
+    padding-top: 5px;
+    padding-bottom: 5px; }
+
+.info-cruise {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+  .info-cruise .btn-view-map.one-line {
+    width: 100%;
+    justify-content: flex-start; }
+  .info-cruise .btn-view-map.share-line {
+    margin-left: 10px; }
+  .info-cruise .btn-view-map .link-st3 {
+    padding-top: 5px;
+    padding-bottom: 5px; }
   .info-cruise > div {
     display: flex;
     align-items: center; }

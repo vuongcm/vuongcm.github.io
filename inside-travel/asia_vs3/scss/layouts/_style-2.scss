@@ -259,10 +259,37 @@
 		}
 	}
 }
-.info-cruise{
-	display: flex;
+.btn-view-map{
+	display: inline-flex;
 	justify-content: center;
 	align-items: center;
+	.icon-font{
+		font-size: 14px;
+	}
+	.link-st3{
+		padding-right: 0;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}
+.info-cruise{
+	display: flex;
+	// justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	.btn-view-map.one-line{
+		width: 100%;
+		justify-content: flex-start;
+	}
+	.btn-view-map.share-line{
+		margin-left: 10px;
+	}
+	.btn-view-map{
+		.link-st3{
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+	}
 	&>div{
 		display: flex;
 		align-items: center;

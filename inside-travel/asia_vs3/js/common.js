@@ -2054,6 +2054,12 @@ $(document).ready(function() {
 			$('.modal-map').removeClass('close-display');
 		});
 	}
+	if($('.modal-map-st2').length){
+		$('.btn-view-map .link-st3').click(function(){
+			$('.modal-container').removeClass('close-display');
+			$('.modal-map-st2').removeClass('close-display');
+		});
+	}
 	$('.btn-modal-tour-2').click(function(){
 		$('.modal-container').removeClass('close-display');
 		$('.modal-tour-st2').removeClass('close-display');
