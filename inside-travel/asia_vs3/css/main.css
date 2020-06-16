@@ -4056,6 +4056,9 @@ header {
     margin-bottom: 20px; }
     .modal-map-st2 .map-content .map-box-head h3 {
       flex-grow: 1; }
+      .modal-map-st2 .map-content .map-box-head h3 .cruise-name {
+        width: 100%;
+        font-weight: 400; }
     .modal-map-st2 .map-content .map-box-head .btn-st2 {
       width: 160px;
       border-radius: 999px;

@@ -1321,6 +1321,10 @@
 			margin-bottom: 20px;
 			h3{
 				flex-grow: 1;
+				.cruise-name{
+					width: 100%;
+					font-weight: 400;
+				}
 			}
 			.btn-st2{
 				width: 160px;
