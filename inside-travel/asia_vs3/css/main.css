@@ -4433,7 +4433,7 @@ header {
   .text .icon-font:first-child {
     font-size: 16px;
     margin-right: 5px;
-    color: #888; }
+    color: #895a36; }
   .text .icon-font:last-child {
     color: #895a36; }
 
@@ -12345,7 +12345,7 @@ header {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  margin-bottom: 40px; }
+  margin-bottom: 70px; }
   .big-first-tour-box .head-box {
     width: 100%;
     position: relative; }
@@ -12867,8 +12867,6 @@ header {
       background-color: #e6ddcc;
       z-index: 8; }
 
-.modal-cruise-st2 .modal-content > .order-day > a:first-child {
-  border-bottom: 1px solid #dcdcdc; }
 .modal-cruise-st2 .modal-content .team-quote {
   width: 100%; }
   .modal-cruise-st2 .modal-content .team-quote > div {

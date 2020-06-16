@@ -749,7 +749,7 @@
 	width: 100%;
 	padding-right: 15px;
 	padding-left: 15px;
-	margin-bottom: 40px;
+	margin-bottom: 70px;
 	.head-box{
 		.img-box-st2{
 			display: block;
@@ -1428,11 +1428,6 @@
 }
 .modal-cruise-st2{
 	.modal-content{
-		&>.order-day{
-			&>a:first-child{
-				border-bottom: 1px solid #dcdcdc;
-			}
-		}
 		.team-quote{
 			width: 100%;
 			&>div{
