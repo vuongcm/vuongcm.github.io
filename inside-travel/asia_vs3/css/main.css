@@ -2887,8 +2887,10 @@ header {
     margin-right: auto;
     color: #d8cdb9;
     border: 1px solid #d8cdb9;
-    padding: 10px 55px;
+    padding: 12px 136px;
     border-radius: 999px; }
+    .box-submit-sign button:hover {
+      background-color: rgba(137, 90, 58, 0.6); }
 
 .footer-navbar-container {
   padding-top: 30px;
@@ -4048,7 +4050,8 @@ header {
 
 .modal-map-st2 {
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  max-width: 1040px; }
   .modal-map-st2 .map-content .map-box-head {
     display: flex;
     justify-content: flex-start;

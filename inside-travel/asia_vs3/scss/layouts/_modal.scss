@@ -1313,6 +1313,8 @@
 .modal-map-st2{
 	padding-left: 15px;
 	padding-right: 15px;
+	max-width: 1040px;
+	// height: calc(100% - 60px);
 	.map-content{
 		.map-box-head{
 			display: flex;
