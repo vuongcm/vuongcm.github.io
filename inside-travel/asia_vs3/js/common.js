@@ -1452,9 +1452,10 @@ $(document).ready(function() {
 		btnMonth.click(function(){
 			let thisText = $(this).text();
 			btnMonth.removeClass('active');
-			$(this).addClass('active');
-			$(this).closest('.booking-step-m-time').children('input').val(thisText);
-			$(this).closest('.booking-step-m-time').find('.text>b').html(thisText);
+			if($(this).closest('.booking-step-m-time').length){
+				$('.booking-step-m-time').children('input').val(thisText);
+				$('.booking-step-m-time').find('.text>b').html(thisText);
+			}
 			$('.box-mon-time').removeClass('open-flex');
 		});
 	}

@@ -911,7 +911,7 @@ select:focus {
     background-color: #895a36;
     overflow: hidden; }
   .wrap-dots .slick-active {
-    background-color: #969e02; }
+    background-color: #bdb316; }
 
 .wrap-slide-st3 {
   width: 100%; }
@@ -2976,7 +2976,13 @@ header {
 
 @media (max-width: 767px) {
   .footer-banner-container {
-    padding: 60px 0; } }
+    padding: 60px 0; }
+
+  .box-submit-sign {
+    padding-right: 15px; }
+    .box-submit-sign button {
+      padding-left: 50px;
+      padding-right: 50px; } }
 @media (max-width: 479px) {
   .footer-navbar-container nav ul {
     justify-content: center;
@@ -8069,7 +8075,8 @@ header {
     font-weight: 800;
     font-size: 16px;
     color: #ad6816;
-    padding-left: 1px; }
+    padding-left: 1px;
+    line-height: 14px; }
 
 .highlight-cr-container .container .col-xlg-4 > a img {
   webkit-filter: brightness(70%);
@@ -9619,10 +9626,10 @@ header {
 .box-hidden-st3 .paragraph {
   text-align: left; }
 .box-hidden-st3 .link-st3 {
-  color: #aaa;
+  color: #895a36;
   margin-left: 10px; }
   .box-hidden-st3 .link-st3:after {
-    background-color: #aaa; }
+    background-color: #895a36; }
   .box-hidden-st3 .link-st3:hover {
     color: #bdb316; }
     .box-hidden-st3 .link-st3:hover:after {
@@ -10433,7 +10440,7 @@ header {
     .wrap-slide-st8 .gallery .item {
       margin-bottom: 30px; }
     .wrap-slide-st8 .wrap-dots li {
-      background-color: #888; }
+      background-color: #895a36; }
     .wrap-slide-st8 .wrap-dots li.slick-active {
       background-color: #bdb316; }
     .wrap-slide-st8 .wrap-dots button {
@@ -11963,7 +11970,6 @@ header {
     padding-bottom: 10px;
     border-bottom: 1px solid #d8cdb9; }
   .order-box .order-discount > div:nth-child(2) {
-    text-transform: uppercase;
     font-weight: 500;
     color: #895a36;
     font-size: 10px;

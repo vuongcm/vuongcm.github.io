@@ -212,6 +212,13 @@ footer{
 	.footer-banner-container{
 		padding: 60px 0;
 	}
+	.box-submit-sign{
+		padding-right: 15px;
+		button{
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+	}
 }
 @media (max-width: 479px) {
 	.footer-navbar-container{
