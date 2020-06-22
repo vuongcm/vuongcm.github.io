@@ -1,5 +1,5 @@
 .banner-small{
-	height: 536px;
+	height: 370px;
 	//background-color: rgba(0,0,0,0.5);
 	.wrap-title-banner-top{
 		padding: 15px 15px 100px;
@@ -9,6 +9,11 @@
 	background-image: url(../images/background/bg-about.jpg);
     height: 100%;
     background-position-y: 37px;
+    @include dakkenImg(60%);
+}
+.bg-travel-guide {
+    background-image: url(../images/background/bg-travel-guide.jpg);
+    height: 100%;
     @include dakkenImg(60%);
 }
 .about-container{
@@ -195,6 +200,11 @@
 	max-width: 170px;
 	margin-left: auto;
 	margin-right: auto;
+}
+@media (min-width: 1200px) {
+	.bg-travel-guide {
+    	background-size: 100% auto;
+    }
 }
 @media (max-width: 991px) {
 	.banner-small{

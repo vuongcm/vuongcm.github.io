@@ -152,6 +152,7 @@
 			justify-content: flex-start;
 			align-items: center;
 			width: 100%;
+
 			.btn-st2{
 				margin-left: auto;
 				border-radius: 999px;
@@ -1808,6 +1809,10 @@
 	.box-infomation-cabins{
 		.connecting-r{
 			justify-content: center;
+			.room-with{
+				width: 100%;
+				text-align: center;
+			}
 			span{
 				&:first-child{
 					margin-left: auto;

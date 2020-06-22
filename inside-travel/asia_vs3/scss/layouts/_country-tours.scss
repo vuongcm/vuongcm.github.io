@@ -1,10 +1,11 @@
 .bg-country {
     background-image: url('../images/background/bg-country.jpg');
     height: 100%;
+    @include dakkenImg(60%);
 }
 .banner-top-country-tour{
 	height: 610px;
-	background-color: rgba(0, 0, 0, .3);
+	// background-color: rgba(0, 0, 0, .3);
 }
 .wrap-title-banner-top-line{
 	display: flex;
