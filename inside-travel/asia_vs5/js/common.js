@@ -646,9 +646,9 @@ $(document).ready(function() {
 		  ]
 		});
 	}
-	//carousel-st7
-	/*if ($('.wrap-slide-st7').length > 0) {
-		$(`.wrap-slide-st7 .gallery`).slick({
+	//carousel-st7-test
+	if ($('.slide-7-test').length > 0) {
+		$(`.slide-7-test .gallery`).slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			infinite: true,
@@ -660,7 +660,7 @@ $(document).ready(function() {
 			autoplaySpeed: 5000,
 			arrows: false
 		});
-	}*/
+	}
 	//carousel-st8
 	if ($('.wrap-slide-st8').length > 0 && bodyWidth < 992) {
 		$(`.wrap-slide-st8 .gallery`).slick({

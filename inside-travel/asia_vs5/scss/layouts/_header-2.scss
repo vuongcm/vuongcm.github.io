@@ -48,6 +48,17 @@ body.body-st2>.app{
 	.experience-dt-container {
 		background-position-x: 50%;
 	}
+	.sub-menu{
+		&>li{
+			a{
+				font-size: 10px;
+				padding-left: 30px;
+				font{
+					white-space: normal;
+				}
+			}
+		}
+	}
 }
 @media (min-width: 1025px) {
 	body.body-st2>.app{
@@ -106,6 +117,12 @@ body.body-st2>.app{
 		}
 		.bg-parallax{
 			background-position-x: 100px;
+		}
+		.section-login{
+			.wrap-slide-st7{
+				left: 0;
+				width: 100%;
+			}
 		}
 	}
 }
