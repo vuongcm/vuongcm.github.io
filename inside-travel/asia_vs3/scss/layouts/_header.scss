@@ -352,7 +352,10 @@ header{
 		}
 		.heart-tour.active{
 			.heart-empty{
-				color: green;
+				color: #bdb316;
+				&:before{
+	                content: "\e915";
+	            }
 			}
 		}
 	}

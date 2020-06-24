@@ -2541,7 +2541,9 @@ header {
         .global-menu-st2 .like-top .heart-tour .heart-empty:hover {
           color: #bdb316; }
     .global-menu-st2 .like-top .heart-tour.active .heart-empty {
-      color: green; }
+      color: #bdb316; }
+      .global-menu-st2 .like-top .heart-tour.active .heart-empty:before {
+        content: "\e915"; }
   .global-menu-st2 .book-top {
     margin-right: 10px; }
     .global-menu-st2 .book-top .btn-st1 {

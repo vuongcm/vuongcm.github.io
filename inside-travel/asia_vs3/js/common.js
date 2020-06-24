@@ -2178,6 +2178,9 @@ $(document).ready(function() {
 			$(this).remove();
 		});
 	}
+	$('.like-top .heart-tour').click(function(){
+		$(this).addClass('active');
+	});
 });
 window.onload = function() {
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());
