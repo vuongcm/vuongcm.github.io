@@ -6777,7 +6777,8 @@ header {
   background-image: url("../images/background/bg-cruise.jpg");
   height: 100%;
   -webkit-filter: brightness(70%);
-  filter: brightness(70%); }
+  filter: brightness(70%);
+  background-position-y: center !important; }
 
 .best-offer {
   display: flex;
