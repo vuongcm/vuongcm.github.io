@@ -48,7 +48,8 @@
 }
 .blogs-tab{
 	width: 100%;
-	border-bottom: 1px solid #eee;
+	// border-bottom: 1px solid #eee;
+	border: 1px solid #caae99;
 	ul{
 		width: 100%;
 		display: flex;
@@ -237,7 +238,7 @@
 	width: 100%;
 }
 .box-blog{
-	border: 1px solid #eee;
+	border: 1px solid #caae99;
 	padding-right: 15px;
 	padding-left: 15px;
 	&>a{
@@ -247,7 +248,8 @@
 		text-transform: uppercase;
 		font-weight: 600;
 		font-size: 14px;
-		border-bottom: 1px solid #eee;
+		// border-bottom: 1px solid #caae99;
+		border: 1px solid #caae99;
 		text-align: center;
 		color: inherit;
 		i{

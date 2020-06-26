@@ -352,6 +352,12 @@ $(document).ready(function() {
     		}
     	});
     }
+    if($('.subtr-mobile').length && bodyWidth < 768){
+    	$('.subtr-mobile').each(function(){
+    		let cutText = $(this).text().substr(0,160);
+    		$(this).text(cutText + '...');
+    	});
+    }
     $('.special-offer-box').click(function(){
     	$(this).parent('.foot-cruise-st3, .wrap-special-tooltip').nextAll('.hidden-offer-box').slideToggle(500);
     });
