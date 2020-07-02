@@ -12,13 +12,13 @@
     }
 }
 .wrap-title-top-country{
-	width: 100%;
+	width: calc(100% - 50px);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-	left: 0;
+	left: 50px;
 	z-index: 3;
 	color: #fff;
 	h1,h2{
@@ -112,6 +112,8 @@
 }
 @media (max-width: 767px) {
 	.wrap-title-top-country{
+		width: 100%;
+		left: 0;
 		h1,h2{
 			font-size: 35px;
 		}
