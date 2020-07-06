@@ -323,7 +323,7 @@ header{
 	z-index: 4;
 	padding-bottom: 15px;
 	padding-top: 15px;
-	background-color: #fff;
+	background-color: #111;
 }
 
 .form-search-nav{
@@ -358,7 +358,7 @@ header{
 		position: relative;
 		width: 26%;
 		.value{
-			top: calc(100% + 15px);
+			top: calc(100% + 10px);
 			.btn-value{
 				.map-marker{
 					margin-right: 8px;
@@ -378,7 +378,7 @@ header{
 		position: relative;
 		width: 26%;
 		.value{
-			top: calc(100% + 15px);
+			top: calc(100% + 10px);
 			.btn-value{
 				padding-left: 15px;
 				.icon-font:first-child{
@@ -413,7 +413,7 @@ header{
 		    height: 20px;
 		}
 		.value{
-			top: calc(100% + 15px);
+			top: calc(100% + 10px);
 		}
 	}
 	.search-nav-price{
@@ -421,7 +421,7 @@ header{
 		width: 24%;
 		border-right: none;
 		.value{
-			top: calc(100% + 15px);
+			top: calc(100% + 10px);
 			.btn-value{
 				padding-left: 15px;
 			}
