@@ -1,0 +1,242 @@
+@import "vars/poly-fluid-sizing";
+@import "vars/base";
+@import "layouts/general";
+
+body{
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+.app{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	background-color: #fff;
+	.box-img{
+		width: 100%;
+		height: 100%;
+		position: relative;
+		opacity: .6;
+		img{
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		    -moz-transform: translate(-50%,-50%);
+		    -webkit-transform: translate(-50%,-50%);
+		    -o-transform: translate(-50%,-50%);
+		    -ms-transform: translate(-50%,-50%);
+		}
+	}
+}
+.back-content{
+	position: absolute;
+	z-index: 5;
+	top: calc(50% - 20px);
+	left: 50%;
+	width: 100%;
+	max-height: 100%;
+	color: #008f4f;
+	text-align: center;
+	transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    h1{
+    	font-family: Futura, sans-serif;
+    	font-size: 40px;
+    	font-weight: 600;
+	    line-height: 1.5;
+	    margin-bottom: 20px;
+	    width: 100%;
+	    // text-shadow: 2px 2px #555;
+    }
+    p{
+    	width: 100%;
+    	font-size: 26px;
+    	margin-bottom: 20px;
+    	font{
+    		color: #f58634;
+    	}
+    }
+    button{
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+	    border: solid 1px #f58634;
+	    border-radius: 999px;
+	    height: 50px;
+	    background: #fff;
+	    text-transform: uppercase;
+	    color: #f58634;
+	    font-size: 18px;
+	    font-weight: 500;
+	    font-family: "AcuminPro",sans-serif;
+	    line-height: 52px;
+	    letter-spacing: 0.025em;
+	    padding-left: 12px;
+	    padding-right: 21px;
+	    margin-left: auto;
+	    margin-right: auto;
+    	-webkit-transition: all 1s ease-in-out;
+	    -moz-transition: all 1s ease-in-out;
+	    -o-transition: all 1s ease-in-out;
+	    -ms-transition: all 1s ease-in-out;
+	    transition: all 1s ease-in-out;
+	    &:hover{
+	    	opacity: .8;
+	    }
+	    i{
+	    	display: block;
+		    width: 28px;
+		    height: 28px;
+		    border-radius: 50%;
+		    background: #f58634;
+		    position: relative;
+		    margin-top: -3px;
+		    margin-right: 22px;
+		    transition: inherit;
+		    &:after{
+		    	content: '';
+			    position: absolute;
+			    top: -4px;
+			    right: -4px;
+			    bottom: -4px;
+			    left: -4px;
+			    border-radius: 50%;
+			    border: dashed 1px #f58634;
+			    transition: inherit;
+		    }
+	    }
+    }
+}
+/*loading*/
+#loading{
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 300;
+    margin-top: 0px;
+    top: 0px;
+}
+#loading-center{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    }
+#loading-center-absolute {
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 10px);
+    height: 20px;
+    width: 100px;
+}
+.bakground-opa-load{
+    background-color: rgba(255,255,255,.8)!important;
+}
+.object-load{
+    width: 20px;
+    height: 20px;
+    background-color: #E77200;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute; 
+}
+#object_one{
+     animation: object 2s linear infinite;
+    -moz-animation: object 2s linear infinite;
+    -webkit-animation: object 2s linear infinite;
+    -o-animation: object 2s linear infinite;
+}
+#object_two{ 
+    left:20px;
+    animation: object 2s linear infinite -.4s;
+    -moz-animation: object 2s linear infinite -.4s;
+    -webkit-animation: object 2s linear infinite -.4s;
+    -o-animation: object 2s linear infinite -.4s;
+}
+#object_three{ 
+    left:40px;
+    animation: object 2s linear infinite -.8s; 
+    -moz-animation: object 2s linear infinite -.8s; 
+    -webkit-animation: object 2s linear infinite -.8s; 
+    -o-animation: object 2s linear infinite -.8s; 
+}
+#object_four{ 
+    left:60px;
+    animation: object 2s linear infinite -1.2s;
+    -moz-animation: object 2s linear infinite -1.2s;
+    -webkit-animation: object 2s linear infinite -1.2s;
+    -o-animation: object 2s linear infinite -1.2s;
+} 
+#object_five{ 
+    left:60px;
+    animation: object 2s linear infinite -1.6s; 
+    -moz-animation: object 2s linear infinite -1.6s;
+    -webkit-animation: object 2s linear infinite -1.6s;
+    -o-animation: object 2s linear infinite -1.6s;
+}
+    
+    
+@-webkit-keyframes object{
+  0% { left: 100px; top:0}
+  80% { left: 0; top:0;}
+  85% { left: 0; top: -20px; width: 20px; height: 20px;}
+  90% { width: 40px; height: 15px; }
+  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
+  100% { left: 100px; top:0; }      
+    
+}       
+@keyframes object{
+  0% { left: 100px; top:0}
+  80% { left: 0; top:0;}
+  85% { left: 0; top: -20px; width: 20px; height: 20px;}
+  90% { width: 40px; height: 15px; }
+  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
+  100% { left: 100px; top:0; }
+}
+@-moz-keyframes object {
+    0% { left: 100px; top:0}
+  80% { left: 0; top:0;}
+  85% { left: 0; top: -20px; width: 20px; height: 20px;}
+  90% { width: 40px; height: 15px; }
+  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
+  100% { left: 100px; top:0; }   
+}
+@-ms-keyframes object {
+    0% { left: 100px; top:0}
+  80% { left: 0; top:0;}
+  85% { left: 0; top: -20px; width: 20px; height: 20px;}
+  90% { width: 40px; height: 15px; }
+  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
+  100% { left: 100px; top:0; }   
+}
+/*end loading*/
+@media all and (max-width: 767px){
+	.back-content{
+	    h1{
+	    	font-size: 30px;
+	    }
+	    p{
+	    	font-size: 20px;
+	    }
+	}
+}
+@media all and (max-width: 375px){
+	.back-content{
+	    h1{
+	    	font-size: 26px;
+	    }
+	    p{
+	    	font-size: 16px;
+	    }
+	}
+}

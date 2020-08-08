@@ -1039,6 +1039,29 @@
 		}
 	}
 }
+.summary-tour{
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+	z-index: 5;
+	position: relative;
+	&>div{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-left: 20px;
+		padding-right: 20px;
+		font{
+			text-transform: uppercase;
+			font-size: 12px;
+		}
+		b{
+			font-size: 30px;
+			color: #fff;
+			margin-top: 10px;
+		}
+	}
+}
 @media (min-width: 1351px) {
 	.row-crowd{
 		.crowd-box{

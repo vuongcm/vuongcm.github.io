@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Kiwi's mom</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div class="object-load" id="object_one"></div>
+            <div class="object-load" id="object_two"></div>
+            <div class="object-load" id="object_three"></div>
+            <div class="object-load" id="object_four"></div>
+            <div class="object-load" id="object_five"></div>
+        </div>
+    </div>
+</div>
+<div class="app">
+    <div class="box-img">
+        <img src="images/kw-background-1.jpg" alt="">
+    </div>
+    <div class="back-content">
+        <h1>Giáo dục sớm & Thai giáo cùng Mẹ Kiwi</h1>
+        <p>Liên kết của bạn sẽ được bắt đầu sau&nbsp;<font>5</font>s&nbsp;nữa.</p>
+        <button type="button"><i></i>Bắt đầu</button>
+    </div>
+</div>
+<script src="js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        let backTime = 5;
+        let clock = setInterval(function(){
+            if(backTime > 0){
+                backTime--;
+                $('.back-content font').text(backTime);
+            } else{
+                window.location.replace('https://www.kiwismom.com/');
+            }
+        }, 1000);
+        $('.back-content button').click(function(){
+            clearInterval(clock);
+            window.location.replace('https://www.kiwismom.com/');
+        });
+    });
+    window.onload = function() {
+        $("#loading").delay(500).fadeOut(500);
+    }
+</script>
+</body>
+</html>

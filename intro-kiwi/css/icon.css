@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'kiwi-font';
+  src:  url('../fonts/kiwi-font/kiwi-font.eot?gj651t');
+  src:  url('../fonts/kiwi-font/kiwi-font.eot?gj651t#iefix') format('embedded-opentype'),
+    url('../fonts/kiwi-font/kiwi-font.ttf?gj651t') format('truetype'),
+    url('../fonts/kiwi-font/kiwi-font.woff?gj651t') format('woff'),
+    url('../fonts/kiwi-font/kiwi-font.svg?gj651t#kiwi-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon-font {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'kiwi-font' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.kw-lesson:before {
+  content: "\f15a";
+}
+.kw-shops:before {
+  content: "\f219";
+}
+.kw-shared:before {
+  content: "\f251";
+}
+.kw-video:before {
+  content: "\f252";
+}
+.kw-about:before {
+  content: "\e902";
+  color: #f58634;
+}
+.kw-home:before {
+  content: "\e903";
+  color: #f58634;
+}
+.kw-youtube:before {
+  content: "\e901";
+}
+.kw-zalo:before {
+  content: "\e97b";
+}
+.kw-menu:before {
+  content: "\e91d";
+}
+.kw-checklist:before {
+  content: "\e918";
+}
+.kw-facebook:before {
+  content: "\e900";
+}
+.kw-select-arrow-thin:before {
+  content: "\e912";
+}
+.kw-balcony:before {
+  content: "\f11e";
+}
+.kw-concierge:before {
+  content: "\f151";
+}
+.kw-currency:before {
+  content: "\f158";
+}
+.kw-elevator:before {
+  content: "\f16a";
+}
+.kw-fax-machine:before {
+  content: "\f176";
+}

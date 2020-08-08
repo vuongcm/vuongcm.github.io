@@ -11,6 +11,7 @@
     	@include dakkenImg(65%);
     	position: absolute;
     	bottom: 0;
+    	height: 100%;
     }
 }
 .dak-img-35{
@@ -1210,7 +1211,7 @@
 }
 @media (max-width: 991px) {
 	.banner-top-detail{
-		height: 388px;
+		height: 477px;
 	}
 	.wrap-title-banner-detail{
 		h1,h2{
@@ -1356,7 +1357,7 @@
 }
 @media (max-width: 767px) {
 	.banner-top-detail{
-		height: 338px;
+		height: 370px;
 	}
 	.bg-detail {
 	    img{
