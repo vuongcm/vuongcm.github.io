@@ -14021,6 +14021,37 @@ body.body-st2 {
       .wrap-slide-st11 .synch-carousels .wrap-dots button {
         color: rgba(255, 255, 255, 0); }
 
+.wrap-slide-st12 {
+  width: 100%; }
+  .wrap-slide-st12 .synch-carousels {
+    box-shadow: none; }
+    .wrap-slide-st12 .synch-carousels .item > div {
+      width: 100%;
+      max-height: 425px;
+      overflow-y: hidden; }
+      .wrap-slide-st12 .synch-carousels .item > div img {
+        width: 100%;
+        height: 100%; }
+    .wrap-slide-st12 .synch-carousels .nav-arrows {
+      top: 50%;
+      z-index: 5; }
+      .wrap-slide-st12 .synch-carousels .nav-arrows button {
+        width: unset;
+        height: unset; }
+        .wrap-slide-st12 .synch-carousels .nav-arrows button i {
+          font-size: 45px;
+          color: #d4d4d4; }
+        .wrap-slide-st12 .synch-carousels .nav-arrows button:hover i {
+          color: #e3ba10; }
+      .wrap-slide-st12 .synch-carousels .nav-arrows .arrow-left {
+        margin-left: 10px; }
+        .wrap-slide-st12 .synch-carousels .nav-arrows .arrow-left .icon-next-back {
+          -ms-transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+      .wrap-slide-st12 .synch-carousels .nav-arrows .arrow-right {
+        margin-right: 10px; }
+
 .list-trip .big-first-tour-box:nth-child(2) .btn-st4 {
   background-color: #25b48a; }
 .list-trip .big-first-tour-box:nth-child(3) .btn-st4 {
@@ -14488,11 +14519,20 @@ body.body-st2 {
     .search-container-st2 .search-box-st2.search-ticket form.one-way .booking-step-depature:nth-child(4) {
       display: none; }
   .search-container-st2 .search-box-st2.search-ticket form.one-way .booking-step-room {
-    width: 25%; } }
+    width: 25%; }
+
+  .wrap-slide-st12 .synch-carousels .nav-arrows {
+    display: none; } }
 @media (min-width: 400px) {
   .ui-datepicker {
     width: 385px; } }
 @media (max-width: 767px) {
+  .wrap-slide-st12 .synch-carousels .gallery .item > div {
+    height: 320px;
+    overflow-y: hidden; }
+    .wrap-slide-st12 .synch-carousels .gallery .item > div img {
+      width: auto; }
+
   .box-st2 .text-over img {
     max-width: none; }
 
@@ -14559,6 +14599,12 @@ body.body-st2 {
     padding-left: 0; } }
 @media (max-width: 479px) {
   .banner-ticket .wrap-title-banner-top {
-    top: 200px; } }
+    top: 200px; }
+
+  .wrap-slide-st12 .synch-carousels .gallery .item > div {
+    height: auto; }
+    .wrap-slide-st12 .synch-carousels .gallery .item > div img {
+      width: 100%;
+      height: auto; } }
 
 /*# sourceMappingURL=main.css.map */
