@@ -2385,7 +2385,7 @@ window.onload = function() {
 	/*let heightTrip = 91+$('.content-trip').height()+$('.trip a').height();
 	$('.trip').height(heightTrip);*/
 
-	//$('#preloader').delay(500).fadeOut(300);
+	$('#preloader').delay(500).fadeOut(300);
     /*setTimeout(function(){
 	    $('body').removeClass('preloading-bd');
 	}, 800);*/

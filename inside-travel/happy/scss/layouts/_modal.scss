@@ -1488,7 +1488,7 @@
 
 	}
 }
-/*#preloader{
+#preloader{
 	width: 100%;
 	height: 100%;
 	background-color: #fff;
@@ -1515,7 +1515,7 @@
     img:last-child{
     	width: 54px;
     }
-}*/
+}
 @media (min-width: 992px) {
 	.modal-2{
 		.experience-suplier{
@@ -1642,7 +1642,7 @@
 		}
 	}
 }
-/*@keyframes around {
+@keyframes around {
     from {
     	@include rotage(0deg);
     }
@@ -1673,4 +1673,4 @@
     to {
         -ms-transform: rotate(360deg);
     }
-}*/
+}
