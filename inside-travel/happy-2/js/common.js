@@ -2329,11 +2329,33 @@ $(document).ready(function() {
 			}
 			
 		});
+		$('.box-step-tour .text').click(function(){
+			if($(this).closest('.box-step-tour').find('.value-st4').css('display') == 'none'){
+				$(this).closest('.box-step-tour').find('.value-st4').addClass('open-block');
+				$(this).closest('.box-step-tour').find('label').css({
+					'bottom':'28px',
+					'font-size':'12px',
+					'color':'#b9b9b9'
+				});
+			}else{
+				$('.box-step-tour .value-st4').removeClass('open-block');
+	            if($(".box-step-tour input").val() == ''){
+					$('.box-step-tour label').removeAttr('style');
+				}
+			}
+			
+		});
 		$('body').click(function(e){
 			if (!$('.box-step-where').is(e.target) && $('.box-step-where').has(e.target).length === 0) {
 	            $('.box-step-where .value-st4').removeClass('open-block');
 	            if($(".box-step-where input").val() == ''){
 					$('.box-step-where label').removeAttr('style');
+				}
+	        }
+	        if (!$('.box-step-tour').is(e.target) && $('.box-step-tour').has(e.target).length === 0) {
+	            $('.box-step-tour .value-st4').removeClass('open-block');
+	            if($(".box-step-tour input").val() == ''){
+					$('.box-step-tour label').removeAttr('style');
 				}
 	        }
 	        if (!$('.box-step-when').is(e.target) && $('.box-step-when').has(e.target).length === 0) {
@@ -2368,6 +2390,12 @@ $(document).ready(function() {
 			$(this).closest('.box-step-when').find('.text').text($(this).text());
 			$(this).closest('.box-step-when').find('input').val($(this).text());
 			$(this).closest('.box-mon-time').removeAttr('style');
+		});
+		$('.search-box-st2.type-3 .box-step-submit button').click(function(){
+			let goTo = $('.search-box-st2.type-3 .box-step-where input').val();
+			let valDay = $('.search-box-st2.type-3 .box-step-tour input').val();
+			let valWhen = $('.search-box-st2.type-3 .box-step-when input').val();
+			$('#contact-modal .form-box textarea').val(`Du Lịch Đến: ${goTo}\r\nSố Lượng Ngày: ${valDay}\r\nĐi trong tháng: ${valWhen}\r\n....`);
 		});
 		/*let autocompleteList = ['Hạ Long', 'Đà Nẵng', 'Quan Lạn','Phú Quốc','Cô Tô','Quy Nhơn','Cát Bà','Lào','Thái Lan','Campuchia','Hàn Quốc','Nhật Bản'];
 	    $('#where-autocomplete-1').autocomplete({

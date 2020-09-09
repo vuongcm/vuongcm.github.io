@@ -652,7 +652,7 @@
     width: calc(100% - 50px);
     max-width: 1170px;
     position: absolute;
-    left: calc(50% + 25px);
+    left: 50%;
     bottom: 18px;
     z-index: 10;
     @include translateX(-50%);
@@ -852,7 +852,7 @@
 						position: relative;
 						.icon-font{
 							position: absolute;
-							top: 14px;
+							top: 22px;
 							right: 5px;
 						}
 					}
@@ -953,6 +953,11 @@
 			form{
 				.box-step-submit{
 					height: 40px;
+					button{
+						.icon-font{
+							top: 14px;
+						}
+					}
 				}
 			}
 		}

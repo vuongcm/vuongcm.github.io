@@ -663,6 +663,18 @@
 		padding-right: 0;
 	}
 }
+.search-container-st2{
+	.search-box-st2.type-3{
+		.box-step-tour{
+			border-right: 1px solid #d2efef;
+		}
+		form{
+			.box-step-submit{
+				max-width: 210px;
+			}
+		}
+	}
+}
 @media (max-width: 991px) {
 	.content-price-ticket{
 		.col-prices{
@@ -783,12 +795,40 @@
 			}
 		}
 	}
+	.search-container-st2{
+		.search-box-st2.type-3{
+			.box-step-tour{
+				border-right: none;
+				border-bottom: 1px solid $happy;
+			}
+			form{
+				.box-step-submit{
+					max-width: unset;
+				}
+			}
+		}
+	}
 	.wrap-slide-st12{
 		.synch-carousels{
 			.nav-arrows{
 	            display: none;
 	        }
 
+		}
+	}
+	.banner-top-slider-type-3{
+		.wrap-title-banner-top{
+			bottom: 240px;
+		}
+		.search-container-st2{
+			position: static;
+			margin-left: auto;
+			margin-right: auto;
+			transform: none;
+		    -moz-transform: none;
+		    -webkit-transform: none;
+		    -o-transform: none;
+		    -ms-transform: none;
 		}
 	}
 }
@@ -912,6 +952,7 @@
 			padding-left: 0;
 		}
 	}
+	
 }
 @media (max-width: 479px) {
 	.banner-ticket{
