@@ -8,6 +8,14 @@
 	justify-content: center;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	&>.col-xlg-4{
+		&:first-child{
+			padding-left: 0;
+		}
+		&:last-child{
+			padding-right: 0;
+		}
+	}
 	.three-reasons{
 		position: relative;
 	    margin-top: 24px;
@@ -15,6 +23,7 @@
 	    border: 2px solid;
 	    border-radius: 6px;
 	    text-align: center;
+	    background-color: #fff;
 	    h4{
 			font-size: 14px;
 	    }
@@ -57,6 +66,9 @@
 			color: rgba(221,81,126,1);
 		}
 	}
+}
+.why-book-box-st2{
+	display: none;
 }
 .wrap-slide-st11{
 	width: 100%;
@@ -675,6 +687,19 @@
 		}
 	}
 }
+#contact-modal{
+	input[type="text"],input[type="email"]{
+		font-size: 14px;
+		color: #16b3b3;
+	}
+}
+.why-book-us{
+	background-color: #e9f3f4;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-bottom: 0;
+	margin-top: 0;
+}
 @media (max-width: 991px) {
 	.content-price-ticket{
 		.col-prices{
@@ -976,5 +1001,37 @@
 			}
 
 		}
+	}
+	.content-why-book{
+		display: none;
+	}
+	.why-book-box-st2{
+		display: block;
+		width: 90%;
+		h2{
+			font-size: 18px;
+			text-transform: uppercase;
+			text-align: center;
+		}
+		.three-reasons-mobi{
+			margin-top: 30px;
+			.iconAbove{
+				display: flex;
+				align-items: center;
+				.iconWrap{
+					flex-shrink: 0;
+					img{
+						width: 50px;
+					}
+				}
+				.msgCopy{
+					flex-grow: 1;
+					margin-left: 15px;
+				}
+			}
+		}
+	}
+	.banner-top-slider-type-3{
+		min-height: unset;
 	}
 }

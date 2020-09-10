@@ -3,25 +3,25 @@
     margin: 0;
     padding: 0;
     &::-webkit-input-placeholder{
-        color: #555;
+        color: #16b3b3;
         letter-spacing: 1px;
         font-size: 12px;
         font-family: 'Montserrat', Arial, sans-serif;
     }
     &:-moz-placeholder{
-        color: #555;
+        color: #16b3b3;
         letter-spacing: 1px;
         font-size: 12px;
         font-family: 'Montserrat', Arial, sans-serif;
     }
     &::-moz-placeholder{
-        color: #555;
+        color: #16b3b3;
         letter-spacing: 1px;
         font-size: 12px;
         font-family: 'Montserrat', Arial, sans-serif;
     }
     &:-ms-input-placeholder{
-        color: #555;
+        color: #16b3b3;
         letter-spacing: 1px;
         font-size: 12px;
         font-family: 'Montserrat', Arial, sans-serif;
@@ -246,7 +246,7 @@ select:focus {
 }
 .btn-st3{
     color: #fff;
-    background-color: #111;
+    background-color: #18b3b3;
     
     text-transform: uppercase;
     //font-size: 12px;

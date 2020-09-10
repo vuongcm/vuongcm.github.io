@@ -650,7 +650,7 @@
 	padding-left: 15px;
     padding-right: 15px;
     width: calc(100% - 50px);
-    max-width: 1170px;
+    max-width: 1180px;
     position: absolute;
     left: 50%;
     bottom: 18px;
@@ -698,7 +698,7 @@
     	position: relative;
     	label{
     		position: absolute;
-		    left: 56px;
+		    left: 45px;
 		    bottom: 18px;
 		    font-size: 16px;
 		    color: $happy;
@@ -716,7 +716,7 @@
     			position: absolute;
 			    left: 10px;
 			    top: 50%;
-			    font-size: 30px;
+			    font-size: 24px;
 			    color: $happy;
 			    z-index: 5;
 			    transform: translateY(-50%);
@@ -741,7 +741,7 @@
 		    //@include rotage(90deg);
     	}
     	&>.text{
-			padding: 28px 48px 12px 56px;
+			padding: 28px 48px 12px 45px;
 		    width: 100%;
 		    height: 60px;
 		    line-height: 1.2;
@@ -1188,12 +1188,12 @@
 		}
 	}
 	.search-container-st2{
-		position: static;
-		transform: none;
-	    -moz-transform: none;
-	    -webkit-transform: none;
-	    -o-transform: none;
-	    -ms-transform: none;
+		display: none;
+	}
+	.banner-top-slider-type-3{
+		.wrap-title-banner-top{
+			display: none;
+		}
 	}
 	.wrap-slide-st7{
 		.synch-carousels{
