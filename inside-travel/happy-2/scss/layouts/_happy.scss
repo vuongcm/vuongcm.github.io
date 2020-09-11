@@ -700,6 +700,132 @@
 	margin-bottom: 0;
 	margin-top: 0;
 }
+.big-tour-box-st2{
+	.head-box{
+		.count-day{
+			background-color: #e24010;
+		}
+	}
+	.desti-voucher{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		.desti-3{
+			display: inline-block;
+			padding: 10px 20px 0;
+			color: #fff;
+			.map-marker{
+				font-size: 16px;
+			}
+			span{
+				font-size: 14px;
+			}
+		}
+	}
+	.voucher-title-box{
+		width: 100%;
+		h2 {
+			position: static;
+			padding-top: 10px;
+			a{
+				text-transform: uppercase;
+			}
+			.star-box{
+				margin-left: 10px;
+			}
+		}
+	}
+	.title-box{
+		border-bottom: 1px dotted #dcdcdc;
+		padding-bottom: 15px;
+		h3{
+			font-size: 22px;
+			margin: 0;
+		}
+	}
+	.box-like-content{
+		p{
+			line-height: 1.8;
+		    letter-spacing: 0.7px;
+		    color: #059298;
+		    display: flex;
+		    align-items: center;
+		    .heart-empty{
+		    	margin-right: 5px;
+    			color: #e3ba10;
+		    }
+		}
+	}
+	.foot-trip{
+		padding-bottom: 30px;
+	}
+}
+.section-grid-cruise.section-grid-type-5{
+	.grid-ct1{
+		.group-ct1-1{
+			.head-trip{
+				.title-info{
+					.title-h2{
+						color: #059298;
+					}
+					.short-info-cruise{
+						align-items: center;
+						.wrap-tooltip{
+							.tooltip{
+								&>.icon-font-cr{
+									font-size: 18px;
+								}
+							}
+						}
+					}
+				}
+				.heart-tour{
+					.heart-empty{
+						color: #059298;
+					}
+					&:hover{
+						.heart-empty{
+							color: #059298;
+						}
+					}
+				}
+			}
+			.foot-trip-st5{
+				.title-type-5{
+					border-bottom: 1px dotted #dcdcdc;
+				    padding-bottom: 15px;
+				    margin-bottom: 15px;
+				    display: flex;
+				    justify-content: space-between;
+				    h2{
+				    	border-bottom: none;
+				    	padding-bottom: 0;
+				    	margin-bottom: 0;
+				    }
+				    .video-box-5{
+				    	display: flex;
+				    	align-items: center;
+				    	span{
+				    		font-size: 14px;
+				    		text-transform: uppercase;
+				    	}
+				    	.icon-font{
+				    		font-size: 22px;
+				    		margin-left: 2px;
+				    	}
+				    }
+				}
+				.div-hidden{
+					max-height: 270px;
+					.paragraph{
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+}
 @media (max-width: 991px) {
 	.content-price-ticket{
 		.col-prices{
