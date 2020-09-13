@@ -802,6 +802,7 @@
 				    	border-bottom: none;
 				    	padding-bottom: 0;
 				    	margin-bottom: 0;
+				    	line-height: 1.5;
 				    }
 				    .video-box-5{
 				    	display: flex;
@@ -851,6 +852,11 @@
 							font-size: 22px;
 						}
 					}
+				}
+			}
+			.order-discount{
+				h4{
+					font-weight: 600;
 				}
 			}
 			.box-check-rates{
@@ -1270,6 +1276,12 @@
 							}
 							.wrap-tooltip{
 								justify-content: flex-start;
+								width: auto;
+								.tooltip{
+									&>.icon-font-cr{
+										font-size: 14px;
+									}
+								}
 							}
 						}
 					}
@@ -1282,6 +1294,9 @@
 							h2{
 								width: 100%;
 								text-align: center;
+							}
+							.video-box-5{
+								display: none;
 							}
 						}
 					}

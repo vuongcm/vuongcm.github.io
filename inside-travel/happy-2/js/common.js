@@ -2414,9 +2414,9 @@ $(document).ready(function() {
 		});
 		$('#box-request-qt .get-quanlity .btn-down').click(function(){
 			let quantiVoucher = Number($('#quanti-voucher').text());
-			if(quantiVoucher > 3){
+			if(quantiVoucher > 2){
 				$('#quanti-voucher').text(quantiVoucher-1);
-			} else if(quantiVoucher == 3){
+			} else if(quantiVoucher == 2){
 				$('#quanti-voucher').text(quantiVoucher-1);
 				$(this).addClass('btn-disabled');
 			}
