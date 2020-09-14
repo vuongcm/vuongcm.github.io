@@ -2427,6 +2427,17 @@ $(document).ready(function() {
 			$('#contact-modal .form-box textarea').val(`Đặt ${quantiVoucher} Voucher Du Lịch Vinpearl Land Nha Trang...`);
 		});
 	}
+	if($('.box-like-content').length){
+		$('.big-tour-box-st2 .foot-trip .read-more-st3 .link-st3').click(function(){
+			if($('.box-like-content.div-hidden').css('max-height') == '850px'){
+				$('.box-like-content.div-hidden').removeAttr('style');
+				$(this).text('... xem thêm');
+			} else{
+				$('.box-like-content.div-hidden').css('max-height','850px');
+				$(this).text('... thu gọn');
+			}
+		});
+	}
 });
 window.onload = function() {
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());

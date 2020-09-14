@@ -750,15 +750,71 @@
 		    letter-spacing: 0.7px;
 		    color: #059298;
 		    display: flex;
-		    align-items: center;
+		    align-items: baseline;
 		    .heart-empty{
 		    	margin-right: 5px;
     			color: #e3ba10;
 		    }
 		}
+
 	}
 	.foot-trip{
 		padding-bottom: 30px;
+		// border-bottom: 1px dotted #dcdcdc;
+		.box-like-content.div-hidden{
+			max-height: 95px;
+		}
+		.read-more-st3{
+			border-bottom: 1px dotted #dcdcdc;
+			padding-bottom: 15px;
+		}
+		.foot-info{
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			padding-top: 15px;
+			// padding-bottom: 15px;
+			&>div, &>a{
+				margin-top: 10px;
+			}
+			.wrap-tooltip{
+				padding-left: 0;
+				width: auto;
+				margin: 0;
+				.tooltip{
+					&>.icon-font-cr{
+						font-size: 20px;
+					}
+				}
+			}
+			.box-price{
+				max-width: 240px;
+				strike{
+					font-weight: 600;
+					color: #e2ba10;
+				}
+				span{
+					display: inline;
+				}
+				.cam_ket{
+					width: 100%;
+				}
+			}
+			.btn-st2{
+				height: 40px;
+				margin-left: 0;
+				margin-bottom: 0;
+				border: none;
+				background-color: red;
+				color: #fff;
+				.icon-font{
+					font-size: 10px;
+					margin-right: 5px;
+				}
+			}
+		}
 	}
 }
 .section-grid-cruise.section-grid-type-5{
@@ -976,6 +1032,7 @@
 			}
 		}
 	}
+	
 }
 @media (max-width: 991px) {
 	.content-price-ticket{
@@ -1113,7 +1170,13 @@
 	.wrap-slide-st12{
 		.synch-carousels{
 			.nav-arrows{
-	            display: none;
+	            // display: none;
+	            top: calc(50% - 18px);
+	            button{
+	            	i{
+	            		font-size: 20px;
+	            	}
+	            }
 	        }
 
 		}
@@ -1317,6 +1380,13 @@
 				}
 			}
 		} */
+	}
+	.big-tour-box-st2{
+		.foot-trip{
+			.foot-info{
+				justify-content: center;
+			}
+		}
 	}
 }
 @media (max-width: 479px) {
