@@ -751,6 +751,9 @@
 		    color: #059298;
 		    display: flex;
 		    align-items: baseline;
+		    padding-bottom: 8px;
+		    font-weight: 400;
+		    font-size: 14px;
 		    .heart-empty{
 		    	margin-right: 5px;
     			color: #e3ba10;
@@ -762,11 +765,12 @@
 		padding-bottom: 30px;
 		// border-bottom: 1px dotted #dcdcdc;
 		.box-like-content.div-hidden{
-			max-height: 95px;
+			max-height: 192px;
 		}
 		.read-more-st3{
 			border-bottom: 1px dotted #dcdcdc;
 			padding-bottom: 15px;
+
 		}
 		.foot-info{
 			width: 100%;
@@ -809,6 +813,8 @@
 				border: none;
 				background-color: red;
 				color: #fff;
+				font-weight: 600;
+				font-size: 14px;
 				.icon-font{
 					font-size: 10px;
 					margin-right: 5px;
@@ -827,6 +833,15 @@
 					}
 					.short-info-cruise{
 						align-items: center;
+						.hotel-news{
+							span{
+								white-space: nowrap;
+								color: #059298;
+								.icon-font{
+									color: inherit;
+								}
+							}
+						}
 						.wrap-tooltip{
 							.tooltip{
 								&>.icon-font-cr{
@@ -858,7 +873,7 @@
 				    	border-bottom: none;
 				    	padding-bottom: 0;
 				    	margin-bottom: 0;
-				    	line-height: 1.5;
+				    	line-height: 1.1;
 				    }
 				    .video-box-5{
 				    	display: flex;
@@ -878,6 +893,9 @@
 					.paragraph{
 						text-align: left;
 					}
+				}
+				.read-more-st3{
+					box-shadow: 0px -20px 100px 0px #fff;
 				}
 			}
 		}
@@ -954,6 +972,58 @@
 					color: #059298;
 				}
 			}
+		}
+	}
+	.grid-ct5{
+		.group-ct5-1{
+			.box-how-pri{
+				.why-book-box-st2{
+					display: block;
+					width: 90%;
+					h2{
+						font-size: 18px;
+						text-transform: uppercase;
+						text-align: center;
+						margin-top: 0;
+					}
+					.three-reasons-mobi{
+						margin-top: 30px;
+						.iconAbove{
+							display: flex;
+							align-items: center;
+							.iconWrap{
+								flex-shrink: 0;
+								img{
+									width: 50px;
+								}
+							}
+							.msgCopy{
+								flex-grow: 1;
+								margin-left: 15px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.group-ct5-2{
+			background-color: #fff;
+    		padding-top: 15px;
+    		padding-bottom: 15px;
+    		.box-contact{
+    			.team-quote{
+    				&>img{
+    					width: 150px;
+    					margin-bottom: 10px;
+    				}
+    				.team-name{
+    					font-family: inherit;
+    					font-size: 20px;
+    					text-transform: uppercase;
+    					font-weight: 500;
+    				}
+    			}
+    		}
 		}
 	}
 }
@@ -1337,6 +1407,7 @@
 							.star-box{
 								font-size: 12px;
 							}
+
 							.wrap-tooltip{
 								justify-content: flex-start;
 								width: auto;
@@ -1382,6 +1453,11 @@
 		} */
 	}
 	.big-tour-box-st2{
+		.title-box{
+			h3{
+				font-size: 16px;
+			}
+		}
 		.foot-trip{
 			.foot-info{
 				justify-content: center;
@@ -1422,6 +1498,7 @@
 			font-size: 18px;
 			text-transform: uppercase;
 			text-align: center;
+			margin-top: 0;
 		}
 		.three-reasons-mobi{
 			margin-top: 30px;

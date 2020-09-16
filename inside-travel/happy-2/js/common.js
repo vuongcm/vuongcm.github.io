@@ -115,9 +115,11 @@ $(document).ready(function() {
 	        		$('.grid-ct4').css({
 	        			'top':`${gridCt4}px`
 	        		}).addClass('scroll-active');
+	        		$('.section-grid-type-5 .order-save, .section-grid-type-5 .voucher-include').css('display','none');
 	        	} else{
 	        		$('.grid-ct3').removeAttr('style');
 	        		$('.grid-ct4').removeAttr('style').removeClass('scroll-active');
+	        		$('.section-grid-type-5 .order-save, .section-grid-type-5 .voucher-include').removeAttr('style');
 	        	}
 	        }
 	        if($('.section-grid-dt4').length){
