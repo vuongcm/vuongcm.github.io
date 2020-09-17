@@ -2430,12 +2430,13 @@ $(document).ready(function() {
 		});
 	}
 	if($('.box-like-content').length){
-		$('.big-tour-box-st2 .foot-trip .read-more-st3 .link-st3').click(function(){
-			if($('.box-like-content.div-hidden').css('max-height') == '850px'){
-				$('.box-like-content.div-hidden').removeAttr('style');
+		$('.big-tour-box-st2 .foot-trip .read-more-st3>a, .body-trip-type-5 .read-more-st3>a').click(function(){
+			let focusX = $(this).parent('.read-more-st3').prevAll('.box-like-content.div-hidden');
+			if(focusX.css('max-height') == '850px'){
+				focusX.removeAttr('style');
 				$(this).text('... xem thêm');
 			} else{
-				$('.box-like-content.div-hidden').css('max-height','850px');
+				focusX.css('max-height','850px');
 				$(this).text('... thu gọn');
 			}
 		});

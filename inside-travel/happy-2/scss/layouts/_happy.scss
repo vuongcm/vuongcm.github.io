@@ -1076,6 +1076,162 @@
 		}
 	}
 }
+.happy-item-trip{
+	.trip{
+		padding-bottom: 30px;
+	}
+	.head-trip-type-5{
+		position: relative;
+		&>a{
+			display: block;
+		}
+		.count-day{
+			text-transform: none;
+			background-color: #e24010;
+			font-size: 8px;
+		}
+		.desti-voucher{
+			position: absolute;
+    		bottom: 0;
+    		left: 0;
+    		width: 100%;
+    		background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,0.65)));
+		    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%);
+		    background: -moz-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%);
+		    background: -ms-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%);
+		    background: -o-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%);
+		    padding: 10px 15px;
+		    text-align: left;
+    		.desti-3{
+    			display: inline-block;
+			    color: #fff;
+			    margin-bottom: 8px;
+			    .map-marker{
+			    	font-size: 12px;
+			    }
+			    span{
+			    	font-size: 10px;
+			    }
+
+    		}
+    		.voucher-title-box{
+		    	width: 100%;
+		    	h3{
+		    		margin: 0;
+		    		font-size: 12px;
+		    		padding-left: 0;
+		    		padding-right: 0;
+		    		a{
+		    			color: #fff;
+		    			min-height: unset;
+		    		}
+		    		.star-box{
+		    			font-size: 10px;
+		    			margin-left: 5px;
+		    		}
+		    	}
+		    }
+		}
+	}
+	.body-trip-type-5{
+		padding-left: 10px;
+		padding-right: 10px;
+		.title-h2-line{
+			font-size: 14px;
+			text-align: left;
+			font-weight: 600;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			text-transform: none;
+			padding-bottom: 15px;
+			border-bottom: 1px dotted #dcdcdc;
+			&:after{
+				display: none;
+				
+			}
+		}
+		.box-like-content{
+			text-align: left;
+			max-height: 91px;
+			p{
+				line-height: 1.8;
+				.heart-empty{
+					color: #e3ba10;
+					margin-right: 5px;
+				}
+			}
+		}
+		.read-more-st3{
+			padding-bottom: 15px;
+			border-bottom: 1px dotted #dcdcdc;
+			&>a{
+				color: #e3ba10;
+			}
+		}
+	}
+	.foot-trip-type-5{
+		width: 100%;
+		margin-top: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
+		text-align: left;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		flex-wrap: wrap;
+		.wrap-tooltip{
+			padding-right: 0;
+			padding-left: 0;
+			position: static;
+			width: auto;
+			display: inline-flex;
+			.tooltip>.icon-font-cr{
+				font-size: 18px;
+			}
+		}
+		.info-cruise-month{
+			display: inline-flex;
+			justify-content: center;
+			width: auto;
+			flex-wrap: wrap;
+			&>div{
+				width: 100%;
+				text-align: center;
+			}
+		}
+		.box-price{
+			width: 100%;
+			text-align: center;
+			margin-top: 10px;
+			strike{
+				font-weight: 500;
+				color: #e3ba10;
+			}
+			span{
+				display: inline;
+			}
+			.cam_ket{
+				width: 100%;
+			}
+		}
+		.btn-st2{
+			position: static;
+			height: 35px;
+			width: 100%;
+		    border: none;
+		    background-color: red;
+		    color: #fff;
+		    font-weight: 600;
+		    font-size: 12px;
+		    font-weight: 400;
+		    margin-top: 10px;
+		    .icon-font{
+		    	font-size: 10px;
+		    	margin-right: 5px;
+		    }
+		}
+	}
+}
 @media (max-width: 1199px) {
 	.section-grid-cruise.section-grid-type-5{
 		.grid-ct1{
@@ -1276,6 +1432,9 @@
 				}
 			}
 		}
+	}
+	.happy-item-trip{
+		
 	}
 }
 @media (min-width: 400px) {
