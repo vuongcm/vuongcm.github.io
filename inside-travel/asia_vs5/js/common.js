@@ -1102,6 +1102,9 @@ $(document).ready(function() {
         if(!$('.booking-step-class .text,.booking-step-class .value').is(e.target) && $('.booking-step-class .text,.booking-step-class .value').has(e.target).length === 0){
         	$('.booking-step-class .value').removeClass('open-block');
         }
+        if(!$('.booking-step-class-2 .text,.booking-step-class-2 .value').is(e.target) && $('.booking-step-class-2 .text,.booking-step-class-2 .value').has(e.target).length === 0){
+        	$('.booking-step-class-2 .value').removeClass('open-block');
+        }
         if(!$('.booking-step-time .text,.booking-step-time .value').is(e.target) && $('.booking-step-time .text,.booking-step-time .value').has(e.target).length === 0){
         	$('.booking-step-time .value').removeClass('open-block');
         }
@@ -1318,23 +1321,6 @@ $(document).ready(function() {
 	if($('.booking-step-class').length){
 		$('.booking-step-class .btn-value').click(function(){
 			$(this).toggleClass('checked');
-			if($('.order-choose').length){
-				let valueActive = $(this).children('b').text().toLowerCase();
-				let getBtn = $('.order-choose .row-choose');
-				for(let i=0; i < getBtn.length; i++){
-					if(getBtn.eq(i).find('.order-choose-info>div:first-child').text().toLowerCase() == valueActive){
-						if(getBtn.eq(i).find('.service-check-2')[0].checked){
-							getBtn.eq(i).removeClass('choosed');
-							getBtn.eq(i).find('.service-check-2')[0].checked = false;
-							getBtn.eq(i).find('label').removeClass('active');
-						} else{
-							getBtn.eq(i).addClass('choosed');
-							getBtn.eq(i).find('.service-check-2')[0].checked = true;
-							getBtn.eq(i).find('label').addClass('active');
-						}
-					}
-				}
-			}
 			$('.booking-step-class select').html('');
 			let btnActive = $('.booking-step-class .btn-value.checked');
 			for(let i=0; i < btnActive.length; i++){
@@ -1344,6 +1330,40 @@ $(document).ready(function() {
 				$('.booking-step-class .text b').html(`Tour Class`);
 			} else{
 				$('.booking-step-class .text b').html(`${btnActive.length} selected`);
+			}
+		});
+	}
+	if($('.booking-step-class-2').length){
+		$('.booking-step-class-2 .btn-value').click(function(){
+			$('.booking-step-class-2 .btn-value').removeClass('checked');
+			$(this).addClass('checked');
+			let valueActive = $(this).children('b').text().toLowerCase();
+			let getBtn = $('.order-choose .row-choose');
+			for(let i=0; i < getBtn.length; i++){
+				if(getBtn.eq(i).find('.order-choose-info>div:first-child').text().toLowerCase() == valueActive){
+					getBtn.eq(i).addClass('choosed');
+					getBtn.eq(i).find('.service-check-2')[0].checked = true;
+					getBtn.eq(i).find('label').addClass('active');
+				} else{
+					getBtn.eq(i).removeClass('choosed');
+					getBtn.eq(i).find('.service-check-2')[0].checked = false;
+					getBtn.eq(i).find('label').removeClass('active');
+				}
+			}
+			let btnVal = $(this).children('b').text();
+			$('.booking-step-class-2>input').val(btnVal);
+			$('.booking-step-class-2 .text b').text(btnVal);
+			$(this).closest('.value').removeClass('open-block');
+		});
+	}
+	if($('.order-box').length){
+		$('.row-choose').click(function(){
+			let btnValue = $(this).find('.order-choose-info>div:first-child').text().toLowerCase();
+			let getBtn = $('.booking-step-class-2 .btn-value');
+			for(let i=0; i<getBtn.length; i++){
+				if(getBtn.eq(i).children('b').text().toLowerCase() == btnValue){
+					getBtn.eq(i).click();
+				}
 			}
 		});
 	}
@@ -2099,17 +2119,7 @@ $(document).ready(function() {
 		$('.modal-tour-st2').removeClass('close-display');
 	});
 	/*============detail-grid===============*/
-	if($('.order-box').length){
-		$('.row-choose').click(function(){
-			let btnValue = $(this).find('.order-choose-info>div:first-child').text().toLowerCase();
-			let getBtn = $('.booking-step-class .btn-value');
-			for(let i=0; i<getBtn.length; i++){
-				if(getBtn.eq(i).children('b').text().toLowerCase() == btnValue){
-					getBtn.eq(i).click();
-				}
-			}
-		});
-	}
+	
 	$('.open-cruise-itine').click(function(){
 		$('.modal-container').removeClass('close-display');
 		$('.modal-cruise-st2').removeClass('close-display');
