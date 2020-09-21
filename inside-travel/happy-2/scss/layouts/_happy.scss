@@ -1458,8 +1458,28 @@
 			}
 		}
 	}
-	.happy-item-trip{
-		
+	.big-tour-box-st2{
+		.head-box{
+			.wrap-slide-st9{
+				.synch-carousels{
+					.nav-arrows{
+						display: block;
+						.arrow-left{
+							left: 0;
+							visibility: visible;
+							z-index: 3;
+							background-image: none;
+						}
+						.arrow-right{
+							right: 0;
+							visibility: visible;
+							z-index: 3;
+							background-image: none;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 @media (min-width: 400px) {
