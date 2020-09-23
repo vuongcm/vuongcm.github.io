@@ -745,9 +745,70 @@
 	.title-box{
 		border-bottom: 1px dotted #dcdcdc;
 		padding-bottom: 15px;
+		/* display: flex;
+		align-content: center;
+		flex-wrap: wrap; */
+		.wrap-number-night{
+			display: flex;
+			align-items: center;
+			h3{
+				flex-grow: 1;
+				padding-right: 10px;
+			}
+		}
 		h3{
 			font-size: 22px;
 			margin: 0;
+			// width: calc(100% - 75px);
+			// flex-grow: 1;
+		}
+		.number-night{
+			width: 75px;
+			padding-left: 10px;
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			flex-shrink: 0;
+			.moon1{
+				font-size: 32px;
+			}
+			span{
+				position: absolute;
+				top: calc(50% - 13px);
+    			left: 26px;
+    			text-transform: uppercase;
+    			font-weight: 600;
+    			white-space: nowrap;
+			}
+		}
+		.wrap-tooltip{
+			// margin-bottom: 0;
+			margin-top: 0;
+			margin-left: 0;
+			.tooltip{
+				.icon-font{
+					font-size: 16px;
+					// color: #059ea6;
+					&:before{
+						color: #059ea6;
+					}
+				}
+				.plus{
+					font-size: 10px;
+				}
+				span{
+					bottom: 180%;
+				}
+			}
+		}
+		.voucher-box{
+			font-weight: 600;
+			margin-bottom: 10px;
+			.price-tag{
+				font-size: 16px;
+				margin-right: 5px;
+			}
 		}
 	}
 	.box-like-content{
@@ -977,6 +1038,169 @@
 			.order-best{
 				.checkmark{
 					color: #059298;
+				}
+			}
+		}
+		.order-box-st2{
+			.order-discount{
+				.discount-title{
+					.voucher-box{
+						font-weight: 500;
+					}
+					.wrap-full-info{
+						display: flex;
+						margin-top: 10px;
+						margin-bottom: 15px;
+						padding-bottom: 15px;
+						border-bottom: 1px solid #dcdcdc;
+						h4{
+							border-bottom: none;
+							margin-top: 0;
+							margin-bottom: 0;
+							padding-bottom: 0;
+							text-align: left;
+							padding-right: 10px;
+						}
+						&>a{
+							.external-link{
+								font-size: 22px;
+							}
+						}
+					}
+				}
+			}
+			.btn-st3{
+				border-radius: 999px;
+			}
+		}
+	}
+	.grid-ct4{
+		position: static;
+		.group-ct4-1{
+			padding-left: 15px;
+    		padding-right: 15px;
+			.order-box{
+				.order-save{
+					margin-top: 0;
+					color: #ff5722;
+					font-weight: 500;
+					.icon-font{
+						color: inherit;
+					}
+				}
+				.order-price{
+					margin-top: 15px;
+					padding-bottom: 10px;
+	    			border-bottom: 1px solid #dcdcdc;
+					&>div{
+						&:nth-child(2){
+							b{
+								color: green;
+								text-transform: none;
+							}
+						}
+						&:last-child{
+							span{
+								font-size: 22px;
+							}
+						}
+					}
+				}
+				.order-discount{
+					h4{
+						font-weight: 600;
+						font-size: 14px;
+					}
+				}
+				.box-check-rates{
+					.get-quanlity{
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						&>span{
+							margin-right: 10px;
+						}
+						button{
+							border: 1px solid #b0d6d6;
+						    color: #b0d6d6;
+						    width: 28px;
+						    height: 28px;
+						    border-radius: 50%;
+						    display: inline-flex;
+						    justify-content: center;
+						    align-items: center;
+						    line-height: 1;
+						    flex-shrink: 0;
+						    margin-left: 5px;
+						    margin-right: 5px;
+						    font-size: 18px;
+						    &:hover{
+						    	border-color: #18b3b3;
+	    						color: #18b3b3;
+						    }
+						}
+						font{
+							b{
+								color: #059298;
+							}
+						}
+					}
+				}
+				.order-best{
+					.checkmark{
+						color: #059298;
+					}
+				}
+			}
+			.order-box-st2{
+				.order-discount{
+					.discount-title{
+						.wrap-tooltip{
+							margin-bottom: 0;
+							margin-top: 0;
+							padding-right: 0;
+							padding-left: 0;
+							justify-content: flex-start;
+							.tooltip{
+								.icon-font{
+									font-size: 16px;
+									// color: #059ea6;
+									&:before{
+										color: #059ea6;
+									}
+								}
+								.plus{
+									font-size: 10px;
+								}
+								span{
+									bottom: 180%;
+								}
+							}
+						}
+						.wrap-full-info{
+							display: flex;
+							margin-top: 10px;
+							margin-bottom: 15px;
+							padding-bottom: 15px;
+							border-bottom: 1px solid #dcdcdc;
+							h4{
+								border-bottom: none;
+								margin-top: 0;
+								margin-bottom: 0;
+								padding-bottom: 0;
+								padding-right: 10px;
+								text-align: left;
+							}
+							&>a{
+								.external-link{
+									font-size: 22px;
+								}
+							}
+						}
+					}
+				}
+				.btn-st3{
+					border-radius: 999px;
 				}
 			}
 		}

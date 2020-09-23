@@ -125,6 +125,20 @@
 			}
 		}
 	}
+	.grid-ct4{
+		.group-ct4-1{
+			.order-box{
+				.order-price{
+					&>div{
+						b{
+							font-size: 18px;
+						    color: $higlight-color;
+						}
+					}
+				}
+			}
+		}
+	}
 	.grid-ct3{
 		z-index: 1;
 	}
