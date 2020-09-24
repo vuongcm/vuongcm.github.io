@@ -709,6 +709,23 @@
 			.wrap-dots{
 				display: none!important;
 			}
+			.synch-carousels{
+				.nav-arrows{
+					display: block;
+					.arrow-left{
+						left: 0;
+						visibility: visible;
+						z-index: 3;
+						background-image: none;
+					}
+					.arrow-right{
+						right: 0;
+						visibility: visible;
+						z-index: 3;
+						background-image: none;
+					}
+				}
+			}
 		}
 	}
 	.desti-voucher{
@@ -1255,6 +1272,79 @@
     				}
     			}
     		}
+		}
+	}
+}
+.modal-voucher{
+	max-width: 590px;
+	.order-box{
+		.order-price{
+			margin-top: 15px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #dcdcdc;
+			&>div{
+				&:nth-child(2){
+					b{
+						color: green;
+						text-transform: none;
+						font-size: 16px;
+					}
+				}
+				&:last-child{
+					span{
+						font-size: 22px;
+					}
+				}
+			}
+		}
+		.order-discount{
+			h4{
+				font-weight: 600;
+				font-size: 14px;
+				border-bottom: none;
+				padding-bottom: 0;
+				text-align: left;
+			}
+		}
+		.box-check-rates{
+			.get-quanlity{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				&>span{
+					margin-right: 10px;
+				}
+				button{
+					border: 1px solid #b0d6d6;
+				    color: #b0d6d6;
+				    width: 28px;
+				    height: 28px;
+				    border-radius: 50%;
+				    display: inline-flex;
+				    justify-content: center;
+				    align-items: center;
+				    line-height: 1;
+				    flex-shrink: 0;
+				    margin-left: 5px;
+				    margin-right: 5px;
+				    font-size: 18px;
+				    &:hover{
+				    	border-color: #18b3b3;
+						color: #18b3b3;
+				    }
+				}
+				font{
+					b{
+						color: #059298;
+					}
+				}
+			}
+		}
+		.order-best{
+			margin-bottom: 0;
+			.checkmark{
+				color: #059298;
+			}
 		}
 	}
 }
