@@ -705,6 +705,9 @@
 		.count-day{
 			background-color: #e24010;
 		}
+		.heart-tour{
+			z-index: 13;
+		}
 		.wrap-slide-st9{
 			.wrap-dots{
 				display: none!important;
@@ -1974,6 +1977,21 @@
 	}
 	.big-tour-box-st2{
 		.title-box{
+			.wrap-number-night{
+				// display: flex;
+				align-items: flex-start;
+				position: relative;
+				h3{
+					flex-grow: 1;
+					padding-right: 10px;
+				}
+				.number-night{
+					position: absolute;
+					top: 0;
+					left: 50%;
+					@include translate2d(-40%,-120%);
+				}
+			}
 			h3{
 				font-size: 16px;
 			}
@@ -2040,5 +2058,28 @@
 	}
 	.banner-top-slider-type-3{
 		min-height: unset;
+	}
+}
+@media (max-width: 375px) {
+	.big-tour-box-st2{
+		.title-box{
+			.wrap-number-night{
+				.number-night{
+					position: absolute;
+					top: 0;
+					left: unset;
+					right: 0;
+					@include translate2d(0,-120%);
+				}
+			}
+			h3{
+				font-size: 16px;
+			}
+		}
+		.foot-trip{
+			.foot-info{
+				justify-content: center;
+			}
+		}
 	}
 }

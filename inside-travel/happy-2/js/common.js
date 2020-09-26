@@ -2490,6 +2490,11 @@ $(document).ready(function() {
 			$('.modal-voucher').removeClass('close-display');
 		});
 	}
+	if(bodyWidth > 991 && $('.section-grid-dt3').length){
+		let heightGr3 = $('.section-grid-dt3 .grid-ct3').height();
+		let heightGr4 = $('.section-grid-dt3 .grid-ct4').height();
+		$('.section-grid-dt3>.container').css('grid-auto-rows',`auto ${heightGr3}px ${heightGr4}px auto auto`);
+	}
 });
 window.onload = function() {
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());
