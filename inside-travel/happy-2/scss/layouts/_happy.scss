@@ -922,6 +922,7 @@
 						align-items: center;
 						flex-wrap: wrap;
 						.hotel-news{
+							flex-grow: unset;
 							span{
 								white-space: nowrap;
 								color: #059298;
@@ -931,6 +932,8 @@
 							}
 						}
 						.wrap-tooltip{
+							width: auto;
+							white-space: nowrap;
 							.tooltip{
 								&>.icon-font-cr{
 									font-size: 18px;

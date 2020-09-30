@@ -2408,7 +2408,7 @@ $(document).ready(function() {
 	        $(this).nextAll('.value-st4').removeClass('open-block');
 	    });*/
 	}
-	if($('#box-request-qt').length){
+	/*if($('#box-request-qt').length){
 		$('#box-request-qt .get-quanlity .btn-up').click(function(){
 			let quantiVoucher = Number($('#quanti-voucher').text());
 			$('#quanti-voucher').text(quantiVoucher+1);
@@ -2428,7 +2428,7 @@ $(document).ready(function() {
 			let quantiVoucher = $('#quanti-voucher').text();
 			$('#contact-modal .form-box textarea').val(`Đặt ${quantiVoucher} Voucher Du Lịch Vinpearl Land Nha Trang...`);
 		});
-	}
+	}*/
 	if($('#box-request-qt-2').length){
 		$('#box-request-qt-2 .get-quanlity .btn-up').click(function(){
 			let quantiVoucher = Number($('#quanti-voucher-2').text());
