@@ -1527,6 +1527,26 @@
 				font-size: 18px;
 			}
 		}
+		.wrap-tooltip-type-5{
+			margin-bottom: 15px;
+			margin-top: 0;
+			margin-left: 0;
+			.tooltip{
+				.icon-font{
+					font-size: 16px;
+					// color: #059ea6;
+					&:before{
+						color: #059ea6;
+					}
+				}
+				.plus{
+					font-size: 10px;
+				}
+				span{
+					bottom: 180%;
+				}
+			}
+		}
 		.info-cruise-month{
 			display: inline-flex;
 			justify-content: center;
@@ -1569,7 +1589,6 @@
 		    color: #fff;
 		    font-weight: 600;
 		    font-size: inherit;
-		    font-weight: 400;
 		    margin-top: 10px;
 		    .icon-font{
 		    	font-size: 10px;
