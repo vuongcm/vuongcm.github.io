@@ -1069,7 +1069,7 @@
 			.order-discount{
 				.discount-title{
 					.voucher-box{
-						font-weight: 500;
+						font-weight: 600;
 					}
 					.wrap-full-info{
 						display: flex;
@@ -1084,6 +1084,10 @@
 							padding-bottom: 0;
 							text-align: left;
 							padding-right: 10px;
+							a{
+								font-size: 13px;
+								color: #059298;
+							}
 						}
 						&>a{
 							.external-link{
@@ -1091,6 +1095,9 @@
 							}
 						}
 					}
+				}
+				&>div:nth-child(2) span{
+					font-size: 20px;
 				}
 			}
 			.btn-st3{
@@ -1312,6 +1319,7 @@
 				padding-bottom: 0;
 				text-align: left;
 			}
+			
 		}
 		.box-check-rates{
 			.get-quanlity{

@@ -81,10 +81,11 @@ body {
 	font-family: 'Montserrat', Arial, sans-serif;
 	font-size: 13px;
 	color: #059298;
-    letter-spacing: 1px;
     position: relative;
     --bodyWidth: 1583px;
     overflow-x: hidden;
+    letter-spacing: 0.7;
+    font-weight: 500;
 }
 .app{
     width: 100%;
@@ -108,7 +109,7 @@ li {
 }
 b{
     font-weight: 600;
-    color: #555;
+    color: #059298;
 }
 a {
     letter-spacing: inherit;
@@ -1121,7 +1122,7 @@ select:focus {
         border: 1px solid #c3bdbd;
         border-radius: 50%;
         &:before{
-            color: #c3bdbd;
+            color: #18b3b3;
         }
         &:hover:before{
             color: $higlight-color;
@@ -1646,7 +1647,7 @@ select:focus {
     span{
         display: inline-flex;
         align-items: center;
-        font-weight: 400;
+        font-weight: 500;
         color: #555;
         .icon-font{
             font-size: 14px;
