@@ -2378,6 +2378,72 @@ $(document).ready(function() {
 	        $(this).nextAll('.value-st4').removeClass('open-block');
 	    });*/
 	}
+	if($('#box-request-qt-2').length){
+		$('#box-request-qt-2 .get-quanlity .btn-up').click(function(){
+			let quantiVoucher = Number($('#quanti-voucher-2').text());
+			$('#quanti-voucher-2').text(quantiVoucher+1);
+			$('#box-request-qt-2 .get-quanlity .btn-down').removeClass('btn-disabled');
+		});
+		$('#box-request-qt-2 .get-quanlity .btn-down').click(function(){
+			let quantiVoucher = Number($('#quanti-voucher-2').text());
+			if(quantiVoucher > 2){
+				$('#quanti-voucher-2').text(quantiVoucher-1);
+			} else if(quantiVoucher == 2){
+				$('#quanti-voucher-2').text(quantiVoucher-1);
+				$(this).addClass('btn-disabled');
+			}
+			
+		});
+		$('#box-request-qt-2 .btn-contact').click(function(){
+			let quantiVoucher = $('#quanti-voucher-2').text();
+			$('#contact-modal .form-box textarea').val(`Đặt ${quantiVoucher} Voucher Du Lịch Vinpearl Land Nha Trang...`);
+		});
+	}
+	if($('#box-request-qt-3').length){
+		$('#box-request-qt-3 .get-quanlity .btn-up').click(function(){
+			let quantiVoucher = Number($('#quanti-voucher-3').text());
+			$('#quanti-voucher-3').text(quantiVoucher+1);
+			$('#box-request-qt-3 .get-quanlity .btn-down').removeClass('btn-disabled');
+		});
+		$('#box-request-qt-3 .get-quanlity .btn-down').click(function(){
+			let quantiVoucher = Number($('#quanti-voucher-3').text());
+			if(quantiVoucher > 2){
+				$('#quanti-voucher-3').text(quantiVoucher-1);
+			} else if(quantiVoucher == 2){
+				$('#quanti-voucher-3').text(quantiVoucher-1);
+				$(this).addClass('btn-disabled');
+			}
+			
+		});
+		$('#box-request-qt-3 .btn-contact').click(function(){
+			let quantiVoucher = $('#quanti-voucher-3').text();
+			$('#contact-modal .form-box textarea').val(`Đặt ${quantiVoucher} Voucher Du Lịch Vinpearl Land Nha Trang...`);
+		});
+	}
+	if($('.box-like-content').length){
+		$('.big-tour-box-st2 .foot-trip .read-more-st3>a, .body-trip-type-5 .read-more-st3>a').click(function(){
+			let focusX = $(this).parent('.read-more-st3').prevAll('.box-like-content.div-hidden');
+			if(focusX.css('max-height') == '850px'){
+				focusX.removeAttr('style');
+				$(this).text('... xem thêm');
+			} else{
+				focusX.css('max-height','850px');
+				$(this).text('... thu gọn');
+			}
+		});
+	}
+	//modal-voucher
+	if($('.modal-voucher').length){
+		$('.btn-voucher').click(function(){
+			$('.modal-container').removeClass('close-display');
+			$('.modal-voucher').removeClass('close-display');
+		});
+	}
+	if(bodyWidth > 991 && $('.section-grid-dt3').length){
+		let heightGr3 = $('.section-grid-dt3 .grid-ct3').height();
+		let heightGr4 = $('.section-grid-dt3 .grid-ct4').height();
+		$('.section-grid-dt3>.container').css('grid-auto-rows',`auto ${heightGr3}px ${heightGr4}px auto auto`);
+	}
 });
 window.onload = function() {
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());
@@ -2398,14 +2464,15 @@ window.onload = function() {
 			$(`#slide-st9-${i} .gallery`).slick({
 				dots: true,
 				dotsClass: 'wrap-dots',
-				infinite: false,
+				// infinite: dataSpe,
 				slidesToShow: 1,
 				useTransform: false,
-				//adaptiveHeight: true,
+				adaptiveHeight: true,
 				prevArrow: `#slide-st9-${i} .arrow-left`,
 		        nextArrow: `#slide-st9-${i} .arrow-right`
 			});
-			$(`#slide-st9-${i} .slick-track`).height($(`#slide-st9-${i} .item`).eq(0).height());
+			setTimeout(function(){$(`#slide-st9-${i} .slick-track`).height($(`#slide-st9-${i} .item`).eq(1).height());},1000);
+			// $(`#slide-st9-${i} .slick-track`).height($(`#slide-st9-${i} .item`).eq(0).height());
 			$(`#slide-st9-${i}`).one('mousedown',function(){
 			    $(`#slide-st9-${i} .item img`).each(function(){
 			    	if($(this).attr('src') == '#'){
