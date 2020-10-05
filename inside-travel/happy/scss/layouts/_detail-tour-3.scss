@@ -7,6 +7,7 @@
     	align-items: start;
     	justify-content: start;
     	//background-color: black;
+
     	&>div{
     		&>div{
     			border-radius: 6px;
@@ -64,7 +65,7 @@
 					margin-top: 8px;
     				.icon-font{
     					font-size: 33px;
-    					color: #AEAEAE;
+    					color: #18b3b3;
     				}
     				&:hover{
     					.icon-font{
@@ -507,6 +508,44 @@
 		}
 		.group-ct5-2{
 			margin-top: 30px;
+			.box-contact{
+				.form-field{
+					&:first-child{
+						//margin-top: 0;
+					}
+				}
+				.team-quote{
+					width: 100%;
+					padding-left: 15px;
+					padding-right: 15px;
+					&>img{
+						width: 70px;
+					}
+					.team-name{
+						margin-top: 0;
+					}
+				}
+				.form-field{
+					textarea{
+						height: 120px;
+					}
+				} 
+				.form-field.show-scroll{
+					display: none;
+				}
+				.btn-st3{
+					width: 100%;
+					height: 40px;
+				}
+				.res-time-box{
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+					font{
+						color: #419453;
+					}
+				}
+			}
 		}
 	}
 	.box-experiences{
@@ -812,7 +851,7 @@
 		&>div{
 			text-transform: uppercase;
 			font-weight: 500;
-			color: #888;
+			color: #6a9696;
 			font-size: 10px;
 			text-align: left;
 			font{
@@ -1051,7 +1090,7 @@
 			}
 		}
 		.grid-ct5{
-			.group-ct5-1{
+			.group-ct5-1, .group-ct5-2{
 				.box-contact{
 					.res-time-box{
 						flex-wrap: wrap;

@@ -125,6 +125,20 @@
 			}
 		}
 	}
+	.grid-ct4{
+		.group-ct4-1{
+			.order-box{
+				.order-price{
+					&>div{
+						b{
+							font-size: 18px;
+						    color: $higlight-color;
+						}
+					}
+				}
+			}
+		}
+	}
 	.grid-ct3{
 		z-index: 1;
 	}
@@ -187,7 +201,7 @@
 			text-align: left;
 			padding-right: 0;
 			padding-left: 0;
-			font-size: 11px;
+			font-size: 13px;
 		}
 		.cr-info-room{
 			.row{
