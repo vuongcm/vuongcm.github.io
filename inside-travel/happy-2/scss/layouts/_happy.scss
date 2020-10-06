@@ -1138,13 +1138,16 @@
 								text-transform: none;
 							}
 							span{
-								font-size: 22px;
+								font-size: 20px;
 							}
 						}
 						&:last-child{
 							span{
 								font-size: 22px;
 							}
+						}
+						b{
+							font-size: 18px;
 						}
 					}
 				}
@@ -1161,7 +1164,7 @@
 						}
 						&:last-child{
 							span{
-								font-size: 22px;
+								font-size: 20px;
 							}
 						}
 					}
