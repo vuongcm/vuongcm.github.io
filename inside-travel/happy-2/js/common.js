@@ -108,7 +108,7 @@ $(document).ready(function() {
 	        	}
 			}
 	        if($('.section-grid-dt3').length){
-	        	if($(this).scrollTop() > ($('.grid-ct5').offset().top + 30)){
+	        	if($(this).scrollTop() > ($('.grid-ct5').offset().top + 300)){
 	        		$('.grid-ct3').css({
 	        			'top':'60px'
 	        		});
@@ -2429,7 +2429,7 @@ $(document).ready(function() {
 			$('#contact-modal .form-box textarea').val(`Đặt ${quantiVoucher} Voucher Du Lịch Vinpearl Land Nha Trang...`);
 		});
 	}*/
-	if($('#box-request-qt-2').length){
+	/*if($('#box-request-qt-2').length){
 		$('#box-request-qt-2 .get-quanlity .btn-up').click(function(){
 			let quantiVoucher = Number($('#quanti-voucher-2').text());
 			$('#quanti-voucher-2').text(quantiVoucher+1);
@@ -2470,7 +2470,7 @@ $(document).ready(function() {
 			let quantiVoucher = $('#quanti-voucher-3').text();
 			$('#contact-modal .form-box textarea').val(`Đặt ${quantiVoucher} Voucher Du Lịch Vinpearl Land Nha Trang...`);
 		});
-	}
+	}*/
 	if($('.box-like-content').length){
 		$('.big-tour-box-st2 .foot-trip .read-more-st3>a, .body-trip-type-5 .read-more-st3>a').click(function(){
 			let focusX = $(this).parent('.read-more-st3').prevAll('.box-like-content.div-hidden');
