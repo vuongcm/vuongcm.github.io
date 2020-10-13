@@ -1468,6 +1468,7 @@ $(document).ready(function() {
 	        }
 		});
 	}
+
 	if($('.booking-step-room-cruise').length){
 		$('.wrap-room-number .btn-down').click(function(){
 			let number1 = Number($(this).nextAll('input').val());
@@ -1494,30 +1495,30 @@ $(document).ready(function() {
 			if(number1 < 5){
 				$('.wrap-room-number input').val(`${number1+1}`);
 				$('.booking-step-room-cruise .value-2').append(`<div class="room-cruise room-cruise-${number1+1}">
-							<b>Room ${number1+1}:</b>
+							<b>Phòng ${number1+1}:</b>
 							<div class="room-type">
 								<select name="typecab${number1+1}" class="select-st9" onchange="selectChange(this,'.room-cruise-${number1+1}')">
-									<option value="0" selected>Double</option>
-									<option value="1">Twin</option>
-									<option value="2">Single</option>
+									<option value="0" selected>Giường Đôi</option>
+									<option value="1">2 Giường Đơn</option>
+									<option value="2">Giường Đơn</option>
 								</select>
 							</div>
 							<div class="room-element">
 								<div class="wrap-adult-number">
 									<button class="btn-down" type="button" onclick="btnDownClick(this,'.adult-number-sum','.room-cruise-${number1+1}')">-</button>
-									<span><strong class="adult-number">2</strong>&nbsp;Adult(>12)</span>
+									<span><strong class="adult-number">2</strong>&nbsp;Người Lớn(>12)</span>
 									<button class="btn-up" type="button" onclick="btnUpClick(this,'.adult-number-sum','.room-cruise-${number1+1}',4)">+</button>
 									<input type="text" name="adult${number1+1}" value="2" rel="adult">
 								</div>
 								<div class="wrap-child-number">
 									<button class="btn-down btn-disabled" type="button" onclick="btnDownClick(this,'.child-number-sum','.room-cruise-${number1+1}')">-</button>
-									<span><strong class="child-number">0</strong>&nbsp;Child(4-12)</span>
+									<span><strong class="child-number">0</strong>&nbsp;Trẻ Em(4-12)</span>
 									<button class="btn-up" type="button" onclick="btnUpClick(this,'.child-number-sum','.room-cruise-${number1+1}',2)">+</button>
 									<input type="text" name="child${number1+1}" value="0" rel="child">
 								</div>
 								<div class="wrap-infant-number">
 									<button class="btn-down btn-disabled" type="button" onclick="btnDownClick(this,'.infant-number-sum','.room-cruise-${number1+1}')">-</button>
-									<span><strong class="infant-number">0</strong>&nbsp;Infant(<3)</span>
+									<span><strong class="infant-number">0</strong>&nbsp;Em Bé(<3)</span>
 									<button class="btn-up" type="button" onclick="btnUpClick(this,'.infant-number-sum','.room-cruise-${number1+1}',2)">+</button>
 									<input type="text" name="infant${number1+1}" value="0" rel="infant">
 								</div>
