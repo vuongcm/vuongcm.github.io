@@ -1418,7 +1418,7 @@ $(document).ready(function() {
 					$(this).addClass('checked');
 				}
 				if($(this).closest('.value').find('.checked').length == 0){
-					$('.booking-step-cruise').find('.text b').html(`Lịch trình:`);
+					$('.booking-step-cruise').find('.text b').html(`Lịch Trình:`);
 					$('.booking-step-cruise').find('select option').val('');
 				} else{
 					$('.booking-step-cruise').find('.text b').html($(this).children('b').text());
