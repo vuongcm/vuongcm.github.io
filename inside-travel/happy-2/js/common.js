@@ -1496,13 +1496,13 @@ $(document).ready(function() {
 				$('.wrap-room-number input').val(`${number1+1}`);
 				$('.booking-step-room-cruise .value-2').append(`<div class="room-cruise room-cruise-${number1+1}">
 							<b>Phòng ${number1+1}:</b>
-							<div class="room-type">
+							<!--<div class="room-type">
 								<select name="typecab${number1+1}" class="select-st9" onchange="selectChange(this,'.room-cruise-${number1+1}')">
 									<option value="0" selected>Giường Đôi</option>
 									<option value="1">2 Giường Đơn</option>
 									<option value="2">Giường Đơn</option>
 								</select>
-							</div>
+							</div>-->
 							<div class="room-element">
 								<div class="wrap-adult-number">
 									<button class="btn-down" type="button" onclick="btnDownClick(this,'.adult-number-sum','.room-cruise-${number1+1}')">-</button>

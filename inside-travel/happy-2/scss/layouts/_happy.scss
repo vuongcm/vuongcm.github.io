@@ -1654,6 +1654,60 @@
 		}
 	}
 }
+.box-review-type-3{
+	.group-head{
+		flex-wrap: wrap;
+		.evaluate-rank{
+			display: flex;
+			align-items: center;
+			width: 100%;
+			padding-bottom: 15px;
+			/*border-bottom: 1px solid #dcdcdc; */
+			.star-box{
+				font-size: 24px;
+			}
+			span{
+				margin-left: 10px;
+				font-weight: 600;
+			}
+		}
+	}
+	.group-body{
+		display: none;
+		border-top: 1px solid #dcdcdc;
+	}
+}
+.cruise-text-st3{
+	.head-cruise-st3{
+		.title-h2{
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			.heart-tour{
+				margin-left: auto;
+				.icon-font{
+					font-size: 30px;
+				}
+			}
+		}
+	}
+	.content-cruise-st3{
+		.hotel-news{
+			display: inline-block;
+			margin-right: 10px;
+			width: auto;
+		}
+		.wrap-tooltip{
+			display: inline-flex;
+			width: auto;
+			.tooltip{
+				&>.icon-font-cr{
+					font-size: 18px;
+				}
+			}
+		}
+	}
+} 
 @media (max-width: 1199px) {
 	.section-grid-cruise.section-grid-type-5{
 		.grid-ct1{
