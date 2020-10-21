@@ -908,6 +908,11 @@
 				}
 			}
 		}
+		.box-hotel-news{
+			.paragraph{
+				text-align: left;
+			}
+		}
 	}
 }
 .section-grid-cruise.section-grid-type-5{
@@ -2032,6 +2037,19 @@
 			}
 		}
 	}
+	.detail-schedule{
+		.box-infomation-cabins{
+			.box-cabin{
+				.wrap-slide-st9{
+					.synch-carousels{
+						.nav-arrows{
+							display: flex;
+						}
+					}
+				}
+			}
+		}
+	}     
 }
 @media (min-width: 400px) {
 	.ui-datepicker{
@@ -2233,6 +2251,41 @@
 		.foot-trip{
 			.foot-info{
 				justify-content: center;
+			}
+		}
+	}
+	.box-inc-exc{
+		.include-box .col-xlg-4>div, .include-box .col-xlg-6>div{
+			flex-wrap: wrap;
+			&>div{
+				&:first-child{
+					padding-right: 0;
+				}
+				&:last-child{
+					text-align: center;
+					.read-more-st1{
+						text-align: center;
+					}
+				}
+			}
+			
+		}
+	}
+	.detail-schedule{
+		.box-infomation-cabins{
+			.box-cabin{
+				.detail-schedule-day{
+					.group-head{
+						flex-wrap: wrap;
+						.schedule-day-header{
+							width: 100%;
+						}
+						button{
+							padding-left: 0;
+							margin-top: 15px;
+						}
+					}
+				}
 			}
 		}
 	}
