@@ -42,6 +42,9 @@
 					width: calc(100% - 34px);
 					padding-right: 10px;
 					padding-left: 0;
+					display: flex;
+					flex-wrap: wrap;
+					align-content: center;
 					.title-h2{
 						margin: 0;
 						font-size: 24px;
@@ -50,13 +53,26 @@
 						letter-spacing: 0;
 						text-transform: none;
 					}
+					.hotel-news{
+						display: inline-block;
+						width: auto;
+						font-size: 14px;
+						font-weight: 600;
+					}
 					.wrap-tooltip{
+						display: inline-flex;
+						width: auto;
 						padding-left: 0;
 						padding-right: 0;
 						margin: 0;
 						justify-content: flex-start;
 						&>span{
 							color: #666;
+						}
+						.tooltip{
+							&>.icon-font{
+								font-size: 26px;
+							}
 						}
 					}
 				}
@@ -1261,11 +1277,12 @@
     						text-align: center;
     						padding-top: 0;
     					}
+    					.hotel-news{
+    						width: 100%;
+    						text-align: center;
+    					}
     					.wrap-tooltip{
-    						justify-content: center;
-    						&>span{
-    							display: none;
-    						}
+    						display: none;
     					}
 					}
 					.heart-tour{
