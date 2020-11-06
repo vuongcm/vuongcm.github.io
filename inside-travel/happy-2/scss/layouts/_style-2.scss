@@ -102,7 +102,7 @@
 	    background-size: cover;
 	    background-repeat: no-repeat;
 	    background-position: 48%; */
-	background-color: #e5e5e5;
+	background-color: $background-color-st1;
 	position: relative;
 	.bacground-box{
 		z-index: 1;
@@ -158,6 +158,8 @@
     		width: 100%;
     		margin-bottom: 10px;
     		text-align: left;
+			font-weight: 600;
+            font-size: 14px;
     		span{
     			color: red;
     		}
@@ -168,9 +170,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-	border: 1px solid #eee;
+	border: 1px solid $border_mo;
 	width: 100%;
-	margin-bottom: 50px;
+	margin-bottom: 70px;
+	background: #FFF;
+	padding: 20px;
+    border-radius: 10px;
 	&:last-child{
 		margin-bottom: 0;
 	}
@@ -183,10 +188,10 @@
 }
 .cruise-text-st3{
 	article{
-		padding: 20px;
+		padding-right: 20px;
 	}
 	.content-cruise-st3{
-		margin-top: 15px;
+		margin-top: 0px;
 	}
 	.foot-cruise-st3{
 		margin-top: 15px;
@@ -203,7 +208,7 @@
 	}
 }
 .head-cruise-st3{
-	border-bottom: 1px dotted #dcdcdc;
+	border-bottom: 1px dotted $border_mo;
 	padding-bottom: 15px;
 	.title-h2{
 		text-align: left;
@@ -233,11 +238,12 @@
 	.commitment{
 		text-align: left;
 		margin-top: 5px;
+		font-size: 12px;
 	}
 	&>span{
 		font-size: 12px;
 	    text-transform: uppercase;
-	    color: $higlight-color;
+	    color: $red;
 	    margin-left: auto;
 	    text-align: right;
 	    strong{
@@ -282,10 +288,10 @@
 		text-align: left;
 	}
 	.link-st3{
-		color: #aaa;
+		color: $happy_back;
 		margin-left: 10px;
 		&:after{
-			background-color: #aaa;
+			background-color: $happy_back;
 		}
 		&:hover{
 			color: $higlight-color;
@@ -625,7 +631,7 @@
 	.order-day:last-child{
 		margin-top: 0;
 		&>a:first-child{
-			border-bottom: 1px solid #dcdcdc;
+			border-bottom: 1px solid $border_mo;
 			padding-left: 3px;
 			padding-right: 3px;
 			background-color: transparent;
@@ -691,6 +697,9 @@
     				}
     			}
     		}
+			.box-step-submit-2{
+			    @extend .box-step-submit;
+			}
     	}
     }
 }

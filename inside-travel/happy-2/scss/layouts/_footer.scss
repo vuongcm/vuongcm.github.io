@@ -3,8 +3,8 @@ footer{
 	&>div:first-child{
 		padding-top: 50px;
 		padding-bottom: 30px;
-		border-top: 1px solid #dcdcdc;
-		border-bottom: 1px solid #dcdcdc;
+		border-top: 1px solid $border_mo;
+		border-bottom: 1px solid $border_mo;
 		background-color: $background-color-st1;
 		.container{
 			.col-xlg-4:first-child{

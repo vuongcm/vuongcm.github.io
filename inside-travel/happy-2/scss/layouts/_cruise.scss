@@ -11,8 +11,7 @@
 	.col-xlg-12{
 		&:last-child{
 			&>a{
-				border-bottom: none;
-				padding-bottom: 0;
+				
 			}
 		}
 		&>a{
@@ -21,7 +20,7 @@
 			align-items: center;
 			padding-top: 10px;
 			padding-bottom: 10px;
-			border-bottom: 1px dotted #dcdcdc;
+			border-bottom: 1px dotted $border_mo;
 			.select-arrow-thin{
 				margin-left: auto;
 				font-size: 8px;
@@ -33,14 +32,14 @@
 				color: $higlight-color-st2;
 			}
 			span{
-				color: $higlight-color-st2;
+				color: $red;
 			    font-weight: bold;
 			    text-align: left;
 			    line-height: 1.4;
 			    font-size: 11px;
 			    i{
 			    	font-size: 14px;
-			    	//color: $higlight-color;
+			    	//color: $red;
 			    }
 			}
 		}
@@ -54,8 +53,8 @@
 		display: none;
 		text-align: left;
 		padding: 15px;
-		background-color: $background-color-st1;
-		border: 1px dotted #dcdcdc;
+		background-color: $happy_back_mo;
+		border: 1px dotted $border_mo;
     	border-top: none;
     	line-height: 1.5;
 	}
@@ -305,7 +304,7 @@
 		.content-trip{
 			&>span{
 				del{
-					color: #c3bdbd;
+					color: $happy_back;
 					font-size: 16px;
 				}
 			}

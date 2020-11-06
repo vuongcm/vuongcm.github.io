@@ -15,6 +15,8 @@
 	background-color: $color-cover-dak;
 }
 .modal{
+	background-image: url(../images/bg_xanh.svg);
+    background-size: 200px;
 	max-width: 500px;
 	width: 95%;
 	z-index: 201;
@@ -49,9 +51,9 @@
 	}
 	&>p{
 		margin-top: 10px;
-		line-height: 1.5;
+		line-height: 1.2;
 		margin-bottom: 10px;
-		text-align: justify;
+		text-align: center;
 		padding: 0 15px;
 	}
 	button[type="submit"]{
@@ -464,8 +466,8 @@
 		@include smooth(.25s);
 		border-radius: 10px;
 		border: 1px solid #a2d2d2;
-		font-size: 20px;
-		font-weight: bold;
+		font-size: 16px;
+		font-weight: 600;
 		color: #16b3b3;
 	}
 	textarea{
@@ -539,7 +541,7 @@
 	margin-top: 20px;
 	padding: 15px 8px;
 	background-color: #fff;
-	border-bottom: 2px solid #dcdcdc;
+	border-bottom: 2px solid $border_mo;
 	font-size: 12px;
 	line-height: 1.5;
 	div{
@@ -959,6 +961,7 @@
 		z-index: 5;
 		opacity: 0;
 		height: 100%;
+		cursor:pointer;
 	}
 	.text{
 		position: absolute;
@@ -1439,7 +1442,7 @@
 		justify-content: space-between;
 		align-items: center;
 		flex-wrap: wrap;
-		border-bottom: 1px dotted #dcdcdc;
+		border-bottom: 1px dotted $border_mo;
 		padding-bottom: 15px;
 		h2{
 			flex-grow: 1;
@@ -1456,7 +1459,7 @@
 				.order-day{
 					&>a:first-child{
 						h3{
-							text-transform: none;
+						    font-weight:700;
 							font-size: 13px;
 						}
 					}

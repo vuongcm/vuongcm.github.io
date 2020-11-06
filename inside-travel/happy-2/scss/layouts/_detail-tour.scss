@@ -554,10 +554,11 @@
 	width: 100%;
 	display: none;
 	&>div{
+	    line-height:24px;
 		display: flex;
 		flex-wrap: wrap;
 		padding: 15px 0;
-		border-bottom: 1px dotted #dcdcdc;
+		border-bottom: 1px dotted $border_mo;
 		.paragraph{
 			margin-right: 0;
 			margin-left: 0;
@@ -602,7 +603,6 @@
 			&>p{
 				display: inline;
 				line-height: 2;
-				color: #555;
 				font-size: 14px;
 				font-weight: 600;
 			}
@@ -788,6 +788,7 @@
 	&>div{
 		h3{
 			font-size: 14px;
+			font-weight:600;
 		}
 		article{
 			h4{

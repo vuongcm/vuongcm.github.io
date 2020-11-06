@@ -21,10 +21,11 @@
 			.foot-trip-st5{
 				.div-hidden{
 					h2{
-						border-bottom: 1px dotted #dcdcdc;
+						border-bottom: 1px dotted $border_mo;
 						padding-bottom: 15px;
 						margin-bottom: 15px;
 						margin-top: 0;
+						color: $title-color;
 					}
 					&>div{
 						display: flex;
@@ -34,7 +35,7 @@
 					    margin-bottom: 15px;
 					    font-size: 13px;
 						.checkmark{
-							color: #d0b316;
+							color: $higlight-color;
 						    font-size: 14px;
 						    margin-right: 10px;
 						}
@@ -66,7 +67,7 @@
 				.box-cabin{
 					padding-bottom: 15px;
 					margin-bottom: 15px;
-					border-bottom: 1px solid #dcdcdc;
+					border-bottom: 1px dotted $happy_back;
 					&>div{
 						padding-left: 20px;
 						padding-right: 20px;
@@ -176,8 +177,9 @@
 				border-radius: 999px;
 				padding-bottom: 3px;
 				padding-top: 3px;
-				border-color: #bbb;
-				color: #555;
+				border-color: #18b3b3;
+                background: #18b3b3;
+                color: #FFF;
 				font{
 					font-size: 11px;
 				}
@@ -253,13 +255,12 @@
 			text-align: center;
 			font-weight: 500;
 			padding-bottom: 10px;
-			border-bottom: 1px solid #dcdcdc;
+			border-bottom: 1px solid $border_mo;
 		}
 		&>div{
 			&:nth-child(2){
 				text-transform: uppercase;
 				font-weight: 500;
-				color: #888;
 				font-size: 10px;
 				text-align: center;
 				font{
@@ -279,8 +280,7 @@
 				padding-right: 0;
 				&>a{
 					span{
-						letter-spacing: 0.8px;
-						font-size: 10px;
+						font-size: 11px;
 					}
 				}
 			}
@@ -297,21 +297,21 @@
 .box-check-rates{
 	h3,h4{
 		text-transform: uppercase;
-		font-size: 18px;
+		font-size: 16px;
 		text-align: center;
 		font-weight: 500;
 		padding-bottom: 10px;
-		border-bottom: 1px solid #dcdcdc;
+		border-bottom: 1px dotted $border_mo;
 	}
 	.text{
 		cursor: pointer;
 		.calendar-regular, .map-marker{
 			font-size: 16px;
-			color: #888;
+			color: $happy_back;
 		}
 		.bed{
 			font-size: 14px;
-			color: #888;
+			color: $happy_back;
 		}
 		b{
 			font-weight: 600;
@@ -323,25 +323,25 @@
 		.select-st1,.booking-st1{
 			width: 100%;
 		    height: auto;
-		    border: 1px solid $higlight-color;
+		    border: 1px solid $happy_back;
 		    font-size: 12px;
 		    vertical-align: middle;
 		    line-height: 1.5;
-		    color: #555;
 		    padding: 10px 8px;
 		    -webkit-transition: all .25s linear;
 		    -moz-transition: all .25s linear;
 		    -o-transition: all .25s linear;
 		    -ms-transition: all .25s linear;
 		    transition: all .25s linear;
-		    background-color: #fff;
+		    background-color: $happy_back_mo;
 		    position: relative;
 		    text-align: left;
 		    cursor: pointer;
+			color: $happy;
 
 		    .text{
 		    	b{
-		    		color: $higlight-color;
+		    		color: $happy;
 		    		font-weight: 600;
 		    	}
 		    }
@@ -355,7 +355,7 @@
 		    		.ship{
 		    			margin-right: 5px;
 					    font-size: 12px;
-					    color: #d0b316;
+					    color: $higlight-color;
 					    -webkit-transition: all .25s linear;
 					    -moz-transition: all .25s linear;
 					    -o-transition: all .25s linear;
@@ -366,7 +366,7 @@
 		    	&>li{
 		    		.btn-value{
 		    			&>b{
-		    				color: $higlight-color;
+		    				color: $happy;
 		    				font-weight: 600;
 		    			}
 		    		}
@@ -377,7 +377,7 @@
     			overflow-y: scroll;
     			overflow-x: hidden;
     			.room-cruise{
-    				background-color: $background-color-st1;
+    				background-color: $happy_back_mo;
     			}
 		    }
 		}
@@ -386,12 +386,13 @@
     		
 		}
 		.booking-st2{
-			border: 1px solid $higlight-color;
+			border: 1px solid $happy_back;
 			position: relative;
+			background-color: $happy_back_mo;
 			.text{
 				padding: 10px 8px;
 				b{
-					color: #d0b316;
+					color: $happy;
     				font-weight: 600;
 				}
 			}
@@ -399,6 +400,7 @@
 		.btn-st3{
 			width: 100%;
     		height: 40px;
+			border-radius: 20px;
 		}
 		&:last-child{
 			color: #ff5722;
@@ -430,7 +432,7 @@
     		text-align: left;
 		}
 		.icon-font{
-			color: #888;
+			color: inherit;
 		}
 	}
 }
@@ -729,7 +731,7 @@
 	width: 80%;
 	button{
 		width: 42%;
-		background-color: #d0b316;
+		background-color: $higlight-color;
 		margin-top: 5px;
 		padding: 5px 0;
 		color: #fff;
@@ -753,9 +755,9 @@
 }
 .big-first-tour-box{
 	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-bottom: 40px;
+	/*padding-right: 15px;*/
+	/*padding-left: 15px;*/
+	margin-bottom: 70px;
 	margin-top: 15px;
 	.head-box{
 		.img-box-st2{
@@ -769,7 +771,7 @@
 		.count-day{
 		    top: 12px;
 		    left: 12px;
-		    background: rgb(226, 186, 16);
+		    background: #e24010;
 		    text-transform: capitalize;
 		    font-size: 14px;
 		}
@@ -786,7 +788,7 @@
 			z-index: 5;
 			bottom: 0;
 			left: 0;
-			font-weight: 500;
+			font-weight: 700;
 			width: 100%;
 			padding: 25px 15px 25px 20px;
 			background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,0.65)));
@@ -799,7 +801,7 @@
 				color: #fff;
 				max-width: calc(100% - 180px);
 
-				font-size: 22px;
+				font-size: 18px;
 			    letter-spacing: 2px;
 			    font-weight: 600;
 			    &:hover{
@@ -817,6 +819,8 @@
 	.body-box{
 		background-color: #fff;
 		padding: 20px 20px 0 20px;
+		border-right: 1px solid $border_mo;
+        border-left: 1px solid $border_mo;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -839,7 +843,7 @@
 				flex-shrink: 0;
 				.icon-font{
 					font-size: 24px;
-    				color: #d0b316;
+    				color: $higlight-color;
     				margin-right: 5px;
 				}
 				span{
@@ -865,7 +869,7 @@
 				padding: 0;
 				margin-bottom: 0;
 				padding-bottom: 15px;
-				border-bottom: 1px dotted #dcdcdc;
+				border-bottom: 1px dotted $border_mo;
 			}
 
 	}
@@ -873,9 +877,13 @@
 		border-top: none;
 		margin-top: 0;
 		background-color: #fff;
-		padding: 15px 20px;
+		padding: 15px 20px 40px 20px;
+		border-right: 1px solid $border_mo;
+        border-left: 1px solid $border_mo;
+		border-bottom: 1px solid $border_mo;
+		border-radius:0 0 10px 10px;
 		.btn-st2{
-			border-color: $happy;
+			border-color: $happy_back;
 			padding: 5px 25px;
 			font{
 				font-style: normal;
@@ -981,12 +989,12 @@
 			cursor: pointer;
 			.calendar-regular, .map-marker{
 				font-size: 16px;
-				color: #888;
+				color: $happy_back;
 				
 			}
 			.bed{
 				font-size: 14px;
-				color: #888;
+				color: $happy_back;
 			}
 		}
 
@@ -1028,11 +1036,12 @@
 		}
 	}
 	.booking-st2{
-		border: 1px solid #aaa;
+		border: 1px solid $happy_back;
 		position: relative;
 		input{
 		width: 100%;
 		border: none;
+		cursor:pointer;
 		}
 		.text{
 			padding-left: 8px;
@@ -1296,7 +1305,6 @@
 		font-size: 16px;
 		width: 21px;
 		flex-shrink: 0;
-		color: #888;
 	}
 	input{
 		border: none;
@@ -1440,7 +1448,7 @@
 		h2{
 			font-size: 30px;
 			text-align: center;
-			font-weight: 500;
+			font-weight: 600;
 			margin-bottom: 30px;
 		}
 		.form-box{
@@ -1468,7 +1476,7 @@
 		.call-us{
 			text-align: center;
 			background-color: transparent;
-			border: 1px solid #dcdcdc;
+			border: 1px solid $border_mo;
 			p{
 				color: $higlight-color;
 			    // font-size: 22px;
@@ -1756,9 +1764,9 @@
 		}
 		
 		.box-cabin{
-			.paragraph{
+/* 			.paragraph{
 				text-align: center;
-			}
+			} */
 			.cr-info-room{
 				text-align: center;
 				.row{

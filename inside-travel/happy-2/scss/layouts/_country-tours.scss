@@ -156,6 +156,7 @@
 	.paragraph-hide{
 		max-height: 95px;
 		width: 80%;
+		font-size:14px;
 	}
 	.paragraph:first-child{
 		margin-bottom: 15px;
@@ -169,8 +170,7 @@
 .list-highlight-tour{
 	.wrap-mini-intro{
 		.title-h2{
-			font-family: 'Reenie Beanie', cursive;
-			font-size: 35px;
+			font-size: 26px;
 			color: #000;
 			margin-bottom: 30px;
 			text-transform: none;
@@ -276,7 +276,7 @@
 		margin-top: 15px;
 		&>a:first-child{
 			background-color: #fff;
-			border-bottom: 1px solid #dcdcdc;
+			border-bottom: 1px solid $border_mo;
 			img{
 				width: 30px;
 				margin-right: 10px;

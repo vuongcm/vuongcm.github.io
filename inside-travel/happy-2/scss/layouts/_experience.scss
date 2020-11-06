@@ -50,8 +50,9 @@
 					font-weight: 600;
 				}
 				.btn-st2{
-					color: #555;
-    				border-color: #bbb;
+					color: $happy;
+    				border-color: $border_mo;
+					border-radius: 10px;
     				&:hover{
     					color: $higlight-color;
     					border-color: $higlight-color;
@@ -99,7 +100,7 @@
 			margin-top: 30px;
 			margin-bottom: 15px;
 			text-transform: none;
-			font-weight: 500;
+			font-weight: 600;
 		}
 		.wrap-media{
 			margin-bottom: 15px;
