@@ -258,9 +258,9 @@ $(document).ready(function() {
 		let boxHide = $(this).parent('.read-more-st2').prev('.box-hidden');
 		boxHide.toggleClass('paragraph-show');
 		if(boxHide.css('max-height') == 'none'){
-			$(this).text('... Less');
+			$(this).text('... Thu gọn');
 		} else{
-			$(this).text('... More');
+			$(this).text('... Xem thêm');
 		}
 	});
 	if($('.hide-exp-wrap').length){
@@ -270,7 +270,7 @@ $(document).ready(function() {
 			boxHide.toggleClass('paragraph-show');
 			if(boxHide.css('max-height') == 'none'){
 				$(this).parent('.togg-wrap').children('.arrow-radius').addClass('rotage180');
-				$(this).parent('.togg-wrap').children('.link-st3').text('Less');
+				$(this).parent('.togg-wrap').children('.link-st3').text('Thu gọn');
 				$(this).parent('.togg-wrap').css('z-index','0');
 			} else{
 				$(this).parent('.togg-wrap').children('.arrow-radius').removeClass('rotage180');
@@ -285,14 +285,14 @@ $(document).ready(function() {
 		let divHidden = $('.content-hl-tour div:nth-child(2)>div:first-child');
 		if(divHidden.height() > heightHlTour){
 			divHidden.addClass('div-hidden');
-			$('.content-hl-tour div:nth-child(2)').append(`<div class="read-more-st3"><a href="javascript:" class="link-st3">Read More ...</a></div>`);
+			$('.content-hl-tour div:nth-child(2)').append(`<div class="read-more-st3"><a href="javascript:" class="link-st3">Xem thêm ...</a></div>`);
 			$('.content-hl-tour .read-more-st3>a').click(function(){
 				let boxHide = $(this).parent('.read-more-st3').prev('.div-hidden');
 				boxHide.toggleClass('paragraph-show');
 				if(boxHide.css('max-height') == 'none'){
-					$(this).text('Less ...');
+					$(this).text('Thu gọn ...');
 				} else{
-					$(this).text('Read More ...');
+					$(this).text('Xem thêm ...');
 				}
 			});
 		}
@@ -435,10 +435,10 @@ $(document).ready(function() {
     		$('.box-hidden-st3 .paragraph span').eq(i).text($('.text-hidden').eq(i).text());
     		$('.text-hidden').eq(i).text(temText);
     		let clickText = $('.box-hidden-st3 .link-st3').eq(i);
-    		if(clickText.text() == '...More'){
-    			clickText.text('...Less');
+    		if(clickText.text() == '...Xem thêm'){
+    			clickText.text('...Thu gọn');
     		} else{
-    			clickText.text('...More');
+    			clickText.text('...Xem thêm');
     		}
     	});
     }
@@ -2141,10 +2141,10 @@ $(document).ready(function() {
 			let boxHide = $(this).parent('.read-more-st3').prev('.div-hidden');
 			boxHide.toggleClass('paragraph-show');
 			if(boxHide.css('max-height') == 'none'){
-				$(this).text('Less ...');
+				$(this).text('Thu gọn ...');
 				$(this).parent('.read-more-st3').css('z-index','0');
 			} else{
-				$(this).text('Read More ...');
+				$(this).text('Xem thêm ...');
 				$(this).parent('.read-more-st3').css('z-index','5');
 			}
 		});
@@ -2477,10 +2477,10 @@ $(document).ready(function() {
 			let focusX = $(this).parent('.read-more-st3').prevAll('.box-like-content.div-hidden');
 			if(focusX.css('max-height') == '850px'){
 				focusX.removeAttr('style');
-				$(this).text('... xem thêm');
+				$(this).text('... Xem thêm');
 			} else{
 				focusX.css('max-height','850px');
-				$(this).text('... thu gọn');
+				$(this).text('... Thu gọn');
 			}
 		});
 	}

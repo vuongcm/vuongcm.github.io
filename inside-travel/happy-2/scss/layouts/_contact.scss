@@ -5,22 +5,24 @@
     background-color: rgba(0, 0, 0, .3);
 }
 .wrap-contact-box, .wrap-contact-box-2{
-    border: 1px solid #cecece;
+    border: 2px solid $border_mo;
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
     padding: 30px 40px;
     text-align: center;
+	border-radius:20px;
+	background:$background-color-st1;
     h2{
-            width: 100%;
-        font-size: 28px;
+        width: 100%;
+        font-size: 22px;
         letter-spacing: 2px;
-        color: #111;
+        color: $happy;
         line-height: 1;
         text-align: center;
         margin-top: 0;
         margin-bottom: 0;
-        font-weight: 400;
+        font-weight: 700;
     }
     &>p{
         padding: 0 15px;
