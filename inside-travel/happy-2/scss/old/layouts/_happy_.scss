@@ -49,24 +49,21 @@
 	    }
 	}
 	.three-reasons-1{
-		border-color: $happy_back;
+		border-color: rgba(36,185,191,1);
 		h4,p,b{
-			color: $happy;
-			line-height: 20px;
+			color: rgba(36,185,191,1);
 		}
 	}
 	.three-reasons-2{
-		border-color: $happy_back;
+		border-color: $happy;
 		h4,p,b{
 			color: $happy;
-			line-height: 20px;
 		}
 	}
 	.three-reasons-3{
-		border-color: $happy_back;
+		border-color: rgba(221,81,126,1);
 		h4,p,b{
-			color: $happy;
-			line-height: 20px;
+			color: rgba(221,81,126,1);
 		}
 	}
 }
@@ -97,10 +94,10 @@
             	height: unset;
                 i{
                     font-size: 45px;
-                    color: #b5cfd2;
+                    color: #d4d4d4;
                 }
                 &:hover i{
-                    color: $happy_back;
+                    color: $higlight-color;
                 }
             }
             .arrow-left{
@@ -145,10 +142,10 @@
             	height: unset;
                 i{
                     font-size: 45px;
-                    color: $background-color-st1;
+                    color: #d4d4d4;
                 }
                 &:hover i{
-                    color: $happy_back;
+                    color: $higlight-color;
                 }
             }
             .arrow-left{
@@ -194,7 +191,6 @@
 		.row{
 			display: flex;
 			align-items: center;
-			width: 100%;
 			.address-box{
 				width: calc(100% - 315px);
 				max-width: unset;
@@ -324,8 +320,8 @@
 		
 	}
 	.img-box{
-		left: 0px;
-		width: 100%;
+		left: 15px;
+		width: calc(50% - 30px);
 	}
 }
 .search-container-st2{
@@ -430,6 +426,7 @@
 			padding-left: 0;
 			margin-top: 5px;
 			margin-bottom: 5px;
+			color: #555;
 		}
 	}
 }
@@ -765,28 +762,23 @@
 			}
 		}
 	}
-	.body-box{
-		.row{
-			width: 100%;
-		}
-	}
 	.title-box{
-		border-bottom: 1px dotted $border_mo;
+		border-bottom: 1px dotted #dcdcdc;
 		padding-bottom: 15px;
 		/* display: flex;
 		align-content: center;
 		flex-wrap: wrap; */
-		width: 100%;
 		.wrap-number-night{
 			display: flex;
 			align-items: center;
 			h3{
 				flex-grow: 1;
 				padding-right: 10px;
+				width: 100%;
 			}
 		}
 		h3{
-			font-size: 18px;
+			font-size: 22px;
 			margin: 0;
 			// width: calc(100% - 75px);
 			// flex-grow: 1;
@@ -843,32 +835,28 @@
 	.box-like-content{
 		p{
 			line-height: 1.8;
-		    color: $happy;
+		    letter-spacing: 0.7px;
+		    color: #059298;
 		    display: flex;
 		    align-items: baseline;
 		    padding-bottom: 8px;
-		    font-weight: 600;
+		    font-weight: 400;
 		    font-size: 14px;
 		    .heart-empty{
 		    	margin-right: 5px;
-    			color: $higlight-color;
-		    }
-			.heart-full{
-		    	margin-right: 5px;
-    			color: $higlight-color;
+    			color: #e3ba10;
 		    }
 		}
 
 	}
 	.foot-trip{
-		padding-bottom: 40px;
-		// border-bottom: 1px dotted $border_mo;
-		border-radius:0px 0px 10px 10px;
+		padding-bottom: 30px;
+		// border-bottom: 1px dotted #dcdcdc;
 		.box-like-content.div-hidden{
 			max-height: 192px;
 		}
 		.read-more-st3{
-			border-bottom: 1px dotted $border_mo;
+			border-bottom: 1px dotted #dcdcdc;
 			padding-bottom: 15px;
 
 		}
@@ -897,7 +885,7 @@
 				max-width: 240px;
 				strike{
 					font-weight: 600;
-					color: $happy_back;
+					color: #e2ba10;
 				}
 				span{
 					display: inline;
@@ -934,7 +922,7 @@
 			.head-trip{
 				.title-info{
 					.title-h2{
-						color: $title-color;
+						color: #059298;
 					}
 					.short-info-cruise{
 						align-items: center;
@@ -943,7 +931,7 @@
 							flex-grow: unset;
 							span{
 								white-space: nowrap;
-								color: $happy;
+								color: #059298;
 								.icon-font{
 									color: inherit;
 								}
@@ -962,18 +950,18 @@
 				}
 				.heart-tour{
 					.heart-empty{
-						color: $happy;
+						color: #059298;
 					}
 					&:hover{
 						.heart-empty{
-							color: $happy_back;
+							color: #059298;
 						}
 					}
 				}
 			}
 			.foot-trip-st5{
 				.title-type-5{
-					border-bottom: 1px dotted $border_mo;
+					border-bottom: 1px dotted #dcdcdc;
 				    padding-bottom: 15px;
 				    margin-bottom: 15px;
 				    display: flex;
@@ -1013,8 +1001,8 @@
 		.order-box{
 			.order-save{
 				margin-top: 0;
-				color: $red;
-				font-weight: 600;
+				color: #ff5722;
+				font-weight: 500;
 				.icon-font{
 					color: inherit;
 				}
@@ -1022,11 +1010,11 @@
 			.order-price{
 				margin-top: 15px;
 				padding-bottom: 10px;
-    			border-bottom: 1px dotted $border_mo;
+    			border-bottom: 1px solid #dcdcdc;
 				&>div{
 					&:nth-child(2){
 						b{
-							color: $green;
+							color: green;
 							text-transform: none;
 						}
 					}
@@ -1041,14 +1029,6 @@
 				h4{
 					font-weight: 600;
 					font-size: 14px;
-				}
-				h1,h2{
-					font-size: 14px;
-					text-align: center;
-					font-weight: 600;
-					text-transform: uppercase;
-					border-bottom: 1px solid $border_mo;
-					padding-bottom:10px;
 				}
 			}
 			.box-check-rates{
@@ -1080,14 +1060,14 @@
 					}
 					font{
 						b{
-							color: $happy;
+							color: #059298;
 						}
 					}
 				}
 			}
 			.order-best{
 				.checkmark{
-					color: $happy;
+					color: #059298;
 				}
 			}
 		}
@@ -1125,7 +1105,7 @@
 						margin-top: 10px;
 						margin-bottom: 15px;
 						padding-bottom: 15px;
-						border-bottom: 1px dotted $border_mo;
+						border-bottom: 1px solid #dcdcdc;
 						h4{
 							border-bottom: none;
 							margin-top: 0;
@@ -1135,7 +1115,7 @@
 							padding-right: 10px;
 							a{
 								font-size: 13px;
-								color: $happy;
+								color: #059298;
 							}
 						}
 						&>a{
@@ -1179,11 +1159,11 @@
 				.order-price{
 					margin-top: 15px;
 					padding-bottom: 10px;
-	    			border-bottom: 1px dotted $border_mo;
+	    			border-bottom: 1px solid #dcdcdc;
 					&>div{
 						&:nth-child(2){
 							b{
-								color: $green;
+								color: green;
 								text-transform: none;
 							}
 							span{
@@ -1247,14 +1227,14 @@
 						}
 						font{
 							b{
-								color: $happy;
+								color: #059298;
 							}
 						}
 					}
 				}
 				.order-best{
 					.checkmark{
-						color: $happy;
+						color: #059298;
 					}
 				}
 			}
@@ -1288,7 +1268,7 @@
 							margin-top: 10px;
 							margin-bottom: 15px;
 							padding-bottom: 15px;
-							border-bottom: 1px dotted $border_mo;
+							border-bottom: 1px solid #dcdcdc;
 							h4{
 								border-bottom: none;
 								margin-top: 0;
@@ -1307,37 +1287,6 @@
 				}
 				.btn-st3{
 					border-radius: 999px;
-				}
-			}
-		}
-		.group-ct4-1{
-			.box-how-pri{
-				.why-book-box-st2{
-					display: block;
-					width: 90%;
-					h2{
-						font-size: 18px;
-						text-transform: uppercase;
-						text-align: center;
-						margin-top: 0;
-					}
-					.three-reasons-mobi{
-						margin-top: 30px;
-						.iconAbove{
-							display: flex;
-							align-items: center;
-							.iconWrap{
-								flex-shrink: 0;
-								img{
-									width: 50px;
-								}
-							}
-							.msgCopy{
-								flex-grow: 1;
-								margin-left: 15px;
-							}
-						}
-					}
 				}
 			}
 		}
@@ -1386,10 +1335,9 @@
     				}
     				.team-name{
     					font-family: inherit;
-    					font-size: 18px;
+    					font-size: 20px;
     					text-transform: uppercase;
-    					font-weight: 600;
-						color: $title-color;
+    					font-weight: 500;
     				}
     			}
     		}
@@ -1398,17 +1346,15 @@
 }
 .modal-voucher{
 	max-width: 590px;
-	background-image: url(../images/bg_xanh.svg);
-    background-size: 270px;
 	.order-box{
 		.order-price{
 			margin-top: 15px;
 			padding-bottom: 10px;
-			border-bottom: 1px dotted $border_mo;
+			border-bottom: 1px solid #dcdcdc;
 			&>div{
 				&:nth-child(2){
 					b{
-						color: $green;
+						color: green;
 						text-transform: none;
 						font-size: 16px;
 					}
@@ -1459,7 +1405,7 @@
 				}
 				font{
 					b{
-						color: $happy;
+						color: #059298;
 					}
 				}
 			}
@@ -1467,7 +1413,7 @@
 		.order-best{
 			margin-bottom: 0;
 			.checkmark{
-				color: $happy;
+				color: #059298;
 			}
 		}
 	}
@@ -1477,24 +1423,25 @@
 		h5{
 			text-transform: none;
 			text-align: left;
+			color: #059298;
 			font-size: 12px;
 		}
 		&:last-child{
 			padding-bottom: 10px;
-    		border-bottom: 1px dotted $border_mo;
+    		border-bottom: 1px solid #dcdcdc;
 		}
 	}
 	.include{
 		p{
 			text-transform: none;
 			text-align: left;
-			color: $happy;
+			color: #059298;
 			font-size: 12px;
 			line-height: 1.4;
 			margin-top: 8px;
 			.icon-font{
 				margin-right: 5px;
-				color: $higlight-color;
+				color: #555;
 			}
 		}
 	}
@@ -1502,14 +1449,15 @@
 		p{
 			text-transform: none;
 			text-align: left;
+			color: #059298;
 			font-size: 12px;
 			line-height: 1.4;
 			margin-top: 8px;
 			.icon-font{
 				margin-right: 5px;
 				margin-left: 5px;
-				color: $happy;
-				font-size: 10px;
+				color: #059298;
+				font-size: 5px;
 			}
 			strong{
 				color: #ff5722;
@@ -1607,16 +1555,16 @@
 				font-size: 12px;
 				padding-bottom: 10px;
 				.heart-empty{
-					color: $higlight-color;
+					color: #e3ba10;
 					margin-right: 5px;
 				}
 			}
 		}
 		.read-more-st3{
 			padding-bottom: 15px;
-			border-bottom: 1px dotted $happy;
+			border-bottom: 1px dotted #dcdcdc;
 			&>a{
-				color: $happy;
+				color: #bbb59d;
 				font-size: 12px;
 				padding-top: 5px;
 			}
@@ -1686,7 +1634,7 @@
 			font-size: inherit;
 			strike{
 				font-weight: 500;
-				color: $higlight-color;
+				color: #e3ba10;
 			}
 			span{
 				display: inline;
@@ -1722,7 +1670,7 @@
 			padding-bottom: 15px;
 			/*border-bottom: 1px solid #dcdcdc; */
 			.star-box{
-				font-size: 18px;
+				font-size: 24px;
 			}
 			span{
 				margin-left: 10px;
@@ -1745,7 +1693,6 @@
 				margin-left: auto;
 				.icon-font{
 					font-size: 30px;
-					color:$happy_back;
 				}
 			}
 		}
@@ -1776,7 +1723,7 @@
 		.box-cabin{
 			padding-right: 20px;
 			padding-left: 20px;
-			border-bottom: 1px dotted #89d2d2;
+			border-bottom: 1px solid #dcdcdc;
 			padding-bottom: 15px;
 			margin-bottom: 15px;
 			&:last-child{
@@ -1812,7 +1759,7 @@
 			}
 			.detail-schedule-day{
 				.group-head{
-					background-color: $happy_back;
+					background-color: #18b3b3;
 					padding: 15px;
 					color: #fff;
 					.schedule-day-header{
@@ -1822,7 +1769,6 @@
 						}
 						p{
 							line-height: 1.5;
-							font-weight:700;
 						}
 					}
 					button{
@@ -1833,7 +1779,7 @@
 							color: #fff;
 							white-space: nowrap;
 							font-size: 14px;
-							font-weight: 600;
+							font-weight: 500;
 						}
 						.icon-font{
 							color: #fff;
@@ -1854,8 +1800,7 @@
 						p{
 							margin-top: 15px;
 							margin-bottom: 20px;
-							line-height: 2;
-							padding: 5px;
+							line-height: 1.5;
 						}
 					}
 				}
@@ -2063,12 +2008,12 @@
 				}
 			}
 		}
-		/* .grid-ct5{
+		.grid-ct5{
 			grid-row: 5 / 6;
 		}
 		.grid-ct2{
 			grid-row: 6 / 7;
-		} */
+		}
 	}
 	.big-tour-box-st2{
 		.head-box{
@@ -2169,7 +2114,7 @@
 				border-bottom: 1px dotted #dcdcdc;
 			}
 			&>.paragraph{
-				/*display: none;*/
+				display: none;
 			}
 		}
 		.foot-trip{

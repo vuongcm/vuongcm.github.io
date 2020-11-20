@@ -145,10 +145,10 @@
             	height: unset;
                 i{
                     font-size: 45px;
-                    color: $background-color-st1;
+                    color: #d4d4d4;
                 }
                 &:hover i{
-                    color: $happy_back;
+                    color: $higlight-color;
                 }
             }
             .arrow-left{
