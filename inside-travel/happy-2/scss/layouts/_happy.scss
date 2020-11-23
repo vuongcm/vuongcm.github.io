@@ -924,6 +924,8 @@
 		.box-hotel-news{
 			.paragraph{
 				text-align: left;
+				padding-left: 0;
+				padding-right: 0;
 			}
 		}
 	}
@@ -2307,6 +2309,12 @@
 		.foot-trip{
 			.foot-info{
 				justify-content: center;
+			}
+			.box-hotel-news{
+				.paragraph{
+					max-height: 91px;
+					overflow-y: hidden;
+				}
 			}
 		}
 	}
