@@ -236,7 +236,7 @@ select:focus {
     line-height: 1.5;
     text-align: center;
     letter-spacing: 1px;
-    border: 1px solid #000;
+    border: 1px solid $happy_back;
     color: $happy;
     @include smooth(.2s);
     font-size: 12px;
@@ -594,8 +594,8 @@ select:focus {
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    font-size: 100px;
-    color: rgba(236, 236, 236,1);
+    font-size: 70px;
+    color: #cff1f1;
     letter-spacing: 10px;
     //font-family: 'Theano Didot','Times New Roman', serif;
     font-weight: 200;

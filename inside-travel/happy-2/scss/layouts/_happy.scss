@@ -259,6 +259,7 @@
 }
 .wrap-foot-link{
 	width: 100%;
+	margin-bottom: 20px;
 	.btn-st4{
 		border-radius: 0;
 		justify-content: space-between;
@@ -266,6 +267,7 @@
 		height: 40px;
 		color: #fff;
 		padding: 5px;
+		border-radius: 20px;
 		b{
 			color: inherit;
 		}
@@ -1337,6 +1339,7 @@
 							.msgCopy{
 								flex-grow: 1;
 								margin-left: 15px;
+								line-height: 18px;
 							}
 						}
 					}
@@ -1370,6 +1373,7 @@
 							.msgCopy{
 								flex-grow: 1;
 								margin-left: 15px;
+								line-height: 18px;
 							}
 						}
 					}
@@ -2403,6 +2407,7 @@
 				.msgCopy{
 					flex-grow: 1;
 					margin-left: 15px;
+					line-height: 18px;
 				}
 			}
 		}
