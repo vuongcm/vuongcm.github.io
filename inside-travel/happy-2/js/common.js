@@ -2496,6 +2496,11 @@ $(document).ready(function() {
 		let heightGr4 = $('.section-grid-dt3 .grid-ct4').height();
 		$('.section-grid-dt3>.container').css('grid-auto-rows',`auto ${heightGr3}px ${heightGr4}px auto auto`);
 	}
+	if($('.modal-popup').length){
+		$('.modal-popup .back-drop, .modal-popup .btn-close').click(function(){
+			$('.modal-popup').fadeOut(400);
+		});
+	}
 });
 window.onload = function() {
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());

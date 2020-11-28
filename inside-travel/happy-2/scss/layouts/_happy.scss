@@ -1869,6 +1869,20 @@
 		}
 	}
 }
+.box-icon-img{
+	display: block;
+	width: 30px;
+	margin-right: 10px;
+	img{
+		width: 100%;
+	}
+}
+.box-modal-img{
+	display: block;
+	img{
+		width: 100%;
+	}
+}
 @media (max-width: 1199px) {
 	.section-grid-cruise.section-grid-type-5{
 		.grid-ct1{

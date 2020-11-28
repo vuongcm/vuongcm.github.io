@@ -1499,7 +1499,7 @@
 	position: fixed;
     top: 0;
     left: 0;
-    z-index: 210;
+    z-index: 300;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1519,6 +1519,40 @@
     img:last-child{
     	width: 54px;
     }
+}
+.back-drop{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 80;
+}
+.modal-popup{
+	position: fixed;
+	z-index: 230;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	.modal-content{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		@include translate2d(-50%,-50%);
+		z-index: 99;
+		max-width: 400px;
+		width: 98%;
+		padding-left: 15px;
+		padding-right: 15px;
+		.btn-close{
+			color: #fff;
+		}
+		a{
+			opacity: 1;
+		}
+	}
 }
 @media (min-width: 992px) {
 	.modal-2{
