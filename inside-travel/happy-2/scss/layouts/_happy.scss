@@ -1,7 +1,35 @@
 .why-book-us{
 
 }
-
+.button-st5{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	background-color: #18b3b3;
+	padding: 5px 15px;
+	border-radius: 999px;
+	// @include smooth(.2s);
+	div{
+		width: 30px;
+		margin-right: 5px;
+		img{
+			border-radius: 50%;
+		}
+	}
+	font{
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: 500;
+		color: #fff;
+		@include smooth(.2s);
+	}
+	&:hover{
+		font{
+			color: #f1ba3a;
+		}
+	}
+}
 .content-why-book{
 	width: 100%;
 	display: flex;

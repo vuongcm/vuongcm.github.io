@@ -70,10 +70,10 @@ footer{
 		.brand-footer{
 			margin: 15px auto;
 			width: 30%;
-			max-width: 163px;
+			max-width: 236px;
 		}
 		p{
-			font-weight: 300;
+			font-weight: 400;
 			line-height: 1.8;
 			span{
 				font-weight: 400;
@@ -83,10 +83,10 @@ footer{
 	}
 	h3{
 		text-transform: uppercase;
-		font-weight: 500;
+		font-weight: 600;
 		margin: 0;
 		padding: 20px 0 15px;
-		font-size: 11px;
+		font-size: 12px;
 		line-height: 1.5;
 		color: $happy;
 	}
@@ -109,11 +109,11 @@ footer{
 			}
 		}
 		.copy-right{
-			font-size: 11px;
-			font-weight: 300;
+			font-size: 12px;
+			font-weight: 400;
 			padding-top: 15px;
 			padding-bottom: 15px;
-			color: $happy;
+			color: $happy_back;
 		}
 	}
 }

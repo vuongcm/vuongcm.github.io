@@ -557,7 +557,7 @@
 		flex-wrap: wrap;
 		width: 100%;
 		margin-top: 5px;
-	    padding: 10px;
+	    padding: 0px 10px 0px 10px;
 	    line-height: 1;
 	    color: #059ea6;
 	    
@@ -581,6 +581,9 @@
 			padding-left: 0;
 			border-top: 1px solid #cfe8e8;
 			text-align: left;
+			a{
+			   color:$higlight-color;
+			}
 		}
 	}
 }
