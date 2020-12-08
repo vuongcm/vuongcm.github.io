@@ -20,13 +20,14 @@
 	font{
 		text-transform: uppercase;
 		font-size: 12px;
-		font-weight: 500;
+		font-weight: 700;
+		letter-spacing: 2px;
 		color: #fff;
 		@include smooth(.2s);
 	}
 	&:hover{
 		font{
-			color: #f1ba3a;
+			color: #FFF;
 		}
 	}
 }

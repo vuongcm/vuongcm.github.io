@@ -436,6 +436,7 @@
     		padding-right: 10px;
     		.title-h2{
     			margin-bottom: 5px;
+    			margin-top: 0;
     		}
     		.address{
     			color: #888;
@@ -462,6 +463,17 @@
 					color: $higlight-color;
 				}
 			}
+    	}
+    	.heart-tour{
+    		width: 36px;
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		margin-left: auto;
+    		.icon-font{
+    			font-size: 36px;
+    			color: #AEAEAE;
+    		}
     	}
     }
 }
@@ -557,6 +569,19 @@
 			.icon-font{
 				color: $higlight-color;
 			}
+		}
+	}
+	.box-price{
+		max-width: 240px;
+		strike{
+			font-weight: 600;
+			color: #18b3b3;
+		}
+		span{
+			display: inline;
+		}
+		a{
+			width: 100%;
 		}
 	}
 }
@@ -934,6 +959,9 @@
 			.view-map{
 				display: none;
 			}
+			.heart-tour{
+	    		display: none;
+	    	}
 		}
 		.left-trip-st4{
 			order: 3;
@@ -946,9 +974,16 @@
 			order: 4;
 		}
 	}
+
 	.foot-trip{
 		.hand-picked{
 			display: none;
+		}
+		.info-cruise-month{
+			margin-bottom: 10px;
+		}
+		.box-price{
+			margin-left: 0;
 		}
 	}
 	.section-bg{
@@ -1103,6 +1138,13 @@
 	}
 	.show-mobi{
 		display: block;
+	}
+	.foot-trip{
+		.box-price{
+			margin-bottom: 10px;
+			margin-top: 0;
+			margin-right: 0;
+		}
 	}
 }
 @media (max-width: 479px) {

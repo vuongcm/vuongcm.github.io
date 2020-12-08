@@ -1798,6 +1798,24 @@ select:focus {
         color: $happy;
         margin-left: 5px;
     }
+    .icon-des-2{
+        font-size: 52px;
+        
+        &:before{
+            color: #ECECEC;
+        }
+    }
+}
+.day-trip-f2{
+    position: relative;
+    display: inline-block;
+    height: fit-content;
+    span{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translate2d(-50%,-56%);
+    }
 }
 .team-name{
     text-align: center;
