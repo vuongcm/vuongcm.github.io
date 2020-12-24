@@ -92,6 +92,12 @@ body {
     overflow: hidden;
     position: relative;
 }
+.app-2{
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
 input{
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -249,6 +255,26 @@ select:focus {
     font-weight: 600;
     &:hover{
         color: #fff;
+    }
+}
+.btn-st5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 999px;
+    &>div{
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+        img{
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+    font{
+        text-transform: uppercase;
+        font-size: 12px;
     }
 }
 .btn-disabled{
@@ -610,7 +636,9 @@ select:focus {
         margin-right: auto;
     }
 }
-
+.posi-rele{
+    position: relative!important;
+}
 .phone-box{
     display: inline-flex;
     justify-content: space-between;

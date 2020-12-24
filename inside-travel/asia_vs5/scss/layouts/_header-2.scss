@@ -60,6 +60,320 @@ body.body-st2>.app{
 		}
 	}
 }
+.app-2{
+	.banner-top-slider{
+		.wrap-title-banner-top{
+			left: 50%;
+		}
+		#booking-widget-homepage{
+			left: 50%;
+			@include translateX(-50%);
+		}
+	}
+
+}
+.menu-wrap-2{
+	.menu-per{
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 40px;
+		background-color: #111;
+		color: #fff;
+		position: relative;
+		.box-licen{
+			margin-left: 40px;
+			margin-right: auto;
+			ul{
+				display: flex;
+				li:first-child{
+					margin-right: 20px;
+				}
+				li{
+					.icon-font{
+						font-size: 11px;
+					}
+					font{
+						font-size: 11px;
+						font-weight: 500;
+					}
+				}
+			}
+			
+
+		}
+		.search-nav{
+			margin-left: auto;
+			height: 100%;
+			
+			.btn-collep-mobi{
+				display: none;
+			}
+			.phone-box{
+				margin-right: 30px;
+				color: inherit;
+			}
+			.btn-collep-search{
+				margin-right: 30px;
+				color: inherit;
+				display: inline-flex;
+			    align-items: center;
+			    height: 100%;
+			    .icon-font{
+			    	font-size: 15px;
+			    	margin-right: 5px;
+			    }
+			    font{
+			    	font-weight: 600;
+			    }
+			}
+			#search-nav-top{
+				left: 50%;
+				top: 100%;
+			}
+		}
+		.global-menu{
+			margin-right: 40px;
+			display: flex;
+			height: 100%;
+			&>li{
+				&>a{
+					color: inherit;
+				}
+			}
+			.lang-top{
+				margin-right: 30px;
+				&>a{
+					font{
+						margin-left: 0;
+					}
+					.select-arrow-thin{
+						margin-left: 10px;
+					}
+				}
+			}
+			.login-top{
+				&>a{
+					.select-arrow-thin{
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+	}
+
+}
+.main-menu-2{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 60px;
+	padding: 0 40px;
+	position: relative;
+	background: -webkit-gradient(linear, left bottom, left top,from(rgba(0,0,0,0)),to(rgba(0,0,0,0.79)));
+	background: -webkit-linear-gradient(bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.79) 100%);
+	background: -moz-linear-gradient(bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.79) 100%);
+	background: -ms-linear-gradient(bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.79) 100%);
+	background: -o-linear-gradient(bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.79) 100%);
+	.brand{
+		max-width: 125px;
+		img{
+			width: 100%;
+		}
+	}
+	&>ul{
+		display: flex;
+		// align-items: center;
+		margin-left: auto;
+		height: 100%;
+		&>li{
+			margin-left: 20px;
+			height: 100%;
+			&>a{
+				height: 100%;
+				display: inline-flex;
+				align-items: center;
+				color: #fff;
+				font-size: 13px;
+				.select-arrow-thin{
+					margin-left: 5px;
+					font-size: 6px;
+				}
+			}
+
+			&>.btn-st5{
+				height: 40px;
+				background-color: $higlight-color;
+			}
+		}
+		&>.wrap-btn{
+			display: inline-flex;
+			align-items: center;
+			margin-left: 30px;
+		}
+		.sub-menu-title{
+			&:hover{
+				.sub-menu.sub-menu-cruises{
+					display: block;
+				}
+				.sub-menu{
+					display: flex;
+				}
+
+			}
+			.sub-menu{
+				// display: flex!important;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				z-index: 100;
+				background-color: #fff;
+			}
+			.sub-menu-destinations{
+				padding: 15px 40px;
+				justify-content: space-between;
+				width: 100%;
+				&>li{
+					width: calc(20% - 22px);
+					max-width: 260px;
+					&>.name-destinations{
+						padding: 0;
+						display: block;
+						position: relative;
+						overflow: hidden;
+						img{
+							@include smooth(.25s);
+						}
+						span{
+							display: flex;
+							align-items: center;
+							justify-content: center;
+						    width: 90%;
+						    height: 45%;
+						    padding: 8px 0;
+						    background-color: rgba(255,255,255,0.8);
+						    text-transform: uppercase;
+						    font-weight: 700;
+						    color: #111;
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							@include translate2d(-50%,-50%);
+							@include smooth(.25s);
+							z-index: 7;
+							.select-arrow-thin{
+								display: none;
+							}
+						}
+						&:hover{
+							span{
+								background-color: transparent;
+								color: #fff;
+							}
+							img{
+								opacity: 1;
+								@include scale(1.1);
+
+							}
+						}
+					}
+					&>a{
+						padding: 0;
+						width: 100%;
+						span{
+							margin: 0 auto;
+						}
+					}
+					.menu-lv-3{
+						a{
+							width: 100%;
+							padding: 10px 0;
+							text-align: center;
+							font-weight: 600;
+							// color: 
+						}
+					}
+					.btn-st2{
+						margin-top: 10px;
+						padding-top: 15px;
+						padding-bottom: 15px;
+					}
+				}
+				
+			}
+			.sub-menu-travel{
+				// display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				width: 100%;
+				padding: 15px 11%;
+				&>li{
+					width: 20%;
+					&>a{
+						width: 100%;
+						max-width: 200px;
+						padding: 0;
+						display: block;
+						position: relative;
+						opacity: 1;
+						margin-left: auto;
+						margin-right: auto;
+						span{
+							display: flex;
+						    justify-content: center;
+						    align-items: center;
+						    position: absolute;
+						    text-align: center;
+						    top: 0;
+						    left: 0;
+						    width: 100%;
+						    height: 100%;
+						    text-transform: uppercase;
+						    font-size: 12px;
+						    font-weight: 600;
+						    color: #fff;
+						    background-color: rgba(0,0,0,0.4);
+						    padding: 22px;
+						}
+						&:after{
+							content: '';
+							display: block;
+							position: absolute;
+						    top: 0;
+						    left: 0;
+						    right: 0;
+						    bottom: 0;
+						    border: 0px;
+						    border-radius: 0;
+						    @include smooth(.25s);
+						}
+						&:hover{
+							&:after{
+								top: 15px;
+							    left: 15px;
+							    right: 15px;
+							    bottom: 15px;
+							    border-radius: 50% 50% 0px 50%;
+							    border: 1px solid rgba(207,172,27,0.8);
+							}
+						}
+					}
+				}
+			}
+			.sub-menu-cruises{
+				// display: block;
+				min-width: 250px;
+				&>li{
+					&>a{
+						padding: 15px 20px;
+						font-weight: 600;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
 @media (min-width: 1025px) {
 	body.body-st2>.app{
 		.nav-side-menu{
