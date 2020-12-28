@@ -2280,8 +2280,10 @@ $(document).ready(function() {
 			$(window).bind('scroll', function(){
 				if($(this).scrollTop() > 250){
 					$('.menu-wrap-2 .menu-per').slideUp(300);
+					$('.menu-wrap-2 .main-menu-2').addClass('main-menu-2-eff');
 				} else{
 					$('.menu-wrap-2 .menu-per').slideDown(200);
+					$('.menu-wrap-2 .main-menu-2').removeClass('main-menu-2-eff');
 				}
 			});
 		}else{
