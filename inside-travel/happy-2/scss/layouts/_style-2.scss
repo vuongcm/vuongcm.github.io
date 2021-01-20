@@ -106,6 +106,7 @@
 	position: relative;
 	.bacground-box{
 		z-index: 1;
+		background: url(../images/bg-form-h.svg) bottom no-repeat;
 	}
 	&>.container{
 		position: relative;
@@ -286,6 +287,7 @@
 .box-hidden-st3{
 	.paragraph{
 		text-align: left;
+		color: $param;
 	}
 	.link-st3{
 		color: $happy_back;
@@ -424,7 +426,8 @@
     align-items: stretch;
     padding: 30px;
     background-color: #fff;
-    margin-bottom: 30px;
+    border: 1px solid $border_mo;
+    margin-bottom: 70px;
     border-radius: 10px;
     .head-trip{
     	padding-bottom: 15px;
@@ -432,16 +435,16 @@
     	margin-bottom: 15px;
     	align-items: stretch; 
     	.title-info{
-    		width: calc(100% - 127px);
+    		width: calc(100% - 90px); /*width: calc(100% - 127px);*/
     		padding-right: 10px;
     		.title-h2{
     			margin-bottom: 5px;
     			margin-top: 0;
     		}
     		.address{
-    			color: #888;
+    			color: $main-color;
     			a{
-    				color: #888;
+    				color: $main-color;
     			}
     		}
     	}
@@ -453,14 +456,14 @@
     		width: 67px;
 			.icon-font{
 				font-size: 32px;
-				color: $higlight-color;
+				color: $happy_back;
 			}
 			font{
-				color: #888;
+				color: $happy_back;
 			}
 			&:hover{
 				font{
-					color: $higlight-color;
+					color: $happy_back;
 				}
 			}
     	}
@@ -472,7 +475,7 @@
     		margin-left: auto;
     		.icon-font{
     			font-size: 36px;
-    			color: #AEAEAE;
+    			color: $happy_back;
     		}
     	}
     }
@@ -486,8 +489,10 @@
 		max-height: 157px;
 		p{
 			line-height: 1.8;
-			letter-spacing: 0.7px;
-			color: #666;
+			letter-spacing: 0.3px;
+			color: $param;
+			font-weight: 500;
+			font-size: 14px;
 			.heart-empty{
 				margin-right: 5px;
 				color: $higlight-color;
@@ -511,7 +516,7 @@
 		justify-content: flex-start;
 		&>span{
 			margin-right: 15px;
-			color: #888;
+			color: $main-color;
 		}
 	}
 }

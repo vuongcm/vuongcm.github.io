@@ -581,6 +581,7 @@
 			padding-left: 0;
 			border-top: 1px solid #cfe8e8;
 			text-align: left;
+			color:$param;
 			a{
 			   color:$higlight-color;
 			}
@@ -653,6 +654,7 @@
 	display: inline-flex;
 	justify-content: flex-start;
 	align-items: center;
+	color:$param;
 	.icon-font{
 		font-size: 18px;
 		margin-right: 5px;
@@ -846,6 +848,7 @@
 		p{
 			line-height: 1.4;
 			margin-bottom: 10px;
+			color:$param;
 			.checkmark{
 				margin-right: 5px;
 			}

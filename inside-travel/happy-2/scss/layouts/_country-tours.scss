@@ -157,9 +157,14 @@
 		max-height: 95px;
 		width: 80%;
 		font-size:14px;
+		color:$main-color;
 	}
 	.paragraph:first-child{
 		margin-bottom: 15px;
+		color:$main-color;
+	}
+	.paragraph{
+	    color:$main-color;
 	}
 	.read-more-st1{
 		a{
@@ -308,6 +313,7 @@
 				margin-bottom: 0;
 				padding: 10px;
 				text-align: justify;
+				color:$param;
 				a{
 					display: inline;
 					color: $higlight-color;
@@ -645,6 +651,7 @@
 	.intro-country-tour{
 		.paragraph-hide{
 			width: 100%;
+			color:$main-color;
 		}
 	}
 	.wrap-filter-st2{

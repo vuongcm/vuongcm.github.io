@@ -158,7 +158,7 @@
 
 			&>div{
 				width: 100%;
-				max-height: 425px;
+				max-height: 440px;
 				overflow-y: hidden;
 				img{
 					width: 100%;
@@ -957,6 +957,7 @@
 				text-align: left;
 				padding-left: 0;
 				padding-right: 0;
+				color:$param;
 			}
 		}
 	}
@@ -1078,7 +1079,7 @@
 				h1,h2{
 					font-size: 14px;
 					text-align: center;
-					font-weight: 600;
+					font-weight: 700;
 					text-transform: uppercase;
 					border-bottom: 1px solid $border_mo;
 					padding-bottom:10px;
@@ -1368,7 +1369,7 @@
 							.msgCopy{
 								flex-grow: 1;
 								margin-left: 15px;
-								line-height: 18px;
+								line-height: 22px;
 							}
 						}
 					}
@@ -1402,7 +1403,7 @@
 							.msgCopy{
 								flex-grow: 1;
 								margin-left: 15px;
-								line-height: 18px;
+								line-height: 22px;
 							}
 						}
 					}
@@ -1434,7 +1435,8 @@
 .modal-voucher{
 	max-width: 590px;
 	background-image: url(../images/bg_xanh.svg);
-    background-size: 270px;
+    background-size: 166px;
+	border-radius: 20px;
 	.order-box{
 		.order-price{
 			margin-top: 15px;
@@ -1457,8 +1459,8 @@
 		}
 		.order-discount{
 			h4{
-				font-weight: 600;
-				font-size: 14px;
+				font-weight: 700;
+				font-size: 16px;
 				border-bottom: none;
 				padding-bottom: 0;
 				text-align: left;
@@ -1543,7 +1545,7 @@
 			.icon-font{
 				margin-right: 5px;
 				margin-left: 5px;
-				color: $happy;
+				color: $higlight-color;
 				font-size: 10px;
 			}
 			strong{
@@ -1623,7 +1625,7 @@
 			margin-bottom: 15px;
 			text-transform: none;
 			padding-bottom: 15px;
-			border-bottom: 1px dotted #dcdcdc;
+			border-bottom: 1px dotted $border_mo;
 			&:after{
 				display: none;
 				
@@ -1649,7 +1651,7 @@
 		}
 		.read-more-st3{
 			padding-bottom: 15px;
-			border-bottom: 1px dotted $happy;
+			border-bottom: 1px dotted $border_mo;
 			&>a{
 				color: $happy;
 				font-size: 12px;
@@ -2450,7 +2452,7 @@
 				.msgCopy{
 					flex-grow: 1;
 					margin-left: 15px;
-					line-height: 18px;
+					line-height: 22px;
 				}
 			}
 		}
