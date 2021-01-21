@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'insideTravel';
-  src:  url('fonts/insideTravel.eot?hhiyj0');
-  src:  url('fonts/insideTravel.eot?hhiyj0#iefix') format('embedded-opentype'),
-    url('fonts/insideTravel.ttf?hhiyj0') format('truetype'),
-    url('fonts/insideTravel.woff?hhiyj0') format('woff'),
-    url('fonts/insideTravel.svg?hhiyj0#insideTravel') format('svg');
+  src:  url('fonts/insideTravel.eot?s73mmp');
+  src:  url('fonts/insideTravel.eot?s73mmp#iefix') format('embedded-opentype'),
+    url('fonts/insideTravel.ttf?s73mmp') format('truetype'),
+    url('fonts/insideTravel.woff?s73mmp') format('woff'),
+    url('fonts/insideTravel.svg?s73mmp#insideTravel') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.bullet-train:before {
+  content: "\e980";
+}
+.bus:before {
+  content: "\e981";
+}
+.rickshaw:before {
+  content: "\e982";
+}
+.tram:before {
+  content: "\e983";
+}
 .owt-bold:before {
   content: "\e97e";
 }
