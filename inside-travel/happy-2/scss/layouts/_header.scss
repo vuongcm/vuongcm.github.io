@@ -633,6 +633,7 @@ header{
 		.wrap-main-menu{
 			display: block;
 			left: -510px;
+			// width: 100% !important;
 			@include smooth(.5s);
 			.main-menu{
 				max-width: 500px !important;
