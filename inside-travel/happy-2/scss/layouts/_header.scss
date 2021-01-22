@@ -98,6 +98,9 @@ header{
 						.brand-sub-menu-lv2{
 							display: flex;
 						}
+						.sub-menu-travel, .sub-menu-destinations{
+							display: flex;
+						}
 					}
 				}
 				.brand-sub-menu-lv2{
@@ -330,6 +333,10 @@ header{
 	.search{
 		display: none;
 	}
+}
+.btn-bar-toggle-2{
+	position: static;
+	display: none;
 }
 .sub-menu{
 	display: none;
@@ -611,6 +618,24 @@ header{
 				.brand-sub-menu{
 					display: none;
 				}
+			}
+		}
+	}
+	.btn-bar-toggle-2{
+		position: static;
+		display: block;
+		.menu{
+			color: #555;
+			font-size: 32px;
+		}
+	}
+	.menu-wrap-vs2{
+		.wrap-main-menu{
+			display: block;
+			left: -510px;
+			@include smooth(.5s);
+			.main-menu{
+				max-width: 500px !important;
 			}
 		}
 	}

@@ -182,6 +182,9 @@ select:focus {
 .icon-user-2:before,.happy-01:before,.icon-cuisine:before,.icon-des-1:before,.icon-des-2:before,.icon-des-3:before,.icon-des-4:before,.icon-next-back:before{
     color: inherit;
 }
+.left-0{
+    left: 0!important;
+}
 .input-st1{
     border: none;
     background-color: transparent;
@@ -645,6 +648,9 @@ select:focus {
         letter-spacing: 2px;
         text-align: center;
     }
+}
+.padding-left-0{
+    padding-left: 0 !important;
 }
 .filter-box{
     width: 100%;

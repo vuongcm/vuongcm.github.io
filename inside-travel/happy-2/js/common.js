@@ -70,6 +70,9 @@ $(document).ready(function() {
 			$(this).next('.sub-menu').slideToggle(300);
 		});
 	}
+	$('.btn-bar-toggle').click(function(){
+		$('.menu-wrap-vs2 .wrap-main-menu').toggleClass('left-0');
+	});
 	$('.sub-menu-title-lv2>a').click(function(){
 		$(this).parent('.sub-menu-title-lv2').siblings('.sub-menu-title-lv2').children('.sub-menu-lv2').slideUp(300);
 		$(this).next('.sub-menu-lv2').slideToggle(300);
@@ -2500,6 +2503,11 @@ $(document).ready(function() {
 		$('.modal-popup .back-drop, .modal-popup .btn-close').click(function(){
 			$('.modal-popup').fadeOut(400);
 		});
+	}
+	// Cắt chuỗi
+	if($('.slice-string-mobile').length && bodyWidth < 768){
+		let stringLength = $('.slice-string-mobile').text().length/2;
+		$('.slice-string-mobile').text($('.slice-string-mobile').text().substr(0, stringLength) + '...');
 	}
 });
 window.onload = function() {

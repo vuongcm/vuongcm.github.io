@@ -288,7 +288,8 @@
 }
 .wrap-foot-link{
 	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
+	margin-top: -50px;
 	.btn-st4{
 		border-radius: 0;
 		justify-content: space-between;
@@ -2401,6 +2402,10 @@
 				}
 			}
 		}
+	}
+	.wrap-foot-link{
+		padding-right: 15px;
+    	padding-left: 15px;
 	}
 }
 @media (max-width: 479px) {

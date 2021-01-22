@@ -96,7 +96,7 @@
 	}
 	.foreground{
 		width: 70%;
-		@include translateY(-120px);
+		@include translateY(-180px);
 		&>article{
 			padding: 30px 12% 35px;
 		}
@@ -105,7 +105,7 @@
 @media (max-width: 767px) {
 	.wrap-title-top-country{
 		h1,h2{
-			font-size: 35px;
+			font-size: 26px;
 		}
 		.pre-title{
 			font-size: 14px;
