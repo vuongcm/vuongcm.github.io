@@ -2522,8 +2522,11 @@ $(document).ready(function() {
 	}
 	// Cắt chuỗi
 	if($('.slice-string-mobile').length && bodyWidth < 768){
-		let stringLength = $('.slice-string-mobile').text().length/2;
-		$('.slice-string-mobile').text($('.slice-string-mobile').text().substr(0, stringLength) + '...');
+		let stringLength;
+		for(let i=0; i<$('.slice-string-mobile').length; i++){
+			stringLength = $('.slice-string-mobile').eq(i).text().length/2;
+			$('.slice-string-mobile').eq(i).text($('.slice-string-mobile').eq(i).text().substr(0, stringLength) + '...');
+		}
 	}
 });
 window.onload = function() {
