@@ -1,0 +1,155 @@
+@import "var";
+*{
+    &::-webkit-input-placeholder{
+        color: $main !important;
+
+    }
+    &:-moz-placeholder{
+        color: $main !important;
+
+    }
+    &::-moz-placeholder{
+        color: $main !important;
+
+    }
+    &:-ms-input-placeholder{
+        color: $main !important;
+    }
+}
+
+#loading{
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1300;
+    margin-top: 0px;
+    top: 0px;
+/*      display: none; */
+}
+#loading-center{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    }
+#loading-center-absolute {
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 10px);
+    height: 20px;
+    width: 100px;
+}
+.bakground-opa-load{
+    background-color: rgba(255,255,255,.8)!important;
+}
+.object-load{
+    width: 20px;
+    height: 20px;
+    background-color: $orange;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute; 
+}
+#object_one{
+     animation: object 2s linear infinite;
+    -moz-animation: object 2s linear infinite;
+    -webkit-animation: object 2s linear infinite;
+    -o-animation: object 2s linear infinite;
+}
+#object_two{ 
+    left:20px;
+    animation: object 2s linear infinite -.4s;
+    -moz-animation: object 2s linear infinite -.4s;
+    -webkit-animation: object 2s linear infinite -.4s;
+    -o-animation: object 2s linear infinite -.4s;
+}
+#object_three{ 
+    left:40px;
+    animation: object 2s linear infinite -.8s; 
+    -moz-animation: object 2s linear infinite -.8s; 
+    -webkit-animation: object 2s linear infinite -.8s; 
+    -o-animation: object 2s linear infinite -.8s; 
+}
+#object_four{ 
+    left:60px;
+    animation: object 2s linear infinite -1.2s;
+    -moz-animation: object 2s linear infinite -1.2s;
+    -webkit-animation: object 2s linear infinite -1.2s;
+    -o-animation: object 2s linear infinite -1.2s;
+} 
+#object_five{ 
+    left:60px;
+    animation: object 2s linear infinite -1.6s; 
+    -moz-animation: object 2s linear infinite -1.6s;
+    -webkit-animation: object 2s linear infinite -1.6s;
+    -o-animation: object 2s linear infinite -1.6s;
+}
+    
+    
+@-webkit-keyframes object{
+  0% { left: 100px; top:0}
+  80% { left: 0; top:0;}
+  85% { left: 0; top: -20px; width: 20px; height: 20px;}
+  90% { width: 40px; height: 15px; }
+  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
+  100% { left: 100px; top:0; }      
+    
+}       
+@keyframes object{
+  0% { left: 100px; top:0}
+  80% { left: 0; top:0;}
+  85% { left: 0; top: -20px; width: 20px; height: 20px;}
+  90% { width: 40px; height: 15px; }
+  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
+  100% { left: 100px; top:0; }
+}
+@-moz-keyframes object {
+    0% { left: 100px; top:0}
+  80% { left: 0; top:0;}
+  85% { left: 0; top: -20px; width: 20px; height: 20px;}
+  90% { width: 40px; height: 15px; }
+  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
+  100% { left: 100px; top:0; }   
+}
+@-ms-keyframes object {
+    0% { left: 100px; top:0}
+  80% { left: 0; top:0;}
+  85% { left: 0; top: -20px; width: 20px; height: 20px;}
+  90% { width: 40px; height: 15px; }
+  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
+  100% { left: 100px; top:0; }   
+}
+body {
+  // font-family: 'Montserrat', Arial, sans-serif;
+  color: $main-text;
+}
+.input-text, input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], textarea{
+  box-shadow: none;
+  border: 1px solid $boder-input;
+  outline: none;
+  border-radius: 10px;
+  background-color: transparent;
+  &:focus{
+    background-color: transparent;
+  }
+}
+.widget_search{
+  form{
+    &:before{
+      color: $main;
+    }
+  }
+}
+a, button{
+  &:hover{
+    opacity: .8;
+  }
+  &:focus{
+    outline: none;
+  }
+}
+button{
+  border-radius: 999px;
+  // background-color: $main;
+}

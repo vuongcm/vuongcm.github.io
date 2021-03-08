@@ -3917,7 +3917,7 @@ footer .currency-lang-bottom {margin-top: 65px;width: 100%;float: left;}
     .row .col-md-12 #box-package #title-pk #price-pk strong{font-size:14px;}
     .row .col-md-12 #box-package #title-pk #price-pk font{font-size:14px;float:left;}
     .row .col-md-12 #box-package #title-pk #price-pk h3{display:none;}
-    .table{max-width:inherit}.header,.header .header-cn .logo{height:70px}.header .logo img{height:38px;}.header-2{padding-left:15px;padding-right:15px;height:70px}.header-2 .logo{height:70px}.header-2 .logo img{height:65px}.bars{right:15px}.nav.nav-c ul li{font-size:20px}.form-cn h2{font-size:18px}.form-cn .form-radio li{width:50%;padding-top:5px;padding-bottom:5px}.banner{padding-bottom:50px}.banner.margin{padding-bottom:50px;margin-top:70px}.banner.margin .tabs-cat{margin-top:50px}.banner .tabs-cat{margin-top:60px;margin-bottom:15px;text-align:center;}.banner .category-singer{margin-top:50px}.banner .logo-banner img{width:250px;}.sub-banner{padding-top:40px;padding-bottom:40px}.category-singer:before{left:55px}.category-singer .cate-singer-icon{width:150px}.category-singer p{font-size:18px}.category-singer p span{font-size:32px}.tabs-cat{overflow:hidden;margin-left:0;margin-right:0}.tabs-cat .cate-item{float:none !important;display:inline-block;height:50px;float:left;padding:0 5px 5px;text-align:center;width:16.66666667%;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-ms-transition:all .3s linear;-o-transition:all .3s linear}.tabs-cat .cate-item:after,.tabs-cat .cate-item:before{content:none}.tabs-cat .cate-item a{line-height:50px}.tabs-cat .cate-item a img{margin-top:0;max-width:100%}.tabs-cat .cate-item span{display:none}.tabs-cat .cate-item.active,.tabs-cat .cate-item:hover{}.form-hotel .form-search .form-field{border:0;}.form-hotel .form-search .field-date,.form-hotel .form-search .field-select{width:50%}.form-hotel .form-search .form-submit{width:100%}.form-hotel .form-search .form-submit .awe-btn{width:initial;line-height:38px;padding-right:40px}.form-car .form-search .form-submit .awe-btn{line-height:38px}.form-flight .form-search .field-from,.form-flight .form-search .field-to,.form-package .form-search .field-from,.form-package .form-search .field-to{width:100%}.form-flight .form-search .form-submit .awe-btn,.form-package .form-search .form-submit .awe-btn{line-height:38px}.form-tour .form-search .field-country,.form-tour .form-search .field-region,.form-tour .form-search .field-style{width:100%}.form-tour .form-search .form-submit .awe-btn{line-height:38px}.title-wrap .travel-title h2{line-height:25px;}.sales-item .home-sales-text{min-height:210px}.sales-item .home-sales-text .home-sales-name-places .home-sales-places{font-size:14px}
+    .table{max-width:inherit}.header,.header .header-cn .logo{height:70px}.header .logo img{height:38px;}.header-2{padding-left:15px;padding-right:15px;height:70px}.header-2 .logo{height:70px}.header-2 .logo img{height:65px}.bars{right:15px}.nav.nav-c ul li{font-size:20px}.form-cn h2{font-size:18px}.form-cn .form-radio li{width:50%;padding-top:5px;padding-bottom:5px}.banner{padding-bottom:50px}.banner.margin{padding-bottom:50px;margin-top:70px}.banner.margin .tabs-cat{margin-top:50px}.banner .tabs-cat{margin-top:60px;margin-bottom:15px;text-align:center;}.banner .category-singer{margin-top:50px}.banner .logo-banner img{width:250px;}.sub-banner{padding-top:40px;padding-bottom:0px}.category-singer:before{left:55px}.category-singer .cate-singer-icon{width:150px}.category-singer p{font-size:18px}.category-singer p span{font-size:32px}.tabs-cat{overflow:hidden;margin-left:0;margin-right:0}.tabs-cat .cate-item{float:none !important;display:inline-block;height:50px;float:left;padding:0 5px 5px;text-align:center;width:16.66666667%;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-ms-transition:all .3s linear;-o-transition:all .3s linear}.tabs-cat .cate-item:after,.tabs-cat .cate-item:before{content:none}.tabs-cat .cate-item a{line-height:50px}.tabs-cat .cate-item a img{margin-top:0;max-width:100%}.tabs-cat .cate-item span{display:none}.tabs-cat .cate-item.active,.tabs-cat .cate-item:hover{}.form-hotel .form-search .form-field{border:0;}.form-hotel .form-search .field-date,.form-hotel .form-search .field-select{width:50%}.form-hotel .form-search .form-submit{width:100%}.form-hotel .form-search .form-submit .awe-btn{width:initial;line-height:38px;padding-right:40px}.form-car .form-search .form-submit .awe-btn{line-height:38px}.form-flight .form-search .field-from,.form-flight .form-search .field-to,.form-package .form-search .field-from,.form-package .form-search .field-to{width:100%}.form-flight .form-search .form-submit .awe-btn,.form-package .form-search .form-submit .awe-btn{line-height:38px}.form-tour .form-search .field-country,.form-tour .form-search .field-region,.form-tour .form-search .field-style{width:100%}.form-tour .form-search .form-submit .awe-btn{line-height:38px}.title-wrap .travel-title h2{line-height:25px;}.sales-item .home-sales-text{min-height:210px}.sales-item .home-sales-text .home-sales-name-places .home-sales-places{font-size:14px}
     .sales-item .home-sales-text .price-box{margin-top:15px;}
     .sales-item .home-sales-text .price-box .price{font-size:13px}
     .sales-item .home-sales-text .price-box .price.special-price{font-size:24px}
@@ -3945,7 +3945,8 @@ footer .currency-lang-bottom {margin-top: 65px;width: 100%;float: left;}
     .sales-item .home-sales-text .price-box .price{font-size:13px}.sales-item .home-sales-text .price-box .price.special-price{font-size:24px}.sales-item .home-sales-text .price-box .price.special-price small{font-size:13px}.destinations-grid{margin-top:15px}.destinations-item .destinations-text{height:80px}.destinations-item .destinations-text .destinations-name a{font-size:20px}.destinations-item .destinations-text .properties-nb{font-size:13px}.magazine-item .magazine-header h2{font-size:24px}.magazine-item .magazine-header ul li{font-size:14px}.magazine-item .magazine-body,.magazine-item .magazine-header .hr{margin-top:10px}.magazine-item .magazine-footer .awe-btn{padding-left:15px;padding-right:50px;line-height:40px;font-size:13px}.thumnail-item figure:before{border-width:3px}.thumnail-item .thumnail-text h4{font-size:15px}.confidence h3{font-size:20px}.confidence ul li{padding-bottom:20px}.confidence ul li h5{font-size:16px}.subscribe h3{font-size:20px}
     .subscribe .subscribe-form{width:100%}
     .subscribe .follow-us h4{font-size:20px}
-    .main{margin-top:0;background-color:#f1f1f1}
+    .main{margin-top:0!important;background-color:#f1f1f1}
+	.supplier-gp .banner-cn > .tab-content {margin-top: 0px;}
     .breakcrumb-sc{padding-left: 10px;padding-right: 10px}
     .car-page>.row,.cruise-page>.row,.flight-page>.row,.hotel-page>.row,.package-page>.row,.tour-page>.row{margin-left:-15px;margin-right:-15px}.car-page>.row>[class*=col-],.cruise-page>.row>[class*=col-],.flight-page>.row>[class*=col-],.hotel-page>.row>[class*=col-],.package-page>.row>[class*=col-],.tour-page>.row>[class*=col-]{padding-left:15px;padding-right:15px}
     #wrap .banner .container .banner-cn .tab-content .form-cn .form-search .field-select{width:100%;}
@@ -5561,4 +5562,19 @@ h3.home-sales-name {
 }
 .visi-hidden{
 	visibility: hidden!important;
+}
+/*==== popUp=====*/
+#open-myPopUp{
+	display: none;
+}
+#myPopUp .modal-dialog{
+	width: 90%;
+	max-width: 400px;
+}
+#myPopUp .modal-content{
+	background-color: transparent;
+}
+#myPopUp button.close{
+	color: #fff;
+	opacity: .9;
 }

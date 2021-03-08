@@ -24,6 +24,22 @@ $(document).ready(function(){
         
     
     });
+
+    $('#open-myPopUp').click();
+	//Map
+	var id_ct_map_desti  = $("#map_desti").val();
+    if (id_ct_map_desti!=undefined) {
+        setTimeout(function(){
+            $.ajax({
+                type: "GET",
+                url:SITE_URL+"/ajax-map-desti.php?mod=map&id="+id_ct_map_desti,
+                success: function(xml){
+                    $("#map-desti").html(xml);
+                },
+                error: function() {}
+            });
+        },2000);
+    }
     // slick slide
     for (let c=0; c<=10; c++) {
         $(`.image-galery-${c}, .wrap-galery .total_photo`).on('click',function(){
@@ -919,8 +935,9 @@ function like_suplier_new(id,type){
         number=0;
     }
     total=number+1;
+	if(type=='cruise'){link_like='du-thuyen';}
     $('#like_pac_home').addClass('active');
-    $('#like_pac_home').attr("href",SITE_URL+'/'+type+'/like/');
+    $('#like_pac_home').attr("href",SITE_URL+'/'+link_like+'/like/');
     var st=total.toString();
     $("#total_like").text(""+st);
     $.ajax({
@@ -930,7 +947,8 @@ function like_suplier_new(id,type){
             arr_c = xml.split("#");
             $('#like_pac_'+id).html(arr_c[0]);
             $('#like_pac_'+id).attr('onclick','').unbind('click');
-            $('#like_pac_'+id).attr("href",SITE_URL+'/'+type+'/like/');
+            //$('#like_pac_'+id).attr("href",SITE_URL+'/'+type+'/like/');
+			$('#like_pac_'+id).attr("href",SITE_URL+'/du-thuyen/like/');
             if($('#'+type+'_sumlove').length){
                 $('#'+type+'_sumlove').text(type+" ("+arr_c[1]+")");
             }

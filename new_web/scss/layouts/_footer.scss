@@ -1,0 +1,25 @@
+@media (max-width: 767px) {
+	#colophon{
+		.storefront-handheld-footer-bar{
+			border-top: none;
+			z-index: 999;
+			// background-color: $main;
+			ul{
+				&>li{
+					&>a{
+						background-color: $main;
+						border-right-color: #fff;
+						// height: 30px;
+						opacity: 1;
+						&:before{
+							color: #fff;
+						}
+						.count{
+							background-color: $orange;
+						}
+					}
+				}
+			}
+		}
+	}
+}
