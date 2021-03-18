@@ -89,6 +89,12 @@ body {
     overflow: hidden;
     position: relative;
 }
+.app-st1{
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
 input{
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -196,6 +202,9 @@ select:focus {
 }
 .background-st1{
     background-color: $background-color-st1;
+}
+.background-tran{
+    background-color: transparent !important;
 }
 .select-st9 {
     padding-right: 15px;

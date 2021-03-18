@@ -7,6 +7,7 @@
 	ul#menu-menu-phu{
 		a{
 			color: $main;
+			
 		}
 	}
 }
@@ -17,7 +18,7 @@
 	width: 100%;
 }
 #masthead{
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	.col-full{
 		#site-navigation{
 			.primary-navigation{
@@ -27,6 +28,7 @@
 							color: $main;
 							text-transform: uppercase;
 							font-weight: 600;
+							// font-size: 14px;
 						}
 					}
 					&>li
@@ -73,7 +75,7 @@
 				.woocommerce-mini-cart__buttons{
 					&>a.button{
 						
-						border-radius: 999px;
+						// border-radius: 999px;
 						&:first-child{
 							background-color: #fff;
 							color: $main;
@@ -105,6 +107,8 @@
 	#masthead{
 		padding-top: 15px;
 		height: 125px;
+		// margin-bottom: 0;
+		border-bottom: none;
 		.storefront-primary-navigation{
 			@include smooth(.6s);
 			background-color: #fff;
@@ -121,6 +125,13 @@
 				margin-bottom: 0;
 				margin-right: 25px;
 				width: calc(100% - 390px);
+				ul#menu-menu-phu{
+					a{
+						padding-top: 1.3em;
+						padding-bottom: 0.7em;
+						font-size: 12px;
+					}
+				}
 			}
 			.site-search{
 				margin-bottom: 0;
@@ -133,8 +144,16 @@
 					ul#menu-menu-chinh{
 						&>li{
 							&>a{
-								padding-top: 27px;
-								padding-bottom: 15px;
+								padding-top: 20px;
+								padding-bottom: 20px;
+								font-size: 14px;
+							}
+							ul.sub-menu{
+								&>li{
+									a{
+										font-size: 14px;
+									}
+								}
 							}
 						}
 					}
@@ -143,6 +162,8 @@
 			#site-header-cart{
 				width: auto;
 				.cart-contents{
+					padding-top: 20px;
+					padding-bottom: 15px;
 					.woocommerce-Price-amount{
 						display: none;
 					}
@@ -154,11 +175,12 @@
     					padding-left: 5px;
     					height: 20px;
 						position: absolute;
-						top: 15px;
+						top: 10px;
 						right: -10px;
 						background-color: $orange;
 						color: #fff;
 						border-radius: 999px;
+						font-size: 12px;
 					}
 				}
 				.widget_shopping_cart{
@@ -172,9 +194,22 @@
 					// background-color: #fff;
 					.product_list_widget{
 						height: auto;
+						
+						li{
+							.quantity{
+								font-size: 12px;
+							}
+						}
+						
 					}
 					.woocommerce-mini-cart__total, .woocommerce-mini-cart__buttons{
 						// background-color: #fff;
+						font-size: 12px;
+					}
+					.woocommerce-mini-cart-item{
+						&>a{
+							font-size: 12px;
+						}
 					}
 					
 				}
@@ -238,7 +273,7 @@
 }
 @media (max-width: 767px) {
 	#page{
-		padding-top: 95px;
+		padding-top: 58px;
 	}
 	#masthead{
 		padding-top: 10px;
@@ -247,6 +282,11 @@
 		width: 100%;
 		top: 0;
 		left: 0;
+		border-bottom: none;
+		&>.col-full{
+			margin-right: 1.41575em;
+			margin-left: 1.41575em;
+		}
 		.col-full{
 			.site-branding{
 				width: 130px;
@@ -259,6 +299,8 @@
 					margin-right: 1.41575em;
 					margin-bottom: 10px;
 					// outline: none!important;
+					font-family: inherit;
+					font-size: 12px;
 					&:before, &:after{
 						background-color: $main;
 					}
@@ -274,14 +316,143 @@
 							&>a{
 								color: #fff;
 								text-transform: uppercase;
-								// font-weight: 600;
+								font-weight: 500;
+								font-size: 14px;
 								padding-right: 1.41575em;
 								padding-left: 1.41575em;
 								border-bottom: 1px solid #fff;
+								display: flex;
+								align-items: center;
+								justify-content: flex-start;
+								&:before{
+									font-family: 'kiwi-font' !important;
+									speak: never;
+									font-style: normal;
+									font-weight: normal;
+									font-variant: normal;
+									text-transform: none;
+									line-height: 1;
+									-webkit-font-smoothing: antialiased;
+									-moz-osx-font-smoothing: grayscale;
+									display: inline-block;
+									font-size: 16px;
+									width: 30px;
+									padding-bottom: 3px;
+								}
 							}
 							&:last-child{
 								&>a{
 									border-bottom: none;
+								}
+							}
+							.sub-menu{
+								margin-left: 0;
+								&>li{
+									&>a{
+										padding-right: 1.41575em;
+    									padding-left: 2.5em;
+    									color: #fff;
+    									text-transform: uppercase;
+    									font-size: 13px;
+    									font-weight: 500;
+    									border-top: 1px solid #fff;
+    									display: flex;
+									    align-items: center;
+									    justify-content: flex-start;
+    									&:before{
+											font-family: 'kiwi-font' !important;
+											speak: never;
+											font-style: normal;
+											font-weight: normal;
+											font-variant: normal;
+											text-transform: none;
+											line-height: 1;
+											-webkit-font-smoothing: antialiased;
+											-moz-osx-font-smoothing: grayscale;
+											display: inline-block;
+											font-size: 16px;
+											width: 30px;
+											padding-bottom: 3px;
+										}
+									}
+								}
+								&>li#menu-item-154{
+									&>a{
+										&:before{
+											content: "\e925";
+										}
+									}
+								}
+								&>li#menu-item-155{
+									&>a{
+										&:before{
+											content: "\f15a";
+										}
+									}
+								}
+							}
+						}
+						li.menu-item-has-children{
+							&>a{
+								
+								&:after{
+									font-family: 'kiwi-font' !important;
+									speak: never;
+									font-style: normal;
+									font-weight: normal;
+									font-variant: normal;
+									text-transform: none;
+									line-height: 1;
+									-webkit-font-smoothing: antialiased;
+									-moz-osx-font-smoothing: grayscale;
+									display: inline-block;
+									font-size: 6px;
+									content: '\e912';
+									margin-left: auto;
+								}
+							}
+							&>a.f-flip-arrow{
+								
+								&:after{
+									@include rotage(180deg);
+								}
+							}
+							.dropdown-toggle{
+								display: none;
+							}
+						}
+						&>li#menu-item-46{
+							&>a{
+								&:before{
+									content: "\f259";
+								}
+							}
+						}
+						&>li#menu-item-47{
+							&>a{
+								&:before{
+									content: "\f11e";
+								}
+							}
+						}
+						&>li#menu-item-163{
+							&>a{
+								&:before{
+									content: "\f252";
+								}
+							}
+						}
+						&>li#menu-item-49{
+							&>a{
+								&:before{
+									content: "\f219";
+								}
+							}
+						}
+						&>li#menu-item-153{
+							&>a{
+								&:before{
+									content: "\f251";
 								}
 							}
 						}
@@ -296,4 +467,20 @@
 			}
 		}
 	}
+}
+@media (max-width: 375px){
+  #masthead{
+		&>.col-full{
+			margin-right: 1em;
+			margin-left: 1em;
+		}
+		.col-full{
+			#site-navigation{
+				.menu-toggle{
+					margin-right: 1em;
+				}
+			}
+		}
+	}
+	
 }

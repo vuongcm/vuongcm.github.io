@@ -17,28 +17,7 @@ $c2: $brand-secondary;
 $c3: #0f1810;
 $color_text: $color-primary;
 
-$c-facebook: #3b5998;
-$c-google: #d62d20;
-$c-twitter: #00b2ff;
-$c-youtube: #de0000;
-$c-linkedin: #0077b5;
-$c-instagram: #c1558b;
-$c-pinterest: #bd081c;
-// color main
-$main-color: #111;
-$title-color: #111;
 
-$higlight-color-st2: #ff5722;
-$higlight-color-opa: rgba(208,179,22,.8);
-$light-color: #333;
-$light-color-2: #888;
-$light-color-3: #666;
-$light-color-4: #aaa;
-$color-hover: #ef9e00;
-$background-color: #fff;
-$background-color-st1: #f6f4f0;
-$btn-bg-color-st1: hsla(0,0%,89%,.6);
-$btn-text-color-st1: #555;
 $color-cover: rgba(16,15,15,.5);
 $color-cover-text: rgba(255,255,255,.8);
 $color-cover-dak: rgba(0, 0, 0, .4);
@@ -51,6 +30,7 @@ $blue-bg: #059ea6;
 $black: #333;
 $orange: #fc840e;
 $boder-input: #a2d2d2;
+$bg-color-hight: #e9f3f4;
 @mixin smooth($val){
     -webkit-transition: all $val linear;
     -moz-transition: all $val linear;
