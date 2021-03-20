@@ -392,6 +392,47 @@ body.body-st2>.app{
 	background-image: none !important;
 	background-color: #111 !important;
 }
+.header-vs3{
+	.menu-wrap-2{
+		.menu-per{
+			justify-content: space-between;
+			height: auto;
+			.brand{
+				display: block;
+				width: 160px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+			.search-nav{
+				margin-left: 40px;
+				width: calc(50% - 80px);
+			}
+			.global-menu{
+				width: calc(50% - 80px);
+				justify-content: flex-end;
+				height: auto;
+				.login-top{
+					margin-right: 30px;
+				}
+				.book-top{
+					.btn-st1{
+						background-color: $higlight-color;
+						color: #fff;
+						height: 100%;
+					}
+				}
+			}
+		}
+		.main-menu-2{
+			&>ul{
+				margin-right: auto;
+				&>li{
+					margin-right: 20px;
+				}
+			}
+		}
+	}  
+}
 @media (min-width: 1025px) {
 	body.body-st2>.app{
 		.nav-side-menu{
@@ -689,6 +730,16 @@ body.body-st2>.app{
 	.main-menu-2-left{
 		left: -510px!important;
 	}
+	.header-vs3{
+		.menu-wrap-2{
+			.menu-per{
+				.brand{
+					margin-left: 0;
+					width: auto;
+				}
+			}
+		}
+	}
 }
 @media (max-width: 991px) {
 	.menu-wrap-2{
@@ -701,7 +752,27 @@ body.body-st2>.app{
 				}
 			}
 		}
-	}   
+	}
+	.header-vs3{
+		.menu-wrap-2{
+			.menu-per{
+				.search-nav{
+					width: auto;
+				}
+				.global-menu{
+					.login-top{
+						margin-right: 0;
+					}
+					.lang-top{
+						margin-right: 15px;
+					}
+					.book-top{
+						display: none;
+					}
+				}
+			}
+		}
+	}
 }
 @media (max-width: 767px) {
 	body.body-st2>.app{

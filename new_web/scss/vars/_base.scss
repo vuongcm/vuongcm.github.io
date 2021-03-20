@@ -236,6 +236,17 @@ a.remove{
     background-color: $main;
   }
 }
+.f-button-st2{
+  color: $main;
+  background-color: #fff;
+  font-size: 14px;
+  border: 1px solid #a2d2d2;
+  &:hover{
+    color: $main;
+    background-color: #fff;
+    border-color: #a2d2d2;
+  }
+}
 @media (min-width: 768px) {
   .site-header-cart {
     .cart-contents{
