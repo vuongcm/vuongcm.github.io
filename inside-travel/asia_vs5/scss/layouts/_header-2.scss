@@ -78,7 +78,7 @@ body.body-st2>.app{
 		align-items: center;
 		width: 100%;
 		height: 40px;
-		background-color: #111;
+		background-color: #000;
 		color: #fff;
 		position: relative;
 		.box-licen{
@@ -205,10 +205,14 @@ body.body-st2>.app{
 				display: inline-flex;
 				align-items: center;
 				color: #fff;
-				font-size: 14px;
+				font-size: 12px;
+				text-transform: uppercase;
 				.select-arrow-thin{
 					margin-left: 5px;
 					font-size: 6px;
+				}
+				&:hover{
+					color: $higlight-color;
 				}
 			}
 
@@ -426,10 +430,45 @@ body.body-st2>.app{
 		.main-menu-2{
 			&>ul{
 				margin-right: auto;
+				&>.wrap-brand{
+					display: flex;
+					align-items: center;
+
+					.brand{
+						max-width: 90px;
+						visibility: hidden;
+						@include smooth(0.3s);
+					}
+				}
 				&>li{
 					margin-right: 20px;
 				}
+				&>.btn-contact-wrap{
+					display: flex;
+					align-items: center;
+					.btn-st1{
+						background-color: $higlight-color;
+						color: #fff;
+						visibility: hidden;
+						@include smooth(0.3s);
+					}
+				}
 			}
+		}
+		.main-menu-2-eff{
+			&>ul{
+				&>.wrap-brand{
+					.brand{
+						visibility: visible;
+					}
+				}
+				&>.btn-contact-wrap{
+					.btn-st1{
+						visibility: visible;
+					}
+				}
+			}
+
 		}
 	}  
 }
@@ -513,6 +552,21 @@ body.body-st2>.app{
 			}
 		}
 	}
+}
+@media (max-width: 1200px) {
+	.header-vs3{
+		.menu-wrap-2{
+			.main-menu-2{
+				&>ul{
+					&>.wrap-brand, .btn-contact-wrap{
+						display: none;
+					}
+					
+				}
+			}
+		}
+	}
+	
 }
 @media (max-width: 1199px) {
 	.banner-small,.banner-small-2{

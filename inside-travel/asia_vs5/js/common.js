@@ -662,10 +662,11 @@ $(document).ready(function() {
 			dots: true,
 			//dotsClass: 'wrap-dots',
 			autoplay: true,
-			autoplaySpeed: 5000,
+			autoplaySpeed: 5000,/*ko được sửa*/
 			arrows: false
 		});
 	}
+
 	//carousel-st8
 	if ($('.wrap-slide-st8').length > 0 && bodyWidth < 992) {
 		$(`.wrap-slide-st8 .gallery`).slick({
