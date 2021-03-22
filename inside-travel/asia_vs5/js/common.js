@@ -663,7 +663,8 @@ $(document).ready(function() {
 			//dotsClass: 'wrap-dots',
 			autoplay: true,
 			autoplaySpeed: 5000,/*ko được sửa*/
-			arrows: false
+			arrows: false,
+			pauseOnHover: false
 		});
 	}
 
