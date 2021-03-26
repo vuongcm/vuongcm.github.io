@@ -89,41 +89,7 @@
     -webkit-animation: object 2s linear infinite -1.6s;
     -o-animation: object 2s linear infinite -1.6s;
 }
-    
-    
-@-webkit-keyframes object{
-  0% { left: 100px; top:0}
-  80% { left: 0; top:0;}
-  85% { left: 0; top: -20px; width: 20px; height: 20px;}
-  90% { width: 40px; height: 15px; }
-  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
-  100% { left: 100px; top:0; }      
-    
-}       
-@keyframes object{
-  0% { left: 100px; top:0}
-  80% { left: 0; top:0;}
-  85% { left: 0; top: -20px; width: 20px; height: 20px;}
-  90% { width: 40px; height: 15px; }
-  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
-  100% { left: 100px; top:0; }
-}
-@-moz-keyframes object {
-    0% { left: 100px; top:0}
-  80% { left: 0; top:0;}
-  85% { left: 0; top: -20px; width: 20px; height: 20px;}
-  90% { width: 40px; height: 15px; }
-  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
-  100% { left: 100px; top:0; }   
-}
-@-ms-keyframes object {
-    0% { left: 100px; top:0}
-  80% { left: 0; top:0;}
-  85% { left: 0; top: -20px; width: 20px; height: 20px;}
-  90% { width: 40px; height: 15px; }
-  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
-  100% { left: 100px; top:0; }   
-}
+
 body {
   font-family: 'Montserrat', Arial, sans-serif;
   color: $main-text;
@@ -213,6 +179,38 @@ a.remove{
     // text-align: center;
   }
 }
+.f-link-more{
+  color: $blue-bg;
+  line-height: 1.5;
+  font-weight: 500;
+  display: inline-block;
+  @include smooth(.3s);
+  font-size: 12px;
+  white-space: nowrap;
+  text-decoration: none !important;
+  &:after{
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: $blue-bg;
+    @include animationed(lineAnimatedOut,.5s);
+    width: 100%;
+  }
+  &:hover:after{
+      @include animationed(lineAnimatedIn,.5s);
+      width: 0;
+  }
+}
+.f-link-face{
+  color: #1094f4;
+  line-height: 1.5;
+  font-weight: 500;
+  display: inline-block;
+  @include smooth(.3s);
+  font-size: 14px;
+  white-space: nowrap;
+  text-decoration: none !important;
+}
 .wc-forward:after, .woocommerce-Button--next:after{
   font-family: 'kiwi-font' !important;
   speak: never;
@@ -226,6 +224,21 @@ a.remove{
   content: "\e906";
   display: inline-block;
   margin-left: .5407911001em;
+}
+.woocommerce-breadcrumb a:first-of-type::before{
+  font-family: 'kiwi-font' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e904";
+  display: inline-block;
+  margin-right: .5407911001em;
+  font-size: 18px;
 }
 .f-button-st1{
   color: #fff;
@@ -245,6 +258,57 @@ a.remove{
     color: $main;
     background-color: #fff;
     border-color: #a2d2d2;
+  }
+}
+.hentry{
+  .entry-header{
+    display: none;
+  }
+  .entry-content{
+    a{
+      color: $main;
+      text-decoration: none;
+    }
+    .woocommerce-MyAccount-navigation{
+      ul{
+        li.woocommerce-MyAccount-navigation-link.is-active{
+          a{
+            color: $orange;
+          }
+        }
+        li.woocommerce-MyAccount-navigation-link:nth-child(3){
+          display: none;
+        }
+      }
+    }
+    .woocommerce-MyAccount-content{
+      .woocommerce-info{
+        background-color: $blue-bg;
+        font-size: 14px;
+      }
+    }
+  }
+}
+.hentry .entry-content .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link a
+.f-container{
+  p{
+    font-size: 14px;
+  }
+}
+.storefront-breadcrumb{
+  .f-container{
+    .woocommerce-breadcrumb{
+      font-size: 14px;
+      font-weight: 500;
+      color: $orange;
+      &>a{
+        text-decoration: none;
+        color: $main;
+      }
+      .breadcrumb-separator{
+        color: $main-text;
+      }
+    }
   }
 }
 @media (min-width: 768px) {
@@ -372,4 +436,101 @@ a.remove{
     padding-left: 1em;
     padding-right: 1em;
   }
+}
+@-webkit-keyframes object{
+  0% { left: 100px; top:0}
+  80% { left: 0; top:0;}
+  85% { left: 0; top: -20px; width: 20px; height: 20px;}
+  90% { width: 40px; height: 15px; }
+  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
+  100% { left: 100px; top:0; }      
+    
+}       
+@keyframes object{
+  0% { left: 100px; top:0}
+  80% { left: 0; top:0;}
+  85% { left: 0; top: -20px; width: 20px; height: 20px;}
+  90% { width: 40px; height: 15px; }
+  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
+  100% { left: 100px; top:0; }
+}
+@-moz-keyframes object {
+    0% { left: 100px; top:0}
+  80% { left: 0; top:0;}
+  85% { left: 0; top: -20px; width: 20px; height: 20px;}
+  90% { width: 40px; height: 15px; }
+  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
+  100% { left: 100px; top:0; }   
+}
+@-ms-keyframes object {
+    0% { left: 100px; top:0}
+  80% { left: 0; top:0;}
+  85% { left: 0; top: -20px; width: 20px; height: 20px;}
+  90% { width: 40px; height: 15px; }
+  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
+  100% { left: 100px; top:0; }   
+}
+@keyframes lineAnimatedIn {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+@-webkit-keyframes lineAnimatedIn {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+@-moz-keyframes lineAnimatedIn {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+@-ms-keyframes lineAnimatedIn {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+@keyframes lineAnimatedOut {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@-webkit-keyframes lineAnimatedOut {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@-moz-keyframes lineAnimatedOut {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@-ms-keyframes lineAnimatedOut {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
