@@ -1131,6 +1131,99 @@
 		}
 	}
 }
+.mini-title{
+	width: 100%;
+	text-align: center;
+	padding-right: 15px;
+	padding-left: 15px;
+	.pull-left{
+		&>a{
+			margin-bottom: 10px;
+		}
+		&>div{
+			font-weight: 500;
+		}
+	}
+	h4{
+		a{
+			color: #00a9a4;
+		}
+	}
+}
+.winner{
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	a{
+		width: 20%;
+		max-width: 105px;
+	}
+}
+.best-support{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+	margin-bottom: 20px;
+    &>div{
+    	display: flex;
+    	align-items: center;
+    	.icon-support{
+    		width: 47px;
+    		flex-shrink: 0;
+    		margin-right: 5px;
+    	}
+    	.text-support{
+    		/* display: flex;
+    		align-items: center;
+    		flex-wrap: wrap; */
+    		padding-right: 15px;
+    		h3{
+    			margin-bottom: 5px;
+    			margin-top: 0;
+    			color: #00a9a4;
+    		}
+    		p{
+    			font-size: 10px;
+    		}
+    	}
+    }
+}
+.view-out-st2{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+	.btn-st1{
+		border-radius: 999px;
+		height: 40px;
+		font-weight: 600;
+		font-size: 14px;
+		color: #fff;
+		margin-right: 15px;
+		margin-left: 15px;
+		.icon-font{
+			font-size: 22px;
+			margin-right: 5px;
+			// line-height: 0;
+		}
+	}
+	.btn-tailor{
+		background-color: $higlight-color;
+	}
+	.btn-request{
+		
+		background-color: #00a9a4;
+		.icon-font{
+			// line-height: 0;
+			font-size: 18px;
+			font-weight: 600;
+		}
+	}
+}
 @media (min-width: 1351px) {
 	.row-crowd{
 		.crowd-box{
@@ -1232,7 +1325,18 @@
 				}
 			}
 		}
-	} 
+	}
+	.best-support{
+		&>div{
+			.icon-support{
+				margin-left: 15px;
+				margin-right: 15px;
+			}
+			.text-support{
+				display: none;
+			}
+		}
+	}
 }
 @media (max-width: 991px) {
 	.info-cr-highlight{
@@ -1509,6 +1613,16 @@
 			width: 100%;
 		}
 	}
+	.view-out-st2{
+		flex-wrap: wrap;
+		.btn-st1{
+			width: 100%;
+			max-width: 400px;
+		}
+		.btn-request{
+			margin-top: 10px;
+		}
+	}
 }
 @media (max-width: 479px) {
 	.team-contact{
@@ -1603,6 +1717,12 @@
 				}
 			}
 		}
+	}
+	.view-out-st2{
+		.btn-st1{
+			font-size: 12px;
+		}
+
 	}
 }
 @keyframes imageAnimation {

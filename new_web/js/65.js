@@ -34,7 +34,18 @@ jQuery(document).ready(function() {
 	if(bodyWidth >= 992){
 		jQuery('#site-navigation .primary-navigation').prepend('<div class="brand"><a href="/" class="custom-logo-link">' + jQuery('#masthead .site-branding .custom-logo-link').html() + '</a></div>');
 	}
-	
+	jQuery('.f-faq-box>a').click(function(){
+		let thisA = jQuery(this).next('.f-panel');
+		if(thisA.attr('data-fopen') == 'true'){
+			thisA.slideUp(300);
+			thisA.attr('data-fopen','false');
+			jQuery(this).removeClass('active');
+		} else{
+			thisA.slideDown(300);
+			thisA.attr('data-fopen','true');
+			jQuery(this).addClass('active');
+		}
+	});
 });
 window.onload = function() {
     jQuery("#loading").delay(500).fadeOut(500);

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'kiwi-font';
-  src:  url('../fonts/kiwi-font.eot?jgvww0');
-  src:  url('../fonts/kiwi-font.eot?jgvww0#iefix') format('embedded-opentype'),
-    url('../fonts/kiwi-font.ttf?jgvww0') format('truetype'),
-    url('../fonts/kiwi-font.woff?jgvww0') format('woff'),
-    url('../fonts/kiwi-font.svg?jgvww0#kiwi-font') format('svg');
+  src:  url('../fonts/kiwi-font.eot?lsrn8k');
+  src:  url('../fonts/kiwi-font.eot?lsrn8k#iefix') format('embedded-opentype'),
+    url('../fonts/kiwi-font.ttf?lsrn8k') format('truetype'),
+    url('../fonts/kiwi-font.woff?lsrn8k') format('woff'),
+    url('../fonts/kiwi-font.svg?lsrn8k#kiwi-font') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,11 +25,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.kw-baby-boy:before {
+  content: "\e909";
+}
+.kw-daughter:before {
+  content: "\e90a";
+}
+.kw-woman:before {
+  content: "\e90b";
+}
 .kw-gift1:before {
   content: "\f184";
 }
 .kw-villa:before {
   content: "\f259";
+}
+.kw-date-01:before {
+  content: "\e976";
 }
 .kw-icon-loading:before {
   content: "\e975";
@@ -45,6 +57,9 @@
 }
 .kw-icon-mail:before {
   content: "\e968";
+}
+.kw-icon-time:before {
+  content: "\e965";
 }
 .kw-contract:before {
   content: "\e919";
@@ -161,6 +176,9 @@
 }
 .kw-gift:before {
   content: "\f06b";
+}
+.kw-calendar:before {
+  content: "\f073";
 }
 .kw-key:before {
   content: "\f084";
