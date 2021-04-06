@@ -2063,6 +2063,9 @@ select:focus {
     .wrap-mini-intro-2.wrap-mini-intro{
         width: 70%;
     }
+    .no-overflow-destop{
+        overflow: visible !important;
+    }
 }
 @media (min-width: 1025px){
     .trip{

@@ -297,6 +297,10 @@ $(document).ready(function() {
 	}
 	
 	$('.order-day>a:first-child').click(function(){
+		$('.order-day>a:first-child').removeClass('f-focus');
+		$(this).addClass('f-focus');
+		$('.order-day>a:first-child:not(.f-focus)').removeClass('active');
+		$('.order-day>a:first-child:not(.f-focus)').next('.panel').slideUp(500);
 		$(this).next('.panel').slideToggle(500);
 		$(this).toggleClass('active');
 	});
