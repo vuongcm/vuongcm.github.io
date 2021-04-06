@@ -7,9 +7,8 @@ jQuery(document).ready(function() {
 	if(bodyWidth >= 768){
 		jQuery("header .site-search").html(jQuery(".header-widget-region .col-full").html());
 		jQuery('.header-widget-region').remove();
-		let countProduct = jQuery('#site-header-cart .count').text().slice(0,-4);
-		jQuery('#site-header-cart .count').text(countProduct);
 
+		
 		jQuery(window).bind('scroll', function(){
 			if(jQuery(this).scrollTop() > 200){
 				jQuery('#masthead .storefront-primary-navigation').addClass('header-fixed');

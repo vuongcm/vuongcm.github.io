@@ -132,6 +132,16 @@
 	}
 }
 .f-social-box{
+	h3{
+		width: 100%;
+		text-align: center;
+		text-transform: uppercase;
+	    font-weight: 600;
+	    margin-bottom: 15px;
+	    font-size: 12px;
+	    line-height: 1.5;
+	    color: $blue-bg;
+	}
 	ul{
 		margin: 0;
 		display: flex;

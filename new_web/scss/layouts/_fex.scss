@@ -462,8 +462,89 @@
 
 	}
 }
+.f-list-cata-product{
+	margin-bottom: 30px;
+	ul{
+		list-style: none;	
+		display: flex;
+		width: 100%;
+		margin: 0;
+		li{
+			padding-right: 10px;
+			padding-left: 10px;
+			&:first-child{
+				padding-left: 0;
+			}
+			&:last-child{
+				padding-right: 0;
+			}
+			a{
+				display: block;
+				width: 100%;
+    			position: relative;
+    			
+    			
+    			.f-img-box{
+    				width: 100%;
+    				border-radius: 5px;
+    				
+    				overflow: hidden;
+    				
+    				img{
+    					width: 100%;
+    					opacity: .8;
+    					@include smooth(.25s);
+    				}
+    			}
+    			h2{
+    				display: flex;
+    				justify-content: center;
+    				align-items: center;
+    				position: absolute;
+    				z-index: 15;
+    				color: $blue-bg;
+    				font-size: 14px;
+    				font-weight: 600;
+    				margin-bottom: 0;
+    				text-transform: uppercase;
+    				background-color: rgba(255,255,255,.65);
+    				bottom: 0;
+    				left: 0;
+    				width: 100%;
+    				height: 20%;
+    				border-radius: 5px;
+    				@include smooth(.25s);
+    			}
+    			&:hover{
+    				.f-img-box{
+    					
+    					img{
+    						opacity: 1;
+    						@include scale(1.1);
+    					}
+    				}
+    				h2{
+    					background-color: transparent;
+    					color: #fff;
+    				}
+    			}
+			}
+		}
+	}
+}
 @media (max-width: 1199px){
+	.f-list-cata-product{
+		ul{
+			li{
+				a{
 
+	    			h2{
+	    				font-size: 12px;
+	    			}
+				}
+			}
+		}
+	}
 }
 @media (max-width: 991px){
 	.f-post-wrap{
@@ -492,6 +573,30 @@
 							opacity: .6;
 						}
 					}
+				}
+			}
+		}
+	}
+	.f-list-cata-product{
+		ul{
+			overflow-x: auto;
+			padding-bottom: 15px;
+			scrollbar-color: $orange transparent;/*fire fox 64*/
+			scrollbar-width: thin;/*fire fox 64*/
+			&::-webkit-scrollbar{
+				height: 3px;
+				background-color: transparent;
+			}
+			&::-webkit-scrollbar-thumb{
+				background-color: $orange;
+			}
+			&::-webkit-scrollbar-track{
+				background-color: transparent;
+			}
+			li{
+				a{
+
+					min-width: 165px;
 				}
 			}
 		}

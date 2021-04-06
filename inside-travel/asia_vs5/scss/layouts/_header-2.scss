@@ -877,3 +877,17 @@ body.body-st2>.app{
 		}
 	}
 }
+@media (max-width: 374px) {
+	.header-vs3{
+		.menu-wrap-2{
+			.menu-per{
+				.search-nav{
+					margin-left: 20px;
+					.btn-collep-search{
+						margin-right: 20px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -29,8 +29,68 @@ $main-text: #638688;
 $blue-bg: #059ea6;
 $black: #333;
 $orange: #fc840e;
+$red: #f50e0e;
 $boder-input: #a2d2d2;
 $bg-color-hight: #e9f3f4;
+$bg-blue-light_0:#f6fdff;
+$bg-blue-light_1: #fdffff;
+@mixin excerpt($font-size, $line-height, $lines-to-show, $excerpt-bg) {
+  background-color: $excerpt-bg;
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+  font-size: $font-size;
+  line-height: $line-height;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  // Fallback for non-webkit
+  @media screen and (min--moz-device-pixel-ratio:0), 
+  screen and (-ms-high-contrast: active), 
+  screen and (-ms-high-contrast: none) {
+    overflow: hidden;
+    position: relative;
+    &:before {
+      background: $excerpt-bg;
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      float: right;
+      content: '\2026';
+      margin-left: -3rem;
+      width: 3rem;
+    }
+    &:after {
+      content: '';
+      background: $excerpt-bg;
+      position: absolute;
+      height: 50px;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}
+@mixin excerpt_new($font-size, $line-height, $lines-to-show, $excerpt-bg) {
+    height: $font-size*$line-height*$lines-to-show;
+    font-size: $font-size;
+    line-height: $line-height;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: box;
+    line-clamp: $lines-to-show;
+    box-orient: vertical;
+
+    /* Firefox */
+    display:-moz-box;
+    -moz-line-clamp: $lines-to-show;
+    -moz-box-orient: vertical;
+
+    /* Safari and Chrome */
+    display:-webkit-box;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+}
 @mixin smooth($val){
     -webkit-transition: all $val linear;
     -moz-transition: all $val linear;
