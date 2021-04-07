@@ -1266,6 +1266,16 @@
 			padding-right: 15px;
 		}
 	}
+	.include-box{
+		.col-xlg-4, .col-xlg-6{
+			&>div{
+				&>div:last-child{
+					display: none;
+				}
+
+			}
+		}
+	}
 }
 @media (max-width: 991px) {
 	.banner-top-detail{

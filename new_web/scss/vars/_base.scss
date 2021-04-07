@@ -20,7 +20,10 @@
         font-size: 14px !important;
     }
 }
-
+/*xóa*/
+.blockUI.blockOverlay{
+  display: none!important;
+}
 #loading{
     background-color: #fff;
     height: 100%;
@@ -98,7 +101,7 @@ body {
   // font-family: 'Montserrat', sans-serif;
 }
 .input-text, input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], textarea, input[type=checkbox], input[type=radio]{
-  box-shadow: none;
+  box-shadow: none !important;
   border: 1px solid $boder-input;
   outline: none !important;
   border-radius: 10px;
@@ -343,6 +346,11 @@ a.remove{
     .f-button-st1{
       color: #fff;
     }
+    .woocommerce-info{
+      a{
+        color: #fff;
+      }
+    }
     .woocommerce-MyAccount-navigation{
       ul{
         li.woocommerce-MyAccount-navigation-link.is-active{
@@ -558,6 +566,14 @@ a.remove{
       .breadcrumb-separator{
         color: $main-text;
       }
+    }
+  }
+}
+.f-post{
+  ul{
+    font-size: 14px;
+    li{
+      font-weight: 500;
     }
   }
 }
@@ -794,6 +810,33 @@ a.remove{
   }
 }
 /*=====woo=======*/
+.f-cash{
+  .woocommerce{
+    font-size: 14px;
+  }
+}
+.select2-container{
+  .select2-selection--single{
+    height: auto;
+    padding: .6180469716em;
+    font-size: 100%;
+    border-radius: 10px;
+    border-color: $boder-input;
+    outline: none;
+    .select2-selection__rendered{
+      font-size: 14px;
+      padding-left: 0;
+      line-height: 1.618;
+      color: $blue-bg;
+    }
+    .select2-selection__arrow{
+      height: 100%;
+    }
+    .select2-selection__placeholder{
+      color: $main;
+    }
+  }
+}  
 .onsale{
   background-color: $red;
   color: #fff;
@@ -1358,7 +1401,7 @@ ul.products{
     }
 
   }
-  .f-container, #content .woocommerce{
+  .f-container, #content>.col-full>.woocommerce{
     max-width: 66.4989378333em;
     margin-left: auto;
     margin-right: auto;
@@ -1390,7 +1433,7 @@ ul.products{
     }
 
   }
-  .f-container, #content .woocommerce{
+  .f-container, #content>.col-full>.woocommerce{
     width: 100%;
     max-width: 73em;
   }
@@ -1446,7 +1489,7 @@ ul.products{
     }
 
   }
-  .f-container, #content .woocommerce{
+  .f-container, #content>.col-full>.woocommerce{
     padding-left: 1.41575em;
     padding-right: 1.41575em;
   }
@@ -1597,7 +1640,7 @@ ul.products{
     }
 
   }
-  .f-container, #content .woocommerce{
+  .f-container, #content>.col-full>.woocommerce{
     padding-left: 1em;
     padding-right: 1em;
   }
