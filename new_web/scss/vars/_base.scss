@@ -21,7 +21,7 @@
     }
 }
 /*xóa*/
-.blockUI.blockOverlay{
+ .blockUI.blockOverlay{
   display: none!important;
 }
 #loading{
@@ -100,9 +100,9 @@ body {
   // font-family: 'Dancing Script', cursive;
   // font-family: 'Montserrat', sans-serif;
 }
-.input-text, input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], textarea, input[type=checkbox], input[type=radio]{
+.input-text, input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], textarea{
   box-shadow: none !important;
-  border: 1px solid $boder-input;
+  border: 1px solid $boder-input !important;
   outline: none !important;
   border-radius: 10px;
   background-color: #fff;
@@ -115,6 +115,9 @@ body {
   &:focus{
     background-color: #fff;;
   }
+}
+input[type=checkbox], input[type=radio]{
+  outline: none !important;
 }
 #respond, #comments{
   outline: none;
@@ -335,8 +338,26 @@ a.remove{
 }
 
 .hentry{
-  .entry-header{
+  .entry-header:not(.f-title-bbp){
     display: none;
+  }
+  .f-title-bbp{
+    .entry-title{
+      font-size: 50px;
+      color: $blue-bg;
+      text-align: center;
+      width: 100%;
+      font-family: 'Dancing Script', cursive;
+      &:after{
+        max-width: 200px;
+          height: 1px;
+          display: block;
+          background-color: $orange;
+          margin: 15px auto 20px;
+          content: "";
+          width: 40%;
+      }
+    }
   }
   .entry-content{
     a{
@@ -742,6 +763,7 @@ a.remove{
     }
     .login-remember{
       width: 100%;
+
     }
     .login-submit{
       width: 100%;
@@ -810,9 +832,191 @@ a.remove{
   }
 }
 /*=====woo=======*/
+.login-remember{
+  input[type="checkbox"]{
+    display: none;
+  }
+  label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:before{
+      font-family: 'kiwi-font' !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      // content: "\ea52";
+      color: $orange;
+      font-size: 14px;
+      content: "\ea53";
+      margin-right: 5px;
+    }
+  }
+}
+.woocommerce-form__label-for-checkbox{
+  input[type="checkbox"]{
+    display: none;
+  }
+  &:before{
+    font-family: 'kiwi-font' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\ea53";
+    color: $orange;
+    font-size: 14px;
+    margin-right: 5px;
+  }
+}
+
+.f-checked{
+  &:before{
+    content: "\ea52" !important;
+  }
+}
+.f-unchecked{
+  &:before{
+    content: "\ea53" !important;
+  }
+}
+#payment{
+  .payment_methods {
+    &>li{
+      &:not(.woocommerce-notice){
+        background-color: $bg-blue-light_0;
+        &:hover{
+          background-color: $bg-blue-light_1;
+        }
+      }
+      .payment_box{
+        background-color: $bg-blue-light_1;
+      }
+    }
+  }
+  .place-order{
+    background-color: $bg-blue-light_1;
+  }
+}
+.wc_payment_method{
+  input[type="radio"]{
+    display: none;
+  }
+  label{
+    display: flex;
+    align-items: center;
+    &:before{
+      font-family: 'kiwi-font' !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      // content: "\ea52";
+      color: $orange !important;
+      font-size: 14px;
+      margin-right: 5px;
+    }
+  }
+  input[type="radio"] + label{
+    &:before{
+      content: "\ea56";
+    }
+  }
+  input[type="radio"]:checked + label{
+    &:before{
+      content: "\ea55";
+    }
+  }
+}
+label.f-radio{
+  &:before{
+    content: "\ea55" !important;
+  }
+  
+}
+label.f-unradio{
+  &:before{
+    content: "\ea56" !important;
+  }
+  
+}
 .f-cash{
   .woocommerce{
     font-size: 14px;
+    .woocommerce-form-login, .woocommerce-form-coupon{
+      max-width: 800px;
+      background-color: $bg-color-hight;
+      border: 2px solid $boder-input;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2.617924em;
+      padding: 30px 40px;
+      text-align: center;
+      border-radius: 20px;
+      .form-row{
+        label:not(.woocommerce-form__label-for-checkbox){
+          text-align: left;
+        }
+        .woocommerce-form__label-for-checkbox{
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .woocommerce-checkout{
+      h3{
+        font-size: 18px;
+        color: #059ea6;
+        text-transform: uppercase;
+        font-weight: 600;
+        span{
+          font-weight: 600;
+        }
+      }
+    }
+    #payment{
+      .place-order{
+        #place_order{
+          background-color: $orange;
+        }
+      }
+    }
+    .woocommerce-shipping-fields{
+      #ship-to-different-address{
+        .woocommerce-form__label-for-checkbox{
+          display: flex;
+          align-items: center;
+          &:before{
+            content: "\ea52";
+            order: 2;
+            margin-left: auto;
+            margin-right: 0;
+          }
+          span{
+            order: 1;
+          }
+        }
+      }
+    }
   }
 }
 .select2-container{
@@ -836,7 +1040,37 @@ a.remove{
       color: $main;
     }
   }
-}  
+}
+.select2-results__option[aria-selected], .select2-results__option[data-selected]{
+  font-size: 14px;
+}
+.select2-container--default{
+  .select2-results__option--highlighted[aria-selected],.select2-results__option--highlighted[data-selected]{
+    background-color: $blue-bg;
+  }
+  .select2-selection--single{
+    .select2-selection__arrow{
+      b{
+        border-color: $black transparent transparent transparent;
+      }
+    }
+  }
+}
+.select2-dropdown{
+  border-color: $boder-input;
+}
+.show-password-input{
+  &:after{
+    font-family: 'kiwi-font' !important;
+    speak: never;
+    // font-style: normal;
+    font-weight: normal;
+    // font-variant: normal;
+    text-transform: none;
+    content: "\e9ce";
+    color: $black;
+  }
+}
 .onsale{
   background-color: $red;
   color: #fff;
@@ -1338,7 +1572,76 @@ ul.products{
     }
   }
 }
+/*=====bbp=======*/
+#bbpress-forums{
+  font-size: 14px;
+  div.bbp-search-form{
+    #bbp-search-form{
+      &>div{
+        display: flex;
+        min-width: 400px;
+      }
+      #bbp_search{
+        max-width: 300px;
+        flex-grow: 1;
+        font-size: 14px;
+        margin-right: 15px;
+      }
+      .button{
+        font-size: 14px;
+        width: 93px;
+      }
+    }
+  }
+  ul.bbp-forums, ul.bbp-lead-topic, ul.bbp-replies, ul.bbp-search-results, ul.bbp-topics{
+    border-color: $boder-input;
+  }
+  li.bbp-header, li.bbp-footer{
+    background-color: $bg-color-hight;
+    color: $blue-bg;
+    border: none;
+  }
+  li.bbp-footer{
+    border-top: 1px solid $boder-input;
+  }
+  li.bbp-body{
+    ul.forum, ul.topic{
+      border-color: $boder-input;
+    }
+  }
+  div.odd, ul.odd{
+    background-color: $bg-blue-light_1;
+  }
+  .bbp-forum-info{
+    .bbp-forum-content{
+      font-size: 12px;
+    }
+  }
+  p.bbp-topic-meta{
+    font-size: 12px;
+  }
+  .bbp-forum-title{
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
 @media (min-width: 768px) {
+  .f-cash{
+    .woocommerce{
+      .woocommerce-form-coupon{
+        max-width: 500px;
+        .form-row-first{
+          width: 70%;
+          margin-right: 0;
+        }
+        .form-row-last{
+          width: 30%;
+          text-align: right;
+        }
+      }
+    }
+  }
   .site-header-cart {
     .cart-contents{
       &:after{
@@ -1482,6 +1785,13 @@ ul.products{
   }
 }
 @media (max-width: 767px){
+  .hentry{
+    .f-title-bbp{
+      .entry-title{
+        font-size: 40px;
+      }
+    }
+  }
   #colophon{
     .footer-widgets, .site-info{
       padding-left: 1.41575em;
@@ -1529,6 +1839,13 @@ ul.products{
       }
     }
     /*====woo91====*/
+    .f-cash{
+      .woocommerce{
+        .woocommerce-form-login, .woocommerce-form-coupon{
+          padding: 20px;
+        }
+      }
+    }
   .storefront-sorting{
     .f-container{
       .woocommerce-ordering{
@@ -1630,7 +1947,23 @@ ul.products{
   .f-login-box{
     padding: 20px 10px;
   }
-  
+  .f-cash{
+      .woocommerce{
+        .woocommerce-form-login, .woocommerce-form-coupon{
+          padding: 20px 10px;
+        }
+      }
+    }
+    #bbpress-forums{
+      div.bbp-search-form{
+        #bbp-search-form{
+          &>div{
+            min-width: unset;
+          }
+
+        }
+      }
+    }
 }
 @media (max-width: 375px){
   #colophon{
@@ -1643,6 +1976,15 @@ ul.products{
   .f-container, #content>.col-full>.woocommerce{
     padding-left: 1em;
     padding-right: 1em;
+  }
+}
+@media (max-width: 374px){
+  .hentry{
+    .f-title-bbp{
+      .entry-title{
+        font-size: 34px;
+      }
+    }
   }
 }
 @-webkit-keyframes object{

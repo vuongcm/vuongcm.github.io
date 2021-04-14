@@ -1163,9 +1163,10 @@
 		max-width: 105px;
 	}
 }
-.best-support{
+.best-support-mini{
 	width: 100%;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
     align-items: center;
     margin-top: 20px;
@@ -1329,7 +1330,7 @@
 			}
 		}
 	}
-	.best-support{
+	.best-support-mini{
 		&>div{
 			.icon-support{
 				margin-left: 15px;

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'kiwi-font';
-  src:  url('../fonts/kiwi-font.eot?s61plo');
-  src:  url('../fonts/kiwi-font.eot?s61plo#iefix') format('embedded-opentype'),
-    url('../fonts/kiwi-font.ttf?s61plo') format('truetype'),
-    url('../fonts/kiwi-font.woff?s61plo') format('woff'),
-    url('../fonts/kiwi-font.svg?s61plo#kiwi-font') format('svg');
+  src:  url('../fonts/kiwi-font.eot?t3gns5');
+  src:  url('../fonts/kiwi-font.eot?t3gns5#iefix') format('embedded-opentype'),
+    url('../fonts/kiwi-font.ttf?t3gns5') format('truetype'),
+    url('../fonts/kiwi-font.woff?t3gns5') format('woff'),
+    url('../fonts/kiwi-font.svg?t3gns5#kiwi-font') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -33,6 +33,18 @@
 }
 .kw-notification:before {
   content: "\ea08";
+}
+.kw-checkbox-checked:before {
+  content: "\ea52";
+}
+.kw-checkbox-unchecked:before {
+  content: "\ea53";
+}
+.kw-radio-checked2:before {
+  content: "\ea55";
+}
+.kw-radio-unchecked:before {
+  content: "\ea56";
 }
 .kw-x-altx-alt:before {
   content: "\e908";

@@ -3,7 +3,7 @@ Simple Custom CSS and JS - by Silkypress.com
 Saved: Feb 05 2021 | 02:48:28 */
  
 jQuery(document).ready(function() {
-	let bodyWidth = jQuery('body').width();
+	var bodyWidth = jQuery('body').width();
 	if(bodyWidth >= 768){
 		jQuery("header .site-search").html(jQuery(".header-widget-region .col-full").html());
 		jQuery('.header-widget-region').remove();
@@ -20,7 +20,7 @@ jQuery(document).ready(function() {
 		jQuery("footer .site-search").html(jQuery(".header-widget-region .col-full").html());
 		jQuery('.header-widget-region').remove();
 		jQuery('#menu-menu-mobile .menu-item-has-children>a').click(function(){
-			let thisToggle = jQuery(this).nextAll('.dropdown-toggle');
+			var thisToggle = jQuery(this).nextAll('.dropdown-toggle');
 			thisToggle.click();
 			if(thisToggle.attr('aria-expanded') == 'true'){
 				jQuery(this).addClass('f-flip-arrow');
@@ -34,7 +34,7 @@ jQuery(document).ready(function() {
 		jQuery('#site-navigation .primary-navigation').prepend('<div class="brand"><a href="/" class="custom-logo-link">' + jQuery('#masthead .site-branding .custom-logo-link').html() + '</a></div>');
 	}
 	jQuery('.f-faq-box>a').click(function(){
-		let thisA = jQuery(this).next('.f-panel');
+		var thisA = jQuery(this).next('.f-panel');
 		if(thisA.attr('data-fopen') == 'true'){
 			thisA.slideUp(300);
 			thisA.attr('data-fopen','false');
@@ -45,6 +45,17 @@ jQuery(document).ready(function() {
 			jQuery(this).addClass('active');
 		}
 	});
+
+	jQuery('body').delegate('.woocommerce-form__label-for-checkbox, .login-remember label','click',function(){
+		var thisCheckbox = jQuery(this).children('input[type="checkbox"]');
+		if(thisCheckbox[0].checked == true){
+			jQuery(this).addClass('f-checked').removeClass('f-unchecked');
+		} else{
+			jQuery(this).addClass('f-unchecked').removeClass('f-checked');
+		}
+	});
+
+
 });
 window.onload = function() {
     jQuery("#loading").delay(500).fadeOut(500);
