@@ -116,8 +116,10 @@ $(document).ready(function() {
 	let pageScroll = 0;
 	let gridCt4 = 460;
 	$(window).bind('scroll', function(){
+
 		if(bodyWidth >= 1350){
 			if($(this).scrollTop() > 250){
+
 				if($('.navbar-tour').length){
 	        		$('.navbar-tour').css('top','0');
 	        	}
@@ -154,8 +156,10 @@ $(document).ready(function() {
 		if (bodyWidth > 991) {
 			if($(this).scrollTop() > 250){
 	        	$('.fab-box').css('right','0');
+	        	$('.wrap-banner-header').slideUp(300);
 	        } else{
 	            $('.fab-box').css('right','-46px');
+	            $('.wrap-banner-header').slideDown(300);
 	        }
 		} else if(bodyWidth > 520){
 			if($(this).scrollTop() > 100){

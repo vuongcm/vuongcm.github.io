@@ -57,7 +57,7 @@ header{
 			&>a{
 				display: block;
 				flex-grow: 1;
-				max-width: 268px;
+				max-width: 258px;
 				min-width: 100px;
 				margin-right: 10px;
 			}
@@ -78,13 +78,18 @@ header{
 						color: $happy;
 						opacity: 1;
 						font-size: 13px;
-                        font-weight: 600;
+                        text-transform: uppercase;
+    					font-weight: 400;
 						.icon-font:first-child{
 							font-size: 20px;
 							margin-right: 5px;
 						}
+						.icon-menu-1{
+						   font-size: 22px !important;
+						}
 						font{
 							text-transform: uppercase;
+							font-weight: 600;
 						}
 						.select-arrow-thin{
 							font-size: 6px;

@@ -54,7 +54,15 @@ jQuery(document).ready(function() {
 			jQuery(this).addClass('f-unchecked').removeClass('f-checked');
 		}
 	});
-
+	jQuery('.bbp-remember-me label').click(function(){
+		var thisCheckbox2 = jQuery(this).prev('input[type="checkbox"]');
+		if(thisCheckbox2[0].checked == true){
+			jQuery(this).addClass('f-unchecked').removeClass('f-checked');
+		} else{
+			
+			jQuery(this).addClass('f-checked').removeClass('f-unchecked');
+		}
+	});
 
 });
 window.onload = function() {

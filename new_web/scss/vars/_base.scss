@@ -21,9 +21,9 @@
     }
 }
 /*xóa*/
- .blockUI.blockOverlay{
-  display: none!important;
-}
+//  .blockUI.blockOverlay{
+//   display: none!important;
+// }
 #loading{
     background-color: #fff;
     height: 100%;
@@ -342,12 +342,14 @@ a.remove{
     display: none;
   }
   .f-title-bbp{
+    border-bottom: none;
     .entry-title{
       font-size: 50px;
       color: $blue-bg;
       text-align: center;
       width: 100%;
       font-family: 'Dancing Script', cursive;
+
       &:after{
         max-width: 200px;
           height: 1px;
@@ -1575,6 +1577,10 @@ ul.products{
 /*=====bbp=======*/
 #bbpress-forums{
   font-size: 14px;
+  div.bbp-forum-header, div.bbp-reply-header, div.bbp-topic-header{
+    background-color: $bg-blue-light_0;
+    border-color: $boder-input;
+  }
   div.bbp-search-form{
     #bbp-search-form{
       &>div{
@@ -1608,6 +1614,12 @@ ul.products{
     ul.forum, ul.topic{
       border-color: $boder-input;
     }
+    .bbp-topic-title{
+      .bbp-topic-permalink{
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
   }
   div.odd, ul.odd{
     background-color: $bg-blue-light_1;
@@ -1624,8 +1636,114 @@ ul.products{
     font-size: 14px;
     font-weight: 600;
   }
-}
+  .bbp-login-form{
+    fieldset.bbp-form{
+      border: 2px solid $boder-input;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px 40px;
+      text-align: center;
+      border-radius: 20px;
+      background-color: $bg-color-hight;
+      display: flex;
+      flex-wrap: wrap;
+      .bbp-username, .bbp-password{
+        width: 50%;
+        font-size: 14px;
+        label{
+          width: 100%;
+          text-align: left;
+          margin-bottom: 3px;
+        }
+        input{
+          width: 100%;
+          font-weight: 400;
+          padding: .6180469716em;
+          height: auto;
+        }
 
+      }
+      .bbp-username{
+        padding-right: 20px;
+      }
+      .bbp-password{
+        padding-left: 20px;
+      }
+      .bbp-remember-me{
+        width: 100%;
+        margin-top: 15px;
+        input#rememberme{
+          display: none;
+        }
+        label{
+          width: 100%;
+          text-align: center;
+          cursor: pointer;
+          &:before{
+            font-family: 'kiwi-font' !important;
+            speak: never;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\ea53";
+            color: $orange;
+            font-size: 14px;
+            margin-right: 5px;
+          }
+          
+        }
+      }
+      .bbp-submit-wrapper{
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+      }
+    }
+  } 
+}
+.bbp-template-notice.info{
+  display: none;
+}
+div.bbp-template-notice, div.indicator-hint{
+  background-color: $blue-bg;
+  color: #fff;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: .6180469716em solid rgba(0,0,0,.15);
+  padding: 1em 2em 1em 3.5em;
+  border-radius: 2px;
+  font-size: 14px;
+  position: relative;
+  &:before{
+    font-family: 'kiwi-font' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    content: "\e902";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    display: inline-block;
+    position: absolute;
+    top: .9em;
+    left: 1.5em;
+    color: #fff;
+  }
+  li,p{
+    font-size: inherit;
+    margin: 0 !important;
+    padding: 0;
+  }
+}
 @media (min-width: 768px) {
   .f-cash{
     .woocommerce{
@@ -1934,6 +2052,23 @@ ul.products{
       margin-top: 15px;
     }
   }
+  #bbpress-forums{
+    .bbp-login-form{
+      fieldset.bbp-form{
+        padding: 20px;
+        .bbp-username, .bbp-password{
+          width: 100%;
+
+        }
+        .bbp-username{
+          padding-right: 0;
+        }
+        .bbp-password{
+          padding-left: 0;
+        }
+      }
+    } 
+  }
 }
 @media (max-width: 479px){
   .f-post-list{
@@ -1960,6 +2095,12 @@ ul.products{
           &>div{
             min-width: unset;
           }
+
+        }
+      }
+      .bbp-login-form{
+        fieldset.bbp-form{
+          padding: 20px 10px;
 
         }
       }

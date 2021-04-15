@@ -76,6 +76,7 @@
             padding: 0 !important;
         }
     </style>
+    <link rel='stylesheet' id='admin-bar-css' href='http://wordpress.kiwismom.com/wp-includes/css/admin-bar.min.css?ver=5.6.2' media='all' />
     <link rel='stylesheet' id='wp-block-library-css' href='http://wordpress.kiwismom.com/wp-includes/css/dist/block-library/style.min.css?ver=5.6.2' media='all' />
     <link rel='stylesheet' id='wp-block-library-theme-css' href='http://wordpress.kiwismom.com/wp-includes/css/dist/block-library/theme.min.css?ver=5.6.2' media='all' />
     <link rel='stylesheet' id='wc-block-vendors-style-css' href='http://wordpress.kiwismom.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/vendors-style.css?ver=4.0.0' media='all' />
@@ -417,6 +418,8 @@
     </style>
     <link rel="stylesheet" id="storefront-icons-css" href="css/icons.css" media="all">
     <link rel='stylesheet' id='storefront-fonts-css' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C300%2C300italic%2C400italic%2C600%2C700%2C900&#038;subset=latin%2Clatin-ext&#038;ver=3.4.0' media='all' />
+    <link rel='stylesheet' id='wpforms-admin-bar-css' href='http://wordpress.kiwismom.com/wp-content/plugins/wpforms-lite/assets/css/admin-bar.min.css?ver=1.6.5' media='all' />
+    <link rel='stylesheet' id='litespeed-cache-css' href='http://wordpress.kiwismom.com/wp-content/plugins/litespeed-cache/assets/css/litespeed.css?ver=3.6.1' media='all' />
     <link rel='stylesheet' id='storefront-woocommerce-style-css' href='http://wordpress.kiwismom.com/wp-content/themes/child-storefront/assets/css/woocommerce/woocommerce.css?ver=3.4.0' media='all' />
     <style id='storefront-woocommerce-style-inline-css'>
         a.cart-contents,
@@ -631,6 +634,40 @@
     <link rel="alternate" type="text/xml+oembed" href="http://wordpress.kiwismom.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwordpress.kiwismom.com%2Fdien-dan%2Fgiao-duc-som-cho-con%2F&#038;format=xml" />
 
     <link rel="stylesheet" id="63-css" href="css/main.css" media="all">
+    <script>
+        (function() {
+            function wpforms_js_error_loading() {
+
+                if (typeof window.wpforms !== 'undefined') {
+                    return;
+                }
+
+                var forms = document.querySelectorAll('.wpforms-form');
+
+                if (!forms.length) {
+                    return;
+                }
+
+                var error = document.createElement('div');
+
+                error.classList.add('wpforms-error-container');
+                error.innerHTML = 'Heads up! WPForms has detected an issue with JavaScript on this page. JavaScript is required for this form to work properly, so this form may not work as expected. See our <a href="https://wpforms.com/docs/getting-support-wpforms/" target="_blank" rel="noopener noreferrer">troubleshooting guide</a> to learn more or contact support.<p>This message is only displayed to site administrators.</p>';
+
+                forms.forEach(function(form) {
+
+                    if (!form.querySelector('.wpforms-error-container')) {
+                        form.insertBefore(error.cloneNode(true), form.firstChild);
+                    }
+                });
+            };
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', wpforms_js_error_loading);
+            } else {
+                wpforms_js_error_loading();
+            }
+        }());
+    </script>
     <noscript>
         <style>
             .woocommerce-product-gallery {
@@ -638,14 +675,21 @@
             }
         </style>
     </noscript>
+    <style media="print">
+        #wpadminbar {
+            display: none;
+        }
+    </style>
+
     <style type="text/css">
-        li#menu-item-106 {
+        li#menu-item-109,
+        li#menu-item-108 {
             display: none;
         }
     </style>
 </head>
 
-<body class="forum bbpress forum-template-default single single-forum postid-72 wp-custom-logo wp-embed-responsive theme-child-storefront woocommerce-no-js storefront-full-width-content storefront-secondary-navigation storefront-align-wide right-sidebar woocommerce-active">
+<body class="forum bbpress forum-template-default single single-forum postid-72 logged-in admin-bar no-customize-support wp-custom-logo wp-embed-responsive theme-child-storefront woocommerce-no-js storefront-full-width-content storefront-secondary-navigation storefront-align-wide right-sidebar woocommerce-active">
     <div id="loading">
         <div id="loading-center">
             <div id="loading-center-absolute">
@@ -751,7 +795,7 @@
                     <ul id="site-header-cart" class="site-header-cart menu">
                         <li class="">
                             <a class="cart-contents vuongcm" href="http://wordpress.kiwismom.com/gio-hang/" title="Xem giỏ hàng của bạn">
-                                <span class="woocommerce-Price-amount amount">0<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> <span class="count">0</span>
+                                <span class="woocommerce-Price-amount amount">88<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> <span class="count">5</span>
                             </a>
                         </li>
                         <li>
@@ -806,12 +850,12 @@
                                     <div id="bbpress-forums" class="bbpress-wrapper">
 
 
-
+                                        <span id="subscription-toggle"><span id="subscribe-72"  ><a href="/dien-dan/giao-duc-som-cho-con/?action=bbp_subscribe&#038;object_id=72&#038;object_type=post&#038;_wpnonce=375a378492" class="subscription-toggle" data-bbp-object-id="72" data-bbp-object-type="0" data-bbp-nonce="375a378492" rel="nofollow">Theo dõi</a></span></span>
 
 
                                         <div class="bbp-template-notice info">
                                             <ul>
-                                                <li class="bbp-forum-description">This forum has hủ đề, 1 phản hồi, and was last updated <a href="http://wordpress.kiwismom.com/dien-dan/giao-duc-som-cho-con/day-con-hoc-toan/#post-609" title="Phản Hồi về: Dạy con học toán">3 days, 23 hours trước</a> by <a href="http://wordpress.kiwismom.com/dien-dan/users/vuongcm/" title="Xem hồ sơ vuongcm" class="bbp-author-link"><span  class="bbp-author-avatar"><img alt='' src='http://0.gravatar.com/avatar/6c8f8db2372d5789c6bf7061828e8010?s=14&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/6c8f8db2372d5789c6bf7061828e8010?s=28&#038;d=mm&#038;r=g 2x' class='avatar avatar-14 photo' height='14' width='14' loading='lazy'/></span><span  class="bbp-author-name">vuongcm</span></a>.</li>
+                                                <li class="bbp-forum-description">Diễn đàn này có hủ đề, 1 phản hồi, thay đổi lần cuối vào <a href="http://wordpress.kiwismom.com/dien-dan/giao-duc-som-cho-con/day-con-hoc-toan/#post-609" title="Phản Hồi về: Dạy con học toán">4 ngày, 23 giờ trước</a> bởi <a href="http://wordpress.kiwismom.com/dien-dan/users/vuongcm/" title="Xem hồ sơ vuongcm" class="bbp-author-link"><span  class="bbp-author-avatar"><img alt='' src='http://0.gravatar.com/avatar/6c8f8db2372d5789c6bf7061828e8010?s=14&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/6c8f8db2372d5789c6bf7061828e8010?s=28&#038;d=mm&#038;r=g 2x' class='avatar avatar-14 photo' height='14' width='14' loading='lazy'/></span><span  class="bbp-author-name">vuongcm</span></a>.</li>
                                             </ul>
                                         </div>
 
@@ -870,7 +914,7 @@
                                                     <li class="bbp-topic-freshness">
 
 
-                                                        <a href="http://wordpress.kiwismom.com/dien-dan/giao-duc-som-cho-con/day-con-hoc-toan/#post-609" title="Phản Hồi về: Dạy con học toán">3 days, 23 hours trước</a>
+                                                        <a href="http://wordpress.kiwismom.com/dien-dan/giao-duc-som-cho-con/day-con-hoc-toan/#post-609" title="Phản Hồi về: Dạy con học toán">4 ngày, 23 giờ trước</a>
 
                                                         <p class="bbp-topic-meta">
 
@@ -910,50 +954,159 @@
 
 
 
-                                        <div id="no-topic-72" class="bbp-no-topic">
-                                            <div class="bbp-template-notice">
-                                                <ul>
-                                                    <li>Bạn cần đăng nhập để tạo chủ đề mới.</li>
-                                                </ul>
-                                            </div>
+                                        <div id="new-topic-0" class="bbp-topic-form">
+
+                                            <form id="new-post" name="new-post" method="post">
 
 
-
-                                            <form method="post" action="http://wordpress.kiwismom.com/wp-login.php" class="bbp-login-form">
                                                 <fieldset class="bbp-form">
-                                                    <legend>Đăng nhập</legend>
+                                                    <legend>
 
-                                                    <div class="bbp-username">
-                                                        <label for="user_login">Tên đăng nhập hoặc Email: </label>
-                                                        <input type="text" name="log" value="" size="20" maxlength="100" id="user_login" autocomplete="off" />
-                                                    </div>
+                                                        Tạo chủ đề mới trong &ldquo;Giáo dục sớm cho con&rdquo;
+                                                    </legend>
 
-                                                    <div class="bbp-password">
-                                                        <label for="user_pass">Mật khẩu: </label>
-                                                        <input type="password" name="pwd" value="" size="20" id="user_pass" autocomplete="off" />
-                                                    </div>
 
-                                                    <div class="bbp-remember-me">
-                                                        <input type="checkbox" name="rememberme" value="forever" id="rememberme" />
-                                                        <label for="rememberme">Duy trì đăng nhập</label>
+
+
+                                                    <div class="bbp-template-notice">
+                                                        <ul>
+                                                            <li>Tài khoản của bạn được quyền đăng không giới hạn những bài viết dạng HTML.</li>
+                                                        </ul>
                                                     </div>
 
 
-                                                    <div class="bbp-submit-wrapper">
 
-                                                        <button type="submit" name="user-submit" id="user-submit" class="button submit user-submit">Đăng nhập</button>
+                                                    <div>
 
 
-                                                        <input type="hidden" name="user-cookie" value="1" />
 
-                                                        <input type="hidden" id="bbp_redirect_to" name="redirect_to" value="http://wordpress.kiwismom.com/dien-dan/giao-duc-som-cho-con/" />
-                                                        <input type="hidden" id="_wpnonce" name="_wpnonce" value="b76a94b14c" />
-                                                        <input type="hidden" name="_wp_http_referer" value="/dien-dan/giao-duc-som-cho-con/" />
+                                                        <p>
+                                                            <label for="bbp_topic_title">Tiêu đề (số chữ tối đa là: 80):</label>
+                                                            <br />
+                                                            <input type="text" id="bbp_topic_title" value="" size="40" name="bbp_topic_title" maxlength="80" />
+                                                        </p>
+
+
+
+                                                        <div class="bbp-the-content-wrapper">
+                                                            <div id="wp-bbp_topic_content-wrap" class="wp-core-ui wp-editor-wrap html-active">
+                                                                <link rel='stylesheet' id='dashicons-css' href='http://wordpress.kiwismom.com/wp-includes/css/dashicons.min.css?ver=5.6.2' media='all' />
+                                                                <link rel='stylesheet' id='editor-buttons-css' href='http://wordpress.kiwismom.com/wp-includes/css/editor.min.css?ver=5.6.2' media='all' />
+                                                                <div id="wp-bbp_topic_content-editor-container" class="wp-editor-container">
+                                                                    <div id="qt_bbp_topic_content_toolbar" class="quicktags-toolbar"></div>
+                                                                    <textarea class="bbp-the-content wp-editor-area" rows="12" cols="40" name="bbp_topic_content" id="bbp_topic_content"></textarea>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+
+
+                                                        <p>
+                                                            <label for="bbp_topic_tags">Nhãn chủ đề:</label>
+                                                            <br />
+                                                            <input type="text" value="" size="40" name="bbp_topic_tags" id="bbp_topic_tags" />
+                                                        </p>
+
+
+
+
+
+                                                        <p>
+
+                                                            <label for="bbp_stick_topic">Dạng chủ đề:</label>
+                                                            <br />
+
+
+                                                            <select name="bbp_stick_topic" id="bbp_stick_topic_select" class="bbp_dropdown">
+
+
+                                                                <option value="unstick">Bình thường</option>
+
+
+                                                                <option value="stick">Ghim</option>
+
+
+                                                                <option value="super">Siêu ghim</option>
+
+
+                                                            </select>
+
+
+                                                        </p>
+
+
+
+                                                        <p>
+
+                                                            <label for="bbp_topic_status">Hiện trạng chủ đề:</label>
+                                                            <br />
+
+
+                                                            <select name="bbp_topic_status" id="bbp_topic_status_select" class="bbp_dropdown">
+
+
+                                                                <option value="publish" selected='selected'>Mở</option>
+
+
+                                                                <option value="closed">Đã đóng</option>
+
+
+                                                                <option value="spam">Spam</option>
+
+
+                                                                <option value="trash">Bỏ rác</option>
+
+
+                                                                <option value="pending">Pending</option>
+
+
+                                                            </select>
+
+
+                                                        </p>
+
+
+
+
+
+                                                        <p>
+                                                            <input name="bbp_topic_subscription" id="bbp_topic_subscription" type="checkbox" value="bbp_subscribe" />
+
+
+                                                            <label for="bbp_topic_subscription">Hãy báo tin cho tôi các phản hồi tiếp theo qua email</label>
+
+                                                        </p>
+
+
+
+
+
+                                                        <div class="bbp-submit-wrapper">
+
+
+                                                            <button type="submit" id="bbp_topic_submit" name="bbp_topic_submit" class="button submit">Nộp</button>
+
+
+                                                        </div>
+
+
                                                     </div>
+
+
+                                                    <input type="hidden" name="bbp_forum_id" id="bbp_forum_id" value="72" />
+
+
+                                                    <input type="hidden" name="action" id="bbp_post_action" value="bbp-new-topic" />
+
+                                                    <input type="hidden" id="_bbp_unfiltered_html_topic" name="_bbp_unfiltered_html_topic" value="49496435d8" />
+                                                    <input type="hidden" id="_wpnonce" name="_wpnonce" value="d69c7d69ed" />
+                                                    <input type="hidden" name="_wp_http_referer" value="/dien-dan/giao-duc-som-cho-con/" />
                                                 </fieldset>
+
+
                                             </form>
-
-
                                         </div>
 
 
@@ -1140,7 +1293,7 @@
                             </div>
                         </li>
                         <li class="cart">
-                            <a class="footer-cart-contents" href="http://wordpress.kiwismom.com/gio-hang/">Cart				<span class="count">0</span>
+                            <a class="footer-cart-contents" href="http://wordpress.kiwismom.com/gio-hang/">Cart				<span class="count">5</span>
 			</a>
                         </li>
                     </ul>
@@ -1165,6 +1318,29 @@
             document.body.className = c;
         })()
     </script>
+    <link rel='stylesheet' id='buttons-css' href='http://wordpress.kiwismom.com/wp-includes/css/buttons.min.css?ver=5.6.2' media='all' />
+    <script src='http://wordpress.kiwismom.com/wp-includes/js/hoverintent-js.min.js?ver=2.2.1' id='hoverintent-js-js'></script>
+    <script id='admin-bar-js-before'>
+        (function() {
+            function wpforms_admin_bar_menu_init() {
+                var template = document.getElementById('tmpl-wpforms-admin-menubar-data'),
+                    notifications = document.getElementById('wp-admin-bar-wpforms-notifications');
+
+                if (!template) {
+                    return;
+                }
+
+                if (!notifications) {
+                    var menu = document.getElementById('wp-admin-bar-wpforms-menu-default');
+                    menu.insertAdjacentHTML('afterBegin', template.innerHTML);
+                } else {
+                    notifications.insertAdjacentHTML('afterend', template.innerHTML);
+                }
+            };
+            document.addEventListener('DOMContentLoaded', wpforms_admin_bar_menu_init);
+        }());
+    </script>
+    <script src='http://wordpress.kiwismom.com/wp-includes/js/admin-bar.min.js?ver=5.6.2' id='admin-bar-js'></script>
     <script src='http://wordpress.kiwismom.com/wp-content/plugins/bbpress/templates/default/js/editor.min.js?ver=2.6.6' id='bbpress-editor-js'></script>
     <script id='bbpress-engagements-js-extra'>
         var bbpEngagementJS = {
@@ -1216,6 +1392,222 @@
     <script src='http://wordpress.kiwismom.com/wp-content/themes/child-storefront/assets/js/woocommerce/header-cart.min.js?ver=3.4.0' id='storefront-header-cart-js'></script>
     <script src='http://wordpress.kiwismom.com/wp-content/themes/child-storefront/assets/js/footer.min.js?ver=3.4.0' id='storefront-handheld-footer-bar-js'></script>
     <script src='http://wordpress.kiwismom.com/wp-includes/js/wp-embed.min.js?ver=5.6.2' id='wp-embed-js'></script>
+    <script id='quicktags-js-extra'>
+        var quicktagsL10n = {
+            "closeAllOpenTags": "\u0110\u00f3ng t\u1ea5t c\u1ea3 c\u00e1c th\u1ebb",
+            "closeTags": "\u0111\u00f3ng th\u1ebb",
+            "enterURL": "\u0110i\u1ec1n \u0111\u01b0\u1eddng d\u1eabn",
+            "enterImageURL": "\u0110i\u1ec1n \u0111\u01b0\u1eddng d\u1eabn c\u1ee7a \u1ea3nh",
+            "enterImageDescription": "\u0110i\u1ec1n m\u00f4 t\u1ea3 c\u1ee7a \u1ea3nh",
+            "textdirection": "h\u01b0\u1edbng \u0111\u1ecdc v\u0103n b\u1ea3n",
+            "toggleTextdirection": "Chuy\u1ec3n \u0111\u1ed5i h\u01b0\u1edbng \u0111\u1ecdc v\u0103n b\u1ea3n c\u1ee7a b\u1ed9 so\u1ea1n th\u1ea3o",
+            "dfw": "Ch\u1ebf \u0111\u1ed9 vi\u1ebft ch\u1ed1ng xao nh\u00e3ng",
+            "strong": "\u0110\u1eadm",
+            "strongClose": "\u0110\u00f3ng nh\u00e3n \u0111\u1eadm",
+            "em": "Nghi\u00eang",
+            "emClose": "\u0110\u00f3ng nh\u00e3n nghi\u00eang",
+            "link": "Th\u00eam \u0111\u01b0\u1eddng d\u1eabn",
+            "blockquote": "Tr\u00edch d\u1eabn",
+            "blockquoteClose": "\u0110\u00f3ng nh\u00e3n d\u1ea5u nh\u00e1y k\u00e9p",
+            "del": "V\u0103n b\u1ea3n \u0111\u00e3 x\u00f3a (g\u1ea1ch ngang gi\u1eefa ch\u1eef)",
+            "delClose": "\u0110\u00f3ng nh\u00e3n v\u0103n b\u1ea3n \u0111\u00e3 x\u00f3a",
+            "ins": "V\u0103n b\u1ea3n \u0111\u00e3 ch\u00e8n",
+            "insClose": "\u0110\u00f3ng th\u1ebb v\u0103n b\u1ea3n \u0111\u00e3 ch\u00e8n",
+            "image": "Ch\u00e8n \u1ea3nh",
+            "ul": "Danh s\u00e1ch li\u1ec7t k\u00ea \u0111\u01b0\u1ee3c \u0111\u00e1nh s\u1ed1",
+            "ulClose": "\u0110\u00f3ng nh\u00e3n danh s\u00e1ch \u0111\u01b0\u1ee3c k\u00ed hi\u1ec7u",
+            "ol": "Danh s\u00e1ch \u0111\u01b0\u1ee3c \u0111\u00e1nh s\u1ed1",
+            "olClose": "\u0110\u00f3ng nh\u00e3n danh s\u00e1ch \u0111\u01b0\u1ee3c \u0111\u00e1nh s\u1ed1",
+            "li": "M\u1ee5c danh s\u00e1ch",
+            "liClose": "\u0110\u00f3ng nh\u00e3n m\u1ee5c danh s\u00e1ch",
+            "code": "M\u00e3",
+            "codeClose": "\u0110\u00f3ng nh\u00e3n m\u00e3",
+            "more": "Ch\u00e8n th\u1ebb \u0110\u1ecdc Th\u00eam"
+        };
+    </script>
+    <script src='http://wordpress.kiwismom.com/wp-includes/js/quicktags.min.js?ver=5.6.2' id='quicktags-js'></script>
+    <script src='http://wordpress.kiwismom.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=7.4.4' id='wp-polyfill-js'></script>
+    <script id='wp-polyfill-js-after'>
+        ('fetch' in window) || document.write('<script src="http://wordpress.kiwismom.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>');
+        (document.contains) || document.write('<script src="http://wordpress.kiwismom.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>');
+        (window.DOMRect) || document.write('<script src="http://wordpress.kiwismom.com/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>');
+        (window.URL && window.URL.prototype && window.URLSearchParams) || document.write('<script src="http://wordpress.kiwismom.com/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>');
+        (window.FormData && window.FormData.prototype.keys) || document.write('<script src="http://wordpress.kiwismom.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>');
+        (Element.prototype.matches && Element.prototype.closest) || document.write('<script src="http://wordpress.kiwismom.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>');
+    </script>
+    <script src='http://wordpress.kiwismom.com/wp-includes/js/dist/dom-ready.min.js?ver=aca9d46a9f06d1759d4bcd73ba659133' id='wp-dom-ready-js'></script>
+    <script src='http://wordpress.kiwismom.com/wp-includes/js/dist/i18n.min.js?ver=ac389435e7fd4ded01cf603f3aaba6a6' id='wp-i18n-js'></script>
+    <script id='wp-a11y-js-translations'>
+        (function(domain, translations) {
+            var localeData = translations.locale_data[domain] || translations.locale_data.messages;
+            localeData[""].domain = domain;
+            wp.i18n.setLocaleData(localeData, domain);
+        })("default", {
+            "translation-revision-date": "2021-02-05 03:13:06+0000",
+            "generator": "GlotPress\/3.0.0-alpha.2",
+            "domain": "messages",
+            "locale_data": {
+                "messages": {
+                    "": {
+                        "domain": "messages",
+                        "plural-forms": "nplurals=1; plural=0;",
+                        "lang": "vi_VN"
+                    },
+                    "Notifications": ["Th\u00f4ng b\u00e1o"]
+                }
+            },
+            "comment": {
+                "reference": "wp-includes\/js\/dist\/a11y.js"
+            }
+        });
+    </script>
+    <script src='http://wordpress.kiwismom.com/wp-includes/js/dist/a11y.min.js?ver=410fc057d03809dd6a54fcc90ceca441' id='wp-a11y-js'></script>
+    <script id='wplink-js-extra'>
+        var wpLinkL10n = {
+            "title": "Th\u00eam\/S\u1eeda \u0111\u01b0\u1eddng d\u1eabn",
+            "update": "C\u1eadp nh\u1eadt",
+            "save": "Th\u00eam li\u00ean k\u1ebft",
+            "noTitle": "(kh\u00f4ng c\u00f3 ti\u00eau \u0111\u1ec1)",
+            "noMatchesFound": "Kh\u00f4ng t\u00ecm th\u1ea5y k\u1ebft qu\u1ea3.",
+            "linkSelected": "Link \u0111\u00e3 ch\u1ecdn",
+            "linkInserted": "Link \u0111\u00e3 \u0111\u01b0\u1ee3c ch\u00e8n",
+            "minInputLength": "3"
+        };
+    </script>
+    <script src='http://wordpress.kiwismom.com/wp-includes/js/wplink.min.js?ver=5.6.2' id='wplink-js'></script>
+    <script src='http://wordpress.kiwismom.com/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1' id='jquery-ui-core-js'></script>
+    <script src='http://wordpress.kiwismom.com/wp-includes/js/jquery/ui/menu.min.js?ver=1.12.1' id='jquery-ui-menu-js'></script>
+    <script id='jquery-ui-autocomplete-js-extra'>
+        var uiAutocompleteL10n = {
+            "noResults": "Kh\u00f4ng t\u00ecm th\u1ea5y k\u1ebft qu\u1ea3.",
+            "oneResult": "\u0110\u00e3 t\u00ecm th\u1ea5y 1 k\u1ebft qu\u1ea3. H\u00e3y d\u00f9ng ph\u00edm l\u00ean v\u00e0 xu\u1ed1ng \u0111\u1ec3 di chuy\u1ec3n.",
+            "manyResults": "%d k\u1ebft qu\u1ea3 \u0111\u01b0\u1ee3c t\u00ecm th\u1ea5y. S\u1eed d\u1ee5ng ph\u00edm l\u00ean \/ xu\u1ed1ng \u0111\u1ec3 xem.",
+            "itemSelected": "M\u1ee5c \u0111\u01b0\u1ee3c ch\u1ecdn."
+        };
+    </script>
+    <script src='http://wordpress.kiwismom.com/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.12.1' id='jquery-ui-autocomplete-js'></script>
+
+    <script type="text/javascript">
+        tinyMCEPreInit = {
+            baseURL: "http://wordpress.kiwismom.com/wp-includes/js/tinymce",
+            suffix: ".min",
+            mceInit: {},
+            qtInit: {
+                'bbp_topic_content': {
+                    id: "bbp_topic_content",
+                    buttons: "strong,em,link,block,del,img,ul,ol,li,code,close"
+                }
+            },
+            ref: {
+                plugins: "",
+                theme: "modern",
+                language: ""
+            },
+            load_ext: function(url, lang) {
+                var sl = tinymce.ScriptLoader;
+                sl.markDone(url + '/langs/' + lang + '.js');
+                sl.markDone(url + '/langs/' + lang + '_dlg.js');
+            }
+        };
+    </script>
+    <script type="text/javascript">
+        var ajaxurl = "/wp-admin/admin-ajax.php";
+        (function() {
+            var init, id, $wrap;
+
+            if (typeof tinymce !== 'undefined') {
+                if (tinymce.Env.ie && tinymce.Env.ie < 11) {
+                    tinymce.$('.wp-editor-wrap ').removeClass('tmce-active').addClass('html-active');
+                    return;
+                }
+
+                for (id in tinyMCEPreInit.mceInit) {
+                    init = tinyMCEPreInit.mceInit[id];
+                    $wrap = tinymce.$('#wp-' + id + '-wrap');
+
+                    if (($wrap.hasClass('tmce-active') || !tinyMCEPreInit.qtInit.hasOwnProperty(id)) && !init.wp_skip_init) {
+                        tinymce.init(init);
+
+                        if (!window.wpActiveEditor) {
+                            window.wpActiveEditor = id;
+                        }
+                    }
+                }
+            }
+
+            if (typeof quicktags !== 'undefined') {
+                for (id in tinyMCEPreInit.qtInit) {
+                    quicktags(tinyMCEPreInit.qtInit[id]);
+
+                    if (!window.wpActiveEditor) {
+                        window.wpActiveEditor = id;
+                    }
+                }
+            }
+        }());
+    </script>
+    <div id="wp-link-backdrop" style="display: none"></div>
+    <div id="wp-link-wrap" class="wp-core-ui" style="display: none" role="dialog" aria-labelledby="link-modal-title">
+        <form id="wp-link" tabindex="-1">
+            <input type="hidden" id="_ajax_linking_nonce" name="_ajax_linking_nonce" value="a0592bc3c1" />
+            <h1 id="link-modal-title">Thêm/Sửa đường dẫn</h1>
+            <button type="button" id="wp-link-close"><span class="screen-reader-text">Đóng</span>
+            </button>
+            <div id="link-selector">
+                <div id="link-options">
+                    <p class="howto" id="wplink-enter-url">Nhập địa chỉ đích</p>
+                    <div>
+                        <label><span>URL</span>
+                            <input id="wp-link-url" type="text" aria-describedby="wplink-enter-url" />
+                        </label>
+                    </div>
+                    <div class="wp-link-text-field">
+                        <label><span>Tên đường dẫn</span>
+                            <input id="wp-link-text" type="text" />
+                        </label>
+                    </div>
+                    <div class="link-target">
+                        <label><span></span>
+                            <input type="checkbox" id="wp-link-target" /> Mở liên kết trong 1 thẻ mới</label>
+                    </div>
+                </div>
+                <p class="howto" id="wplink-link-existing-content">Hoặc liên kết đến nội dung đã tồn tại</p>
+                <div id="search-panel">
+                    <div class="link-search-wrapper">
+                        <label>
+                            <span class="search-label">Tìm kiếm</span>
+                            <input type="search" id="wp-link-search" class="link-search-field" autocomplete="off" aria-describedby="wplink-link-existing-content" />
+                            <span class="spinner"></span>
+                        </label>
+                    </div>
+                    <div id="search-results" class="query-results" tabindex="0">
+                        <ul></ul>
+                        <div class="river-waiting">
+                            <span class="spinner"></span>
+                        </div>
+                    </div>
+                    <div id="most-recent-results" class="query-results" tabindex="0">
+                        <div class="query-notice" id="query-notice-message">
+                            <em class="query-notice-default">Thiếu từ khóa tìm kiếm. Hiển thị các bài viết mới nhất.</em>
+                            <em class="query-notice-hint screen-reader-text">Tìm hoặc sử dụng phím mũi tên lên và xuống để chọn một mục. </em>
+                        </div>
+                        <ul></ul>
+                        <div class="river-waiting">
+                            <span class="spinner"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="submitbox">
+                <div id="wp-link-cancel">
+                    <button type="button" class="button">Hủy</button>
+                </div>
+                <div id="wp-link-update">
+                    <input type="submit" value="Thêm liên kết" class="button button-primary" id="wp-link-submit" name="wp-link-submit">
+                </div>
+            </div>
+        </form>
+    </div>
 
     <script src="js/65.js"></script>
 
@@ -1223,4 +1615,4 @@
 
 </html>
 
-<!-- Page supported by LiteSpeed Cache 3.6.1 on 2021-04-13 15:11:38 -->
+<!-- Page supported by LiteSpeed Cache 3.6.1 on 2021-04-14 14:56:12 -->

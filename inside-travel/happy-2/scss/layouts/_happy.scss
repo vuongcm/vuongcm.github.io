@@ -855,6 +855,12 @@
 						color: #059ea6;
 					}
 				}
+				.icon-menu-1{
+						   font-size: 22px !important;
+				}
+				.icon-plane{
+						   font-size: 18px !important;
+				}
 				.plus{
 					font-size: 10px;
 				}
@@ -1692,6 +1698,12 @@
 						color: #059ea6;
 					}
 				}
+				.icon-menu-1{
+						   font-size: 22px !important;
+				}
+				.icon-plane{
+						   font-size: 18px !important;
+				}
 				.plus{
 					font-size: 10px;
 				}
@@ -2289,7 +2301,8 @@
 								font-size: 12px;
 							}
 							.hotel-news{
-								display: none;
+								/*display: none;*/
+								text-align: left;
 							}
 							.wrap-tooltip{
 								justify-content: flex-start;
