@@ -370,7 +370,17 @@ header{
 	}
 	header{
 		.wrap-banner-header{
-			display: none !important;
+			.banner-header{
+				height: 40px;
+				.img-box-st3{
+					display: none;
+				}
+				.baner-header-text{
+					p{
+						display: none;
+					}
+				}
+			}
 		}
 	}
 }
