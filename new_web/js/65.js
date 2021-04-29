@@ -5,9 +5,6 @@ Saved: Feb 05 2021 | 02:48:28 */
 jQuery(document).ready(function() {
 	var bodyWidth = jQuery('body').width();
 	if(bodyWidth >= 768){
-		jQuery("header .site-search").html(jQuery(".header-widget-region .col-full").html());
-		jQuery('.header-widget-region').remove();
-
 		
 		jQuery(window).bind('scroll', function(){
 			if(jQuery(this).scrollTop() > 200){
@@ -17,8 +14,6 @@ jQuery(document).ready(function() {
 			}
 		});
 	} else{
-		jQuery("footer .site-search").html(jQuery(".header-widget-region .col-full").html());
-		jQuery('.header-widget-region').remove();
 		jQuery('#menu-menu-mobile .menu-item-has-children>a').click(function(){
 			var thisToggle = jQuery(this).nextAll('.dropdown-toggle');
 			thisToggle.click();
@@ -30,9 +25,7 @@ jQuery(document).ready(function() {
 		});
 	}
 	
-	if(bodyWidth >= 992){
-		jQuery('#site-navigation .primary-navigation').prepend('<div class="brand"><a href="/" class="custom-logo-link">' + jQuery('#masthead .site-branding .custom-logo-link').html() + '</a></div>');
-	}
+
 	jQuery('.f-faq-box>a').click(function(){
 		var thisA = jQuery(this).next('.f-panel');
 		if(thisA.attr('data-fopen') == 'true'){
@@ -54,7 +47,7 @@ jQuery(document).ready(function() {
 			jQuery(this).addClass('f-unchecked').removeClass('f-checked');
 		}
 	});
-	jQuery('.bbp-remember-me label').click(function(){
+	jQuery('.bbp-remember-me label, .comment-form-cookies-consent label').click(function(){
 		var thisCheckbox2 = jQuery(this).prev('input[type="checkbox"]');
 		if(thisCheckbox2[0].checked == true){
 			jQuery(this).addClass('f-unchecked').removeClass('f-checked');

@@ -40,6 +40,19 @@
 	// text-align: center;
 	
 }
+.f-img-wrap{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  // max-width: 768px;
+  width: 100%;
+}
+.f-post{
+	.f-img-wrap{
+		max-width: 768px;
+		margin-bottom: 1.41575em;
+	}
+}
 #content{
 	.hentry{
 		.entry-content{
@@ -166,7 +179,7 @@
 			}
 			.f-feetback-content{
 				flex-grow: 1;
-				background-image: url('../images/nhay.png');
+				background-image: url('https://kiwismom.com/wp-content/uploads/2021/04/nhay.png');
 				background-repeat: no-repeat; 
 				background-size: 100px;
 				background-position: calc(50% - 50px) 0;

@@ -16,6 +16,9 @@
 	margin-bottom: 20px;
 	.col-full{
 		#site-navigation{
+			.f-brand{
+				display: none;
+			}
 			.primary-navigation{
 				ul#menu-menu-chinh{
 					&>li{
@@ -135,6 +138,7 @@
 			#site-navigation{
 				margin-right: 0;
 				width: calc(100% - 40px);
+
 				.primary-navigation{
 					ul#menu-menu-chinh{
 						&>li{
@@ -248,9 +252,18 @@
 				height: 5px;
 			}
 			#site-navigation{
-				margin-right: 0;
-				width: calc(100% - 40px);
-				.primary-navigation{
+				display: flex;
+				.f-brand{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 150px;
+					margin-right: 40px;
+					&>a{
+						padding: 0;
+					}
+				}
+				/* .primary-navigation{
 					display: flex;
 					.brand{
 						display: flex;
@@ -262,7 +275,7 @@
 							padding: 0;
 						}
 					}
-				}
+				} */
 			}
 		}
 	}

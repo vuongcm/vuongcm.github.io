@@ -20,6 +20,7 @@ header{
 	top: 0;
 	left: 0;
 	background-color: $background-color;
+	background-image: linear-gradient(to right, #ffffff 1%, #d9f7f5 70%, #ffffff 100%);
 	.menu-wrap {
 		position: relative;
 		display: flex;
@@ -81,15 +82,19 @@ header{
                         text-transform: uppercase;
     					font-weight: 400;
 						.icon-font:first-child{
-							font-size: 20px;
+							font-size: 16px;
 							margin-right: 5px;
 						}
 						.icon-menu-1{
-						   font-size: 22px !important;
+						   font-size: 18px !important;
+						}
+						.icon-itine{
+						   font-size: 18px !important;
 						}
 						font{
 							text-transform: uppercase;
 							font-weight: 600;
+							font-size: 13px;
 						}
 						.select-arrow-thin{
 							font-size: 6px;
@@ -130,7 +135,8 @@ header{
 							font-weight: 600;
 						}
 						a{
-							padding: 15px;
+							padding: 6px 15px 6px 15px;
+							font-size:11px;
 						}
 					}
 				}
@@ -305,7 +311,7 @@ header{
 	}
 }
 .line-top{
-	border-top: 1px solid #dcdcdc;
+	border-top: 1px solid $happy_back;
 }
 .follow-top{
 	display: none;
@@ -630,7 +636,7 @@ header{
 		position: static;
 		display: block;
 		.menu{
-			color: #059ea6;
+			color: #0ac1bc;
 			font-size: 32px;
 		}
 	}

@@ -3,7 +3,7 @@
     position: absolute;
     top: 10px;
     right: 15px;
-    color: #0aa9a9;
+    color: #04cece;
 	z-index: 9999;
 }
 .modal-container{
@@ -1608,6 +1608,14 @@
 			}
 		}
 	}
+	.modal{
+	    p{
+		  font-size: 11px;
+		}
+		h3{
+		  font-size: 24px;
+		}
+	}
 	.modal-include-2,.modal-cr-like{
 		top: 3%;
 	}
@@ -1647,8 +1655,11 @@
 	.modal{
 		top: 20px;
 		&>h3{
-			font-size: 30px;
+			font-size: 24px;
 			margin-top: 185px;
+		}
+		p{
+		  font-size: 11px;
 		}
 	}
 	.half{
