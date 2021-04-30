@@ -814,6 +814,15 @@ select:focus {
         }
     }
 }
+.row{
+    display: block;
+    width: 100%;
+    margin-right: -7px;
+    margin-left: -7px;
+}
+.row-767{
+    width: 100%;
+}
 .theme-slide-img{
     width: 100%;
     height: 0;
@@ -2226,6 +2235,12 @@ select:focus {
     }
 }
 @media (max-width: 767px) {
+    .row-767{
+        margin-left: -7px;
+        margin-right: -7px;
+        display: block;
+        width: 100%;
+    }
     .title-h1{
         font-size: 22px;
     }

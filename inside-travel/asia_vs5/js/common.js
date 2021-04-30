@@ -683,7 +683,40 @@ $(document).ready(function() {
 			arrows: false
 		});
 	}
-	
+	//carousel-st13
+	if ($('.wrap-slide-st13').length) {
+		$(`.wrap-slide-st13 .gallery`).slick({
+			slidesToShow: 6,
+			slidesToScroll: 1,
+			infinite: true,
+			useTransform: false,
+			autoplay: true,
+			autoplaySpeed: 4000,
+			// dots: true,
+	        prevArrow: `.wrap-slide-st13 .arrow-left`,
+	        nextArrow: `.wrap-slide-st13 .arrow-right`,
+	        responsive: [
+		    {
+		      breakpoint: 992,
+		      settings: {
+		      	slidesToShow: 4,
+		      }
+		    },
+		    {
+		      breakpoint: 768,
+		      settings: {
+		      	slidesToShow: 3,
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		      	slidesToShow: 2,
+		      }
+		    }
+		  ]
+		});
+	}
 	//carousel-sp
 	if ($('.wrap-slide-sp').length > 0) {
 		$(`.wrap-slide-sp .gallery`).slick({
