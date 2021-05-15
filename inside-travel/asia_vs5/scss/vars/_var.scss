@@ -52,6 +52,13 @@ $color-cover-dak-2:rgba(0, 0, 0, .25);
     -ms-transition: all $val linear;
     transition: all $val linear;
 }
+@mixin smoothEa($val){
+    -webkit-transition: all $val ease;
+    -moz-transition: all $val ease;
+    -o-transition: all $val ease;
+    -ms-transition: all $val ease;
+    transition: all $val ease;
+}
 @mixin smoothInOut($val){
     -webkit-transition: all $val ease-in-out;
     -moz-transition: all $val ease-in-out;
@@ -127,6 +134,11 @@ $color-cover-dak-2:rgba(0, 0, 0, .25);
     -ms-transform: rotate($deg);
     -webkit-transform: rotate($deg);
     transform: rotate($deg);
+}
+@mixin rotageY($deg){
+    -ms-transform: rotateY($deg);
+    -webkit-transform: rotateY($deg);
+    transform: rotateY($deg);
 }
 @mixin retang(){
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%);

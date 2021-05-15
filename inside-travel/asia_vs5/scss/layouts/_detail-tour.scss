@@ -514,7 +514,7 @@
 	}
 	.order-day{
 		&>a:first-child{
-			h3{
+			h3,h2{
 				text-transform: uppercase;
 				overflow: hidden;
 				white-space: nowrap;
@@ -536,7 +536,7 @@
 		padding: 10px;
 		line-height: 1;
 		color: $main-color;
-		h3{
+		h3,h2{
 			//text-transform: uppercase;
 			font-weight: 600;
 			font-size: 14px;
