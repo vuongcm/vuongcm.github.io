@@ -668,6 +668,27 @@
 		}
 	}
 }
+.box-hidden-st3{
+	.paragraph{
+		text-align: left;
+	}
+	.link-st3{
+		color: #aaa;
+		margin-left: 10px;
+		&:after{
+			background-color: #aaa;
+		}
+		&:hover{
+			color: $higlight-color;
+			&:after{
+				background-color: $higlight-color;
+			}
+		}
+	}
+	.text-hidden{
+		display: none;
+	}
+}
 @media (max-width: 1351px) {
 	.tooltip-handpick{
 		padding: 5px;
