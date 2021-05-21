@@ -1327,7 +1327,6 @@ switch ( $action ) {
 
 				?>
 
-				<script type="text/javascript" src="https://kiwismom.com/wp-content/themes/child-storefront/assets/js/common.js"></script>
 				</body>
 				</html>
 				<?php

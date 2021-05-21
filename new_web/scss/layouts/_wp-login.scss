@@ -27,12 +27,12 @@ body.login{
 	    max-width: 320px;
 	    padding-top: 30px;
 		    h1{
-			a{
-				background-image: url('https://kiwismom.com/wp-content/uploads/2021/04/logo-head_2.png');
-				width: 175px;
-				height: 60px;
-				background-size: 175px;
-			}
+				a{
+					background-image: url('https://kiwismom.com/wp-content/uploads/2021/04/logo-head_2.png');
+					width: 175px;
+					height: 60px;
+					background-size: 175px;
+				}
 		}
 		form{
 			border: 2px solid $boder-input;
@@ -134,5 +134,32 @@ body.login{
 	}
 	#login_error,.message,.success{
 		border-color: $blue-bg;
+	}
+}
+#error-page{
+	margin: 0;
+	max-width: unset;
+	box-shadow: none;
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+	.wp-die-message{
+		width: 95%;
+	    max-width: 320px;
+	    padding: 30px 15px;
+	    margin: 0;
+		background-color: #fff;
+		text-align: center;
+		border-radius: 3px;
+		border: 2px solid $boder-input;
+		background-color: $bg-color-hight;
+		position: absolute;
+		top: 50px;
+		left: 50%;
+		@include translateX(-50%);
+		a{
+			text-decoration: none;
+			color: $blue-bg;
+		}
 	}
 }

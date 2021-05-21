@@ -1422,6 +1422,11 @@
         }
 	}
 }
+.banner-top-country-st2{
+	.bg-country{
+		display: none;
+	}
+}
 @media (min-width: 1351px) {
 	.row-crowd{
 		.crowd-box{
@@ -1877,6 +1882,14 @@
 		}
 		.btn-request{
 			margin-top: 10px;
+		}
+	}
+	.banner-top-country-st2{
+		.bg-country{
+			display: block;
+		}
+		.wrap-slide-st7{
+			display: none;
 		}
 	}
 }
