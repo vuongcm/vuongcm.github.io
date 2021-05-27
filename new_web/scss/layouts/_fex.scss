@@ -640,6 +640,19 @@
 		}
 	}
 }
+.f-table{
+	border: 1px solid $boder-input !important;
+	td,th{
+		border: 1px solid $boder-input !important;
+	}
+	td{
+		font-weight: 500;
+		ul{
+			margin-bottom: 0;
+			margin-left: 10px;
+		}
+	}
+}
 @media (max-width: 1199px){
 	.f-list-cata-product{
 		ul{

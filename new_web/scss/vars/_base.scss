@@ -146,6 +146,13 @@ select{
   border: 1px solid $boder-input;
   outline: none !important;
 }
+.logged-in-as{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  a{
+    color: $orange;
+  }
+}
 .widget_search{
   form{
     &:before{
@@ -217,6 +224,48 @@ button, .button{
       margin-right: 0;
     }
 }
+#comments{
+  .comments-title{
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .comment-list{
+    .comment-meta{
+      a{
+        color: $black;
+      }
+      .comment-author{
+        font-size: 12px;
+        
+      }
+      a.comment-date{
+          font-size: 11px;
+      }
+
+    }
+    .comment-body{
+      .comment-content{
+        .comment-text{
+          background-color: $bg-blue-light_1;
+          font-size: 14px;
+          a{
+            color: $main;
+          }
+        }
+        .reply{
+          a{
+            font-size: 12px;
+            color: $orange;
+          }
+          
+        }
+      }
+    }
+    
+  }
+
+}
+
 a.remove{
   &:before{
     font-family: 'kiwi-font' !important;
