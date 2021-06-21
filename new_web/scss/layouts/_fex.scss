@@ -70,7 +70,6 @@
     padding-bottom: 3em;
     .f-content-why-choose{
     	display: flex;
-    	align-items: center;
     	justify-content: space-between;
     	margin-left: -15px;
     	margin-right: -15px;
@@ -91,6 +90,15 @@
     				left: calc(50% - 25px);
     				width: 50px;
     			}
+    			.wrap-icon-3img{
+    				height: 50px;
+    				width: 110px;
+    				left: calc(50% - 55px);
+    				img{
+    					height: 100%;
+    					width: 100%;
+    				}
+    			}
     			h4{
     				font-size: 14px;
     				color: $blue-bg;
@@ -101,10 +109,20 @@
     				color: $blue-bg;
     				font-size: 13px;
     				margin-bottom: 0;
+    				.f-link-more{
+    					margin-left: 5px;
+    					color: $orange;
+    					&:after{
+    						background-color: $orange;
+    					}
+    				}
     			}
     		}
     	}
     }
+}
+.f-para-hide{
+	display: none;
 }
 .f-slide-wrap{
 	padding-bottom: 3em;
@@ -112,7 +130,7 @@
 }
 .f-post-wrap{
 	padding-bottom: 3em;
-	padding-top: 3em;
+	padding-top: 0;
 	.f-row{
 		align-items: center;
 		.f-col-lg-6:first-child{
@@ -136,12 +154,33 @@
 			    top: 0;
 			    left: 0;
 			    z-index: 5;
-			    box-shadow: inset 0 0 90px 70px #fff;
+			    box-shadow: inset 0 0 70px 95px #fff;
 			}
 		}
 	}
 	.f-h2-line-st2{
 		margin-top: 3em;
+	}
+}
+.f-img-box{
+	display: block;
+}
+.f-banner-box{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	.f-img-box{
+		width: calc(50% - 7px);
+		max-width: 300px;
+		&:first-child{
+			// margin-left: 15px;
+			margin-right: 7px;
+		}
+		&:last-child{
+			// margin-right: 15px;
+			margin-left: 7px;
+		}
 	}
 }
 .f-slide-products{
@@ -163,18 +202,18 @@
 				width: 25%;
 				max-width: 250px;
 				flex-shrink: 0;
+				text-align: center;
 				.f-khung_anh{
-					position: absolute;
-					left: 0;
-					top: 0;
-					right: 0;
-					bottom: 0;
+					position: relative;
+					width: 100%;
 					z-index: 10;
 				}
 				.f-img-avt{
-					position: relative;
-					width: 100%;
-					z-index: 5;
+					position: absolute;
+					left: 4px;
+					top: 4px;
+					width: calc(100% - 8px);
+					z-index: 4;
 				}
 			}
 			.f-feetback-content{
@@ -240,6 +279,101 @@
 }
 .f-slide-box{
 	margin-top: 20px;
+	.white{
+		#slider_1166{
+			.sa_hover_container{
+				padding: 0 5px !important;
+			}
+			.f-carousel-item{
+				position: relative;
+				img{
+					@include dakkenImg(96%);
+					display: block;
+					line-height: 0;
+					@include smooth(.3s);
+				}
+				h3{
+					position: absolute;
+					z-index: 19;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+    				padding: 10px 5px;
+    				margin-bottom: 0;
+    				line-height: 1;
+					background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0,0,0,0.65)));
+				    background: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,0.7) 100%);
+				    background: -moz-linear-gradient(top, transparent 0%, rgba(0,0,0,0.7) 100%);
+				    background: -ms-linear-gradient(top, transparent 0%, rgba(0,0,0,0.7) 100%);
+				    background: -o-linear-gradient(top, transparent 0%, rgba(0,0,0,0.7) 100%);
+				    white-space: nowrap;
+				    overflow: hidden;
+				    color: #fff;
+				    text-overflow: ellipsis;
+				    text-align: center;
+				    // @include smooth(.5s);
+				    a{
+				    	color: inherit;
+				    	font-size: 14px;
+				    	font-weight: 600;
+				    	line-height: 1.2;
+				    }
+				}
+				&:hover{
+					img{
+						@include dakkenImg(100%);
+					}
+					/* h3{
+						background: transparent;
+					} */
+				}
+			}
+		}
+		#slider_product{
+			.sa_hover_container{
+				padding: 5px !important;
+			}
+			.f-carousel-item{
+				position: relative;
+				display: block;
+				border: 1px solid transparent;
+				box-shadow: 0 1px 2px 0 rgba(0, 0, 0,0.1);
+				.onsale{
+			        font-size: 10px;
+			        border-top-left-radius: 0;
+			        border-bottom-left-radius: 0;
+			        position: absolute;
+			        top: 5px;
+			        left: -5px;
+			        z-index: 15;
+			      }
+			    .f-price-box{
+			    	font-size: 14px;
+			    	text-align: center;
+			    	padding-bottom: 15px;
+			    	padding-top: 15px;
+			    	color: $orange;
+			    	i{
+			    		font-style: normal;
+			    		font-size: 10px;
+			    		text-decoration: underline;
+			    	}
+			    }
+			    .f-img-box{
+			    	.f-flash-sale{
+			    		width: 50px;
+			    		top: 0;
+			    		right: 0;
+			    	}
+			    }
+			}
+		}
+	}
+}
+.f-flash-sale{
+	position: absolute;
+	z-index: 55;
+	// width: 50px;
 }
 .f-mini-intro{
 	.f-h2-line{
@@ -300,7 +434,7 @@
 	}
 }
 .f-h2-line-st2{
-	font-size: 22px;
+	font-size: 24px;
 	color: $blue-bg;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -343,6 +477,19 @@
 		margin-right: 15px;
     }
 }
+.f-noti{
+	border: 2px solid $boder-input;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: $bg-color-hight;
+    p{
+    	margin-bottom: 0;
+    }
+}
 .f-max-width{
 	max-width: 850px;
 	margin-left: auto;
@@ -357,6 +504,13 @@
 .f-para-st2{
 	font-size: 14px;
 	font-weight: 500;
+    color: $main-text;
+    text-align: justify;
+    line-height: 1.8
+}
+.f-para-st3{
+	font-size: 24px;
+	font-family: 'Dancing Script', cursive;
     color: $main-text;
     text-align: justify;
     line-height: 1.8
@@ -653,6 +807,22 @@
 		}
 	}
 }
+.f-short-box{
+	max-height: 300px;
+	overflow-y: hidden
+}
+.f-show-more-wrap{
+	padding-top: 15px;
+	padding-bottom: 30px;
+	text-align: center;
+	.f-link-more{
+		color: $orange;
+		cursor: pointer;
+		&:after{
+			background-color: $orange;
+		}
+	}
+}
 @media (max-width: 1199px){
 	.f-list-cata-product{
 		ul{
@@ -834,6 +1004,9 @@
 	.f-h2-title{
 		font-size: 16px;
 	}
+	.f-para-st3{
+		font-size: 18px;
+	}
 	.f-parameter-box{
 		&>div{
 			b{
@@ -950,6 +1123,20 @@
 	.f-short-link{
 		.f-box-link{
 			width: 100%;
+		}
+	}
+	.f-banner-box{
+		flex-wrap: wrap;
+		.f-img-box{
+			width: 100%;
+			max-width: 100%;
+			&:first-child{
+				margin-right: 0;
+				margin-bottom: 10px;
+			}
+			&:last-child{
+				margin-left: 0;
+			}
 		}
 	}
 }

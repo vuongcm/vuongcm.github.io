@@ -21,8 +21,8 @@ $(document).ready(function(){
             $(this).parent('.view-more-trip').css('box-shadow','none');
             $(this).html('Ẩn Nội dung &#8630;');
         }
-        
-    
+
+
     });
 
     $('#open-myPopUp').click();
@@ -51,7 +51,7 @@ $(document).ready(function(){
                 'z-index':'11',
                 'visibility':'visible'
             });
-            
+
             if($("#grouptoastr").val()>0){
                 var cc = c-1;
             }else{
@@ -124,7 +124,17 @@ $(document).ready(function(){
             $(this).parent('.item').addClass('pa-active');
         });
     }
-    //end-vuongcm
+    //khách đoàn
+    let bodyWidth = $('body').width();
+    let tendency = $(".owl-tendency").length;
+    if (tendency > 0 && bodyWidth < 480) {
+        $('body').attr('style',`--bodyWidth:${bodyWidth}px`);
+        $(".owl-tendency").each(function(){
+            $(this).css('width',`calc(var(--bodyWidth) * 0.75 * ${$(this).find('.item').length})`);
+        });
+    }
+
+    //==========end-vuongcm
     if($("#off-toastr").length){
 
         toastr.options = {
@@ -2182,3 +2192,31 @@ function quickcontq_popup_g(){
         return;
     }*/
 $("#g_process").html("<div style='width: 40px;height: 40px;margin: auto; border-right: 3px solid #59c45a;border-bottom: 3px solid transparent;border-radius: 100%;-webkit-animation: spin .9s linear infinite;-moz-animation: spin .9s linear infinite;-o-animation: spin .9s linear infinite;animation: spin .9s linear infinite;'></div><div style='width:100%;float: left;text-align: center;'><p>Vui lòng đợi trong giây lát...</p></div>");$.ajax({type:"GET",url:SITE_URL+"/ajax-process.php?mod=g_popup&fullname="+name+"&phone="+phone+"&email="+email+"&ques="+ques+"&check_letter="+check_letter,success:function(xml){var arr_html=xml.split('|');if(arr_html[1]=="ok"){window.location = SITE_URL+'/success.html';/*$(".g_signin").html(arr_html[0]);*/}else{$("#message").html(arr_html[0]);}},error:function(){}});}
+//***Lazy
+var check_scroll = false;
+$(document).mouseover(function(){
+	if(check_scroll==false){
+		check_scroll = true;
+		if($('img').length>0){
+			let i_lazy = $('img').length;
+			for (let i=0; i<i_lazy; i++){
+				if($('img').eq(i).attr('src') == '#'){
+					$('img').eq(i).attr('src',$('img').eq(i).attr('data-img'));
+				}
+			}
+		}
+	}
+});
+$(document).scroll(function(){
+	if(check_scroll==false){
+		check_scroll = true;
+		if($('img').length>0){
+			let i_lazy = $('img').length;
+			for (let i=0; i<i_lazy; i++){
+				if($('img').eq(i).attr('src') == '#'){
+					$('img').eq(i).attr('src',$('img').eq(i).attr('data-img'));
+				}
+			}
+		}
+	}
+});

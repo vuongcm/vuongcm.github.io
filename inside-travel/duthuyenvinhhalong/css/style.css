@@ -1112,6 +1112,7 @@ ul li.off{background:#dcdad1;}
 .post-single .post-content .title-single-content{color:#242424;font-size:30px;font-weight:300;font-family:Lato;margin-bottom:30px}
 .post-single .post-content .alignleft{margin-top:5px;float:left;margin-right:30px}
 .post-single .post-content .alignleft img{width:auto!important}
+.post-single .post-content p img{/*height:100%*/}
 .post-single .post-meta-share{overflow:hidden;padding:8px 0;position:relative;margin-top:30px;background:url(../images/bg-border-v.png) bottom left repeat-x}
 .post-single .post-meta-share:before{height:1px;width:100%;position:absolute;top:0;content:'';display:block;left:0;background:url(../images/bg-border-v.png) top left repeat-x}
 .post-single .post-meta-share .post-meta{line-height:32px}
@@ -5577,4 +5578,241 @@ h3.home-sales-name {
 #myPopUp button.close{
 	color: #fff;
 	opacity: .9;
+}
+/*===========banner-cruise-deals=========*/
+.banner-cr-deal{
+	width: 100%;
+	position: relative;
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+.banner-cr-deal>a:first-child{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.banner-cr-deal>a:first-child:hover{
+	opacity: .9;
+}
+.banner-cr-deal>a:last-child{
+	position: absolute;
+	bottom: 9px;
+	left: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	background-color: rgb(245, 165, 40, 0.8);
+	background-image: linear-gradient(to right, #ff5521 0%, #e4c672 51%, #18d8c4 100%);
+	padding: 8px 40px;
+	border-radius: 999px;
+	transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+}
+.banner-cr-deal>a:last-child:hover{
+	background-color: rgba(0, 107, 107, 1);
+	background-image: linear-gradient(to right, #b35234 0%, #f7dc92 51%, #089e8f 100%);
+}
+@media (max-width: 767px){
+	.banner-cr-deal>a:last-child{
+		max-height: 100%;
+		bottom: unset;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	    -moz-transform: translate(-50%,-50%);
+	    -webkit-transform: translate(-50%,-50%);
+	    -o-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	}
+}
+@media (max-width: 375px){
+	.banner-cr-deal>a:last-child{
+		font-size: 12px;
+	}
+}
+/* ============ khách đoàn ========================*/
+#wrap.f-wrap-full{
+	background-color: #25aa99;
+}
+#wrap.f-wrap-full .main{
+	background-color: #25aa99;
+}
+#wrap.f-wrap-full .bg-happy img{
+	width: 100%;
+}
+.f-intro-box{
+	margin-top: -20px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 740px;
+}
+.f-intro-box p{
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+}
+.scroll-tendency .f-intro-icon{
+	width: 100%;
+	max-width: 630px;
+	margin: 30px auto;
+}
+.scroll-tendency .f-intro-icon img{
+	width: 100%;
+}
+.tendency-box{
+	padding-right: 15px;
+	padding-left: 15px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.tendency-box .tendency-icon{
+	width: 100%;
+	max-width: 130px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 30;
+}
+.tendency-box p{
+	padding: 30px 15px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #21c7b3;
+    margin-top: -11px;
+    z-index: 20;
+    flex-grow: 1;
+    font-weight: 500;
+}
+.scroll-tendency.f-ser-wrap{
+	background-color: #16857e;
+	margin-top: 90px;
+}
+.scroll-tendency.f-ser-wrap .f-intro-icon{
+	margin-top: 0;
+	margin-bottom: 0;
+	transform: translateY(-52%);
+    -moz-transform: translateY(-52%);
+    -webkit-transform: translateY(-52%);
+    -o-transform: translateY(-52%);
+    -ms-transform: translateY(-52%);
+}
+.f-ser-box{
+	padding-right: 15px;
+	padding-left: 15px;
+	display: block;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.f-ser-box img{
+	border-radius: 15px;
+}
+.f-ser-box .f-ser-name{
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	margin-top: 10px;
+	line-height: 1.4;
+	color: #fff;
+}
+.scroll-tendency .list_search{
+	background-color: #25aa99;
+}
+.scroll-tendency .list_search .sort-view{
+
+}
+.scroll-tendency .list_search .sort-view .sort-by label{
+	color: #fff;
+}
+.scroll-tendency .sort-view .sort-by .sort-select span{
+	color: #fff;
+}
+.scroll-tendency .sort-view .sort-by .sort-select span:after{
+	color: #fff;
+}
+.scroll-tendency .sort-view .sort-by .sort-select:after{
+	display: none;
+}
+.scroll-tendency .sort-view .view-by ul, .scroll-tendency .sort-view .view-by ul li a{
+	border: none;
+}
+.scroll-tendency .sort-view .view-by ul li a.current, .scroll-tendency .sort-view .view-by ul li a:hover{
+	background-color: #25aa99;
+}
+.scroll-tendency .sort-view .view-by ul li a{
+	display: flex;
+	height: 30px;
+	align-items: flex-end;
+}
+.scroll-tendency .sort-view .view-by ul li a .fas{
+	color: #fff;
+	font-size: 18px;
+}
+@media (max-width: 767px) and (min-width: 480px){
+	.scroll-tendency .owl-tendency{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.scroll-tendency .owl-tendency .item{
+		width: 50%;
+	}
+}
+@media (min-width: 768px){
+	.list-tendency{
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	.scroll-tendency .owl-tendency{
+		display: flex;
+		flex-wrap: wrap;
+
+	}
+	.scroll-tendency .owl-tendency .item{
+		width: 25%;
+	}
+}
+@media (max-width: 479px){
+	.f-intro-box{
+		margin-top: 0;
+	}
+	.list-tendency{
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		width: 100%;
+		scrollbar-color: transparent transparent;/*fire fox 64*/
+		scrollbar-width: thin;/*fire fox 64*/
+	}
+	.list-tendency::-webkit-scrollbar{
+		width: 1px;
+		background-color: transparent;
+	}
+	.list-tendency::-webkit-scrollbar-thumb{
+		background-color: transparent;
+	}
+	.list-tendency::-webkit-scrollbar-track{
+		background-color: transparent;
+	}
+	.tendency-box, .f-ser-box{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.owl-tendency.carousel-mobile {
+		display: flex;
+		justify-content: space-between;
+		width: calc(var(--bodyWidth) * 0.75 * 6);
+	}
+	.owl-tendency.carousel-mobile .item {
+		width: calc(var(--bodyWidth) * 0.75);
+		padding: 3px;
+	}
 }
