@@ -129,7 +129,7 @@ $(document).ready(function(){
     let tendency = $(".owl-tendency").length;
     if (tendency > 0 && bodyWidth < 480) {
         $('body').attr('style',`--bodyWidth:${bodyWidth}px`);
-        $(".owl-tendency").each(function(){
+        $(".owl-tendency.carousel-mobile").each(function(){
             $(this).css('width',`calc(var(--bodyWidth) * 0.75 * ${$(this).find('.item').length})`);
         });
     }
