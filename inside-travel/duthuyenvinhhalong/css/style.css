@@ -5695,7 +5695,7 @@ h3.home-sales-name {
 }
 .scroll-tendency.f-ser-wrap{
 	background-color: #16857e;
-	margin-top: 90px;
+	margin-top: 160px;
 }
 .scroll-tendency.f-ser-wrap .f-intro-icon{
 	margin-top: 0;
@@ -5724,6 +5724,7 @@ h3.home-sales-name {
 	margin-top: 10px;
 	line-height: 1.4;
 	color: #fff;
+	text-align: center;
 }
 .scroll-tendency .list_search{
 	background-color: #25aa99;
@@ -5758,6 +5759,46 @@ h3.home-sales-name {
 	color: #fff;
 	font-size: 18px;
 }
+.scroll-tendency.f-new-wrap .f-intro-icon{
+	margin-bottom: 0;
+	transform: translateY(48%);
+    -moz-transform: translateY(48%);
+    -webkit-transform: translateY(48%);
+    -o-transform: translateY(48%);
+    -ms-transform: translateY(48%);
+}
+.scroll-tendency.f-new-wrap .list-tendency{
+	background-color: #21c7b3;
+	margin-left: 0;
+	margin-right: 0;
+	padding-top: 90px;
+	padding-bottom: 30px;
+	border-radius: 30px;
+}
+.f-new-box{
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.f-new-box .img-box{
+	width: 100%;
+	max-width: 120px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.f-new-box .img-box img{
+	border-radius: 50%;
+}
+.f-new-box .f-ser-name{
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	margin-top: 10px;
+	line-height: 1.4;
+	color: #fff;
+	text-align: center;
+	font-weight: 600;
+}
 @media (max-width: 767px) and (min-width: 480px){
 	.scroll-tendency .owl-tendency{
 		display: flex;
@@ -5765,6 +5806,9 @@ h3.home-sales-name {
 	}
 	.scroll-tendency .owl-tendency .item{
 		width: 50%;
+	}
+	.f-new-box{
+		margin-bottom: 30px;
 	}
 }
 @media (min-width: 768px){
@@ -5782,6 +5826,17 @@ h3.home-sales-name {
 	}
 }
 @media (max-width: 479px){
+	.scroll-tendency.f-new-wrap .owl-tendency{
+		display: flex;
+		flex-wrap: wrap;
+
+	}
+	.scroll-tendency.f-new-wrap .item{
+		width: 50%;
+	}
+	.f-new-box{
+		margin-bottom: 30px;
+	}
 	.banner{
 		padding-top: 45px;
 	}
