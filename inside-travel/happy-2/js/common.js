@@ -2566,6 +2566,9 @@ $(document).ready(function() {
 			$('.slice-string-mobile').eq(i).text($('.slice-string-mobile').eq(i).text().substr(0, stringLength) + '...');
 		}
 	}
+	if($('.carousel-mobile').length){
+		$('body').css('--bodyWidth',bodyWidth + 'px');
+	}
 });
 window.onload = function() {
 	$(`.wrap-slide-st2 .gallery`).height($('.wrap-slide-st2 .slick-center').height());

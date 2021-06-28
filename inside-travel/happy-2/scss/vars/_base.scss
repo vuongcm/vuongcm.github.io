@@ -683,7 +683,7 @@ select:focus {
             text-align: left;
             padding-left: 10px;
             text-transform: uppercase;
-            color: #333;
+            color: $main-color;
         }
     }
     .icon-dropdown{
@@ -691,7 +691,7 @@ select:focus {
         height: 100%;
         color: #fff;
         flex-shrink: 0;
-        background-color: $higlight-color;
+        background-color: $happy_back;
     }
     .value{
         top: 100%;
@@ -701,7 +701,7 @@ select:focus {
                 padding: 10px;
                 color: inherit;
                 span{
-                    color: #555;
+                    color: $main-color;
                     padding: 0;
                     cursor: pointer;
                 }

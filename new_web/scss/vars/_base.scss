@@ -2091,14 +2091,27 @@ ul.products{
     font-weight: 600;
   }
   .bbp-login-form{
+    border: 2px solid $boder-input;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    background-color: $bg-color-hight;
+    border-radius: 20px;
+    text-align: center;
+    .nsl-container-buttons{
+      align-items: center;
+      margin-top: 20px;
+    }
     fieldset.bbp-form{
-      border: 2px solid $boder-input;
+      // border: 2px solid $boder-input;
+      border: none;
       width: 100%;
-      max-width: 800px;
+      // max-width: 800px;
       margin: 0 auto;
-      padding: 30px 40px;
+      padding: 0;
       text-align: center;
-      border-radius: 20px;
+      // border-radius: 20px;
       background-color: $bg-color-hight;
       display: flex;
       flex-wrap: wrap;
