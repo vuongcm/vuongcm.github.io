@@ -208,6 +208,18 @@ function login_header( $title = 'Log In', $message = '', $wp_error = null ) {
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+    	var loading = document.getElementById('loading');
+	    var loadSecon = 1;
+	    var funLoading = setInterval(function(){
+		    loading.style.opacity = loadSecon;
+		    loadSecon = loadSecon - 0.2;
+		}, 100);
+	    setTimeout(function(){
+		    clearInterval(funLoading);
+		    loading.style.display = 'none';
+		}, 500);
+    </script>
 	<?php
 	/**
 	 * Fires in the login page header after the body tag is opened.
@@ -329,7 +341,7 @@ function login_footer( $input_id = '' ) {
 	do_action( 'login_footer' );
 
 	?>
-	<script type="text/javascript" src="https://kiwismom.com/wp-content/themes/child-storefront/assets/js/common.js"></script>
+	
 	<div class="clear"></div>
 	</body>
 	</html>

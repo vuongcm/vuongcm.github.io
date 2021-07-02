@@ -81,4 +81,15 @@ jQuery(document).ready(function() {
 });
 window.onload = function() {
     jQuery("#loading").delay(500).fadeOut(500);
+    /*var loading = document.getElementById('loading');
+    var loadSecon = 1;
+    var funLoading = setInterval(function(){
+	    loading.style.opacity = loadSecon;
+	    loadSecon = loadSecon - 0.2;
+	}, 100);
+	// funLoading();
+    setTimeout(function(){
+	    clearInterval(funLoading);
+	    loading.style.display = 'none';
+	}, 500);*/
 }

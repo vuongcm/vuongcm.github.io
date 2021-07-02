@@ -5618,6 +5618,29 @@ h3.home-sales-name {
 	background-color: rgba(0, 107, 107, 1);
 	background-image: linear-gradient(to right, #b35234 0%, #f7dc92 51%, #089e8f 100%);
 }
+@media (max-width: 1199px){
+	.banner-mobi-vs3{
+		padding-top: 60px;
+		padding-bottom: 15px;
+	}
+	.banner-mobi-vs3 #owl-demo1{
+		position: relative;
+		top: 0;
+		margin-bottom: 15px;
+	}
+	.banner-mobi-vs3 .customNavigation{
+		display: none;
+	}
+}
+@media (max-width: 1199px){
+	.banner-mobi-vs3 .container-banner{
+		display: none;
+	}
+	.banner-mobi-vs3 #owl-demo1{
+
+		margin-bottom: 0;
+	}
+}
 @media (max-width: 767px){
 	.banner-cr-deal>a:last-child{
 		max-height: 100%;
@@ -5629,6 +5652,9 @@ h3.home-sales-name {
 	    -o-transform: translate(-50%,-50%);
 	    -ms-transform: translate(-50%,-50%);
 	}
+
+	
+	
 }
 @media (max-width: 375px){
 	.banner-cr-deal>a:last-child{
@@ -5654,13 +5680,14 @@ h3.home-sales-name {
 	max-width: 740px;
 }
 .f-intro-box p{
-	font-size: 16px;
-	font-weight: 500;
+	font-size: 14px;
+	font-weight: 600;
 	color: #fff;
+	line-height:24px;
 }
 .scroll-tendency .f-intro-icon{
 	width: 100%;
-	max-width: 630px;
+	max-width: 516px;
 	margin: 30px auto;
 }
 .scroll-tendency .f-intro-icon img{
@@ -5676,14 +5703,14 @@ h3.home-sales-name {
 }
 .tendency-box .tendency-icon{
 	width: 100%;
-	max-width: 110px;
+	max-width: 90px;
 	margin-left: auto;
 	margin-right: auto;
 	z-index: 30;
 }
 .tendency-box p{
 	padding: 30px 15px;
-    border: 1px solid #fff;
+    border: 1px solid #25aa99;
     border-radius: 20px;
     text-align: center;
     color: #fff;
@@ -5691,7 +5718,7 @@ h3.home-sales-name {
     margin-top: -11px;
     z-index: 20;
     flex-grow: 1;
-    font-weight: 500;
+    font-weight: 600;
 }
 .scroll-tendency.f-ser-wrap{
 	background-color: #16857e;
@@ -5718,8 +5745,7 @@ h3.home-sales-name {
 }
 .f-ser-box .f-ser-name{
 	font-size: 16px;
-	font-weight: 400;
-	text-transform: uppercase;
+	font-weight: 600;
 	margin-bottom: 0;
 	margin-top: 10px;
 	line-height: 1.4;
